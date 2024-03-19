@@ -1,0 +1,8 @@
+{
+    "index": "Homepage",
+    "class-diagram": "Class Diagram",
+    "sequence-diagram": "Sequence Diagram",
+    "security-model": "Security Model",
+    "http-response-codes": "HTTP Response Codes",
+    "openapi-spec": "OpenAPI Spec"
+  }

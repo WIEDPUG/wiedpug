@@ -1,0 +1,535 @@
+openapi: 3.0.0
+info:
+  title: WIEDPUG OpenAPI Specs
+  version: 1.0.0
+paths:
+  /organization-details:
+    get:
+      summary: Retrieve all organization details
+      operationId: getAllOrganizationDetails
+      responses:
+        '200':
+          description: A list of organization details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OrganizationDetails'
+        '401':
+          description: Unauthorized - login required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden - lack of permission
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new organization details
+      operationId: createOrganizationDetail
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationDetails'
+      responses:
+        '201':
+          description: The newly created organization detail
+          content:
+            application/json:
+              organizationDetails:
+                $ref: '#/components/schemas/OrganizationDetails'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized - login required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden - lack of permission
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflict - resource already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /organization-details/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: The ID of the organization detail to operate on
+    get:
+      summary: Retrieve a specific organization detail
+      operationId: getOrganizationDetailById
+      responses:
+        '200':
+          description: The organization detail object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationDetails'
+        '401':
+          description: Unauthorized - login required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Organization detail not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      summary: Update an existing organization detail
+      operationId: updateOrganizationDetail
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationDetails'
+      responses:
+        '200':
+          description: Updated organization detail
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationDetails'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized - login required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden - lack of permission
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Organization detail not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Delete an organization detail
+      operationId: deleteOrganizationDetail
+      responses:
+        '204':
+          description: Organization detail deleted
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized - login required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden - lack of permission
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Organization detail not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /organization-details/process:
+    post:
+      summary: Apply access scope to organization details to hide necessary parts for a single receiver or requester.
+      description: This endpoint serves both boardcast and private send. 
+      operationId: processScopeOnOrganizationDetails
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                organizationDetails:
+                  $ref: '#/components/schemas/OrganizationDetails'
+                receiver:
+                  $ref: '#/components/schemas/OrganizationCode'
+              required:
+                - organizationDetails
+                - receiver                         
+      responses:
+        '200':
+          description: The organization detail object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationDetailsData'
+        '401':
+          description: Unauthorized - login required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Organization detail not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    OrganizationDetails:
+      type: object
+      additionalProperties: false
+      properties:
+        scope:
+          $ref: '#/components/schemas/Scope'
+        organizationDetailsData:
+          $ref: '#/components/schemas/OrganizationDetailsData'
+      required:
+        - scope
+        - organizationDetailsData
+      title: OrganizationDetails
+    Scope:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+          example: "100200001"
+        documentType:
+          $ref: '#/components/schemas/DocumentType'
+        documentId:
+          type: string
+        owner:
+          $ref: '#/components/schemas/OrganizationCode'
+        sendType:
+          type: string
+          enum:
+            - "PRIVATE"
+            - "BORADCAST"
+        receivers:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationCode'
+        privateRecords:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrivateRecord'
+      required:
+        - id
+        - documentType
+        - documentId
+        - creator
+        - receviers
+        - sendType
+        - privateRecords
+      title: Scope
+    OrganizationDetailsData:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+          example: "10385934"    
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        organizationDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationDetail'
+      required:
+        - id
+        - transmissionHeader
+        - organizationDetails
+      title: OrganizationDetailsData
+    OrganizationDetail:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+          example: "bb680e5fe0c8"
+        organisationCode:
+          $ref: "#/components/schemas/OrganizationCode"
+        nameOfOrganisation:
+          type: string 
+        dateLastUpdated:
+          type: string
+          format: date
+          example: "2020-12-12"
+        updateType:
+          type: string
+          enum:
+            - C
+            - A
+            - D
+        IndustryGroupID:
+          type: string
+          enum:
+            - A
+            - C
+            - E
+            - D
+            - M
+            - P
+            - S
+            - T
+            - V
+        transmitterFlag:
+          type: string
+          enum:
+            - 'Y'
+            - 'N'
+        abn:
+          type: string
+          nullable: true
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+        contacts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+        faxNumber:
+          type: string
+        phoneNumber:
+          $ref: '#/components/schemas/PhoneNumber'
+      required:
+        - dateLastUpdated
+        - industryGroupID
+        - nameOfOrganisation
+        - organisationCode
+        - updateType
+      title: OrganizationDetail
+    Address:
+      type: object
+      additionalProperties: false
+      properties:
+        firstName:
+          type: string
+          nullable: true
+        lastName:
+          type: string
+          nullable: true
+        organisationName:
+          type: string
+          nullable: true
+        premise:
+          type: string
+          nullable: true
+        street:
+          type: string
+          nullable: true
+        suburb:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+        regionOrState:
+          type: string
+          nullable: true
+        postalCode:
+          type: integer
+          nullable: true
+        country:
+          type: string
+          nullable: true
+          example: "AU"
+      required:
+        - city
+        - country
+        - firstName
+        - lastName
+        - organisationName
+        - postalCode
+        - premise
+        - regionOrState
+        - street
+        - suburb
+      title: Address
+    Contact:
+      type: object
+      additionalProperties: false
+      properties:
+        description:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        phoneNumber:
+          $ref: '#/components/schemas/PhoneNumber'
+          nullable: true
+        mobileNumber:
+          $ref: '#/components/schemas/PhoneNumber'
+          nullable: true
+        email:
+          type: string
+          nullable: true
+          example: "abbc@example.com"
+      required:
+        - description
+        - email
+        - name
+        - phoneNumber
+        - mobileNumber
+      title: Contact
+    PhoneNumber:
+      type: object
+      additionalProperties: false
+      properties:
+        countryCode:
+          type: string
+          nullable: true
+        number:
+          type: string
+          nullable: true
+      required:
+        - countryCode
+        - number
+      title: PhoneNumber
+    TransmissionHeader:
+      type: object
+      additionalProperties: false
+      properties:
+        dateFormatLastRevised:
+          type: string
+          format: date
+          example: "2021-01-11"
+        dateTransmissionFileCreated:
+          type: string
+          format: date
+          example: "2021-01-11"
+        countryOfOrigin:
+          type: string
+          example: "AU"
+        documentOriginator:
+          type: string
+        currentTransmitter:
+          type: string
+        currentReceiver:
+          type: string
+        finalReceiver:
+          type: string
+        accessPassword:
+          type: string
+          nullable: true
+          format: password
+        accessPasswordReplacement:
+          type: string
+          nullable: true
+          format: password
+        transmissionType:
+          type: string
+          format: integer
+        versionNumber:
+          type: integer
+          nullable: true
+        softwareIdentifier:
+          type: string
+          nullable: true
+        abn:
+          type: string
+          nullable: true
+      required:
+        - abn
+        - accessPassword
+        - accessPasswordReplacement
+        - countryOfOrigin
+        - currentReceiver
+        - currentTransmitter
+        - dateFormatLastRevised
+        - dateTransmissionFileCreated
+        - documentOriginator
+        - finalReceiver
+        - softwareIdentifier
+        - transmissionType
+        - versionNumber
+      title: TransmissionHeader
+    OrganizationCode:
+      type: string
+      example: "AWTS"
+    PrivateRecord:
+      type: object
+      additionalProperties: false
+      properties:
+        recordName:
+          type: string
+        recordId:
+          type: string
+        privateViewers:
+          type: array
+          items:
+            $ref: "#/components/schemas/OrganizationCode"
+      required:
+        - recordName
+        - recordId
+        - privateViewers
+      title: PrivateRecord
+    DocumentType:
+      type: string
+      enum:
+        - AC
+        - ACK
+        - ACU
+        - DO
+        - DRV
+        - DS
+        - GI
+        - LI
+        - LPD
+        - OD
+        - PA
+        - PCF
+        - PC
+        - SR
+        - ST
+        - TC
+        - TCR
+        - TCU
+        - TRV
+        - TS
+        - TXT 
+    Error:
+      type: object
+      description: Error
+      properties:
+        errorCode:
+          type: string
+          description: Error code
+        errorMessage:
+          type: string
+          description: Error Message
