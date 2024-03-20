@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: WIEDPUG OpenAPI Specs
+  title: Organization Details OpenAPI Specs
   version: 1.0.0
 paths:
   /organization-details:
@@ -42,7 +42,7 @@ paths:
           description: The newly created organization detail
           content:
             application/json:
-              organizationDetails:
+              schema:
                 $ref: '#/components/schemas/OrganizationDetails'
         '400':
           description: Invalid request
@@ -291,21 +291,21 @@ components:
         updateType:
           type: string
           enum:
-            - C
-            - A
-            - D
+            - "C"
+            - "A"
+            - "D"
         IndustryGroupID:
           type: string
           enum:
-            - A
-            - C
-            - E
-            - D
-            - M
-            - P
-            - S
-            - T
-            - V
+            - "A"
+            - "C"
+            - "E"
+            - "D"
+            - "M"
+            - "P"
+            - "S"
+            - "T"
+            - "V"
         transmitterFlag:
           type: string
           enum:
@@ -502,27 +502,27 @@ components:
     DocumentType:
       type: string
       enum:
-        - AC
-        - ACK
-        - ACU
-        - DO
-        - DRV
-        - DS
-        - GI
-        - LI
-        - LPD
-        - OD
-        - PA
-        - PCF
-        - PC
-        - SR
-        - ST
-        - TC
-        - TCR
-        - TCU
-        - TRV
-        - TS
-        - TXT 
+        - "AC"
+        - "ACK"
+        - "ACU"
+        - "DO"
+        - "DRV"
+        - "DS"
+        - "GI"
+        - "LI"
+        - "LPD"
+        - "OD"
+        - "PA"
+        - "PCF"
+        - "PC"
+        - "SR"
+        - "ST"
+        - "TC"
+        - "TCR"
+        - "TCU"
+        - "TRV"
+        - "TS"
+        - "TXT" 
     Error:
       type: object
       description: Error
