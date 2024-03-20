@@ -31,4 +31,3 @@ jobs:
           publish_dir: ./next  # Change this to your build output directory?
           user_name: GitHub Actions
           user_email: actions@github.com # need to change
-          publish_branch: gh-pages
