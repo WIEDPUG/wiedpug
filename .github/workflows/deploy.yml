@@ -29,5 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./next  # Change this to your build output directory?
-          user_name: GitHub Actions
-          user_email: actions@github.com # need to change
