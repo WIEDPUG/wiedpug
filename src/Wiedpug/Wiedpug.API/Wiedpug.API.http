@@ -1,0 +1,6 @@
+@Wiedpug.API_HostAddress = http://localhost:5216
+
+GET {{Wiedpug.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

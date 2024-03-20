@@ -1,2 +1,7 @@
 node_modules/
 .next
+/src/Wiedpug/.vs
+/src/Wiedpug/Wiedpug.API/bin/Debug/net8.0
+/src/Wiedpug/Wiedpug.API/obj
+/src/Wiedpug/Wiedpug.Domain/bin/Debug/net8.0
+/src/Wiedpug/Wiedpug.Domain/obj
