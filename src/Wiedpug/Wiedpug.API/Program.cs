@@ -1,4 +1,9 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
+using System.Net;
 using System.Reflection;
+using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.SchemaFilter;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => {    
+builder.Services.AddSwaggerGen(c => {
+
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Wiedpug.API", Version = "v1" });
+
     c.SchemaFilter<DescribeEnumMemberValues>();
 
     //To automatically add XML comments to Open API Spec.
@@ -17,7 +25,11 @@ builder.Services.AddSwaggerGen(c => {
 
     var domainXmlFilePath = Path.Combine(System.AppContext.BaseDirectory, "Wiedpug.Domain.xml");
     c.IncludeXmlComments(domainXmlFilePath);
+
+    c.ExampleFilters(); //To support examples
 });
+
+builder.Services.AddSwaggerExamplesFromAssemblyOf<RequestForDataOrStatus200Example>();
 
 var app = builder.Build();
 
