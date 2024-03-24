@@ -56,7 +56,7 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDataOrStatus200Example : IMultipleExamplesProvider<ApiResult>
+    public class RequestForDataOrStatus200Example : IExamplesProvider<ApiResult>
     {
         public ApiResult GetExamples()
         {
@@ -67,38 +67,68 @@ namespace Wiedpug.API.ExampleResponses
                 Data = "{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"
             };
         }
+    }
 
-        IEnumerable<SwaggerExample<ApiResult>> IMultipleExamplesProvider<ApiResult>.GetExamples()
+    public class RequestForDataOrStatus400Example : IExamplesProvider<CustomProblemDetails>
+    {
+        public CustomProblemDetails GetExamples()
         {
-            yield return SwaggerExample.Create(
-                "Example 1",
-                new ApiResult
+            return new CustomProblemDetails()
+            {
+                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                Title = "One or more validation errors occurred",
+                Status = StatusCodes.Status400BadRequest,
+                Detail = string.Empty,
+                Errors = new Dictionary<string, string[]>
                 {
-                    IsSuccessful = true,
-                    Message = string.Empty,
-                    Data = "{Auction Catalogue Data}"
-                });
-
-            yield return SwaggerExample.Create(
-                "Example 2",
-                new ApiResult
-                {
-                    IsSuccessful = true,
-                    Message = string.Empty,
-                    Data = "{Private Catalogue Data to be generated}"
-                });
+                    { "Requests[0].TransmissionHeader.DateFormatLastRevised", ["The field DateFormatLastRevised is required", "The field DateFormatLastRevised must match regulart expression pattern..."] },
+                    { "Requests[0].TransmissionHeader.CountryOfOrigin", ["The field CountryOfOrigin is required"] }
+                }
+            };
         }
     }
 
-    public class RequestForDataOrStatus400Example : IExamplesProvider<ApiResult>
+    public class RequestForDataOrStatus401Example : IExamplesProvider<CustomProblemDetails>
     {
-        public ApiResult GetExamples()
+        public CustomProblemDetails GetExamples()
         {
-            return new ApiResult()
+            return new CustomProblemDetails()
             {
-                IsSuccessful = false,
-                Message = "Validation error message",
-                Data = null
+                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                Title = "Unauthorized",
+                Status = StatusCodes.Status401Unauthorized,
+                Detail = "Missing authentication credentials",
+                Errors = null
+            };
+        }
+    }
+
+    public class RequestForDataOrStatus403Example : IExamplesProvider<CustomProblemDetails>
+    {
+        public CustomProblemDetails GetExamples()
+        {
+            return new CustomProblemDetails()
+            {
+                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                Title = "You don't have permission to access this resource",
+                Status = StatusCodes.Status403Forbidden,
+                Detail = "You don't have a 'read' access to access this resource",
+                Errors = null
+            };
+        }
+    }
+
+    public class RequestForDataOrStatus500Example : IExamplesProvider<CustomProblemDetails>
+    {
+        public CustomProblemDetails GetExamples()
+        {
+            return new CustomProblemDetails()
+            {
+                Type = "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                Title = "An error occurred while processing your required",
+                Status = StatusCodes.Status500InternalServerError,
+                Detail = "Error details..",
+                Errors = null
             };
         }
     }

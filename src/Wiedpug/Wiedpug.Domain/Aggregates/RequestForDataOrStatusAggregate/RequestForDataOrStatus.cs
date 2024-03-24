@@ -5,6 +5,6 @@ namespace Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate
     public class RequestForDataOrStatus
     {
         [Required]
-        public List<RequestForDataGroup> Requests { get; set; }
+        public required List<RequestForDataGroup> Requests { get; set; }
     }
 }

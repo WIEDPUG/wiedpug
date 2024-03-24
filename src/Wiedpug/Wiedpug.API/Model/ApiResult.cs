@@ -3,7 +3,7 @@
 namespace Wiedpug.API.Model
 {
     /// <summary>
-    /// A standard API response object used for all API responses
+    /// A standard API response object used for all successful API responses
     /// </summary>
     public class ApiResult
     {

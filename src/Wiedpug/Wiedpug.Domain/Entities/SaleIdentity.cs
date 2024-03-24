@@ -2,7 +2,7 @@
 {
     public class SaleIdentity
     {
-        public string SellingCentreType { get; set; }
+        public string? SellingCentreType { get; set; }
 
         public int? SaleNumber { get; set; }
     }

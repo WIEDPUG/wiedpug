@@ -10,7 +10,9 @@
         "tags": [
           "RequestForDataOrStatus"
         ],
+        "summary": "Retrieves the requested details or status",
         "requestBody": {
+          "description": "Request payload",
           "content": {
             "application/json": {
               "schema": {
@@ -34,51 +36,57 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
+            "description": "OK - Request has succeeded. Data will be returned if there is any, otherwise, no data will be returned (e.g. No data found in the network or requestor has no access to the record)",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                },
-                "example": {"isSuccessful":false,"message":"Validation error message","data":null}
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "$ref": "#/components/schemas/ApiResult"
                 },
-                "example": {"isSuccessful":false,"message":"Validation error message","data":null}
-              },
-              "text/json": {
+                "example": {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Server cannot or will not process the request due to something that is perceived to be a client error (e.g. malformed request syntax, invalid data, etc.).",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "$ref": "#/components/schemas/CustomProblemDetails"
                 },
-                "example": {"isSuccessful":false,"message":"Validation error message","data":null}
+                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
               }
             }
           },
           "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden",
+            "description": "Unauthorized - Request has not been applied because it lacks valid authentication credentials for the target resource",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
+                  "$ref": "#/components/schemas/CustomProblemDetails"
+                },
+                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - Server understood the request but refuses to fulfill it.",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
+                  "$ref": "#/components/schemas/CustomProblemDetails"
+                },
+                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error - Server encountered an unexpected condition that prevented it from fulfilling the request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomProblemDetails"
+                },
+                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
               }
             }
           }
@@ -88,6 +96,29 @@
   },
   "components": {
     "schemas": {
+      "ApiResult": {
+        "required": [
+          "isSuccessful"
+        ],
+        "type": "object",
+        "properties": {
+          "isSuccessful": {
+            "type": "boolean",
+            "description": "Indicator if the request has been successfully processed."
+          },
+          "message": {
+            "type": "string",
+            "description": "Contains information about the response if applicable.",
+            "nullable": true
+          },
+          "data": {
+            "description": "Contains response data. e.g. Auction Catalogue",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A standard API response object used for all successful API responses"
+      },
       "CountryCode": {
         "enum": [
           "AU",
@@ -98,32 +129,48 @@
         "type": "string",
         "description": "Country Code using ISO 3166-1 standard<br />Australia: AU<br />New Zealand: NZ<br />France: FR<br />South Africa: ZA"
       },
-      "ProblemDetails": {
+      "CustomProblemDetails": {
+        "required": [
+          "status",
+          "title"
+        ],
         "type": "object",
         "properties": {
           "type": {
             "type": "string",
+            "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
             "nullable": true
           },
           "title": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
           },
           "status": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+            "format": "int32"
           },
           "detail": {
             "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.",
             "nullable": true
           },
-          "instance": {
-            "type": "string",
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            },
+            "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": false,
+        "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
       },
       "RequestForData": {
         "required": [
@@ -191,7 +238,8 @@
       },
       "RequestForDataGroup": {
         "required": [
-          "requestForDataCollection"
+          "requestForDataCollection",
+          "transmissionHeader"
         ],
         "type": "object",
         "properties": {
