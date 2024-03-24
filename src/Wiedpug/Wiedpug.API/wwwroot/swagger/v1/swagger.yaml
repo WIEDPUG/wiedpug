@@ -3,7 +3,7 @@ info:
   title: Wiedpug.API
   version: v1
 paths:
-  /api/RequestForDataOrStatus:
+  /request-for-data-or-status:
     post:
       tags:
         - RequestForDataOrStatus
@@ -24,57 +24,37 @@ paths:
       responses:
         '200':
           description: Success
-          content:
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/ApiResult'
-              example: {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ApiResult'
-              example: {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
-            text/json:
-              schema:
-                $ref: '#/components/schemas/ApiResult'
-              example: {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
         '400':
           description: Bad Request
           content:
             text/plain:
               schema:
-                $ref: '#/components/schemas/ApiResult'
+                $ref: '#/components/schemas/ProblemDetails'
               example: {"isSuccessful":false,"message":"Validation error message","data":null}
             application/json:
               schema:
-                $ref: '#/components/schemas/ApiResult'
+                $ref: '#/components/schemas/ProblemDetails'
               example: {"isSuccessful":false,"message":"Validation error message","data":null}
             text/json:
               schema:
-                $ref: '#/components/schemas/ApiResult'
+                $ref: '#/components/schemas/ProblemDetails'
               example: {"isSuccessful":false,"message":"Validation error message","data":null}
         '401':
           description: Unauthorized
         '403':
           description: Forbidden
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
 components:
   schemas:
-    ApiResult:
-      required:
-        - isSuccessful
-      type: object
-      properties:
-        isSuccessful:
-          type: boolean
-          description: Indicator if the request has been successfully processed.
-        message:
-          type: string
-          description: Contains information about the response if applicable.
-          nullable: true
-        data:
-          description: Contains response data. e.g. Auction Catalogue
-          nullable: true
-      additionalProperties: false
-      description: A standard API response object used for all API responses
     CountryCode:
       enum:
         - AU
@@ -83,6 +63,26 @@ components:
         - ZA
       type: string
       description: 'Country Code using ISO 3166-1 standard<br />Australia: AU<br />New Zealand: NZ<br />France: FR<br />South Africa: ZA'
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+      additionalProperties: { }
     RequestForData:
       required:
         - requestType
@@ -140,6 +140,7 @@ components:
         transmissionHeader:
           $ref: '#/components/schemas/TransmissionHeader'
         requestForDataCollection:
+          maxItems: 53
           type: array
           items:
             $ref: '#/components/schemas/RequestForData'
