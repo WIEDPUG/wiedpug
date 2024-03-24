@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     [Description("Country Code using ISO 3166-1 standard")]
     public enum CountryCode
     {

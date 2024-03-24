@@ -16,19 +16,19 @@
               "schema": {
                 "$ref": "#/components/schemas/RequestForDataOrStatus"
               },
-              "example": {"requests":[{"transmissionHeader":{"recordType":"TransmissionHeader","dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":0,"documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":0,"saleIdentity":null,"orgnisationRequested":null,"startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":null,"requestType":0,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":null,"season":null},{"transmissionTypeRequested":0,"saleIdentity":null,"orgnisationRequested":null,"startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":null,"requestType":0,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":null,"season":null}]}]}
+              "example": {"requests":[{"transmissionHeader":{"recordType":null,"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestForDataOrStatus"
               },
-              "example": {"requests":[{"transmissionHeader":{"recordType":"TransmissionHeader","dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":0,"documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":0,"saleIdentity":null,"orgnisationRequested":null,"startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":null,"requestType":0,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":null,"season":null},{"transmissionTypeRequested":0,"saleIdentity":null,"orgnisationRequested":null,"startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":null,"requestType":0,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":null,"season":null}]}]}
+              "example": {"requests":[{"transmissionHeader":{"recordType":null,"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestForDataOrStatus"
               },
-              "example": {"requests":[{"transmissionHeader":{"recordType":"TransmissionHeader","dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":0,"documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":0,"saleIdentity":null,"orgnisationRequested":null,"startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":null,"requestType":0,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":null,"season":null},{"transmissionTypeRequested":0,"saleIdentity":null,"orgnisationRequested":null,"startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":null,"requestType":0,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":null,"season":null}]}]}
+              "example": {"requests":[{"transmissionHeader":{"recordType":null,"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
             }
           }
         },
@@ -109,102 +109,17 @@
       },
       "CountryCode": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "AU",
+          "NZ",
+          "FR",
+          "ZA"
         ],
-        "type": "integer",
-        "description": "Country Code using ISO 3166-1 standard<br />Australia: AU<br />New Zealand: NZ<br />France: FR<br />South Africa: ZA",
-        "format": "int32"
-      },
-      "RecordType": {
-        "enum": [
-          "TransmissionHeader",
-          "ExclusionInclusionList",
-          "FinalReceiverList",
-          "WoolSaleHeaderLots",
-          "WoolSaleHeaderExtension",
-          "WoolSaleHeaderNonAuction",
-          "WoolSaleHeaderGroups",
-          "LotPriceandBuyerDetails",
-          "SaleStatus",
-          "LotHeaderAppraisaldata",
-          "LotHeaderExtension",
-          "LotHeaderPricingData",
-          "LotHeaderAWEXData",
-          "GroupHeader",
-          "GroupHeaderExtension",
-          "LotInvoiceHeader",
-          "LotInvoiceExtension",
-          "LotHeader",
-          "LotDetails",
-          "LotHeaderVendorDeclaration",
-          "LotPaymentDetail",
-          "FibreDiameterHistogramHeader",
-          "FibreDiameterHistogramDetail",
-          "Name",
-          "Address",
-          "CentreDetails",
-          "ConsignmentHeader",
-          "ConsignmentExtension1",
-          "ConsignmentExtension2",
-          "CountermarkHeadmark",
-          "DeliveryOrderDetail",
-          "DeliveryOrderDetailExtension1",
-          "DeliveryOrderDetailExtension2",
-          "Comment",
-          "TestDataHeader",
-          "ColourDetails",
-          "DichloromethaneTestDetails",
-          "ScouredYieldExtension",
-          "PremiumTestDetails",
-          "SubjectiveInterlotDetails",
-          "CombinationDetails",
-          "LengthandStrengthCombinationDetails",
-          "LengthandStrengthDetails",
-          "OMLCertificateDetails",
-          "OMIDetails",
-          "CoreTestDetails",
-          "GuidanceReportDetails",
-          "LengthAfterCardingTestDetails",
-          "ConditioningTestDetails",
-          "ScouredTestDetails",
-          "PostsaleCoreTestDetails",
-          "ColourCombinationDetails",
-          "AdjustmentNoteDetails",
-          "TestStatusDetail",
-          "RequestforData",
-          "ContractLimitRequirements",
-          "CoreTestRequestVerification",
-          "DarkandMedullatedFibreRiskDetails",
-          "RequestPostSalePrintingofPreSaleCertificate",
-          "CertificateRequest",
-          "CertificateRequestcont",
-          "TestCertificateUpdateDetail",
-          "PaymentDetail",
-          "PaymentHeader",
-          "StatementDetail",
-          "StatementHeader",
-          "StatementTrailer",
-          "MiscellaneousCharge",
-          "PaymentSummary",
-          "OtherDetails",
-          "CatalogueLotDesc",
-          "InterlotComponentBaleHeader",
-          "BaleHeader",
-          "PropertyIdentificationCodes",
-          "BaleDetailGreasyProc",
-          "BaleDetailRenumbers",
-          "BaleDetailTripacks",
-          "BaleIdentification",
-          "TransmissionResponse",
-          "TransmissionTotals"
-        ],
-        "type": "string"
+        "type": "string",
+        "description": "Country Code using ISO 3166-1 standard<br />Australia: AU<br />New Zealand: NZ<br />France: FR<br />South Africa: ZA"
       },
       "RequestForData": {
         "required": [
+          "requestType",
           "transmissionTypeRequested"
         ],
         "type": "object",
@@ -215,20 +130,29 @@
           "saleIdentity": {
             "$ref": "#/components/schemas/SaleIdentity"
           },
-          "orgnisationRequested": {
+          "organisationRequested": {
             "type": "string",
+            "nullable": true
+          },
+          "saleDateRequested": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "type": "string",
+            "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
+            "format": "date",
             "nullable": true
           },
           "startDateTimeStatusRequest": {
-            "pattern": "/^(?:19|20)\\d{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:Z|-0[1-9]|-1\\d|-2[0-3]|-00:?(?:0[1-9]|[1-5]\\d)|\\+[01]\\d|\\+2[0-3])(?:|:?[0-5]\\d)$/gm",
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/",
             "type": "string",
-            "description": "Date and Time with Timezone value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "description": "Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "format": "date-time",
             "nullable": true
           },
           "endDateTimeStatusRequest": {
-            "pattern": "/^(?:19|20)\\d{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:Z|-0[1-9]|-1\\d|-2[0-3]|-00:?(?:0[1-9]|[1-5]\\d)|\\+[01]\\d|\\+2[0-3])(?:|:?[0-5]\\d)$/gm",
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/",
             "type": "string",
-            "description": "Date and Time with Timezone value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "description": "Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "format": "date-time",
             "nullable": true
           },
           "userNetworkDateTime": {
@@ -244,7 +168,7 @@
           "recordTypesToBeExcluded": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RecordType"
+              "type": "string"
             },
             "nullable": true
           },
@@ -275,14 +199,16 @@
         "additionalProperties": false
       },
       "RequestForDataOrStatus": {
+        "required": [
+          "requests"
+        ],
         "type": "object",
         "properties": {
           "requests": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RequestForDataGroup"
-            },
-            "nullable": true
+            }
           }
         },
         "additionalProperties": false
@@ -354,19 +280,22 @@
         "type": "object",
         "properties": {
           "recordType": {
-            "$ref": "#/components/schemas/RecordType"
+            "minLength": 1,
+            "type": "string"
           },
           "dateFormatLastRevised": {
             "minLength": 1,
-            "pattern": "/^[0-9]{2}[0-9]{2}[0-9]{2}$/",
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)"
+            "description": "Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)",
+            "format": "date"
           },
           "dateTransmissionFileCreated": {
             "minLength": 1,
-            "pattern": "/^[0-9]{2}[0-9]{2}[0-9]{2}$/",
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)"
+            "description": "Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)",
+            "format": "date"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"

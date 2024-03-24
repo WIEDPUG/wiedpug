@@ -31,11 +31,22 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new Domain.Entities.RequestForData
                             {
-
-                            },
-                            new Domain.Entities.RequestForData
-                            {
-
+                                TransmissionTypeRequested = Domain.Enums.TransmissionType.AuctionCatalogues,
+                                SaleIdentity = new Domain.Entities.SaleIdentity
+                                {
+                                    SellingCentreType = "F",
+                                    SaleNumber = 18                                    
+                                },
+                                OrganisationRequested = "AWNF",
+                                SaleDateRequested = "2023-10-31",
+                                UserNetworkDateTime = false,
+                                RequestType = Domain.Enums.RequestType.BroadcastDataRequest,
+                                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
+                                RecordTypesToBeExcluded = new List<string>
+                                {
+                                    "79B","32A","84"
+                                },
+                                Season = 23
                             }
                         }
                     }

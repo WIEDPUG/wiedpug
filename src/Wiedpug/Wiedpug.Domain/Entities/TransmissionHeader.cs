@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 using Wiedpug.Domain.ValueObject;
@@ -10,12 +8,13 @@ namespace Wiedpug.Domain.Entities
     public class TransmissionHeader
     {
         [Required]
-        public RecordType RecordType { get; set; }
+        public string RecordType { get; set; }
 
         /// <summary>
         /// Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)
         /// </summary>        
         [Required]
+        [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
         public string DateFormatLastRevised { get; set; }
 
@@ -23,6 +22,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)
         /// </summary>
         [Required]
+        [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
         public string DateTransmissionFileCreated { get; set; }
 
@@ -51,7 +51,7 @@ namespace Wiedpug.Domain.Entities
         public string AccessPasswordReplacement { get; set; }
 
         [Required]
-        public TransmissionType TransmissionType { get; set; }
+        public TransmissionType TransmissionType { get; set; }       
 
         [Required]
         public string VersionNumber { get; set; }

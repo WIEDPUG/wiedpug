@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
 using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate

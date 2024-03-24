@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-namespace Wiedpug.Domain.Entities
+﻿namespace Wiedpug.Domain.Entities
 {
     public class SaleIdentity
     {

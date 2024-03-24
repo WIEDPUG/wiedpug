@@ -1,9 +1,5 @@
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
-using System.Net;
-using System.Reflection;
-using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.SchemaFilter;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,7 +25,7 @@ builder.Services.AddSwaggerGen(c => {
     c.ExampleFilters(); //To support examples
 });
 
-builder.Services.AddSwaggerExamplesFromAssemblyOf<RequestForDataOrStatus200Example>();
+builder.Services.AddSwaggerExamplesFromAssemblyOf<Program>();
 
 var app = builder.Build();
 

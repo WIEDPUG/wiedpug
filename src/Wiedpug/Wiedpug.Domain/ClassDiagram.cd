@@ -1,87 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate.RequestForDataOrStatus" Collapsed="true">
-    <Position X="2.75" Y="3.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>Aggregates\RequestForDataOrStatusAggregate\RequestForDataOrStatus.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate.RequestForDataGroup" Collapsed="true">
-    <Position X="6.25" Y="2.75" Width="1.75" />
+    <Position X="10" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\RequestForDataOrStatusAggregate\RequestForDataGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="2.75" Y="4.75" Width="1.75" />
+  <Class Name="Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate.RequestForDataOrStatus" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAQAAAAgAEAQgAAAAAAAAAAAIAAJAAgAQAEAAQI=</HashCode>
-      <FileName>Entities\TransmissionHeader.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Aggregates\RequestForDataOrStatusAggregate\RequestForDataOrStatus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.RequestForData" Collapsed="true">
-    <Position X="4.5" Y="2.75" Width="1.5" />
+    <Position X="8.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAQAEAAMAAAAAAAAAAAAAAEAAAQAEEAAAAAI=</HashCode>
+      <HashCode>AAIAAAAAAQAEAAMAAAAAAAAAAAAAAEAAEQAGEAAAAAA=</HashCode>
       <FileName>Entities\RequestForData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.SaleIdentity" Collapsed="true">
-    <Position X="4.5" Y="3.75" Width="1.5" />
+    <Position X="8.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\SaleIdentity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Shared.Constants.RegexPattern" Collapsed="true">
-    <Position X="2.75" Y="2.75" Width="1.5" />
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAQAAAAgAEAQgAAAAAAAAAAAIAAJAAgAQAEAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Shared.Constants.RegexPattern" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Shared\Constants.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.SoftwareIdentifier" Collapsed="true">
-    <Position X="6.25" Y="3.75" Width="1.5" />
+    <Position X="10" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAg=</HashCode>
       <FileName>ValueObject\SoftwareIdentifier.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Wiedpug.Domain.Enums.CountryCode" Collapsed="true">
-    <Position X="2.75" Y="6" Width="1.5" />
+    <Position X="6.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAAAAAABAAAEAAABAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\CountryCode.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.RequestType" Collapsed="true">
-    <Position X="6.25" Y="6" Width="1.5" />
+    <Position X="8.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAAAAAAAABAAAAAAgAAAAAAAAAgAAAAA=</HashCode>
       <FileName>Enums\RequestType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.TransmissionType" Collapsed="true">
-    <Position X="2.75" Y="6.75" Width="1.5" />
+    <Position X="10" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAMAAAACAEUGAAAAgAAAAEIAAAARAAIAUEABQAAQAA=</HashCode>
       <FileName>Enums\TransmissionType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.WoolTypeGroup" Collapsed="true">
-    <Position X="4.5" Y="6.75" Width="1.5" />
+    <Position X="6.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAA=</HashCode>
       <FileName>Enums\WoolTypeGroup.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="Wiedpug.Domain.RecordType" Collapsed="true">
-    <Position X="4.5" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gTCQAsAUooIAqABKBCOlKgQkg0kEjQA2MJQB8APACIQ=</HashCode>
-      <FileName>Enums\RecordType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
