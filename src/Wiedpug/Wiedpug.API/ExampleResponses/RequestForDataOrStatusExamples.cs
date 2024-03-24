@@ -25,7 +25,8 @@ namespace Wiedpug.API.ExampleResponses
                             FinalReceiver = "AWTM",
                             AccessPassword = "1111111111",
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                            VersionNumber = "36"
+                            VersionNumber = 36,
+                            Abn = "00000000000"
                         },
                         RequestForDataCollection = new List<Domain.Entities.RequestForData>
                         {
@@ -62,8 +63,8 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 IsSuccessful = true,
-                Message = string.Empty,
-                Data = "{Response Data to be generated}"
+                Message = "Success message if applicable, otherwise can be set to Null",
+                Data = "{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"
             };
         }
 

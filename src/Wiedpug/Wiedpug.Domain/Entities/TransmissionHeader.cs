@@ -7,16 +7,13 @@ namespace Wiedpug.Domain.Entities
 {
     public class TransmissionHeader
     {
-        [Required]
-        public string RecordType { get; set; }
-
         /// <summary>
         /// Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)
         /// </summary>        
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
-        public string DateFormatLastRevised { get; set; }
+        public required string DateFormatLastRevised { get; set; }
 
         /// <summary>
         /// Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)
@@ -24,43 +21,39 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
-        public string DateTransmissionFileCreated { get; set; }
+        public required string DateTransmissionFileCreated { get; set; }
 
         /// <summary>
         /// A code for the country in which the transmission was created.
         /// </summary>
         [Required]        
-        public CountryCode CountryOfOrigin { get; set; }
+        public required CountryCode CountryOfOrigin { get; set; }
 
         [Required]
-        public string DocumentOriginator { get; set; }
+        public required string DocumentOriginator { get; set; }
 
         [Required]
-        public string CurrentTransmitter { get; set; }
+        public required string CurrentTransmitter { get; set; }
 
         [Required]
-        public string CurrentReceiver { get; set; }
+        public required string CurrentReceiver { get; set; }
 
         [Required]
-        public string FinalReceiver { get; set; }
+        public required string FinalReceiver { get; set; }
+
+        public string? AccessPassword { get; set; }
+
+        public string? AccessPasswordReplacement { get; set; }
 
         [Required]
-        public string AccessPassword { get; set; }
+        public required TransmissionType TransmissionType { get; set; }       
+
+        public int? VersionNumber { get; set; }
+
+        public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
         [Required]
-        public string AccessPasswordReplacement { get; set; }
-
-        [Required]
-        public TransmissionType TransmissionType { get; set; }       
-
-        [Required]
-        public string VersionNumber { get; set; }
-
-        [Required]
-        public SoftwareIdentifier SoftwareIdentifier { get; set; }
-
-        [Required]
-        public string Abn { get; set; }
+        public required string Abn { get; set; }
 
     }
 }

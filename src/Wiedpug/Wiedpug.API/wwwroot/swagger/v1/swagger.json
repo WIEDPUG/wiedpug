@@ -16,19 +16,19 @@
               "schema": {
                 "$ref": "#/components/schemas/RequestForDataOrStatus"
               },
-              "example": {"requests":[{"transmissionHeader":{"recordType":null,"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
+              "example": {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestForDataOrStatus"
               },
-              "example": {"requests":[{"transmissionHeader":{"recordType":null,"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
+              "example": {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestForDataOrStatus"
               },
-              "example": {"requests":[{"transmissionHeader":{"recordType":null,"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":"36","softwareIdentifier":null,"abn":null},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
+              "example": {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
             }
           }
         },
@@ -40,19 +40,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ApiResult"
                 },
-                "example": {"isSuccessful":true,"message":"","data":"{Response Data to be generated}"}
+                "example": {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiResult"
                 },
-                "example": {"isSuccessful":true,"message":"","data":"{Response Data to be generated}"}
+                "example": {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiResult"
                 },
-                "example": {"isSuccessful":true,"message":"","data":"{Response Data to be generated}"}
+                "example": {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
               }
             }
           },
@@ -92,20 +92,27 @@
   "components": {
     "schemas": {
       "ApiResult": {
+        "required": [
+          "isSuccessful"
+        ],
         "type": "object",
         "properties": {
           "isSuccessful": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Indicator if the request has been successfully processed."
           },
           "message": {
             "type": "string",
+            "description": "Contains information about the response if applicable.",
             "nullable": true
           },
           "data": {
+            "description": "Contains response data. e.g. Auction Catalogue",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A standard API response object used for all API responses"
       },
       "CountryCode": {
         "enum": [
@@ -170,6 +177,7 @@
             "items": {
               "type": "string"
             },
+            "description": "Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header",
             "nullable": true
           },
           "season": {
@@ -244,17 +252,16 @@
         "properties": {
           "softwareCompany": {
             "type": "string",
-            "description": "Gets or Sets SoftwareCompany",
             "nullable": true
           },
           "version": {
-            "type": "string",
-            "description": "Gets or Sets Version",
+            "type": "integer",
+            "description": "Version no. e.g. 2400",
+            "format": "int32",
             "nullable": true
           },
           "programName": {
             "type": "string",
-            "description": "Gets or Sets ProgramName",
             "nullable": true
           }
         },
@@ -263,8 +270,6 @@
       "TransmissionHeader": {
         "required": [
           "abn",
-          "accessPassword",
-          "accessPasswordReplacement",
           "countryOfOrigin",
           "currentReceiver",
           "currentTransmitter",
@@ -272,17 +277,10 @@
           "dateTransmissionFileCreated",
           "documentOriginator",
           "finalReceiver",
-          "recordType",
-          "softwareIdentifier",
-          "transmissionType",
-          "versionNumber"
+          "transmissionType"
         ],
         "type": "object",
         "properties": {
-          "recordType": {
-            "minLength": 1,
-            "type": "string"
-          },
           "dateFormatLastRevised": {
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
@@ -317,19 +315,20 @@
             "type": "string"
           },
           "accessPassword": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "accessPasswordReplacement": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "transmissionType": {
             "$ref": "#/components/schemas/TransmissionType"
           },
           "versionNumber": {
-            "minLength": 1,
-            "type": "string"
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           },
           "softwareIdentifier": {
             "$ref": "#/components/schemas/SoftwareIdentifier"
