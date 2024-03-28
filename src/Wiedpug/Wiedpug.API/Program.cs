@@ -1,6 +1,7 @@
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.SchemaFilter;
+using Wiedpug.API.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,5 +42,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapApiResultEndpoints();
+
+app.MapAuctionCatalogueEndpoints();
 
 app.Run();

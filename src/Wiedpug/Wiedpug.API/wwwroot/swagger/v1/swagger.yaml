@@ -3,59 +3,99 @@ info:
   title: Wiedpug.API
   version: v1
 paths:
-  /request-for-data-or-status:
+  /auction-catalogue:
     post:
       tags:
-        - RequestForDataOrStatus
-      summary: Retrieves the requested details or status
+        - Auction Catalogue
+      summary: Used by brokers to transmit auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.
+      operationId: CreateAuctionCatalogue
       requestBody:
-        description: Request payload
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RequestForDataOrStatus'
-            example: {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
-          text/json:
-            schema:
-              $ref: '#/components/schemas/RequestForDataOrStatus'
-            example: {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
-          application/*+json:
-            schema:
-              $ref: '#/components/schemas/RequestForDataOrStatus'
-            example: {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
+              $ref: '#/components/schemas/AuctionCatalogue'
+        required: true
       responses:
         '200':
-          description: 'OK - Request has succeeded. Data will be returned if there is any, otherwise, no data will be returned (e.g. No data found in the network or requestor has no access to the record)'
+          description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
               example: {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
         '400':
-          description: 'Bad Request - Server cannot or will not process the request due to something that is perceived to be a client error (e.g. malformed request syntax, invalid data, etc.).'
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+  /request-for-details-or-status:
+    post:
+      tags:
+        - Request for Data/Status
+      summary: Retrieves the requested details or status
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestForDataOrStatus'
+            example: {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
+        required: true
+      responses:
+        '200':
+          description: OK
           content:
             application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
               example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
-          description: Unauthorized - Request has not been applied because it lacks valid authentication credentials for the target resource
+          description: Unauthorized
           content:
-            application/json:
+            application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
               example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
-          description: Forbidden - Server understood the request but refuses to fulfill it.
+          description: Forbidden
           content:
-            application/json:
+            application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
               example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '500':
-          description: Internal Server Error - Server encountered an unexpected condition that prevented it from fulfilling the request
+          description: Internal Server Error
           content:
-            application/json:
+            application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
               example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
@@ -78,6 +118,232 @@ components:
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses
+    AuctionCatalogue:
+      required:
+        - transmissionHeader
+        - woolSaleHeaderLots
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        woolSaleHeaderLots:
+          $ref: '#/components/schemas/WoolSaleHeaderLots'
+      additionalProperties: false
+    CalculationBasis:
+      enum:
+        - B
+        - K
+        - P
+      type: string
+      description: "This is used to identify the method used to calculate the post sale charge.\r\nThe post sale charge may be a per bale, per kilogram or percentage of the price of the wool.\r\nCalculation Basis is always per bale in Australia."
+    CatalogueSection:
+      enum:
+        - BLK
+        - DEAD
+        - FLC
+        - FMG
+        - ODD
+        - SKIN
+        - SKT
+        - TRAD
+        - XBD
+      type: string
+      description: These are the codes allocated by the local wool authorities to sectionalise the sale catalogues.
+    Centre:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
+        - 22
+        - 23
+        - 24
+        - 25
+        - 26
+        - 27
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 34
+        - 35
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+        - 54
+        - 55
+        - 56
+        - 57
+        - 58
+        - 59
+        - 60
+        - 61
+        - 62
+        - 63
+        - 64
+        - 65
+        - 66
+        - 67
+        - 68
+        - 69
+        - 70
+        - 71
+        - 72
+        - 73
+        - 74
+        - 75
+        - 76
+        - 77
+        - 78
+        - 79
+        - 80
+        - 81
+        - 82
+        - 83
+        - 84
+        - 85
+        - 86
+        - 87
+        - 88
+        - 89
+        - 90
+        - 91
+        - 92
+        - 93
+        - 94
+        - 95
+        - 96
+        - 97
+        - 98
+        - 99
+        - 100
+        - 101
+        - 102
+        - 103
+        - 104
+        - 105
+        - 106
+        - 107
+        - 108
+        - 109
+        - 110
+        - 111
+        - 112
+        - 113
+        - 114
+        - 115
+        - 116
+        - 117
+        - 118
+        - 119
+        - 120
+        - 121
+        - 122
+        - 123
+        - 124
+        - 125
+        - 126
+        - 127
+        - 128
+        - 129
+        - 130
+        - 131
+        - 132
+        - 133
+        - 134
+        - 135
+        - 136
+        - 137
+        - 138
+        - 139
+        - 140
+        - 141
+        - 142
+        - 143
+        - 144
+        - 145
+        - 146
+        - 147
+        - 148
+        - 149
+        - 150
+        - 151
+        - 152
+        - 153
+        - 154
+        - 155
+        - 156
+        - 157
+        - 158
+        - 159
+        - 160
+        - 161
+        - 162
+        - 163
+        - 164
+        - 165
+        - 166
+        - 167
+        - 168
+        - 169
+        - 170
+        - 171
+        - 172
+        - 173
+        - 174
+        - 175
+        - 176
+        - 177
+        - 178
+        - 179
+        - 180
+        - 181
+        - 182
+        - 183
+        - 184
+        - 185
+        - 186
+        - 187
+        - 188
+        - 189
+      type: integer
+      description: "This is combined Centres for Australia, Overseas and New Zealand.\r\nA centre is a town where any activity connected with the wool industry takes place.\r\nThe codes used in transmissions are those defined in the Australian Wool Selling Regulation."
+      format: int32
     CountryCode:
       enum:
         - AU
@@ -119,6 +385,13 @@ components:
           nullable: true
       additionalProperties: false
       description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
+    DeliveryBasis:
+      enum:
+        - 0
+        - 1
+      type: integer
+      description: Delivery Nominated Destination<br />Loaded on Transport
+      format: int32
     RequestForData:
       required:
         - requestType
@@ -310,6 +583,111 @@ components:
       type: integer
       description: 'The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement'
       format: int32
+    WeightUnit:
+      enum:
+        - 0
+        - 1
+      type: integer
+      description: '0: Kilograms<br />1: Pounds'
+      format: int32
+    WoolSaleHeaderLots:
+      required:
+        - calculationBasis
+        - catalogueSection
+        - centreCatalogue
+        - centreStorage
+        - currency
+        - deliveryBasis
+        - invoicingOrganisation
+        - packType
+        - postSaleCharge
+        - releasingOrganisation
+        - saleDate
+        - saleIdentity
+        - season
+        - sellingOrganisation
+        - weightUnit
+        - woolState
+        - woolTypeGroup
+      type: object
+      properties:
+        season:
+          type: integer
+          format: int32
+        saleIdentity:
+          $ref: '#/components/schemas/SaleIdentity'
+        centreStorage:
+          minLength: 1
+          type: string
+          description: "The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). \r\nFor example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery."
+        saleDate:
+          minLength: 1
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          format: date
+        woolState:
+          minLength: 1
+          type: string
+          description: The state of the wool itemised in the invoice
+        packType:
+          minLength: 1
+          type: string
+          description: A code used to indicate how the wool has been baled. The most common type is Farm bales.
+        currency:
+          maxLength: 3
+          minLength: 1
+          type: string
+          description: The Code for the currency in which the sale was made. To obtain the current code list please use the Commonwealth Bank Currency Codes on their website
+        weightUnit:
+          $ref: '#/components/schemas/WeightUnit'
+        postSaleCharge:
+          minimum: 1
+          type: number
+          description: "This is the published rate for the charge levied by the broker to the buyer for each bale purchased and is included in the last cost of the wool.\r\nIt will not include freight if freight is listed separately in the Freight Charge field, if freight is not listed in the Freight Charge field it will include freight. \r\nIn Australia it will always include freight as the Freight Charge field is not used"
+          format: double
+        calculationBasis:
+          $ref: '#/components/schemas/CalculationBasis'
+        freightCharge:
+          type: number
+          description: "If specified, this is not part of the last cost of the wool. \r\nIf a freight charge is not included in the post Sale Charge, then the freight charge is the charge levied by the broker should the buyer request that the broker transport the wool to the nearest designated area (usually a shipping port). \r\nFreight Charge is not used in Australia."
+          format: double
+          nullable: true
+        freightRebate:
+          type: number
+          format: double
+          nullable: true
+        chargePerLot:
+          type: number
+          description: Any charge made for a lot which is not covered by the Post Sale Charge or the Freight charge per Bale fields.
+          format: double
+          nullable: true
+        invoiceNumber:
+          type: string
+          nullable: true
+        catalogueSection:
+          $ref: '#/components/schemas/CatalogueSection'
+        invoicingOrganisation:
+          minLength: 1
+          type: string
+          description: The code for the broker who will raise the invoice for the wool
+        releasingOrganisation:
+          minLength: 1
+          type: string
+          description: The broker that is responsible for releasing the wool out of the store
+        sellingOrganisation:
+          minLength: 1
+          type: string
+        woolTypeGroup:
+          $ref: '#/components/schemas/WoolTypeGroup'
+        centreCatalogue:
+          $ref: '#/components/schemas/Centre'
+        deliveryBasis:
+          $ref: '#/components/schemas/DeliveryBasis'
+        centreDelivery:
+          $ref: '#/components/schemas/Centre'
+        alternateDelivery:
+          $ref: '#/components/schemas/Centre'
+      additionalProperties: false
     WoolTypeGroup:
       enum:
         - MFLC
