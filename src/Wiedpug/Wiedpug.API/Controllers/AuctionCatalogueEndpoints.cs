@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+﻿using Microsoft.AspNetCore.Mvc;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
 namespace Wiedpug.API.Controllers;
@@ -11,7 +10,7 @@ public static class AuctionCatalogueEndpoints
         var group = routes.MapGroup("auction-catalogue").WithTags("Auction Catalogue");
 
        
-        group.MapPost("/", (AuctionCatalogue model) =>
+        group.MapPost("/", ([FromBody] AuctionCatalogue model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })

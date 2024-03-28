@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
@@ -12,7 +13,8 @@ namespace Wiedpug.Domain.Enums
     /// This is combined Centres for Australia, Overseas and New Zealand.
     /// A centre is a town where any activity connected with the wool industry takes place.
     /// The codes used in transmissions are those defined in the Australian Wool Selling Regulation.
-    /// </summary>
+    /// </summary>    
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Centre
     {
         //Australia
