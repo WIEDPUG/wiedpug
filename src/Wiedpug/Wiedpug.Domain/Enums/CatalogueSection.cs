@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    /// <summary>
-    /// These are the codes allocated by the local wool authorities to sectionalise the sale catalogues.
-    /// </summary>
+    [Description("These are the codes allocated by the local wool authorities to sectionalise the sale catalogues.")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CatalogueSection
     {

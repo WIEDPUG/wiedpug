@@ -10,10 +10,13 @@ using System.Threading.Tasks;
 namespace Wiedpug.Domain.Enums
 {
     /// <summary>
-    /// This is combined Centres for Australia, Overseas and New Zealand.
-    /// A centre is a town where any activity connected with the wool industry takes place.
-    /// The codes used in transmissions are those defined in the Australian Wool Selling Regulation.
+    /// 
+    /// 
+    /// 
     /// </summary>    
+    [Description("This is combined Centres for Australia, Overseas and New Zealand. " +
+        "A centre is a town where any activity connected with the wool industry takes place. " +
+        "The codes used in transmissions are those defined in the Australian Wool Selling Regulation.")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Centre
     {

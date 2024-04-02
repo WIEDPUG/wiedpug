@@ -9,7 +9,7 @@ namespace Wiedpug.API.SchemaFilter
         public void Apply(OpenApiSchema schema, SchemaFilterContext context)
         {
             if (context.Type.IsEnum)
-            {                
+            {
                 schema.Description = GetEnumTypeDescription(context.Type);
                 //schema.Enum.Clear();
 

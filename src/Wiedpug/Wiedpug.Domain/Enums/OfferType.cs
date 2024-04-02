@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum DeliveryBasis
+    public enum OfferType
     {
-        [Description("Delivery Nominated Destination")]
-        D,
-        [Description("Loaded on Transport")]
-        L
+        [Description("P: Previous/Passed-In Price")]
+        P,
+        [Description("N: Negotiable Price")]
+        N,
+        [Description("R: Reserve Price")]
+        R
     }
 }

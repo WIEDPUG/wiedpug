@@ -3,11 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    /// <summary>
-    /// This is used to identify the method used to calculate the post sale charge.
-    /// The post sale charge may be a per bale, per kilogram or percentage of the price of the wool.
-    /// Calculation Basis is always per bale in Australia.
-    /// </summary>
+    [Description("This is used to identify the method used to calculate the post sale charge. " +
+        "The post sale charge may be a per bale, per kilogram or percentage of the price of the wool. " +
+        "Calculation Basis is always per bale in Australia.")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CalculationBasis
     {

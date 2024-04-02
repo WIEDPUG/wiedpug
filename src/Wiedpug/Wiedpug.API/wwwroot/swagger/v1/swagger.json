@@ -81,83 +81,6 @@
         }
       }
     },
-    "/organization-details": {
-      "post": {
-        "tags": [
-          "Organization Detail"
-        ],
-        "summary": "Creates new Org.",
-        "description": "Org Description",
-        "operationId": "CreateOrganizationDetail",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/OrganizationDetail"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiResult"
-                },
-                "example": {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomProblemDetails"
-                },
-                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomProblemDetails"
-                },
-                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomProblemDetails"
-                },
-                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomProblemDetails"
-                },
-                "example": {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
-              }
-            }
-          }
-        }
-      }
-    },
     "/request-for-details-or-status": {
       "post": {
         "tags": [
@@ -272,6 +195,18 @@
           },
           "woolSaleHeaderLots": {
             "$ref": "#/components/schemas/WoolSaleHeaderLots"
+          },
+          "woolSaleHeaderExtension": {
+            "$ref": "#/components/schemas/WoolSaleHeaderExtension"
+          },
+          "woolSaleHeaderNonAuction": {
+            "$ref": "#/components/schemas/WoolSaleHeaderNonAuction"
+          },
+          "lotHeader": {
+            "$ref": "#/components/schemas/LotHeader"
+          },
+          "lotHeaderExtension": {
+            "$ref": "#/components/schemas/LotHeaderExtension"
           }
         },
         "additionalProperties": false
@@ -283,7 +218,7 @@
           "P"
         ],
         "type": "string",
-        "description": "This is used to identify the method used to calculate the post sale charge.\r\nThe post sale charge may be a per bale, per kilogram or percentage of the price of the wool.\r\nCalculation Basis is always per bale in Australia."
+        "description": "This is used to identify the method used to calculate the post sale charge. The post sale charge may be a per bale, per kilogram or percentage of the price of the wool. Calculation Basis is always per bale in Australia.<br />B: Post sale charge is levied per bale<br />K: The post sale charge is a charge per kil<br />P: The post sale charge is a % of first cost"
       },
       "CatalogueSection": {
         "enum": [
@@ -298,7 +233,27 @@
           "XBD"
         ],
         "type": "string",
-        "description": "These are the codes allocated by the local wool authorities to sectionalise the sale catalogues."
+        "description": "These are the codes allocated by the local wool authorities to sectionalise the sale catalogues.<br />BLK: ODDS - Black<br />DEAD: ODDS - Dead<br />FLC: MFLC - Merino Fleece<br />FMG: ODDS - Fellmongered<br />ODD: ODDS - Oddments<br />SKIN: ODDS - Skin Wool<br />SKT: MSKT - Skirting<br />TRAD: MFLC / MSKT / XBFS / ODDS - Traditionally Shown<br />XBD: C XBFS - Crossbred (Flc & Skt)"
+      },
+      "CatalogueSymbol": {
+        "enum": [
+          "A",
+          "C",
+          "D",
+          "G",
+          "H",
+          "M",
+          "O",
+          "R",
+          "S",
+          "T",
+          "U",
+          "W",
+          "X",
+          "Y"
+        ],
+        "type": "string",
+        "description": "These are the symbols defined in the AWEX Wool Selling Rules. To obtain the current code list of values that may be used in this field please go to this URL: http://www.awex.com.au/standards/catalogue<br />A: Dumped Bales<br />C: Charity/Good Cause<br />D: De-banded<br />G: Lot offered under Trial Selling Status<br />H: Classed Samples (bearing Classing House stencil)<br />M: Machine processed (Decotted, crushed or blended)<br />O: Fellmongered<br />R: Reconditioned from wet<br />S: Wool is unclassed<br />T: Tested (where Test House is not AWTA)<br />U: Unskirted or Not Skirted to Code of Practice requirements<br />W: Broker (Re)classed (Classing House stencil - P cert. only)<br />X: Contains Broker Inspected (Classing House stencil - I cert. only)<br />Y: Pigmented and/or Medullated Fibre Risk (Run with or Black section)"
       },
       "Centre": {
         "enum": [
@@ -494,7 +449,7 @@
           "NZ_Z"
         ],
         "type": "string",
-        "description": "This is combined Centres for Australia, Overseas and New Zealand.\r\nA centre is a town where any activity connected with the wool industry takes place.\r\nThe codes used in transmissions are those defined in the Australian Wool Selling Regulation."
+        "description": ""
       },
       "CountryCode": {
         "enum": [
@@ -551,29 +506,237 @@
       },
       "DeliveryBasis": {
         "enum": [
-          0,
-          1
+          "D",
+          "L"
         ],
-        "type": "integer",
-        "description": "Delivery Nominated Destination<br />Loaded on Transport",
-        "format": "int32"
+        "type": "string",
+        "description": "Delivery Nominated Destination<br />Loaded on Transport"
       },
-      "OrganizationDetail": {
+      "LotHeader": {
         "required": [
-          "transmissionHeader"
+          "bales",
+          "catalogueSymbols",
+          "gross",
+          "lotIdentity",
+          "lotType",
+          "packCondition",
+          "packMaterial",
+          "tare",
+          "updateType"
         ],
         "type": "object",
         "properties": {
-          "transmissionHeader": {
-            "$ref": "#/components/schemas/TransmissionHeader"
+          "lotIdentity": {
+            "minLength": 1,
+            "type": "string"
           },
-          "season": {
+          "bales": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gross": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tare": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regrabSampleWeight": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cataloguePageNumber": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "noLotFlag": {
+            "type": "boolean",
+            "description": "A flag used to indicate whether or not the lot is included for sale in the auction.\r\nIt is used in New Zealand only.\r\n`true` = Normal Lot, `false` = No Lot",
+            "nullable": true
+          },
+          "sourceCode": {
+            "$ref": "#/components/schemas/SourceCode"
+          },
+          "updateType": {
+            "$ref": "#/components/schemas/UpdateType"
+          },
+          "catalogueSymbols": {
+            "$ref": "#/components/schemas/CatalogueSymbol"
+          },
+          "packMaterial": {
+            "$ref": "#/components/schemas/PackMaterial"
+          },
+          "lotType": {
+            "$ref": "#/components/schemas/LotType"
+          },
+          "lightestIndividualBaleWeight": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "reportingFlag": {
+            "$ref": "#/components/schemas/ReportingFlag"
+          },
+          "firstOfferSeason": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "firstOfferSaleIdentity": {
             "type": "string",
-            "description": "Summer, winter",
+            "nullable": true
+          },
+          "firstOfferLotIdentity": {
+            "type": "string",
+            "nullable": true
+          },
+          "costPerWeightUnit": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "cleanWeight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "yieldType": {
+            "$ref": "#/components/schemas/YieldType"
+          },
+          "weightUnit": {
+            "$ref": "#/components/schemas/WeightUnit"
+          },
+          "offerType": {
+            "$ref": "#/components/schemas/OfferType"
+          },
+          "clientCrossReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "packCondition": {
+            "$ref": "#/components/schemas/PackCondition"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LotHeaderExtension": {
+        "required": [
+          "woolDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "coreTestSamplingDate": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "type": "string",
+            "description": "Date value in ISO 8601 standard. e.g. 2024-03-21.\r\nFor records 31 and 55 this is the date core test was sampled or date combination/OML was requested. \r\nFor the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.",
+            "format": "date",
+            "nullable": true
+          },
+          "woolDescriptionComment": {
+            "type": "string",
+            "description": "This field provides for additional comments relating to the information contained in the Wool Description field.",
+            "nullable": true
+          },
+          "woolDescription": {
+            "minLength": 1,
+            "type": "string",
+            "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\nAlternative valid appraisal descriptions include AWC type, Exporter type. \r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\nThis field is to be always transmitted in upper case."
+          },
+          "gstTaxInvoiceFlag": {
+            "type": "boolean",
+            "description": "`true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.",
+            "nullable": true
+          },
+          "brokerReservePrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "growerReservePrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "openingPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "valuationPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "woolDescriptionAuditCode": {
+            "type": "string",
+            "description": "Audit code used for verifying if AWEX-ID was issued by AWEX.",
+            "nullable": true
+          },
+          "numberOfOverweightBales": {
+            "type": "integer",
+            "description": "This is the total number of bales with a Reweigh Gross Kg over 204kg.",
+            "format": "int32",
             "nullable": true
           }
         },
         "additionalProperties": false
+      },
+      "LotType": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "type": "integer",
+        "description": "A code used to describe wool lot preparation. It is not wool type. `*` wool meets clip preparation guidelines.`#` wool does not necessarily meet clip preparation guidelines<br />1: (Suffix - P) Classed Grower Lot *<br />2: (Suffix - M) Objectively Matched Lot<br />3: (Suffix - J) Combined Certificate<br />4: (Suffix - I) Subjectively Matched Interlot<br />5: (Suffix - B) Other Bulk Class Lot #<br />6: Not Used<br />7: (Suffix - N) Objectively Matched Interlot<br />(8: Suffix - Q) Classed Bulk Class Lot – Quality Managed *<br />9: (Suffix - D) Other Grower Lot #",
+        "format": "int32"
+      },
+      "OfferType": {
+        "enum": [
+          "P",
+          "N",
+          "R"
+        ],
+        "type": "string",
+        "description": "P: Previous/Passed-In Price<br />N: Negotiable Price<br />R: Reserve Price"
+      },
+      "PackCondition": {
+        "enum": [
+          "N",
+          "M",
+          "R",
+          "X"
+        ],
+        "type": "string",
+        "description": "Where a line/lot contains a Pack with a lower condition, the lower condition shall apply. The hierarchy from highest to lowest is N, M, R, X. This field is optional in New Zealand transmissions.<br />N: New Pack (not previously used)<br />M: Marked (not previously cored and grabbed<br />R: Repaired (previously core and/or grabbed and repaired)<br />X: Not repaired (previously cored and/or grabbed) (excl reoffer"
+      },
+      "PackMaterial": {
+        "enum": [
+          "N",
+          "E",
+          "J",
+          "K"
+        ],
+        "type": "string",
+        "description": "Where a line/lot contains a Pack with a lower Material, the lower Material shall apply.The hierarchy from highest to lowest is N, E, J, K. Printed catalogue condition: The code for Nylon packs shall not be printed (but shall be transmitted).<br />N: Nylon Packs (complete lots only)<br />E: Experimental Packs<br />J: Jute packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and/or HDPE 1 and Jute packs)<br />K: HDPE1 packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and HDPE 1 packs)"
+      },
+      "ReportingFlag": {
+        "enum": [
+          "R",
+          "C",
+          "U"
+        ],
+        "type": "string",
+        "description": "R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results"
       },
       "RequestForData": {
         "required": [
@@ -700,6 +863,17 @@
         },
         "additionalProperties": false
       },
+      "SaleType": {
+        "enum": [
+          "A",
+          "T",
+          "O",
+          "AV",
+          "E"
+        ],
+        "type": "string",
+        "description": "A: Auction (open cry)<br />T: Tender<br />O: Offer<br />AV: Availability<br />E: Electronic Sale"
+      },
       "SoftwareIdentifier": {
         "type": "object",
         "properties": {
@@ -719,6 +893,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "SourceCode": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "description": "Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br />3: Bulk Class",
+        "format": "int32"
       },
       "TransmissionHeader": {
         "required": [
@@ -821,6 +1005,15 @@
         "description": "The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement",
         "format": "int32"
       },
+      "UpdateType": {
+        "enum": [
+          "A",
+          "C",
+          "D"
+        ],
+        "type": "string",
+        "description": "A flag to indicate what type of change has been made to an item.<br />A: The entry is to be added<br />C: The entry is to be changed<br />D: The entry is to be deleted"
+      },
       "WeightUnit": {
         "enum": [
           0,
@@ -829,6 +1022,75 @@
         "type": "integer",
         "description": "0: Kilograms<br />1: Pounds",
         "format": "int32"
+      },
+      "WoolSaleHeaderExtension": {
+        "required": [
+          "dateStorageChargeCommences",
+          "discountRate",
+          "maximumDaysDiscount",
+          "penaltyInterestRate",
+          "storageChargePerBalePerDay",
+          "storageOrganisation"
+        ],
+        "type": "object",
+        "properties": {
+          "storageOrganisation": {
+            "minLength": 1,
+            "type": "string",
+            "description": "This is the organisation store that is storing the wool. \r\nNote: If there is more than one organisation in a centre, then separate AWEX codes are required for each store.\r\nIt is not necessarily the same as the Releasing Organisation."
+          },
+          "storageDescription": {
+            "type": "string",
+            "description": "Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.",
+            "nullable": true
+          },
+          "paymentDueDate": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "type": "string",
+            "description": "The date on which payment is due. Also known as Prompt Date.\r\nDate value in ISO 8601 standard. e.g. 2024-03-21",
+            "format": "date",
+            "nullable": true
+          },
+          "discountRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "maximumDaysDiscount": {
+            "maximum": 99,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateStorageChargeCommences": {
+            "minLength": 1,
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "type": "string",
+            "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
+            "format": "date"
+          },
+          "storageChargePerBalePerDay": {
+            "type": "number",
+            "format": "double"
+          },
+          "penaltyInterestRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "lotAvailableDate": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "type": "string",
+            "description": "The first date on which the wool is available for purchase.",
+            "format": "date",
+            "nullable": true
+          },
+          "postSaleChargeRebate": {
+            "type": "number",
+            "description": "The total (extended) amount of Post Sale Charge Rebate for the Lot. \r\nThis value is provided where a value in the Post Sale Charge Rebate field exists (11A)",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "WoolSaleHeaderLots": {
         "required": [
@@ -954,6 +1216,52 @@
         },
         "additionalProperties": false
       },
+      "WoolSaleHeaderNonAuction": {
+        "type": "object",
+        "properties": {
+          "catalogueAvailabilityDateTime": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/",
+            "type": "string",
+            "description": "Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "format": "date-time",
+            "nullable": true
+          },
+          "saleStartDateTime": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/",
+            "type": "string",
+            "description": "Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "format": "date-time",
+            "nullable": true
+          },
+          "saleEndDateTime": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/",
+            "type": "string",
+            "description": "Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "format": "date-time",
+            "nullable": true
+          },
+          "saleType": {
+            "$ref": "#/components/schemas/SaleType"
+          },
+          "electronicSaleFlag": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "reservePriceDisplayFlag": {
+            "type": "boolean",
+            "description": "`true` = Available to Buyers, `false` = Not available to buyers.",
+            "nullable": true
+          },
+          "tenderSaleReplyDateTime": {
+            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/",
+            "type": "string",
+            "description": "Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "WoolTypeGroup": {
         "enum": [
           "MFLC",
@@ -963,6 +1271,47 @@
         ],
         "type": "string",
         "description": "A code to indicate which section of the sale that lot belongs.<br />MFLC: Merino fleece types<br />MSKT: Merino fleece types<br />XBFS: Merino fleece types<br />ODDS: Merino fleece types"
+      },
+      "YieldType": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          42,
+          43
+        ],
+        "type": "integer",
+        "description": "Yield Type indicates either the type of yield transmitted in another field or record, or the type of yield used to arrive at the value in another field.<br />1: RESERVED<br />2: RESERVED<br />3: ESTIMATED<br />4: Schlumberger Combed Dry (1% TFM)<br />5: Schlumberger Combed Dry (2% TFM)<br />7: Noble Combed in Oil<br />8: IWTO Scoured Yield at 16% Regain<br />9: IWTO Scoured Yield at 17% Regain<br />10: Japanese Clean Scoured<br />11: Australian Carbonising<br />12: IWTO Clean Wool Content, 17% Regain<br />13: United States Custom Clean<br />14: Card Sliver<br />15: ASTM Clean Wool Fibre Present<br />16: Noble Dry Combed<br />17: Schlumberger Combed in Oil (4.6% TFM)<br />18: Noble Combed Dry<br />19: Theoretical Card Sliver<br />20: ASTM Laboratory Scoured Yield<br />21: Conditioned at 12.00%<br />22: Conditioned at 13.00%<br />23: Conditioned at 13.50%<br />24: Conditioned at 13.64%<br />25: Conditioned at 14.00%<br />26: Conditioned at 14.40%<br />27: Conditioned at 15.00%<br />28: Conditioned at 16.00%<br />29: Conditioned at 17.00%<br />30: Conditioned at 18.00%<br />31: Conditioned at 18.25%<br />32: Japanese Clean Scoured at 17%<br />33: New Zealand Process Yield<br />42: IWT0 Schlumberger Oil T&N (2.0% & T.FM.)<br />43: IWTO Clean Wool Content, 16% Regain",
+        "format": "int32"
       }
     }
   }
