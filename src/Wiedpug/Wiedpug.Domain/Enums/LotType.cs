@@ -26,7 +26,7 @@ namespace Wiedpug.Domain.Enums
         NotUsed = 6,
         [Description("7: (Suffix - N) Objectively Matched Interlot")]
         N = 7,
-        [Description("(8: Suffix - Q) Classed Bulk Class Lot – Quality Managed *")]
+        [Description("8: (Suffix - Q) Classed Bulk Class Lot – Quality Managed *")]
         Q = 8,
         [Description("9: (Suffix - D) Other Grower Lot #")]
         D = 9

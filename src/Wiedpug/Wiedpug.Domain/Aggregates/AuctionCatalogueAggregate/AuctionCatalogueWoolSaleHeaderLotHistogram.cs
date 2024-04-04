@@ -8,12 +8,13 @@ using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
 {
-    public class AuctionCatalogue
+    public class AuctionCatalogueWoolSaleHeaderLotHistogram
     {
         [Required]
-        public required TransmissionHeader TransmissionHeader { get; set; }
-
+        public required FibreDiameterHistogramHeader FibreDiameterHistogramHeader { get; set; }
+        
         [Required]
-        public required List<AuctionCatalogueWoolSaleHeader> WoolSaleHeaders { get; set; }        
+        [Range(0, 9)]
+        public required List<FibreDiameterHistogramDetail> FibreDiameterHistogramDetails { get; set; }
     }
 }

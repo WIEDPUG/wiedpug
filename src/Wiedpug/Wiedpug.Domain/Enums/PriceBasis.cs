@@ -9,11 +9,18 @@ using System.Threading.Tasks;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum DeliveryBasis
+    public enum PriceBasis
     {
-        [Description("D: Delivery Nominated Destination")]
-        D,
-        [Description("L: Loaded on Transport")]
-        L
+        [Description("G: Greasy")]
+        G,
+
+        [Description("C: CLCOF (ACOF or NZCOF)")]
+        C,
+
+        [Description("I: CIF")]
+        I,
+
+        [Description("F: FOB")]
+        F
     }
 }

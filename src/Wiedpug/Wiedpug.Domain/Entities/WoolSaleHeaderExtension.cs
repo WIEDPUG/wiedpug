@@ -49,6 +49,7 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// The first date on which the wool is available for purchase.
+        /// Date value in ISO 8601 standard. e.g. 2024-03-21. 
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
