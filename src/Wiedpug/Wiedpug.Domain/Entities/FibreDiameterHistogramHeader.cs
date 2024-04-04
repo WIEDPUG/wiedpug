@@ -7,14 +7,14 @@ namespace Wiedpug.Domain.Entities
     public class FibreDiameterHistogramHeader
     {        
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_POINT_ONE)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
         public required double CoefficientOfVariation { get; set; } // FIELD NUMBER 3 - Co-efficient of Variation - Start: 3, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
         /// <summary>
         /// Percentage of Fibres 30 Microns and under.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_POINT_ONE)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
         public required double ComfortFactorPercentage { get; set; } // FIELD NUMBER 4 - Comfort Factor (%) - Start: 6, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
         
         public int? FibresMeasured { get; set; } // FIELD NUMBER 5 - Fibres Measured - Start: 9, Size: 6, Data Type: N, Justification: R, Requirement Designator: C
@@ -26,25 +26,25 @@ namespace Wiedpug.Domain.Entities
         public required Instrument Instrument { get; set; } // FIELD NUMBER 7 - Instrument - Start: 16, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [Required]
-        public required SubSamplingMethod SubSamplingMethod { get; set; } // FIELD NUMBER 8 - Sub-sampling Method - Start: 17, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
+        public required SubsamplingMethod SubSamplingMethod { get; set; } // FIELD NUMBER 8 - Sub-sampling Method - Start: 17, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [Required]
         public required int NumberOfSpecimens { get; set; } // FIELD NUMBER 9 - No. Of Specimens - Start: 18, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_POINT_ONE)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
         public required double Mean { get; set; } // FIELD NUMBER 10 - Mean - Start: 22, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_POINT_ONE)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
         public required double StandardDeviation { get; set; } // FIELD NUMBER 11 - Standard Deviation - Start: 25, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
         public int? CurvatureMeanDegPerMm { get; set; } // FIELD NUMBER 12 - Curvature Mean (deg/mm) - Start: 28, Size: 3, Data Type: N, Justification: R, Requirement Designator: O        
 
-        [RegularExpression(RegexPattern.DECIMAL_POINT_ONE)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
         public double? MeanMinimum { get; set; } // FIELD NUMBER 14 - Mean Minimum - Start: 32, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
-        [RegularExpression(RegexPattern.DECIMAL_POINT_ONE)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
         public double? MeanMaximum { get; set; } // FIELD NUMBER 15 - Mean Maximum - Start: 35, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
         /// <summary>
@@ -65,11 +65,11 @@ namespace Wiedpug.Domain.Entities
         public required string DateIssued { get; set; } // FIELD NUMBER 17 - Date Issued - Start: 44, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_POINT_SIX)]
+        [RegularExpression(RegexPattern.DECIMAL_SIX_DIGITS)]
         public required double FactorLaserscanNumerator { get; set; } // FIELD NUMBER 18 - Factor – Laserscan Numerator - Start: 50, Size: 16, Data Type: D6, Justification: R, Requirement Designator: C
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_POINT_SIX)]
+        [RegularExpression(RegexPattern.DECIMAL_SIX_DIGITS)]
         public required double FactorLaserscanDenominator { get; set; } // FIELD NUMBER 19 - Factor – Laserscan Denominator - Start: 66, Size: 15, Data Type: D6, Justification: R, Requirement Designator: C
 
     }

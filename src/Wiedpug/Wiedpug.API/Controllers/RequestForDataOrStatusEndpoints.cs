@@ -8,7 +8,7 @@ namespace Wiedpug.API.Controllers;
 
 public static class RequestForDataOrStatusEndpoints
 {
-    public static void MapApiResultEndpoints (this IEndpointRouteBuilder routes)
+    public static void MapRequestForDataOrStatusApiResultEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/request-for-details-or-status").WithTags("Request for Data/Status");
         group.MapPost("/",

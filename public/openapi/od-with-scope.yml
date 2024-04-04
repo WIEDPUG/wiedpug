@@ -1,19 +1,10 @@
 openapi: 3.0.0
 info:
-  title: WIEDPUG API Specifications
+  title: Organization Details OpenAPI Specs
   version: 1.0.0
-
-servers:
-  - url: https://example.com/v1
-
-tags:
-  - name: Organization Details
-  
 paths:
   /organization-details:
     get:
-      tags:
-      - Organization Details
       summary: Retrieve all organization details
       operationId: getAllOrganizationDetails
       responses:
@@ -36,8 +27,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     post:
-      tags:
-        - Organization Details
       summary: Create a new organization details
       operationId: createOrganizationDetail
       requestBody:
@@ -86,8 +75,6 @@ paths:
           type: string
         description: The ID of the organization detail to operate on
     get:
-      tags:
-        - Organization Details
       summary: Retrieve a specific organization detail by its id
       operationId: getOrganizationDetailById
       responses:
@@ -110,8 +97,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
     put:
-      tags:
-        - Organization Details
       summary: Update an existing organization details
       operationId: updateOrganizationDetail
       requestBody:
@@ -152,8 +137,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
     delete:
-      tags:
-        - Organization Details
       summary: Delete an organization details
       operationId: deleteOrganizationDetail
       responses:
@@ -185,6 +168,39 @@ paths:
                 $ref: "#/components/schemas/Error"
 components:
   schemas:
+    Scope:
+      description: An object used to control receivers and visiblities of the document. For a broadcast, use inclusionList. For a private send, use exlcusionList. 
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+          example: "100200001"
+        documentType:
+          $ref: '#/components/schemas/DocumentType'
+        documentId:
+          type: string
+        owner:
+          $ref: '#/components/schemas/OrganizationCode'
+        inclusionList:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationCode'
+        exclusionList:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationCode'
+        privateRecords:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrivateRecord'
+      required:
+        - id
+        - documentType
+        - documentId
+        - creator
+        - privateRecords
+      title: Scope
     OrganizationDetails:
       type: object
       additionalProperties: false
@@ -387,6 +403,44 @@ components:
       type: string
       example: "AWTS"
       description:  Wool Industry Organisation Code
+    PrivateRecord:
+      description: A structure provides private visiblities of a record inside the document to members.
+      type: object
+      additionalProperties: false
+      properties:
+        recordName:
+          type: string
+        recordId:
+          type: string
+        privateViewers:
+          type: array
+          items:
+            $ref: "#/components/schemas/OrganizationCode"
+      required:
+        - recordName
+        - recordId
+        - privateViewers
+      title: PrivateRecord
+    DocumentType:
+      type: string
+      enum:
+        - "LotInvoices"
+        - "GroupInvoices"
+        - "DeliveryOrders"
+        - "Catalogues"
+        - "RequestPostSalePrintingOfPreSaleCertificates"
+        - "Statements"
+        - "TestCertificateRequests"
+        - "LotPriceBuyer"
+        - "DeliveryOrderSummary"
+        - "OrganisationDetails"
+        - "PaymentAdvice"
+        - "TestCertificates"
+        - "TestStatus"
+        - "TestRequestVerification"
+        - "DarkAndMedullatedFibreRiskVerification"
+        - "PaymentConfirmationFile"
+        - "TextDocument"
     Error:
       type: object
       description: Error

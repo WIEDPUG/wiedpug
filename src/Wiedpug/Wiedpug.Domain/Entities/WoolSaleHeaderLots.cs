@@ -26,6 +26,8 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// The state of the wool itemised in the invoice
+        ///  2: Dead
+        ///  3: Slipe
         /// </summary>
         [Required]
         public required string WoolState { get; set; }
