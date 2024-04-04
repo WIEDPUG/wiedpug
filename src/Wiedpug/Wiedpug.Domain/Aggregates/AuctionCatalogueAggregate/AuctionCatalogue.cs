@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Wiedpug.Domain.Entities;
+using Wiedpug.Domain.Enums;
+using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
 {
@@ -15,5 +17,9 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         
         [Required]
         public required WoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
+
+        public required CombinationFlag CombinationFlag { get; set; }
+
+        public required YieldType YieldType { get; set; }
     }
 }

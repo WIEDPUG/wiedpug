@@ -43,7 +43,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapApiResultEndpoints();
+app.MapRequestForDataOrStatusApiResultEndpoints();
+
+app.MapTestCertificatesApiResultEndpoints();
 
 app.MapAuctionCatalogueEndpoints();
 
