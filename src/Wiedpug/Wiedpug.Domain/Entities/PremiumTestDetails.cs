@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 
@@ -31,13 +26,13 @@ namespace Wiedpug.Domain.Entities
 <<<<<<< HEAD
         public double? WoolBase { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? AirflowMean { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double VMB { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double HardHeadsBase { get; set; }
 =======
         public decimal? WoolBase { get; set; }
@@ -78,13 +73,13 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM1 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM2 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM3 { get; set; }
 
         [Required]

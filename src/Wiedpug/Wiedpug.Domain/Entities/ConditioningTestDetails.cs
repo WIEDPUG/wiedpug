@@ -24,7 +24,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? MassOfGlobalSample { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]

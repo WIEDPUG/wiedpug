@@ -26,13 +26,13 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
         public double? WoolBase { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? AirflowMean { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double VMB { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double HardHeadsBase { get; set; }
 
         [Required]
@@ -61,13 +61,13 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM1 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM2 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM3 { get; set; }
 
         [Required]
@@ -105,11 +105,11 @@ namespace Wiedpug.Domain.Entities
         public string? CleanWeight5 { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double VMBMinimum { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double VMBMaximum { get; set; }
 
         [Required]

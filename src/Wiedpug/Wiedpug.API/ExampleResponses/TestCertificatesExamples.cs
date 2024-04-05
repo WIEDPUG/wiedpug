@@ -1,7 +1,6 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.TestCertificateAggregate;
-using Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate;
 
 namespace Wiedpug.API.ExampleResponses
 {

@@ -7,11 +7,11 @@ namespace Wiedpug.Domain.ValueObject
     public class FiberDiameterHistogramHeader
     {
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double CoefficientOfVariation { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double ComfortFactor { get; set; }
 
         [RegularExpression(RegexPattern.STRING_SIX_DIGITS_BEFORE_DECIMAL_POINT)]
@@ -24,25 +24,25 @@ namespace Wiedpug.Domain.ValueObject
         public required Instrument Instrument { get; set; }
 
         [Required]
-        public required SubsamplingMethod SubsamplingMethod { get; set; }
+        public required SubSamplingMethod SubsamplingMethod { get; set; }
 
         [Required]
         public required int NumberOfSpecimens { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double Mean { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double StandardDeviation { get; set; }
 
         public int? CurvatureMean { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? MeanMinimum { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? MeanMaximum { get; set; }
 
         [DataType(DataType.Date)]

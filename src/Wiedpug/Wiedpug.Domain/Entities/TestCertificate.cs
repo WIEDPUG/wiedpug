@@ -10,7 +10,7 @@ namespace Wiedpug.Domain.Entities
     {
         public required TestDataHeader  TestDataHeader { get; set; }
 
-        public ColorDetails? ColorDetails { get; set; }
+        public ColourDetails? ColorDetails { get; set; }
 
         public PremiumTestDetails? PremiumTestDetails { get; set; }
 

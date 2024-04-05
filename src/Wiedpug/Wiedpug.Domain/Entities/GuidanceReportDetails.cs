@@ -58,13 +58,13 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM1 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM2 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public string? VM3 { get; set; }
     }
 }

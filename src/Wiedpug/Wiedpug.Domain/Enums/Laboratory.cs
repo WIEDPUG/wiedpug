@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
+    [Description("The code for a Test House.")]
     public enum Laboratory
     {
         [Description("1: Australian Wool Testing Authority")]
@@ -21,6 +21,6 @@ namespace Wiedpug.Domain.Enums
         NZWoolTestingService = 3,
 
         [Description("4: South African Wool Testing Authority")]
-        SouthAfricanWoolTestingAuthority = 4,
+        SouthAfricanWoolTestingAuthority = 4
     }
 }

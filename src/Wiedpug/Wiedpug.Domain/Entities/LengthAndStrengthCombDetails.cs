@@ -63,10 +63,10 @@ namespace Wiedpug.Domain.Entities
 
         public int? ExpectedBarbe { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? TEAM3HauteurCV { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? TEAM3Romaine { get; set; }
 
         /// <summary>
