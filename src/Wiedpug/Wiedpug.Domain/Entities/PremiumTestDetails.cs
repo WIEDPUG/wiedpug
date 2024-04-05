@@ -16,7 +16,11 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+<<<<<<< HEAD
         public required double Charge { get; set; }
+=======
+        public required decimal Charge { get; set; }
+>>>>>>> main
 
         [Required]
         public required string Laboratory { get; set; }
@@ -24,6 +28,7 @@ namespace Wiedpug.Domain.Entities
         public int? RegrabSampleWeight { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+<<<<<<< HEAD
         public double? WoolBase { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
@@ -34,6 +39,18 @@ namespace Wiedpug.Domain.Entities
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
         public double HardHeadsBase { get; set; }
+=======
+        public decimal? WoolBase { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        public decimal? AirflowMean { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        public decimal VMB { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        public decimal HardHeadsBase { get; set; }
+>>>>>>> main
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]

@@ -118,7 +118,6 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required double FactorVMB { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]

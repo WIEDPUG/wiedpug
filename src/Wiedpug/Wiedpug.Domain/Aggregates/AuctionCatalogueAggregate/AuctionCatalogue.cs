@@ -16,6 +16,14 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public required TransmissionHeader TransmissionHeader { get; set; }
 
         [Required]
+<<<<<<< HEAD
         public required List<AuctionCatalogueWoolSaleHeader> WoolSaleHeaders { get; set; }        
+=======
+        public required WoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
+
+        public required CombinationFlag CombinationFlag { get; set; }
+
+        public required YieldType YieldType { get; set; }
+>>>>>>> main
     }
 }
