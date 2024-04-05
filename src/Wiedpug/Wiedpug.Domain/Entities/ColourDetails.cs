@@ -38,7 +38,7 @@ namespace Wiedpug.Domain.Entities
         public string? CoreBulkValue { get; set; } // FIELD NUMBER 11 - Core Bulk Value - Start: 37, Size: 2, Data Type: AN, Justification: F, Requirement Designator: C
 
         [Required]
-        public required string ReissueChargeFlag { get; set; } // FIELD NUMBER 12 - Re-issue Charge Flag - Start: 39, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
+        public required ReissueChargeFlag ReissueChargeFlag { get; set; } // FIELD NUMBER 12 - Re-issue Charge Flag - Start: 39, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? ColourXAsIs { get; set; } // FIELD NUMBER 14 - Colour – X (As–is) - Start: 48, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
@@ -53,7 +53,7 @@ namespace Wiedpug.Domain.Entities
         public double? ColourYZAsIs { get; set; } // FIELD NUMBER 17 - Colour – Y – Z (As–is) - Start: 57, Size: 4, Data Type: D1, Justification: R, Requirement Designator: C
 
         [Required]
-        public required string CalibrationFlag { get; set; } // FIELD NUMBER 18 - Calibration Flag - Start: 61, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
+        public required CalibrationFlag CalibrationFlag { get; set; } // FIELD NUMBER 18 - Calibration Flag - Start: 61, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         /// <summary>
         /// Date value in ISO 8601 standard. e.g. 2024-03-21
@@ -61,6 +61,6 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
-        public required DateTime DateIssued { get; set; } // FIELD NUMBER 19 - Date Issued - Start: 62, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
+        public required string DateIssued { get; set; } // FIELD NUMBER 19 - Date Issued - Start: 62, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
     }
 }
