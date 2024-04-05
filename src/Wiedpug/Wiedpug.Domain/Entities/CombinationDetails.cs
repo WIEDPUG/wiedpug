@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
@@ -25,14 +20,14 @@ namespace Wiedpug.Domain.Entities
         /// VMB - Minimum value.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double VMBMinimum { get; set; }
 
         /// <summary>
         /// VMB - Maximum value.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public required double VMBMaximum { get; set; }
 
         /// <summary>

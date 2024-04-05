@@ -19,14 +19,14 @@ namespace Wiedpug.Domain.Entities
 
         public int? LACBarbe { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? LACBarbeCV { get; set; }
 
         public double? LACHauteur { get; set; }
 
         public double? LACHauteurCV { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? LACCardWaste { get; set; }
 
         [Required]
