@@ -73,10 +73,10 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required DarkAndMedullatedFibreRisk DarkAndMedullatedFibreRisk { get; set; }
 
-        [Required]
         /// <summary>
         /// six digits number string        
         /// </summary>
+        [Required]        
         [RegularExpression(RegexPattern.STRING_SIX_DIGITS_BEFORE_DECIMAL_POINT)]
         public required string CleanWeight1 { get; set; }
 
@@ -117,10 +117,7 @@ namespace Wiedpug.Domain.Entities
         public required double FactorWoolBase { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]        
         public required double FactorHardHeadsBase { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_SIX_DIGITS)]

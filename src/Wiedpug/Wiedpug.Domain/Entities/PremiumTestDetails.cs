@@ -9,12 +9,11 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required string CertificateIdentity { get; set; }
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required double Charge { get; set; }
+        public double? Charge { get; set; }
 
         [Required]
-        public required string Laboratory { get; set; }
+        public required Laboratory Laboratory { get; set; }
 
         public int? RegrabSampleWeight { get; set; }
 
@@ -25,10 +24,10 @@ namespace Wiedpug.Domain.Entities
         public double? AirflowMean { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public double VMB { get; set; }
+        public double? Vmb { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public double HardHeadsBase { get; set; }
+        public double? HardHeadsBase { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
@@ -57,15 +56,14 @@ namespace Wiedpug.Domain.Entities
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM1 { get; set; }
+        public string? Vm1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM2 { get; set; }
+        public string? Vm2 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM3 { get; set; }
+        public string? Vm3 { get; set; }
 
-        [Required]
-        public required DarkAndMedullatedFibreRisk DarkAndMedullatedFibreRisk { get; set; }
+        public DarkAndMedullatedFibreRisk? DarkAndMedullatedFibreRisk { get; set; }
     }
 }

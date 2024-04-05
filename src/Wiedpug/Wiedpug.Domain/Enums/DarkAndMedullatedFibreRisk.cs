@@ -1,29 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using System.Text.Json.Serialization;
+using Wiedpug.Domain.Attributes;
 
 namespace Wiedpug.Domain.Enums
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    [RemoveUnderscoreFromEnumItem]    
     public enum DarkAndMedullatedFibreRisk
     {
-        ErrorInProcessing = 'E',
+        [Description("E: Error in Processing")]
+        E,
 
-        NotApplicable = 'N',
-        
-        NotDeclared = 'D',
-        
-        RiskLevel1 = '1',
-        
-        RiskLevel2 = 2,
-        
-        RiskLevel3 = 3,
-        
-        RiskLevel4 = 4,
-        
-        RiskLevel5 = 5,
-        
-        RiskLevel6 = 6
+        [Description("N: Not Applicable")]
+        N,
+
+        [Description("D: Not Declared")]
+        D,
+
+        [Description("1: Risk Level 1 (lowest)")]
+        _1,
+
+        [Description("2: Risk Level 2")]
+        _2,
+
+        [Description("3: Risk Level 3")]
+        _3,
+
+        [Description("4: Risk Level 4")]
+        _4,
+
+        [Description("5: Risk Level 5")]
+        _5,
+
+        [Description("6: Risk Level 6")]
+        _6
     }
 }

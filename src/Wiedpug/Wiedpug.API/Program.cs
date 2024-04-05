@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen(c => {
 
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Wiedpug.API", Version = "v1" });
 
-    c.SchemaFilter<DescribeEnumMemberValues>();
+    c.SchemaFilter<ManipulateEnumForOpenApiSpec>();
 
     //To automatically add XML comments to Open API Spec.
     var apiXmlFilePath = Path.Combine(System.AppContext.BaseDirectory, "Wiedpug.API.xml");

@@ -9,23 +9,32 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required string CertificateIdentity { get; set; }
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required double Charge { get; set; }
+        public double? Charge { get; set; }
 
         [Required]
-        public required string Laboratory { get; set; }
+        public required Laboratory Laboratory { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
         public int? RegrabSampleWeight { get; set; }
 
+        /// <summary>
+        /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample. 
+        /// Min - The lowest value in a range of Wool Base values. 
+        /// Max - The highest value in a range of Wool Base values.
+        /// </summary>
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public double? WoolBase { get; set; }
+        public required double WoolBase { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double? AirflowMean { get; set; }
 
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public double VMB { get; set; }
+        public required double Vmb { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
         public double HardHeadsBase { get; set; }
@@ -57,15 +66,14 @@ namespace Wiedpug.Domain.Entities
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM1 { get; set; }
+        public string? Vm1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM2 { get; set; }
+        public string? Vm2 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM3 { get; set; }
+        public string? Vm3 { get; set; }
 
-        [Required]
-        public required DarkAndMedullatedFibreRisk DarkAndMedullatedFibreRisk { get; set; }
+        public string? DarkAndMedullatedFibreRisk { get; set; }
     }
 }

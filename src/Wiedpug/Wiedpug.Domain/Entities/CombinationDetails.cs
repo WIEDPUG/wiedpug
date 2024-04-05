@@ -1,63 +1,74 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
     public class CombinationDetails
     {
+        /// <summary>
+        /// Clean weight = Net Weight X Yield
+        /// </summary>
         [Required]
         public required int CleanWeight1 { get; set; }
 
+        /// <summary>
+        /// Clean weight = Net Weight X Yield
+        /// </summary>
         public int? CleanWeight2 { get; set; }
 
+        /// <summary>
+        /// Clean weight = Net Weight X Yield
+        /// </summary>
         public int? CleanWeight3 { get; set; }
 
+        /// <summary>
+        /// Clean weight = Net Weight X Yield
+        /// </summary>
         public int? CleanWeight4 { get; set; }
 
+        /// <summary>
+        /// Clean weight = Net Weight X Yield
+        /// </summary>
         public int? CleanWeight5 { get; set; }
 
         /// <summary>
         /// VMB - Minimum value.
-        /// </summary>
-        [Required]
+        /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public required double VMBMinimum { get; set; }
+        public double? VmbMinimum { get; set; }
 
         /// <summary>
         /// VMB - Maximum value.
-        /// </summary>
-        [Required]
+        /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public required double VMBMaximum { get; set; }
+        public double? VmbMaximum { get; set; }
 
         /// <summary>
         /// Factor for Wool Base.
-        /// </summary>
-        [Required]
+        /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required double FactorWoolBase { get; set; }
+        public double? FactorWoolBase { get; set; }
 
         /// <summary>
         /// Factor for VMB.
-        /// </summary>
-        [Required]
+        /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required double FactorVMB { get; set; }
+        public double? FactorVMB { get; set; }
 
         /// <summary>
         /// Factor for Hard Heads Base.
-        /// </summary>
-        [Required]
+        /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required double FactorHardHeadsBase { get; set; }
+        public double? FactorHardHeadsBase { get; set; }
 
         /// <summary>
-        /// Factor for Airflow Mean.
+        /// Factor for Airflow Mean. Factor used in combination calculation.
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_SIX_DIGITS)]
         public double? FactorAirflowMean { get; set; }
 
         [Required]
-        public required CombinationFlag CombinationFlag { get; set; }
+        public CombinationFlag? CombinationFlag { get; set; }
     }
 }

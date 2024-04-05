@@ -24,19 +24,11 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DATE_ISO8601)]
         public required string SaleDate { get; set; }
 
-        /// <summary>
-        /// The state of the wool itemised in the invoice
-        ///  2: Dead
-        ///  3: Slipe
-        /// </summary>
         [Required]
-        public required string WoolState { get; set; }
+        public required WoolState WoolState { get; set; }
 
-        /// <summary>
-        /// A code used to indicate how the wool has been baled. The most common type is Farm bales.
-        /// </summary>
         [Required]
-        public required string PackType { get; set; }
+        public required PackType PackType { get; set; }
 
         /// <summary>
         /// The Code for the currency in which the sale was made. To obtain the current code list please use the Commonwealth Bank Currency Codes on their website
