@@ -21,7 +21,7 @@ namespace Wiedpug.Domain.ValueObject
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_FOUR_DIGITS)]
-        public required decimal FibresMeasured { get; set; }
+        public required double FibresMeasured { get; set; }
 
     }
 }

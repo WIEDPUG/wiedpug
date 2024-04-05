@@ -1,4 +1,7 @@
+
 using System.ComponentModel;
+using System.Text.Json.Serialization;
+
 
 namespace Wiedpug.Domain.Enums
 {
@@ -25,5 +28,6 @@ namespace Wiedpug.Domain.Enums
         Q = 8,
         [Description("9: (Suffix - D) Other Grower Lot #")]
         D = 9
+
     }
 }
