@@ -20,14 +20,14 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required decimal CreditNoteAmount { get; set; }
+        public required double CreditNoteAmount { get; set; }
 
         [Required]
         public required Boolean IsGSTApplicable { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required decimal GSTAmount { get; set; }
+        public required double GSTAmount { get; set; }
 
         [Required]
         public required string ReasonCode { get; set; }
