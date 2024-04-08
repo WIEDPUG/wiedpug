@@ -26,7 +26,7 @@ namespace Wiedpug.Domain.Entities
 
         public CoreTestDetails? CoreTestDetails { get; set; }
 
-        public ColorCombinationDetails? ColorCombinationDetails { get; set; }
+        public ColourCombinationDetails? ColorCombinationDetails { get; set; }
 
         public OMIDetails? OMIDetials {  get; set; }
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum LSCertType
+    public enum LsCertType
     {
         [Description("Length & Strength tested")]
         LengthAndStrengthTested = 0,

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -43,10 +44,10 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// This is the published rate for the charge levied by the broker to the buyer for each bale purchased and is included in the last cost of the wool.
         /// It will not include freight if freight is listed separately in the Freight Charge field, if freight is not listed in the Freight Charge field it will include freight. 
-        /// In Australia it will always include freight as the Freight Charge field is not used
+        /// In Australia it will always include freight as the Freight Charge field is not used.
         /// </summary>
         [Required]
-        [Range(1, Double.PositiveInfinity)]
+        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
         public required double PostSaleCharge { get; set; }
 
         [Required]
@@ -76,6 +77,13 @@ namespace Wiedpug.Domain.Entities
         public required string InvoicingOrganisation { get; set; }
 
         /// <summary>
+        /// Indicates whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section. 
+        /// `true` = Final Catalogue. `false` = Not Final Catalogue
+        /// </summary>
+        [Required]
+        public required bool IsFinalCatalogue { get; set; }
+
+        /// <summary>
         /// The broker that is responsible for releasing the wool out of the store
         /// </summary>
         [Required]
@@ -96,11 +104,11 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.
         /// </summary>
-        public Centre CentreDelivery { get; set; }
+        public Centre? CentreDelivery { get; set; }
 
         /// <summary>
         /// This field is to be used when the PSC includes optional delivery to a second area.
         /// </summary>
-        public Centre AlternateDelivery { get; set; }
+        public Centre? AlternateDelivery { get; set; }
     }
 }

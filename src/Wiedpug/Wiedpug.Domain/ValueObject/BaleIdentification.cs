@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Wiedpug.Domain.ValueObject
 {
     public class BaleIdentification
     {
-        [Required]
-        public required string BaleNumber { get; set; }
+        //gileto: I removed the [Required] flag because this is used in other Document Types.
+        //Some require the first Bale Identification to be required and the rest are optional.
+        //Removing the [Required] flag will increase its compatibility with other Document Types.
+        public string? BaleNumber { get; set; }
 
-        public string? EBaleID { get; set; }
+        public string? EBaleId { get; set; }
     }
 }

@@ -12,9 +12,12 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
     {
         [Required]
         public required WoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
+        
         [Required]
         public required WoolSaleHeaderExtension WoolSaleHeaderExtension { get; set; }
+        
         public WoolSaleHeaderNonAuction? WoolSaleHeaderNonAuction { get; set; }
+
         [Required]
         public required List<AuctionCatalogueWoolSaleHeaderLot> Lots { get; set; }        
     }
