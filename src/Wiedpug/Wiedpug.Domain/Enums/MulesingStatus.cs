@@ -11,17 +11,17 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum MulesingStatus
     {
-        [Description("Non Mulesed")]
+        [Description("NM: Non Mulesed")]
         NM,
-        [Description("Liquid Nitrogen")]
+        [Description("LN: Liquid Nitrogen")]
         LN,
-        [Description("Ceased Mulesing")]
+        [Description("CM: Ceased Mulesing")]
         CM,
-        [Description("Mulesed with Analgesic &/or Anaesthetic")]
+        [Description("AA: Mulesed with Analgesic &/or Anaesthetic")]
         AA,
-        [Description("Mulesed")]
+        [Description("M: Mulesed")]
         M,
-        [Description("Not Declared")]
+        [Description("ND: Not Declared")]
         ND
     }
 }

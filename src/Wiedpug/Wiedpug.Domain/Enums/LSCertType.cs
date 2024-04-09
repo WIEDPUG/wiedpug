@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum LsCertType
     {
-        [Description("Length & Strength tested")]
+        [Description("0: Length & Strength tested")]
         LengthAndStrengthTested = 0,
 
-        [Description("Length only test requested")]
+        [Description("1: Length only test requested")]
         LengthOnlyTestRequested = 1,
 
-        [Description("Insufficient staples")]
-        InsufficientStaples = 3
+        [Description("2: Insufficient staples")]
+        InsufficientStaples = 2
     }
 }

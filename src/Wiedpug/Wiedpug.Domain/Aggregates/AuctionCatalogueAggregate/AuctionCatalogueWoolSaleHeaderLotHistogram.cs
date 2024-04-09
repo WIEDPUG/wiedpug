@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
@@ -12,9 +7,7 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
     {
         [Required]
         public required FibreDiameterHistogramHeader FibreDiameterHistogramHeader { get; set; }
-        
-        [Required]
-        [Range(0, 9)]
-        public required List<FibreDiameterHistogramDetail> FibreDiameterHistogramDetails { get; set; }
+                        
+        public List<FibreDiameterHistogramDetail>? FibreDiameterHistogramDetails { get; set; }
     }
 }

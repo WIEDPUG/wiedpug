@@ -9,25 +9,25 @@ namespace Wiedpug.Domain.Enums
 {
     public enum SourcedType
     {
-        [Description("Not Scoured")]
+        [Description("0: Not Scoured")]
         NotScoured = 0,
 
-        [Description("Scoured – Aqueous")]
+        [Description("1: Scoured – Aqueous")]
         ScouredAqueous = 1,
 
-        [Description("Scoured – Dual Solvent")]
+        [Description("2: Scoured – Dual Solvent")]
         ScouredDualSolvent = 2,
 
-        [Description("Carbonised")]
+        [Description("3: Carbonised")]
         Carbonised = 3,
 
-        [Description("Mohair")]
+        [Description("4: Mohair")]
         Mohair = 4,
 
-        [Description("Noils")]
+        [Description("5: Noils")]
         Noils = 5,
 
-        [Description("Slipe")]
+        [Description("6: Slipe")]
         Slipe = 6
     }
 }
