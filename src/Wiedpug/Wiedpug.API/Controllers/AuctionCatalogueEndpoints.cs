@@ -3,6 +3,9 @@ using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
+using Wiedpug.Domain.Aggregates.StatusReplyAggregate;
+using Wiedpug.Domain.Entities;
+using Wiedpug.Domain.Enums;
 namespace Wiedpug.API.Controllers;
 
 public static class AuctionCatalogueEndpoints
@@ -13,33 +16,68 @@ public static class AuctionCatalogueEndpoints
 
        
         group.MapPost("/",
-            [SwaggerRequestExample(typeof(AuctionCatalogue), typeof(AuctionCatalogueRequestExample))]
+            [SwaggerRequestExample(typeof(AuctionCatalogue), typeof(AuctionCatalogueRequestExample))]            
         ([FromBody] AuctionCatalogue model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })
-        .WithName("CreateAuctionCatalogue")
+        .WithName("Create")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Used by brokers to transmit broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited."
+            Summary = "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited."
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
-        
-        group.MapGet("/",
-            (bool originalOrUpdated, string season, string sale, string invoicingOrg, string lotNumber) =>
+
+        group.MapPost("/updates",
+            [SwaggerRequestExample(typeof(AuctionCatalogue), typeof(AuctionCatalogueUpdatesRequestExample))]
+        ([FromBody] AuctionCatalogue model) =>
+            {
+                //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
+            })
+        .WithName("CreateUpdates")
+        .WithOpenApi(o => new(o)
+        {
+            Summary = "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited."
+        })
+        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+
+        group.MapGet("/data",
+            [SwaggerRequestExample(typeof(RequestForDataForAuctionCatalogue), typeof(RequestForDataAuctionCatalogueRequestExample))]
+        ([FromBody] RequestForDataForAuctionCatalogue model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })
-        .WithName("GetAuctionCatalogue")
+        .WithName("GetData")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Used by brokers to request original or updated auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited."
+            Summary = "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<AuctionCatalogue>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+
+        group.MapGet("/status",
+            [SwaggerRequestExample(typeof(RequestForDataForAuctionCatalogue), typeof(RequestForStatusAuctionCatalogueRequestExample))]
+        ([FromBody] RequestForStatusForAuctionCatalogue model) =>
+        {
+            //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
+        })
+        .WithName("GetStatus")
+        .WithOpenApi(o => new(o)
+        {
+            Summary = "Used by brokers to request status for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates"
+        })
+        .Produces<ApiResult<StatusReply>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

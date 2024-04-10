@@ -21,4 +21,24 @@ namespace Wiedpug.API.Model
         /// </summary>
         public object? Data { get; set; }
     }
+
+    /// <summary>
+    /// A standard API response object used for all successful API responses
+    /// </summary>
+    public class ApiResult<T>
+    {
+        /// <summary>
+        /// Indicator if the request has been successfully processed. 
+        /// </summary>
+        [Required]
+        public required bool IsSuccessful { get; set; }
+        /// <summary>
+        /// Contains information about the response if applicable.
+        /// </summary>
+        public string? Message { get; set; }
+        /// <summary>
+        /// Contains response data. e.g. Auction Catalogue
+        /// </summary>
+        public T? Data { get; set; }
+    }
 }
