@@ -71,8 +71,8 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// Specifies whether the L/S sample is secured or not. <br />
-        /// true for a secured L/S sample <br />
-        /// flase for a unsecured L/S sample <br />
+        /// true: for a secured L/S sample <br />
+        /// flase: for a unsecured L/S sample <br />
         /// </summary>
         [Required]
         public required bool isLsSampleSecured { get; set; }

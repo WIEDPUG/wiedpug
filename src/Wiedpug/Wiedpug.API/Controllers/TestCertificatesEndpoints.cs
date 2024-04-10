@@ -10,18 +10,20 @@ public static class TestCertificatesEndpoints
     public static void MapTestCertificatesApiResultEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/test-certificates").WithTags("Test Certificates");
+
         group.MapPost("/",
             [SwaggerRequestExample(typeof(TestCertificates), typeof(TestCertificatesRequestExample))]
-            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(TestCertificates200Example))]
-            [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(TestCertificates400Example))]
-            [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(TestCertificates401Example))]
-            [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(TestCertificates403Example))]
-            [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(TestCertificates500Example))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(TestCertificates200Example))]
+        [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(TestCertificates400Example))]
+        [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(TestCertificates401Example))]
+        [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(TestCertificates403Example))]
+        [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(TestCertificates500Example))]
         ([FromBody] TestCertificates model) =>
-        {            
+        {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
-        })        
-        .WithOpenApi(o => new(o) {
+        })
+        .WithOpenApi(o => new(o)
+        {
             Summary = "Retrieves the requested details or status"
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
@@ -29,6 +31,5 @@ public static class TestCertificatesEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
-        
     }
 }

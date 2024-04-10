@@ -38,7 +38,7 @@ namespace Wiedpug.Domain.Entities
         public SourceCode SourceCode { get; set; }
         [Required]
         public required ReportingFlag ReportingFlag { get; set; }
-        public SourcedType ScouredType { get; set; }
+        public ScouredType ScouredType { get; set; }
         /// <summary>
         /// A GST Amount with 2 digits after the decimal point
         /// </summary>
