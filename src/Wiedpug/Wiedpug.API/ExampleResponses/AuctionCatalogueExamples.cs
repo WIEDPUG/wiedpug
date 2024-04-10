@@ -1,4 +1,5 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
+using Wiedpug.Domain.Aggregates;
 using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
 using Wiedpug.Domain.Enums;
 
@@ -189,9 +190,9 @@ namespace Wiedpug.API.ExampleResponses
                                     Vm3 = 0.0,
                                     DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk._1
                                 },
-                                Histograms = new List<AuctionCatalogueWoolSaleHeaderLotHistogram>
+                                Histograms = new List<FibreDiameterHistogram>
                                 {
-                                    new AuctionCatalogueWoolSaleHeaderLotHistogram
+                                    new FibreDiameterHistogram
                                     {
                                         FibreDiameterHistogramHeader = new Domain.Entities.FibreDiameterHistogramHeader //31
                                         {
