@@ -26,7 +26,7 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public CoreTestDetails? CoreTestDetails { get; set; }
         public ColourCombinationDetails? ColourCombinationDetails { get; set; }
         public OMIDetails? OmiDetails { get; set; }
-        public List<AuctionCatalogueWoolSaleHeaderLotHistogram>? Histograms { get; set; }
+        public List<FibreDiameterHistogram>? Histograms { get; set; }
         
         /// <summary>
         /// This field is completely optional when sending Auction Catalogue Updates
