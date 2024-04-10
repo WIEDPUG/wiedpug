@@ -3,7 +3,6 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Instrument
     {
         [Description("1: Laserscan")]

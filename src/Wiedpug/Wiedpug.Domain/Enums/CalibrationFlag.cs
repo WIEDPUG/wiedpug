@@ -11,9 +11,9 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CalibrationFlag
     {
-        [Description("Old: The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to reference wool, based on illuminant C and 2º observer angle. Old calibration has been deactivated as at 1st January 2001.")]
-        Old,
-        [Description("New: The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to certified tiles, based on illuminant D65 and 10º observer angle, and corrected for any glass effects")]
-        New
+        [Description("O: Old. The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to reference wool, based on illuminant C and 2º observer angle. Old calibration has been deactivated as at 1st January 2001.")]
+        O,
+        [Description("N: New. The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to certified tiles, based on illuminant D65 and 10º observer angle, and corrected for any glass effects")]
+        N
     }
 }
