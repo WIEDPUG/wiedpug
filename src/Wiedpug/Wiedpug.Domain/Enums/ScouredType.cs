@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    public enum SourcedType
+    public enum ScouredType
     {
         [Description("0: Not Scoured")]
         NotScoured = 0,
