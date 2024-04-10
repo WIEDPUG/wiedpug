@@ -27,6 +27,7 @@ namespace Wiedpug.Domain.Entities
         public string? PaymentDueDate { get; set; } // FIELD NUMBER 5 - Payment Due Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
         [Required]
+        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
         public required double DiscountRate { get; set; } // FIELD NUMBER 6 - Discount Rate - Start: 30, Size: 4, Data Type: D2, Justification: F, Requirement Designator: M
 
         [Required]
@@ -42,9 +43,11 @@ namespace Wiedpug.Domain.Entities
         public required string DateStorageChargeCommences { get; set; } // FIELD NUMBER 8 - Date Storage Charge Commences - Start: 36, Size: 6, Data Type: Date, Justification: F, Requirement Designator: M
 
         [Required]
+        [RegularExpression(RegexPattern.DECIMAL_THREE_DIGITS)]
         public required double StorageChargePerBalePerDay { get; set; } // FIELD NUMBER 9 - Storage Charge Per Bale/Day - Start: 42, Size: 4, Data Type: D3, Justification: R, Requirement Designator: M
 
         [Required]
+        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
         public required double PenaltyInterestRate { get; set; } // FIELD NUMBER 10 - Penalty Interest Rate - Start: 46, Size: 4, Data Type: D2, Justification: R, Requirement Designator: M
 
         /// <summary>
@@ -59,6 +62,7 @@ namespace Wiedpug.Domain.Entities
         /// The total (extended) amount of Post Sale Charge Rebate for the Lot. 
         /// This value is provided where a value in the Post Sale Charge Rebate field exists (11A)
         /// </summary>
+        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
         public double? PostSaleChargeRebate { get; set; } // FIELD NUMBER 12 - Post Sale Charge Rebate - Start: 56, Size: 5, Data Type: D2, Justification: R, Requirement Designator: O
     }
 }

@@ -64,13 +64,11 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DATE_ISO8601)]
         public required string DateIssued { get; set; } // FIELD NUMBER 17 - Date Issued - Start: 44, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_SIX_DIGITS)]
-        public required double FactorLaserscanNumerator { get; set; } // FIELD NUMBER 18 - Factor – Laserscan Numerator - Start: 50, Size: 16, Data Type: D6, Justification: R, Requirement Designator: C
-
-        [Required]
+        public double? FactorLaserscanNumerator { get; set; } // FIELD NUMBER 18 - Factor – Laserscan Numerator - Start: 50, Size: 16, Data Type: D6, Justification: R, Requirement Designator: C
+        
         [RegularExpression(RegexPattern.DECIMAL_SIX_DIGITS)]
-        public required double FactorLaserscanDenominator { get; set; } // FIELD NUMBER 19 - Factor – Laserscan Denominator - Start: 66, Size: 15, Data Type: D6, Justification: R, Requirement Designator: C
+        public double? FactorLaserscanDenominator { get; set; } // FIELD NUMBER 19 - Factor – Laserscan Denominator - Start: 66, Size: 15, Data Type: D6, Justification: R, Requirement Designator: C
 
     }
 }

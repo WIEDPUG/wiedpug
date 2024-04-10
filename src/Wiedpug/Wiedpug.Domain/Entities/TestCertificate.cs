@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Wiedpug.Domain.Aggregates;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -26,7 +22,7 @@ namespace Wiedpug.Domain.Entities
 
         public CoreTestDetails? CoreTestDetails { get; set; }
 
-        public ColorCombinationDetails? ColorCombinationDetails { get; set; }
+        public ColourCombinationDetails? ColorCombinationDetails { get; set; }
 
         public OMIDetails? OMIDetials {  get; set; }
 

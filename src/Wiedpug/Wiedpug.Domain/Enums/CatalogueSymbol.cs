@@ -10,7 +10,7 @@ using static System.Net.WebRequestMethods;
 
 namespace Wiedpug.Domain.Enums
 {
-    [Description("These are the symbols defined in the AWEX Wool Selling Rules. " +
+    [Description("These are the symbols defined in the AWEX Wool Selling Rules. If this field has no value, it will indicate that there are no catalogue symbols for that lot" +
         "To obtain the current code list of values that may be used in this field please go to this URL: http://www.awex.com.au/standards/catalogue")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CatalogueSymbol

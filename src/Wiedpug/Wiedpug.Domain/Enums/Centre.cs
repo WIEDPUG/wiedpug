@@ -406,29 +406,4 @@ namespace Wiedpug.Domain.Enums
         [Description("NZ_Z: New Zealand - Taupo")]
         NZ_Z
     }
-
-    public enum CentreAustralia
-    {
-        
-    }
-
-    public enum CentreOverseas
-    {
-        
-    }
-
-
-
-    /// <summary>
-    /// A centre is a town where any activity connected with the wool industry takes place.
-    /// The codes used in transmissions are those defined in the Australian Wool Selling Regulation.
-    /// In New Zealand, this is the centre in which the wool is sold.
-    /// The field is not used in Australia.
-    /// </summary>
-    public enum CentreNewZealand
-    {
-        
-    }
-
-
 }

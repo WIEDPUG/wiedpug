@@ -29,15 +29,14 @@ namespace Wiedpug.Domain.Entities
         /// It is used in New Zealand only.
         /// `true` = Normal Lot, `false` = No Lot
         /// </summary>
-        public bool? NoLotFlag { get; set; } // FIELD NUMBER 8 - No Lot Flag - Start: 28, Size: 1, Data Type: ID, Justification: F, Requirement Designator: C
+        public bool? IsNoLot { get; set; } // FIELD NUMBER 8 - No Lot Flag - Start: 28, Size: 1, Data Type: ID, Justification: F, Requirement Designator: C
 
         public SourceCode? SourceCode { get; set; } // FIELD NUMBER 9 - Source Code - Start: 29, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
         [Required]
         public required UpdateType UpdateType { get; set; } // FIELD NUMBER 10 - Update Type - Start: 30, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
-
-        [Required]
-        public required CatalogueSymbol CatalogueSymbols { get; set; } // FIELD NUMBER 11 - Catalogue Symbols - Start: 31, Size: 6, Data Type: ID, Justification: L, Requirement Designator: M
+        
+        public CatalogueSymbol? CatalogueSymbols { get; set; } // FIELD NUMBER 11 - Catalogue Symbols - Start: 31, Size: 6, Data Type: ID, Justification: L, Requirement Designator: M
 
         [Required]
         public required PackMaterial PackMaterial { get; set; } // FIELD NUMBER 12 - Pack Material - Start: 37, Size: 2, Data Type: ID, Justification: L, Requirement Designator: M

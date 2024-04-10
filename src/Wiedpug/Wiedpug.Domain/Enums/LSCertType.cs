@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Wiedpug.Domain.Enums
 {
-    public enum LSCertType
+    public enum LsCertType
     {
         [Description("0: Length & Strength tested")]
         LengthAndStrengthTested = 0,

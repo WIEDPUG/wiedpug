@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel;
+using Swashbuckle.AspNetCore.Filters;
+using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
 namespace Wiedpug.API.Controllers;
@@ -11,7 +12,9 @@ public static class AuctionCatalogueEndpoints
         var group = routes.MapGroup("auction-catalogue").WithTags("Auction Catalogue");
 
        
-        group.MapPost("/", ([FromBody] AuctionCatalogue model) =>
+        group.MapPost("/",
+            [SwaggerRequestExample(typeof(AuctionCatalogue), typeof(AuctionCatalogueRequestExample))]
+        ([FromBody] AuctionCatalogue model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })

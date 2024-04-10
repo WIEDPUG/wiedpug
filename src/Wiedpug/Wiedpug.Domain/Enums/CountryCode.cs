@@ -7,16 +7,16 @@ namespace Wiedpug.Domain.Enums
     [Description("Country Code using ISO 3166-1 standard")]
     public enum CountryCode
     {
-        [Description("Australia: AU")]
+        [Description("AU: Australia")]
         AU,
 
-        [Description("New Zealand: NZ")]
+        [Description("NZ: New Zealand")]
         NZ,
 
-        [Description("France: FR")]
+        [Description("FR: France")]
         FR,
 
-        [Description("South Africa: ZA")]
+        [Description("ZA: South Africa")]
         ZA
     }
 }
