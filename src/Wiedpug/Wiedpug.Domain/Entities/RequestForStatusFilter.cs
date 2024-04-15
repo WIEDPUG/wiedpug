@@ -4,10 +4,10 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class RequestForStatusForAuctionCatalogue
+    public class RequestForStatusFilter
     {
         [Required]
-        public required TransmissionTypeForAuctionCatalogue TransmissionTypeRequested { get; set; }
+        public required TransmissionType TransmissionTypeRequested { get; set; }
 
         public SaleIdentity? SaleIdentity { get; set; }
 

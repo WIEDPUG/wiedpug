@@ -13,11 +13,11 @@ public static class RequestForDataOrStatusEndpoints
         var group = routes.MapGroup("/request-for-details-or-status").WithTags("Request for Data/Status");
         group.MapPost("/",
             [SwaggerRequestExample(typeof(RequestForDataOrStatus), typeof(RequestForDataRequestExample))]
-            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataOrStatus200Example))]
-            [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(RequestForDataOrStatus400Example))]
-            [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(RequestForDataOrStatus401Example))]
-            [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(RequestForDataOrStatus403Example))]
-            [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(RequestForDataOrStatus500Example))]
+            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
+            [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
+            [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
+            [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
+            [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
         ([FromBody] RequestForDataOrStatus model) =>
         {            
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);

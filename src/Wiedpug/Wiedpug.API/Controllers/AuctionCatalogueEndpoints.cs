@@ -16,8 +16,13 @@ public static class AuctionCatalogueEndpoints
 
        
         group.MapPost("/",
-            [SwaggerRequestExample(typeof(AuctionCatalogue), typeof(AuctionCatalogueRequestExample))]            
-        ([FromBody] AuctionCatalogue model) =>
+            [SwaggerRequestExample(typeof(List<AuctionCatalogue>), typeof(AuctionCatalogueRequestExamples))]
+            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AuctionCatalogueResponse200Example))]
+            [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
+            [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
+            [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoWritePermissionExample))]
+            [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
+        ([FromBody] List<AuctionCatalogue> model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })
@@ -33,8 +38,13 @@ public static class AuctionCatalogueEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/updates",
-            [SwaggerRequestExample(typeof(AuctionCatalogue), typeof(AuctionCatalogueUpdatesRequestExample))]
-        ([FromBody] AuctionCatalogue model) =>
+            [SwaggerRequestExample(typeof(List<AuctionCatalogue>), typeof(AuctionCatalogueUpdatesRequestExample))]
+            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AuctionCatalogueResponse200Example))]
+            [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
+            [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
+            [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoWritePermissionExample))]
+            [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
+        ([FromBody] List<AuctionCatalogue> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
@@ -50,8 +60,13 @@ public static class AuctionCatalogueEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapGet("/data",
-            [SwaggerRequestExample(typeof(RequestForDataForAuctionCatalogue), typeof(RequestForDataAuctionCatalogueRequestExample))]
-        ([FromBody] RequestForDataForAuctionCatalogue model) =>
+            //[SwaggerRequestExample(typeof(List<RequestForDataForAuctionCatalogue>), typeof(RequestForDataAuctionCatalogueRequestExamples))]
+            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AuctionCatalogueResponse200Example))]
+            [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
+            [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
+            [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
+            [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
+        ([FromBody] List<RequestForDataForAuctionCatalogue> model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })
@@ -64,23 +79,6 @@ public static class AuctionCatalogueEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
-
-        group.MapGet("/status",
-            [SwaggerRequestExample(typeof(RequestForDataForAuctionCatalogue), typeof(RequestForStatusAuctionCatalogueRequestExample))]
-        ([FromBody] RequestForStatusForAuctionCatalogue model) =>
-        {
-            //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-        })
-        .WithName("GetStatus")
-        .WithOpenApi(o => new(o)
-        {
-            Summary = "Used by brokers to request status for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates"
-        })
-        .Produces<ApiResult<StatusReply>>(StatusCodes.Status200OK, contentType: "application/json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");        
     }
 }

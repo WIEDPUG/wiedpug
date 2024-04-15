@@ -2,6 +2,7 @@
 using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.SchemaFilter;
 using Wiedpug.API.Controllers;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,7 @@ builder.Services.AddSwaggerGen(c => {
     c.ExampleFilters(); //To support examples
 });
 
-builder.Services.AddSwaggerExamplesFromAssemblyOf<Program>();
+builder.Services.AddSwaggerExamplesFromAssemblies(Assembly.GetEntryAssembly());
 
 var app = builder.Build();
 
@@ -48,5 +49,7 @@ app.MapRequestForDataOrStatusApiResultEndpoints();
 app.MapTestCertificatesApiResultEndpoints();
 
 app.MapAuctionCatalogueEndpoints();
+
+app.MapRequestForStatusEndpoints();
 
 app.Run();
