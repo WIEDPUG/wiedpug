@@ -1,2 +1,1200 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateAggregate.TestCertificates">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\TestCertificateAggregate\TestCertificates.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TransmissionHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TestCertificateCollection" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader">
+    <Position X="0.75" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAAgAEAQgAAAAAAAAAAAIAAJAAgAQAAAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CountryOfOrigin" />
+      <Property Name="SoftwareIdentifier" />
+      <Property Name="TransmissionType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TestCertificate">
+    <Position X="8" Y="1" Width="3" />
+    <AssociationLine Name="Bales" Type="Wiedpug.Domain.Entities.Bale" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.25" Y="2.103" />
+        <Point X="8.25" Y="7.184" />
+        <Point X="7" Y="7.184" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ColorCombinationDetails" Type="Wiedpug.Domain.Entities.ColourCombinationDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.688" Y="2.103" />
+        <Point X="10.688" Y="3.352" />
+        <Point X="12.688" Y="3.352" />
+        <Point X="12.688" Y="4" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ColorDetails" Type="Wiedpug.Domain.Entities.ColourDetails" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.875" Y="2.103" />
+        <Point X="10.875" Y="2.478" />
+        <Point X="14.167" Y="2.478" Type="JumpStart" />
+        <Point X="14.333" Y="2.478" Type="JumpEnd" />
+        <Point X="16.375" Y="2.478" />
+        <Point X="16.375" Y="4" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="OMLDetails" Type="Wiedpug.Domain.Entities.OMLDetails" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="1.682" />
+        <Point X="14.25" Y="1.682" />
+        <Point X="14.25" Y="26.898" />
+        <Point X="26.698" Y="26.898" Type="JumpStart" />
+        <Point X="26.865" Y="26.898" Type="JumpEnd" />
+        <Point X="32.25" Y="26.898" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PremiumTestDetails" Type="Wiedpug.Domain.Entities.PremiumTestDetails" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="1.938" />
+        <Point X="14.167" Y="1.937" Type="JumpStart" />
+        <Point X="14.333" Y="1.938" Type="JumpEnd" />
+        <Point X="26.25" Y="1.938" />
+        <Point X="26.25" Y="3.75" />
+        <Point X="25" Y="3.75" />
+        <Point X="25" Y="15" />
+        <Point X="26.323" Y="15" Type="JumpStart" />
+        <Point X="26.49" Y="15" Type="JumpEnd" />
+        <Point X="26.5" Y="15" />
+        <Point X="26.5" Y="20.492" />
+        <Point X="26.125" Y="20.492" />
+        <Point X="26.125" Y="20.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ScouredTestDetails" Type="Wiedpug.Domain.Entities.ScouredTestDetails" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.625" Y="2.103" />
+        <Point X="8.625" Y="23.105" />
+        <Point X="8.805" Y="23.105" Type="JumpStart" />
+        <Point X="8.972" Y="23.105" Type="JumpEnd" />
+        <Point X="14.167" Y="23.105" Type="JumpStart" />
+        <Point X="14.333" Y="23.105" Type="JumpEnd" />
+        <Point X="18.5" Y="23.105" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAIgCCAAABAAAEAAAAgkACAUAIBQBAAIAAgA=</HashCode>
+      <FileName>Entities\TestCertificate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ColorCombinationDetails" />
+      <Property Name="ColorDetails" />
+      <Property Name="CombinationDetails" />
+      <Property Name="ConditioningTestDetails" />
+      <Property Name="CoreTestDetails" />
+      <Property Name="DichloromethaneTestDetails" />
+      <Property Name="GuidanceReporttDetails" />
+      <Property Name="LengthAdjustmentNoteDetails" />
+      <Property Name="LengthAfterCardingTestDetails" />
+      <Property Name="LengthAndStrengthCombDetails" />
+      <Property Name="LengthAndStrengthDetails" />
+      <Property Name="OMIDetials" />
+      <Property Name="OMLDetails" />
+      <Property Name="PostSaleCoreTestDetails" />
+      <Property Name="PremiumTestDetails" />
+      <Property Name="ScouredTestDetails" />
+      <Property Name="SubjectiveInterlotDetails" />
+      <Property Name="TestDataHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bales" />
+      <Property Name="FibreDiameterHistograms" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.Bale">
+    <Position X="5.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Bale.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaleHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BaleDetails" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.ColourCombinationDetails">
+    <Position X="11.25" Y="4" Width="2.75" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="12.324" Y="7.988" />
+        <Point X="12.324" Y="13.715" />
+        <Point X="14.167" Y="13.715" Type="JumpStart" />
+        <Point X="14.333" Y="13.715" Type="JumpEnd" />
+        <Point X="14.542" Y="13.715" Type="JumpStart" />
+        <Point X="14.708" Y="13.715" Type="JumpEnd" />
+        <Point X="17.917" Y="13.715" Type="JumpStart" />
+        <Point X="18.083" Y="13.715" Type="JumpEnd" />
+        <Point X="19.323" Y="13.715" Type="JumpStart" />
+        <Point X="19.49" Y="13.715" Type="JumpEnd" />
+        <Point X="20.65" Y="13.715" Type="JumpStart" />
+        <Point X="20.816" Y="13.715" Type="JumpEnd" />
+        <Point X="20.934" Y="13.715" Type="JumpStart" />
+        <Point X="21.186" Y="13.715" Type="JumpEnd" />
+        <Point X="22.948" Y="13.715" Type="JumpStart" />
+        <Point X="23.115" Y="13.715" Type="JumpEnd" />
+        <Point X="23.604" Y="13.715" Type="JumpStart" />
+        <Point X="23.771" Y="13.715" Type="JumpEnd" />
+        <Point X="23.837" Y="13.715" Type="JumpStart" />
+        <Point X="24.003" Y="13.715" Type="JumpEnd" />
+        <Point X="24.917" Y="13.715" Type="JumpStart" />
+        <Point X="25.083" Y="13.715" Type="JumpEnd" />
+        <Point X="26.323" Y="13.715" Type="JumpStart" />
+        <Point X="26.49" Y="13.715" Type="JumpEnd" />
+        <Point X="26.526" Y="13.715" Type="JumpStart" />
+        <Point X="26.693" Y="13.715" Type="JumpEnd" />
+        <Point X="26.698" Y="13.715" Type="JumpStart" />
+        <Point X="26.865" Y="13.715" Type="JumpEnd" />
+        <Point X="28.698" Y="13.715" Type="JumpStart" />
+        <Point X="28.865" Y="13.715" Type="JumpEnd" />
+        <Point X="29.7" Y="13.715" Type="JumpStart" />
+        <Point X="29.866" Y="13.715" Type="JumpEnd" />
+        <Point X="29.983" Y="13.715" Type="JumpStart" />
+        <Point X="30.307" Y="13.715" Type="JumpEnd" />
+        <Point X="31.456" Y="13.715" />
+        <Point X="31.456" Y="11.499" />
+        <Point X="35.542" Y="11.499" Type="JumpStart" />
+        <Point X="35.708" Y="11.499" Type="JumpEnd" />
+        <Point X="36.918" Y="11.499" Type="JumpStart" />
+        <Point X="37.085" Y="11.499" Type="JumpEnd" />
+        <Point X="37.257" Y="11.499" Type="JumpStart" />
+        <Point X="37.423" Y="11.499" Type="JumpEnd" />
+        <Point X="37.595" Y="11.499" Type="JumpStart" />
+        <Point X="37.761" Y="11.499" Type="JumpEnd" />
+        <Point X="38.363" Y="11.499" Type="JumpStart" />
+        <Point X="38.53" Y="11.499" Type="JumpEnd" />
+        <Point X="42.636" Y="11.499" />
+        <Point X="42.636" Y="13.326" />
+        <Point X="42.792" Y="13.326" Type="JumpStart" />
+        <Point X="42.958" Y="13.326" Type="JumpEnd" />
+        <Point X="43.25" Y="13.326" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAEAAAAAcBwACYAAAAAAAAAAAACAJAAAAFgAAAQAAAA=</HashCode>
+      <FileName>Entities\ColourCombinationDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CalibrationFlag" />
+      <Property Name="Laboratory" />
+      <Property Name="ReissueChargeFlag" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.ColourDetails">
+    <Position X="15" Y="4" Width="2.75" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="15.421" Y="7.411" />
+        <Point X="15.421" Y="13.541" />
+        <Point X="17.917" Y="13.541" Type="JumpStart" />
+        <Point X="18.083" Y="13.541" Type="JumpEnd" />
+        <Point X="19.323" Y="13.541" Type="JumpStart" />
+        <Point X="19.49" Y="13.541" Type="JumpEnd" />
+        <Point X="20.65" Y="13.541" Type="JumpStart" />
+        <Point X="20.816" Y="13.541" Type="JumpEnd" />
+        <Point X="20.934" Y="13.541" Type="JumpStart" />
+        <Point X="21.186" Y="13.541" Type="JumpEnd" />
+        <Point X="22.948" Y="13.541" Type="JumpStart" />
+        <Point X="23.115" Y="13.541" Type="JumpEnd" />
+        <Point X="23.604" Y="13.541" Type="JumpStart" />
+        <Point X="23.771" Y="13.541" Type="JumpEnd" />
+        <Point X="23.837" Y="13.541" Type="JumpStart" />
+        <Point X="24.003" Y="13.541" Type="JumpEnd" />
+        <Point X="24.917" Y="13.541" Type="JumpStart" />
+        <Point X="25.083" Y="13.541" Type="JumpEnd" />
+        <Point X="26.323" Y="13.541" Type="JumpStart" />
+        <Point X="26.49" Y="13.541" Type="JumpEnd" />
+        <Point X="26.526" Y="13.541" Type="JumpStart" />
+        <Point X="26.693" Y="13.541" Type="JumpEnd" />
+        <Point X="26.698" Y="13.541" Type="JumpStart" />
+        <Point X="26.865" Y="13.541" Type="JumpEnd" />
+        <Point X="28.698" Y="13.541" Type="JumpStart" />
+        <Point X="28.865" Y="13.541" Type="JumpEnd" />
+        <Point X="29.7" Y="13.541" Type="JumpStart" />
+        <Point X="29.866" Y="13.541" Type="JumpEnd" />
+        <Point X="29.983" Y="13.541" Type="JumpStart" />
+        <Point X="30.307" Y="13.541" Type="JumpEnd" />
+        <Point X="30.595" Y="13.541" />
+        <Point X="30.595" Y="11.796" />
+        <Point X="31.373" Y="11.796" Type="JumpStart" />
+        <Point X="31.54" Y="11.796" Type="JumpEnd" />
+        <Point X="35.542" Y="11.796" Type="JumpStart" />
+        <Point X="35.708" Y="11.796" Type="JumpEnd" />
+        <Point X="36.918" Y="11.796" Type="JumpStart" />
+        <Point X="37.085" Y="11.796" Type="JumpEnd" />
+        <Point X="37.257" Y="11.796" Type="JumpStart" />
+        <Point X="37.423" Y="11.796" Type="JumpEnd" />
+        <Point X="37.595" Y="11.796" Type="JumpStart" />
+        <Point X="37.761" Y="11.796" Type="JumpEnd" />
+        <Point X="38.363" Y="11.796" Type="JumpStart" />
+        <Point X="38.53" Y="11.796" Type="JumpEnd" />
+        <Point X="41.707" Y="11.796" />
+        <Point X="41.707" Y="14.104" />
+        <Point X="43.25" Y="14.104" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIIAAAwACYAAIAAAAAAAAAAAIEAAQFgAAAQAAAA=</HashCode>
+      <FileName>Entities\ColourDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CalibrationFlag" />
+      <Property Name="Laboratory" />
+      <Property Name="ReissueChargeFlag" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.CombinationDetails">
+    <Position X="39.75" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQEEAAAAAAAgQAAAABAAAACQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CombinationDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CombinationFlag" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.ConditioningTestDetails">
+    <Position X="25.25" Y="4" Width="2.75" />
+    <AssociationLine Name="YieldType" Type="Wiedpug.Domain.Enums.YieldType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="28" Y="5.907" />
+        <Point X="28.375" Y="5.907" />
+        <Point X="28.375" Y="12.875" />
+        <Point X="28.698" Y="12.875" Type="JumpStart" />
+        <Point X="28.865" Y="12.875" Type="JumpEnd" />
+        <Point X="29.7" Y="12.875" Type="JumpStart" />
+        <Point X="29.866" Y="12.875" Type="JumpEnd" />
+        <Point X="30.512" Y="12.875" Type="JumpStart" />
+        <Point X="30.678" Y="12.875" Type="JumpEnd" />
+        <Point X="31.373" Y="12.875" Type="JumpStart" />
+        <Point X="31.54" Y="12.875" Type="JumpEnd" />
+        <Point X="31.667" Y="12.875" Type="JumpStart" />
+        <Point X="31.833" Y="12.875" Type="JumpEnd" />
+        <Point X="32" Y="12.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAwADQAAgEBAAAAAADAAIAAAIAgQCAAAAAA=</HashCode>
+      <FileName>Entities\ConditioningTestDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InvoiceMassFlag" />
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+      <Property Name="YieldType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.CoreTestDetails">
+    <Position X="18.5" Y="3.75" Width="4" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.937" Y="7.546" />
+        <Point X="19.937" Y="12.059" />
+        <Point X="20.65" Y="12.059" Type="JumpStart" />
+        <Point X="20.816" Y="12.059" Type="JumpEnd" />
+        <Point X="21.019" Y="12.059" Type="JumpStart" />
+        <Point X="21.186" Y="12.059" Type="JumpEnd" />
+        <Point X="21.913" Y="12.059" Type="JumpStart" />
+        <Point X="22.079" Y="12.059" Type="JumpEnd" />
+        <Point X="22.948" Y="12.059" Type="JumpStart" />
+        <Point X="23.115" Y="12.059" Type="JumpEnd" />
+        <Point X="23.837" Y="12.059" Type="JumpStart" />
+        <Point X="24.003" Y="12.059" Type="JumpEnd" />
+        <Point X="24.132" Y="12.059" Type="JumpStart" />
+        <Point X="24.298" Y="12.059" Type="JumpEnd" />
+        <Point X="24.917" Y="12.059" Type="JumpStart" />
+        <Point X="25.083" Y="12.059" Type="JumpEnd" />
+        <Point X="25.26" Y="12.059" Type="JumpStart" />
+        <Point X="25.427" Y="12.059" Type="JumpEnd" />
+        <Point X="26.323" Y="12.059" Type="JumpStart" />
+        <Point X="26.49" Y="12.059" Type="JumpEnd" />
+        <Point X="26.526" Y="12.059" Type="JumpStart" />
+        <Point X="26.693" Y="12.059" Type="JumpEnd" />
+        <Point X="26.698" Y="12.059" Type="JumpStart" />
+        <Point X="26.865" Y="12.059" Type="JumpEnd" />
+        <Point X="28.292" Y="12.059" Type="JumpStart" />
+        <Point X="28.458" Y="12.059" Type="JumpEnd" />
+        <Point X="28.698" Y="12.059" Type="JumpStart" />
+        <Point X="28.865" Y="12.059" Type="JumpEnd" />
+        <Point X="29.7" Y="12.059" Type="JumpStart" />
+        <Point X="29.866" Y="12.059" Type="JumpEnd" />
+        <Point X="30.512" Y="12.059" Type="JumpStart" />
+        <Point X="30.678" Y="12.059" Type="JumpEnd" />
+        <Point X="31.373" Y="12.059" Type="JumpStart" />
+        <Point X="31.54" Y="12.059" Type="JumpEnd" />
+        <Point X="35.542" Y="12.059" Type="JumpStart" />
+        <Point X="35.708" Y="12.059" Type="JumpEnd" />
+        <Point X="36.918" Y="12.059" Type="JumpStart" />
+        <Point X="37.085" Y="12.059" Type="JumpEnd" />
+        <Point X="37.257" Y="12.059" Type="JumpStart" />
+        <Point X="37.423" Y="12.059" Type="JumpEnd" />
+        <Point X="37.595" Y="12.059" Type="JumpStart" />
+        <Point X="37.761" Y="12.059" Type="JumpEnd" />
+        <Point X="38.363" Y="12.059" Type="JumpStart" />
+        <Point X="38.53" Y="12.059" Type="JumpEnd" />
+        <Point X="41.624" Y="12.059" Type="JumpStart" />
+        <Point X="41.79" Y="12.059" Type="JumpEnd" />
+        <Point X="42.553" Y="12.059" Type="JumpStart" />
+        <Point X="42.72" Y="12.059" Type="JumpEnd" />
+        <Point X="43.26" Y="12.059" Type="JumpStart" />
+        <Point X="43.427" Y="12.059" Type="JumpEnd" />
+        <Point X="44.542" Y="12.059" Type="JumpStart" />
+        <Point X="44.708" Y="12.059" Type="JumpEnd" />
+        <Point X="46.375" Y="12.059" />
+        <Point X="46.375" Y="13.438" />
+        <Point X="45.75" Y="13.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAIAAA=</HashCode>
+      <FileName>Entities\CoreTestDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Laboratory" />
+      <Property Name="DarkAndMedullatedFibreRisk" />
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.DichloromethaneTestDetails">
+    <Position X="43.5" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAwACQAAAEAAAIAAAAAAIAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Entities\DichloromethaneTestDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Aggregates.FibreDiameterHistogram">
+    <Position X="4.75" Y="25.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\FibreDiameterHistogram.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FibreDiameterHistogramHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="FibreDiameterHistogramDetails" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleDetail">
+    <Position X="5.5" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAIBAAAAAAAAABAAAAAAQEAACAABAA=</HashCode>
+      <FileName>ValueObject\BaleDetail.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaleDetailType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BaleIdentifications" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleHeader">
+    <Position X="5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAACAAAAABAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ValueObject\BaleHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleIdentification">
+    <Position X="6.5" Y="15.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>ValueObject\BaleIdentification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.GuidanceReporttDetails">
+    <Position X="17.75" Y="15.25" Width="2.75" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="19.406" Y="15.25" />
+        <Point X="19.406" Y="12.6" />
+        <Point X="20.65" Y="12.6" Type="JumpStart" />
+        <Point X="20.816" Y="12.6" Type="JumpEnd" />
+        <Point X="21.019" Y="12.6" Type="JumpStart" />
+        <Point X="21.186" Y="12.6" Type="JumpEnd" />
+        <Point X="21.913" Y="12.6" Type="JumpStart" />
+        <Point X="22.079" Y="12.6" Type="JumpEnd" />
+        <Point X="22.948" Y="12.6" Type="JumpStart" />
+        <Point X="23.115" Y="12.6" Type="JumpEnd" />
+        <Point X="23.604" Y="12.6" Type="JumpStart" />
+        <Point X="23.771" Y="12.6" Type="JumpEnd" />
+        <Point X="23.837" Y="12.6" Type="JumpStart" />
+        <Point X="24.003" Y="12.6" Type="JumpEnd" />
+        <Point X="24.917" Y="12.6" Type="JumpStart" />
+        <Point X="25.083" Y="12.6" Type="JumpEnd" />
+        <Point X="26.323" Y="12.6" Type="JumpStart" />
+        <Point X="26.49" Y="12.6" Type="JumpEnd" />
+        <Point X="26.526" Y="12.6" Type="JumpStart" />
+        <Point X="26.693" Y="12.6" Type="JumpEnd" />
+        <Point X="26.698" Y="12.6" Type="JumpStart" />
+        <Point X="26.865" Y="12.6" Type="JumpEnd" />
+        <Point X="28.292" Y="12.6" Type="JumpStart" />
+        <Point X="28.458" Y="12.6" Type="JumpEnd" />
+        <Point X="28.698" Y="12.6" Type="JumpStart" />
+        <Point X="28.865" Y="12.6" Type="JumpEnd" />
+        <Point X="29.7" Y="12.6" Type="JumpStart" />
+        <Point X="29.866" Y="12.6" Type="JumpEnd" />
+        <Point X="30.512" Y="12.6" Type="JumpStart" />
+        <Point X="30.678" Y="12.6" Type="JumpEnd" />
+        <Point X="31.373" Y="12.6" Type="JumpStart" />
+        <Point X="31.54" Y="12.6" Type="JumpEnd" />
+        <Point X="31.667" Y="12.6" Type="JumpStart" />
+        <Point X="31.833" Y="12.6" Type="JumpEnd" />
+        <Point X="35.542" Y="12.6" Type="JumpStart" />
+        <Point X="35.708" Y="12.6" Type="JumpEnd" />
+        <Point X="36.918" Y="12.6" Type="JumpStart" />
+        <Point X="37.085" Y="12.6" Type="JumpEnd" />
+        <Point X="37.257" Y="12.6" Type="JumpStart" />
+        <Point X="37.423" Y="12.6" Type="JumpEnd" />
+        <Point X="37.595" Y="12.6" Type="JumpStart" />
+        <Point X="37.761" Y="12.6" Type="JumpEnd" />
+        <Point X="38.363" Y="12.6" Type="JumpStart" />
+        <Point X="38.53" Y="12.6" Type="JumpEnd" />
+        <Point X="40.967" Y="12.6" />
+        <Point X="40.967" Y="13.91" />
+        <Point X="41.254" Y="13.91" Type="JumpStart" />
+        <Point X="41.421" Y="13.91" Type="JumpEnd" />
+        <Point X="41.624" Y="13.91" Type="JumpStart" />
+        <Point X="41.79" Y="13.91" Type="JumpEnd" />
+        <Point X="43.25" Y="13.91" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACwAAQAAAEAJCAAAAAAAIAAAAAgEAQAAAAA=</HashCode>
+      <FileName>Entities\GuidanceReportDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.AdjustmentNoteDetails">
+    <Position X="27" Y="15" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAEQICAAACAAAAgIIAAAAAAQ=</HashCode>
+      <FileName>Entities\AdjustmentNoteDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Client" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LengthAfterCardingTestDetails">
+    <Position X="21.25" Y="15.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAQAAAABACgICAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Entities\LengthAfterCardingTestDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthCombDetails">
+    <Position X="40.25" Y="16.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAABEEEAwACQAEEEAAAAAAGAAAIhUAAIoAAAAAAAE=</HashCode>
+      <FileName>Entities\LengthAndStrengthCombDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LsCertType" />
+      <Property Name="Laboratory" />
+      <Property Name="ReissueChargeFlag" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthDetails">
+    <Position X="35" Y="21.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEEEAwACQAEAAAAEAAAGAAAIgUAAIoAAAAAAAE=</HashCode>
+      <FileName>Entities\LengthAndStrengthDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="LsCertType" />
+      <Property Name="Laboratory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.OMIDetails">
+    <Position X="35.75" Y="5" Width="3" />
+    <AssociationLine Name="RetestFlag" Type="Wiedpug.Domain.Enums.RetestFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="36.325" Y="8.796" />
+        <Point X="36.325" Y="11.273" />
+        <Point X="35.708" Y="11.273" Type="JumpStart" />
+        <Point X="35.542" Y="11.273" Type="JumpEnd" />
+        <Point X="29.866" Y="11.273" Type="JumpStart" />
+        <Point X="29.7" Y="11.273" Type="JumpEnd" />
+        <Point X="28.865" Y="11.273" Type="JumpStart" />
+        <Point X="28.698" Y="11.273" Type="JumpEnd" />
+        <Point X="28.458" Y="11.273" Type="JumpStart" />
+        <Point X="28.292" Y="11.273" Type="JumpEnd" />
+        <Point X="26.865" Y="11.273" Type="JumpStart" />
+        <Point X="26.698" Y="11.273" Type="JumpEnd" />
+        <Point X="26.693" Y="11.273" Type="JumpStart" />
+        <Point X="26.526" Y="11.273" Type="JumpEnd" />
+        <Point X="26.49" Y="11.273" Type="JumpStart" />
+        <Point X="26.323" Y="11.273" Type="JumpEnd" />
+        <Point X="25.427" Y="11.273" Type="JumpStart" />
+        <Point X="25.26" Y="11.273" Type="JumpEnd" />
+        <Point X="25.083" Y="11.273" Type="JumpStart" />
+        <Point X="24.917" Y="11.273" Type="JumpEnd" />
+        <Point X="24.215" Y="11.273" />
+        <Point X="24.215" Y="12.594" />
+        <Point X="24.003" Y="12.594" Type="JumpStart" />
+        <Point X="23.837" Y="12.594" Type="JumpEnd" />
+        <Point X="23.771" Y="12.594" Type="JumpStart" />
+        <Point X="23.604" Y="12.594" Type="JumpEnd" />
+        <Point X="23.115" Y="12.594" Type="JumpStart" />
+        <Point X="22.948" Y="12.594" Type="JumpEnd" />
+        <Point X="22.079" Y="12.594" Type="JumpStart" />
+        <Point X="21.913" Y="12.594" Type="JumpEnd" />
+        <Point X="21.186" Y="12.594" Type="JumpStart" />
+        <Point X="21.019" Y="12.594" Type="JumpEnd" />
+        <Point X="20.816" Y="12.594" Type="JumpStart" />
+        <Point X="20.65" Y="12.594" Type="JumpEnd" />
+        <Point X="18.25" Y="12.594" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAAAAA=</HashCode>
+      <FileName>Entities\OMIDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+      <Property Name="Laboratory" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.OMLDetails">
+    <Position X="32.25" Y="26.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAAAAA=</HashCode>
+      <FileName>Entities\OMLDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+      <Property Name="RetestFlag" />
+      <Property Name="Laboratory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.PostSaleCoreTestDetails">
+    <Position X="27.75" Y="22" Width="2.75" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="30.5" Y="23.898" />
+        <Point X="32.776" Y="23.898" Type="JumpStart" />
+        <Point X="32.943" Y="23.898" Type="JumpEnd" />
+        <Point X="33.51" Y="23.898" Type="JumpStart" />
+        <Point X="33.677" Y="23.898" Type="JumpEnd" />
+        <Point X="34.12" Y="23.898" Type="JumpStart" />
+        <Point X="34.286" Y="23.898" Type="JumpEnd" />
+        <Point X="34.75" Y="23.898" />
+        <Point X="34.75" Y="20.01" />
+        <Point X="35.542" Y="20.01" Type="JumpStart" />
+        <Point X="35.708" Y="20.01" Type="JumpEnd" />
+        <Point X="36.261" Y="20.01" Type="JumpStart" />
+        <Point X="36.428" Y="20.01" Type="JumpEnd" />
+        <Point X="37.257" Y="20.01" Type="JumpStart" />
+        <Point X="37.423" Y="20.01" Type="JumpEnd" />
+        <Point X="39.452" Y="20.01" Type="JumpStart" />
+        <Point X="39.619" Y="20.01" Type="JumpEnd" />
+        <Point X="40" Y="20.01" />
+        <Point X="40" Y="16" />
+        <Point X="41.254" Y="16" Type="JumpStart" />
+        <Point X="41.421" Y="16" Type="JumpEnd" />
+        <Point X="43.864" Y="16" Type="JumpStart" />
+        <Point X="44.031" Y="16" Type="JumpEnd" />
+        <Point X="45.172" Y="16" />
+        <Point X="45.172" Y="14.431" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="YieldType2" Type="Wiedpug.Domain.Enums.YieldType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="30.382" Y="22" />
+        <Point X="30.382" Y="17.375" />
+        <Point X="31.542" Y="17.375" Type="JumpStart" />
+        <Point X="31.833" Y="17.375" Type="JumpEnd" />
+        <Point X="32" Y="17.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACwAAQAAAEAJCAAAAAAAIAAAAAgEAQAAAAA=</HashCode>
+      <FileName>Entities\PostSaleCoreTestDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.PremiumTestDetails">
+    <Position X="22.25" Y="20.75" Width="4" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="26.25" Y="22.648" />
+        <Point X="26.698" Y="22.648" Type="JumpStart" />
+        <Point X="26.865" Y="22.648" Type="JumpEnd" />
+        <Point X="27.5" Y="22.648" />
+        <Point X="27.5" Y="20.78" />
+        <Point X="29.7" Y="20.78" Type="JumpStart" />
+        <Point X="29.866" Y="20.78" Type="JumpEnd" />
+        <Point X="29.983" Y="20.78" Type="JumpStart" />
+        <Point X="30.465" Y="20.78" Type="JumpEnd" />
+        <Point X="32.776" Y="20.78" Type="JumpStart" />
+        <Point X="32.943" Y="20.78" Type="JumpEnd" />
+        <Point X="33.51" Y="20.78" Type="JumpStart" />
+        <Point X="33.677" Y="20.78" Type="JumpEnd" />
+        <Point X="34.12" Y="20.78" Type="JumpStart" />
+        <Point X="34.286" Y="20.78" Type="JumpEnd" />
+        <Point X="34.667" Y="20.78" Type="JumpStart" />
+        <Point X="34.833" Y="20.78" Type="JumpEnd" />
+        <Point X="35.542" Y="20.78" Type="JumpStart" />
+        <Point X="35.708" Y="20.78" Type="JumpEnd" />
+        <Point X="36.261" Y="20.78" Type="JumpStart" />
+        <Point X="36.428" Y="20.78" Type="JumpEnd" />
+        <Point X="37.257" Y="20.78" Type="JumpStart" />
+        <Point X="37.423" Y="20.78" Type="JumpEnd" />
+        <Point X="39.536" Y="20.78" />
+        <Point X="39.536" Y="15.644" />
+        <Point X="41.254" Y="15.644" Type="JumpStart" />
+        <Point X="41.421" Y="15.644" Type="JumpEnd" />
+        <Point X="43.539" Y="15.644" />
+        <Point X="43.539" Y="14.431" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="YieldType2" Type="Wiedpug.Domain.Enums.YieldType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.188" Y="20.75" />
+        <Point X="24.188" Y="14.186" />
+        <Point X="24.917" Y="14.186" Type="JumpStart" />
+        <Point X="25.083" Y="14.186" Type="JumpEnd" />
+        <Point X="26.323" Y="14.186" Type="JumpStart" />
+        <Point X="26.49" Y="14.186" Type="JumpEnd" />
+        <Point X="26.526" Y="14.186" Type="JumpStart" />
+        <Point X="26.693" Y="14.186" Type="JumpEnd" />
+        <Point X="26.698" Y="14.186" Type="JumpStart" />
+        <Point X="26.865" Y="14.186" Type="JumpEnd" />
+        <Point X="28.698" Y="14.186" Type="JumpStart" />
+        <Point X="28.865" Y="14.186" Type="JumpEnd" />
+        <Point X="29.7" Y="14.186" Type="JumpStart" />
+        <Point X="29.866" Y="14.186" Type="JumpEnd" />
+        <Point X="29.983" Y="14.186" Type="JumpStart" />
+        <Point X="30.307" Y="14.186" Type="JumpEnd" />
+        <Point X="31.667" Y="14.186" Type="JumpStart" />
+        <Point X="31.833" Y="14.186" Type="JumpEnd" />
+        <Point X="32" Y="14.186" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAIAAA=</HashCode>
+      <FileName>Entities\PremiumTestDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DarkAndMedullatedFibreRisk" />
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="Laboratory" />
+      <Property Name="RetestFlag" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.ScouredTestDetails">
+    <Position X="18.5" Y="20.75" Width="3" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="21.5" Y="22.84" />
+        <Point X="22" Y="22.84" />
+        <Point X="22" Y="20.296" />
+        <Point X="23.604" Y="20.296" Type="JumpStart" />
+        <Point X="23.771" Y="20.296" Type="JumpEnd" />
+        <Point X="23.837" Y="20.296" Type="JumpStart" />
+        <Point X="24.271" Y="20.296" Type="JumpEnd" />
+        <Point X="26.417" Y="20.296" Type="JumpStart" />
+        <Point X="26.693" Y="20.296" Type="JumpEnd" />
+        <Point X="26.698" Y="20.296" Type="JumpStart" />
+        <Point X="26.865" Y="20.296" Type="JumpEnd" />
+        <Point X="29.7" Y="20.296" Type="JumpStart" />
+        <Point X="29.866" Y="20.296" Type="JumpEnd" />
+        <Point X="29.983" Y="20.296" Type="JumpStart" />
+        <Point X="30.465" Y="20.296" Type="JumpEnd" />
+        <Point X="32.776" Y="20.296" Type="JumpStart" />
+        <Point X="32.943" Y="20.296" Type="JumpEnd" />
+        <Point X="33.51" Y="20.296" Type="JumpStart" />
+        <Point X="33.677" Y="20.296" Type="JumpEnd" />
+        <Point X="34.12" Y="20.296" Type="JumpStart" />
+        <Point X="34.286" Y="20.296" Type="JumpEnd" />
+        <Point X="34.667" Y="20.296" Type="JumpStart" />
+        <Point X="34.833" Y="20.296" Type="JumpEnd" />
+        <Point X="35.542" Y="20.296" Type="JumpStart" />
+        <Point X="35.708" Y="20.296" Type="JumpEnd" />
+        <Point X="36.261" Y="20.296" Type="JumpStart" />
+        <Point X="36.428" Y="20.296" Type="JumpEnd" />
+        <Point X="37.257" Y="20.296" Type="JumpStart" />
+        <Point X="37.423" Y="20.296" Type="JumpEnd" />
+        <Point X="39.452" Y="20.296" Type="JumpStart" />
+        <Point X="39.619" Y="20.296" Type="JumpEnd" />
+        <Point X="40" Y="20.296" />
+        <Point X="40" Y="16" />
+        <Point X="41.254" Y="16" Type="JumpStart" />
+        <Point X="41.421" Y="16" Type="JumpEnd" />
+        <Point X="43.864" Y="16" Type="JumpStart" />
+        <Point X="44.031" Y="16" Type="JumpEnd" />
+        <Point X="44.355" Y="16" />
+        <Point X="44.355" Y="14.431" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACwAAQAAAEAZCAAAAAAAIAAAAAgEAQAAQAA=</HashCode>
+      <FileName>Entities\ScouredTestDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.SubjectiveInterlotDetails">
+    <Position X="11.25" Y="16" Width="2.75" />
+    <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="12.984" Y="16" />
+        <Point X="12.984" Y="13.867" />
+        <Point X="14.167" Y="13.867" Type="JumpStart" />
+        <Point X="14.333" Y="13.867" Type="JumpEnd" />
+        <Point X="14.542" Y="13.867" Type="JumpStart" />
+        <Point X="14.708" Y="13.867" Type="JumpEnd" />
+        <Point X="17.917" Y="13.867" Type="JumpStart" />
+        <Point X="18.083" Y="13.867" Type="JumpEnd" />
+        <Point X="19.323" Y="13.867" Type="JumpStart" />
+        <Point X="19.49" Y="13.867" Type="JumpEnd" />
+        <Point X="20.65" Y="13.867" Type="JumpStart" />
+        <Point X="20.816" Y="13.867" Type="JumpEnd" />
+        <Point X="20.934" Y="13.867" Type="JumpStart" />
+        <Point X="21.186" Y="13.867" Type="JumpEnd" />
+        <Point X="22.948" Y="13.867" Type="JumpStart" />
+        <Point X="23.115" Y="13.867" Type="JumpEnd" />
+        <Point X="23.604" Y="13.867" Type="JumpStart" />
+        <Point X="23.771" Y="13.867" Type="JumpEnd" />
+        <Point X="23.837" Y="13.867" Type="JumpStart" />
+        <Point X="24.003" Y="13.867" Type="JumpEnd" />
+        <Point X="24.917" Y="13.867" Type="JumpStart" />
+        <Point X="25.083" Y="13.867" Type="JumpEnd" />
+        <Point X="26.323" Y="13.867" Type="JumpStart" />
+        <Point X="26.49" Y="13.867" Type="JumpEnd" />
+        <Point X="26.526" Y="13.867" Type="JumpStart" />
+        <Point X="26.693" Y="13.867" Type="JumpEnd" />
+        <Point X="26.698" Y="13.867" Type="JumpStart" />
+        <Point X="26.865" Y="13.867" Type="JumpEnd" />
+        <Point X="28.698" Y="13.867" Type="JumpStart" />
+        <Point X="28.865" Y="13.867" Type="JumpEnd" />
+        <Point X="29.7" Y="13.867" Type="JumpStart" />
+        <Point X="29.866" Y="13.867" Type="JumpEnd" />
+        <Point X="29.983" Y="13.867" Type="JumpStart" />
+        <Point X="30.307" Y="13.867" Type="JumpEnd" />
+        <Point X="31.75" Y="13.867" />
+        <Point X="31.75" Y="12.375" />
+        <Point X="35.542" Y="12.375" Type="JumpStart" />
+        <Point X="35.708" Y="12.375" Type="JumpEnd" />
+        <Point X="36.918" Y="12.375" Type="JumpStart" />
+        <Point X="37.085" Y="12.375" Type="JumpEnd" />
+        <Point X="37.257" Y="12.375" Type="JumpStart" />
+        <Point X="37.423" Y="12.375" Type="JumpEnd" />
+        <Point X="37.595" Y="12.375" Type="JumpStart" />
+        <Point X="37.761" Y="12.375" Type="JumpEnd" />
+        <Point X="38.363" Y="12.375" Type="JumpStart" />
+        <Point X="38.53" Y="12.375" Type="JumpEnd" />
+        <Point X="41.624" Y="12.375" Type="JumpStart" />
+        <Point X="41.79" Y="12.375" Type="JumpEnd" />
+        <Point X="42.553" Y="12.375" Type="JumpStart" />
+        <Point X="42.72" Y="12.375" Type="JumpEnd" />
+        <Point X="42.875" Y="12.375" />
+        <Point X="42.875" Y="13.715" />
+        <Point X="43.25" Y="13.715" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="RetestFlag" Type="Wiedpug.Domain.Enums.RetestFlag" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="18.146" />
+        <Point X="14.167" Y="18.146" Type="JumpStart" />
+        <Point X="14.333" Y="18.146" Type="JumpEnd" />
+        <Point X="14.625" Y="18.146" />
+        <Point X="14.625" Y="11.625" />
+        <Point X="15.338" Y="11.625" Type="JumpStart" />
+        <Point X="15.504" Y="11.625" Type="JumpEnd" />
+        <Point X="17.375" Y="11.625" />
+        <Point X="17.375" Y="12" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="YieldType1" Type="Wiedpug.Domain.Enums.YieldType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.25" Y="19.988" />
+        <Point X="13.25" Y="20.238" />
+        <Point X="14.167" Y="20.238" Type="JumpStart" />
+        <Point X="14.333" Y="20.238" Type="JumpEnd" />
+        <Point X="20.564" Y="20.238" Type="JumpStart" />
+        <Point X="20.731" Y="20.238" Type="JumpEnd" />
+        <Point X="20.761" Y="20.238" Type="JumpStart" />
+        <Point X="20.928" Y="20.238" Type="JumpEnd" />
+        <Point X="20.934" Y="20.238" Type="JumpStart" />
+        <Point X="21.101" Y="20.238" Type="JumpEnd" />
+        <Point X="23.604" Y="20.238" Type="JumpStart" />
+        <Point X="23.771" Y="20.238" Type="JumpEnd" />
+        <Point X="23.837" Y="20.238" Type="JumpStart" />
+        <Point X="24.271" Y="20.238" Type="JumpEnd" />
+        <Point X="25.167" Y="20.238" Type="JumpStart" />
+        <Point X="25.333" Y="20.238" Type="JumpEnd" />
+        <Point X="26.417" Y="20.238" Type="JumpStart" />
+        <Point X="26.693" Y="20.238" Type="JumpEnd" />
+        <Point X="26.698" Y="20.238" Type="JumpStart" />
+        <Point X="26.865" Y="20.238" Type="JumpEnd" />
+        <Point X="29.7" Y="20.238" Type="JumpStart" />
+        <Point X="29.866" Y="20.238" Type="JumpEnd" />
+        <Point X="29.983" Y="20.238" Type="JumpStart" />
+        <Point X="30.465" Y="20.238" Type="JumpEnd" />
+        <Point X="31.625" Y="20.238" />
+        <Point X="31.625" Y="15.375" />
+        <Point X="31.667" Y="15.375" Type="JumpStart" />
+        <Point X="31.833" Y="15.375" Type="JumpEnd" />
+        <Point X="32" Y="15.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAIAAA=</HashCode>
+      <FileName>Entities\SubjectiveInterlotDetails.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReissueChargeFlag" />
+      <Property Name="RetestFlag" />
+      <Property Name="Laboratory" />
+      <Property Name="YieldType1" />
+      <Property Name="YieldType2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TestDataHeader">
+    <Position X="30.25" Y="4.75" Width="2.5" />
+    <AssociationLine Name="MulesingStatus" Type="Wiedpug.Domain.Enums.MulesingStatus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="32.281" Y="4.75" />
+        <Point X="32.281" Y="2.938" />
+        <Point X="32.464" Y="2.937" Type="JumpStart" />
+        <Point X="32.63" Y="2.938" Type="JumpEnd" />
+        <Point X="32.667" Y="2.937" Type="JumpStart" />
+        <Point X="32.833" Y="2.938" Type="JumpEnd" />
+        <Point X="33" Y="2.938" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ReportingFlag" Type="Wiedpug.Domain.Enums.ReportingFlag" ManuallyRouted="true">
+      <Path>
+        <Point X="30.25" Y="7.167" />
+        <Point X="29.866" Y="7.167" Type="JumpStart" />
+        <Point X="29.7" Y="7.167" Type="JumpEnd" />
+        <Point X="28.865" Y="7.167" Type="JumpStart" />
+        <Point X="28.698" Y="7.167" Type="JumpEnd" />
+        <Point X="28.458" Y="7.167" Type="JumpStart" />
+        <Point X="28.292" Y="7.167" Type="JumpEnd" />
+        <Point X="28.25" Y="7.167" />
+        <Point X="28.25" Y="8.49" />
+        <Point X="25.427" Y="8.49" Type="JumpStart" />
+        <Point X="25.26" Y="8.49" Type="JumpEnd" />
+        <Point X="25.083" Y="8.49" Type="JumpStart" />
+        <Point X="24.917" Y="8.49" Type="JumpEnd" />
+        <Point X="24.003" Y="8.49" Type="JumpStart" />
+        <Point X="23.837" Y="8.49" Type="JumpEnd" />
+        <Point X="23.115" Y="8.49" Type="JumpStart" />
+        <Point X="22.948" Y="8.49" Type="JumpEnd" />
+        <Point X="22.079" Y="8.49" Type="JumpStart" />
+        <Point X="21.913" Y="8.49" Type="JumpEnd" />
+        <Point X="21.186" Y="8.49" Type="JumpStart" />
+        <Point X="20.883" Y="8.49" Type="JumpEnd" />
+        <Point X="20.816" Y="8.49" Type="JumpStart" />
+        <Point X="20.65" Y="8.49" Type="JumpEnd" />
+        <Point X="20.02" Y="8.49" Type="JumpStart" />
+        <Point X="19.853" Y="8.49" Type="JumpEnd" />
+        <Point X="16.91" Y="8.49" Type="JumpStart" />
+        <Point X="16.744" Y="8.49" Type="JumpEnd" />
+        <Point X="15.988" Y="8.49" Type="JumpStart" />
+        <Point X="15.821" Y="8.49" Type="JumpEnd" />
+        <Point X="15.504" Y="8.49" Type="JumpStart" />
+        <Point X="15.338" Y="8.49" Type="JumpEnd" />
+        <Point X="14.333" Y="8.49" Type="JumpStart" />
+        <Point X="14.167" Y="8.49" Type="JumpEnd" />
+        <Point X="13.517" Y="8.49" Type="JumpStart" />
+        <Point X="13.35" Y="8.49" Type="JumpEnd" />
+        <Point X="12.888" Y="8.49" Type="JumpStart" />
+        <Point X="12.721" Y="8.49" Type="JumpEnd" />
+        <Point X="12.408" Y="8.49" Type="JumpStart" />
+        <Point X="12.241" Y="8.49" Type="JumpEnd" />
+        <Point X="10.441" Y="8.49" Type="JumpStart" />
+        <Point X="10.274" Y="8.49" Type="JumpEnd" />
+        <Point X="10.11" Y="8.49" Type="JumpStart" />
+        <Point X="9.944" Y="8.49" Type="JumpEnd" />
+        <Point X="9.295" Y="8.49" Type="JumpStart" />
+        <Point X="9.128" Y="8.49" Type="JumpEnd" />
+        <Point X="8.972" Y="8.49" Type="JumpStart" />
+        <Point X="8.805" Y="8.49" Type="JumpEnd" />
+        <Point X="8.708" Y="8.49" Type="JumpStart" />
+        <Point X="8.542" Y="8.49" Type="JumpEnd" />
+        <Point X="6.333" Y="8.49" Type="JumpStart" />
+        <Point X="6.167" Y="8.49" Type="JumpEnd" />
+        <Point X="4.25" Y="8.49" />
+        <Point X="4.25" Y="23.967" />
+        <Point X="2.5" Y="23.967" />
+        <Point X="2.5" Y="32.125" />
+        <Point X="3.417" Y="32.125" Type="JumpStart" />
+        <Point X="3.583" Y="32.125" Type="JumpEnd" />
+        <Point X="3.906" Y="32.125" />
+        <Point X="3.906" Y="32.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAEAAQhBAAAIAAABAIAIAAAACAMYAgGEAAAIBIQ=</HashCode>
+      <FileName>Entities\TestDataHeader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MulesingStatus" />
+      <Property Name="ReportingFlag" />
+      <Property Name="SaleIdentity" />
+      <Property Name="ScouredType" />
+      <Property Name="WeightUnit" />
+      <Property Name="SourceCode" />
+      <Property Name="LotType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.SoftwareIdentifier">
+    <Position X="2.25" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAg=</HashCode>
+      <FileName>ValueObject\SoftwareIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogramDetail">
+    <Position X="8.25" Y="27" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\FibreDiameterHistogramDetail.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="FibreMeasurements" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogramHeader">
+    <Position X="2.75" Y="27.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAFAAACACAAiAACAgAAADAgAAAAEAAEABAAAQAI=</HashCode>
+      <FileName>Entities\FibreDiameterHistogramHeader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Instrument" />
+      <Property Name="SubSamplingMethod" />
+      <Property Name="ReportingFlag" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.FibreDiameterHistogramDetailMeasurement">
+    <Position X="10.25" Y="28.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>ValueObject\FibreDiameterHistogramDetailMeasurement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.SaleIdentity">
+    <Position X="35.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\SaleIdentity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.Client">
+    <Position X="24.25" Y="15.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAA=</HashCode>
+      <FileName>ValueObject\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Centre" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Wiedpug.Domain.Enums.CalibrationFlag">
+    <Position X="17.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAA=</HashCode>
+      <FileName>Enums\CalibrationFlag.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.BaleDetailType">
+    <Position X="5" Y="13" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\BaleDetailType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.CountryCode">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAABAAAEAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\CountryCode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.TransmissionType">
+    <Position X="1" Y="10.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>CAAMAAAACAEUGAAAAgAAAAEIAAAARAAIAUEABQAAQAA=</HashCode>
+      <FileName>Enums\TransmissionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.ReissueChargeFlag">
+    <Position X="43.25" Y="13" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAABAAAAAAAAAAAAAAAAAAARAAAAAAA=</HashCode>
+      <FileName>Enums\ReissueChargeFlag.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.RetestFlag">
+    <Position X="16.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Enums\RetestFlag.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.Laboratory">
+    <Position X="25.5" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEEAAAAAAAAAAAAAAAABAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Enums\Laboratory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.YieldType">
+    <Position X="32" Y="12.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>QQ4wAAABABAABCtEIiAIAAAABoAIiQAIACEAAgAAAAA=</HashCode>
+      <FileName>Enums\YieldType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.Instrument" Collapsed="true">
+    <Position X="7.75" Y="28.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQ=</HashCode>
+      <FileName>Enums\Instrument.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.SubSamplingMethod">
+    <Position X="6" Y="31.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\SubSamplingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.ReportingFlag">
+    <Position X="2.75" Y="32.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAACAQA=</HashCode>
+      <FileName>Enums\ReportingFlag.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.CopyOfInstrument">
+    <Position X="7.75" Y="28.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQ=</HashCode>
+      <FileName>Enums\Instrument.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.DarkAndMedullatedFibreRisk" Collapsed="true">
+    <Position X="23.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAIAAAAAAAEAAAAAAQCBhAAAAI=</HashCode>
+      <FileName>Enums\DarkAndMedullatedFibreRisk.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.InvoiceMassFlag">
+    <Position X="30.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAA=</HashCode>
+      <FileName>Enums\InvoiceMassFlag.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.MulesingStatus">
+    <Position X="33" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAEAAEAIAAAAAAABAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Enums\MulesingStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.ScouredType">
+    <Position X="34" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAEAQAIAAQAAAAAAAABAAAAAAEA=</HashCode>
+      <FileName>Enums\ScouredType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.WeightUnit">
+    <Position X="33.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Enums\WeightUnit.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.SourceCode" Collapsed="true">
+    <Position X="31.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAACACAAAAAAA=</HashCode>
+      <FileName>Enums\SourceCode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.CombinationFlag" Collapsed="true">
+    <Position X="40" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAABAABAAAAAAAAAAAAAQCthGAAAI=</HashCode>
+      <FileName>Enums\CombinationFlag.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.LsCertType">
+    <Position X="39.75" Y="22.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Enums\LSCertType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.Centre">
+    <Position X="48.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Nux/PLlACFfl9377eyuQ+yBuRXfTZMCigsr///94oOE=</HashCode>
+      <FileName>Enums\Centre.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Wiedpug.Domain.Enums.LotType">
+    <Position X="39.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAABDNhAAA=</HashCode>
+      <FileName>Enums\LotType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
