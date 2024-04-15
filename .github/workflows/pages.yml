@@ -25,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DEFAULT_APP_DIRECTORY: 'src/Wiedpug'
+  DEFAULT_APP_DIRECTORY: 'src/Wiedpug'  
 
 jobs:
   # Build job
@@ -41,7 +41,7 @@ jobs:
           include-prerelease: false
 
       - name: Restore tool
-        working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
+        working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}/Wiedpug.API
         run: dotnet tool restore
         
       - name: Build with dotnet
