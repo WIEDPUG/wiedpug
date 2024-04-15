@@ -26,7 +26,7 @@ concurrency:
 
 env:
   DEFAULT_APP_DIRECTORY: 'src/Wiedpug'  
-  SWAGGER_FILE_SOURCE_PATH: 'src/Wiedpug/Wiedpug.API/wwwroot/swagger/v1'
+  SWAGGER_FILE_SOURCE_PATH: 'src/Wiedpug/Wiedpug.API/wwwroot/swagger/v1/swagger.yaml'
   SWAGGER_FILE_DESTINATION_DIRECTORY: 'public/openapi'
 
 jobs:
