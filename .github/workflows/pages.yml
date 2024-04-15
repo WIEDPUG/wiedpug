@@ -24,9 +24,27 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  DEFAULT_APP_DIRECTORY: 'src/Wiedpug'
+
 jobs:
   # Build job
-  build:
+  build-dotnet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.x'
+          include-prerelease: false
+
+      - name: Build with dotnet
+        working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
+        run: dotnet build --configuration Release
+    
+  build-nextra:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -73,7 +91,7 @@ jobs:
           path: ./out
 
   # Deployment job
-  deploy:
+  deploy-nextra:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
