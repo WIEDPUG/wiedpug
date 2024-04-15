@@ -40,6 +40,10 @@ jobs:
           dotnet-version: '8.x'
           include-prerelease: false
 
+      - name: Restore tool
+        working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
+        run: dotnet tool restore
+        
       - name: Build with dotnet
         working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
         run: dotnet build --configuration Release
