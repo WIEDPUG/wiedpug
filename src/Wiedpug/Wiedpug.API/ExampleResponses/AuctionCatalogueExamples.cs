@@ -145,9 +145,7 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
-                                                QualityScheme1 = null,
-                                                QualityScheme2 = null,
-                                                QualityScheme3 = null,
+                                                QualitySchemes = null,
                                                 MulesingStatus = "AA"
                                             }
                                         },
@@ -402,9 +400,7 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
-                                                QualityScheme1 = null,
-                                                QualityScheme2 = null,
-                                                QualityScheme3 = null,
+                                                QualitySchemes = null,
                                                 MulesingStatus = "AA"
                                             }
                                         },
@@ -647,9 +643,7 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                         new Domain.Entities.LotHeaderVendorDeclaration
                                         {
-                                            QualityScheme1 = null,
-                                            QualityScheme2 = null,
-                                            QualityScheme3 = null,
+                                            QualitySchemes = null,
                                             MulesingStatus = "AA"
                                         }
                                     },

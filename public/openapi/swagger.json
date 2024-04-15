@@ -2674,23 +2674,13 @@
             "type": "string",
             "nullable": true
           },
-          "offer1": {
-            "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
-          },
-          "offer2": {
-            "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
-          },
-          "offer3": {
-            "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
-          },
-          "offer4": {
-            "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
-          },
-          "offer5": {
-            "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
-          },
-          "offer6": {
-            "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
+          "offers": {
+            "maxItems": 6,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2719,14 +2709,13 @@
       "LotHeaderVendorDeclaration": {
         "type": "object",
         "properties": {
-          "qualityScheme1": {
-            "$ref": "#/components/schemas/QualitySchemeDetail"
-          },
-          "qualityScheme2": {
-            "$ref": "#/components/schemas/QualitySchemeDetail"
-          },
-          "qualityScheme3": {
-            "$ref": "#/components/schemas/QualitySchemeDetail"
+          "qualitySchemes": {
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QualitySchemeDetail"
+            },
+            "nullable": true
           },
           "mulesingStatus": {
             "type": "string",

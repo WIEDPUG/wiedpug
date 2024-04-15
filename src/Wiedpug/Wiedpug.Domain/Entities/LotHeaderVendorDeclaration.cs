@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wiedpug.Domain.Enums;
+﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
     public class LotHeaderVendorDeclaration
-    {        
-        public QualitySchemeDetail? QualityScheme1 { get; set; }
-        public QualitySchemeDetail? QualityScheme2 { get; set; }
-        public QualitySchemeDetail? QualityScheme3 { get; set; }
+    {
+        [MaxLength(3)]
+        public List<QualitySchemeDetail>? QualitySchemes { get; set; }
         /// <summary>
         /// This field is mandatory in Australia and optional outside Australia.
         /// </summary>

@@ -16,11 +16,7 @@ namespace Wiedpug.Domain.Entities
 
         public string? YieldBasis { get; set; } // FIELD NUMBER 4 - Yield Basis - Start: 5, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
-        public LotHeaderPricingDataOffer? Offer1 { get; set; }
-        public LotHeaderPricingDataOffer? Offer2 { get; set; }
-        public LotHeaderPricingDataOffer? Offer3 { get; set; }
-        public LotHeaderPricingDataOffer? Offer4 { get; set; }
-        public LotHeaderPricingDataOffer? Offer5 { get; set; }
-        public LotHeaderPricingDataOffer? Offer6 { get; set; }
+        [MaxLength(6)]
+        public List<LotHeaderPricingDataOffer>? Offers { get; set; }
     }
 }
