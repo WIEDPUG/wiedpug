@@ -41,24 +41,10 @@ jobs:
         with:
           dotnet-version: '8.x'
           include-prerelease: false
-
-      - name: Set up .NET Core 7.x for swashbuckle.aspnetcore.cli to run
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '7.x'
-          include-prerelease: false
-
-      - name: Restore tool
-        working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}/Wiedpug.API
-        run: dotnet tool restore
         
       - name: Build with dotnet
         working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
         run: dotnet build --configuration Release
-
-      - name: Copy Swagger file
-        run: cp ${{ env.SWAGGER_FILE_SOURCE_PATH }} ${{ env.SWAGGER_FILE_DESTINATION_DIRECTORY }}
-      
     
   build-nextra:
     runs-on: ubuntu-latest
