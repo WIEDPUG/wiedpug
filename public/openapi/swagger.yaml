@@ -138,58 +138,6 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
-  '/auction-catalogue/data/what/{id}':
-    get:
-      tags:
-        - Auction Catalogue
-      summary: 'Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates'
-      operationId: GetDataWhat
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: integer
-            format: int32
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                $ref: '#/components/schemas/RequestForDataForAuctionCatalogue'
-        required: true
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AuctionCatalogueApiResult'
-        '400':
-          description: Bad Request
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
-        '401':
-          description: Unauthorized
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
-        '403':
-          description: Forbidden
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
-        '500':
-          description: Internal Server Error
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
   /request-for-details-or-status:
     post:
       tags:

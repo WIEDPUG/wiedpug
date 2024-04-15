@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Deploy Next.js site to Pages
+name: Build and Deploy
 
 on:
   # Runs on pushes targeting the default branch
@@ -25,9 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DEFAULT_APP_DIRECTORY: 'src/Wiedpug'  
-  SWAGGER_FILE_SOURCE_PATH: 'src/Wiedpug/Wiedpug.API/wwwroot/swagger/v1/swagger.yaml'
-  SWAGGER_FILE_DESTINATION_DIRECTORY: 'public/openapi'
+  DEFAULT_APP_DIRECTORY: 'src/Wiedpug'
 
 jobs:
   # Build job
