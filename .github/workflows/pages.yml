@@ -26,6 +26,8 @@ concurrency:
 
 env:
   DEFAULT_APP_DIRECTORY: 'src/Wiedpug'  
+  SWAGGER_FILE_SOURCE_PATH: 'src/Wiedpug/Wiedpug.API/wwwroot/swagger/v1'
+  SWAGGER_FILE_DESTINATION_DIRECTORY: 'public/openapi'
 
 jobs:
   # Build job
@@ -53,6 +55,10 @@ jobs:
       - name: Build with dotnet
         working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
         run: dotnet build --configuration Release
+
+      - name: Copy Swagger file
+        run: cp ${{ env.SWAGGER_FILE_SOURCE_PATH }} ${{ env.SWAGGER_FILE_DESTINATION_DIRECTORY }}
+      
     
   build-nextra:
     runs-on: ubuntu-latest
