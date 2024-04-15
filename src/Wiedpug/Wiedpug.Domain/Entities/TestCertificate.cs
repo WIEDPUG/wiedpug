@@ -43,7 +43,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// A collection of Certificate Identities
         /// </summary>
-        public List<string>? CertificateIdentities { get; set; }
+        public List<string>? SublotCertificateNumbers { get; set; }
 
         public List<FibreDiameterHistogram>? FibreDiameterHistograms { get; set; }
 
