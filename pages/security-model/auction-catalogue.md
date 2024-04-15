@@ -6,7 +6,7 @@
 
 #### 2. Operation actions
 
-**write:** Transmit resource data
+**write:** Transmit resource data<br />
 **read:** Retrieve the resource data
 
 #### 3. Permissions
