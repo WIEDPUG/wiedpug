@@ -373,7 +373,77 @@
         "tags": [
           "Test Certificates"
         ],
-        "summary": "Retrieves the requested details or status",
+        "summary": "Upload the test certificates",
+        "operationId": "CreateTestCertificates",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestCertificates"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Test Certificates"
+        ],
+        "summary": "Retrieves the requested test certificates",
+        "operationId": "GetTestCertificates",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3953,7 +4023,7 @@
           "lengthAdjustmentNoteDetails": {
             "$ref": "#/components/schemas/AdjustmentNoteDetails"
           },
-          "certificateIdentities": {
+          "sublotCertificateNumbers": {
             "type": "array",
             "items": {
               "type": "string"
