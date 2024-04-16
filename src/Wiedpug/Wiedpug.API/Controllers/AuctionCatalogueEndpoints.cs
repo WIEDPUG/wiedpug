@@ -59,9 +59,9 @@ public static class AuctionCatalogueEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
-        group.MapGet("/data",
-            //[SwaggerRequestExample(typeof(List<RequestForDataForAuctionCatalogue>), typeof(RequestForDataAuctionCatalogueRequestExamples))]
-            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AuctionCatalogueResponse200Example))]
+        group.MapGet("/",
+            //[SwaggerRequestExample(typeof(List<RequestForDataForAuctionCatalogue>), typeof(RequestForDataAuctionCatalogueRequestExamples))]            
+            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataAuctionCatalogue200Example))]
             [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
             [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
             [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -75,7 +75,7 @@ public static class AuctionCatalogueEndpoints
         {
             Summary = "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates"
         })
-        .Produces<ApiResult<AuctionCatalogue>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<List<AuctionCatalogue>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

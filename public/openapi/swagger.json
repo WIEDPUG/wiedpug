@@ -77,22 +77,20 @@
             }
           }
         }
-      }
-    },
-    "/auction-catalogue/updates": {
-      "post": {
+      },
+      "get": {
         "tags": [
           "Auction Catalogue"
         ],
-        "summary": "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.",
-        "operationId": "CreateUpdates",
+        "summary": "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates",
+        "operationId": "GetData",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/AuctionCatalogue"
+                  "$ref": "#/components/schemas/RequestForDataForAuctionCatalogue"
                 }
               }
             }
@@ -105,7 +103,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiResult"
+                  "$ref": "#/components/schemas/AuctionCatalogueListApiResult"
                 }
               }
             }
@@ -153,20 +151,20 @@
         }
       }
     },
-    "/auction-catalogue/data": {
-      "get": {
+    "/auction-catalogue/updates": {
+      "post": {
         "tags": [
           "Auction Catalogue"
         ],
-        "summary": "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates",
-        "operationId": "GetData",
+        "summary": "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.",
+        "operationId": "CreateUpdates",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/RequestForDataForAuctionCatalogue"
+                  "$ref": "#/components/schemas/AuctionCatalogue"
                 }
               }
             }
@@ -179,7 +177,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuctionCatalogueApiResult"
+                  "$ref": "#/components/schemas/ApiResult"
                 }
               }
             }
@@ -615,7 +613,7 @@
         },
         "additionalProperties": false
       },
-      "AuctionCatalogueApiResult": {
+      "AuctionCatalogueListApiResult": {
         "required": [
           "isSuccessful"
         ],
@@ -631,7 +629,12 @@
             "nullable": true
           },
           "data": {
-            "$ref": "#/components/schemas/AuctionCatalogue"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuctionCatalogue"
+            },
+            "description": "Contains response data. e.g. Auction Catalogue",
+            "nullable": true
           }
         },
         "additionalProperties": false,
