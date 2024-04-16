@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate
@@ -12,5 +7,8 @@ namespace Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate
     {
         [Required]
         public required TransmissionHeader TransmissionHeader { get; set; }
+
+        [Required]
+        public required List<OrganizationDetail> OrganizationDetailCollection { get; set; }
     }
 }

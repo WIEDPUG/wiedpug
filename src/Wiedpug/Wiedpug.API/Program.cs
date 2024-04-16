@@ -52,4 +52,6 @@ app.MapAuctionCatalogueEndpoints();
 
 app.MapRequestForStatusEndpoints();
 
+app.MapOrganizationDetailsApiResultEndpoints();
+
 app.Run();

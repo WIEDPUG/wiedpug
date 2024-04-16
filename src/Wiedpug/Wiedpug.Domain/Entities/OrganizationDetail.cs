@@ -1,24 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using Wiedpug.Domain.Shared.Constants;
 using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
     public class OrganizationDetail
     {
+        [Required]
         public required string Id { get; set; }
-        public string OrganisationCode { get; set; }
-        public string NameOfOrganisation { get; set; }
-        public DateTime DateLastUpdated { get; set; }
-        public string IndustryGroupID { get; set; }
-        public string TransmitterFlag { get; set; }
-        public PhoneNumber PhoneNumber { get; set; }
-        public string ABN { get; set; }
-        public PhoneNumber FaxNumber { get; set; }
-        public Address[] Addresses { get; set; }
-        public Contact[] Contacts { get; set; }
+
+        [Required]
+        public required string OrganisationCode { get; set; }
+
+        [Required]
+        public required string NameOfOrganisation { get; set; }
+
+        /// <summary>
+        /// Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)
+        /// </summary>        
+        [Required]
+        [DataType(DataType.Date)]
+        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        public required string DateLastUpdated { get; set; }
+
+        [Required]
+        public required string IndustryGroupID { get; set; }
+
+        [Required]
+        public required string TransmitterFlag { get; set; }
+
+        public PhoneNumber? PhoneNumber { get; set; }
+
+        [Required]
+        public required string Abn { get; set; }
+        public PhoneNumber? FaxNumber { get; set; }
+        public List<Address>? Addresses { get; set; }
+        public List<Contact>? Contacts { get; set; }
     }
 }

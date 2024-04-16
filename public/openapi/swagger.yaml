@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: WIEDPUG API v1
-  version: '1.0'
+  title: Wiedpug.API
+  version: v1
 paths:
   /auction-catalogue:
     post:
@@ -48,11 +48,57 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
-    get:
+  /auction-catalogue/updates:
+    post:
+      tags:
+        - Auction Catalogue
+      summary: Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.
+      operationId: CreateUpdates
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/AuctionCatalogue'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+  /auction-catalogue/data:
+    post:
       tags:
         - Auction Catalogue
       summary: 'Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates'
-      operationId: GetData
+      operationId: RequestForData
       requestBody:
         content:
           application/json:
@@ -92,19 +138,187 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
-  /auction-catalogue/updates:
+  /organization-details:
     post:
       tags:
-        - Auction Catalogue
-      summary: Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.
-      operationId: CreateUpdates
+        - Organization Details
+      summary: Create or upload the organization details
+      operationId: CreateOrganizationDetails
       requestBody:
         content:
           application/json:
             schema:
-              type: array
-              items:
-                $ref: '#/components/schemas/AuctionCatalogue'
+              $ref: '#/components/schemas/OrganizationDetails'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+  /organization-details/data:
+    post:
+      tags:
+        - Organization Details
+      summary: Retrieves the organizationdetails
+      operationId: GetOrganizationDetails
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetOrganizationDetailsRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+  '/organization-details/{id}':
+    get:
+      tags:
+        - Organization Details
+      summary: Retrieves the organizationdetail by id
+      operationId: GetOrganizationDetailsById
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+    put:
+      tags:
+        - Organization Details
+      summary: Update the organization detail by id
+      operationId: UpdateOrganizationDetailsById
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+    delete:
+      tags:
+        - Organization Details
+      summary: Delete or Deactivate organization detail by id
+      operationId: DeleteOrganizationDetailsById
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
         required: true
       responses:
         '200':
@@ -180,11 +394,11 @@ paths:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
   /status:
-    get:
+    post:
       tags:
         - Request for Status
       summary: Used by brokers to request status
-      operationId: GetStatus
+      operationId: RequestForStatus
       requestBody:
         content:
           application/json:
@@ -226,7 +440,7 @@ paths:
     post:
       tags:
         - Test Certificates
-      summary: Upload the test certificates
+      summary: Create or upload the test certificates
       operationId: CreateTestCertificates
       requestBody:
         content:
@@ -265,16 +479,17 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
-    get:
+  /test-certificates/data:
+    post:
       tags:
         - Test Certificates
-      summary: Retrieves the requested test certificates
+      summary: Retrieves the test certificates
       operationId: GetTestCertificates
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/TestCertificates'
+              $ref: '#/components/schemas/GetTestCertificatesRequest'
         required: true
       responses:
         '200':
@@ -309,6 +524,40 @@ paths:
                 $ref: '#/components/schemas/CustomProblemDetails'
 components:
   schemas:
+    Address:
+      type: object
+      properties:
+        firstName:
+          type: string
+          nullable: true
+        lastName:
+          type: string
+          nullable: true
+        organizationName:
+          type: string
+          nullable: true
+        premise:
+          type: string
+          nullable: true
+        street:
+          type: string
+          nullable: true
+        suburb:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+        regionOrState:
+          type: string
+          nullable: true
+        postalCode:
+          type: string
+          nullable: true
+        country:
+          type: string
+          nullable: true
+      additionalProperties: false
     AdjustmentNoteDetails:
       required:
         - certificateIdentityOriginal
@@ -1193,6 +1442,27 @@ components:
           format: date
           nullable: true
       additionalProperties: false
+    Contact:
+      type: object
+      properties:
+        description:
+          type: string
+          nullable: true
+        firstName:
+          type: string
+          nullable: true
+        lastName:
+          type: string
+          nullable: true
+        phoneNumber:
+          $ref: '#/components/schemas/PhoneNumber'
+        mobileNumber:
+          $ref: '#/components/schemas/PhoneNumber'
+        email:
+          type: string
+          format: email
+          nullable: true
+      additionalProperties: false
     CoreTestDetails:
       required:
         - certificateIdentity
@@ -1500,6 +1770,81 @@ components:
           type: number
           format: double
           nullable: true
+      additionalProperties: false
+    GetOrganizationDetailsRequest:
+      required:
+        - abn
+        - countryOfOrigin
+        - currentReceiver
+        - currentTransmitter
+        - documentOriginator
+        - finalReceiver
+      type: object
+      properties:
+        countryOfOrigin:
+          $ref: '#/components/schemas/CountryCode'
+        documentOriginator:
+          minLength: 1
+          type: string
+        currentTransmitter:
+          minLength: 1
+          type: string
+        currentReceiver:
+          minLength: 1
+          type: string
+        finalReceiver:
+          minLength: 1
+          type: string
+        softwareIdentifier:
+          $ref: '#/components/schemas/SoftwareIdentifier'
+        abn:
+          minLength: 1
+          type: string
+        startDateTimeStatusRequest:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/'
+          type: string
+          description: Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00
+          format: date-time
+          nullable: true
+        endDateTimeStatusRequest:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/'
+          type: string
+          description: Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00
+          format: date-time
+          nullable: true
+        userNetworkDateTime:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    GetTestCertificatesRequest:
+      required:
+        - abn
+        - countryOfOrigin
+        - currentReceiver
+        - currentTransmitter
+        - documentOriginator
+        - finalReceiver
+      type: object
+      properties:
+        countryOfOrigin:
+          $ref: '#/components/schemas/CountryCode'
+        documentOriginator:
+          minLength: 1
+          type: string
+        currentTransmitter:
+          minLength: 1
+          type: string
+        currentReceiver:
+          minLength: 1
+          type: string
+        finalReceiver:
+          minLength: 1
+          type: string
+        softwareIdentifier:
+          $ref: '#/components/schemas/SoftwareIdentifier'
+        abn:
+          minLength: 1
+          type: string
       additionalProperties: false
     GuidanceReporttDetails:
       required:
@@ -2301,6 +2646,69 @@ components:
         - R
       type: string
       description: 'P: Previous/Passed-In Price<br />N: Negotiable Price<br />R: Reserve Price'
+    OrganizationDetail:
+      required:
+        - abn
+        - dateLastUpdated
+        - id
+        - industryGroupID
+        - nameOfOrganisation
+        - organisationCode
+        - transmitterFlag
+      type: object
+      properties:
+        id:
+          minLength: 1
+          type: string
+        organisationCode:
+          minLength: 1
+          type: string
+        nameOfOrganisation:
+          minLength: 1
+          type: string
+        dateLastUpdated:
+          minLength: 1
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Date value in ISO 8601 standard. e.g. 2024-03-21 (year-month-day)
+          format: date
+        industryGroupID:
+          minLength: 1
+          type: string
+        transmitterFlag:
+          minLength: 1
+          type: string
+        phoneNumber:
+          $ref: '#/components/schemas/PhoneNumber'
+        abn:
+          minLength: 1
+          type: string
+        faxNumber:
+          $ref: '#/components/schemas/PhoneNumber'
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+          nullable: true
+        contacts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+          nullable: true
+      additionalProperties: false
+    OrganizationDetails:
+      required:
+        - organizationDetailCollection
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        organizationDetailCollection:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrganizationDetail'
+      additionalProperties: false
     PackCondition:
       enum:
         - N
@@ -2338,6 +2746,16 @@ components:
         - Z
       type: string
       description: 'A code used to indicate how the wool has been baled. The most common type is Farm bales. <strong>Original</strong> - the pack type when the wool was originally baled. <strong>Preferred</strong> - The pack type which the buyer would prefer to be used when his wool is dumped.<br />0: Standard (farm) bale<br />1: Bag/butt<br />2: Lightweight bale<br />3: Jumbo bale<br />4: Single bales (normal density dumped)<br />5: Single bales (high density dumped)<br />6: Single bales (super high density dumped)<br />7: 3 bale tripack (super high density dumped)<br />8: 2 bale tripack (super high density dumped)<br />9: U bales<br />A: 4 or 6 bale unitised (normal density dumped)<br />B: 4 or 6 bale unitised (high density dumped)<br />C: 4 or 6 bale unitised (super high density dumped)<br />D: Two Bale Module (2BM)<br />E: J9 size bale used for scoured wool<br />F: J12 size bale used for scoured wool<br />Z: Mixed (to be used with groups only, that is, record type 12)'
+    PhoneNumber:
+      type: object
+      properties:
+        countryCode:
+          type: string
+          nullable: true
+        number:
+          type: string
+          nullable: true
+      additionalProperties: false
     PostSaleCoreTestDetails:
       required:
         - certificateIdentity

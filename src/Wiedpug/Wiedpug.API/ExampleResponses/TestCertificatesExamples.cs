@@ -10,7 +10,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class TestCertificatesRequestExample : IExamplesProvider<TestCertificates>
+    public class CreateTestCertificatesRequestExample : IExamplesProvider<TestCertificates>
     {
         public TestCertificates GetExamples()
         {
@@ -93,12 +93,12 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                          MeanMinimum = null,
-                                            MeanMaximum = null,
-                                            CoreTestSamplingDate = "2017-01-10",
-                                            DateIssued = "2017-01-10",
-                                            FactorLaserscanNumerator = null,
-                                            FactorLaserscanDenominator = null
+                                     MeanMinimum = null,
+                                     MeanMaximum = null,
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
+                                     FactorLaserscanNumerator = null,
+                                     FactorLaserscanDenominator = null
                                 },
                                 FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
                                 {
@@ -111,7 +111,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 23,
                                                 FibresMeasuredPercentage = 0.2345
                                             },
-                                             new FibreDiameterHistogramDetailMeasurement
+                                            new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 24,
                                                 FibresMeasuredPercentage = 0.2228
@@ -127,7 +127,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 25,
                                                 FibresMeasuredPercentage = 0.2543
                                             },
-                                             new FibreDiameterHistogramDetailMeasurement
+                                            new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 27,
                                                 FibresMeasuredPercentage = 0.3262
@@ -143,7 +143,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 21,
                                                 FibresMeasuredPercentage = 0.1740
                                             },
-                                             new FibreDiameterHistogramDetailMeasurement
+                                            new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 21,
                                                 FibresMeasuredPercentage = 0.1955
@@ -214,12 +214,12 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                          MeanMinimum = null,
-                                            MeanMaximum = null,
-                                            CoreTestSamplingDate = "2017-01-10",
-                                            DateIssued = "2017-01-10",
-                                            FactorLaserscanNumerator = null,
-                                            FactorLaserscanDenominator = null
+                                     MeanMinimum = null,
+                                     MeanMaximum = null,
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
+                                     FactorLaserscanNumerator = null,
+                                     FactorLaserscanDenominator = null
                                 },
                                 FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
                                 {
@@ -248,7 +248,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 25,
                                                 FibresMeasuredPercentage = 0.2543
                                             },
-                                             new FibreDiameterHistogramDetailMeasurement
+                                            new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 27,
                                                 FibresMeasuredPercentage = 0.3262
@@ -264,7 +264,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 21,
                                                 FibresMeasuredPercentage = 0.1740
                                             },
-                                             new FibreDiameterHistogramDetailMeasurement
+                                            new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 21,
                                                 FibresMeasuredPercentage = 0.1955
@@ -281,6 +281,305 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
+    public class GetTestCertificatesRequestExample : IExamplesProvider<GetTestCertificatesRequest>
+    {
+        public GetTestCertificatesRequest GetExamples()
+        {
+            return new GetTestCertificatesRequest()
+            {
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = "ABCD",
+                    CurrentTransmitter = "AWTM",
+                    CurrentReceiver = "AWXLC",
+                    FinalReceiver = "AWXLC",
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = "Talman",
+                        Version = 10820
+                    },
+                    Abn = "72001967184"
+            };
+        }
+    }
+
+    public class GetTestCertificates200Example : IExamplesProvider<ApiResult>
+    {
+        public ApiResult GetExamples()
+        {
+            return new ApiResult()
+            {
+                IsSuccessful = true,
+                Message = null,
+                Data = new TestCertificates 
+                {
+                    TransmissionHeader = new TransmissionHeader
+                    {
+                        DateFormatLastRevised = "2020-07-15",
+                        DateTransmissionFileCreated = "2016-01-17",
+                        CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                        DocumentOriginator = "ABCD",
+                        CurrentTransmitter = "AWTM",
+                        CurrentReceiver = "AWXLC",
+                        FinalReceiver = "AWXLC",
+                        AccessPassword = "1111111111",
+                        AccessPasswordReplacement = null,
+                        TransmissionType = TransmissionType.AuctionCatalogues,
+                        VersionNumber = 31,
+                        SoftwareIdentifier = new SoftwareIdentifier
+                        {
+                            ProgramName = "NETR",
+                            SoftwareCompany = "Talman",
+                            Version = 10820
+                        },
+                        Abn = "72001967184"
+                    },
+                    TestCertificateCollection = new List<TestCertificate>
+                    {
+                    new TestCertificate 
+                    {
+                        TestDataHeader = new TestDataHeader
+                        {
+                            Client = new Client
+                            {
+                                OrganizationCode = "AWTA"
+                            },
+                            Bales = 1,
+                            Gross = 1,
+                            Tare = 1,
+                            RegrabSampleWeight=1,
+                            WeightUnit = WeightUnit.Kilograms,
+                            LotType = LotType.M,
+                            CentreAuction = Centre.AU_A,
+                            SourceCode = SourceCode.Grower,
+                            ReportingFlag = ReportingFlag.R,
+                            ScouredType = ScouredType.NotScoured,
+                            IsGSTApplicable = false,
+                            IsCompanyABNApplicable = false
+                        },
+                        OMLDetails = new OMLDetails
+                        {
+                            CertificateIdentity =  "SFSF",
+                            Charge = 100.00,
+                            Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                            WoolBase = 200.00,
+                            Vmb = 10.0,
+                            HardHeadsBase =3.5,
+                            Yield1 = 1.2,
+                            YieldType1 = YieldType.RESERVED,
+                            RetestFlag = RetestFlag.NormalTest,
+                            ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
+                            Vm1 = 20.0
+                        },
+                        CombinationDetails = new CombinationDetails
+                        {
+                            CleanWeight1 = 10
+                        },
+                        FibreDiameterHistograms = new List<FibreDiameterHistogram> 
+                        {
+                            new FibreDiameterHistogram
+                            {
+                                FibreDiameterHistogramHeader = new FibreDiameterHistogramHeader
+                                {
+                                     CoefficientOfVariation = 19.9,
+                                     ComfortFactorPercentage = 98.7,
+                                     FibresMeasured = 4000,
+                                     ReportingFlag = ReportingFlag.C,
+                                     Instrument = Instrument.LaserScan,
+                                     SubSamplingMethod = SubSamplingMethod.Minicore,
+                                     NumberOfSpecimens = 4,
+                                     Mean = 20.1,
+                                     StandardDeviation = 4.0,
+                                     CurvatureMeanDegPerMm = 61,
+                                     MeanMinimum = null,
+                                     MeanMaximum = null,
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
+                                     FactorLaserscanNumerator = null,
+                                     FactorLaserscanDenominator = null
+                                },
+                                FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
+                                {
+                                    new FibreDiameterHistogramDetail
+                                    {
+                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        {
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 23,
+                                                FibresMeasuredPercentage = 0.2345
+                                            },
+                                             new FibreDiameterHistogramDetailMeasurement
+                                             {
+                                                FibreDiameter = 24,
+                                                FibresMeasuredPercentage = 0.2228
+                                             }
+                                        }
+                                    },
+                                    new FibreDiameterHistogramDetail
+                                    {
+                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        {
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 25,
+                                                FibresMeasuredPercentage = 0.2543
+                                            },
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 27,
+                                                FibresMeasuredPercentage = 0.3262
+                                            }
+                                        }
+                                    },
+                                    new FibreDiameterHistogramDetail
+                                    {
+                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        {
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 21,
+                                                FibresMeasuredPercentage = 0.1740
+                                            },
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 21,
+                                                FibresMeasuredPercentage = 0.1955
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    },
+                    new TestCertificate
+                    {
+                        TestDataHeader = new TestDataHeader
+                        {
+                            Client = new Client
+                            {
+                                OrganizationCode = "AWTA"
+                            },
+                            Bales = 1,
+                            Gross = 1,
+                            Tare = 1,
+                            RegrabSampleWeight=1,
+                            WeightUnit = WeightUnit.Kilograms,
+                            LotType = LotType.M,
+                            CentreAuction = Centre.AU_A,
+                            SourceCode = SourceCode.Grower,
+                            ReportingFlag = ReportingFlag.R,
+                            ScouredType = ScouredType.NotScoured,
+                            IsGSTApplicable = false,
+                            IsCompanyABNApplicable = false
+                        },
+                        LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
+                        {
+                            CertificateIdentity = "dsfafhdfa",
+                            Laboratory = Laboratory.NZWoolTestingAuthority,
+                            StapleLength = 13,
+                            StapleLengthCvPercentage = 25,
+                            StapleStrength = 14,
+                            StapleLengthMinimum = 13,
+                            StapleLengthMaximum = 14,
+                            StapleStrengthMinimum = 234,
+                            StapleStrengthMaximum = 230,
+                            PositionOfBreakPercentageTip = 26,
+                            PositionOfBreakPercentageMiddle = 34,
+                            PositionOfBreakPercentageBase = 27,
+                            LsCertType = LsCertType.LengthAndStrengthTested,
+                            IsLsSampleSecured = false,
+                            DateIssued = "2024-01-22"
+                        },
+                        SublotCertificateNumbers = new List<string>
+                        {
+                            "fdsafsdaf",
+                            "ygdfgdfdf"
+                        },
+                        FibreDiameterHistograms = new List<FibreDiameterHistogram> {
+                            new FibreDiameterHistogram
+                            {
+                                FibreDiameterHistogramHeader = new FibreDiameterHistogramHeader
+                                {
+                                     CoefficientOfVariation = 19.9,
+                                     ComfortFactorPercentage = 98.7,
+                                     FibresMeasured = 4000,
+                                     ReportingFlag = ReportingFlag.C,
+                                     Instrument = Instrument.LaserScan,
+                                     SubSamplingMethod = SubSamplingMethod.Minicore,
+                                     NumberOfSpecimens = 4,
+                                     Mean = 20.1,
+                                     StandardDeviation = 4.0,
+                                     CurvatureMeanDegPerMm = 61,
+                                     MeanMinimum = null,
+                                     MeanMaximum = null,
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
+                                     FactorLaserscanNumerator = null,
+                                     FactorLaserscanDenominator = null
+                                },
+                                FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
+                                {
+                                    new FibreDiameterHistogramDetail
+                                    {
+                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        {
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 23,
+                                                FibresMeasuredPercentage = 0.2345
+                                            },
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 24,
+                                                FibresMeasuredPercentage = 0.2228
+                                            }
+                                        }
+                                    },
+                                    new FibreDiameterHistogramDetail
+                                    {
+                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        {
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 25,
+                                                FibresMeasuredPercentage = 0.2543
+                                            },
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 27,
+                                                FibresMeasuredPercentage = 0.3262
+                                            }
+                                        }
+                                    },
+                                    new FibreDiameterHistogramDetail
+                                    {
+                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        {
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 21,
+                                                FibresMeasuredPercentage = 0.1740
+                                            },
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
+                                                FibreDiameter = 21,
+                                                FibresMeasuredPercentage = 0.1955
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                }
+            };
+        }
+    }
+
     public class TestCertificates200Example : IExamplesProvider<ApiResult>
     {
         public ApiResult GetExamples()
@@ -288,72 +587,8 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 IsSuccessful = true,
-                Message = "Success message if applicable, otherwise can be set to Null",
-                Data = "{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"
-            };
-        }
-    }
-
-    public class TestCertificates400Example : IExamplesProvider<CustomProblemDetails>
-    {
-        public CustomProblemDetails GetExamples()
-        {
-            return new CustomProblemDetails()
-            {
-                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
-                Title = "One or more validation errors occurred",
-                Status = StatusCodes.Status400BadRequest,
-                Detail = string.Empty,
-                Errors = new Dictionary<string, string[]>
-                {
-                    { "Requests[0].TransmissionHeader.DateFormatLastRevised", ["The field DateFormatLastRevised is required", "The field DateFormatLastRevised must match regulart expression pattern..."] },
-                    { "Requests[0].TransmissionHeader.CountryOfOrigin", ["The field CountryOfOrigin is required"] }
-                }
-            };
-        }
-    }
-
-    public class TestCertificates401Example : IExamplesProvider<CustomProblemDetails>
-    {
-        public CustomProblemDetails GetExamples()
-        {
-            return new CustomProblemDetails()
-            {
-                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
-                Title = "Unauthorized",
-                Status = StatusCodes.Status401Unauthorized,
-                Detail = "Missing authentication credentials",
-                Errors = null
-            };
-        }
-    }
-
-    public class TestCertificates403Example : IExamplesProvider<CustomProblemDetails>
-    {
-        public CustomProblemDetails GetExamples()
-        {
-            return new CustomProblemDetails()
-            {
-                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
-                Title = "You don't have permission to access this resource",
-                Status = StatusCodes.Status403Forbidden,
-                Detail = "You don't have a 'read' access to access this resource",
-                Errors = null
-            };
-        }
-    }
-
-    public class TestCertificates500Example : IExamplesProvider<CustomProblemDetails>
-    {
-        public CustomProblemDetails GetExamples()
-        {
-            return new CustomProblemDetails()
-            {
-                Type = "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
-                Title = "An error occurred while processing your required",
-                Status = StatusCodes.Status500InternalServerError,
-                Detail = "Error details..",
-                Errors = null
+                Message = null,
+                Data = null
             };
         }
     }
