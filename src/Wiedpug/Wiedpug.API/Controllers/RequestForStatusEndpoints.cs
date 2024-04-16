@@ -12,7 +12,7 @@ public static class RequestForStatusEndpoints
     {
         var group = routes.MapGroup("status").WithTags("Request for Status");
 
-        group.MapGet("/",
+        group.MapPost("/",
             [SwaggerRequestExample(typeof(RequestForStatus), typeof(RequestForStatusRequestExample))]
             [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForStatusResponse200Example))]
             [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
@@ -23,7 +23,7 @@ public static class RequestForStatusEndpoints
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
-        .WithName("GetStatus")
+        .WithName("RequestForStatus")
         .WithOpenApi(o => new(o)
         {
             Summary = "Used by brokers to request status"

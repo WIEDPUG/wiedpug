@@ -59,7 +59,7 @@ public static class AuctionCatalogueEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
-        group.MapGet("/",
+        group.MapPost("/data",
             //[SwaggerRequestExample(typeof(List<RequestForDataForAuctionCatalogue>), typeof(RequestForDataAuctionCatalogueRequestExamples))]            
             [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataAuctionCatalogue200Example))]
             [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -70,7 +70,7 @@ public static class AuctionCatalogueEndpoints
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })
-        .WithName("GetData")
+        .WithName("RequestForData")
         .WithOpenApi(o => new(o)
         {
             Summary = "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates"

@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Wiedpug.API",
-    "version": "v1"
+    "title": "WIEDPUG API v1",
+    "version": "1.0"
   },
   "paths": {
     "/auction-catalogue": {
