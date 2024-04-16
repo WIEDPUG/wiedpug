@@ -1,0 +1,120 @@
+# HTTP Response Codes 
+ 
+
+ HTTP response codes, also known as status codes, are standardized three-digit numbers returned by a web server in response to a client's request made to the server. These codes provide information about the status of the request and whether it was successful or encountered an error. 
+ 
+
+## Successful Responses 
+
+ 
+
+### 200 OK 
+
+The request succeeded. The result meaning of "success" depends on the HTTP method: 
+
+GET: The resource has been fetched and transmitted in the message body. 
+
+HEAD: The representation headers are included in the response without any message body. 
+
+PUT or POST: The resource describing the result of the action is transmitted in the message body. 
+
+TRACE: The message body contains the request message as received by the server. 
+
+
+### 201 Created 
+
+The request succeeded, and a new resource was created as a result. This is typically the response sent after POST requests, or some PUT requests. 
+
+
+### 204 No Content 
+
+There is no content to send for this request, but the headers may be useful. The user agent may update its cached headers for this resource with the new ones. 
+
+ 
+
+## Redirection messages 
+
+ 
+
+### 301 Moved Permanently 
+
+The URL of the requested resource has been changed permanently. The new URL is given in the response. 
+
+
+### 304 Not Modified 
+
+This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response. 
+
+
+## Client error responses 
+
+
+ 
+### 400 Bad Request 
+
+The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). 
+
+
+### 401 Unauthorized 
+
+Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response. 
+
+
+### 403 Forbidden 
+
+The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401 Unauthorized, the client's identity is known to the server. 
+
+
+### 404 Not Found 
+
+The server cannot find the requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 Forbidden to hide the existence of a resource from an unauthorized client. This response code is probably the most well known due to its frequent occurrence on the web. 
+
+
+### 405 Method Not Allowed 
+
+The request method is known by the server but is not supported by the target resource. For example, an API may not allow calling DELETE to remove a resource. 
+
+
+### 408 Request Timeout 
+
+This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message. 
+
+
+### 413 Payload Too Large 
+
+Request entity is larger than limits defined by server. The server might close the connection or return a Retry-After header field. 
+
+
+### 429 Too Many Requests 
+
+The user has sent too many requests in a given amount of time ("rate limiting"). 
+
+ 
+
+## Server error responses 
+
+ 
+
+### 500 Internal Server Error 
+
+The server has encountered a situation it does not know how to handle. 
+
+
+### 502 Bad Gateway 
+
+This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response. 
+
+
+### 503 Service Unavailable 
+
+The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This response should be used for temporary conditions and the Retry-After HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached. 
+
+
+### 504 Gateway Timeout 
+
+This error response is given when the server is acting as a gateway and cannot get a response in time. 
+
+
+### 505 HTTP Version Not Supported 
+
+The HTTP version used in the request is not supported by the server. 
