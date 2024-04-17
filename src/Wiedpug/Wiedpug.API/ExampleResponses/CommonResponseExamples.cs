@@ -16,6 +16,19 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
+    public class CommonNoDataResponse200Example : IExamplesProvider<ApiResult>
+    {
+        public ApiResult GetExamples()
+        {
+            return new ApiResult()
+            {
+                IsSuccessful = true,
+                Message = null,
+                Data = null
+            };
+        }
+    }
+
     public class CommonResponse400ArrayRequestPayloadExample : IExamplesProvider<CustomProblemDetails>
     {
         public CustomProblemDetails GetExamples()
@@ -94,6 +107,21 @@ namespace Wiedpug.API.ExampleResponses
                 Title = "You don't have permission to access this resource",
                 Status = StatusCodes.Status403Forbidden,
                 Detail = "You don't have a 'write' access to access this resource",
+                Errors = null
+            };
+        }
+    }
+
+    public class CommonResponse404NotFoundExample : IExamplesProvider<CustomProblemDetails>
+    {
+        public CustomProblemDetails GetExamples()
+        {
+            return new CustomProblemDetails()
+            {
+                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                Title = "Resource not found",
+                Status = StatusCodes.Status404NotFound,
+                Detail = null,
                 Errors = null
             };
         }

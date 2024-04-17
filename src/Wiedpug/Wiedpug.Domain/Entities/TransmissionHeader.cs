@@ -45,8 +45,7 @@ namespace Wiedpug.Domain.Entities
 
         public string? AccessPasswordReplacement { get; set; }
 
-        [Required]
-        public required TransmissionType TransmissionType { get; set; }       
+        public TransmissionType? TransmissionType { get; set; }       
 
         public int? VersionNumber { get; set; }
 

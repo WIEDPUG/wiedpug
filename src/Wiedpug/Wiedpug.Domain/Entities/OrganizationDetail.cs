@@ -6,8 +6,7 @@ namespace Wiedpug.Domain.Entities
 {
     public class OrganizationDetail
     {
-        [Required]
-        public required string Id { get; set; }
+        public string? Id { get; set; }
 
         [Required]
         public required string OrganisationCode { get; set; }
@@ -31,8 +30,7 @@ namespace Wiedpug.Domain.Entities
 
         public PhoneNumber? PhoneNumber { get; set; }
 
-        [Required]
-        public required string Abn { get; set; }
+        public string? Abn { get; set; }
         public PhoneNumber? FaxNumber { get; set; }
         public List<Address>? Addresses { get; set; }
         public List<Contact>? Contacts { get; set; }
