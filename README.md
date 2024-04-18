@@ -53,7 +53,7 @@ It is used for the following reasons:
 
 ## Swagger Documentation
 
-### Setup API Information
+### Basic API Information Setup
 - Basic information about the API needs to be defined as part of the Documentation.
 - Placeholders have been configured which needs to be replaced with real details.
 - The information can be modified in `Wiedpug.API` > `SwaggerOptions` > `ConfigureSwaggerVersionInfo.cs`
@@ -65,8 +65,9 @@ It is used for the following reasons:
 - It follows the Domain-Driven Design file structure which makes use of the following
    - `Aggregates` folder
       - Contains classes which translates to `Document Types` in Wiedpug Handbook (e.g. Organization Details, Auction Catalogue)	        
+	  - These classes holds a number of entities.
    - `Entities` folder
-      - These classes holds a number of entities which translates to `Record Type` in Wiedpug Handbook
+      - Contains classes which translates to `Record Type` in Wiedpug Handbook
 	  - These classes are used by the Aggregate class
    - `ValueObject` folder
       - These are classes that represents a specific value e.g. Address, Contact
@@ -76,7 +77,7 @@ It is used for the following reasons:
  - `Attributes` folder
     - Contains custom attributes
 - `Enums` folder
-    - Contains enums that are used to define the possible values that a Property can accept.
+    - Contains enums that are used to define the possible values for the property.
 
 ### Creating a new Model Class
 - Models are located in `Wiedpug.Domain` project
@@ -237,6 +238,7 @@ public enum UpdateType
 - To generate the Class Diagram image, right click on any empty spot inside the Class Diagram then select `Export Diagram as Image...`
    - Set the filename
    - Set the file type to `JPG`
+- Once image has been exported, copy and paste the image to `root directory` > `public` > `class-diagram` folder. Nextra will dynamically create a menu item for the new class diagram image.
 
 ### Adding API Endpoint
 - API Endpoints are added in `Wiedpug.API` project
@@ -254,7 +256,7 @@ public enum UpdateType
 ### Versioning Setup
 - The `Wiedpug.API` project is configured for automatic generation of versions.
 - The configuration is located in `Wiedpug.API` > `SwaggerOptions` > `ConfigureSwaggerVersionInfo.cs`
-- It is also configured in `Wiedpug.API` > `Program.cs`
+- Some of its configurations are located in `Wiedpug.API` > `Program.cs`
 
 This code snippet in `Program.cs` defines the basic setup for versioning.
 ```
@@ -314,7 +316,7 @@ public static class AuctionCatalogueEndpoints
 ```
 
 Example #2: Version 2 of the Auction Catalogue Endpoint
-- The code snippet below shows that an endpoint is mapped to API Version 2.0 using this code `.MapToApiVersion(2,0)`. This means all endpoints in this class will be mapped to version 2.0.
+- The code snippet below shows that a controller is mapped to API Version 2.0 using this code `.MapToApiVersion(2,0)`. This means all endpoints in this controller will be mapped to version 2.0.
 - It also shows changes to existing endpoints and a new endpoint for version 2.0
 
 ```
@@ -434,7 +436,7 @@ public static class AuctionCatalogueEndpoints
 
 #### Gotchas
 - Generating Swagger files
-   - There is a better way to get the generated swagger files. A dotnet tool `Swashbuckle.AspNetCore.Cli` can be used to generate the files without having to run the application. However, this CLI tool is unable to include the Example Request and Response payloads in the generated swagger files. These examples are important part of deliverables to help our client understand how data is structured.
+   - There is a better way to get the generated swagger files. A dotnet tool `Swashbuckle.AspNetCore.Cli` can be used to generate the files without having to run the application. However, this CLI tool is unable to include the Example Request and Response payloads in the generated swagger files. These examples are important part of deliverables to help understand how data is presented.
    - Because of this, there is no choice but to manually download the Swagger files during application runtime and manually pasting it to the `public` > `openapi` folder.
 
 
