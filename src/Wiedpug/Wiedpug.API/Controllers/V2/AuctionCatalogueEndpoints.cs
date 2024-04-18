@@ -9,6 +9,10 @@ namespace Wiedpug.API.Controllers.V2;
 
 public static class AuctionCatalogueEndpoints
 {
+    /// <summary>
+    /// IMPORTANT: This is just a sample endpoint to demonstrate the Versioning.
+    /// </summary>
+    /// <param name="routes"></param>
     public static void MapAuctionCatalogueEndpointsV2(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/auction-catalogue")
@@ -54,14 +58,14 @@ public static class AuctionCatalogueEndpoints
         ([FromBody] List<AuctionCatalogue> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-            })        
+            })
         .WithOpenApi(o => new(o)
         {
             ////Uncoment to mark this particular endpoint as Deprecated
             Deprecated = true,
             Summary = "Transmit Auction Catalogue Updates",
             Description = "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited."
-        })        
+        })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
@@ -120,12 +124,12 @@ public static class AuctionCatalogueEndpoints
         ([FromBody] List<RequestForDataForAuctionCatalogue> model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-        })        
+        })
         .WithOpenApi(o => new(o)
         {
             Summary = "Request for Data relating to Auction Catalogue, Private Catalogue and Auction Catalogue Updates",
             Description = "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates"
-        })        
+        })
         .Produces<ApiResult<List<AuctionCatalogue>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

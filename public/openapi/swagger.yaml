@@ -25,6 +25,11 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/AuctionCatalogue'
+            examples:
+              New Auction Catalogue:
+                value: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":[{"baleNumber":"1","eBaleId":"093253480000021002346917"}],"interlotComponentBales":[{"interlotComponentBaleHeader":{"brand":"RC/FARMING","baleDescription":"AAAMLMS","areaOfOrigin":"W14","locationWithinStore":"Z1-33","bales":2,"postcode":"6510"},"baleIdentifications":[{"baleNumber":"2","eBaleId":"093253480000021002346918"}]}]}]}]}]
+              New Private Catalogue:
+                value: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":3,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":null,"interlotComponentBales":[{"interlotComponentBaleHeader":{"brand":"RC/FARMING","baleDescription":"AAAMLMS","areaOfOrigin":"W14","locationWithinStore":"Z1-33","bales":2,"postcode":"6510"},"baleIdentifications":null}]}]}]}]
         required: true
       responses:
         '200':
@@ -33,30 +38,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":"OK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn","data":null}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'write' access to access this resource","errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/auction-catalogue/updates:
     post:
       tags:
@@ -70,6 +80,7 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/AuctionCatalogue'
+            example: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":5,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":6,"fibresMeasuredPercentage":250},{"fibreDiameter":7,"fibresMeasuredPercentage":250},{"fibreDiameter":8,"fibresMeasuredPercentage":1500}]}]}],"catalogueLotDescription":null,"baleIdentifications":null,"interlotComponentBales":null}]}]}]
         required: true
       responses:
         '200':
@@ -78,30 +89,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":"OK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn","data":null}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'write' access to access this resource","errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/auction-catalogue/data:
     post:
       tags:
@@ -115,6 +131,11 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/RequestForDataForAuctionCatalogue'
+            examples:
+              Request for Auction Catalogue Data and Updates:
+                value: [{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A"],"season":23},{"transmissionTypeRequested":5,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A"],"season":23}]
+              Request for Private Catalogue Data:
+                value: [{"transmissionTypeRequested":3,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":1,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A"],"season":23}]
         required: true
       responses:
         '200':
@@ -123,30 +144,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AuctionCatalogueListApiResult'
+              example: {"isSuccessful":true,"message":null,"data":[{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":null,"interlotComponentBales":null}]}]}]}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/organization-details:
     post:
       tags:
@@ -158,6 +184,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/OrganizationDetails'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"AWTM","currentTransmitter":"AWTM","currentReceiver":"AWXTS","finalReceiver":"AWXTS","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":null,"versionNumber":null,"softwareIdentifier":null,"abn":"43006014106"},"organizationDetailCollection":[{"id":null,"organisationCode":"AWTS","nameOfOrganisation":"AWTA - EDI TESTING BY EXTERNAL CLIENTS","dateLastUpdated":"2020-04-28","industryGroupID":"T","transmitterFlag":"Y","phoneNumber":{"countryCode":"61","number":"03 89004637"},"abn":null,"faxNumber":{"countryCode":"61","number":"03 20874405"},"addresses":[{"firstName":null,"lastName":null,"organizationName":null,"premise":null,"street":"28 GREAT SOUTH ROAD","suburb":"KENSINGTON","city":null,"regionOrState":null,"postalCode":"3031","country":"AU"}],"contacts":[{"description":null,"firstName":"HEAD OFFICE","lastName":null,"phoneNumber":{"countryCode":"61","number":"03 10108809"},"mobileNumber":null,"email":null}]},{"id":null,"organisationCode":"BUY1","nameOfOrganisation":"DEMO BUYER 1","dateLastUpdated":"2020-04-28","industryGroupID":"E","transmitterFlag":"N","phoneNumber":null,"abn":null,"faxNumber":null,"addresses":[],"contacts":[]}]}
         required: true
       responses:
         '200':
@@ -166,36 +193,42 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":null,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"ABC","version":10820,"programName":"NETR"},"abn":"72001925678"},"organizationDetailCollection":[{"id":"1","organisationCode":"AWTS","nameOfOrganisation":"AWTA - EDI TESTING BY EXTERNAL CLIENTS","dateLastUpdated":"2020-04-28","industryGroupID":"T","transmitterFlag":"Y","phoneNumber":{"countryCode":"61","number":"03 17229370"},"abn":null,"faxNumber":{"countryCode":"61","number":"03 763262290"},"addresses":[{"firstName":null,"lastName":null,"organizationName":null,"premise":null,"street":"88 HARBOR ROAD","suburb":"KENSINGTON","city":null,"regionOrState":null,"postalCode":"3031","country":"AU"}],"contacts":[{"description":null,"firstName":"HEAD OFFICE","lastName":null,"phoneNumber":{"countryCode":"61","number":"03 09332782"},"mobileNumber":null,"email":null}]},{"id":"2","organisationCode":"BUY1","nameOfOrganisation":"DEMO BUYER 1","dateLastUpdated":"2020-04-28","industryGroupID":"E","transmitterFlag":"N","phoneNumber":null,"abn":null,"faxNumber":null,"addresses":[],"contacts":[]}]}}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '404':
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/organization-details/data:
     post:
       tags:
@@ -207,6 +240,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/GetOrganizationDetailsRequest'
+            example: {"countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184","startDateTimeStatusRequest":"2024-02-01T19:25:04+00:00","endDateTimeStatusRequest":"2024-03-21T19:25:04+00:00","userNetworkDateTime":true}
         required: true
       responses:
         '200':
@@ -215,36 +249,42 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":null,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"ABC","version":10820,"programName":"NETR"},"abn":"72001925678"},"organizationDetailCollection":[{"id":"1","organisationCode":"AWTS","nameOfOrganisation":"AWTA - EDI TESTING BY EXTERNAL CLIENTS","dateLastUpdated":"2020-04-28","industryGroupID":"T","transmitterFlag":"Y","phoneNumber":{"countryCode":"61","number":"03 17229370"},"abn":null,"faxNumber":{"countryCode":"61","number":"03 763262290"},"addresses":[{"firstName":null,"lastName":null,"organizationName":null,"premise":null,"street":"88 HARBOR ROAD","suburb":"KENSINGTON","city":null,"regionOrState":null,"postalCode":"3031","country":"AU"}],"contacts":[{"description":null,"firstName":"HEAD OFFICE","lastName":null,"phoneNumber":{"countryCode":"61","number":"03 09332782"},"mobileNumber":null,"email":null}]},{"id":"2","organisationCode":"BUY1","nameOfOrganisation":"DEMO BUYER 1","dateLastUpdated":"2020-04-28","industryGroupID":"E","transmitterFlag":"N","phoneNumber":null,"abn":null,"faxNumber":null,"addresses":[],"contacts":[]},{"id":"3","organisationCode":"AWTN","nameOfOrganisation":"AUSTRALIAN WOOL TESTING AUTH LTD","dateLastUpdated":"2020-04-28","industryGroupID":"A","transmitterFlag":"Y","phoneNumber":{"countryCode":"61","number":"02 5400 9986"},"abn":null,"faxNumber":null,"addresses":[{"firstName":null,"lastName":null,"organizationName":null,"premise":null,"street":"367 NEW HAMMER STREET","suburb":"NEWCASTLE","city":null,"regionOrState":null,"postalCode":"2031","country":"AU"}],"contacts":[{"description":null,"firstName":"MIKE","lastName":"PWOELL","phoneNumber":{"countryCode":"61","number":"03 87569072"},"mobileNumber":{"countryCode":"61","number":"03 53298764"},"email":"mpowell@awtn.co.au"}]}]}}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '404':
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"Resource not found","status":404,"detail":null,"errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   '/v1/organization-details/{id}':
     get:
       tags:
@@ -264,30 +304,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"AWTM","currentTransmitter":"AWTM","currentReceiver":"AWXTS","finalReceiver":"AWXTS","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":null,"versionNumber":null,"softwareIdentifier":null,"abn":"43006014106"},"organizationDetailCollection":[{"id":"1","organisationCode":"AWTS","nameOfOrganisation":"AWTA - EDI TESTING BY EXTERNAL CLIENTS","dateLastUpdated":"2020-04-28","industryGroupID":"T","transmitterFlag":"Y","phoneNumber":{"countryCode":"61","number":"03 89004637"},"abn":null,"faxNumber":{"countryCode":"61","number":"03 20874405"},"addresses":[{"firstName":null,"lastName":null,"organizationName":null,"premise":null,"street":"28 GREAT SOUTH ROAD","suburb":"KENSINGTON","city":null,"regionOrState":null,"postalCode":"3031","country":"AU"}],"contacts":[{"description":null,"firstName":"HEAD OFFICE","lastName":null,"phoneNumber":{"countryCode":"61","number":"03 10108809"},"mobileNumber":null,"email":null}]}]}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '404':
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"Resource not found","status":404,"detail":null,"errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
     put:
       tags:
         - Organization Details
@@ -304,6 +349,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/OrganizationDetail'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"AWTM","currentTransmitter":"AWTM","currentReceiver":"AWXTS","finalReceiver":"AWXTS","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":null,"versionNumber":null,"softwareIdentifier":null,"abn":"43006014106"},"organizationDetailCollection":[{"id":null,"organisationCode":"AWTS","nameOfOrganisation":"AWTA - EDI TESTING BY EXTERNAL CLIENTS","dateLastUpdated":"2020-04-28","industryGroupID":"T","transmitterFlag":"Y","phoneNumber":{"countryCode":"61","number":"03 89004637"},"abn":null,"faxNumber":{"countryCode":"61","number":"03 20874405"},"addresses":[{"firstName":null,"lastName":null,"organizationName":null,"premise":null,"street":"28 GREAT SOUTH ROAD","suburb":"KENSINGTON","city":null,"regionOrState":null,"postalCode":"3031","country":"AU"}],"contacts":[{"description":null,"firstName":"HEAD OFFICE","lastName":null,"phoneNumber":{"countryCode":"61","number":"03 10108809"},"mobileNumber":null,"email":null}]}]}
         required: true
       responses:
         '200':
@@ -312,36 +358,42 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"AWTM","currentTransmitter":"AWTM","currentReceiver":"AWXTS","finalReceiver":"AWXTS","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":null,"versionNumber":null,"softwareIdentifier":null,"abn":"43006014106"},"organizationDetailCollection":[{"id":"1","organisationCode":"AWTS","nameOfOrganisation":"AWTA - EDI TESTING BY EXTERNAL CLIENTS","dateLastUpdated":"2020-04-28","industryGroupID":"T","transmitterFlag":"Y","phoneNumber":{"countryCode":"61","number":"03 89004637"},"abn":null,"faxNumber":{"countryCode":"61","number":"03 20874405"},"addresses":[{"firstName":null,"lastName":null,"organizationName":null,"premise":null,"street":"28 GREAT SOUTH ROAD","suburb":"KENSINGTON","city":null,"regionOrState":null,"postalCode":"3031","country":"AU"}],"contacts":[{"description":null,"firstName":"HEAD OFFICE","lastName":null,"phoneNumber":{"countryCode":"61","number":"03 10108809"},"mobileNumber":null,"email":null}]}]}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '404':
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"Resource not found","status":404,"detail":null,"errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
     delete:
       tags:
         - Organization Details
@@ -360,30 +412,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":null}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '404':
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"Resource not found","status":404,"detail":null,"errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/request-for-details-or-status:
     post:
       tags:
@@ -395,6 +452,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RequestForDataOrStatus'
+            example: {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
         required: true
       responses:
         '200':
@@ -403,30 +461,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":"Success message if applicable, otherwise can be set to Null","data":"{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/status:
     post:
       tags:
@@ -438,6 +501,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RequestForStatus'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"filters":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A","_84"],"season":23}]}
         required: true
       responses:
         '200':
@@ -446,30 +510,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StatusReplyApiResult'
+              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"responses":[{"recordNumber":null,"errorCode":null,"text":"08/04/92 11:32 DALS S01/91 07/04/92 888"}]}}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/test-certificates:
     post:
       tags:
@@ -481,6 +550,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestCertificates'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":50,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateCollection":[{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":{"cleanWeight1":10,"cleanWeight2":null,"cleanWeight3":null,"cleanWeight4":null,"cleanWeight5":null,"vmbMinimum":null,"vmbMaximum":null,"factorWoolBase":null,"factorVMB":null,"factorHardHeadsBase":null,"factorAirflowMean":null,"combinationFlag":null},"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":null,"omlDetails":{"certificateIdentity":"SFSF","charge":100,"laboratory":1,"regrabSampleWeight":null,"woolBase":200,"airflowMean":null,"vmb":10,"hardHeadsBase":3.5,"yield1":1.2,"yield2":null,"yield3":null,"yield4":null,"yieldType1":1,"yieldType2":null,"retestFlag":0,"yield5":null,"reissueChargeFlag":0,"vm1":20,"vm2":null,"vm3":null},"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":null,"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null},{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":{"certificateIdentity":"dsfafhdfa","charge":null,"laboratory":2,"regrabSampleWeight":null,"stapleLength":13,"stapleLengthCvPercentage":25,"stapleStrength":14,"stapleLengthMinimum":13,"stapleLengthMaximum":14,"stapleStrengthMinimum":234,"stapleStrengthMaximum":230,"positionOfBreakPercentageTip":26,"positionOfBreakPercentageMiddle":34,"positionOfBreakPercentageBase":27,"team3Hauteur":null,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":false,"expectedBarbe":null,"team3HauteurCvPercentage":null,"team3RomainePercentage":null,"dateIssued":"2024-01-22","stapleStrengthLowest25Percent":null},"lengthAndStrengthDetails":null,"omlDetails":null,"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":["fdsafsdaf","ygdfgdfdf"],"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null}]}
         required: true
       responses:
         '200':
@@ -489,30 +559,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":null}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
   /v1/test-certificates/data:
     post:
       tags:
@@ -524,6 +599,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/GetTestCertificatesRequest'
+            example: {"countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"}
         required: true
       responses:
         '200':
@@ -532,36 +608,42 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateCollection":[{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":{"cleanWeight1":10,"cleanWeight2":null,"cleanWeight3":null,"cleanWeight4":null,"cleanWeight5":null,"vmbMinimum":null,"vmbMaximum":null,"factorWoolBase":null,"factorVMB":null,"factorHardHeadsBase":null,"factorAirflowMean":null,"combinationFlag":null},"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":null,"omlDetails":{"certificateIdentity":"SFSF","charge":100,"laboratory":1,"regrabSampleWeight":null,"woolBase":200,"airflowMean":null,"vmb":10,"hardHeadsBase":3.5,"yield1":1.2,"yield2":null,"yield3":null,"yield4":null,"yieldType1":1,"yieldType2":null,"retestFlag":0,"yield5":null,"reissueChargeFlag":0,"vm1":20,"vm2":null,"vm3":null},"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":null,"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null},{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":{"certificateIdentity":"dsfafhdfa","charge":null,"laboratory":2,"regrabSampleWeight":null,"stapleLength":13,"stapleLengthCvPercentage":25,"stapleStrength":14,"stapleLengthMinimum":13,"stapleLengthMaximum":14,"stapleStrengthMinimum":234,"stapleStrengthMaximum":230,"positionOfBreakPercentageTip":26,"positionOfBreakPercentageMiddle":34,"positionOfBreakPercentageBase":27,"team3Hauteur":null,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":false,"expectedBarbe":null,"team3HauteurCvPercentage":null,"team3RomainePercentage":null,"dateIssued":"2024-01-22","stapleStrengthLowest25Percent":null},"lengthAndStrengthDetails":null,"omlDetails":null,"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":["fdsafsdaf","ygdfgdfdf"],"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null}]}}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"Requests[0].TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"Requests[0].TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
         '403':
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
         '404':
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"Resource not found","status":404,"detail":null,"errors":null}
         '500':
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
 components:
   schemas:
     Address:
@@ -1138,7 +1220,7 @@ components:
         - NZ_YP
         - NZ_Z
       type: string
-      description: 'This is combined Centres for Australia, Overseas and New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AU_A: Australia - ADELAIDE<br />AU_AD: Australia - Ardlethan<br />AU_AR: Australia - Armidale (NSW)<br />AU_AU: Australia - AUSTRALIA (AWEX internal only)<br />AU_B: Australia - BRISBANE<br />AU_BA: Australia - Benalla<br />AU_BK: Australia - Bourke<br />AU_BL: Australia - Ballarat<br />AU_BM: Australia - Barham<br />AU_BO: Australia - Boorowa<br />AU_BR: Australia - Bordertown<br />AU_BT: Australia - Bathurst<br />AU_C: Australia - Cooma<br />AU_CA: Australia - Casterton<br />AU_CB: Australia - Coonabarabran<br />AU_CC: Australia - Culcairn<br />AU_CL: Australia - Coleraine<br />AU_CN: Australia - Condoblin<br />AU_CO: Australia - Cootamundra<br />AU_CR: Australia - Corowa<br />AU_CU: Australia - Cunnamulla<br />AU_CW: Australia - Crookwell<br />AU_D: Australia - Bendigo<br />AU_DE: Australia - Deniliquin<br />AU_DO: Australia - Dubbo<br />AU_DR: Australia - Canowindra<br />AU_E: Australia - Echuca<br />AU_ER: Australia - Euroa<br />AU_ES: Australia - Esperance<br />AU_F: Australia - FREMANTLE<br />AU_G: Australia - GEELONG<br />AU_GF: Australia - Grenfell<br />AU_GI: Australia - Glenn Innes<br />AU_GN: Australia - Gunning<br />AU_GR: Australia - Griffith<br />AU_GU: Australia - Guyra<br />AU_H: Australia - Hobart<br />AU_HA: Australia - Harden<br />AU_HB: Australia - Holbrook<br />AU_HM: Australia - Hamilton<br />AU_HO: Australia - Horsham<br />AU_HY: Australia - Hay<br />AU_I: Australia - Narrabri<br />AU_J: Australia - Parkes<br />AU_JA: Australia - Jamestown<br />AU_K: Australia - Warracknabeal<br />AU_KE: Australia - Kerang<br />AU_KH: Australia - Keith<br />AU_KI: Australia - Kangaroo Island<br />AU_KN: Australia - Kingston<br />AU_KT: Australia - Katanning<br />AU_KW: Australia - Wagga Wagga<br />AU_KY: Australia - Kyneton<br />AU_L: Australia - LAUNCESTON<br />AU_LC: Australia - Lane Cove (AWEX internal only)<br />AU_M: Australia - MELBOURNE<br />AU_MA: Australia - Mansfield<br />AU_MB: Australia - Murray Bridge<br />AU_MC: Australia - Macarthur<br />AU_ME: Australia - Melton<br />AU_MG: Australia - Mount Gambier<br />AU_MI: Australia - Mildura<br />AU_MO: Australia - Moree<br />AU_MR: Australia - Maryborough<br />AU_MU: Australia - Mudgee<br />AU_N: Australia - NEWCASTLE<br />AU_NA: Australia - Narrandera<br />AU_ND: Australia - Goondiwindi<br />AU_NO: Australia - Northam<br />AU_NR: Australia - Naracoorte<br />AU_OB: Australia - Oberon<br />AU_OR: Australia - Orange<br />AU_P: Australia - Portland<br />AU_PA: Australia - Cowra<br />AU_PL: Australia - Port Lincoln<br />AU_Q: Australia - Yarrawonga<br />AU_QU: Australia - Queanbeyan<br />AU_R: Australia - GOULBURN<br />AU_S: Australia - SYDNEY<br />AU_SG: Australia - St George<br />AU_SH: Australia - Shepparton<br />AU_SK: Australia - Skipton<br />AU_SW: Australia - Swan Hill<br />AU_SY: Australia - Seymour<br />AU_T: Australia - Inverell<br />AU_TE: Australia - Temora<br />AU_U: Australia - Auburn<br />AU_UR: Australia - Uralla<br />AU_V: Australia - Forbes<br />AU_W: Australia - Tamworth<br />AU_WA: Australia - Warren<br />AU_WG: Australia - Walgett<br />AU_WL: Australia - Walcha<br />AU_WN: Australia - Wellington<br />AU_WR: Australia - Wangaratta<br />AU_WW: Australia - West Wyalong<br />AU_X: Australia - Ararat<br />AU_Y: Australia - Albury<br />AU_YA: Australia - Yass<br />AU_YM: Australia - Yarram<br />AU_YO: Australia - Young<br />AU_Z: Australia - Albany<br />OS_ZA: Overseas - Australia<br />OS_ZB: Overseas - Belgium<br />OS_ZC: Overseas - Christchurch - New Zealand<br />OS_ZD: Overseas - Dunedin - New Zealand<br />OS_ZE: Overseas - England<br />OS_ZF: Overseas - France<br />OS_ZG: Overseas - Germany<br />OS_ZH: Overseas - Blumenthal - Germany<br />OS_ZI: Overseas - Italy<br />OS_ZJ: Overseas - Biella - Italy<br />OS_ZK: Overseas - Grisignano - Italy<br />OS_ZL: Overseas - Mosgiel - New Zealand<br />OS_ZM: Overseas - Nanjing - China<br />OS_ZN: Overseas - Netherlands<br />OS_ZO: Overseas - Keelung - Taiwan<br />OS_ZP: Overseas - Shanghai - China<br />OS_ZQ: Overseas - Qingdao - China<br />OS_ZR: Overseas - Zhangjiagang - China<br />OS_ZS: Overseas - South Africa<br />OS_ZT: Overseas - Timaru - New Zealand<br />OS_ZU: Overseas - USA<br />OS_ZV: Overseas - Invercargill - New Zealand<br />OS_ZW: Overseas - Wellington - New Zealand<br />OS_ZX: Overseas - Napier - New Zealand<br />OS_ZY: Overseas - Ashburton - New Zealand<br />OS_ZZ: Overseas - New Zealand<br />NZ_A: New Zealand - Auckland<br />NZ_AW: New Zealand - Awatoto<br />NZ_B: New Zealand - Cambridge<br />NZ_BL: New Zealand - Blenheim<br />NZ_BT: New Zealand - Bunnythorpe<br />NZ_C: New Zealand - Christchurch<br />NZ_CV: New Zealand - Clive<br />NZ_D: New Zealand - Dunedin<br />NZ_F: New Zealand - Feilding<br />NZ_FA: New Zealand - Fairlie<br />NZ_G: New Zealand - Gisborne<br />NZ_GD: New Zealand - Geraldine<br />NZ_GO: New Zealand - Gore<br />NZ_HA: New Zealand - Hawera<br />NZ_HS: New Zealand - Hastings<br />NZ_I: New Zealand - Invercargill<br />NZ_J: New Zealand - Tapanui<br />NZ_K: New Zealand - Te Kuiti<br />NZ_KA: New Zealand - Kakariki<br />NZ_KP: New Zealand - Kaiapoi<br />NZ_L: New Zealand - Mosgiel<br />NZ_LO: New Zealand - Longburn<br />NZ_LU: New Zealand - Lumsden<br />NZ_M: New Zealand - Masterton<br />NZ_MA: New Zealand - Mangatinoka<br />NZ_MK: New Zealand - Motueka<br />NZ_MT: New Zealand - Milton<br />NZ_MU: New Zealand - Mataura<br />NZ_N: New Zealand - Napier<br />NZ_NE: New Zealand - Nelson<br />NZ_O: New Zealand - Oamaru<br />NZ_OH: New Zealand - Ohinewai<br />NZ_OI: New Zealand - Ohai<br />NZ_OM: New Zealand - Omakau<br />NZ_OT: New Zealand - Otorohonga<br />NZ_P: New Zealand - Palmerston North<br />NZ_PT: New Zealand - Pahiatua<br />NZ_PU: New Zealand - Putaruru<br />NZ_R: New Zealand - Rotorua<br />NZ_RG: New Zealand - Rangiora<br />NZ_RI: New Zealand - Riwaka<br />NZ_S: New Zealand - Ashburton<br />NZ_SA: New Zealand - Saltwater Creek<br />NZ_SH: New Zealand - Shannon<br />NZ_SY: New Zealand - Sydney<br />NZ_T: New Zealand - Timaru<br />NZ_TA: New Zealand - Tapanui<br />NZ_TE: New Zealand - TeAnau<br />NZ_TH: New Zealand - Taihape<br />NZ_TP: New Zealand - Te Puke<br />NZ_U: New Zealand - Taumaruniu<br />NZ_V: New Zealand - Dannevirke<br />NZ_W: New Zealand - Wellington<br />NZ_WH: New Zealand - Whakatu<br />NZ_WI: New Zealand - Whakatu Industrial Park<br />NZ_WR: New Zealand - Wairoa<br />NZ_WT: New Zealand - Winton<br />NZ_WU: New Zealand - Waikuku<br />NZ_X: New Zealand - Wanganui<br />NZ_Y: New Zealand - Whangarei<br />NZ_YP: New Zealand - Waipukurau<br />NZ_Z: New Zealand - Taupo'
+      description: ''
     Client:
       type: object
       properties:

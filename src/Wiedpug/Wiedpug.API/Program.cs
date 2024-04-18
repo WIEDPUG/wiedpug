@@ -1,5 +1,4 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
-using Wiedpug.API.SchemaFilter;
 using System.Reflection;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
@@ -72,7 +71,7 @@ versionedGroup.MapAuctionCatalogueEndpointsV2();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+    var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();    
 
     app.UseSwagger();
     app.UseSwaggerUI(options =>
