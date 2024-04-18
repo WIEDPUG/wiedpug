@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    [Description("Country Code using ISO 3166-1 standard")]
+    [Description("A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard")]
     public enum CountryCode
     {
         [Description("AU: Australia")]

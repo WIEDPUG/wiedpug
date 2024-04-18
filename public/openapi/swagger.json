@@ -1,17 +1,28 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Wiedpug.API",
-    "version": "v1"
+    "title": "WIEDPUG API",
+    "description": "API Documentation for the WIEDPUG Network",
+    "termsOfService": "https://wiedpug.github.io/wiedpug",
+    "contact": {
+      "name": "WIEDPUG Team",
+      "url": "https://wiedpug.github.io/wiedpug",
+      "email": "changethis@email.com"
+    },
+    "license": {
+      "name": "Applicable License",
+      "url": "https://wiedpug.github.io/wiedpug"
+    },
+    "version": "v1.0"
   },
   "paths": {
-    "/auction-catalogue": {
+    "/v1/auction-catalogue": {
       "post": {
         "tags": [
           "Auction Catalogue"
         ],
-        "summary": "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
-        "operationId": "Create",
+        "summary": "Transmit new Auction Catalogues and Private Catalogues",
+        "description": "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -79,13 +90,13 @@
         }
       }
     },
-    "/auction-catalogue/updates": {
+    "/v1/auction-catalogue/updates": {
       "post": {
         "tags": [
           "Auction Catalogue"
         ],
-        "summary": "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.",
-        "operationId": "CreateUpdates",
+        "summary": "Transmit Auction Catalogue Updates",
+        "description": "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -153,13 +164,13 @@
         }
       }
     },
-    "/auction-catalogue/data": {
+    "/v1/auction-catalogue/data": {
       "post": {
         "tags": [
           "Auction Catalogue"
         ],
-        "summary": "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates",
-        "operationId": "RequestForData",
+        "summary": "Request for Data relating to Auction Catalogue, Private Catalogue and Auction Catalogue Updates",
+        "description": "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates",
         "requestBody": {
           "content": {
             "application/json": {
@@ -227,7 +238,7 @@
         }
       }
     },
-    "/organization-details": {
+    "/v1/organization-details": {
       "post": {
         "tags": [
           "Organization Details"
@@ -308,7 +319,7 @@
         }
       }
     },
-    "/organization-details/data": {
+    "/v1/organization-details/data": {
       "post": {
         "tags": [
           "Organization Details"
@@ -389,7 +400,7 @@
         }
       }
     },
-    "/organization-details/{id}": {
+    "/v1/organization-details/{id}": {
       "get": {
         "tags": [
           "Organization Details"
@@ -618,12 +629,13 @@
         }
       }
     },
-    "/request-for-details-or-status": {
+    "/v1/request-for-details-or-status": {
       "post": {
         "tags": [
           "Request for Data/Status"
         ],
-        "summary": "Retrieves the requested details or status",
+        "summary": "Send Request for Details/Status",
+        "description": "Retrieves the requested details or status",
         "requestBody": {
           "content": {
             "application/json": {
@@ -688,13 +700,13 @@
         }
       }
     },
-    "/status": {
+    "/v1/status": {
       "post": {
         "tags": [
           "Request for Status"
         ],
-        "summary": "Used by brokers to request status",
-        "operationId": "RequestForStatus",
+        "summary": "Request for Status",
+        "description": "Used by brokers to request status",
         "requestBody": {
           "content": {
             "application/json": {
@@ -759,7 +771,7 @@
         }
       }
     },
-    "/test-certificates": {
+    "/v1/test-certificates": {
       "post": {
         "tags": [
           "Test Certificates"
@@ -830,7 +842,7 @@
         }
       }
     },
-    "/test-certificates/data": {
+    "/v1/test-certificates/data": {
       "post": {
         "tags": [
           "Test Certificates"
@@ -1621,7 +1633,7 @@
           "NZ_Z"
         ],
         "type": "string",
-        "description": ""
+        "description": "This is combined Centres for Australia, Overseas and New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AU_A: Australia - ADELAIDE<br />AU_AD: Australia - Ardlethan<br />AU_AR: Australia - Armidale (NSW)<br />AU_AU: Australia - AUSTRALIA (AWEX internal only)<br />AU_B: Australia - BRISBANE<br />AU_BA: Australia - Benalla<br />AU_BK: Australia - Bourke<br />AU_BL: Australia - Ballarat<br />AU_BM: Australia - Barham<br />AU_BO: Australia - Boorowa<br />AU_BR: Australia - Bordertown<br />AU_BT: Australia - Bathurst<br />AU_C: Australia - Cooma<br />AU_CA: Australia - Casterton<br />AU_CB: Australia - Coonabarabran<br />AU_CC: Australia - Culcairn<br />AU_CL: Australia - Coleraine<br />AU_CN: Australia - Condoblin<br />AU_CO: Australia - Cootamundra<br />AU_CR: Australia - Corowa<br />AU_CU: Australia - Cunnamulla<br />AU_CW: Australia - Crookwell<br />AU_D: Australia - Bendigo<br />AU_DE: Australia - Deniliquin<br />AU_DO: Australia - Dubbo<br />AU_DR: Australia - Canowindra<br />AU_E: Australia - Echuca<br />AU_ER: Australia - Euroa<br />AU_ES: Australia - Esperance<br />AU_F: Australia - FREMANTLE<br />AU_G: Australia - GEELONG<br />AU_GF: Australia - Grenfell<br />AU_GI: Australia - Glenn Innes<br />AU_GN: Australia - Gunning<br />AU_GR: Australia - Griffith<br />AU_GU: Australia - Guyra<br />AU_H: Australia - Hobart<br />AU_HA: Australia - Harden<br />AU_HB: Australia - Holbrook<br />AU_HM: Australia - Hamilton<br />AU_HO: Australia - Horsham<br />AU_HY: Australia - Hay<br />AU_I: Australia - Narrabri<br />AU_J: Australia - Parkes<br />AU_JA: Australia - Jamestown<br />AU_K: Australia - Warracknabeal<br />AU_KE: Australia - Kerang<br />AU_KH: Australia - Keith<br />AU_KI: Australia - Kangaroo Island<br />AU_KN: Australia - Kingston<br />AU_KT: Australia - Katanning<br />AU_KW: Australia - Wagga Wagga<br />AU_KY: Australia - Kyneton<br />AU_L: Australia - LAUNCESTON<br />AU_LC: Australia - Lane Cove (AWEX internal only)<br />AU_M: Australia - MELBOURNE<br />AU_MA: Australia - Mansfield<br />AU_MB: Australia - Murray Bridge<br />AU_MC: Australia - Macarthur<br />AU_ME: Australia - Melton<br />AU_MG: Australia - Mount Gambier<br />AU_MI: Australia - Mildura<br />AU_MO: Australia - Moree<br />AU_MR: Australia - Maryborough<br />AU_MU: Australia - Mudgee<br />AU_N: Australia - NEWCASTLE<br />AU_NA: Australia - Narrandera<br />AU_ND: Australia - Goondiwindi<br />AU_NO: Australia - Northam<br />AU_NR: Australia - Naracoorte<br />AU_OB: Australia - Oberon<br />AU_OR: Australia - Orange<br />AU_P: Australia - Portland<br />AU_PA: Australia - Cowra<br />AU_PL: Australia - Port Lincoln<br />AU_Q: Australia - Yarrawonga<br />AU_QU: Australia - Queanbeyan<br />AU_R: Australia - GOULBURN<br />AU_S: Australia - SYDNEY<br />AU_SG: Australia - St George<br />AU_SH: Australia - Shepparton<br />AU_SK: Australia - Skipton<br />AU_SW: Australia - Swan Hill<br />AU_SY: Australia - Seymour<br />AU_T: Australia - Inverell<br />AU_TE: Australia - Temora<br />AU_U: Australia - Auburn<br />AU_UR: Australia - Uralla<br />AU_V: Australia - Forbes<br />AU_W: Australia - Tamworth<br />AU_WA: Australia - Warren<br />AU_WG: Australia - Walgett<br />AU_WL: Australia - Walcha<br />AU_WN: Australia - Wellington<br />AU_WR: Australia - Wangaratta<br />AU_WW: Australia - West Wyalong<br />AU_X: Australia - Ararat<br />AU_Y: Australia - Albury<br />AU_YA: Australia - Yass<br />AU_YM: Australia - Yarram<br />AU_YO: Australia - Young<br />AU_Z: Australia - Albany<br />OS_ZA: Overseas - Australia<br />OS_ZB: Overseas - Belgium<br />OS_ZC: Overseas - Christchurch - New Zealand<br />OS_ZD: Overseas - Dunedin - New Zealand<br />OS_ZE: Overseas - England<br />OS_ZF: Overseas - France<br />OS_ZG: Overseas - Germany<br />OS_ZH: Overseas - Blumenthal - Germany<br />OS_ZI: Overseas - Italy<br />OS_ZJ: Overseas - Biella - Italy<br />OS_ZK: Overseas - Grisignano - Italy<br />OS_ZL: Overseas - Mosgiel - New Zealand<br />OS_ZM: Overseas - Nanjing - China<br />OS_ZN: Overseas - Netherlands<br />OS_ZO: Overseas - Keelung - Taiwan<br />OS_ZP: Overseas - Shanghai - China<br />OS_ZQ: Overseas - Qingdao - China<br />OS_ZR: Overseas - Zhangjiagang - China<br />OS_ZS: Overseas - South Africa<br />OS_ZT: Overseas - Timaru - New Zealand<br />OS_ZU: Overseas - USA<br />OS_ZV: Overseas - Invercargill - New Zealand<br />OS_ZW: Overseas - Wellington - New Zealand<br />OS_ZX: Overseas - Napier - New Zealand<br />OS_ZY: Overseas - Ashburton - New Zealand<br />OS_ZZ: Overseas - New Zealand<br />NZ_A: New Zealand - Auckland<br />NZ_AW: New Zealand - Awatoto<br />NZ_B: New Zealand - Cambridge<br />NZ_BL: New Zealand - Blenheim<br />NZ_BT: New Zealand - Bunnythorpe<br />NZ_C: New Zealand - Christchurch<br />NZ_CV: New Zealand - Clive<br />NZ_D: New Zealand - Dunedin<br />NZ_F: New Zealand - Feilding<br />NZ_FA: New Zealand - Fairlie<br />NZ_G: New Zealand - Gisborne<br />NZ_GD: New Zealand - Geraldine<br />NZ_GO: New Zealand - Gore<br />NZ_HA: New Zealand - Hawera<br />NZ_HS: New Zealand - Hastings<br />NZ_I: New Zealand - Invercargill<br />NZ_J: New Zealand - Tapanui<br />NZ_K: New Zealand - Te Kuiti<br />NZ_KA: New Zealand - Kakariki<br />NZ_KP: New Zealand - Kaiapoi<br />NZ_L: New Zealand - Mosgiel<br />NZ_LO: New Zealand - Longburn<br />NZ_LU: New Zealand - Lumsden<br />NZ_M: New Zealand - Masterton<br />NZ_MA: New Zealand - Mangatinoka<br />NZ_MK: New Zealand - Motueka<br />NZ_MT: New Zealand - Milton<br />NZ_MU: New Zealand - Mataura<br />NZ_N: New Zealand - Napier<br />NZ_NE: New Zealand - Nelson<br />NZ_O: New Zealand - Oamaru<br />NZ_OH: New Zealand - Ohinewai<br />NZ_OI: New Zealand - Ohai<br />NZ_OM: New Zealand - Omakau<br />NZ_OT: New Zealand - Otorohonga<br />NZ_P: New Zealand - Palmerston North<br />NZ_PT: New Zealand - Pahiatua<br />NZ_PU: New Zealand - Putaruru<br />NZ_R: New Zealand - Rotorua<br />NZ_RG: New Zealand - Rangiora<br />NZ_RI: New Zealand - Riwaka<br />NZ_S: New Zealand - Ashburton<br />NZ_SA: New Zealand - Saltwater Creek<br />NZ_SH: New Zealand - Shannon<br />NZ_SY: New Zealand - Sydney<br />NZ_T: New Zealand - Timaru<br />NZ_TA: New Zealand - Tapanui<br />NZ_TE: New Zealand - TeAnau<br />NZ_TH: New Zealand - Taihape<br />NZ_TP: New Zealand - Te Puke<br />NZ_U: New Zealand - Taumaruniu<br />NZ_V: New Zealand - Dannevirke<br />NZ_W: New Zealand - Wellington<br />NZ_WH: New Zealand - Whakatu<br />NZ_WI: New Zealand - Whakatu Industrial Park<br />NZ_WR: New Zealand - Wairoa<br />NZ_WT: New Zealand - Winton<br />NZ_WU: New Zealand - Waikuku<br />NZ_X: New Zealand - Wanganui<br />NZ_Y: New Zealand - Whangarei<br />NZ_YP: New Zealand - Waipukurau<br />NZ_Z: New Zealand - Taupo"
       },
       "Client": {
         "type": "object",
@@ -2202,7 +2214,7 @@
           "ZA"
         ],
         "type": "string",
-        "description": "Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa"
+        "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa"
       },
       "CustomProblemDetails": {
         "required": [
@@ -3300,7 +3312,6 @@
           },
           "mulesingStatus": {
             "type": "string",
-            "description": "This field is mandatory in Australia and optional outside Australia.",
             "nullable": true
           }
         },
@@ -5305,6 +5316,29 @@
         "description": "Yield Type indicates either the type of yield transmitted in another field or record, or the type of yield used to arrive at the value in another field.<br />1: RESERVED<br />2: RESERVED<br />3: ESTIMATED<br />4: Schlumberger Combed Dry (1% TFM)<br />5: Schlumberger Combed Dry (2% TFM)<br />7: Noble Combed in Oil<br />8: IWTO Scoured Yield at 16% Regain<br />9: IWTO Scoured Yield at 17% Regain<br />10: Japanese Clean Scoured<br />11: Australian Carbonising<br />12: IWTO Clean Wool Content, 17% Regain<br />13: United States Custom Clean<br />14: Card Sliver<br />15: ASTM Clean Wool Fibre Present<br />16: Noble Dry Combed<br />17: Schlumberger Combed in Oil (4.6% TFM)<br />18: Noble Combed Dry<br />19: Theoretical Card Sliver<br />20: ASTM Laboratory Scoured Yield<br />21: Conditioned at 12.00%<br />22: Conditioned at 13.00%<br />23: Conditioned at 13.50%<br />24: Conditioned at 13.64%<br />25: Conditioned at 14.00%<br />26: Conditioned at 14.40%<br />27: Conditioned at 15.00%<br />28: Conditioned at 16.00%<br />29: Conditioned at 17.00%<br />30: Conditioned at 18.00%<br />31: Conditioned at 18.25%<br />32: Japanese Clean Scoured at 17%<br />33: New Zealand Process Yield<br />42: IWT0 Schlumberger Oil T&N (2.0% & T.FM.)<br />43: IWTO Clean Wool Content, 16% Regain",
         "format": "int32"
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Access Token that is added in the Authorization header of the HTTP request. Example: \"Authorization: Bearer {token}\". The JWT serves as a credential that proves the identity of the client to the server.",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "oauth2": {
+        "type": "oauth2",
+        "description": "Authentication for client applications by providing Client ID and Client Secret for an JWT Access Token.",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "/auth-server/oauth/token",
+            "scopes": { }
+          }
+        }
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

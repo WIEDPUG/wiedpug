@@ -23,9 +23,6 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DATE_ISO8601)]
         public required string DateTransmissionFileCreated { get; set; }
 
-        /// <summary>
-        /// A code for the country in which the transmission was created.
-        /// </summary>
         [Required]        
         public required CountryCode CountryOfOrigin { get; set; }
 

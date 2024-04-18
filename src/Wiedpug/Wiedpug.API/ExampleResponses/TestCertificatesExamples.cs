@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualBasic.FileIO;
-using Swashbuckle.AspNetCore.Filters;
-using System.Security.Cryptography.Xml;
+﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates;
 using Wiedpug.Domain.Aggregates.TestCertificateAggregate;

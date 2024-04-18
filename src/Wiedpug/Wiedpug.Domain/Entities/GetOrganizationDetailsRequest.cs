@@ -7,9 +7,6 @@ namespace Wiedpug.Domain.Entities
 {
     public class GetOrganizationDetailsRequest
     {
-        /// <summary>
-        /// A code for the country in which the transmission was created.
-        /// </summary>
         [Required]
         public required CountryCode CountryOfOrigin { get; set; }
 

@@ -4,11 +4,11 @@ using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.TestCertificateAggregate;
 using Wiedpug.Domain.Entities;
-namespace Wiedpug.API.Controllers;
+namespace Wiedpug.API.Controllers.V1;
 
 public static class TestCertificatesEndpoints
 {
-    public static void MapTestCertificatesApiResultEndpoints(this IEndpointRouteBuilder routes)
+    public static void MapTestCertificatesEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/test-certificates").WithTags("Test Certificates");
 
