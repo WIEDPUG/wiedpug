@@ -53,7 +53,14 @@ It is used for the following reasons:
 
 ## Swagger Documentation
 
-### Structure
+### Setup API Information
+- Basic information about the API needs to be defined as part of the Documentation.
+- Placeholders have been configured which needs to be replaced with real details.
+- The information can be modified in `Wiedpug.API` > `SwaggerOptions` > `ConfigureSwaggerVersionInfo.cs`
+   - Locate the `CreateVersionInfo` method
+   - Update the details with correct values
+
+### Folder and Model Structure
 - All models are defined in `Wiedpug.Domain` project
 - It follows the Domain-Driven Design file structure which makes use of the following
    - `Aggregates` folder
