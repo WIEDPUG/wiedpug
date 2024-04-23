@@ -27,6 +27,9 @@ Local development:
 npm run dev
 ```
 
+Access the page in the browser:
+- Go to http://localhost:3000/wiedpug
+
 
 # Wiedpug Web API Swagger Documentation
 
@@ -431,6 +434,7 @@ public static class AuctionCatalogueEndpoints
    - Here are the direct links for version 1.0
    - http://localhost:5216/swagger/v1.0/swagger.json
    - http://localhost:5216/swagger/v1.0/swagger.yaml
+- If you need to generate other versions available, simply update the URLs above by replacing the version number.
 - The swagger files that gets downloaded during runtime is generated on the spot. These files are not stored anywhere.
 - Once downloaded, it needs to be moved to the `root directory` > `public` > `openapi` folder. The Nextra site will then render the `swagger.yaml` file.
 
