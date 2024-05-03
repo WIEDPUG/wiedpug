@@ -27,9 +27,9 @@ paths:
                 $ref: '#/components/schemas/AuctionCatalogue'
             examples:
               New Auction Catalogue:
-                value: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":[{"baleNumber":"1","eBaleId":"093253480000021002346917"}],"interlotComponentBales":[{"interlotComponentBaleHeader":{"brand":"RC/FARMING","baleDescription":"AAAMLMS","areaOfOrigin":"W14","locationWithinStore":"Z1-33","bales":2,"postcode":"6510"},"baleIdentifications":[{"baleNumber":"2","eBaleId":"093253480000021002346918"}]}]}]}]}]
+                value: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"AuctionCatalogues","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"Greasy","packType":"TwoBaleTripack","currency":"AUD","weightUnit":"Kilograms","postSaleCharge":25.96,"calculationBasis":"Bale","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"DeliveryNominatedDestination","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"Add","catalogueSymbols":null,"packMaterial":"NylonPacks","lotType":"OtherBulkClassLot","lightestIndividualBaleWeight":149,"reportingFlag":"ResultsCertified","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"NewPack"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"NonMulesed"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":"LengthAndStrengthTested","isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":"NormalTest","yield5":77.8,"reissueChargeFlag":"OriginalCertificateCharge","vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"NotApplicable"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":[{"baleNumber":"1","eBaleId":"093253480000021002346917"}],"interlotComponentBales":[{"interlotComponentBaleHeader":{"brand":"RC/FARMING","baleDescription":"AAAMLMS","areaOfOrigin":"W14","locationWithinStore":"Z1-33","bales":2,"postcode":"6510"},"baleIdentifications":[{"baleNumber":"2","eBaleId":"093253480000021002346918"}]}]}]}]}]
               New Private Catalogue:
-                value: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":3,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":null,"interlotComponentBales":[{"interlotComponentBaleHeader":{"brand":"RC/FARMING","baleDescription":"AAAMLMS","areaOfOrigin":"W14","locationWithinStore":"Z1-33","bales":2,"postcode":"6510"},"baleIdentifications":null}]}]}]}]
+                value: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"PrivateCatalogues","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"Greasy","packType":"Mixed","currency":"AUD","weightUnit":"Kilograms","postSaleCharge":25.96,"calculationBasis":"Bale","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"DeliveryNominatedDestination","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"Add","catalogueSymbols":null,"packMaterial":"NylonPacks","lotType":"CombinedCertificate","lightestIndividualBaleWeight":149,"reportingFlag":"ResultsCertified","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"NewPack"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"MulesedWithAnalgesicAndOrAnaesthetic"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":"LengthAndStrengthTested","isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":"NormalTest","yield5":77.8,"reissueChargeFlag":"OriginalCertificateCharge","vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"NotApplicable"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":null,"interlotComponentBales":[{"interlotComponentBaleHeader":{"brand":"RC/FARMING","baleDescription":"AAAMLMS","areaOfOrigin":"W14","locationWithinStore":"Z1-33","bales":2,"postcode":"6510"},"baleIdentifications":null}]}]}]}]
         required: true
       responses:
         '200':
@@ -38,7 +38,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example: {"isSuccessful":true,"message":"OK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn","data":null}
+              example: {"isSuccessful":true,"message":null,"data":null}
         '400':
           description: Bad Request
           content:
@@ -80,7 +80,7 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/AuctionCatalogue'
-            example: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":5,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":6,"fibresMeasuredPercentage":250},{"fibreDiameter":7,"fibresMeasuredPercentage":250},{"fibreDiameter":8,"fibresMeasuredPercentage":1500}]}]}],"catalogueLotDescription":null,"baleIdentifications":null,"interlotComponentBales":null}]}]}]
+            example: [{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"AuctionCatalogueUpdates","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"Alpaca","packType":"SingleBalesHighDensityDumped","currency":"AUD","weightUnit":"Kilograms","postSaleCharge":25.96,"calculationBasis":"Bale","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"DeliveryNominatedDestination","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"Add","catalogueSymbols":null,"packMaterial":"NylonPacks","lotType":"CombinedCertificate","lightestIndividualBaleWeight":149,"reportingFlag":"ResultsCertified","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"NewPack"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"MulesedWithAnalgesicAndOrAnaesthetic"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":"LengthAndStrengthTested","isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":"NormalTest","yield5":77.8,"reissueChargeFlag":"OriginalCertificateCharge","vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"RiskLevel1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":6,"fibresMeasuredPercentage":250},{"fibreDiameter":7,"fibresMeasuredPercentage":250},{"fibreDiameter":8,"fibresMeasuredPercentage":1500}]}]}],"catalogueLotDescription":null,"baleIdentifications":null,"interlotComponentBales":null}]}]}]
         required: true
       responses:
         '200':
@@ -89,7 +89,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example: {"isSuccessful":true,"message":"OK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn","data":null}
+              example: {"isSuccessful":true,"message":null,"data":null}
         '400':
           description: Bad Request
           content:
@@ -133,9 +133,9 @@ paths:
                 $ref: '#/components/schemas/RequestForDataForAuctionCatalogue'
             examples:
               Request for Auction Catalogue Data and Updates:
-                value: [{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A"],"season":23},{"transmissionTypeRequested":5,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A"],"season":23}]
+                value: [{"transmissionTypeRequested":"AuctionCatalogues","saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":"BroadcastDataRequest","woolTypeGroup":"MFLC","recordTypesToBeExcluded":["InterlotComponentBaleHeader","BaleIdentification"],"season":23},{"transmissionTypeRequested":"AuctionCatalogueUpdates","saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":"BroadcastDataRequest","woolTypeGroup":"MFLC","recordTypesToBeExcluded":["InterlotComponentBaleHeader","FibreDiameterHistogramDetails"],"season":23}]
               Request for Private Catalogue Data:
-                value: [{"transmissionTypeRequested":3,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":1,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A"],"season":23}]
+                value: [{"transmissionTypeRequested":"PrivateCatalogues","saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":"PrivateDataRequest","woolTypeGroup":"MFLC","recordTypesToBeExcluded":["InterlotComponentBaleHeader","FibreDiameterHistogramDetails"],"season":23}]
         required: true
       responses:
         '200':
@@ -144,7 +144,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AuctionCatalogueListApiResult'
-              example: {"isSuccessful":true,"message":null,"data":[{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"_1","packType":"_0","currency":"AUD","weightUnit":0,"postSaleCharge":25.96,"calculationBasis":"B","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"D","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"A","catalogueSymbols":null,"packMaterial":"N","lotType":1,"lightestIndividualBaleWeight":149,"reportingFlag":"C","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"N"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"AA"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":1,"regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":1,"regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":0,"yield5":77.8,"reissueChargeFlag":0,"vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"_1"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":null,"interlotComponentBales":null}]}]}]}
+              example: {"isSuccessful":true,"message":null,"data":[{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"AuctionCatalogues","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"woolSaleHeaders":[{"woolSaleHeaderLots":{"season":16,"saleIdentity":{"sellingCentreType":"M","saleNumber":29},"centreStorage":"M","saleDate":"2017-01-19","woolState":"Greasy","packType":"J9SizeBaleForScouredWool","currency":"AUD","weightUnit":"Kilograms","postSaleCharge":25.96,"calculationBasis":"Bale","freightCharge":0,"freightRebate":3.25,"chargePerLot":0,"invoiceNumber":null,"catalogueSection":"FLC","invoicingOrganisation":"ABCD","isFinalCatalogue":true,"releasingOrganisation":"ABCD","sellingOrganisation":"ABCD","woolTypeGroup":"MFLC","centreCatalogue":"AU_G","deliveryBasis":"DeliveryNominatedDestination","centreDelivery":null,"alternateDelivery":null},"woolSaleHeaderExtension":{"storageOrganisation":"ABCD","storageDescription":"45 MAIN ST","paymentDueDate":"2017-01-27","discountRate":1.5,"maximumDaysDiscount":0,"dateStorageChargeCommences":"2017-01-24","storageChargePerBalePerDay":0.245,"penaltyInterestRate":11.5,"lotAvailableDate":null,"postSaleChargeRebate":null},"woolSaleHeaderNonAuction":null,"lots":[{"lotHeader":{"lotIdentity":"671","bales":8,"gross":1316,"tare":16,"regrabSampleWeight":null,"cataloguePageNumber":65,"isNoLot":null,"sourceCode":null,"updateType":"Add","catalogueSymbols":null,"packMaterial":"NylonPacks","lotType":"ClassedGrowerLot","lightestIndividualBaleWeight":149,"reportingFlag":"ResultsCertified","firstOfferSeason":null,"firstOfferSaleIdentity":null,"firstOfferLotIdentity":null,"costPerWeightUnit":0,"cleanWeight":0,"yieldType":null,"weightUnit":null,"offerType":null,"clientCrossReference":null,"packCondition":"NewPack"},"lotHeaderExtension":{"coreTestSamplingDate":"2019-01-17","woolDescriptionComment":null,"woolDescription":"MF6S","gstTaxInvoiceFlag":true,"brokerReservePrice":null,"growerReservePrice":null,"openingPrice":null,"valuationPrice":null,"woolDescriptionAuditCode":null,"numberOfOverweightBales":0},"lotHeaderPricings":null,"lotHeaderAwexData":{"awexId":"MF6S","appraiserId":"99192","classersRegisteredNumber":"998921","awexIdComment":null,"awexIdAuditCode":null},"lotHeaderVendorDeclarations":[{"qualitySchemes":null,"mulesingStatus":"Mulesed"}],"colourDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":{"certificateIdentity":"300000664L6","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":0,"stapleLength":73,"stapleLengthCvPercentage":16,"stapleStrength":35,"positionOfBreakPercentageTip":77,"positionOfBreakPercentageMiddle":23,"positionOfBreakPercentageBase":0,"team3Hauteur":72,"reissueChargeFlag":null,"lsCertType":"LengthAndStrengthTested","isLsSampleSecured":true,"expectedBarbe":111,"team3HauteurCvPercentage":36.9,"team3RomainePercentage":11.2,"dateIssued":"2017-01-10","stapleStrengthLowest25Percent":24},"omlDetails":null,"coreTestDetails":{"certificateIdentity":"300000499P7","charge":null,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":null,"woolBase":64.29,"airflowMean":0,"vmb":1.3,"hardHeadsBase":0,"yield1":74.4,"yield2":78.5,"yield3":75.7,"yield4":72.1,"yieldType1":null,"yieldType2":null,"retestFlag":"NormalTest","yield5":77.8,"reissueChargeFlag":"OriginalCertificateCharge","vm1":0,"vm2":0.9,"vm3":0,"darkAndMedullatedFibreRisk":"NotApplicable"},"colourCombinationDetails":null,"omiDetails":null,"histograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":null}],"catalogueLotDescription":{"brand":"SALTBUSH/DOWNS","baleDescription":"AAAM","areaOfOrigin":"V11","locationWithinStore":null,"bales":8,"postcode":null},"baleIdentifications":null,"interlotComponentBales":null}]}]}]}
         '400':
           description: Bad Request
           content:
@@ -452,7 +452,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RequestForDataOrStatus'
-            example: {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":4,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
+            example: {"requests":[{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"AuctionCatalogues","versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"requestForDataCollection":[{"transmissionTypeRequested":"AuctionCatalogues","saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"requestType":"BroadcastDataRequest","woolTypeGroup":"MFLC","recordTypesToBeExcluded":["79B","32A","84"],"season":23}]}]}
         required: true
       responses:
         '200':
@@ -501,7 +501,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RequestForStatus'
-            example: {"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"filters":[{"transmissionTypeRequested":2,"saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["_79B","_32A","_84"],"season":23}]}
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"AuctionCatalogues","versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"filters":[{"transmissionTypeRequested":"AuctionCatalogues","saleIdentity":{"sellingCentreType":"F","saleNumber":18},"organisationRequested":"AWNF","saleDateRequested":"2023-10-31","startDateTimeStatusRequest":null,"endDateTimeStatusRequest":null,"userNetworkDateTime":false,"woolTypeGroup":"MFLC","recordTypesToBeExcluded":["InterlotComponentBaleHeader","FibreDiameterHistogramDetails","ColourDetails"],"season":23}]}
         required: true
       responses:
         '200':
@@ -510,7 +510,105 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StatusReplyApiResult'
-              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"responses":[{"recordNumber":null,"errorCode":null,"text":"08/04/92 11:32 DALS S01/91 07/04/92 888"}]}}
+              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2022-07-25","dateTransmissionFileCreated":"2024-03-21","countryOfOrigin":"AU","documentOriginator":"AWTX","currentTransmitter":"AWTX","currentReceiver":"AWTM","finalReceiver":"AWTM","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"AuctionCatalogues","versionNumber":36,"softwareIdentifier":null,"abn":"00000000000"},"responses":[{"recordNumber":null,"errorCode":null,"text":"08/04/92 11:32 DALS S01/91 07/04/92 888"}]}}
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+  /v1/test-certificate-requests:
+    post:
+      tags:
+        - Test Certificate Requests
+      summary: Test Certificate Request
+      description: Sent to a Test House to initiate the printing of a certificate.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestCertificateRequests'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":"TestCertificate","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateRequestCollection":[{"certificateRequest":{"printRequirements":"OriginalCertificateCharge","yieldType1":"Reserved_1","yieldType2":"SchlumbergerCombedDry1PercentTFM","certificateReference":"XXY1255","clientsCrossReference":"XXY1255","declaredGross":null,"declaredTare":null,"sampleWeightRemoved":null,"bales":96,"season":21,"saleIdentity":null,"lotIdentity":null,"printFlag":null,"combinationRequest":"Normal","autoAdditionalMeasurementRequired":"NoAutomaticCombinationsRequired","additionalPrintRequirements":"NoAdditionalRequirements","teaM3HauteurPrint":false,"commitType":null,"baleHeader":null,"certificateRequestDetails":[{"certificateIdentity":"315969534P9","woolbase":63.16,"laboratory":"AustralianWoolTestingAuthority"},{"certificateIdentity":"315998357P0","woolbase":61.52,"laboratory":"AustralianWoolTestingAuthority"},{"certificateIdentity":"316022762P9","woolbase":61.44,"laboratory":"AustralianWoolTestingAuthority"}]},"baleHeader":null},{"certificateRequest":{"printRequirements":"OriginalCertificateCharge","yieldType1":"Reserved","yieldType2":"UnitedStatesCustomClean","certificateReference":"XXY1205","clientsCrossReference":"XXZ1635","declaredGross":null,"declaredTare":null,"sampleWeightRemoved":null,"bales":96,"season":21,"saleIdentity":null,"lotIdentity":null,"printFlag":null,"combinationRequest":"ChinaContract","autoAdditionalMeasurementRequired":"AutomaticLengthAndStrengthCombinationRequired","additionalPrintRequirements":"VMBreakdownAndConfortFactor","teaM3HauteurPrint":true,"commitType":null,"baleHeader":null,"certificateRequestDetails":[{"certificateIdentity":"568369534L6","woolbase":53.74,"laboratory":"AustralianWoolTestingAuthority"},{"certificateIdentity":"455818307B3","woolbase":52.01,"laboratory":"AustralianWoolTestingAuthority"},{"certificateIdentity":"226932560N1","woolbase":54.26,"laboratory":"AustralianWoolTestingAuthority"}]},"baleHeader":null}]}
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":null}
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+  /v1/test-certificate-update:
+    post:
+      tags:
+        - Test Certificate Update
+      summary: Test Certificate Update
+      description: Sent to a test house to advise changes to an existing Certificate. A new Certificate will be reissued with the updated data.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestCertificateUpdate'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":"TestCertificate","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateUpdateDetails":[{"certificateIdentity":"316101382L6","reissueType":"MulesingStatusAndSaleLotChange","client":"AABBC","bales":2,"baleDescription":"AAA M","woolBase":60.43,"woolPreparationCategoryFrom":null,"woolPreparationCategoryTo":null,"mulesingStatusFrom":"MulesedWithAnalgesicAndOrAnaesthetic","mulesingStatusTo":"Mulesed","saleIdentityFrom":null,"saleIdentityTo":null,"lotIdentityFrom":null,"lotIdentityTo":null},{"certificateIdentity":"316071189T5","reissueType":"WoolPreparationCategoryAndSaleLotChange","client":"ACAC","bales":7,"baleDescription":"AAA M","woolBase":65.12,"woolPreparationCategoryFrom":null,"woolPreparationCategoryTo":null,"mulesingStatusFrom":"MulesedWithAnalgesicAndOrAnaesthetic","mulesingStatusTo":"Mulesed","saleIdentityFrom":null,"saleIdentityTo":null,"lotIdentityFrom":null,"lotIdentityTo":null},{"certificateIdentity":"315701332B6","reissueType":"WoolPreparationCategoryChange","client":"AAAAA","bales":8,"baleDescription":"PCA M","woolBase":50.31,"woolPreparationCategoryFrom":null,"woolPreparationCategoryTo":null,"mulesingStatusFrom":"MulesedWithAnalgesicAndOrAnaesthetic","mulesingStatusTo":"Mulesed","saleIdentityFrom":null,"saleIdentityTo":null,"lotIdentityFrom":null,"lotIdentityTo":null}]}
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":null}
         '400':
           description: Bad Request
           content:
@@ -550,7 +648,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TestCertificates'
-            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":50,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateCollection":[{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":{"cleanWeight1":10,"cleanWeight2":null,"cleanWeight3":null,"cleanWeight4":null,"cleanWeight5":null,"vmbMinimum":null,"vmbMaximum":null,"factorWoolBase":null,"factorVMB":null,"factorHardHeadsBase":null,"factorAirflowMean":null,"combinationFlag":null},"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":null,"omlDetails":{"certificateIdentity":"SFSF","charge":100,"laboratory":1,"regrabSampleWeight":null,"woolBase":200,"airflowMean":null,"vmb":10,"hardHeadsBase":3.5,"yield1":1.2,"yield2":null,"yield3":null,"yield4":null,"yieldType1":1,"yieldType2":null,"retestFlag":0,"yield5":null,"reissueChargeFlag":0,"vm1":20,"vm2":null,"vm3":null},"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":null,"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null},{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":{"certificateIdentity":"dsfafhdfa","charge":null,"laboratory":2,"regrabSampleWeight":null,"stapleLength":13,"stapleLengthCvPercentage":25,"stapleStrength":14,"stapleLengthMinimum":13,"stapleLengthMaximum":14,"stapleStrengthMinimum":234,"stapleStrengthMaximum":230,"positionOfBreakPercentageTip":26,"positionOfBreakPercentageMiddle":34,"positionOfBreakPercentageBase":27,"team3Hauteur":null,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":false,"expectedBarbe":null,"team3HauteurCvPercentage":null,"team3RomainePercentage":null,"dateIssued":"2024-01-22","stapleStrengthLowest25Percent":null},"lengthAndStrengthDetails":null,"omlDetails":null,"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":["fdsafsdaf","ygdfgdfdf"],"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null}]}
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":"TestCertificate","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateCollection":[{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":"Kilograms","mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":"ClassedBulkClassLotQualityManaged","centreAuction":"AU_A","sourceCode":"Grower","reportingFlag":"ResultsCertified","scouredType":"NotScoured","gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":{"cleanWeight1":10,"cleanWeight2":null,"cleanWeight3":null,"cleanWeight4":null,"cleanWeight5":null,"vmbMinimum":null,"vmbMaximum":null,"factorWoolBase":null,"factorVMB":null,"factorHardHeadsBase":null,"factorAirflowMean":null,"combinationFlag":null},"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":null,"omlDetails":{"certificateIdentity":"SFSF","charge":100,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":null,"woolBase":200,"airflowMean":null,"vmb":10,"hardHeadsBase":3.5,"yield1":1.2,"yield2":null,"yield3":null,"yield4":null,"yieldType1":"Reserved","yieldType2":null,"retestFlag":"NormalTest","yield5":null,"reissueChargeFlag":"OriginalCertificateCharge","vm1":20,"vm2":null,"vm3":null},"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":null,"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null},{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":"Kilograms","mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":"ClassedGrowerLot","centreAuction":"AU_A","sourceCode":"Grower","reportingFlag":"InformationOnly","scouredType":"NotScoured","gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":{"certificateIdentity":"dsfafhdfa","charge":null,"laboratory":"NZWoolTestingAuthority","regrabSampleWeight":null,"stapleLength":13,"stapleLengthCvPercentage":25,"stapleStrength":14,"stapleLengthMinimum":13,"stapleLengthMaximum":14,"stapleStrengthMinimum":234,"stapleStrengthMaximum":230,"positionOfBreakPercentageTip":26,"positionOfBreakPercentageMiddle":34,"positionOfBreakPercentageBase":27,"team3Hauteur":null,"reissueChargeFlag":null,"lsCertType":"LengthAndStrengthTested","isLsSampleSecured":false,"expectedBarbe":null,"team3HauteurCvPercentage":null,"team3RomainePercentage":null,"dateIssued":"2024-01-22","stapleStrengthLowest25Percent":null},"lengthAndStrengthDetails":null,"omlDetails":null,"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":["fdsafsdaf","ygdfgdfdf"],"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null}]}
         required: true
       responses:
         '200':
@@ -608,7 +706,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":2,"versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateCollection":[{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":{"cleanWeight1":10,"cleanWeight2":null,"cleanWeight3":null,"cleanWeight4":null,"cleanWeight5":null,"vmbMinimum":null,"vmbMaximum":null,"factorWoolBase":null,"factorVMB":null,"factorHardHeadsBase":null,"factorAirflowMean":null,"combinationFlag":null},"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":null,"omlDetails":{"certificateIdentity":"SFSF","charge":100,"laboratory":1,"regrabSampleWeight":null,"woolBase":200,"airflowMean":null,"vmb":10,"hardHeadsBase":3.5,"yield1":1.2,"yield2":null,"yield3":null,"yield4":null,"yieldType1":1,"yieldType2":null,"retestFlag":0,"yield5":null,"reissueChargeFlag":0,"vm1":20,"vm2":null,"vm3":null},"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":null,"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null},{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":0,"mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":2,"centreAuction":"AU_A","sourceCode":1,"reportingFlag":"R","scouredType":0,"gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":{"certificateIdentity":"dsfafhdfa","charge":null,"laboratory":2,"regrabSampleWeight":null,"stapleLength":13,"stapleLengthCvPercentage":25,"stapleStrength":14,"stapleLengthMinimum":13,"stapleLengthMaximum":14,"stapleStrengthMinimum":234,"stapleStrengthMaximum":230,"positionOfBreakPercentageTip":26,"positionOfBreakPercentageMiddle":34,"positionOfBreakPercentageBase":27,"team3Hauteur":null,"reissueChargeFlag":null,"lsCertType":0,"isLsSampleSecured":false,"expectedBarbe":null,"team3HauteurCvPercentage":null,"team3RomainePercentage":null,"dateIssued":"2024-01-22","stapleStrengthLowest25Percent":null},"lengthAndStrengthDetails":null,"omlDetails":null,"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":["fdsafsdaf","ygdfgdfdf"],"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"C","instrument":1,"subSamplingMethod":1,"numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null}]}}
+              example: {"isSuccessful":true,"message":null,"data":{"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":"1111111111","accessPasswordReplacement":null,"transmissionType":"AuctionCatalogues","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testCertificateCollection":[{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":"Kilograms","mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":"ClassedGrowerLot","centreAuction":"AU_A","sourceCode":"Grower","reportingFlag":"InformationOnly","scouredType":"NotScoured","gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":{"cleanWeight1":10,"cleanWeight2":null,"cleanWeight3":null,"cleanWeight4":null,"cleanWeight5":null,"vmbMinimum":null,"vmbMaximum":null,"factorWoolBase":null,"factorVMB":null,"factorHardHeadsBase":null,"factorAirflowMean":null,"combinationFlag":null},"lengthAndStrengthCombDetails":null,"lengthAndStrengthDetails":null,"omlDetails":{"certificateIdentity":"SFSF","charge":100,"laboratory":"AustralianWoolTestingAuthority","regrabSampleWeight":null,"woolBase":200,"airflowMean":null,"vmb":10,"hardHeadsBase":3.5,"yield1":1.2,"yield2":null,"yield3":null,"yield4":null,"yieldType1":"Reserved","yieldType2":null,"retestFlag":"NormalTest","yield5":null,"reissueChargeFlag":"OriginalCertificateCharge","vm1":20,"vm2":null,"vm3":null},"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":null,"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null},{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":"Kilograms","mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":"ClassedGrowerLot","centreAuction":"AU_A","sourceCode":"Grower","reportingFlag":"InformationOnly","scouredType":"NotScoured","gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"colorDetails":null,"premiumTestDetails":null,"subjectiveInterlotDetails":null,"combinationDetails":null,"lengthAndStrengthCombDetails":{"certificateIdentity":"dsfafhdfa","charge":null,"laboratory":"NZWoolTestingAuthority","regrabSampleWeight":null,"stapleLength":13,"stapleLengthCvPercentage":25,"stapleStrength":14,"stapleLengthMinimum":13,"stapleLengthMaximum":14,"stapleStrengthMinimum":234,"stapleStrengthMaximum":230,"positionOfBreakPercentageTip":26,"positionOfBreakPercentageMiddle":34,"positionOfBreakPercentageBase":27,"team3Hauteur":null,"reissueChargeFlag":null,"lsCertType":"LengthAndStrengthTested","isLsSampleSecured":false,"expectedBarbe":null,"team3HauteurCvPercentage":null,"team3RomainePercentage":null,"dateIssued":"2024-01-22","stapleStrengthLowest25Percent":null},"lengthAndStrengthDetails":null,"omlDetails":null,"coreTestDetails":null,"colorCombinationDetails":null,"omiDetials":null,"postSaleCoreTestDetails":null,"guidanceReporttDetails":null,"scouredTestDetails":null,"dichloromethaneTestDetails":null,"conditioningTestDetails":null,"lengthAfterCardingTestDetails":null,"lengthAdjustmentNoteDetails":null,"sublotCertificateNumbers":["fdsafsdaf","ygdfgdfdf"],"fibreDiameterHistograms":[{"fibreDiameterHistogramHeader":{"coefficientOfVariation":19.9,"comfortFactorPercentage":98.7,"fibresMeasured":4000,"reportingFlag":"ResultsCertified","instrument":"LaserScan","subSamplingMethod":"Minicore","numberOfSpecimens":4,"mean":20.1,"standardDeviation":4,"curvatureMeanDegPerMm":61,"meanMinimum":null,"meanMaximum":null,"coreTestSamplingDate":"2017-01-10","dateIssued":"2017-01-10","factorLaserscanNumerator":null,"factorLaserscanDenominator":null},"fibreDiameterHistogramDetails":[{"fibreMeasurements":[{"fibreDiameter":23,"fibresMeasuredPercentage":0.2345},{"fibreDiameter":24,"fibresMeasuredPercentage":0.2228}]},{"fibreMeasurements":[{"fibreDiameter":25,"fibresMeasuredPercentage":0.2543},{"fibreDiameter":27,"fibresMeasuredPercentage":0.3262}]},{"fibreMeasurements":[{"fibreDiameter":21,"fibresMeasuredPercentage":0.174},{"fibreDiameter":21,"fibresMeasuredPercentage":0.1955}]}]}],"bales":null}]}}
         '400':
           description: Bad Request
           content:
@@ -644,8 +742,118 @@ paths:
               schema:
                 $ref: '#/components/schemas/CustomProblemDetails'
               example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+  /v1/test-resquests-verification:
+    post:
+      tags:
+        - Test Requests Verification
+      summary: Test Request Verification
+      description: 'Sent by an organisation that has already requested a test by paper to the Test House, as a verification of the paper request'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestRequestsVerification'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":"TestCertificate","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testRequestsVerificationDetails":[{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":"Kilograms","mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":"ClassedGrowerLot","centreAuction":"AU_A","sourceCode":"Grower","reportingFlag":"InformationOnly","scouredType":"NotScoured","gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"testRequestVerification":{"laboratory":"AustralianWoolTestingAuthority","growerCode":"G123","growerName":"John Doe","coreSampleWeight":200,"coreTestSamplingDate":"2024-04-15","coresPerBale":5,"grabsPerBale":10,"updatePreviousData":true,"hashTotal":123456,"isYieldAndMicronTestRequired":true,"isLengthAndStrengthTestRequired":false,"isLengthOnlyTestRequired":true,"isColourTestRequired":false,"isLaserscanTestRequired":true,"isAirflowTestRequired":false,"isOFDATestRequired":true,"isDarkAndMedullatedFibreTestRequired":false,"isPesticideResidueTestRequired":false},"contractLimitRequirements":{"micronMin":15.5,"micronMax":25,"colourYZMin":1.2,"colourYZMax":2.1,"vmbMin":0.85,"vmbMax":1.25,"woolBaseMin":50,"woolBaseMax":65,"dichloromethaneDryBasisMin":0.05,"dichloromethaneDryBasisMax":0.15,"conditioningMassMin":500,"conditioningMassMax":1500,"lacBarbeMin":10,"lacBarbeMax":30,"lacHauteurMin":15,"lacHauteurMax":45,"lacHauteurUnder20Min":5,"lacHauteurUnder20Max":15,"lacHauteurUnder40Min":8,"lacHauteurUnder40Max":25,"lacHauteurCVPercentMin":10,"lacHauteurCVPercentMax":20},"darkAndMedullatedFibreRiskDetails":{"declaredBreed":"AustralianSuperfine","declaredWoolSubCategory":"NotRequired","declaredWoolCategory":"Pieces","declaredQualifierCode1":null,"declaredQualifierCode2":null,"declaredQualifierCode3":null,"declaredQualifierCode4":null,"declaredQualifierCode5":null,"declaredQualifierScale":null,"contactWithExoticBreeds":true,"crutched":false,"crutchedWithin3MonthsOfShearing":true,"sex":"Rams","ageFrom":2,"ageTo":5,"darkAndMedullatedFibreRiskBroker":null},"bales":null},{"testDataHeader":{"client":{"organizationCode":"AWTA","centre":null,"organizationID":null},"season":null,"saleIdentity":null,"centreStorage":null,"lotIdentity":null,"groupNumber":null,"weightNote":null,"clientsCrossReference":null,"bales":1,"gross":1,"tare":1,"regrabSampleWeight":1,"weightUnit":"Kilograms","mulesingStatus":null,"declaredGross":null,"declaredTare":null,"lotType":"ObjectivelyMatchedInterlot","centreAuction":"AU_BA","sourceCode":"Dealer","reportingFlag":"InformationOnly","scouredType":"ScouredDualSolvent","gstAmount":null,"isGSTApplicable":false,"isCompanyABNApplicable":false},"testRequestVerification":{"laboratory":"AustralianWoolTestingAuthority","growerCode":"G4643","growerName":"Alice Stonewood","coreSampleWeight":164,"coreTestSamplingDate":"2024-04-25","coresPerBale":4,"grabsPerBale":20,"updatePreviousData":true,"hashTotal":125534,"isYieldAndMicronTestRequired":true,"isLengthAndStrengthTestRequired":false,"isLengthOnlyTestRequired":false,"isColourTestRequired":false,"isLaserscanTestRequired":false,"isAirflowTestRequired":false,"isOFDATestRequired":false,"isDarkAndMedullatedFibreTestRequired":true,"isPesticideResidueTestRequired":true},"contractLimitRequirements":{"micronMin":12.3,"micronMax":18.6,"colourYZMin":1.6,"colourYZMax":2.5,"vmbMin":0.66,"vmbMax":1.8,"woolBaseMin":40,"woolBaseMax":55,"dichloromethaneDryBasisMin":0.06,"dichloromethaneDryBasisMax":0.12,"conditioningMassMin":260,"conditioningMassMax":1200,"lacBarbeMin":17,"lacBarbeMax":56,"lacHauteurMin":12,"lacHauteurMax":36,"lacHauteurUnder20Min":3,"lacHauteurUnder20Max":12,"lacHauteurUnder40Min":9,"lacHauteurUnder40Max":15,"lacHauteurCVPercentMin":13,"lacHauteurCVPercentMax":27},"darkAndMedullatedFibreRiskDetails":{"declaredBreed":"AustralianSuperfine","declaredWoolSubCategory":"NotRequired","declaredWoolCategory":"Bellies","declaredQualifierCode1":null,"declaredQualifierCode2":null,"declaredQualifierCode3":null,"declaredQualifierCode4":null,"declaredQualifierCode5":null,"declaredQualifierScale":null,"contactWithExoticBreeds":false,"crutched":false,"crutchedWithin3MonthsOfShearing":true,"sex":"Ewes","ageFrom":1,"ageTo":4,"darkAndMedullatedFibreRiskBroker":null},"bales":null}]}
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":null}
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
+  /v1/test-status:
+    post:
+      tags:
+        - Test Status
+      summary: Test Status
+      description: Used by test houses to update test status
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestStatus'
+            example: {"transmissionHeader":{"dateFormatLastRevised":"2020-07-15","dateTransmissionFileCreated":"2016-01-17","countryOfOrigin":"AU","documentOriginator":"ABCD","currentTransmitter":"AWTM","currentReceiver":"AWXLC","finalReceiver":"AWXLC","accessPassword":null,"accessPasswordReplacement":null,"transmissionType":"TestCertificate","versionNumber":31,"softwareIdentifier":{"softwareCompany":"Talman","version":10820,"programName":"NETR"},"abn":"72001967184"},"testStatusDetails":[{"certificateIDPrefix":"FremantleLaboratory","weightNote":"1111877","clientCode":"019944","chargeCode":"0511","lsSampleID":"F885688","coreSampleReceived":"2024-04-23","lsSampleReceived":"2024-04-24","trvMatched":"2024-04-24","coreSampleCheckTest":null,"lsRetuftRequired":"Required","lsRetuftReceived":null,"coreTestRecoreRequired":null,"coreTestRecoreReceived":null},{"certificateIDPrefix":"FremantleLaboratory","weightNote":"1111832","clientCode":"019944","chargeCode":"0511","lsSampleID":"F865734","coreSampleReceived":"2024-04-23","lsSampleReceived":"2024-04-24","trvMatched":"2024-04-24","coreSampleCheckTest":null,"lsRetuftRequired":null,"lsRetuftReceived":null,"coreTestRecoreRequired":null,"coreTestRecoreReceived":null}]}
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+              example: {"isSuccessful":true,"message":null,"data":null}
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred","status":400,"detail":"","errors":{"TransmissionHeader.DateFormatLastRevised":["The field DateFormatLastRevised is required","The field DateFormatLastRevised must match regulart expression pattern..."],"TransmissionHeader.CountryOfOrigin":["The field CountryOfOrigin is required"]}}
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2","title":"Unauthorized","status":401,"detail":"Missing authentication credentials","errors":null}
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4","title":"You don't have permission to access this resource","status":403,"detail":"You don't have a 'read' access to access this resource","errors":null}
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example: {"type":"https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error","title":"An error occurred while processing your required","status":500,"detail":"Error details..","errors":null}
 components:
   schemas:
+    AdditionalPrintRequirements:
+      enum:
+        - NoAdditionalRequirements
+        - VMBreakdown
+        - VMBreakdownAndCurvature
+        - VMBreakdownAndConfortFactor
+        - VMBreakdownAndCurvatureAndComfortFactor
+        - Curvature
+        - ComfortFactor
+        - CurvatureAndComfortFactor
+      type: string
+      description: 'NoAdditionalRequirements: Code: 0. No additional print requirements<br />VMBreakdown: Code: 1. Print VM Breakdown only<br />VMBreakdownAndCurvature: Code: 2. Print VM Breakdown and Curvature<br />VMBreakdownAndConfortFactor: Code: 3. Print VM Breakdown and Comfort Factor<br />VMBreakdownAndCurvatureAndComfortFactor: Code: 4. Print VM Breakdown, Curvature and Comfort Factor<br />Curvature: Code: 5. Print Curvature only<br />ComfortFactor: Code: 6. Print Comfort Factor Only<br />CurvatureAndComfortFactor: Code: 7. Print Curvature and Comfort Factor'
     Address:
       type: object
       properties:
@@ -871,6 +1079,14 @@ components:
             $ref: '#/components/schemas/BaleIdentification'
           nullable: true
       additionalProperties: false
+    AutoAdditionalMeasurementRequired:
+      enum:
+        - NoAutomaticCombinationsRequired
+        - AutomaticLengthAndStrengthCombinationRequired
+        - AutomaticColourCombinationRequired
+        - LengthStrengthAndColourCombinations
+      type: string
+      description: 'NoAutomaticCombinationsRequired: Code: N. Automatic combinations not required<br />AutomaticLengthAndStrengthCombinationRequired: Code: L. Automatic Length & Strength Combination required<br />AutomaticColourCombinationRequired: Code: C. Automatic Colour Combination is required<br />LengthStrengthAndColourCombinations: Code: B. Both Length & Strength and Colour combinations required'
     Bale:
       type: object
       properties:
@@ -880,6 +1096,12 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/BaleDetail'
+          nullable: true
+        propertyIdentificationCodes:
+          type: array
+          items:
+            type: string
+          description: "Property Identification Code - the property code to identify the source of the wool.\r\nThis field is not used in New Zealand transmission."
           nullable: true
       additionalProperties: false
     BaleDetail:
@@ -959,17 +1181,17 @@ components:
       additionalProperties: false
     CalculationBasis:
       enum:
-        - B
-        - K
-        - P
+        - Bale
+        - Kil
+        - Percent
       type: string
-      description: 'This is used to identify the method used to calculate the post sale charge. The post sale charge may be a per bale, per kilogram or percentage of the price of the wool. Calculation Basis is always per bale in Australia.<br />B: Post sale charge is levied per bale<br />K: The post sale charge is a charge per kil<br />P: The post sale charge is a % of first cost'
+      description: 'This is used to identify the method used to calculate the post sale charge. The post sale charge may be a per bale, per kilogram or percentage of the price of the wool. Calculation Basis is always per bale in Australia.<br />Bale: Code: B. Post sale charge is levied per bale<br />Kil: Code: K. The post sale charge is a charge per kil<br />Percent: Code: P. The post sale charge is a % of first cost'
     CalibrationFlag:
       enum:
-        - O
-        - N
+        - Old
+        - New
       type: string
-      description: 'O: Old. The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to reference wool, based on illuminant C and 2º observer angle. Old calibration has been deactivated as at 1st January 2001.<br />N: New. The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to certified tiles, based on illuminant D65 and 10º observer angle, and corrected for any glass effects'
+      description: 'Old: Code: O. The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to reference wool, based on illuminant C and 2º observer angle. Old calibration has been deactivated as at 1st January 2001.<br />New: Code: N. The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to certified tiles, based on illuminant D65 and 10º observer angle, and corrected for any glass effects'
     CatalogueLotDescription:
       required:
         - baleDescription
@@ -1011,22 +1233,22 @@ components:
       description: 'These are the codes allocated by the local wool authorities to sectionalise the sale catalogues.<br />BLK: ODDS - Black<br />DEAD: ODDS - Dead<br />FLC: MFLC - Merino Fleece<br />FMG: ODDS - Fellmongered<br />ODD: ODDS - Oddments<br />SKIN: ODDS - Skin Wool<br />SKT: MSKT - Skirting<br />TRAD: MFLC / MSKT / XBFS / ODDS - Traditionally Shown<br />XBD: C XBFS - Crossbred (Flc & Skt)'
     CatalogueSymbol:
       enum:
-        - A
-        - C
-        - D
-        - G
-        - H
-        - M
-        - O
-        - R
-        - S
-        - T
-        - U
-        - W
-        - X
-        - Y
+        - DumpedBales
+        - CharityoRGoodCause
+        - Debanded
+        - LotOfferedUnderTrialSellingStatus
+        - ClassedSamples
+        - MachineProcessed
+        - Fellmongered
+        - ReconditionedFromWet
+        - WoolIsUnclassed
+        - Tested
+        - Unskirted
+        - BrokerClassed
+        - ContainsBrokerInspected
+        - PigmentedAndOrMedullatedFibreRisk
       type: string
-      description: 'These are the symbols defined in the AWEX Wool Selling Rules. If this field has no value, it will indicate that there are no catalogue symbols for that lotTo obtain the current code list of values that may be used in this field please go to this URL: http://www.awex.com.au/standards/catalogue<br />A: Dumped Bales<br />C: Charity/Good Cause<br />D: De-banded<br />G: Lot offered under Trial Selling Status<br />H: Classed Samples (bearing Classing House stencil)<br />M: Machine processed (Decotted, crushed or blended)<br />O: Fellmongered<br />R: Reconditioned from wet<br />S: Wool is unclassed<br />T: Tested (where Test House is not AWTA)<br />U: Unskirted or Not Skirted to Code of Practice requirements<br />W: Broker (Re)classed (Classing House stencil - P cert. only)<br />X: Contains Broker Inspected (Classing House stencil - I cert. only)<br />Y: Pigmented and/or Medullated Fibre Risk (Run with or Black section)'
+      description: 'These are the symbols defined in the AWEX Wool Selling Rules. If this field has no value, it will indicate that there are no catalogue symbols for that lotTo obtain the current code list of values that may be used in this field please go to this URL: http://www.awex.com.au/standards/catalogue<br />DumpedBales: Code: A. Dumped Bales<br />CharityoRGoodCause: Code: C. Charity/Good Cause<br />Debanded: Code: D. De-banded<br />LotOfferedUnderTrialSellingStatus: Code: G. Lot offered under Trial Selling Status<br />ClassedSamples: Code: H. Classed Samples (bearing Classing House stencil)<br />MachineProcessed: Code: M. Machine processed (Decotted, crushed or blended)<br />Fellmongered: Code: O. Fellmongered<br />ReconditionedFromWet: Code: R. Reconditioned from wet<br />WoolIsUnclassed: Code: S. Wool is unclassed<br />Tested: Code: T. Tested (where Test House is not AWTA)<br />Unskirted: Code: U. Unskirted or Not Skirted to Code of Practice requirements<br />BrokerClassed: Code: W. Broker (Re)classed (Classing House stencil - P cert. only)<br />ContainsBrokerInspected: Code: X. Contains Broker Inspected (Classing House stencil - I cert. only)<br />PigmentedAndOrMedullatedFibreRisk: Code: Y. Pigmented and/or Medullated Fibre Risk (Run with or Black section)'
     Centre:
       enum:
         - AU_A
@@ -1221,6 +1443,92 @@ components:
         - NZ_Z
       type: string
       description: ''
+    CertificateIDPrefix:
+      enum:
+        - SydneyLaboratory
+        - MelbourneLaboratory
+        - FremantleLaboratory
+      type: string
+      description: 'SydneyLaboratory: Code: 2. Sydney Laboratory<br />MelbourneLaboratory: Code: 3. Melbourne Laboratory<br />FremantleLaboratory: Code: 6. Fremantle Laboratory'
+    CertificateRequest:
+      required:
+        - bales
+      type: object
+      properties:
+        printRequirements:
+          $ref: '#/components/schemas/PrintRequirements'
+        yieldType1:
+          $ref: '#/components/schemas/YieldType'
+        yieldType2:
+          $ref: '#/components/schemas/YieldType'
+        certificateReference:
+          type: string
+          nullable: true
+        clientsCrossReference:
+          type: string
+          nullable: true
+        declaredGross:
+          type: integer
+          format: int32
+          nullable: true
+        declaredTare:
+          type: integer
+          format: int32
+          nullable: true
+        sampleWeightRemoved:
+          type: integer
+          format: int32
+          nullable: true
+        bales:
+          type: integer
+          format: int32
+        season:
+          type: integer
+          format: int32
+          nullable: true
+        saleIdentity:
+          type: string
+          nullable: true
+        lotIdentity:
+          type: string
+          nullable: true
+        printFlag:
+          $ref: '#/components/schemas/PrintFlag'
+        combinationRequest:
+          $ref: '#/components/schemas/CombinationRequest'
+        autoAdditionalMeasurementRequired:
+          $ref: '#/components/schemas/AutoAdditionalMeasurementRequired'
+        additionalPrintRequirements:
+          $ref: '#/components/schemas/AdditionalPrintRequirements'
+        teaM3HauteurPrint:
+          type: boolean
+          nullable: true
+        commitType:
+          type: string
+          nullable: true
+        baleHeader:
+          $ref: '#/components/schemas/BaleHeader'
+        certificateRequestDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/CertificateRequestDetail'
+          nullable: true
+      additionalProperties: false
+    CertificateRequestDetail:
+      required:
+        - certificateIdentity
+        - laboratory
+      type: object
+      properties:
+        certificateIdentity:
+          minLength: 1
+          type: string
+        woolbase:
+          type: number
+          format: double
+        laboratory:
+          $ref: '#/components/schemas/Laboratory'
+      additionalProperties: false
     Client:
       type: object
       properties:
@@ -1475,22 +1783,33 @@ components:
       additionalProperties: false
     CombinationFlag:
       enum:
-        - N
-        - S
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
-        - A
-        - B
-        - C
-        - D
-        - E
-        - F
+        - Normal
+        - ASX24
+        - ASX19Point5
+        - ASX21
+        - ASX22Point6
+        - ASX19Point5AndASX21AndASX22Point6
+        - ASX19Point5AndASX21
+        - ASX21AndASX22Point6
+        - ICAPWoolContractChinaType54P
+        - ICAPWoolContractChinaType54
+        - ICAPWoolContractChinaType55
+        - ICAPWoolContractChinaType56
+        - ICAPWoolContractChinaType424
+        - ICAPWoolContractChinaTypeStandard
       type: string
-      description: 'This field indicates the following: If an Australian Securities Exchange combination was requested and the combination satisfies the contract parameters of ASX the appropriate flag will be transmitted.<br />N: Normal Combination<br />S: ASX24 Combination (formerly SFE)<br />4: ASX19.5 54W Combination<br />5: ASX21.0 55W Combination<br />6: ASX22.6 56W Combination<br />7: ASX19.5 54W, ASX21.0 55W and ASX22.6 56W Combination<br />8: ASX19.5 54W and ASX21.0 55W Combination<br />9: ASX21.0 55W and ASX22.6 56W Combination<br />A: ICAP Wool Contract - China Type 54P<br />B: ICAP Wool Contract - China Type 54<br />C: ICAP Wool Contract - China Type 55<br />D: ICAP Wool Contract - China Type 56<br />E: ICAP Wool Contract - China Type 424<br />F: ICAP Wool Contract - China Type Standard'
+      description: 'This field indicates the following: If an Australian Securities Exchange combination was requested and the combination satisfies the contract parameters of ASX the appropriate flag will be transmitted.<br />Normal: Code: N. Normal Combination<br />ASX24: Code: S. ASX24 Combination (formerly SFE)<br />ASX19Point5: Code: 4. ASX19.5 54W Combination<br />ASX21: Code: 5. ASX21.0 55W Combination<br />ASX22Point6: Code: 6. ASX22.6 56W Combination<br />ASX19Point5AndASX21AndASX22Point6: Code: 7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W Combination<br />ASX19Point5AndASX21: Code: 8. ASX19.5 54W and ASX21.0 55W Combination<br />9: ASX21.0 55W and ASX22.6 56W Combination<br />ICAPWoolContractChinaType54P: Code: A. ICAP Wool Contract - China Type 54P<br />ICAPWoolContractChinaType54: Code: B. ICAP Wool Contract - China Type 54<br />ICAPWoolContractChinaType55: Code: C. ICAP Wool Contract - China Type 55<br />ICAPWoolContractChinaType56: Code: D. ICAP Wool Contract - China Type 56<br />ICAPWoolContractChinaType424: Code: E. ICAP Wool Contract - China Type 424<br />ICAPWoolContractChinaTypeStandard: Code: F. ICAP Wool Contract - China Type Standard'
+    CombinationRequest:
+      enum:
+        - Normal
+        - ASX24
+        - ASX19Point5OrASX21OrASX22Point6
+        - ASX19Point5
+        - ASX21
+        - ASX22Point6
+        - ChinaContract
+      type: string
+      description: 'Normal: Code: N. Normal Combination Reuqest<br />ASX24: Code: S. ASX24 Combination Request (formerly SFE)<br />ASX19Point5OrASX21OrASX22Point6: Code: X. ASX19.5 54W, ASX21.0 55W or ASX22.6 56W Combination Request<br />ASX19Point5: Code: 4. ASX19.5 54W Combination Request<br />ASX21: Code: 5. ASX21.0 55W Combination Request<br />ASX22Point6: Code: 6. ASX22.6 56W Combination Request<br />ChinaContract: Code: C. China Contract Combination Request'
     ConditioningTestDetails:
       required:
         - certificateIdentity
@@ -1583,6 +1902,130 @@ components:
         email:
           type: string
           format: email
+          nullable: true
+      additionalProperties: false
+    ContractLimitRequirements:
+      type: object
+      properties:
+        micronMin:
+          pattern: '/^\d+(\.\d{1})?$/'
+          type: number
+          description: 'Minimum micron, optional decimal with one digit precision.'
+          format: double
+          nullable: true
+        micronMax:
+          pattern: '/^\d+(\.\d{1})?$/'
+          type: number
+          description: 'Maximum micron, optional decimal with one digit precision.'
+          format: double
+          nullable: true
+        colourYZMin:
+          pattern: '/^\d+(\.\d{1})?$/'
+          type: number
+          description: 'Minimum colour Y-Z, optional decimal with one digit precision.'
+          format: double
+          nullable: true
+        colourYZMax:
+          pattern: '/^\d+(\.\d{1})?$/'
+          type: number
+          description: 'Maximum colour Y-Z, optional decimal with one digit precision.'
+          format: double
+          nullable: true
+        vmbMin:
+          pattern: '/^\d+(\.\d{2})?$/'
+          type: number
+          description: 'Minimum VMB, optional decimal with two digits precision.'
+          format: double
+          nullable: true
+        vmbMax:
+          pattern: '/^\d+(\.\d{2})?$/'
+          type: number
+          description: 'Maximum VMB, optional decimal with two digits precision.'
+          format: double
+          nullable: true
+        woolBaseMin:
+          pattern: '/^\d+(\.\d{2})?$/'
+          type: number
+          description: 'Minimum wool base, optional decimal with two digits precision.'
+          format: double
+          nullable: true
+        woolBaseMax:
+          pattern: '/^\d+(\.\d{2})?$/'
+          type: number
+          description: 'Maximum wool base, optional decimal with two digits precision.'
+          format: double
+          nullable: true
+        dichloromethaneDryBasisMin:
+          pattern: '/^\d+(\.\d{2})?$/'
+          type: number
+          description: 'Minimum dichloromethane on a dry basis, optional decimal with two digits precision.'
+          format: double
+          nullable: true
+        dichloromethaneDryBasisMax:
+          pattern: '/^\d+(\.\d{2})?$/'
+          type: number
+          description: 'Maximum dichloromethane on a dry basis, optional decimal with two digits precision.'
+          format: double
+          nullable: true
+        conditioningMassMin:
+          type: integer
+          description: 'Minimum conditioning mass, optional numeric field.'
+          format: int32
+          nullable: true
+        conditioningMassMax:
+          type: integer
+          description: 'Maximum conditioning mass, optional numeric field.'
+          format: int32
+          nullable: true
+        lacBarbeMin:
+          type: integer
+          description: 'Minimum LAC Barbe, optional numeric field.'
+          format: int32
+          nullable: true
+        lacBarbeMax:
+          type: integer
+          description: 'Maximum LAC Barbe, optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurMin:
+          type: integer
+          description: 'Minimum LAC Hauteur, optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurMax:
+          type: integer
+          description: 'Maximum LAC Hauteur, optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurUnder20Min:
+          type: integer
+          description: 'Minimum LAC Hauteur under 20, optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurUnder20Max:
+          type: integer
+          description: 'Maximum LAC Hauteur under 20, optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurUnder40Min:
+          type: integer
+          description: 'Minimum LAC Hauteur under 40, optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurUnder40Max:
+          type: integer
+          description: 'Maximum LAC Hauteur under 40, optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurCVPercentMin:
+          type: integer
+          description: 'Minimum LAC Hauteur CV(%), optional numeric field.'
+          format: int32
+          nullable: true
+        lacHauteurCVPercentMax:
+          type: integer
+          description: 'Maximum LAC Hauteur CV(%), optional numeric field.'
+          format: int32
           nullable: true
       additionalProperties: false
     CoreTestDetails:
@@ -1678,6 +2121,13 @@ components:
         darkAndMedullatedFibreRisk:
           $ref: '#/components/schemas/DarkAndMedullatedFibreRisk'
       additionalProperties: false
+    CoreTestRecoreRequired:
+      enum:
+        - Required
+        - Received
+        - InProgress
+      type: string
+      description: 'Required: Code: 1. Core Test Recore is required – bales must be resampled to complete core test<br />Received: Code: 2. Core Test Recore sample received in laboratory<br />InProgress Code: 3. Core Test Recore testing in progress'
     CountryCode:
       enum:
         - AU
@@ -1721,23 +2171,148 @@ components:
       description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
     DarkAndMedullatedFibreRisk:
       enum:
-        - E
-        - N
-        - D
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
+        - ErrorInProcessing
+        - NotApplicable
+        - NotDeclared
+        - RiskLevel1
+        - RiskLevel2
+        - RiskLevel3
+        - RiskLevel4
+        - RiskLevel5
+        - RiskLevel6
       type: string
-      description: 'E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6'
+      description: 'ErrorInProcessing: Code: E. Error in Processing<br />NotApplicable. Code: N. Not Applicable<br />NotDeclared: Code: D. Not Declared<br />RiskLevel1: Code: 1. Risk Level 1 (lowest)<br />RiskLevel2: Code: 2. Risk Level 2<br />RiskLevel3: Code: 3. Risk Level 3<br />RiskLevel4: Code: 4. Risk Level 4<br />RiskLevel5: Code: 5. Risk Level 5<br />RiskLevel6: Code: 6. Risk Level 6'
+    DarkAndMedullatedFibreRiskBroker:
+      enum:
+        - Risklevel1
+        - Risklevel2
+        - Risklevel3
+        - Risklevel4
+        - Risklevel5
+        - Risklevel6
+      type: string
+      description: 'Risklevel1: Code: 1. Risk Level 1 (lowest)<br />Risklevel2: Code: 2. Risk Level 2<br />Risklevel3: Code: 3. Risk Level 3<br />Risklevel4: Code: 4. Risk Level 4<br />Risklevel5: Code: 5. Risk Level 5<br />Risklevel6: Code: 6. Risk Level 6'
+    DarkAndMedullatedFibreRiskDetails:
+      required:
+        - ageFrom
+        - contactWithExoticBreeds
+        - crutched
+        - declaredBreed
+        - declaredWoolCategory
+        - declaredWoolSubCategory
+        - sex
+      type: object
+      properties:
+        declaredBreed:
+          $ref: '#/components/schemas/DeclaredBreed'
+        declaredWoolSubCategory:
+          $ref: '#/components/schemas/DeclaredWoolSubCategory'
+        declaredWoolCategory:
+          $ref: '#/components/schemas/DeclaredWoolCategory'
+        declaredQualifierCode1:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode2:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode3:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode4:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode5:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierScale:
+          $ref: '#/components/schemas/DeclaredQualifierScale'
+        contactWithExoticBreeds:
+          type: boolean
+          description: "Boolean type for contact with exotic breeds.\r\nTrue for contact with exotic breeds. False for not contact with exotic breeds."
+        crutched:
+          type: boolean
+          description: "Boolean type for crutched status. \r\nTrue for crutched, False for not crutched."
+        crutchedWithin3MonthsOfShearing:
+          type: boolean
+          description: Boolean type for crutching within 3 months of shearing.
+          nullable: true
+        sex:
+          $ref: '#/components/schemas/Sex'
+        ageFrom:
+          type: integer
+          description: Required numeric field for minimum age.
+          format: int32
+        ageTo:
+          type: integer
+          description: Optional numeric field for maximum age.
+          format: int32
+          nullable: true
+        darkAndMedullatedFibreRiskBroker:
+          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskBroker'
+      additionalProperties: false
+    DeclaredBreed:
+      enum:
+        - AustralianSuperfine
+        - Merino
+        - Crossbred
+        - Downs
+        - Carpet
+        - ShedsFibres
+      type: string
+      description: 'AustralianSuperfine: Code: A. Australian Superfine<br />Merino: Code: M. Merino<br />Crossbred: Code: X. Crossbred<br />Downs: Code: D. Downs<br />Carpet: Code: T. Carpet<br />ShedsFibres: Code: R. Sheds Fibres'
+    DeclaredQualifierCode:
+      enum:
+        - QualifierNotRequired
+        - UnscourableColour
+        - ScourableColourOrCreamy
+        - DarkStain
+        - Cotts
+        - Jowls
+        - Dermatitis
+        - KempOrMedullated
+        - Dags
+        - Necks
+        - WaterStain
+        - Brands
+        - Doggy
+        - Mud
+        - SkinPieces
+        - Shanks
+        - BlackAndGrey
+        - SoftCotts
+        - SweatOrFrib
+      type: string
+      description: 'QualifierNotRequired: Code: T. Qualifier not required<br />UnscourableColour: Code: H. Unscourable colour<br />ScourableColourOrCreamy: Code: M. Scourable colour/creamy<br />DarkStain: Code: S. Dark Stain<br />Cotts: Code: C. Cotts<br />Jowls: Code: J. Jowls<br />Dermatitis: Code: A. Dermatitis<br />KempMedullated: Code: K. Kemp / Medullated<br />Dags: Code: Q. Dags<br />Necks: Code: E. Necks (Not Scaled)<br />WaterStain: Code: N. Water Stain<br />Brands: Code: R. Brands<br />Doggy: Code: G. Doggy (Not Scaled)<br />Mud: Code: D. Mud<br />SkinPieces: Code: V. Skin pieces<br />Shanks: Code: P. Shanks<br />BlackAndGrey: Code: Y. Black & Grey<br />SoftCotts: Code: F. Soft Cotts<br />SweatOrFrib: Code: U. Sweat/Frib'
+    DeclaredQualifierScale:
+      enum:
+        - NoTScaleOrQualifierCode
+        - LightOrOdd
+        - Medium
+        - HeaveyOrLine
+      type: string
+      description: 'NoTScaleOrQualifierCode: Code: 0. No scale/qualifier code is T<br />LightOrOdd: Code: 1. Light/Odd<br />Medium: Code: 2. Medium<br />HeavyOrLine: Code: 3. Heavy/Line of…'
+    DeclaredWoolCategory:
+      enum:
+        - Fleece
+        - Pieces
+        - Bellies
+        - Crutchings
+        - Locks
+      type: string
+      description: 'Fleece: Code: F. Fleece<br />Pieces: Code: P. Pieces<br />Bellies: Code: B. Bellies<br />Crutchings: Code: C. Crutchings<br />Locks: Code: Z. Locks'
+    DeclaredWoolSubCategory:
+      enum:
+        - CombingWeanersAndLambs
+        - CardingLambs
+        - PluckedAndDead
+        - ShornFromSkins
+        - Fellmongered
+        - Overgrown
+        - NonconformingLot
+        - NotRequired
+      type: string
+      description: 'CombingWeanersAndLambs: Code: W. Combing Weaners & Lambs<br />CardingLambs: Code: L. Carding Lambs<br />PluckedAndDead: Code: U. Plucked & Dead<br />ShornFromSkins: Code: K. Shorn from Skins<br />Fellmongered: Code: G. Fellmongered<br />Overgrown: Code: O. Overgrown<br />NonconformingLot: Code: N. Non-conforming lot<br />NotRequired: Code: T. Not required'
     DeliveryBasis:
       enum:
-        - D
-        - L
+        - DeliveryNominatedDestination
+        - LoadedOnTransport
       type: string
-      description: 'D: Delivery Nominated Destination<br />L: Loaded on Transport'
+      description: 'DeliveryNominatedDestination: Code: D. Delivery Nominated Destination<br />LoadedOnTransport: Code: L. Loaded on Transport'
     DichloromethaneTestDetails:
       required:
         - certificateIdentity
@@ -2011,20 +2586,23 @@ components:
           type: number
           format: double
         yield1:
-          minLength: 1
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
         yield2:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield3:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield4:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yieldType1:
           $ref: '#/components/schemas/YieldType'
@@ -2036,24 +2614,26 @@ components:
           $ref: '#/components/schemas/ReissueChargeFlag'
         vM1:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vM2:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vM3:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
       additionalProperties: false
     Instrument:
       enum:
-        - 1
-        - 2
-      type: integer
-      description: '<br />1: Laserscan<br />2: OFDA'
-      format: int32
+        - LaserScan
+        - OFDA
+      type: string
+      description: 'LaserScan: Code: 1. Laserscan<br />OFDA: Code: 2. OFDA'
     InterlotComponentBaleHeader:
       required:
         - areaOfOrigin
@@ -2083,19 +2663,18 @@ components:
       additionalProperties: false
     InvoiceMassFlag:
       enum:
-        - G
-        - L
+        - Gain
+        - Loss
       type: string
-      description: 'G: Invoice Mass is a Gain<br />L: Invoice Mass is a Loss'
+      description: 'Gain: Code: G. Invoice Mass is a Gain<br />Loss: Code: L. Invoice Mass is a Loss'
     Laboratory:
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-      type: integer
-      description: 'The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority'
-      format: int32
+        - AustralianWoolTestingAuthority
+        - NZWoolTestingAuthority
+        - NZWoolTestingService
+        - SouthAfricanWoolTestingAuthority
+      type: string
+      description: 'The code for a Test House.<br />AustralianWoolTestingAuthority: Code: 1. Australian Wool Testing Authority<br />NZWoolTestingAuthority: Code: 2. N.Z. Wool Testing Authority<br />NZWoolTestingService: Code: 3. N.Z. Wool Testing Service<br />SouthAfricanWoolTestingAuthority: Code: 4. South African Wool Testing Authority'
     LengthAfterCardingTestDetails:
       required:
         - certificateIdentity
@@ -2543,41 +3122,44 @@ components:
             $ref: '#/components/schemas/QualitySchemeDetail'
           nullable: true
         mulesingStatus:
-          type: string
-          nullable: true
+          $ref: '#/components/schemas/MulesingStatus'
       additionalProperties: false
     LotType:
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-      type: integer
-      description: 'A code used to describe wool lot preparation. It is not wool type. `*` wool meets clip preparation guidelines.`#` wool does not necessarily meet clip preparation guidelines<br />1: (Suffix - P) Classed Grower Lot *<br />2: (Suffix - M) Objectively Matched Lot<br />3: (Suffix - J) Combined Certificate<br />4: (Suffix - I) Subjectively Matched Interlot<br />5: (Suffix - B) Other Bulk Class Lot #<br />6: Not Used<br />7: (Suffix - N) Objectively Matched Interlot<br />8: (Suffix - Q) Classed Bulk Class Lot – Quality Managed *<br />9: (Suffix - D) Other Grower Lot #'
-      format: int32
+        - ClassedGrowerLot
+        - ObjectivelyMatchedLot
+        - CombinedCertificate
+        - SubjectivelyMatchedInterlot
+        - OtherBulkClassLot
+        - NotUsed
+        - ObjectivelyMatchedInterlot
+        - ClassedBulkClassLotQualityManaged
+        - OtherGrowerLot
+      type: string
+      description: 'A code used to describe wool lot preparation. It is not wool type. `*` wool meets clip preparation guidelines.`#` wool does not necessarily meet clip preparation guidelines<br />ClassedGrowerLot: Code: 1. (Suffix - P) Classed Grower Lot *<br />ObjectivelyMatchedLot: Code: 2. (Suffix - M) Objectively Matched Lot<br />CombinedCertificate: Code: 3. (Suffix - J) Combined Certificate<br />SubjectivelyMatchedInterlot: Code: 4. (Suffix - I) Subjectively Matched Interlot<br />OtherBulkClassLot: Code: 5. (Suffix - B) Other Bulk Class Lot #<br />NotUsed: Code: 6. Not Used<br />ObjectivelyMatchedInterlot: Code: 7. (Suffix - N) Objectively Matched Interlot<br />ClassedBulkClassLotQualityManaged: Code: 8. (Suffix - Q) Classed Bulk Class Lot – Quality Managed *<br />OtherGrowerLot: Code: 9. (Suffix - D) Other Grower Lot #'
     LsCertType:
       enum:
-        - 0
-        - 1
-        - 2
-      type: integer
-      description: '0: Length & Strength tested<br />1: Length only test requested<br />2: Insufficient staples'
-      format: int32
+        - LengthAndStrengthTested
+        - LengthOnlyTestRequested
+        - InsufficientStaples
+      type: string
+      description: 'LengthAndStrengthTested: Code: 0. Length & Strength tested<br />LengthOnlyTestRequested: Code: 1. Length only test requested<br />InsufficientStaples: Code: 2. Insufficient staples'
+    LsRetuftRequired:
+      enum:
+        - Required
+        - Received
+      type: string
+      description: 'Required: Code: 1. Length & Strength Retuft is required<br />Received: Code: 2. Length & Strength Retuft sample has been received in laboratory'
     MulesingStatus:
       enum:
-        - NM
-        - LN
-        - CM
-        - AA
-        - M
-        - ND
+        - NonMulesed
+        - LiquidNitrogen
+        - CeasedMulesing
+        - MulesedWithAnalgesicAndOrAnaesthetic
+        - Mulesed
+        - NotDeclared
       type: string
-      description: 'NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared'
+      description: 'NonMulesed: Code: NM. Non Mulesed<br />LiquidNitrogen: Code: LN. Liquid Nitrogen<br />CeasedMulesing: Code: CM. Ceased Mulesing<br />MulesedWithAnalgesicAndOrAnaesthetic: Code: AA. Mulesed with Analgesic &/or Anaesthetic<br />Mulesed: Code: M. Mulesed<br />NotDeclared: Code: ND. Not Declared'
     OMIDetails:
       required:
         - certificateIdentity
@@ -2762,11 +3344,11 @@ components:
       additionalProperties: false
     OfferType:
       enum:
-        - P
-        - N
-        - R
+        - PreviousOrPassedInPrice
+        - NegotiablePrice
+        - ReservePrice
       type: string
-      description: 'P: Previous/Passed-In Price<br />N: Negotiable Price<br />R: Reserve Price'
+      description: 'PreviousOrPassedInPrice: Code: P. Previous/Passed-In Price<br />NegotiablePrice: Code: N. Negotiable Price<br />ReservePrice: Code: R. Reserve Price'
     OrganizationDetail:
       required:
         - dateLastUpdated
@@ -2830,50 +3412,53 @@ components:
       additionalProperties: false
     PackCondition:
       enum:
-        - N
-        - M
-        - R
-        - X
+        - NewPack
+        - Marked
+        - Repaired
+        - NotRepaired
       type: string
-      description: 'Where a line/lot contains a Pack with a lower condition, the lower condition shall apply. The hierarchy from highest to lowest is N, M, R, X. This field is optional in New Zealand transmissions.<br />N: New Pack (not previously used)<br />M: Marked (not previously cored and grabbed<br />R: Repaired (previously core and/or grabbed and repaired)<br />X: Not repaired (previously cored and/or grabbed) (excl reoffer'
+      description: 'Where a line/lot contains a Pack with a lower condition, the lower condition shall apply. The hierarchy from highest to lowest is N, M, R, X. This field is optional in New Zealand transmissions.<br />NewPack: Code: N. New Pack (not previously used)<br />Marked: Code: M. Marked (not previously cored and grabbed<br />Repaired: Code: R. Repaired (previously core and/or grabbed and repaired)<br />NotRepaired: Code: X. Not repaired (previously cored and/or grabbed) (excl reoffer'
     PackMaterial:
       enum:
-        - N
-        - E
-        - J
-        - K
+        - NylonPacks
+        - ExperimentalPacks
+        - JutePacks
+        - HDPE1Packs
       type: string
-      description: 'Where a line/lot contains a Pack with a lower Material, the lower Material shall apply.The hierarchy from highest to lowest is N, E, J, K. Printed catalogue condition: The code for Nylon packs shall not be printed (but shall be transmitted).<br />N: Nylon Packs (complete lots only)<br />E: Experimental Packs<br />J: Jute packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and/or HDPE 1 and Jute packs)<br />K: HDPE1 packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and HDPE 1 packs)'
+      description: 'Where a line/lot contains a Pack with a lower Material, the lower Material shall apply.The hierarchy from highest to lowest is N, E, J, K. Printed catalogue condition: The code for Nylon packs shall not be printed (but shall be transmitted).<br />NylonPacks: CodeL: N. Nylon Packs (complete lots only)<br />ExperimentalPacks: Code: E. Experimental Packs<br />JutePacks: Code: J. Jute packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and/or HDPE 1 and Jute packs)<br />HDPE1Packs: Code: K. HDPE1 packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and HDPE 1 packs)'
     PackType:
       enum:
-        - '0'
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
-        - A
-        - B
-        - C
-        - D
-        - E
-        - F
-        - Z
+        - StandardBale
+        - BagOrButt
+        - LightweightBale
+        - JumboBale
+        - SingleBalesNormalDensityDumped
+        - SingleBalesHighDensityDumped
+        - SingleBalesSuperHighDensityDumped
+        - ThreeBaleTripack
+        - TwoBaleTripack
+        - UBales
+        - FourOrSixBaleUnitisedNormalDensityDumped
+        - FourOrSixBaleUnitisedHighDensityDumped
+        - FourOrSixBaleUnitisedSuperHighDensityDumped
+        - TwoBaleModule
+        - J9SizeBaleForScouredWool
+        - J12SizeBaleForScouredWool
+        - Mixed
       type: string
-      description: 'A code used to indicate how the wool has been baled. The most common type is Farm bales. <strong>Original</strong> - the pack type when the wool was originally baled. <strong>Preferred</strong> - The pack type which the buyer would prefer to be used when his wool is dumped.<br />0: Standard (farm) bale<br />1: Bag/butt<br />2: Lightweight bale<br />3: Jumbo bale<br />4: Single bales (normal density dumped)<br />5: Single bales (high density dumped)<br />6: Single bales (super high density dumped)<br />7: 3 bale tripack (super high density dumped)<br />8: 2 bale tripack (super high density dumped)<br />9: U bales<br />A: 4 or 6 bale unitised (normal density dumped)<br />B: 4 or 6 bale unitised (high density dumped)<br />C: 4 or 6 bale unitised (super high density dumped)<br />D: Two Bale Module (2BM)<br />E: J9 size bale used for scoured wool<br />F: J12 size bale used for scoured wool<br />Z: Mixed (to be used with groups only, that is, record type 12)'
+      description: 'A code used to indicate how the wool has been baled. The most common type is Farm bales. <strong>Original</strong> - the pack type when the wool was originally baled. <strong>Preferred</strong> - The pack type which the buyer would prefer to be used when his wool is dumped.<br />StandardBale: Code: 0. Standard (farm) bale<br />BagOrButt: Code: 1. Bag/butt<br />LightweightBale: Code: 2. Lightweight bale<br />JumboBale: Code: 3. Jumbo bale<br />SingleBalesNormalDensityDumped: Code: 4. Single bales (normal density dumped)<br />SingleBalesHighDensityDumped: Code: 5. Single bales (high density dumped)<br />SingleBalesSuperHighDensityDumped: Code: 6. Single bales (super high density dumped)<br />BaleTripackSuperHighDensityDumped: Code: 7. 3 bale tripack (super high density dumped)<br />TwoBaleTripac: Code: 8. 2 bale tripack (super high density dumped)<br />UBales: Code: 9. U bales<br />FourOrSixBaleUnitisedNormalDensityDumped: Code: A. 4 or 6 bale unitised (normal density dumped)<br />FourOrSixBaleUnitisedHighDensityDumped: Code: B. 4 or 6 bale unitised (high density dumped)<br />FourOrSixBaleUnitisedSuperHighDensityDumped: Code: C. 4 or 6 bale unitised (super high density dumped)<br />TwoBaleModule: Code: D. Two Bale Module (2BM)<br />J9SizeBaleForScouredWool: Code: E. J9 size bale used for scoured wool<br />J12SizeBaleForScouredWool: Code: F. J12 size bale used for scoured wool<br />Mixed: Code: Z. Mixed (to be used with groups only, that is, record type 12)'
     PhoneNumber:
+      required:
+        - countryCode
+        - number
       type: object
       properties:
         countryCode:
+          minLength: 1
           type: string
-          nullable: true
         number:
+          minLength: 1
           type: string
-          nullable: true
       additionalProperties: false
     PostSaleCoreTestDetails:
       required:
@@ -2918,20 +3503,23 @@ components:
           type: number
           format: double
         yield1:
-          minLength: 1
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
         yield2:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield3:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield4:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yieldType1:
           $ref: '#/components/schemas/YieldType'
@@ -2943,15 +3531,18 @@ components:
           $ref: '#/components/schemas/ReissueChargeFlag'
         vM1:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vM2:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vM3:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
       additionalProperties: false
     PremiumTestDetails:
@@ -2998,20 +3589,23 @@ components:
           format: double
           nullable: true
         yield1:
-          minLength: 1
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
         yield2:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield3:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield4:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yieldType1:
           $ref: '#/components/schemas/YieldType'
@@ -3021,57 +3615,80 @@ components:
           $ref: '#/components/schemas/RetestFlag'
         yield5:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         reissueChargeFlag:
           $ref: '#/components/schemas/ReissueChargeFlag'
         vm1:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vm2:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vm3:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         darkAndMedullatedFibreRisk:
           $ref: '#/components/schemas/DarkAndMedullatedFibreRisk'
       additionalProperties: false
     PriceBasis:
       enum:
-        - G
-        - C
-        - I
-        - F
+        - Greasy
+        - CLCOF
+        - CIF
+        - FOB
       type: string
-      description: 'G: Greasy<br />C: CLCOF (ACOF or NZCOF)<br />I: CIF<br />F: FOB'
+      description: 'Greasy: Code: G. Greasy<br />CLCOF: Code: C. CLCOF (ACOF or NZCOF)<br />CIF: Code: I. CIF<br />FOB: Code: F. FOB'
+    PrintFlag:
+      enum:
+        - Normal
+        - PdfCombinationOrOMLCertificateAndSublots
+        - PdfSublotsExcludingCombinationOrOMLCertificate
+        - PdfCombinationCertificateInChineseAndEnglish
+        - PdfCombinationCertificateInChineseAndSublotsInEnglish
+        - PdfCombinationCertificateInEnglishAndMulesingStatusReport
+        - PdfMulesingStatusReportOnly
+      type: string
+      description: 'Normal: Code: P. Normal RPP/TCR request to pdf Certificate<br />PdfCombinationOrOMLCertificateAndSublots: Code: A. Pdf Combination/OML Certificate and associated sub-lots<br />PdfSublotsExcludingCombinationOrOMLCertificate: Code: S. Pdf associated sub-lots excluding the Combination/OML Certificate<br />PdfCombinationCertificateInChineseAndEnglish: Code: C. Pdf Combination Certificate in Chinese and English<br />PdfCombinationCertificateInChineseAndSublotsInEnglish: Code: E. Pdf Combination Certificate in Chinese and English & associated sublots in English)<br />PdfCombinationCertificateInEnglishAndMulesingStatusReport: Code: M. Pdf Combination Certificate in English & Mulesing Status report<br />PdfMulesingStatusReportOnly: Code: N. Pdf Mulesing Status report only'
+    PrintRequirements:
+      enum:
+        - OriginalCertificateCharge
+        - ReissuedNoCharge
+        - ReissuedWithAdditionalCharge
+        - ReissuedWithReplacementCharge
+      type: string
+      description: 'OriginalCertificateCharge: Code: 0. Yield and Laserscan are (to be) shown on the certificate<br />ReissuedNoCharge: Code: 1. Two certificates are (to be) issued, one with yield and one with Laserscan<br />ReissuedWithAdditionalCharge: Code: 2. Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />ReissuedWithReplacementCharge: Code: 3. Laserscan only is (to be) shown)'
     QualityScheme:
       enum:
-        - ASWG
-        - AUTH
-        - BETC
-        - BIOC
-        - DAL3
-        - EUEC
-        - MTEC
-        - ACO
-        - DBAA
-        - USA
-        - NASA
-        - SXC
-        - RWS
-        - SBFC
-        - SW
-        - SWAU
-        - TQMS
-        - FAP
-        - PWIA
-        - FERN
+        - AustralianSuperfineWoolgrowerAssociation
+        - Authentico
+        - BetterChoices
+        - BioClip
+        - Dalcare3
+        - EUEcoLabel
+        - MerinoTechWA
+        - AustralianCertifiedOrganic
+        - DemeterBiodynamicAgricultureAustOrganic
+        - USACertifiedOrganic
+        - NationalAssociationForSustainableAgricultureOrganic
+        - SouthernCrossCertifiedOrganic
+        - ResponsibleWoolStandard
+        - SchuteBellFibreCare
+        - SustainaWOOL
+        - SustainaWOOLGold
+        - TraprockQMSOrTIMS
+        - FarmAssuranceProgram
+        - PGGWrightsonIntegrityAssured
+        - WoolcareFernmark
       type: string
-      description: 'The registered four character or less quality scheme code. To obtain the current code list please go to this URL: http://www.awex.com.au/standards/catalogue/<br />ASWG: Australian Superfine Woolgrower Association (Member)<br />AUTH: Authentico<br />BETC: Better Choices (Pain Mitigation)<br />BIOC: BioClip (Biologically Harvested)<br />DAL3: Dalcare-3<br />EUEC: EU Eco label (meets EU Eco standards)<br />MTEC: Merino Tech WA<br />ACO: Organic - Australian Certified Organic<br />DBAA: Organic - Demeter Biodynamic Agriculture Aust.<br />USA: Organic - Meets USA Certification requirements<br />NASA: Organic - National Association for Sustainable Agriculture Aust.<br />SXC: Organic - Southern Cross Certified<br />RWS: Responsible Wool Standard<br />SBFC: Schute Bell Fibre Care<br />SW: SustainaWOOL<br />SWAU: SustainaWOOL Gold<br />TQMS: Traprock QMS/TIMS<br />FAP: Farm Assurance Program<br />PWIA: PGG Wrightson Integrity Assured<br />FERN: Woolcare Fernmark'
+      description: 'The registered four character or less quality scheme code. To obtain the current code list please go to this URL: http://www.awex.com.au/standards/catalogue/<br />AustralianSuperfineWoolgrowerAssociation: Code: ASWG. Australian Superfine Woolgrower Association (Member)<br />Authentico: Code: AUTH. Authentico<br />BetterChoices: Code: BETC. Better Choices (Pain Mitigation)<br />BioClip: Code: BIOC. BioClip (Biologically Harvested)<br />Dalcare3: Code: DAL3. Dalcare-3<br />EUEcoLabel: Code: EUEC. EU Eco label (meets EU Eco standards)<br />MerinoTechWA: Code: MTEC. Merino Tech WA<br />AustralianCertifiedOrganic: Code: ACO. Organic - Australian Certified Organic<br />DemeterBiodynamicAgricultureAustOrganic: Code: DBAA. Organic - Demeter Biodynamic Agriculture Aust.<br />USACertifiedOrganic: Code: USA. Organic - Meets USA Certification requirements<br />NationalAssociationForSustainableAgricultureOrganic: Code: NASA. Organic - National Association for Sustainable Agriculture Aust.<br />SouthernCrossCertifiedOrganic: Code: SXC. Organic - Southern Cross Certified<br />ResponsibleWoolStandard: Code: RWS. Responsible Wool Standard<br />SchuteBellFibreCare: Code: SBFC. Schute Bell Fibre Care<br />SustainaWOOL: Code: SW. SustainaWOOL<br />SustainaWOOLGold: Code: SWAU. SustainaWOOL Gold<br />TraprockQMSOrTIMS: Code: TQMS. Traprock QMS/TIMS<br />FarmAssuranceProgram: Code: FAP. Farm Assurance Program<br />PGGWrightsonIntegrityAssured: Code: PWIA. PGG Wrightson Integrity Assured<br />WoolcareFernmark: Code: FERN. Woolcare Fernmark'
     QualitySchemeDetail:
       type: object
       properties:
@@ -3088,30 +3705,40 @@ components:
       additionalProperties: false
     RecordTypesToBeExcludedForAuctionCatalogue:
       enum:
-        - '21'
-        - 51C
-        - 79B
-        - '84'
-        - '31'
-        - 32A
+        - LotHeader
+        - ColourDetails
+        - InterlotComponentBaleHeader
+        - BaleIdentification
+        - FibreDiameterHistogramHeader
+        - FibreDiameterHistogramDetails
       type: string
-      description: '<br />21: Lot Header<br />51C: Colour Details<br />79B: Interlot component bale header<br />84: Bale Identification<br />31: Fibre Diameter Histogram Header<br />32A: Fibre Diameter Histogram Details'
+      description: 'LotHeader: Code: 21. Lot Header<br />ColourDetails: Code: 51C. Colour Details<br />InterlotComponentBaleHeader: Code: 79B. Interlot component bale header<br />BaleIdentification: Code: 84. Bale Identification<br />FibreDiameterHistogramHeader: Code: 31. Fibre Diameter Histogram Header<br />FibreDiameterHistogramDetails: Code: 32A. Fibre Diameter Histogram Details'
     ReissueChargeFlag:
       enum:
-        - 0
-        - 1
-        - 2
-        - 3
-      type: integer
-      description: '0: Original certificate charge<br />1: Re-issued no charge<br />2: Re-issued with additional Charge<br />3: Re-issued with replacement charge (credit issued against original certificate)'
-      format: int32
+        - OriginalCertificateCharge
+        - ReissuedNoCharge
+        - ReissuedWithAdditionalCharge
+        - ReissuedWithReplacementCharge
+      type: string
+      description: 'OriginalCertificateCharge: Code: 0. Original certificate charge<br />ReissuedNoCharge: Code: 1. Re-issued no charge<br />ReissuedWithAdditionalCharge: Code: 2. Re-issued with additional Charge<br />ReissuedWithReplacementCharge: Code: 3. Re-issued with replacement charge (credit issued against original certificate)'
+    ReissueType:
+      enum:
+        - WoolPreparationCategoryChange
+        - MulesingStatusChange
+        - SaleLotChange
+        - WoolPreparationCategoryAndMulesingStatusChange
+        - WoolPreparationCategoryAndSaleLotChange
+        - MulesingStatusAndSaleLotChange
+        - WoolPreparationCategoryAndMulesingStatusAndSaleLotChange
+      type: string
+      description: ' WoolPreparationCategoryChange: Code: 01. Wool Preparation Category (WPC) Change<br />MulesingStatusChange: Code: 02. Mulesing Status (MS) Change<br />SaleLotChange: Code: 03. Sale/Lot Change<br />WoolPreparationCategoryAndMulesingStatusChange: Code: 04. WPC and MS Change<br />WoolPreparationCategoryAndSaleLotChange: Code: 05. WPC and Sale/Lot Change<br />MulesingStatusAndSaleLotChange: Code: 06. MS and Sale/Lot Change<br />WoolPreparationCategoryAndMulesingStatusAndSaleLotChange: Code: 07. WPC, MS and Sale/Lot Change'
     ReportingFlag:
       enum:
-        - R
-        - C
-        - U
+        - InformationOnly
+        - ResultsCertified
+        - Untested
       type: string
-      description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
+      description: 'InformationOnly: Code: R. Report, results for this test are supplied for information only<br />ResultsCertified: Code: C. Certificate results for this test are certified<br />Untested: Code: U. This lot is untested and there are no certificate results'
     RequestForData:
       required:
         - requestType
@@ -3295,29 +3922,26 @@ components:
       additionalProperties: false
     RequestType:
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-      type: integer
-      description: '1: Private Data Request<br />2: Status Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
-      format: int32
+        - PrivateDataRequest
+        - StatusRequest
+        - DataRequest
+        - BroadcastDataRequest
+      type: string
+      description: 'PrivateDataRequest: Code: 1. Private Data Request<br />StatusRequest: Code: 2. Status Request<br />DataRequest: Code: 3. Data Re-Request<br />BroadcastDataRequest: Code: 4. Broadcast Data Request'
     RequestTypeForData:
       enum:
-        - 1
-        - 3
-        - 4
-      type: integer
-      description: '1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
-      format: int32
+        - PrivateDataRequest
+        - DataRequest
+        - BroadcastDataRequest
+      type: string
+      description: 'PrivateDataRequest: Code: 1. Private Data Request<br />DataRequest: Code: 3. Data Re-Request<br />BroadcastDataRequest: Code: 4. Broadcast Data Request'
     RetestFlag:
       enum:
-        - 0
-        - 1
-        - 2
-      type: integer
-      description: '0: Normal Test<br />1: Retest<br />2: Check Test'
-      format: int32
+        - NormalTest
+        - Retest
+        - CheckTest
+      type: string
+      description: 'NormalTest: Code: 0. Normal Test<br />Retest: Code: 1. Retest<br />CheckTest: Code: 2. Check Test'
     SaleIdentity:
       type: object
       properties:
@@ -3331,13 +3955,13 @@ components:
       additionalProperties: false
     SaleType:
       enum:
-        - A
-        - T
-        - O
-        - AV
-        - E
+        - Auction
+        - Tender
+        - Offer
+        - Availability
+        - ElectronicSale
       type: string
-      description: 'A: Auction (open cry)<br />T: Tender<br />O: Offer<br />AV: Availability<br />E: Electronic Sale'
+      description: 'Auction: Code: A. Auction (open cry)<br />Tender: Code: T. Tender<br />Offer: Code: O. Offer<br />Availability: Code: AV. Availability<br />ElectronicSale: Code: E. Electronic Sale'
     ScouredTestDetails:
       required:
         - alcoholExtractableMatterDryBasis
@@ -3383,20 +4007,23 @@ components:
           type: number
           format: double
         yield1:
-          minLength: 1
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
         yield2:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield3:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield4:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yieldType1:
           $ref: '#/components/schemas/YieldType'
@@ -3408,15 +4035,18 @@ components:
           $ref: '#/components/schemas/ReissueChargeFlag'
         vM1:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vM2:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vM3:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         ashContentDryBasis:
           pattern: '/^\d+(\.\d{2})?$/'
@@ -3429,16 +4059,23 @@ components:
       additionalProperties: false
     ScouredType:
       enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-      type: integer
-      description: '0: Not Scoured<br />1: Scoured – Aqueous<br />2: Scoured – Dual Solvent<br />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe'
-      format: int32
+        - NotScoured
+        - ScouredAqueous
+        - ScouredDualSolvent
+        - Carbonised
+        - Mohair
+        - Noils
+        - Slipe
+      type: string
+      description: 'NotScoured: Code: 0. Not Scoured<br />ScouredAqueous: Code: 1. Scoured – Aqueous<br />ScouredDualSolvent: Code: 2. Scoured – Dual Solvent<br />Carbonised: Code: 3. Carbonised<br />Mohair: Code: 4. Mohair<br />Noils: Code: 5. Noils<br />Slipe: Code: 6. Slipe'
+    Sex:
+      enum:
+        - Ewes
+        - Wethers
+        - Rams
+        - Mixed
+      type: string
+      description: 'Ewes: Code: E. Ewes<br />Wethers: Code: W. Wethers<br />Rams: Code: R. Rams<br />Mixed: Code: M. Mixed'
     SoftwareIdentifier:
       type: object
       properties:
@@ -3456,12 +4093,11 @@ components:
       additionalProperties: false
     SourceCode:
       enum:
-        - 1
-        - 2
-        - 3
-      type: integer
-      description: 'Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br />3: BulkClass'
-      format: int32
+        - Grower
+        - Dealer
+        - BulkClass
+      type: string
+      description: 'Source of the lot presented for sale.<br />Grower: Code: 1. Grower<br />Dealer: Code: 2. Dealer<br />BulkClass: Code: 3. BulkClass'
     StatusReply:
       type: object
       properties:
@@ -3491,10 +4127,9 @@ components:
       description: A standard API response object used for all successful API responses
     SubSamplingMethod:
       enum:
-        - 1
-      type: integer
-      description: '1: Minicore'
-      format: int32
+        - Minicore
+      type: string
+      description: 'Minicore: Code: 1. Minicore'
     SubjectiveInterlotDetails:
       required:
         - certificateIdentity
@@ -3540,20 +4175,23 @@ components:
           type: number
           format: double
         yield1:
-          minLength: 1
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
         yield2:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield3:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yield4:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         yieldType1:
           $ref: '#/components/schemas/YieldType'
@@ -3563,21 +4201,25 @@ components:
           $ref: '#/components/schemas/RetestFlag'
         yield5:
           pattern: '/^\d+(\.\d{2})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         reissueChargeFlag:
           $ref: '#/components/schemas/ReissueChargeFlag'
         vm1:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vm2:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         vm3:
           pattern: '/^\d+(\.\d{1})?$/'
-          type: string
+          type: number
+          format: double
           nullable: true
         darkAndMedullatedFibreRisk:
           type: string
@@ -3637,6 +4279,100 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Bale'
+          nullable: true
+      additionalProperties: false
+    TestCertificateRequest:
+      required:
+        - certificateRequest
+      type: object
+      properties:
+        certificateRequest:
+          $ref: '#/components/schemas/CertificateRequest'
+        baleHeader:
+          $ref: '#/components/schemas/BaleHeader'
+      additionalProperties: false
+    TestCertificateRequests:
+      required:
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        testCertificateRequestCollection:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestCertificateRequest'
+          nullable: true
+      additionalProperties: false
+    TestCertificateUpdate:
+      required:
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        testCertificateUpdateDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestCertificateUpdateDetail'
+          nullable: true
+      additionalProperties: false
+    TestCertificateUpdateDetail:
+      required:
+        - baleDescription
+        - bales
+        - certificateIdentity
+        - client
+        - reissueType
+        - woolBase
+      type: object
+      properties:
+        certificateIdentity:
+          minLength: 1
+          type: string
+          description: Generic string field.
+        reissueType:
+          $ref: '#/components/schemas/ReissueType'
+        client:
+          minLength: 1
+          type: string
+          description: Generic string field.
+        bales:
+          type: integer
+          description: Numeric field.
+          format: int32
+        baleDescription:
+          minLength: 1
+          type: string
+          description: Generic alphanumeric field.
+        woolBase:
+          pattern: '/^\d+(\.\d{2})?$/'
+          type: number
+          description: Decimal field with two digits after the decimal point.
+          format: double
+        woolPreparationCategoryFrom:
+          $ref: '#/components/schemas/WoolPreparationCategory'
+        woolPreparationCategoryTo:
+          $ref: '#/components/schemas/WoolPreparationCategory'
+        mulesingStatusFrom:
+          $ref: '#/components/schemas/MulesingStatus'
+        mulesingStatusTo:
+          $ref: '#/components/schemas/MulesingStatus'
+        saleIdentityFrom:
+          type: string
+          description: 'Generic string field, optional.'
+          nullable: true
+        saleIdentityTo:
+          type: string
+          description: 'Generic string field, optional.'
+          nullable: true
+        lotIdentityFrom:
+          type: string
+          description: 'Generic alphanumeric field, optional.'
+          nullable: true
+        lotIdentityTo:
+          type: string
+          description: 'Generic alphanumeric field, optional.'
           nullable: true
       additionalProperties: false
     TestCertificates:
@@ -3733,6 +4469,192 @@ components:
           type: boolean
           description: A Flag to determine if Compnay ABN apply to invoice
       additionalProperties: false
+    TestRequestVerification:
+      required:
+        - hashTotal
+        - laboratory
+        - updatePreviousData
+      type: object
+      properties:
+        laboratory:
+          $ref: '#/components/schemas/Laboratory'
+        growerCode:
+          type: string
+          description: Optional alphanumeric field for grower code.
+          nullable: true
+        growerName:
+          type: string
+          description: Optional alphanumeric field for grower name.
+          nullable: true
+        coreSampleWeight:
+          type: integer
+          description: Optional numeric field for core sample weight.
+          format: int32
+          nullable: true
+        coreTestSamplingDate:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Optional date field for core test sampling.
+          format: date
+          nullable: true
+        coresPerBale:
+          type: integer
+          description: Optional numeric field for cores per bale.
+          format: int32
+          nullable: true
+        grabsPerBale:
+          type: integer
+          description: Optional numeric field for grabs per bale.
+          format: int32
+          nullable: true
+        updatePreviousData:
+          type: boolean
+          description: This field indicates whether data sent on a previous transmission is to be updated by data in the current transmission.
+        hashTotal:
+          type: integer
+          description: Required numeric field for hash total.
+          format: int32
+        isYieldAndMicronTestRequired:
+          type: boolean
+          nullable: true
+        isLengthAndStrengthTestRequired:
+          type: boolean
+          nullable: true
+        isLengthOnlyTestRequired:
+          type: boolean
+          nullable: true
+        isColourTestRequired:
+          type: boolean
+          nullable: true
+        isLaserscanTestRequired:
+          type: boolean
+          nullable: true
+        isAirflowTestRequired:
+          type: boolean
+          nullable: true
+        isOFDATestRequired:
+          type: boolean
+          nullable: true
+        isDarkAndMedullatedFibreTestRequired:
+          type: boolean
+          nullable: true
+        isPesticideResidueTestRequired:
+          type: boolean
+          nullable: true
+      additionalProperties: false
+    TestRequestsVerification:
+      required:
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        testRequestsVerificationDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestRequestsVerificationDetail'
+          nullable: true
+      additionalProperties: false
+    TestRequestsVerificationDetail:
+      required:
+        - testDataHeader
+        - testRequestVerification
+      type: object
+      properties:
+        testDataHeader:
+          $ref: '#/components/schemas/TestDataHeader'
+        testRequestVerification:
+          $ref: '#/components/schemas/TestRequestVerification'
+        contractLimitRequirements:
+          $ref: '#/components/schemas/ContractLimitRequirements'
+        darkAndMedullatedFibreRiskDetails:
+          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskDetails'
+        bales:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bale'
+          nullable: true
+      additionalProperties: false
+    TestStatus:
+      required:
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        testStatusDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestStatusDetail'
+          nullable: true
+      additionalProperties: false
+    TestStatusDetail:
+      required:
+        - certificateIDPrefix
+        - chargeCode
+        - clientCode
+        - weightNote
+      type: object
+      properties:
+        certificateIDPrefix:
+          $ref: '#/components/schemas/CertificateIDPrefix'
+        weightNote:
+          minLength: 1
+          type: string
+          description: Required generic string field for weight note.
+        clientCode:
+          minLength: 1
+          type: string
+          description: Required numeric field for client code.
+        chargeCode:
+          minLength: 1
+          type: string
+          description: Required numeric field for charge code.
+        lsSampleID:
+          type: string
+          description: Optional generic string field for L/S Sample ID.
+          nullable: true
+        coreSampleReceived:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Optional date field for when the core sample was received.
+          format: date
+          nullable: true
+        lsSampleReceived:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Optional date field for when the L/S sample was received.
+          format: date
+          nullable: true
+        trvMatched:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Optional date field for when the TRV matched.
+          format: date
+          nullable: true
+        coreSampleCheckTest:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Optional date field for core sample check test.
+          format: date
+          nullable: true
+        lsRetuftRequired:
+          $ref: '#/components/schemas/LsRetuftRequired'
+        lsRetuftReceived:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Optional date field for when L/S retuft was received.
+          format: date
+          nullable: true
+        coreTestRecoreRequired:
+          $ref: '#/components/schemas/CoreTestRecoreRequired'
+        coreTestRecoreReceived:
+          pattern: '/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/'
+          type: string
+          description: Optional date field for when the core test recore was received.
+          format: date
+          nullable: true
+      additionalProperties: false
     TransmissionHeader:
       required:
         - abn
@@ -3807,52 +4729,59 @@ components:
       additionalProperties: false
     TransmissionType:
       enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 11
-        - 13
-        - 16
-        - 17
-        - 50
-        - 52
-        - 55
-        - 56
-        - 60
-        - 64
-        - 98
-        - 99
-      type: integer
-      description: 'The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement'
-      format: int32
+        - LotInvoices
+        - DeliveryOrders
+        - AuctionCatalogues
+        - PrivateCatalogues
+        - GroupInvoices
+        - AuctionCatalogueUpdates
+        - RequestPostSalePrintingOfPreSaleCertificates
+        - Statements
+        - TestCertificateRequests
+        - OrganisationDetails
+        - LotPriceAndBuyer
+        - DeliveryOrderSummary
+        - PaymentAdvice
+        - TestCertificate
+        - TestStatus
+        - TestRequestVerification
+        - DarkAndMedullatedFibreRiskVerification
+        - TestCertificateUpdate
+        - PaymentConfirmationFile
+        - TextFile
+        - PasswordReplacement
+      type: string
+      description: 'The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />LotInvoices: Code: 0. Lot Invoices<br />DeliveryOrders: Code: 1. Delivery Orders<br />AuctionCatalogues: Code: 2. Auction Catalogues<br />PrivateCatalogues: Code: 3. Private Catalogues<br />GroupInvoices: Code: 4. Group Invoices<br />AuctionCatalogueUpdates: Code: 5. Auction Catalogue Updates<br />RequestPostSalePrintingOfPreSaleCertificates: Code: 6. Request Post-Sale Printing of Pre-Sale Certificates<br />Statements: Code: 7. Statements<br />TestCertificateRequests: Code: 8. Test Certificate Requests<br />OrganisationDetails: Code: 11. Organisation Details<br />LotPriceAndBuyer: Code: 13. Lot Price and Buyer<br />DeliveryOrderSummary: Code: 16. Delivery Order Summary<br />PaymentAdvice: Code: 17. Payment Advice<br />TestCertificate: Code: 50. Test Certificate<br />TestStatus: Code: 52. Test Status<br />TestRequestVerification: Code: 55. Test Request Verification<br />DarkAndMedullatedFibreRiskVerification: Code: 56. Dark and Medullated Fibre Risk Verification<br />TestCertificateUpdate: Code: 60. Test Certificate Update<br />PaymentConfirmationFile: Code: 64. Payment Confirmation File<br />TextFile: Code:98. Text File<br />PasswordReplacement: Code: 99. Password Replacement'
     TransmissionTypeForAuctionCatalogue:
       enum:
-        - 2
-        - 3
-        - 5
-      type: integer
-      description: '<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates'
-      format: int32
+        - AuctionCatalogues
+        - PrivateCatalogues
+        - AuctionCatalogueUpdates
+      type: string
+      description: '<br />AuctionCatalogues: Code: 2. Auction Catalogues<br />PrivateCatalogues: Code: 3. Private Catalogues<br />AuctionCatalogueUpdates: Code: 5. Auction Catalogue Updates'
     UpdateType:
       enum:
-        - A
-        - C
-        - D
+        - Add
+        - Change
+        - Delete
       type: string
-      description: 'A flag to indicate what type of change has been made to an item.<br />A: The entry is to be added<br />C: The entry is to be changed<br />D: The entry is to be deleted'
+      description: 'A flag to indicate what type of change has been made to an item.<br />Add: Code: A. The entry is to be added<br />Change: Code: C. The entry is to be changed<br />Delete: Code: D. The entry is to be deleted'
     WeightUnit:
       enum:
-        - 0
-        - 1
-      type: integer
-      description: '0: Kilograms<br />1: Pounds'
-      format: int32
+        - Kilograms
+        - Pounds
+      type: string
+      description: 'Kilograms: Code: 0. Kilograms<br />Pounds: Code: 1. Pounds'
+    WoolPreparationCategory:
+      enum:
+        - BulkClass
+        - PresaleTestCertificateOtherGrowerLot
+        - PremiumTest
+        - SubjectivelyAppraisedInterlot
+        - PresaleTestCertificateClassedGrowerLot
+        - BulkClassQualityManaged
+      type: string
+      description: 'BulkClass: Code: B. Bulk Class<br />PresaleTestCertificateOtherGrowerLot: Code: D. PTC (Pre-Sale Test Certificate – Other Grower Lot)<br />PremiumTest: Code: F. Premium Test<br />SubjectivelyAppraisedInterlot: Code: I. Subjectively Appraised Interlot<br />PresaleTestCertificateClassedGrowerLot: Code: P. PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />BulkClassQualityManaged: Code: Q. Bulk Class – Quality Managed'
     WoolSaleHeaderExtension:
       required:
         - dateStorageChargeCommences
@@ -4050,20 +4979,20 @@ components:
       additionalProperties: false
     WoolState:
       enum:
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
-        - A
-        - C
-        - M
+        - Greasy
+        - Dead
+        - Slipe
+        - Scoured
+        - Carbonised
+        - WoolTops
+        - WoolNoils
+        - CardedSliver
+        - OtherProcessedWool
+        - Alpaca
+        - Cashmere
+        - Mohair
       type: string
-      description: 'The state of the wool itemised in the invoice.<br />1: Greasy<br />2: Dead<br />3: Slipe<br />4: Scoured<br />5: Carbonised<br />6: Wool tops<br />7: Wool noils<br />8: Carded sliver<br />9: Other processed wool<br />A: Alpaca<br />C: Cashmere<br />M: Mohair'
+      description: 'The state of the wool itemised in the invoice.<br />Greasy: Code: 1. Greasy<br />Dead: Code: 2. Dead<br />Slipe: Code: 3. Slipe<br />Scoured: Code: 4. Scoured<br />Carbonised: Code: 5. Carbonised<br />WoolTops: Code: 6. Wool tops<br />WoolNoils: Code: 7. Wool noils<br />CardedSliver: Code: 8. Carded sliver<br />OtherProcessedWool: Code: 9. Other processed wool<br />Alpaca: Code: A. Alpaca<br />Cashmere: Code: C. Cashmere<br />Mohair: Code: M. Mohair'
     WoolTypeGroup:
       enum:
         - MFLC
@@ -4074,43 +5003,42 @@ components:
       description: 'A code to indicate which section of the sale that lot belongs.<br />MFLC: Merino fleece types<br />MSKT: Merino fleece types<br />XBFS: Merino fleece types<br />ODDS: Merino fleece types'
     YieldType:
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 7
-        - 8
-        - 9
-        - 10
-        - 11
-        - 12
-        - 13
-        - 14
-        - 15
-        - 16
-        - 17
-        - 18
-        - 19
-        - 20
-        - 21
-        - 22
-        - 23
-        - 24
-        - 25
-        - 26
-        - 27
-        - 28
-        - 29
-        - 30
-        - 31
-        - 32
-        - 33
-        - 42
-        - 43
-      type: integer
-      description: 'Yield Type indicates either the type of yield transmitted in another field or record, or the type of yield used to arrive at the value in another field.<br />1: RESERVED<br />2: RESERVED<br />3: ESTIMATED<br />4: Schlumberger Combed Dry (1% TFM)<br />5: Schlumberger Combed Dry (2% TFM)<br />7: Noble Combed in Oil<br />8: IWTO Scoured Yield at 16% Regain<br />9: IWTO Scoured Yield at 17% Regain<br />10: Japanese Clean Scoured<br />11: Australian Carbonising<br />12: IWTO Clean Wool Content, 17% Regain<br />13: United States Custom Clean<br />14: Card Sliver<br />15: ASTM Clean Wool Fibre Present<br />16: Noble Dry Combed<br />17: Schlumberger Combed in Oil (4.6% TFM)<br />18: Noble Combed Dry<br />19: Theoretical Card Sliver<br />20: ASTM Laboratory Scoured Yield<br />21: Conditioned at 12.00%<br />22: Conditioned at 13.00%<br />23: Conditioned at 13.50%<br />24: Conditioned at 13.64%<br />25: Conditioned at 14.00%<br />26: Conditioned at 14.40%<br />27: Conditioned at 15.00%<br />28: Conditioned at 16.00%<br />29: Conditioned at 17.00%<br />30: Conditioned at 18.00%<br />31: Conditioned at 18.25%<br />32: Japanese Clean Scoured at 17%<br />33: New Zealand Process Yield<br />42: IWT0 Schlumberger Oil T&N (2.0% & T.FM.)<br />43: IWTO Clean Wool Content, 16% Regain'
-      format: int32
+        - Reserved
+        - Reserved_1
+        - Estimated
+        - SchlumbergerCombedDry1PercentTFM
+        - SchlumbergerCombedDry2PercentsTFM
+        - NobleCombedInOil
+        - IWTOScouredYieldAt16PercentsRegain
+        - IWTOScouredYieldAt17PercentsRegain
+        - JapaneseCleanScoured
+        - AustralianCarbonising
+        - IWTOCleanWoolContentAt17PercentsRegain
+        - UnitedStatesCustomClean
+        - CardSliver
+        - ASTMCleanWoolFibrePresent
+        - NobleDryCombed
+        - SchlumbergerCombedInOil4Point6PercentsTFM
+        - NobleCombedDry
+        - TheoreticalCardSliver
+        - ASTMLaboratoryScouredYield
+        - ConditionedAt12Percnets
+        - ConditionedAt13Percnets
+        - ConditionedAt13Point5Percnets
+        - ConditionedAt13Point64Percents
+        - ConditionedAt14Percents
+        - ConditionedAt14Point4Percents
+        - ConditionedAt15Percents
+        - ConditionedAt16Percents
+        - ConditionedAt17Percents
+        - ConditionedAt18Percents
+        - ConditionedAt18Point25Percents
+        - JapaneseCleanScouredAt17Percents
+        - NewZealandProcessYield
+        - IWT0SchlumbergerOil
+        - IWTOCleanWoolContent
+      type: string
+      description: 'Yield Type indicates either the type of yield transmitted in another field or record, or the type of yield used to arrive at the value in another field.<br />Reserved: Code: 1. RESERVED<br />Reserved_1: Code: 2. RESERVED<br />Estimated: Code: 3. Estimated.<br />SchlumbergerCombedDry1PercentTFM: Code: 4. Schlumberger Combed Dry (1% TFM)<br />SchlumbergerCombedDry2PercentTFM: Code: 5. Schlumberger Combed Dry (2% TFM)<br />NobleCombedInOil: Code: 7. Noble Combed in Oil<br />IWTOScouredYieldAt16PercentsRegain: Code: 8. IWTO Scoured Yield at 16% Regain<br />IWTOScouredYieldAt17PercentsRegain: Code: 9. IWTO Scoured Yield at 17% Regain<br />JapaneseCleanScoured: Code: 10. Japanese Clean Scoured<br />AustralianCarbonising: Code: 11. Australian Carbonising<br />IWTOCleanWoolContentAt17PercentsRegain: Code: 12. IWTO Clean Wool Content, 17% Regain<br />UnitedStatesCustomClean: Code: 13. United States Custom Clean<br />CardSliver: Code: 14. Card Sliver<br />ASTMCleanWoolFibrePresent: Code: 15. ASTM Clean Wool Fibre Present<br />NobleDryCombed: Code: 16. Noble Dry Combed<br />SchlumbergerCombedInOil4Point6PercentsTFM: Code: 17. Schlumberger Combed in Oil (4.6% TFM)<br />NobleCombedDry: Code: 18. Noble Combed Dry<br />Theoretical Card Sliver: Code: 19. Theoretical Card Sliver<br />ASTMLaboratoryScouredYield: Code: 20. ASTM Laboratory Scoured Yield<br />ConditionedAt12Percnets: Code: 21. Conditioned at 12.00%<br />ConditionedAt13Percnets: Code: 22. Conditioned at 13.00%<br />ConditionedAt13Point5Percnets: Code: 23. Conditioned at 13.50%<br />24: Conditioned at 13.64%<br />ConditionedAt14Percents: Code: 25. Conditioned at 14.00%<br />ConditionedAt14Point4Percents: Code: 26. Conditioned at 14.40%<br />ConditionedAt15Percents: Code: 27. Conditioned at 15.00%<br />ConditionedAt16Percents: Code: 28. Conditioned at 16.00%<br />ConditionedAt17Percents: Code: 29. Conditioned at 17.00%<br />ConditionedAt18Percents: Code: 30. Conditioned at 18.00%<br />ConditionedAt18Point25Percents: Code: 31. Conditioned at 18.25%<br />JapaneseCleanScouredAt17Percents: Code: 32. Japanese Clean Scoured at 17%<br />NewZealandProcessYield: Code: 33. New Zealand Process Yield<br />IWT0SchlumbergerOil: Code: 42. IWT0 Schlumberger Oil T&N (2.0% & T.FM.)<br />IWTOCleanWoolContent: Code: 43. IWTO Clean Wool Content, 16% Regain'
   securitySchemes:
     Bearer:
       type: apiKey
