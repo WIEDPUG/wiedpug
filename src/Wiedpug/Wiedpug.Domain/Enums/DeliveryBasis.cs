@@ -11,9 +11,10 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum DeliveryBasis
     {
-        [Description("D: Delivery Nominated Destination")]
-        D,
-        [Description("L: Loaded on Transport")]
-        L
+        [Description("DeliveryNominatedDestination: Code: D. Delivery Nominated Destination")]
+        DeliveryNominatedDestination,
+
+        [Description("LoadedOnTransport: Code: L. Loaded on Transport")]
+        LoadedOnTransport
     }
 }

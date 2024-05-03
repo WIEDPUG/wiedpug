@@ -11,10 +11,10 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum InvoiceMassFlag
     {
-        [Description("G: Invoice Mass is a Gain")]
-        G,
+        [Description("Gain: Code: G. Invoice Mass is a Gain")]
+        Gain,
 
-        [Description("L: Invoice Mass is a Loss")]
-        L,
+        [Description("Loss: Code: L. Invoice Mass is a Loss")]
+        Loss,
     }
 }

@@ -23,7 +23,7 @@ namespace Wiedpug.Domain.Entities
         public required double CreditNoteAmount { get; set; }
 
         [Required]
-        public required Boolean IsGSTApplicable { get; set; }
+        public required bool IsGSTApplicable { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]

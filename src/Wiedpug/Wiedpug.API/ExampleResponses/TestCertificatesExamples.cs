@@ -47,10 +47,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.M,
+                            LotType = LotType.ClassedBulkClassLotQualityManaged,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.R,
+                            ReportingFlag = ReportingFlag.ResultsCertified,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -64,7 +64,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Vmb = 10.0,
                                 HardHeadsBase =3.5,
                                 Yield1 = 1.2,
-                                YieldType1 = YieldType.RESERVED,
+                                YieldType1 = YieldType.Reserved,
                                 RetestFlag = RetestFlag.NormalTest,
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
@@ -82,7 +82,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.C,
+                                     ReportingFlag = ReportingFlag.ResultsCertified,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -164,10 +164,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.M,
+                            LotType = LotType.ClassedGrowerLot,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.R,
+                            ReportingFlag = ReportingFlag.InformationOnly,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -203,7 +203,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.C,
+                                     ReportingFlag = ReportingFlag.ResultsCertified,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -345,10 +345,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.M,
+                            LotType = LotType.ClassedGrowerLot,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.R,
+                            ReportingFlag = ReportingFlag.InformationOnly,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -362,7 +362,7 @@ namespace Wiedpug.API.ExampleResponses
                             Vmb = 10.0,
                             HardHeadsBase =3.5,
                             Yield1 = 1.2,
-                            YieldType1 = YieldType.RESERVED,
+                            YieldType1 = YieldType.Reserved,
                             RetestFlag = RetestFlag.NormalTest,
                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                             Vm1 = 20.0
@@ -380,7 +380,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.C,
+                                     ReportingFlag = ReportingFlag.ResultsCertified,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -462,10 +462,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.M,
+                            LotType = LotType.ClassedGrowerLot,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.R,
+                            ReportingFlag = ReportingFlag.InformationOnly,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -501,7 +501,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.C,
+                                     ReportingFlag = ReportingFlag.ResultsCertified,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -572,19 +572,6 @@ namespace Wiedpug.API.ExampleResponses
                     }
                 }
                 }
-            };
-        }
-    }
-
-    public class TestCertificates200Example : IExamplesProvider<ApiResult>
-    {
-        public ApiResult GetExamples()
-        {
-            return new ApiResult()
-            {
-                IsSuccessful = true,
-                Message = null,
-                Data = null
             };
         }
     }

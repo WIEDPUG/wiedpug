@@ -6,32 +6,24 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {    
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    [RemoveUnderscoreFromEnumItem]
-    [Description("")]
     public enum RecordTypesToBeExcludedForAuctionCatalogue
     {
-        [Description("21: Lot Header")]
-        [EnumMember(Value = "21")]
-        _21,
+        [Description("LotHeader: Code: 21. Lot Header")]
+        LotHeader,
 
-        [Description("51C: Colour Details")]
-        [EnumMember(Value = "51C")]
-        _51C,
+        [Description("ColourDetails: Code: 51C. Colour Details")]
+        ColourDetails,
 
-        [Description("79B: Interlot component bale header")]
-        [EnumMember(Value = "79B")]
-        _79B,
+        [Description("InterlotComponentBaleHeader: Code: 79B. Interlot component bale header")]
+        InterlotComponentBaleHeader,
 
-        [Description("84: Bale Identification")]
-        [EnumMember(Value = "84")]
-        _84,
+        [Description("BaleIdentification: Code: 84. Bale Identification")]
+        BaleIdentification,
 
-        [Description("31: Fibre Diameter Histogram Header")]
-        [EnumMember(Value = "31")]
-        _31,
+        [Description("FibreDiameterHistogramHeader: Code: 31. Fibre Diameter Histogram Header")]
+        FibreDiameterHistogramHeader,
 
-        [Description("32A: Fibre Diameter Histogram Details")]
-        [EnumMember(Value = "32A")]
-        _32A,
+        [Description("FibreDiameterHistogramDetails: Code: 32A. Fibre Diameter Histogram Details")]
+        FibreDiameterHistogramDetails
     }
 }

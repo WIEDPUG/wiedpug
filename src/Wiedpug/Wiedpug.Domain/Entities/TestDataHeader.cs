@@ -48,11 +48,11 @@ namespace Wiedpug.Domain.Entities
         /// A Flag to determine if GST apply to invoice
         /// </summary>
         [Required]
-        public required Boolean IsGSTApplicable { get; set; }
+        public required bool IsGSTApplicable { get; set; }
         /// <summary>
         /// A Flag to determine if Compnay ABN apply to invoice
         /// </summary>
         [Required]
-        public required Boolean IsCompanyABNApplicable { get; set; }
+        public required bool IsCompanyABNApplicable { get; set; }
     }
 }

@@ -10,8 +10,8 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 IsSuccessful = true,
-                Message = "Success message if applicable, otherwise can be set to Null",
-                Data = "{Response Data depending on the document type's data structure e.g. Auction Catalogue Data}"
+                Message = null,
+                Data = null
             };
         }
     }

@@ -7,64 +7,64 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum QualityScheme
     {
-        [Description("ASWG: Australian Superfine Woolgrower Association (Member)")]
-        ASWG,
+        [Description("AustralianSuperfineWoolgrowerAssociation: Code: ASWG. Australian Superfine Woolgrower Association (Member)")]
+        AustralianSuperfineWoolgrowerAssociation,
 
-        [Description("AUTH: Authentico")]
-        AUTH,
+        [Description("Authentico: Code: AUTH. Authentico")]
+        Authentico,
 
-        [Description("BETC: Better Choices (Pain Mitigation)")]
-        BETC,
+        [Description("BetterChoices: Code: BETC. Better Choices (Pain Mitigation)")]
+        BetterChoices,
 
-        [Description("BIOC: BioClip (Biologically Harvested)")]
-        BIOC,
+        [Description("BioClip: Code: BIOC. BioClip (Biologically Harvested)")]
+        BioClip,
 
-        [Description("DAL3: Dalcare-3")]
-        DAL3,
+        [Description("Dalcare3: Code: DAL3. Dalcare-3")]
+        Dalcare3,
 
-        [Description("EUEC: EU Eco label (meets EU Eco standards)")]
-        EUEC,
+        [Description("EUEcoLabel: Code: EUEC. EU Eco label (meets EU Eco standards)")]
+        EUEcoLabel,
 
-        [Description("MTEC: Merino Tech WA")]
-        MTEC,
+        [Description("MerinoTechWA: Code: MTEC. Merino Tech WA")]
+        MerinoTechWA,
 
-        [Description("ACO: Organic - Australian Certified Organic")]
-        ACO,
+        [Description("AustralianCertifiedOrganic: Code: ACO. Organic - Australian Certified Organic")]
+        AustralianCertifiedOrganic,
 
-        [Description("DBAA: Organic - Demeter Biodynamic Agriculture Aust.")]
-        DBAA,
+        [Description("DemeterBiodynamicAgricultureAustOrganic: Code: DBAA. Organic - Demeter Biodynamic Agriculture Aust.")]
+        DemeterBiodynamicAgricultureAustOrganic,
 
-        [Description("USA: Organic - Meets USA Certification requirements")]
-        USA,
+        [Description("USACertifiedOrganic: Code: USA. Organic - Meets USA Certification requirements")]
+        USACertifiedOrganic,
 
-        [Description("NASA: Organic - National Association for Sustainable Agriculture Aust.")]
-        NASA,
+        [Description("NationalAssociationForSustainableAgricultureOrganic: Code: NASA. Organic - National Association for Sustainable Agriculture Aust.")]
+        NationalAssociationForSustainableAgricultureOrganic,
 
-        [Description("SXC: Organic - Southern Cross Certified")]
-        SXC,
+        [Description("SouthernCrossCertifiedOrganic: Code: SXC. Organic - Southern Cross Certified")]
+        SouthernCrossCertifiedOrganic,
 
-        [Description("RWS: Responsible Wool Standard")]
-        RWS,
+        [Description("ResponsibleWoolStandard: Code: RWS. Responsible Wool Standard")]
+        ResponsibleWoolStandard,
 
-        [Description("SBFC: Schute Bell Fibre Care")]
-        SBFC,
+        [Description("SchuteBellFibreCare: Code: SBFC. Schute Bell Fibre Care")]
+        SchuteBellFibreCare,
 
-        [Description("SW: SustainaWOOL")]
-        SW,
+        [Description("SustainaWOOL: Code: SW. SustainaWOOL")]
+        SustainaWOOL,
 
-        [Description("SWAU: SustainaWOOL Gold")]
-        SWAU,
+        [Description("SustainaWOOLGold: Code: SWAU. SustainaWOOL Gold")]
+        SustainaWOOLGold,
 
-        [Description("TQMS: Traprock QMS/TIMS")]
-        TQMS,
+        [Description("TraprockQMSOrTIMS: Code: TQMS. Traprock QMS/TIMS")]
+        TraprockQMSOrTIMS,
 
-        [Description("FAP: Farm Assurance Program")]
-        FAP,
+        [Description("FarmAssuranceProgram: Code: FAP. Farm Assurance Program")]
+        FarmAssuranceProgram,
 
-        [Description("PWIA: PGG Wrightson Integrity Assured")]
-        PWIA,
+        [Description("PGGWrightsonIntegrityAssured: Code: PWIA. PGG Wrightson Integrity Assured")]
+        PGGWrightsonIntegrityAssured,
 
-        [Description("FERN: Woolcare Fernmark")]
-        FERN
+        [Description("WoolcareFernmark: Code: FERN. Woolcare Fernmark")]
+        WoolcareFernmark
     }
 }

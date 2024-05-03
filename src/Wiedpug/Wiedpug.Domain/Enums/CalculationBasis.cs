@@ -9,13 +9,13 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CalculationBasis
     {
-        [Description("B: Post sale charge is levied per bale")]
-        B,
+        [Description("Bale: Code: B. Post sale charge is levied per bale")]
+        Bale,
 
-        [Description("K: The post sale charge is a charge per kil")]
-        K,
+        [Description("Kil: Code: K. The post sale charge is a charge per kil")]
+        Kil,
 
-        [Description("P: The post sale charge is a % of first cost")]
-        P
+        [Description("Percent: Code: P. The post sale charge is a % of first cost")]
+        Percent
     }
 }

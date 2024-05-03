@@ -11,11 +11,13 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum OfferType
     {
-        [Description("P: Previous/Passed-In Price")]
-        P,
-        [Description("N: Negotiable Price")]
-        N,
-        [Description("R: Reserve Price")]
-        R
+        [Description("PreviousOrPassedInPrice: Code: P. Previous/Passed-In Price")]
+        PreviousOrPassedInPrice,
+
+        [Description("NegotiablePrice: Code: N. Negotiable Price")]
+        NegotiablePrice,
+
+        [Description("ReservePrice: Code: R. Reserve Price")]
+        ReservePrice
     }
 }

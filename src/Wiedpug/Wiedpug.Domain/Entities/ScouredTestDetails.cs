@@ -32,16 +32,16 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required string Yield1 { get; set; }
+        public required double Yield1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public string? Yield2 { get; set; }
+        public double? Yield2 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public string? Yield3 { get; set; }
+        public double? Yield3 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public string? Yield4 { get; set; }
+        public double? Yield4 { get; set; }
 
         public YieldType? YieldType1 { get; set; }
 
@@ -54,13 +54,13 @@ namespace Wiedpug.Domain.Entities
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM1 { get; set; }
+        public double? VM1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM2 { get; set; }
+        public double? VM2 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
-        public string? VM3 { get; set; }
+        public double? VM3 { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]

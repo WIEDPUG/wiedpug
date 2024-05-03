@@ -26,7 +26,7 @@ public static class AuctionCatalogueEndpoints
 
         group.MapPost("/",            
             [SwaggerRequestExample(typeof(List<AuctionCatalogue>), typeof(AuctionCatalogueRequestExamples))]
-            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AuctionCatalogueResponse200Example))]
+            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
             [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
             [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
             [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoWritePermissionExample))]
@@ -50,7 +50,7 @@ public static class AuctionCatalogueEndpoints
 
         group.MapPost("/updates",
             [SwaggerRequestExample(typeof(List<AuctionCatalogue>), typeof(AuctionCatalogueUpdatesRequestExample))]
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AuctionCatalogueResponse200Example))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoWritePermissionExample))]
@@ -74,7 +74,7 @@ public static class AuctionCatalogueEndpoints
 
         group.MapPost("/my-new-v2-endpoint",
             [SwaggerRequestExample(typeof(List<AuctionCatalogue>), typeof(AuctionCatalogueUpdatesRequestExample))]
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(AuctionCatalogueResponse200Example))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoWritePermissionExample))]

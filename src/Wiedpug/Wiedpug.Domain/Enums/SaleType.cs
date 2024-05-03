@@ -11,19 +11,19 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]    
     public enum SaleType
     {
-        [Description("A: Auction (open cry)")]
-        A,
+        [Description("Auction: Code: A. Auction (open cry)")]
+        Auction,
 
-        [Description("T: Tender")]
-        T,
+        [Description("Tender: Code: T. Tender")]
+        Tender,
 
-        [Description("O: Offer")]
-        O,
+        [Description("Offer: Code: O. Offer")]
+        Offer,
 
-        [Description("AV: Availability")]
-        AV,
+        [Description("Availability: Code: AV. Availability")]
+        Availability,
 
-        [Description("E: Electronic Sale")]
-        E
+        [Description("ElectronicSale: Code: E. Electronic Sale")]
+        ElectronicSale
     }
 }

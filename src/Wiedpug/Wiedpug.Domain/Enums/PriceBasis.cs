@@ -11,16 +11,16 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum PriceBasis
     {
-        [Description("G: Greasy")]
-        G,
+        [Description("Greasy: Code: G. Greasy")]
+        Greasy,
 
-        [Description("C: CLCOF (ACOF or NZCOF)")]
-        C,
+        [Description("CLCOF: Code: C. CLCOF (ACOF or NZCOF)")]
+        CLCOF,
 
-        [Description("I: CIF")]
-        I,
+        [Description("CIF: Code: I. CIF")]
+        CIF,
 
-        [Description("F: FOB")]
-        F
+        [Description("FOB: Code: F. FOB")]
+        FOB
     }
 }
