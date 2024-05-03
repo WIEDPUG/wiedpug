@@ -67,6 +67,14 @@ versionedGroup.MapOrganizationDetailsEndpoints();
 
 versionedGroup.MapAuctionCatalogueEndpointsV2();
 
+versionedGroup.MapTestStatusEndpoints();
+
+versionedGroup.MapTestCertificateUpdateEndpoints();
+
+versionedGroup.MapTestCertificateRequestsEndpoints();
+
+versionedGroup.MapTestRequestsVerificationEndpoints();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

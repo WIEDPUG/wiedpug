@@ -43,9 +43,9 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
-                            RecordTypesToBeExcludedForAuctionCatalogue._84,
+                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
+                            RecordTypesToBeExcludedForAuctionCatalogue.FibreDiameterHistogramDetails,
+                            RecordTypesToBeExcludedForAuctionCatalogue.ColourDetails,
                         },
                         Season = 23
                     }

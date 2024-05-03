@@ -13,13 +13,16 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum PackMaterial
     {
-        [Description("N: Nylon Packs (complete lots only)")]
-        N,
-        [Description("E: Experimental Packs")]
-        E,
-        [Description("J: Jute packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and/or HDPE 1 and Jute packs)")]
-        J,
-        [Description("K: HDPE1 packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and HDPE 1 packs)")]
-        K
+        [Description("NylonPacks: CodeL: N. Nylon Packs (complete lots only)")]
+        NylonPacks,
+
+        [Description("ExperimentalPacks: Code: E. Experimental Packs")]
+        ExperimentalPacks,
+
+        [Description("JutePacks: Code: J. Jute packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and/or HDPE 1 and Jute packs)")]
+        JutePacks,
+
+        [Description("HDPE1Packs: Code: K. HDPE1 packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and HDPE 1 packs)")]
+        HDPE1Packs
     }
 }

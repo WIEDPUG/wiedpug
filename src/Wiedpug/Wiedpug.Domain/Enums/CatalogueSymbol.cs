@@ -15,33 +15,46 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CatalogueSymbol
     {
-        [Description("A: Dumped Bales")]
-        A,
-        [Description("C: Charity/Good Cause")]
-        C,
-        [Description("D: De-banded")]
-        D,
-        [Description("G: Lot offered under Trial Selling Status")]
-        G,
-        [Description("H: Classed Samples (bearing Classing House stencil)")]
-        H,
-        [Description("M: Machine processed (Decotted, crushed or blended)")]
-        M,
-        [Description("O: Fellmongered")]
-        O,
-        [Description("R: Reconditioned from wet")]
-        R,
-        [Description("S: Wool is unclassed")]
-        S,
-        [Description("T: Tested (where Test House is not AWTA)")]
-        T,
-        [Description("U: Unskirted or Not Skirted to Code of Practice requirements")]
-        U,
-        [Description("W: Broker (Re)classed (Classing House stencil - P cert. only)")]
-        W,
-        [Description("X: Contains Broker Inspected (Classing House stencil - I cert. only)")]
-        X,
-        [Description("Y: Pigmented and/or Medullated Fibre Risk (Run with or Black section)")]
-        Y
+        [Description("DumpedBales: Code: A. Dumped Bales")]
+        DumpedBales,
+
+        [Description("CharityoRGoodCause: Code: C. Charity/Good Cause")]
+        CharityoRGoodCause,
+
+        [Description("Debanded: Code: D. De-banded")]
+        Debanded,
+
+        [Description("LotOfferedUnderTrialSellingStatus: Code: G. Lot offered under Trial Selling Status")]
+        LotOfferedUnderTrialSellingStatus,
+
+        [Description("ClassedSamples: Code: H. Classed Samples (bearing Classing House stencil)")]
+        ClassedSamples,
+
+        [Description("MachineProcessed: Code: M. Machine processed (Decotted, crushed or blended)")]
+        MachineProcessed,
+
+        [Description("Fellmongered: Code: O. Fellmongered")]
+        Fellmongered,
+
+        [Description("ReconditionedFromWet: Code: R. Reconditioned from wet")]
+        ReconditionedFromWet,
+
+        [Description("WoolIsUnclassed: Code: S. Wool is unclassed")]
+        WoolIsUnclassed,
+
+        [Description("Tested: Code: T. Tested (where Test House is not AWTA)")]
+        Tested,
+
+        [Description("Unskirted: Code: U. Unskirted or Not Skirted to Code of Practice requirements")]
+        Unskirted,
+
+        [Description("BrokerClassed: Code: W. Broker (Re)classed (Classing House stencil - P cert. only)")]
+        BrokerClassed,
+
+        [Description("ContainsBrokerInspected: Code: X. Contains Broker Inspected (Classing House stencil - I cert. only)")]
+        ContainsBrokerInspected,
+
+        [Description("PigmentedAndOrMedullatedFibreRisk: Code: Y. Pigmented and/or Medullated Fibre Risk (Run with or Black section)")]
+        PigmentedAndOrMedullatedFibreRisk
     }
 }

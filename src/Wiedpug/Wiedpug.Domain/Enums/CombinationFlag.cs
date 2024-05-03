@@ -5,50 +5,49 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    [RemoveUnderscoreFromEnumItem]
     [Description("This field indicates the following: If an Australian Securities Exchange combination was requested and the combination satisfies the contract parameters of ASX the appropriate flag will be transmitted.")]
     public enum CombinationFlag
     {
-        [Description("N: Normal Combination")]
-        N,
+        [Description("Normal: Code: N. Normal Combination")]
+        Normal,
 
-        [Description("S: ASX24 Combination (formerly SFE)")]
-        S,
+        [Description("ASX24: Code: S. ASX24 Combination (formerly SFE)")]
+        ASX24,
 
-        [Description("4: ASX19.5 54W Combination")]
-        _4,
+        [Description("ASX19Point5: Code: 4. ASX19.5 54W Combination")]
+        ASX19Point5,
 
-        [Description("5: ASX21.0 55W Combination")]
-        _5,
+        [Description("ASX21: Code: 5. ASX21.0 55W Combination")]
+        ASX21,
 
-        [Description("6: ASX22.6 56W Combination")]
-        _6,
+        [Description("ASX22Point6: Code: 6. ASX22.6 56W Combination")]
+        ASX22Point6,
 
-        [Description("7: ASX19.5 54W, ASX21.0 55W and ASX22.6 56W Combination")]
-        _7,
+        [Description("ASX19Point5AndASX21AndASX22Point6: Code: 7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W Combination")]
+        ASX19Point5AndASX21AndASX22Point6,
 
-        [Description("8: ASX19.5 54W and ASX21.0 55W Combination")]
-        _8,
+        [Description("ASX19Point5AndASX21: Code: 8. ASX19.5 54W and ASX21.0 55W Combination")]
+        ASX19Point5AndASX21,
 
         [Description("9: ASX21.0 55W and ASX22.6 56W Combination")]
-        _9,
+        ASX21AndASX22Point6,
 
-        [Description("A: ICAP Wool Contract - China Type 54P")]
-        A,
+        [Description("ICAPWoolContractChinaType54P: Code: A. ICAP Wool Contract - China Type 54P")]
+        ICAPWoolContractChinaType54P,
 
-        [Description("B: ICAP Wool Contract - China Type 54")]
-        B,
+        [Description("ICAPWoolContractChinaType54: Code: B. ICAP Wool Contract - China Type 54")]
+        ICAPWoolContractChinaType54,
 
-        [Description("C: ICAP Wool Contract - China Type 55")]
-        C,
+        [Description("ICAPWoolContractChinaType55: Code: C. ICAP Wool Contract - China Type 55")]
+        ICAPWoolContractChinaType55,
 
-        [Description("D: ICAP Wool Contract - China Type 56")]
-        D,
+        [Description("ICAPWoolContractChinaType56: Code: D. ICAP Wool Contract - China Type 56")]
+        ICAPWoolContractChinaType56,
 
-        [Description("E: ICAP Wool Contract - China Type 424")]
-        E,
+        [Description("ICAPWoolContractChinaType424: Code: E. ICAP Wool Contract - China Type 424")]
+        ICAPWoolContractChinaType424,
 
-        [Description("F: ICAP Wool Contract - China Type Standard")]
-        F
+        [Description("ICAPWoolContractChinaTypeStandard: Code: F. ICAP Wool Contract - China Type Standard")]
+        ICAPWoolContractChinaTypeStandard
     }
 }

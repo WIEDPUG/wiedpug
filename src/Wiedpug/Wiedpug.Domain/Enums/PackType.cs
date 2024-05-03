@@ -5,59 +5,58 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    [RemoveUnderscoreFromEnumItem]
     [Description("A code used to indicate how the wool has been baled. The most common type is Farm bales. <strong>Original</strong> - the pack type when the wool was originally baled. <strong>Preferred</strong> - The pack type which the buyer would prefer to be used when his wool is dumped.")]
     public enum PackType
     {
-        [Description("0: Standard (farm) bale")]
-        _0,
+        [Description("StandardBale: Code: 0. Standard (farm) bale")]
+        StandardBale,
 
-        [Description("1: Bag/butt")]
-        _1,
+        [Description("BagOrButt: Code: 1. Bag/butt")]
+        BagOrButt,
 
-        [Description("2: Lightweight bale")]
-        _2,
+        [Description("LightweightBale: Code: 2. Lightweight bale")]
+        LightweightBale,
 
-        [Description("3: Jumbo bale")]
-        _3,
+        [Description("JumboBale: Code: 3. Jumbo bale")]
+        JumboBale,
 
-        [Description("4: Single bales (normal density dumped)")]
-        _4,
+        [Description("SingleBalesNormalDensityDumped: Code: 4. Single bales (normal density dumped)")]
+        SingleBalesNormalDensityDumped,
 
-        [Description("5: Single bales (high density dumped)")]
-        _5,
+        [Description("SingleBalesHighDensityDumped: Code: 5. Single bales (high density dumped)")]
+        SingleBalesHighDensityDumped,
 
-        [Description("6: Single bales (super high density dumped)")]
-        _6,
+        [Description("SingleBalesSuperHighDensityDumped: Code: 6. Single bales (super high density dumped)")]
+        SingleBalesSuperHighDensityDumped,
 
-        [Description("7: 3 bale tripack (super high density dumped)")]
-        _7,
+        [Description("BaleTripackSuperHighDensityDumped: Code: 7. 3 bale tripack (super high density dumped)")]
+        ThreeBaleTripack,
 
-        [Description("8: 2 bale tripack (super high density dumped)")]
-        _8,
+        [Description("TwoBaleTripac: Code: 8. 2 bale tripack (super high density dumped)")]
+        TwoBaleTripack,
 
-        [Description("9: U bales")]
-        _9,
+        [Description("UBales: Code: 9. U bales")]
+        UBales,
 
-        [Description("A: 4 or 6 bale unitised (normal density dumped)")]
-        A,
+        [Description("FourOrSixBaleUnitisedNormalDensityDumped: Code: A. 4 or 6 bale unitised (normal density dumped)")]
+        FourOrSixBaleUnitisedNormalDensityDumped,
 
-        [Description("B: 4 or 6 bale unitised (high density dumped)")]
-        B,
+        [Description("FourOrSixBaleUnitisedHighDensityDumped: Code: B. 4 or 6 bale unitised (high density dumped)")]
+        FourOrSixBaleUnitisedHighDensityDumped,
 
-        [Description("C: 4 or 6 bale unitised (super high density dumped)")]
-        C,
+        [Description("FourOrSixBaleUnitisedSuperHighDensityDumped: Code: C. 4 or 6 bale unitised (super high density dumped)")]
+        FourOrSixBaleUnitisedSuperHighDensityDumped,
 
-        [Description("D: Two Bale Module (2BM)")]
-        D,
+        [Description("TwoBaleModule: Code: D. Two Bale Module (2BM)")]
+        TwoBaleModule,
 
-        [Description("E: J9 size bale used for scoured wool")]
-        E,
+        [Description("J9SizeBaleForScouredWool: Code: E. J9 size bale used for scoured wool")]
+        J9SizeBaleForScouredWool,
 
-        [Description("F: J12 size bale used for scoured wool")]
-        F,
+        [Description("J12SizeBaleForScouredWool: Code: F. J12 size bale used for scoured wool")]
+        J12SizeBaleForScouredWool,
 
-        [Description("Z: Mixed (to be used with groups only, that is, record type 12)")]
-        Z
+        [Description("Mixed: Code: Z. Mixed (to be used with groups only, that is, record type 12)")]
+        Mixed
     }
 }

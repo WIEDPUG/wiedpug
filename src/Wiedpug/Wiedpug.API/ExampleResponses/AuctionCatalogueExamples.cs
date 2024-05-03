@@ -53,12 +53,12 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     CentreStorage = "M",
                                     SaleDate = "2017-01-19",
-                                    WoolState = WoolState._1,
-                                    PackType = PackType._0,
+                                    WoolState = WoolState.Greasy,
+                                    PackType = PackType.TwoBaleTripack,
                                     Currency = "AUD",
                                     WeightUnit = WeightUnit.Kilograms,
                                     PostSaleCharge = 25.96,
-                                    CalculationBasis = CalculationBasis.B,
+                                    CalculationBasis = CalculationBasis.Bale,
                                     FreightCharge = 0,
                                     FreightRebate = 3.25,
                                     ChargePerLot = 0,
@@ -70,7 +70,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SellingOrganisation = "ABCD",
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
-                                    DeliveryBasis = DeliveryBasis.D,
+                                    DeliveryBasis = DeliveryBasis.DeliveryNominatedDestination,
                                     CentreDelivery = null,
                                     AlternateDelivery = null
                                 },
@@ -102,12 +102,12 @@ namespace Wiedpug.API.ExampleResponses
                                             CataloguePageNumber = 65,
                                             IsNoLot = null,
                                             SourceCode = null,
-                                            UpdateType = UpdateType.A,
+                                            UpdateType = UpdateType.Add,
                                             CatalogueSymbols = null,
-                                            PackMaterial = PackMaterial.N,
-                                            LotType = LotType.P,
+                                            PackMaterial = PackMaterial.NylonPacks,
+                                            LotType = LotType.OtherBulkClassLot,
                                             LightestIndividualBaleWeight = 149,
-                                            ReportingFlag = ReportingFlag.C,
+                                            ReportingFlag = ReportingFlag.ResultsCertified,
                                             FirstOfferSeason = null,
                                             FirstOfferSaleIdentity = null,
                                             FirstOfferLotIdentity = null,
@@ -117,7 +117,7 @@ namespace Wiedpug.API.ExampleResponses
                                             WeightUnit = null,
                                             OfferType = null,
                                             ClientCrossReference = null,
-                                            PackCondition = PackCondition.N
+                                            PackCondition = PackCondition.NewPack
                                         },
                                         LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                         {
@@ -146,7 +146,7 @@ namespace Wiedpug.API.ExampleResponses
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
                                                 QualitySchemes = null,
-                                                MulesingStatus = "AA"
+                                                MulesingStatus = MulesingStatus.NonMulesed
                                             }
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
@@ -193,7 +193,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Vm1 = 0.0,
                                             Vm2 = 0.9,
                                             Vm3 = 0.0,
-                                            DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk._1
+                                            DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.NotApplicable
                                         },
                                         Histograms = new List<FibreDiameterHistogram>
                                         {
@@ -204,7 +204,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     CoefficientOfVariation = 19.9,
                                                     ComfortFactorPercentage = 98.7,
                                                     FibresMeasured = 4000,
-                                                    ReportingFlag = ReportingFlag.C,
+                                                    ReportingFlag = ReportingFlag.ResultsCertified,
                                                     Instrument = Instrument.LaserScan,
                                                     SubSamplingMethod = SubSamplingMethod.Minicore,
                                                     NumberOfSpecimens = 4,
@@ -308,12 +308,12 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     CentreStorage = "M",
                                     SaleDate = "2017-01-19",
-                                    WoolState = WoolState._1,
-                                    PackType = PackType._0,
+                                    WoolState = WoolState.Greasy,
+                                    PackType = PackType.Mixed,
                                     Currency = "AUD",
                                     WeightUnit = WeightUnit.Kilograms,
                                     PostSaleCharge = 25.96,
-                                    CalculationBasis = CalculationBasis.B,
+                                    CalculationBasis = CalculationBasis.Bale,
                                     FreightCharge = 0,
                                     FreightRebate = 3.25,
                                     ChargePerLot = 0,
@@ -325,7 +325,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SellingOrganisation = "ABCD",
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
-                                    DeliveryBasis = DeliveryBasis.D,
+                                    DeliveryBasis = DeliveryBasis.DeliveryNominatedDestination,
                                     CentreDelivery = null,
                                     AlternateDelivery = null
                                 },
@@ -357,12 +357,12 @@ namespace Wiedpug.API.ExampleResponses
                                             CataloguePageNumber = 65,
                                             IsNoLot = null,
                                             SourceCode = null,
-                                            UpdateType = UpdateType.A,
+                                            UpdateType = UpdateType.Add,
                                             CatalogueSymbols = null,
-                                            PackMaterial = PackMaterial.N,
-                                            LotType = LotType.P,
+                                            PackMaterial = PackMaterial.NylonPacks,
+                                            LotType = LotType.CombinedCertificate,
                                             LightestIndividualBaleWeight = 149,
-                                            ReportingFlag = ReportingFlag.C,
+                                            ReportingFlag = ReportingFlag.ResultsCertified,
                                             FirstOfferSeason = null,
                                             FirstOfferSaleIdentity = null,
                                             FirstOfferLotIdentity = null,
@@ -372,7 +372,7 @@ namespace Wiedpug.API.ExampleResponses
                                             WeightUnit = null,
                                             OfferType = null,
                                             ClientCrossReference = null,
-                                            PackCondition = PackCondition.N
+                                            PackCondition = PackCondition.NewPack
                                         },
                                         LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                         {
@@ -401,7 +401,7 @@ namespace Wiedpug.API.ExampleResponses
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
                                                 QualitySchemes = null,
-                                                MulesingStatus = "AA"
+                                                MulesingStatus = MulesingStatus.MulesedWithAnalgesicAndOrAnaesthetic
                                             }
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
@@ -448,7 +448,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Vm1 = 0.0,
                                             Vm2 = 0.9,
                                             Vm3 = 0.0,
-                                            DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk._1
+                                            DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.NotApplicable
                                         },
                                         Histograms = new List<FibreDiameterHistogram>
                                         {
@@ -459,7 +459,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     CoefficientOfVariation = 19.9,
                                                     ComfortFactorPercentage = 98.7,
                                                     FibresMeasured = 4000,
-                                                    ReportingFlag = ReportingFlag.C,
+                                                    ReportingFlag = ReportingFlag.ResultsCertified,
                                                     Instrument = Instrument.LaserScan,
                                                     SubSamplingMethod = SubSamplingMethod.Minicore,
                                                     NumberOfSpecimens = 4,
@@ -551,12 +551,12 @@ namespace Wiedpug.API.ExampleResponses
                                 },
                                 CentreStorage = "M",
                                 SaleDate = "2017-01-19",
-                                WoolState = WoolState._1,
-                                PackType = PackType._0,
+                                WoolState = WoolState.Alpaca,
+                                PackType = PackType.SingleBalesHighDensityDumped,
                                 Currency = "AUD",
                                 WeightUnit = WeightUnit.Kilograms,
                                 PostSaleCharge = 25.96,
-                                CalculationBasis = CalculationBasis.B,
+                                CalculationBasis = CalculationBasis.Bale,
                                 FreightCharge = 0,
                                 FreightRebate = 3.25,
                                 ChargePerLot = 0,
@@ -568,7 +568,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SellingOrganisation = "ABCD",
                                 WoolTypeGroup = WoolTypeGroup.MFLC,
                                 CentreCatalogue = Centre.AU_G,
-                                DeliveryBasis = DeliveryBasis.D,
+                                DeliveryBasis = DeliveryBasis.DeliveryNominatedDestination,
                                 CentreDelivery = null,
                                 AlternateDelivery = null
                             },
@@ -600,12 +600,12 @@ namespace Wiedpug.API.ExampleResponses
                                         CataloguePageNumber = 65,
                                         IsNoLot = null,
                                         SourceCode = null,
-                                        UpdateType = UpdateType.A,
+                                        UpdateType = UpdateType.Add,
                                         CatalogueSymbols = null,
-                                        PackMaterial = PackMaterial.N,
-                                        LotType = LotType.P,
+                                        PackMaterial = PackMaterial.NylonPacks,
+                                        LotType = LotType.CombinedCertificate,
                                         LightestIndividualBaleWeight = 149,
-                                        ReportingFlag = ReportingFlag.C,
+                                        ReportingFlag = ReportingFlag.ResultsCertified,
                                         FirstOfferSeason = null,
                                         FirstOfferSaleIdentity = null,
                                         FirstOfferLotIdentity = null,
@@ -615,7 +615,7 @@ namespace Wiedpug.API.ExampleResponses
                                         WeightUnit = null,
                                         OfferType = null,
                                         ClientCrossReference = null,
-                                        PackCondition = PackCondition.N
+                                        PackCondition = PackCondition.NewPack
                                     },
                                     LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                     {
@@ -644,7 +644,7 @@ namespace Wiedpug.API.ExampleResponses
                                         new Domain.Entities.LotHeaderVendorDeclaration
                                         {
                                             QualitySchemes = null,
-                                            MulesingStatus = "AA"
+                                            MulesingStatus = MulesingStatus.MulesedWithAnalgesicAndOrAnaesthetic
                                         }
                                     },
                                     LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
@@ -691,7 +691,7 @@ namespace Wiedpug.API.ExampleResponses
                                         Vm1 = 0.0,
                                         Vm2 = 0.9,
                                         Vm3 = 0.0,
-                                        DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk._1
+                                        DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.RiskLevel1
                                     },
                                     Histograms = new List<FibreDiameterHistogram>
                                     {
@@ -702,7 +702,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 CoefficientOfVariation = 19.9,
                                                 ComfortFactorPercentage = 98.7,
                                                 FibresMeasured = 4000,
-                                                ReportingFlag = ReportingFlag.C,
+                                                ReportingFlag = ReportingFlag.ResultsCertified,
                                                 Instrument = Instrument.LaserScan,
                                                 SubSamplingMethod = SubSamplingMethod.Minicore,
                                                 NumberOfSpecimens = 4,
@@ -774,8 +774,8 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._32A,                            
+                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
+                            RecordTypesToBeExcludedForAuctionCatalogue.BaleIdentification,                            
                         },
                         Season = 23
                     },
@@ -794,8 +794,8 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
+                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
+                            RecordTypesToBeExcludedForAuctionCatalogue.FibreDiameterHistogramDetails,
                         },
                         Season = 23
                     }
@@ -820,8 +820,8 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
+                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
+                            RecordTypesToBeExcludedForAuctionCatalogue.FibreDiameterHistogramDetails,
                         },
                         Season = 23
                     }
@@ -876,12 +876,12 @@ namespace Wiedpug.API.ExampleResponses
                                         },
                                         CentreStorage = "M",
                                         SaleDate = "2017-01-19",
-                                        WoolState = WoolState._1,
-                                        PackType = PackType._0,
+                                        WoolState = WoolState.Greasy,
+                                        PackType = PackType.J9SizeBaleForScouredWool,
                                         Currency = "AUD",
                                         WeightUnit = WeightUnit.Kilograms,
                                         PostSaleCharge = 25.96,
-                                        CalculationBasis = CalculationBasis.B,
+                                        CalculationBasis = CalculationBasis.Bale,
                                         FreightCharge = 0,
                                         FreightRebate = 3.25,
                                         ChargePerLot = 0,
@@ -893,7 +893,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingOrganisation = "ABCD",
                                         WoolTypeGroup = WoolTypeGroup.MFLC,
                                         CentreCatalogue = Centre.AU_G,
-                                        DeliveryBasis = DeliveryBasis.D,
+                                        DeliveryBasis = DeliveryBasis.DeliveryNominatedDestination,
                                         CentreDelivery = null,
                                         AlternateDelivery = null
                                     },
@@ -925,12 +925,12 @@ namespace Wiedpug.API.ExampleResponses
                                                 CataloguePageNumber = 65,
                                                 IsNoLot = null,
                                                 SourceCode = null,
-                                                UpdateType = UpdateType.A,
+                                                UpdateType = UpdateType.Add,
                                                 CatalogueSymbols = null,
-                                                PackMaterial = PackMaterial.N,
-                                                LotType = LotType.P,
+                                                PackMaterial = PackMaterial.NylonPacks,
+                                                LotType = LotType.ClassedGrowerLot,
                                                 LightestIndividualBaleWeight = 149,
-                                                ReportingFlag = ReportingFlag.C,
+                                                ReportingFlag = ReportingFlag.ResultsCertified,
                                                 FirstOfferSeason = null,
                                                 FirstOfferSaleIdentity = null,
                                                 FirstOfferLotIdentity = null,
@@ -940,7 +940,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 WeightUnit = null,
                                                 OfferType = null,
                                                 ClientCrossReference = null,
-                                                PackCondition = PackCondition.N
+                                                PackCondition = PackCondition.NewPack
                                             },
                                             LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                             {
@@ -969,7 +969,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 new Domain.Entities.LotHeaderVendorDeclaration
                                                 {
                                                     QualitySchemes = null,
-                                                    MulesingStatus = "AA"
+                                                    MulesingStatus = MulesingStatus.Mulesed
                                                 }
                                             },
                                             LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
@@ -1016,7 +1016,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 Vm1 = 0.0,
                                                 Vm2 = 0.9,
                                                 Vm3 = 0.0,
-                                                DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk._1
+                                                DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.NotApplicable
                                             },
                                             Histograms = new List<FibreDiameterHistogram>
                                             {
@@ -1027,7 +1027,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         CoefficientOfVariation = 19.9,
                                                         ComfortFactorPercentage = 98.7,
                                                         FibresMeasured = 4000,
-                                                        ReportingFlag = ReportingFlag.C,
+                                                        ReportingFlag = ReportingFlag.ResultsCertified,
                                                         Instrument = Instrument.LaserScan,
                                                         SubSamplingMethod = SubSamplingMethod.Minicore,
                                                         NumberOfSpecimens = 4,
@@ -1060,19 +1060,6 @@ namespace Wiedpug.API.ExampleResponses
                             }
                     }
                 }                
-            };
-        }
-    }
-
-    public class AuctionCatalogueResponse200Example : IExamplesProvider<ApiResult>
-    {
-        public ApiResult GetExamples()
-        {
-            return new ApiResult()
-            {
-                IsSuccessful = true,
-                Message = "OK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn",
-                Data = null
             };
         }
     }

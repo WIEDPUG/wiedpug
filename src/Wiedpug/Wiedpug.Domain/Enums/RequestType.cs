@@ -1,19 +1,21 @@
 ﻿using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum RequestType
     {
-        [Description("1: Private Data Request")]
+        [Description("PrivateDataRequest: Code: 1. Private Data Request")]
         PrivateDataRequest = 1,
 
-        [Description("2: Status Request")]
+        [Description("StatusRequest: Code: 2. Status Request")]
         StatusRequest = 2,
 
-        [Description("3: Data Re-Request")]
+        [Description("DataRequest: Code: 3. Data Re-Request")]
         DataRequest = 3,
 
-        [Description("4: Broadcast Data Request")]
+        [Description("BroadcastDataRequest: Code: 4. Broadcast Data Request")]
         BroadcastDataRequest = 4
     }
 }
