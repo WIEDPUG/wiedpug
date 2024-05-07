@@ -4,5 +4,6 @@
     "sequence-diagram": "Sequence Diagram",
     "security-model": "Security Model",
     "http-response-codes": "HTTP Response Codes",    
-    "openapi-specs": "OpenAPI Specs"
+    "openapi-specs": "OpenAPI Specs",
+    "release-versions": "Release Versions"
   }
