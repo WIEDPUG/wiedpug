@@ -10,6 +10,8 @@
 
 **read:** Retrieve the resource data
 
+**limited-write:** create or update the information only related to the user from the resource data
+
 #### 3. Permissions
 
 
@@ -17,9 +19,10 @@
 |----------------------------------|---------------------|-------------------|
 | test-certificate-update:write  | ✓                   | ✓                |
 | test-certificate-update:read   | ✓                   | ✓                |
+| test-certificate-update:limited-write  |                    | ✓                |
 
 **Administrator:** `read` and `write` access allows the administrator to transmit and read the Update of Test Certificate.
 
 **Member:** 
 - `Read` access allows the member to send request for data to the endpoint. However, only resources the member has access to will be returned. 
-- `Write` access allows the member to send the Update of Test Certificate to the network.
+- `Write` limited write access for member's own Test Certificate Update.

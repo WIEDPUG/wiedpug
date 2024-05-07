@@ -10,6 +10,8 @@
 
 **read:** Retrieve the resource data
 
+**limited-write:** create or update the information only related to the user from the resource data
+
 #### 3. Permissions
 
 
@@ -17,9 +19,10 @@
 |----------------------------------|---------------------|-------------------|
 | test-requests-verification:write  | ✓                   | ✓                |
 | test-requests-verification:read   | ✓                   | ✓                |
+| test-requests-verification:limited-write  |                    | ✓                |
 
 **Administrator:** `read` and `write` access allows the administrator to send and read Test Requests Verification.
 
 **Member:** 
 - `Read` access allows the member to send request for data to the endpoint. However, only resources the member has access to will be returned. 
-- `Write` access allows the member to send Test Requests Verification to the network.
+- `Write` limited write access for member's own Test Requests Verification.

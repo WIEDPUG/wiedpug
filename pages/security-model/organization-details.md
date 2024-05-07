@@ -19,8 +19,7 @@
 |-------------------------------|---------------------|-------------------|
 | organization-details:read     | ✓                   | ✓                | 
 | organization-details:write    | ✓                   |                   |  
-| organization-details:limited-write  |               | ✓                 |
 
 **Administrator:** Full access (read/write) to OrganizationDetails.
 
-**Member:** Read access to OrganizationDetails, limited write access for member's own OrganizationDetails information.
+**Member:** Read access to OrganizationDetails.
