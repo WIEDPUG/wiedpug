@@ -75,6 +75,7 @@ versionedGroup.MapTestCertificateRequestsEndpoints();
 
 versionedGroup.MapTestRequestsVerificationEndpoints();
 
+versionedGroup.MapLotInvoicesEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
