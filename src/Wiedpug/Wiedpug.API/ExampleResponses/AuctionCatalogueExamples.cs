@@ -43,7 +43,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new AuctionCatalogueWoolSaleHeader
                             {
-                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
+                                WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -298,7 +298,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new AuctionCatalogueWoolSaleHeader
                             {
-                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
+                                WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -541,7 +541,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         new AuctionCatalogueWoolSaleHeader
                         {
-                            WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
+                            WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                             {
                                 Season = 16,
                                 SaleIdentity = new Domain.Entities.SaleIdentity
@@ -866,7 +866,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 new AuctionCatalogueWoolSaleHeader
                                 {
-                                    WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
+                                    WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                                     {
                                         Season = 16,
                                         SaleIdentity = new Domain.Entities.SaleIdentity

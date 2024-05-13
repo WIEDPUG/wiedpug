@@ -5,7 +5,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class WoolSaleHeaderLots
+    public class AuctionCatalogueWoolSaleHeaderLots
     {
         [Required]
         public required int Season { get; set; }
