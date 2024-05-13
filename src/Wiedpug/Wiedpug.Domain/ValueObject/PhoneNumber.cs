@@ -11,6 +11,7 @@ namespace Wiedpug.Domain.ValueObject
     {
         [Required]
         public required string CountryCode { get; set; }
+
         [Required]
         public required string Number { get; set; }
 

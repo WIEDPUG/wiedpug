@@ -6,22 +6,22 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum WoolPreparationCategory
     {
-        [Description("BulkClass: Code: B. Bulk Class")]
-        BulkClass,
+        [Description("B: Bulk Class")]
+        B,
 
-        [Description("PresaleTestCertificateOtherGrowerLot: Code: D. PTC (Pre-Sale Test Certificate – Other Grower Lot)")]
-        PresaleTestCertificateOtherGrowerLot,
+        [Description("D: PTC (Pre-Sale Test Certificate Other Grower Lot)")]
+        D,
 
-        [Description("PremiumTest: Code: F. Premium Test")]
-        PremiumTest,
+        [Description("F: Premium Test")]
+        F,
 
-        [Description("SubjectivelyAppraisedInterlot: Code: I. Subjectively Appraised Interlot")]
-        SubjectivelyAppraisedInterlot,
+        [Description("I: Subjectively Appraised Interlot")]
+        I,
 
-        [Description("PresaleTestCertificateClassedGrowerLot: Code: P. PTC (Pre-sale Test Certificate - Classed Grower Lot)")]
-        PresaleTestCertificateClassedGrowerLot,
+        [Description("P: PTC (Pre-sale Test Certificate - Classed Grower Lot)")]
+        P,
 
-        [Description("BulkClassQualityManaged: Code: Q. Bulk Class – Quality Managed")]
-        BulkClassQualityManaged
+        [Description("Q: Bulk Class Quality Managed")]
+        Q
     }
 }

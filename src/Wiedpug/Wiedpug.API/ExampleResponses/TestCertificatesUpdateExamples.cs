@@ -14,15 +14,15 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = "200715",
+                    DateTransmissionFileCreated = "160117",
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = "ABCD",
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXLC",
                     FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestCertificate,
-                    VersionNumber = 31,
+                    TransmissionType = TransmissionType.TestCertificateUpdate,
+                    VersionNumber = "31",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",

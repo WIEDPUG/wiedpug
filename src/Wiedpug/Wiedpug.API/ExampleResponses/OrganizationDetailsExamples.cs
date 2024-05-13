@@ -8,16 +8,16 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class OrganizationDetailsRequestExample : IExamplesProvider<OrganizationDetails>
+    public class OrganizationDetailsRequestExample : IExamplesProvider<OrganisationDetails>
     {
-        public OrganizationDetails GetExamples()
+        public OrganisationDetails GetExamples()
         {
-            return new OrganizationDetails()
+            return new OrganisationDetails()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = "200715",
+                    DateTransmissionFileCreated = "160117",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = "AWTM",
                     CurrentTransmitter = "AWTM",
@@ -26,13 +26,13 @@ namespace Wiedpug.API.ExampleResponses
                     SoftwareIdentifier = null,
                     Abn = "43006014106"
                 },
-                OrganizationDetailCollection = new List<OrganizationDetail>
+                OrganisationDetailCollection = new List<OrganisationDetail>
                 {
-                    new OrganizationDetail
+                    new OrganisationDetail
                     {
                         OrganisationCode = "AWTS",
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                        DateLastUpdated="2020-04-28",
+                        DateLastUpdated="200428",
                         IndustryGroupID="T",
                         TransmitterFlag="Y",
                         Abn = null,
@@ -49,13 +49,13 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 FirstName=null,
                                 LastName=null,
-                                OrganizationName=null,
+                                OrganisationName=null,
                                 Premise=null,
                                 Street="28 GREAT SOUTH ROAD",
                                 Suburb="KENSINGTON",
                                 City=null,
                                 RegionOrState=null,
-                                PostalCode="3031",
+                                PostCode="3031",
                                 Country="AU"
                             }
                         },
@@ -74,11 +74,11 @@ namespace Wiedpug.API.ExampleResponses
                         }
 
                     },
-                    new OrganizationDetail
+                    new OrganisationDetail
                     {
                         OrganisationCode = "BUY1",
                         NameOfOrganisation = "DEMO BUYER 1",
-                        DateLastUpdated="2020-04-28",
+                        DateLastUpdated="200428",
                         IndustryGroupID= "E",
                         TransmitterFlag= "N",
                         Abn = null,
@@ -92,16 +92,16 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class OrganizationDetailExample : IExamplesProvider<OrganizationDetails>
+    public class OrganizationDetailExample : IExamplesProvider<OrganisationDetails>
     {
-        public OrganizationDetails GetExamples()
+        public OrganisationDetails GetExamples()
         {
-            return new OrganizationDetails()
+            return new OrganisationDetails()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = "200715",
+                    DateTransmissionFileCreated = "160117",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = "AWTM",
                     CurrentTransmitter = "AWTM",
@@ -110,14 +110,14 @@ namespace Wiedpug.API.ExampleResponses
                     SoftwareIdentifier = null,
                     Abn = "43006014106"
                 },
-                OrganizationDetailCollection = new List<OrganizationDetail>
+                OrganisationDetailCollection = new List<OrganisationDetail>
                 {
-                    new OrganizationDetail
+                    new OrganisationDetail
                     {
                         Id = "1",
                         OrganisationCode = "AWTS",
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                        DateLastUpdated="2020-04-28",
+                        DateLastUpdated="200428",
                         IndustryGroupID="T",
                         TransmitterFlag="Y",
                         Abn = null,
@@ -134,13 +134,13 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 FirstName=null,
                                 LastName=null,
-                                OrganizationName=null,
+                                OrganisationName=null,
                                 Premise=null,
                                 Street="28 GREAT SOUTH ROAD",
                                 Suburb="KENSINGTON",
                                 City=null,
                                 RegionOrState=null,
-                                PostalCode="3031",
+                                PostCode="3031",
                                 Country="AU"
                             }
                         },
@@ -164,16 +164,16 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class OrganizationDetailRequestExample : IExamplesProvider<OrganizationDetails>
+    public class OrganizationDetailRequestExample : IExamplesProvider<OrganisationDetails>
     {
-        public OrganizationDetails GetExamples()
+        public OrganisationDetails GetExamples()
         {
-            return new OrganizationDetails()
+            return new OrganisationDetails()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = "200715",
+                    DateTransmissionFileCreated = "160117",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = "AWTM",
                     CurrentTransmitter = "AWTM",
@@ -182,13 +182,13 @@ namespace Wiedpug.API.ExampleResponses
                     SoftwareIdentifier = null,
                     Abn = "43006014106"
                 },
-                OrganizationDetailCollection = new List<OrganizationDetail>
+                OrganisationDetailCollection = new List<OrganisationDetail>
                 {
-                    new OrganizationDetail
+                    new OrganisationDetail
                     {
                         OrganisationCode = "AWTS",
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                        DateLastUpdated="2020-04-28",
+                        DateLastUpdated="200428",
                         IndustryGroupID="T",
                         TransmitterFlag="Y",
                         Abn = null,
@@ -205,13 +205,13 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 FirstName=null,
                                 LastName=null,
-                                OrganizationName=null,
+                                OrganisationName=null,
                                 Premise=null,
                                 Street="28 GREAT SOUTH ROAD",
                                 Suburb="KENSINGTON",
                                 City=null,
                                 RegionOrState=null,
-                                PostalCode="3031",
+                                PostCode="3031",
                                 Country="AU"
                             }
                         },
@@ -268,18 +268,18 @@ namespace Wiedpug.API.ExampleResponses
             {
                 IsSuccessful = true,
                 Message = null,
-                Data = new OrganizationDetails 
+                Data = new OrganisationDetails 
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = "200715",
+                        DateTransmissionFileCreated = "160117",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = "ABCD",
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        VersionNumber = 31,
+                        VersionNumber = "31",
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",
@@ -288,14 +288,14 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001925678"
                     },
-                    OrganizationDetailCollection = new List<OrganizationDetail>
+                    OrganisationDetailCollection = new List<OrganisationDetail>
                     {
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "1",
                             OrganisationCode = "AWTS",
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID="T",
                             TransmitterFlag="Y",
                             Abn = null,
@@ -312,13 +312,13 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     FirstName=null,
                                     LastName=null,
-                                    OrganizationName=null,
+                                    OrganisationName=null,
                                     Premise=null,
                                     Street="88 HARBOR ROAD",
                                     Suburb="KENSINGTON",
                                     City=null,
                                     RegionOrState=null,
-                                    PostalCode="3031",
+                                    PostCode="3031",
                                     Country="AU"
                                 }
                             },
@@ -337,12 +337,12 @@ namespace Wiedpug.API.ExampleResponses
                             }
 
                         },
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "2",
                             OrganisationCode = "BUY1",
                             NameOfOrganisation = "DEMO BUYER 1",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID= "E",
                             TransmitterFlag= "N",
                             Abn = null,
@@ -351,12 +351,12 @@ namespace Wiedpug.API.ExampleResponses
                             Addresses= [],
                             Contacts= []
                         },
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "3",
                             OrganisationCode = "AWTN",
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID= "A",
                             TransmitterFlag= "Y",
                             Abn = null,
@@ -372,13 +372,13 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     FirstName=null,
                                     LastName=null,
-                                    OrganizationName=null,
+                                    OrganisationName=null,
                                     Premise=null,
                                     Street="367 NEW HAMMER STREET",
                                     Suburb="NEWCASTLE",
                                     City=null,
                                     RegionOrState=null,
-                                    PostalCode="2031",
+                                    PostCode="2031",
                                     Country="AU"
                                 }
                             },
@@ -413,18 +413,18 @@ namespace Wiedpug.API.ExampleResponses
             {
                 IsSuccessful = true,
                 Message = null,
-                Data = new OrganizationDetails
+                Data = new OrganisationDetails
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = "200715",
+                        DateTransmissionFileCreated = "160117",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = "ABCD",
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        VersionNumber = 31,
+                        VersionNumber = "31",
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",
@@ -433,14 +433,14 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001925678"
                     },
-                    OrganizationDetailCollection = new List<OrganizationDetail>
+                    OrganisationDetailCollection = new List<OrganisationDetail>
                     {
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "1",
                             OrganisationCode = "AWTS",
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID="T",
                             TransmitterFlag="Y",
                             Abn = null,
@@ -457,13 +457,13 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     FirstName=null,
                                     LastName=null,
-                                    OrganizationName=null,
+                                    OrganisationName=null,
                                     Premise=null,
                                     Street="88 HARBOR ROAD",
                                     Suburb="KENSINGTON",
                                     City=null,
                                     RegionOrState=null,
-                                    PostalCode="3031",
+                                    PostCode="3031",
                                     Country="AU"
                                 }
                             },
@@ -482,12 +482,12 @@ namespace Wiedpug.API.ExampleResponses
                             }
 
                         },
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "2",
                             OrganisationCode = "BUY1",
                             NameOfOrganisation = "DEMO BUYER 1",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID= "E",
                             TransmitterFlag= "N",
                             Abn = null,
@@ -496,12 +496,12 @@ namespace Wiedpug.API.ExampleResponses
                             Addresses= [],
                             Contacts= []
                         },
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "3",
                             OrganisationCode = "AWTN",
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID= "A",
                             TransmitterFlag= "Y",
                             Abn = null,
@@ -517,13 +517,13 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     FirstName=null,
                                     LastName=null,
-                                    OrganizationName=null,
+                                    OrganisationName=null,
                                     Premise=null,
                                     Street="367 NEW HAMMER STREET",
                                     Suburb="NEWCASTLE",
                                     City=null,
                                     RegionOrState=null,
-                                    PostalCode="2031",
+                                    PostCode="2031",
                                     Country="AU"
                                 }
                             },
@@ -558,18 +558,18 @@ namespace Wiedpug.API.ExampleResponses
             {
                 IsSuccessful = true,
                 Message = null,
-                Data = new OrganizationDetails
+                Data = new OrganisationDetails
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = "200715",
+                        DateTransmissionFileCreated = "160117",
                         CountryOfOrigin = CountryCode.AU,
                         DocumentOriginator = "ABCD",
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        VersionNumber = 31,
+                        VersionNumber = "31",
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",
@@ -578,14 +578,14 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001925678"
                     },
-                    OrganizationDetailCollection = new List<OrganizationDetail>
+                    OrganisationDetailCollection = new List<OrganisationDetail>
                     {
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "1",
                             OrganisationCode = "AWTS",
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID="T",
                             TransmitterFlag="Y",
                             Abn = null,
@@ -602,13 +602,13 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     FirstName=null,
                                     LastName=null,
-                                    OrganizationName=null,
+                                    OrganisationName=null,
                                     Premise=null,
                                     Street="88 HARBOR ROAD",
                                     Suburb="KENSINGTON",
                                     City=null,
                                     RegionOrState=null,
-                                    PostalCode="3031",
+                                    PostCode="3031",
                                     Country="AU"
                                 }
                             },
@@ -627,12 +627,12 @@ namespace Wiedpug.API.ExampleResponses
                             }
 
                         },
-                        new OrganizationDetail
+                        new OrganisationDetail
                         {
                             Id = "2",
                             OrganisationCode = "BUY1",
                             NameOfOrganisation = "DEMO BUYER 1",
-                            DateLastUpdated="2020-04-28",
+                            DateLastUpdated="200428",
                             IndustryGroupID= "E",
                             TransmitterFlag= "N",
                             Abn = null,

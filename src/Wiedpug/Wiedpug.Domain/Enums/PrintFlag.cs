@@ -6,25 +6,25 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum PrintFlag
     {
-        [Description("Normal: Code: P. Normal RPP/TCR request to pdf Certificate")]
+        [Description("P: Normal RPP/TCR request to pdf Certificate")]
         Normal,
 
-        [Description("PdfCombinationOrOMLCertificateAndSublots: Code: A. Pdf Combination/OML Certificate and associated sub-lots")]
-        PdfCombinationOrOMLCertificateAndSublots,
+        [Description("A: Pdf Combination/OML Certificate and associated sub-lots")]
+        A,
 
-        [Description("PdfSublotsExcludingCombinationOrOMLCertificate: Code: S. Pdf associated sub-lots excluding the Combination/OML Certificate")]
-        PdfSublotsExcludingCombinationOrOMLCertificate,
+        [Description("S: Pdf associated sub-lots excluding the Combination/OML Certificate")]
+        S,
 
-        [Description("PdfCombinationCertificateInChineseAndEnglish: Code: C. Pdf Combination Certificate in Chinese and English")]
-        PdfCombinationCertificateInChineseAndEnglish,
+        [Description("C: Pdf Combination Certificate in Chinese and English")]
+        C,
 
-        [Description("PdfCombinationCertificateInChineseAndSublotsInEnglish: Code: E. Pdf Combination Certificate in Chinese and English & associated sublots in English)")]
-        PdfCombinationCertificateInChineseAndSublotsInEnglish,
+        [Description("E: Pdf Combination Certificate in Chinese and English & associated sublots in English)")]
+        E,
 
-        [Description("PdfCombinationCertificateInEnglishAndMulesingStatusReport: Code: M. Pdf Combination Certificate in English & Mulesing Status report")]
-        PdfCombinationCertificateInEnglishAndMulesingStatusReport,
+        [Description("M: Pdf Combination Certificate in English & Mulesing Status report")]
+        M,
 
-        [Description("PdfMulesingStatusReportOnly: Code: N. Pdf Mulesing Status report only")]
-        PdfMulesingStatusReportOnly
+        [Description("N: Pdf Mulesing Status report only")]
+        N
     }
 }

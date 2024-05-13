@@ -22,8 +22,8 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXLC",
                     FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestCertificate,
-                    VersionNumber = 31,
+                    TransmissionType = TransmissionType.TestRequestVerification,
+                    VersionNumber = "31",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
@@ -46,10 +46,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.ClassedGrowerLot,
+                            LotType = LotType.CombinedCertificate,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.InformationOnly,
+                            ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -132,10 +132,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.ObjectivelyMatchedInterlot,
+                            LotType = LotType.CombinedCertificate,
                             CentreAuction = Centre.AU_BA,
                             SourceCode = SourceCode.Dealer,
-                            ReportingFlag = ReportingFlag.InformationOnly,
+                            ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.ScouredDualSolvent,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false

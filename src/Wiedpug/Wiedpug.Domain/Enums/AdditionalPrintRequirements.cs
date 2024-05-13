@@ -3,32 +3,31 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum AdditionalPrintRequirements
     {
-        [Description("NoAdditionalRequirements: Code: 0. No additional print requirements")]
-        NoAdditionalRequirements,
+        [Description("0: No additional print requirements")]
+        NoAdditionalRequirements = 0,
 
-        [Description("VMBreakdown: Code: 1. Print VM Breakdown only")]
-        VMBreakdown,
+        [Description("1: Print VM Breakdown only")]
+        VMBreakdown = 1,
 
-        [Description("VMBreakdownAndCurvature: Code: 2. Print VM Breakdown and Curvature")]
-        VMBreakdownAndCurvature,
+        [Description("2: Print VM Breakdown and Curvature")]
+        VMBreakdownAndCurvature = 2,
 
-        [Description("VMBreakdownAndConfortFactor: Code: 3. Print VM Breakdown and Comfort Factor")]
-        VMBreakdownAndConfortFactor,
+        [Description("3: Print VM Breakdown and Comfort Factor")]
+        VMBreakdownAndConfortFactor = 3,
 
-        [Description("VMBreakdownAndCurvatureAndComfortFactor: Code: 4. Print VM Breakdown, Curvature and Comfort Factor")]
-        VMBreakdownAndCurvatureAndComfortFactor,
+        [Description("4: Print VM Breakdown, Curvature and Comfort Factor")]
+        VMBreakdownAndCurvatureAndComfortFactor = 4,
 
-        [Description("Curvature: Code: 5. Print Curvature only")]
-        Curvature,
+        [Description("5: Print Curvature only")]
+        Curvature = 5,
 
-        [Description("ComfortFactor: Code: 6. Print Comfort Factor Only")]
-        ComfortFactor,
+        [Description("6: Print Comfort Factor Only")]
+        ComfortFactor = 6,
 
-        [Description("CurvatureAndComfortFactor: Code: 7. Print Curvature and Comfort Factor")]
-        CurvatureAndComfortFactor
+        [Description("7: Print Curvature and Comfort Factor")]
+        CurvatureAndComfortFactor = 7
 
     }
 }

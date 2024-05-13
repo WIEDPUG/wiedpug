@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum SubSamplingMethod
     {
-        [Description("Minicore: Code: 1. Minicore")]
+        [Description("1: Minicore")]
         Minicore = 1
     }
 }

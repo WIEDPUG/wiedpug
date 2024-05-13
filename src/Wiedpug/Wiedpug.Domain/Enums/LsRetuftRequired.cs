@@ -3,13 +3,12 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum LsRetuftRequired
     {
-        [Description("Required: Code: 1. Length & Strength Retuft is required")]
-        Required,
+        [Description("1: Length & Strength Retuft is required")]
+        Required = 1,
 
-        [Description("Received: Code: 2. Length & Strength Retuft sample has been received in laboratory")]
-        Received
+        [Description("2: Length & Strength Retuft sample has been received in laboratory")]
+        Received = 2
     }
 }

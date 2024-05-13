@@ -6,16 +6,16 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum AutoAdditionalMeasurementRequired
     {
-        [Description("NoAutomaticCombinationsRequired: Code: N. Automatic combinations not required")]
-        NoAutomaticCombinationsRequired,
+        [Description("N: Automatic combinations not required")]
+        N,
 
-        [Description("AutomaticLengthAndStrengthCombinationRequired: Code: L. Automatic Length & Strength Combination required")]
-        AutomaticLengthAndStrengthCombinationRequired,
+        [Description("L: Automatic Length & Strength Combination required")]
+        L,
 
-        [Description("AutomaticColourCombinationRequired: Code: C. Automatic Colour Combination is required")]
-        AutomaticColourCombinationRequired,
+        [Description("C: Automatic Colour Combination is required")]
+        C,
 
-        [Description("LengthStrengthAndColourCombinations: Code: B. Both Length & Strength and Colour combinations required")]
-        LengthStrengthAndColourCombinations
+        [Description("B: Both Length & Strength and Colour combinations required")]
+        B
     }
 }

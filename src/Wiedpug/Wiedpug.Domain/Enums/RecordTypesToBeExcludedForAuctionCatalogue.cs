@@ -8,22 +8,22 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum RecordTypesToBeExcludedForAuctionCatalogue
     {
-        [Description("LotHeader: Code: 21. Lot Header")]
-        LotHeader,
+        [Description("21: Lot Header")]
+        _21,
 
-        [Description("ColourDetails: Code: 51C. Colour Details")]
-        ColourDetails,
+        [Description("51C: Colour Details")]
+        _51C,
 
-        [Description("InterlotComponentBaleHeader: Code: 79B. Interlot component bale header")]
-        InterlotComponentBaleHeader,
+        [Description("79B: Interlot component bale header")]
+        _79B,
 
-        [Description("BaleIdentification: Code: 84. Bale Identification")]
-        BaleIdentification,
+        [Description("84: Bale Identification")]
+        _84,
 
-        [Description("FibreDiameterHistogramHeader: Code: 31. Fibre Diameter Histogram Header")]
-        FibreDiameterHistogramHeader,
+        [Description("31: Fibre Diameter Histogram Header")]
+        _31,
 
-        [Description("FibreDiameterHistogramDetails: Code: 32A. Fibre Diameter Histogram Details")]
-        FibreDiameterHistogramDetails
+        [Description("32A: Fibre Diameter Histogram Details")]
+        _32A
     }
 }

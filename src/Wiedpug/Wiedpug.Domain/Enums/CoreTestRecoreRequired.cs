@@ -3,17 +3,16 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CoreTestRecoreRequired
     {
-        [Description("Required: Code: 1. Core Test Recore is required – bales must be resampled to complete core test")]
-        Required,
+        [Description("1: Core Test Recore is required – bales must be resampled to complete core test")]
+        Required = 1,
 
-        [Description("Received: Code: 2. Core Test Recore sample received in laboratory")]
-        Received,
+        [Description("2: Core Test Recore sample received in laboratory")]
+        Received = 2,
 
-        [Description("InProgress Code: 3. Core Test Recore testing in progress")]
-        InProgress
+        [Description("3: Core Test Recore testing in progress")]
+        InProgress = 3
 
     }
 }

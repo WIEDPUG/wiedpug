@@ -6,25 +6,25 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CombinationRequest
     {
-        [Description("Normal: Code: N. Normal Combination Reuqest")]
-        Normal,
+        [Description("N: Normal Combination Reuqest")]
+        N,
 
-        [Description("ASX24: Code: S. ASX24 Combination Request (formerly SFE)")]
-        ASX24,
+        [Description("S: ASX24 Combination Request (formerly SFE)")]
+        S,
 
-        [Description("ASX19Point5OrASX21OrASX22Point6: Code: X. ASX19.5 54W, ASX21.0 55W or ASX22.6 56W Combination Request")]
-        ASX19Point5OrASX21OrASX22Point6,
+        [Description("X: ASX19.5 54W, ASX21.0 55W or ASX22.6 56W Combination Request")]
+        X,
 
-        [Description("ASX19Point5: Code: 4. ASX19.5 54W Combination Request")]
-        ASX19Point5,
+        [Description("4: ASX19.5 54W Combination Request")]
+        _4,
 
-        [Description("ASX21: Code: 5. ASX21.0 55W Combination Request")]
-        ASX21,
+        [Description("5: ASX21.0 55W Combination Request")]
+        _5,
 
-        [Description("ASX22Point6: Code: 6. ASX22.6 56W Combination Request")]
-        ASX22Point6,
+        [Description("6: ASX22.6 56W Combination Request")]
+        _6,
 
-        [Description("ChinaContract: Code: C. China Contract Combination Request")]
-        ChinaContract
+        [Description("C: China Contract Combination Request")]
+        C
     }
 }
