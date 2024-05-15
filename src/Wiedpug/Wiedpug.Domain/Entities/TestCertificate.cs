@@ -1,6 +1,4 @@
-﻿using Wiedpug.Domain.Aggregates;
-
-namespace Wiedpug.Domain.Entities
+﻿namespace Wiedpug.Domain.Entities
 {
     public class TestCertificate
     {
@@ -28,7 +26,7 @@ namespace Wiedpug.Domain.Entities
 
         public PostSaleCoreTestDetails? PostSaleCoreTestDetails { get;set; }
 
-        public GuidanceReporttDetails? GuidanceReporttDetails { get; set; }
+        public GuidanceReportDetails? GuidanceReporttDetails { get; set; }
 
         public ScouredTestDetails? ScouredTestDetails { get; set; }
 

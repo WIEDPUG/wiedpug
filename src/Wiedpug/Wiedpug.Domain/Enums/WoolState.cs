@@ -4,44 +4,44 @@ using Wiedpug.Domain.Attributes;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]    
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     [Description("The state of the wool itemised in the invoice.")]
     public enum WoolState
     {
-        [Description("Greasy: Code: 1. Greasy")]
-        Greasy,
+        [Description("1. Greasy")]
+        _1,
 
-        [Description("Dead: Code: 2. Dead")]
-        Dead,
+        [Description("2. Dead")]
+        _2,
 
-        [Description("Slipe: Code: 3. Slipe")]
-        Slipe,
+        [Description("3. Slipe")]
+        _3,
 
-        [Description("Scoured: Code: 4. Scoured")]
-        Scoured,
+        [Description("4. Scoured")]
+        _4,
 
-        [Description("Carbonised: Code: 5. Carbonised")]
-        Carbonised,
+        [Description("5. Carbonised")]
+        _5,
 
-        [Description("WoolTops: Code: 6. Wool tops")]
-        WoolTops,
+        [Description("6. Wool tops")]
+        _6,
 
-        [Description("WoolNoils: Code: 7. Wool noils")]
-        WoolNoils,
+        [Description("7. Wool noils")]
+        _7,
 
-        [Description("CardedSliver: Code: 8. Carded sliver")]
-        CardedSliver,
+        [Description("8. Carded sliver")]
+        _8,
 
-        [Description("OtherProcessedWool: Code: 9. Other processed wool")]
-        OtherProcessedWool,
+        [Description("9. Other processed wool")]
+        _9,
 
-        [Description("Alpaca: Code: A. Alpaca")]
-        Alpaca,
+        [Description("A. Alpaca")]
+        A,
 
-        [Description("Cashmere: Code: C. Cashmere")]
-        Cashmere,
+        [Description("C. Cashmere")]
+        C,
 
-        [Description("Mohair: Code: M. Mohair")]
-        Mohair
+        [Description("M. Mohair")]
+        M
     }
 }

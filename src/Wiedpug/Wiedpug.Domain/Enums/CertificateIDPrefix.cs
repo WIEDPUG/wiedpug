@@ -6,13 +6,13 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CertificateIDPrefix
     {
-        [Description("SydneyLaboratory: Code: 2. Sydney Laboratory")]
-        SydneyLaboratory,
+        [Description("2: Sydney Laboratory")]
+        SydneyLaboratory = 2,
 
-        [Description("MelbourneLaboratory: Code: 3. Melbourne Laboratory")]
-        MelbourneLaboratory,
+        [Description("3: Melbourne Laboratory")]
+        MelbourneLaboratory = 3,
 
-        [Description("FremantleLaboratory: Code: 6. Fremantle Laboratory")]
-        FremantleLaboratory
+        [Description("6: Fremantle Laboratory")]
+        FremantleLaboratory = 6
     }
 }

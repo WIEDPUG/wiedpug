@@ -3,68 +3,68 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    [Description("The registered four character or less quality scheme code. To obtain the current code list please go to this URL: http://www.awex.com.au/standards/catalogue/")]
+    [Description("The registered four character or less quality scheme code: To obtain the current code list please go to this URL: http://www.awex.com.au/standards/catalogue/")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum QualityScheme
     {
-        [Description("AustralianSuperfineWoolgrowerAssociation: Code: ASWG. Australian Superfine Woolgrower Association (Member)")]
-        AustralianSuperfineWoolgrowerAssociation,
+        [Description("ASWG: Australian Superfine Woolgrower Association (Member)")]
+        ASWG,
 
-        [Description("Authentico: Code: AUTH. Authentico")]
-        Authentico,
+        [Description("AUTH: Authentico")]
+        AUTH,
 
-        [Description("BetterChoices: Code: BETC. Better Choices (Pain Mitigation)")]
-        BetterChoices,
+        [Description("BETC: Better Choices (Pain Mitigation)")]
+        BETC,
 
-        [Description("BioClip: Code: BIOC. BioClip (Biologically Harvested)")]
-        BioClip,
+        [Description("BIOC: BioClip (Biologically Harvested)")]
+        BIOC,
 
-        [Description("Dalcare3: Code: DAL3. Dalcare-3")]
-        Dalcare3,
+        [Description("DAL3: Dalcare-3")]
+        DAL3,
 
-        [Description("EUEcoLabel: Code: EUEC. EU Eco label (meets EU Eco standards)")]
-        EUEcoLabel,
+        [Description("EUEC: EU Eco label (meets EU Eco standards)")]
+        EUEC,
 
-        [Description("MerinoTechWA: Code: MTEC. Merino Tech WA")]
-        MerinoTechWA,
+        [Description("MTEC: Merino Tech WA")]
+        MTEC,
 
-        [Description("AustralianCertifiedOrganic: Code: ACO. Organic - Australian Certified Organic")]
-        AustralianCertifiedOrganic,
+        [Description("ACO: Organic - Australian Certified Organic")]
+        ACO,
 
-        [Description("DemeterBiodynamicAgricultureAustOrganic: Code: DBAA. Organic - Demeter Biodynamic Agriculture Aust.")]
-        DemeterBiodynamicAgricultureAustOrganic,
+        [Description("DBAA: Organic - Demeter Biodynamic Agriculture Aust.")]
+        DBAA,
 
-        [Description("USACertifiedOrganic: Code: USA. Organic - Meets USA Certification requirements")]
-        USACertifiedOrganic,
+        [Description("USA: Organic - Meets USA Certification requirements")]
+        USA,
 
-        [Description("NationalAssociationForSustainableAgricultureOrganic: Code: NASA. Organic - National Association for Sustainable Agriculture Aust.")]
-        NationalAssociationForSustainableAgricultureOrganic,
+        [Description("NASA: Organic - National Association for Sustainable Agriculture Aust.")]
+        NASA,
 
-        [Description("SouthernCrossCertifiedOrganic: Code: SXC. Organic - Southern Cross Certified")]
-        SouthernCrossCertifiedOrganic,
+        [Description("SXC: Organic - Southern Cross Certified")]
+        SXC,
 
-        [Description("ResponsibleWoolStandard: Code: RWS. Responsible Wool Standard")]
-        ResponsibleWoolStandard,
+        [Description("RWS: Responsible Wool Standard")]
+        RWS,
 
-        [Description("SchuteBellFibreCare: Code: SBFC. Schute Bell Fibre Care")]
-        SchuteBellFibreCare,
+        [Description("SBFC: Schute Bell Fibre Care")]
+        SBFC,
 
-        [Description("SustainaWOOL: Code: SW. SustainaWOOL")]
-        SustainaWOOL,
+        [Description("SW: SustainaWOOL")]
+        SW,
 
-        [Description("SustainaWOOLGold: Code: SWAU. SustainaWOOL Gold")]
-        SustainaWOOLGold,
+        [Description("SWAU: SustainaWOOL Gold")]
+        SWAU,
 
-        [Description("TraprockQMSOrTIMS: Code: TQMS. Traprock QMS/TIMS")]
-        TraprockQMSOrTIMS,
+        [Description("TQMS: Traprock QMS/TIMS")]
+        TQMS,
 
-        [Description("FarmAssuranceProgram: Code: FAP. Farm Assurance Program")]
-        FarmAssuranceProgram,
+        [Description("FAP: Farm Assurance Program")]
+        FAP,
 
-        [Description("PGGWrightsonIntegrityAssured: Code: PWIA. PGG Wrightson Integrity Assured")]
-        PGGWrightsonIntegrityAssured,
+        [Description("PWIA: PGG Wrightson Integrity Assured")]
+        PWIA,
 
-        [Description("WoolcareFernmark: Code: FERN. Woolcare Fernmark")]
-        WoolcareFernmark
+        [Description("FERN: Woolcare Fernmark")]
+        FERN
     }
 }

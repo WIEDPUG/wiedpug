@@ -6,19 +6,19 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum DeclaredWoolCategory
     {
-        [Description("Fleece: Code: F. Fleece")]
-        Fleece,
+        [Description("F: Fleece")]
+        F,
 
-        [Description("Pieces: Code: P. Pieces")]
-        Pieces,
+        [Description("P: Pieces")]
+        P,
 
-        [Description("Bellies: Code: B. Bellies")]
-        Bellies,
+        [Description("B: Bellies")]
+        B,
 
-        [Description("Crutchings: Code: C. Crutchings")]
-        Crutchings,
+        [Description("C: Crutchings")]
+        C,
 
-        [Description("Locks: Code: Z. Locks")]
-        Locks
+        [Description("Z: Locks")]
+        Z
     }
 }

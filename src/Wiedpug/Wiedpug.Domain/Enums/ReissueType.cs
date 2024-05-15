@@ -7,25 +7,25 @@ namespace Wiedpug.Domain.Enums
      [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum ReissueType
     {
-        [Description(" WoolPreparationCategoryChange: Code: 01. Wool Preparation Category (WPC) Change")]
-        WoolPreparationCategoryChange,
+        [Description("01: Wool Preparation Category (WPC) Change")]
+        01,
 
-        [Description("MulesingStatusChange: Code: 02. Mulesing Status (MS) Change")]
-        MulesingStatusChange,
+        [Description("02: Mulesing Status (MS) Change")]
+        02,
 
-        [Description("SaleLotChange: Code: 03. Sale/Lot Change")]
-        SaleLotChange,
+        [Description("03: Sale/Lot Change")]
+        03,
 
-        [Description("WoolPreparationCategoryAndMulesingStatusChange: Code: 04. WPC and MS Change")]
-        WoolPreparationCategoryAndMulesingStatusChange,
+        [Description("04: WPC and MS Change")]
+        04,
 
-        [Description("WoolPreparationCategoryAndSaleLotChange: Code: 05. WPC and Sale/Lot Change")]
-        WoolPreparationCategoryAndSaleLotChange,
+        [Description("05: WPC and Sale/Lot Change")]
+        05,
 
-        [Description("MulesingStatusAndSaleLotChange: Code: 06. MS and Sale/Lot Change")]
-        MulesingStatusAndSaleLotChange,
+        [Description("06: MS and Sale/Lot Change")]
+        06,
 
-        [Description("WoolPreparationCategoryAndMulesingStatusAndSaleLotChange: Code: 07. WPC, MS and Sale/Lot Change")]
-        WoolPreparationCategoryAndMulesingStatusAndSaleLotChange
+        [Description("07: WPC, MS and Sale/Lot Change")]
+        07
     }
 }

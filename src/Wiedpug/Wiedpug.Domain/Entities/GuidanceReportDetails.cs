@@ -9,7 +9,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class GuidanceReporttDetails
+    public class GuidanceReportDetails
     {
         [Required]
         public required string CertificateIdentity { get; set; }

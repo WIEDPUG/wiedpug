@@ -3,12 +3,12 @@ using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate
 {
-    public class OrganizationDetails
+    public class OrganisationDetails
     {
         [Required]
         public required TransmissionHeader TransmissionHeader { get; set; }
 
         [Required]
-        public required List<OrganizationDetail> OrganizationDetailCollection { get; set; }
+        public required List<OrganisationDetail> OrganisationDetailCollection { get; set; }
     }
 }

@@ -9,16 +9,15 @@ using System.Threading.Tasks;
 namespace Wiedpug.Domain.Enums
 {
     [Description("")]
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum TransmissionTypeForAuctionCatalogue
     {
-        [Description("AuctionCatalogues: Code: 2. Auction Catalogues")]
+        [Description("2: Auction Catalogues")]
         AuctionCatalogues = 2,
 
-        [Description("PrivateCatalogues: Code: 3. Private Catalogues")]
+        [Description("3: Private Catalogues")]
         PrivateCatalogues = 3,
 
-        [Description("AuctionCatalogueUpdates: Code: 5. Auction Catalogue Updates")]
+        [Description("5: Auction Catalogue Updates")]
         AuctionCatalogueUpdates = 5,
     }
 }

@@ -22,8 +22,8 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXLC",
                     FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestCertificate,
-                    VersionNumber = 31,
+                    TransmissionType = TransmissionType.TestCertificateRequests,
+                    VersionNumber = "31",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
@@ -56,7 +56,6 @@ namespace Wiedpug.API.ExampleResponses
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
                             TEAM3HauteurPrint = false,
                             CommitType = null,
-                            BaleHeader = null,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -100,7 +99,6 @@ namespace Wiedpug.API.ExampleResponses
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
                             TEAM3HauteurPrint = true,
                             CommitType = null,
-                            BaleHeader = null,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {

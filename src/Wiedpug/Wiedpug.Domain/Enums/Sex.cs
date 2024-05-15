@@ -6,16 +6,16 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Sex
     {
-        [Description("Ewes: Code: E. Ewes")]
-        Ewes,
+        [Description("E: Ewes")]
+        E,
 
-        [Description("Wethers: Code: W. Wethers")]
-        Wethers,
+        [Description("W: Wethers")]
+        W,
 
-        [Description("Rams: Code: R. Rams")]
-        Rams,
+        [Description("R: Rams")]
+        R,
 
-        [Description("Mixed: Code: M. Mixed")]
-        Mixed
+        [Description("M: Mixed")]
+        M
     }
 }

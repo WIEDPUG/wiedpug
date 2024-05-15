@@ -13,13 +13,13 @@ public static class OrganizationDetailsEndpoints
         var group = routes.MapGroup("/organization-details").WithTags("Organization Details");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(OrganizationDetails), typeof(OrganizationDetailsRequestExample))]
+        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganizationDetailsRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CreateOrganizationDetails200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] OrganizationDetails model) =>
+        ([FromBody] OrganisationDetails model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -81,14 +81,14 @@ public static class OrganizationDetailsEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPut("/{id}",
-        [SwaggerRequestExample(typeof(OrganizationDetails), typeof(OrganizationDetailRequestExample))]
+        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganizationDetailRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(OrganizationDetailExample))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        (string id, [FromBody] OrganizationDetail model) =>
+        (string id, [FromBody] OrganisationDetail model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })

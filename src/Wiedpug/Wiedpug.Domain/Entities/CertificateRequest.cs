@@ -48,8 +48,6 @@ namespace Wiedpug.Domain.Entities
 
         public string? CommitType { get; set; }
 
-        public BaleHeader? BaleHeader { get; set; }
-
         public List<CertificateRequestDetail>? CertificateRequestDetails { get; set; }
     }
 

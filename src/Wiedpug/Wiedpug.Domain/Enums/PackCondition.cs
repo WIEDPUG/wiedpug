@@ -13,16 +13,16 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum PackCondition
     {
-        [Description("NewPack: Code: N. New Pack (not previously used)")]
-        NewPack,
+        [Description("N: New Pack (not previously used)")]
+        N,
 
-        [Description("Marked: Code: M. Marked (not previously cored and grabbed")]
-        Marked,
+        [Description("M: Marked (not previously cored and grabbed")]
+        M,
 
-        [Description("Repaired: Code: R. Repaired (previously core and/or grabbed and repaired)")]
-        Repaired,
+        [Description("R: Repaired (previously core and/or grabbed and repaired)")]
+        R,
 
-        [Description("NotRepaired: Code: X. Not repaired (previously cored and/or grabbed) (excl reoffer")]
-        NotRepaired
+        [Description("X: Not repaired (previously cored and/or grabbed) (excl reoffer")]
+        X
     }
 }
