@@ -30,7 +30,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
                 },
                 TestRequestsVerificationDetails = new List<TestRequestsVerificationDetail> {
                     new TestRequestsVerificationDetail
@@ -102,12 +102,12 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                         {
-                            DeclaredBreed = DeclaredBreed.AustralianSuperfine,
-                            DeclaredWoolSubCategory = DeclaredWoolSubCategory.NotRequired,
-                            DeclaredWoolCategory = DeclaredWoolCategory.Pieces,
+                            DeclaredBreed = DeclaredBreed.A,
+                            DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
+                            DeclaredWoolCategory = DeclaredWoolCategory.P,
                             ContactWithExoticBreeds = true,
                             Crutched = false,
-                            Sex = Sex.Rams,
+                            Sex = Sex.R,
                             AgeFrom = 2,
                             DeclaredQualifierCode1 = null,
                             DeclaredQualifierCode2 = null,
@@ -188,12 +188,12 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                         {
-                            DeclaredBreed = DeclaredBreed.AustralianSuperfine,
-                            DeclaredWoolSubCategory = DeclaredWoolSubCategory.NotRequired,
-                            DeclaredWoolCategory = DeclaredWoolCategory.Bellies,
+                            DeclaredBreed = DeclaredBreed.A,
+                            DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
+                            DeclaredWoolCategory = DeclaredWoolCategory.B,
                             ContactWithExoticBreeds = false,
                             Crutched = false,
-                            Sex = Sex.Ewes,
+                            Sex = Sex.E,
                             AgeFrom = 1,
                             DeclaredQualifierCode1 = null,
                             DeclaredQualifierCode2 = null,

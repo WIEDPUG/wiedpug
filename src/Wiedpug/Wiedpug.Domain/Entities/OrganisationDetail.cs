@@ -17,11 +17,11 @@ namespace Wiedpug.Domain.Entities
         public required string NameOfOrganisation { get; set; }
 
         /// <summary>
-        /// Date value in IS standard. e.g. 240321 (YYMMDD)
+        /// Date value in IS standard. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>        
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(Regex.DATE)]
+        [RegularExpression(RegexPattern.DATE_ISO8601)]
         [StringLength(6)]
         public required string DateLastUpdated { get; set; }
 
@@ -35,9 +35,13 @@ namespace Wiedpug.Domain.Entities
 
         public PhoneNumber? PhoneNumber { get; set; }
 
+        /// <summary>
+        /// Australian Business Number
+        /// </summary>
         [StringLength(11)]
         [RegularExpression(Regex.NUMBERS)]
-        public string? Abn { get; set; }
+        public string? ABN { get; set; }
+
 
         public PhoneNumber? FaxNumber { get; set; }
 

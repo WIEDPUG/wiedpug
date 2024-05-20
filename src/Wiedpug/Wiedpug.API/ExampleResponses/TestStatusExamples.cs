@@ -32,7 +32,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
                 },
                 TestStatusDetails = new List<TestStatusDetail>
                 {

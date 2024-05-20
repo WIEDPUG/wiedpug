@@ -10,11 +10,12 @@ namespace Wiedpug.Domain.Shared.Constants
         public const string DECIMAL_FOUR_DIGITS = @"/^\d+(\.\d{4})?$/";
         public const string DECIMAL_SIX_DIGITS = @"/^\d+(\.\d{6})?$/";
         public const string STRING_SIX_DIGITS_BEFORE_DECIMAL_POINT = @"^\d{6}$";
+        public const string DATE_AND_TIME_UTC_ISO8601 = @"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$";
     }
 
     public class Regex
     {
-        public const string DATE = @"^(?<year>\d{2})(?<month>0[1-9]|1[0-2])(?<day>0[1-9]|[12]\d|3[01])$";
+        public const string DATE = @" ^ (?<year>\d{2})(?<month>0[1-9]|1[0-2])(?<day>0[1-9]|[12]\d|3[01])$";
         public const string TIME = @"^(?<hour>[01][0-9]|2[0-3])(?<minute>[0-5][0-9])$";
         public const string NUMBERS = @"^[0-9]+$";
         public const string DECIMAL_ONE_DIGIT = @"/^\d+(\.\d{1})?$/";

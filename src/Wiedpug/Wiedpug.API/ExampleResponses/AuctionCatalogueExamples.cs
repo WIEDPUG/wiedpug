@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = "Talman",
                                 Version = 10820
                             },
-                            Abn = "72001967184"
+                            ABN = "72001967184"
                         },
                         WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
                         {
@@ -51,7 +51,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     CentreStorage = "M",
                                     SaleDate = "170119",
-                                    WoolState = WoolState._8,
+                                    WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     Currency = "AUD",
                                     WeightUnit = WeightUnit.Kilograms,
@@ -144,7 +144,7 @@ namespace Wiedpug.API.ExampleResponses
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
                                                 QualitySchemes = null,
-                                                MulesingStatus = MulesingStatus.NonMulesed
+                                                MulesingStatus = MulesingStatus.NM
                                             }
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
@@ -290,7 +290,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = "Talman",
                                 Version = 10820
                             },
-                            Abn = "72001967184"
+                            ABN = "72001967184"
                         },
                         WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
                         {
@@ -399,7 +399,7 @@ namespace Wiedpug.API.ExampleResponses
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
                                                 QualitySchemes = null,
-                                                MulesingStatus = MulesingStatus.MulesedWithAnalgesicAndOrAnaesthetic
+                                                MulesingStatus = MulesingStatus.AA
                                             }
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
@@ -533,7 +533,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = "Talman",
                             Version = 10820
                         },
-                        Abn = "72001967184"
+                        ABN = "72001967184"
                     },
                     WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
                     {
@@ -642,7 +642,7 @@ namespace Wiedpug.API.ExampleResponses
                                         new Domain.Entities.LotHeaderVendorDeclaration
                                         {
                                             QualitySchemes = null,
-                                            MulesingStatus = MulesingStatus.MulesedWithAnalgesicAndOrAnaesthetic
+                                            MulesingStatus = MulesingStatus.AA
                                         }
                                     },
                                     LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
@@ -772,8 +772,8 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
-                            RecordTypesToBeExcludedForAuctionCatalogue.BaleIdentification,                            
+                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
+                            RecordTypesToBeExcludedForAuctionCatalogue._84,                            
                         },
                         Season = 23
                     },
@@ -792,8 +792,8 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
-                            RecordTypesToBeExcludedForAuctionCatalogue.FibreDiameterHistogramDetails,
+                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
+                            RecordTypesToBeExcludedForAuctionCatalogue._31,
                         },
                         Season = 23
                     }
@@ -818,8 +818,8 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
-                            RecordTypesToBeExcludedForAuctionCatalogue.FibreDiameterHistogramDetails,
+                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
+                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
                         },
                         Season = 23
                     }
@@ -858,7 +858,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = "Talman",
                                 Version = 10820
                             },
-                            Abn = "72001967184"
+                            ABN = "72001967184"
                         },
                         WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
                             {
@@ -967,7 +967,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 new Domain.Entities.LotHeaderVendorDeclaration
                                                 {
                                                     QualitySchemes = null,
-                                                    MulesingStatus = MulesingStatus.Mulesed
+                                                    MulesingStatus = MulesingStatus.M
                                                 }
                                             },
                                             LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L

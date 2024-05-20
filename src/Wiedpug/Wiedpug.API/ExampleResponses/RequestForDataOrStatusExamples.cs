@@ -26,7 +26,7 @@ namespace Wiedpug.API.ExampleResponses
                             AccessPassword = "1111111111",
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                             VersionNumber = "36",
-                            Abn = "00000000000"
+                            ABN = "00000000000"
                         },
                         RequestForDataCollection = new List<Domain.Entities.RequestForData>
                         {

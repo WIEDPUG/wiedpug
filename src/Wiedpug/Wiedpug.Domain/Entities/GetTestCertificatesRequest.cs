@@ -23,7 +23,10 @@ namespace Wiedpug.Domain.Entities
 
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
+        /// <summary>
+        /// Australian Business Number
+        /// </summary>
         [Required]
-        public required string Abn { get; set; }
+        public required string ABN { get; set; }
     }
 }

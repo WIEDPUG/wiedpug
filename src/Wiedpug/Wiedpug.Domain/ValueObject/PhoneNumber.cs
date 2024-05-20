@@ -4,16 +4,25 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.ValueObject
 {
     public class PhoneNumber
     {
+        /// <summary>
+        /// Standard Phone number following E.164 standard, maximun of 15 digits
+        /// https://en.wikipedia.org/wiki/E.164
+        /// </summary>
         [Required]
-        public required string CountryCode { get; set; }
+        [StringLength(15)]
+        public required StandardPhoneNumber StandardPhoneNumber { get; set; }
 
-        [Required]
-        public required string Number { get; set; }
+        /// <summary>
+        /// Used for landline or fax extentions
+        /// </summary>
+        [StringLength(15)]
+        public string? Extension { get; set; }
 
     }
 }

@@ -30,7 +30,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
                 },
                 TestCertificateCollection = new List<TestCertificate>
                 {
@@ -293,7 +293,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
             };
         }
     }
@@ -327,7 +327,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = "Talman",
                             Version = 10820
                         },
-                        Abn = "72001967184"
+                        ABN = "72001967184"
                     },
                     TestCertificateCollection = new List<TestCertificate>
                     {

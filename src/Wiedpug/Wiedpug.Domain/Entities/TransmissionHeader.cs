@@ -8,19 +8,21 @@ namespace Wiedpug.Domain.Entities
     public class TransmissionHeader
     {
         /// <summary>
-        /// Date value in ISO standard. e.g. 240321 (YYMMDD)
+        /// Date value in ISO standard. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>        
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(Regex.DATE)]
+        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [StringLength(10)]
         public required string DateFormatLastRevised { get; set; }
 
         /// <summary>
-        /// Date value in ISO standard. e.g. 240321 (YYMMDD)
+        /// Date value in ISO standard. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(Regex.DATE)]
+        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [StringLength(10)]
         public required string DateTransmissionFileCreated { get; set; }
 
         [Required]
@@ -56,12 +58,16 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(Regex.NUMBERS)]
         public string? VersionNumber { get; set; }
 
+        [StringLength(9)]
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
+        /// <summary>
+        /// Australian Business Number
+        /// </summary>
         [Required]
         [StringLength(11)]
         [RegularExpression(Regex.NUMBERS)]
-        public required string Abn { get; set; }
+        public required string ABN { get; set; }
 
     }
 }

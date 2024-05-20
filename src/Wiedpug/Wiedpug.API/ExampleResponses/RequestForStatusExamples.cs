@@ -25,7 +25,7 @@ namespace Wiedpug.API.ExampleResponses
                     AccessPassword = "1111111111",
                     TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                     VersionNumber = "36",
-                    Abn = "00000000000"
+                    ABN = "00000000000"
                 },
                 Filters = new List<RequestForStatusFilter>
                 {
@@ -43,9 +43,9 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
-                            RecordTypesToBeExcludedForAuctionCatalogue.FibreDiameterHistogramDetails,
-                            RecordTypesToBeExcludedForAuctionCatalogue.ColourDetails,
+                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
+                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
+                            RecordTypesToBeExcludedForAuctionCatalogue._51C,
                         },
                         Season = 23
                     }
@@ -76,7 +76,7 @@ namespace Wiedpug.API.ExampleResponses
                         AccessPassword = "1111111111",
                         TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                         VersionNumber = "36",
-                        Abn = "00000000000"
+                        ABN = "00000000000"
                     },
                     Responses = new List<TransmissionResponse>
                     {

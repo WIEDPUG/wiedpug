@@ -29,14 +29,14 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
                             TransmissionType = TransmissionType.TestCertificate,
-                            VersionNumber = 31,
+                            VersionNumber = "31",
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = "Talman",
                                 Version = 10820
                             },
-                            Abn = "72001967184"
+                            ABN = "72001967184"
                         },
                          WoolSales = new List<WoolSale>()
                         {
@@ -48,16 +48,16 @@ namespace Wiedpug.API.ExampleResponses
                                     SaleIdentity = new Domain.Entities.SaleIdentity
                                     {
                                         SellingCentreType = "M",
-                                        SaleNumber = 29
+                                        SaleNumber = "29"
                                     },
                                     CentreStorage = "M",
                                     SaleDate = "2017-01-19",
-                                    WoolState = WoolState.Greasy,
-                                    PackType = PackType.TwoBaleTripack,
+                                    WoolState = WoolState.C,
+                                    PackType = PackType.F,
                                     Currency = "AUD",
                                     WeightUnit = WeightUnit.Kilograms,
                                     PostSaleCharge = 25.96,
-                                    CalculationBasis = CalculationBasis.Bale,
+                                    CalculationBasis = CalculationBasis.B,
                                     FreightCharge = 0,
                                     FreightRebate = 3.25,
                                     ChargePerLot = 0,
@@ -67,7 +67,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SellingOrganisation = "ABCD",
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
-                                    DeliveryBasis = DeliveryBasis.DeliveryNominatedDestination,
+                                    DeliveryBasis = DeliveryBasis.D,
                                     CentreDelivery = null,
                                     AlternateDelivery = null
                                 },
@@ -96,7 +96,7 @@ namespace Wiedpug.API.ExampleResponses
                                              Tare = 12,
                                              CostPerWeightUnit = 25,
                                              FirstCost = 12.24,
-                                             PackMaterial = PackMaterial.HDPE1Packs
+                                             PackMaterial = PackMaterial.K
                                          },
                                          LotInvoiceExtension = new LotInvoiceExtension
                                          {
@@ -108,7 +108,7 @@ namespace Wiedpug.API.ExampleResponses
                                          {
                                              new LotHeaderVendorDeclaration
                                              {
-                                                 MulesingStatus = MulesingStatus.NotDeclared
+                                                 MulesingStatus = MulesingStatus.ND
                                              }
                                          },
                                          Bales = new List<Bale>

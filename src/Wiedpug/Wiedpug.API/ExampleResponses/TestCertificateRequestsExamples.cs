@@ -30,7 +30,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
                 },
                 TestCertificateRequestCollection = new List<TestCertificateRequest>
                 {
@@ -51,8 +51,8 @@ namespace Wiedpug.API.ExampleResponses
                             SaleIdentity = null,
                             LotIdentity = null,
                             PrintFlag = null,
-                            CombinationRequest = CombinationRequest.Normal,
-                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.NoAutomaticCombinationsRequired,
+                            CombinationRequest = CombinationRequest.N,
+                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
                             TEAM3HauteurPrint = false,
                             CommitType = null,
@@ -94,8 +94,8 @@ namespace Wiedpug.API.ExampleResponses
                             SaleIdentity = null,
                             LotIdentity = null,
                             PrintFlag = null,
-                            CombinationRequest = CombinationRequest.ChinaContract,
-                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.AutomaticLengthAndStrengthCombinationRequired,
+                            CombinationRequest = CombinationRequest.C,
+                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
                             TEAM3HauteurPrint = true,
                             CommitType = null,
