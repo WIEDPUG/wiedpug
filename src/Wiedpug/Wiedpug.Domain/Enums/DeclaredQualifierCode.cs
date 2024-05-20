@@ -7,61 +7,61 @@ namespace Wiedpug.Domain.Enums
     public enum DeclaredQualifierCode
     {
 
-        [Description("QualifierNotRequired: Code: T. Qualifier not required")]
-        QualifierNotRequired,
+        [Description("T: Qualifier not required")]
+        T,
 
-        [Description("UnscourableColour: Code: H. Unscourable colour")]
-        UnscourableColour,
+        [Description("H: Unscourable colour")]
+        H,
 
-        [Description("ScourableColourOrCreamy: Code: M. Scourable colour/creamy")]
-        ScourableColourOrCreamy,
+        [Description("M: Scourable colour/creamy")]
+        M,
 
-        [Description("DarkStain: Code: S. Dark Stain")]
-        DarkStain,
+        [Description("S: Dark Stain")]
+        S,
 
-        [Description("Cotts: Code: C. Cotts")]
-        Cotts,
+        [Description("C: Cotts")]
+        C,
 
-        [Description("Jowls: Code: J. Jowls")]
-        Jowls,
+        [Description("J: Jowls")]
+        J,
 
-        [Description("Dermatitis: Code: A. Dermatitis")]
-        Dermatitis,
+        [Description("A: Dermatitis")]
+        A,
 
-        [Description("KempMedullated: Code: K. Kemp / Medullated")]
-        KempOrMedullated,
+        [Description("K: Kemp / Medullated")]
+        K,
 
-        [Description("Dags: Code: Q. Dags")]
-        Dags,
+        [Description("Q: Dags")]
+        Q,
 
-        [Description("Necks: Code: E. Necks (Not Scaled)")]
-        Necks,
+        [Description("E: Necks (Not Scaled)")]
+        E,
 
-        [Description("WaterStain: Code: N. Water Stain")]
-        WaterStain,
+        [Description("N: Water Stain")]
+        N,
 
-        [Description("Brands: Code: R. Brands")]
-        Brands,
+        [Description("R: Brands")]
+        R,
 
-        [Description("Doggy: Code: G. Doggy (Not Scaled)")]
-        Doggy,
+        [Description("G: Doggy (Not Scaled)")]
+        G,
 
-        [Description("Mud: Code: D. Mud")]
-        Mud,
+        [Description("D: Mud")]
+        D,
 
-        [Description("SkinPieces: Code: V. Skin pieces")]
-        SkinPieces,
+        [Description("V: Skin pieces")]
+        V,
 
-        [Description("Shanks: Code: P. Shanks")]
-        Shanks,
+        [Description("P: Shanks")]
+        P,
 
-        [Description("BlackAndGrey: Code: Y. Black & Grey")]
-        BlackAndGrey,
+        [Description("Y: Black & Grey")]
+        Y,
 
-        [Description("SoftCotts: Code: F. Soft Cotts")]
-        SoftCotts,
+        [Description("F: Soft Cotts")]
+        F,
 
-        [Description("SweatOrFrib: Code: U. Sweat/Frib")]
-        SweatOrFrib
+        [Description("U: Sweat/Frib")]
+        U
     }
 }

@@ -12,13 +12,13 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum UpdateType
     {
-        [Description("Add: Code: A. The entry is to be added")]
-        Add,
+        [Description("A: The entry is to be added")]
+        A,
 
-        [Description("Change: Code: C. The entry is to be changed")]
-        Change,
+        [Description("C: The entry is to be changed")]
+        C,
 
-        [Description("Delete: Code: D. The entry is to be deleted")]
-        Delete
+        [Description("D: The entry is to be deleted")]
+        D
     }
 }

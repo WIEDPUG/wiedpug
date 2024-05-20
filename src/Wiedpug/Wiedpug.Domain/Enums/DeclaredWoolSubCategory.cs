@@ -6,28 +6,28 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum DeclaredWoolSubCategory
     {
-        [Description("CombingWeanersAndLambs: Code: W. Combing Weaners & Lambs")]
-        CombingWeanersAndLambs,
+        [Description("W: Combing Weaners & Lambs")]
+        W,
 
-        [Description("CardingLambs: Code: L. Carding Lambs")]
-        CardingLambs,
+        [Description("L: Carding Lambs")]
+        L,
 
-        [Description("PluckedAndDead: Code: U. Plucked & Dead")]
-        PluckedAndDead,
+        [Description("U: Plucked & Dead")]
+        U,
 
-        [Description("ShornFromSkins: Code: K. Shorn from Skins")]
-        ShornFromSkins,
+        [Description("K: Shorn from Skins")]
+        K,
 
-        [Description("Fellmongered: Code: G. Fellmongered")]
-        Fellmongered,
+        [Description("G: Fellmongered")]
+        G,
 
-        [Description("Overgrown: Code: O. Overgrown")]
-        Overgrown,
+        [Description("O: Overgrown")]
+        O,
 
-        [Description("NonconformingLot: Code: N. Non-conforming lot")]
-        NonconformingLot,
+        [Description("N: Non-conforming lot")]
+        N,
 
-        [Description("NotRequired: Code: T. Not required")]
-        NotRequired
+        [Description("T: Not required")]
+        T
     }
 }

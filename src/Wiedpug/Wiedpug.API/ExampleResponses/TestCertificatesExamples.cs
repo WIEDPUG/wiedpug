@@ -1,6 +1,5 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
-using Wiedpug.Domain.Aggregates;
 using Wiedpug.Domain.Aggregates.TestCertificateAggregate;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
@@ -16,22 +15,22 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = "200715",
+                    DateTransmissionFileCreated = "160117",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = "ABCD",
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXLC",
                     FinalReceiver = "AWXLC",
                     TransmissionType = TransmissionType.TestCertificate,
-                    VersionNumber = 31,
+                    VersionNumber = "31",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
                 },
                 TestCertificateCollection = new List<TestCertificate>
                 {
@@ -47,10 +46,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.ClassedBulkClassLotQualityManaged,
+                            LotType = LotType.ObjectivelyMatchedInterlot,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.ResultsCertified,
+                            ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -82,7 +81,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.ResultsCertified,
+                                     ReportingFlag = ReportingFlag.R,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -91,8 +90,8 @@ namespace Wiedpug.API.ExampleResponses
                                      CurvatureMeanDegPerMm = 61,
                                      MeanMinimum = null,
                                      MeanMaximum = null,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
+                                     CoreTestSamplingDate = "170110",
+                                     DateIssued = "170110",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },
@@ -164,10 +163,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.ClassedGrowerLot,
+                            LotType = LotType.SubjectivelyMatchedInterlot,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.InformationOnly,
+                            ReportingFlag = ReportingFlag.U,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -203,7 +202,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.ResultsCertified,
+                                     ReportingFlag = ReportingFlag.R,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -212,8 +211,8 @@ namespace Wiedpug.API.ExampleResponses
                                      CurvatureMeanDegPerMm = 61,
                                      MeanMinimum = null,
                                      MeanMaximum = null,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
+                                     CoreTestSamplingDate = "170110",
+                                     DateIssued = "170110",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },
@@ -294,7 +293,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
             };
         }
     }
@@ -311,8 +310,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = "200715",
+                        DateTransmissionFileCreated = "160117",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = "ABCD",
                         CurrentTransmitter = "AWTM",
@@ -320,15 +319,15 @@ namespace Wiedpug.API.ExampleResponses
                         FinalReceiver = "AWXLC",
                         AccessPassword = "1111111111",
                         AccessPasswordReplacement = null,
-                        TransmissionType = TransmissionType.AuctionCatalogues,
-                        VersionNumber = 31,
+                        TransmissionType = TransmissionType.TestCertificate,
+                        VersionNumber = "31",
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = "Talman",
                             Version = 10820
                         },
-                        Abn = "72001967184"
+                        ABN = "72001967184"
                     },
                     TestCertificateCollection = new List<TestCertificate>
                     {
@@ -345,10 +344,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.ClassedGrowerLot,
+                            LotType = LotType.CombinedCertificate,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.InformationOnly,
+                            ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -380,7 +379,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.ResultsCertified,
+                                     ReportingFlag = ReportingFlag.U,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -389,8 +388,8 @@ namespace Wiedpug.API.ExampleResponses
                                      CurvatureMeanDegPerMm = 61,
                                      MeanMinimum = null,
                                      MeanMaximum = null,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
+                                     CoreTestSamplingDate = "170110",
+                                     DateIssued = "170110",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },
@@ -462,10 +461,10 @@ namespace Wiedpug.API.ExampleResponses
                             Tare = 1,
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
-                            LotType = LotType.ClassedGrowerLot,
+                            LotType = LotType.CombinedCertificate,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.InformationOnly,
+                            ReportingFlag = ReportingFlag.C,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
@@ -486,7 +485,7 @@ namespace Wiedpug.API.ExampleResponses
                             PositionOfBreakPercentageBase = 27,
                             LsCertType = LsCertType.LengthAndStrengthTested,
                             IsLsSampleSecured = false,
-                            DateIssued = "2024-01-22"
+                            DateIssued = "240122"
                         },
                         SublotCertificateNumbers = new List<string>
                         {
@@ -501,7 +500,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CoefficientOfVariation = 19.9,
                                      ComfortFactorPercentage = 98.7,
                                      FibresMeasured = 4000,
-                                     ReportingFlag = ReportingFlag.ResultsCertified,
+                                     ReportingFlag = ReportingFlag.R,
                                      Instrument = Instrument.LaserScan,
                                      SubSamplingMethod = SubSamplingMethod.Minicore,
                                      NumberOfSpecimens = 4,
@@ -510,8 +509,8 @@ namespace Wiedpug.API.ExampleResponses
                                      CurvatureMeanDegPerMm = 61,
                                      MeanMinimum = null,
                                      MeanMaximum = null,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
+                                     CoreTestSamplingDate = "170110",
+                                     DateIssued = "170110",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },

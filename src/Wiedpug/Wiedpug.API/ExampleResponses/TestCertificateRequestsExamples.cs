@@ -22,15 +22,15 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXLC",
                     FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestCertificate,
-                    VersionNumber = 31,
+                    TransmissionType = TransmissionType.TestCertificateRequests,
+                    VersionNumber = "31",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
                 },
                 TestCertificateRequestCollection = new List<TestCertificateRequest>
                 {
@@ -51,12 +51,11 @@ namespace Wiedpug.API.ExampleResponses
                             SaleIdentity = null,
                             LotIdentity = null,
                             PrintFlag = null,
-                            CombinationRequest = CombinationRequest.Normal,
-                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.NoAutomaticCombinationsRequired,
+                            CombinationRequest = CombinationRequest.N,
+                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
                             TEAM3HauteurPrint = false,
                             CommitType = null,
-                            BaleHeader = null,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -95,12 +94,11 @@ namespace Wiedpug.API.ExampleResponses
                             SaleIdentity = null,
                             LotIdentity = null,
                             PrintFlag = null,
-                            CombinationRequest = CombinationRequest.ChinaContract,
-                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.AutomaticLengthAndStrengthCombinationRequired,
+                            CombinationRequest = CombinationRequest.C,
+                            AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
                             TEAM3HauteurPrint = true,
                             CommitType = null,
-                            BaleHeader = null,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {

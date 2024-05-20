@@ -35,7 +35,7 @@ namespace Wiedpug.Domain.Aggregates.LotInvoicesAggregate
 
         public ColourCombinationDetails? ColourCombinationDetails { get; set; }
 
-        public GuidanceReporttDetails? GuidanceReporttDetails { get; set; }
+        public GuidanceReportDetails? GuidanceReportDetails { get; set; }
 
         [Required]
         public required List<LotHeaderVendorDeclaration> LotHeaderVendorDeclarations { set; get; }

@@ -35,10 +35,10 @@
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Shared.Constants.RegexPattern" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Shared.Constants.Regex" Collapsed="true">
     <Position X="6.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIIIAAAAKAAACAAAAABAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAIAAAAIAAACAAAAABAAQAAAABAAAEAAAgAAAA=</HashCode>
       <FileName>Shared\Constants.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -77,11 +77,11 @@
       <FileName>Aggregates\AuctionCatalogueAggregate\AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate.OrganizationDetails" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate.OrganisationDetails" Collapsed="true">
     <Position X="11" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Aggregates\OrganizationDetailsAggregate\OrganizationDetails.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\OrganizationDetailsAggregate\OrganisationDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.StatusReplyAggregate.StatusReply" Collapsed="true">
@@ -122,7 +122,7 @@
   <Class Name="Wiedpug.Domain.Entities.Bale" Collapsed="true">
     <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Entities\Bale.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -196,7 +196,7 @@
       <FileName>Entities\FibreDiameterHistogramHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.GuidanceReporttDetails" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Entities.GuidanceReportDetails" Collapsed="true">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAACwAAQAAAEAJCAAAAAAAIAAAAAgEAQAAAAA=</HashCode>
@@ -262,7 +262,7 @@
   <Class Name="Wiedpug.Domain.Entities.LotHeaderVendorDeclaration" Collapsed="true">
     <Position X="4" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAEAAAAEAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAAA=</HashCode>
       <FileName>Entities\LotHeaderVendorDeclaration.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -280,11 +280,11 @@
       <FileName>Entities\OMLDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.OrganizationDetail" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Entities.OrganisationDetail" Collapsed="true">
     <Position X="9.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BABCAAAAAAAAgAAAEAAAQAAAEAAAIAAAAAAEAAACAAI=</HashCode>
-      <FileName>Entities\OrganizationDetail.cs</FileName>
+      <HashCode>BABCAAAAAAAAgAAAkAAAQAAAEAAAIAAAAAAEAAACAAA=</HashCode>
+      <FileName>Entities\OrganisationDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PostSaleCoreTestDetails" Collapsed="true">
@@ -308,11 +308,11 @@
       <FileName>Entities\RequestForDataForAuctionCatalogue.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.RequestForStatusForAuctionCatalogue" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Entities.RequestForStatusFilter" Collapsed="true">
     <Position X="9.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAQAEAAMAAAAAAAAAAAAAAAAAEQAGEAAAAAA=</HashCode>
-      <FileName>Entities\RequestForStatusForAuctionCatalogue.cs</FileName>
+      <FileName>Entities\RequestForStatusFilter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.ScouredTestDetails" Collapsed="true">
@@ -374,7 +374,7 @@
   <Class Name="Wiedpug.Domain.ValueObject.Address" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAACIAAAAgIIAAAAAAAAAIAAAAAAAIAAAAAEAg=</HashCode>
+      <HashCode>AAAAAUAACAAAAAgIAAAAAAAAAAIAAAAAAAIAgAAAEAg=</HashCode>
       <FileName>ValueObject\Address.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -458,7 +458,7 @@
   <Enum Name="Wiedpug.Domain.Enums.TransmissionType">
     <Position X="11.25" Y="3.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>CAAMAAAACAEUGAAAAgAAAAEIAAAARAAIAUEABQAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAEAAAACAQAAAAAAAI=</HashCode>
       <FileName>Enums\TransmissionType.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -479,14 +479,14 @@
   <Enum Name="Wiedpug.Domain.Enums.CalculationBasis" Collapsed="true">
     <Position X="2.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIFAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAACAAAQAA=</HashCode>
       <FileName>Enums\CalculationBasis.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.CalibrationFlag" Collapsed="true">
     <Position X="4" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Enums\CalibrationFlag.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -500,7 +500,7 @@
   <Enum Name="Wiedpug.Domain.Enums.CatalogueSymbol" Collapsed="true">
     <Position X="7.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArEqOYQA=</HashCode>
+      <HashCode>AAIAgAAAAIIAAAAAgAAAQAAAAAAAABQQAAAgRgQAAAA=</HashCode>
       <FileName>Enums\CatalogueSymbol.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -514,21 +514,21 @@
   <Enum Name="Wiedpug.Domain.Enums.CombinationFlag" Collapsed="true">
     <Position X="11" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAABAABAAAAAAAAAAAAAQCthGAAAI=</HashCode>
+      <HashCode>AAAAQAAAAAACAAoAgQAIAAAAAAAIAAAAApABAAAAAAA=</HashCode>
       <FileName>Enums\CombinationFlag.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.DarkAndMedullatedFibreRisk" Collapsed="true">
     <Position X="12.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAAAAIAAAAAAAEAAAAAAQCBhAAAAI=</HashCode>
+      <HashCode>CAIAAAAAAAAAAAAAAAAAAAAAtgEAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Enums\DarkAndMedullatedFibreRisk.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.DeliveryBasis" Collapsed="true">
     <Position X="0.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Enums\DeliveryBasis.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -542,7 +542,7 @@
   <Enum Name="Wiedpug.Domain.Enums.InvoiceMassFlag" Collapsed="true">
     <Position X="4" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\InvoiceMassFlag.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -556,7 +556,7 @@
   <Enum Name="Wiedpug.Domain.Enums.LotType" Collapsed="true">
     <Position X="7.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAABDNhAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAEIAAAgAAUAAQACAAIAAAAA=</HashCode>
       <FileName>Enums\LotType.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -570,56 +570,56 @@
   <Enum Name="Wiedpug.Domain.Enums.MulesingStatus" Collapsed="true">
     <Position X="11" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAEAAEAIAAAAAAABAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>BAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAACAAAAIAAAAE=</HashCode>
       <FileName>Enums\MulesingStatus.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.OfferType" Collapsed="true">
     <Position X="12.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAACA=</HashCode>
       <FileName>Enums\OfferType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.PackCondition" Collapsed="true">
     <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAQQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAwAAAAAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\PackCondition.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.PackMaterial" Collapsed="true">
     <Position X="2.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApABAAA=</HashCode>
+      <HashCode>AAAAAAAAIAABAAAQAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\PackMaterial.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.PackType" Collapsed="true">
     <Position X="4" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAABAAAAAAAAABAIBAAAAAAEAAAACAQCtgEAAAM=</HashCode>
+      <HashCode>AAgAAAAkAASAASAAAIAABAQAAAAAAQQAgAAAAABEABA=</HashCode>
       <FileName>Enums\PackType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.PriceBasis" Collapsed="true">
     <Position X="5.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmCAAAAA=</HashCode>
+      <HashCode>AAAQAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Enums\PriceBasis.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.QualityScheme" Collapsed="true">
     <Position X="7.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAACAgIBAAhAASAABACAASAIAAQAAAAAFBABAEA=</HashCode>
+      <HashCode>AAAAgAAIAAAIAAAAQElAAAAAAYAAAgAIBAAJABIQAQA=</HashCode>
       <FileName>Enums\QualityScheme.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.RecordTypesToBeExcludedForAuctionCatalogue" Collapsed="true">
     <Position X="9.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAABAAAAAgAAAAAIAAAAAAAAAgAAAAAAAABAAAA=</HashCode>
+      <HashCode>ACAAAAAAAAAAAAAIAAAACAAAgAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\RecordTypesToBeExcludedForAuctionCatalogue.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -633,7 +633,7 @@
   <Enum Name="Wiedpug.Domain.Enums.ReportingFlag" Collapsed="true">
     <Position X="12.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAACAQA=</HashCode>
+      <HashCode>MAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\ReportingFlag.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -654,7 +654,7 @@
   <Enum Name="Wiedpug.Domain.Enums.SaleType" Collapsed="true">
     <Position X="4" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAIggEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAQAAAAAAABCABAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\SaleType.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -665,18 +665,18 @@
       <FileName>Enums\SourceCode.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Wiedpug.Domain.Enums.SourcedType" Collapsed="true">
+  <Enum Name="Wiedpug.Domain.Enums.ScouredType" Collapsed="true">
     <Position X="7.5" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAAAEAQAIAAQAAAAAAAABAAAAAAEA=</HashCode>
-      <FileName>Enums\SourcedType.cs</FileName>
+      <FileName>Enums\ScouredType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.SubSamplingMethod" Collapsed="true">
     <Position X="9.25" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Enums\SubSamplingMethod.cs</FileName>
+      <FileName>Enums\SubsamplingMethod.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.TransmissionTypeForAuctionCatalogue" Collapsed="true">
@@ -689,7 +689,7 @@
   <Enum Name="Wiedpug.Domain.Enums.UpdateType" Collapsed="true">
     <Position X="12.75" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\UpdateType.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -703,14 +703,14 @@
   <Enum Name="Wiedpug.Domain.Enums.WoolState" Collapsed="true">
     <Position X="2.25" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAABAAAAAAAAABAIBAAAAAAEAAAAAAQCoAIAAAI=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAIMgBAIAAAAAAQCAAAAAKAAAAEA=</HashCode>
       <FileName>Enums\WoolState.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Wiedpug.Domain.Enums.YieldType" Collapsed="true">
     <Position X="4" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QQ4wAAABABAABCtEIiAIAAAABoAIiQAIACEAAgAAAAA=</HashCode>
+      <HashCode>QADQAGADgCgEYQkAZAAwAgABAgAQAAAAQAEAAAAIAAA=</HashCode>
       <FileName>Enums\YieldType.cs</FileName>
     </TypeIdentifier>
   </Enum>

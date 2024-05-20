@@ -24,8 +24,8 @@ namespace Wiedpug.API.ExampleResponses
                     FinalReceiver = "AWTM",
                     AccessPassword = "1111111111",
                     TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                    VersionNumber = 36,
-                    Abn = "00000000000"
+                    VersionNumber = "36",
+                    ABN = "00000000000"
                 },
                 Filters = new List<RequestForStatusFilter>
                 {
@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
                             SellingCentreType = "F",
-                            SaleNumber = 18
+                            SaleNumber = "18"
                         },
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "2023-10-31",
@@ -43,9 +43,9 @@ namespace Wiedpug.API.ExampleResponses
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue.InterlotComponentBaleHeader,
-                            RecordTypesToBeExcludedForAuctionCatalogue.FibreDiameterHistogramDetails,
-                            RecordTypesToBeExcludedForAuctionCatalogue.ColourDetails,
+                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
+                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
+                            RecordTypesToBeExcludedForAuctionCatalogue._51C,
                         },
                         Season = 23
                     }
@@ -75,8 +75,8 @@ namespace Wiedpug.API.ExampleResponses
                         FinalReceiver = "AWTM",
                         AccessPassword = "1111111111",
                         TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                        VersionNumber = 36,
-                        Abn = "00000000000"
+                        VersionNumber = "36",
+                        ABN = "00000000000"
                     },
                     Responses = new List<TransmissionResponse>
                     {

@@ -6,22 +6,22 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum DeclaredBreed
     {
-        [Description("AustralianSuperfine: Code: A. Australian Superfine")]
-        AustralianSuperfine,
+        [Description("A: Australian Superfine")]
+        A,
 
-        [Description("Merino: Code: M. Merino")]
-        Merino,
+        [Description("M: Merino")]
+        M,
 
-        [Description("Crossbred: Code: X. Crossbred")]
-        Crossbred,
+        [Description("X: Crossbred")]
+        X,
 
-        [Description("Downs: Code: D. Downs")]
-        Downs,
+        [Description("D: Downs")]
+        D,
 
-        [Description("Carpet: Code: T. Carpet")]
-        Carpet,
+        [Description("T: Carpet")]
+        T,
 
-        [Description("ShedsFibres: Code: R. Sheds Fibres")]
-        ShedsFibres
+        [Description("R: Sheds Fibres")]
+        R
     }
 }

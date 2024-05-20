@@ -27,21 +27,13 @@
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TestCertificate">
     <Position X="8" Y="1" Width="3" />
-    <AssociationLine Name="ColorDetails" Type="Wiedpug.Domain.Entities.ColourDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="10.875" Y="2.103" />
-        <Point X="10.875" Y="2.478" />
-        <Point X="14.167" Y="2.478" Type="JumpStart" />
-        <Point X="14.333" Y="2.478" Type="JumpEnd" />
-        <Point X="16.375" Y="2.478" />
-        <Point X="16.375" Y="4" />
-      </Path>
-    </AssociationLine>
     <AssociationLine Name="PremiumTestDetails" Type="Wiedpug.Domain.Entities.PremiumTestDetails" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="11" Y="1.938" />
         <Point X="14.167" Y="1.938" Type="JumpStart" />
         <Point X="14.333" Y="1.938" Type="JumpEnd" />
+        <Point X="16.292" Y="1.938" Type="JumpStart" />
+        <Point X="16.458" Y="1.938" Type="JumpEnd" />
         <Point X="26.25" Y="1.938" />
         <Point X="26.25" Y="3.75" />
         <Point X="25" Y="3.75" />
@@ -62,34 +54,6 @@
         <Point X="26.635" Y="26.898" Type="JumpStart" />
         <Point X="26.802" Y="26.898" Type="JumpEnd" />
         <Point X="32.25" Y="26.898" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ColorCombinationDetails" Type="Wiedpug.Domain.Entities.ColourCombinationDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="10.688" Y="2.103" />
-        <Point X="10.688" Y="3.352" />
-        <Point X="12.688" Y="3.352" />
-        <Point X="12.688" Y="4" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ScouredTestDetails" Type="Wiedpug.Domain.Entities.ScouredTestDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="8.625" Y="2.103" />
-        <Point X="8.625" Y="23.105" />
-        <Point X="10.189" Y="23.105" Type="JumpStart" />
-        <Point X="10.355" Y="23.105" Type="JumpEnd" />
-        <Point X="14.167" Y="23.105" Type="JumpStart" />
-        <Point X="14.333" Y="23.105" Type="JumpEnd" />
-        <Point X="17.135" Y="23.105" Type="JumpStart" />
-        <Point X="17.302" Y="23.105" Type="JumpEnd" />
-        <Point X="18.5" Y="23.105" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Bales" Type="Wiedpug.Domain.Entities.Bale" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="8.25" Y="2.103" />
-        <Point X="8.25" Y="7.184" />
-        <Point X="7" Y="7.184" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -117,7 +81,6 @@
       <Property Name="LengthAdjustmentNoteDetails" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="FibreDiameterHistograms" />
       <Property Name="Bales" />
     </ShowAsCollectionAssociation>
   </Class>
@@ -152,16 +115,14 @@
         <Point X="18.083" Y="13.715" Type="JumpEnd" />
         <Point X="19.323" Y="13.715" Type="JumpStart" />
         <Point X="19.489" Y="13.715" Type="JumpEnd" />
-        <Point X="20.704" Y="13.715" Type="JumpStart" />
-        <Point X="20.871" Y="13.715" Type="JumpEnd" />
-        <Point X="20.929" Y="13.715" Type="JumpStart" />
+        <Point X="20.62" Y="13.715" Type="JumpStart" />
+        <Point X="20.927" Y="13.715" Type="JumpEnd" />
+        <Point X="20.964" Y="13.715" Type="JumpStart" />
         <Point X="21.208" Y="13.715" Type="JumpEnd" />
         <Point X="22.948" Y="13.715" Type="JumpStart" />
         <Point X="23.115" Y="13.715" Type="JumpEnd" />
         <Point X="23.604" Y="13.715" Type="JumpStart" />
         <Point X="23.771" Y="13.715" Type="JumpEnd" />
-        <Point X="23.776" Y="13.715" Type="JumpStart" />
-        <Point X="23.943" Y="13.715" Type="JumpEnd" />
         <Point X="23.948" Y="13.715" Type="JumpStart" />
         <Point X="24.115" Y="13.715" Type="JumpEnd" />
         <Point X="24.917" Y="13.715" Type="JumpStart" />
@@ -174,12 +135,12 @@
         <Point X="31.456" Y="11.499" />
         <Point X="35.542" Y="11.499" Type="JumpStart" />
         <Point X="35.708" Y="11.499" Type="JumpEnd" />
-        <Point X="36.695" Y="11.499" Type="JumpStart" />
-        <Point X="36.861" Y="11.499" Type="JumpEnd" />
-        <Point X="37.079" Y="11.499" Type="JumpStart" />
-        <Point X="37.246" Y="11.499" Type="JumpEnd" />
-        <Point X="37.445" Y="11.499" Type="JumpStart" />
-        <Point X="37.611" Y="11.499" Type="JumpEnd" />
+        <Point X="36.69" Y="11.499" Type="JumpStart" />
+        <Point X="36.857" Y="11.499" Type="JumpEnd" />
+        <Point X="37.07" Y="11.499" Type="JumpStart" />
+        <Point X="37.236" Y="11.499" Type="JumpEnd" />
+        <Point X="37.44" Y="11.499" Type="JumpStart" />
+        <Point X="37.607" Y="11.499" Type="JumpEnd" />
         <Point X="38.301" Y="11.499" Type="JumpStart" />
         <Point X="38.468" Y="11.499" Type="JumpEnd" />
         <Point X="42.088" Y="11.499" Type="JumpStart" />
@@ -213,16 +174,14 @@
         <Point X="18.083" Y="13.541" Type="JumpEnd" />
         <Point X="19.323" Y="13.541" Type="JumpStart" />
         <Point X="19.489" Y="13.541" Type="JumpEnd" />
-        <Point X="20.704" Y="13.541" Type="JumpStart" />
-        <Point X="20.871" Y="13.541" Type="JumpEnd" />
-        <Point X="20.929" Y="13.541" Type="JumpStart" />
+        <Point X="20.62" Y="13.541" Type="JumpStart" />
+        <Point X="20.927" Y="13.541" Type="JumpEnd" />
+        <Point X="20.964" Y="13.541" Type="JumpStart" />
         <Point X="21.208" Y="13.541" Type="JumpEnd" />
         <Point X="22.948" Y="13.541" Type="JumpStart" />
         <Point X="23.115" Y="13.541" Type="JumpEnd" />
         <Point X="23.604" Y="13.541" Type="JumpStart" />
         <Point X="23.771" Y="13.541" Type="JumpEnd" />
-        <Point X="23.776" Y="13.541" Type="JumpStart" />
-        <Point X="23.943" Y="13.541" Type="JumpEnd" />
         <Point X="23.948" Y="13.541" Type="JumpStart" />
         <Point X="24.115" Y="13.541" Type="JumpEnd" />
         <Point X="24.917" Y="13.541" Type="JumpStart" />
@@ -237,12 +196,12 @@
         <Point X="31.539" Y="11.796" Type="JumpEnd" />
         <Point X="35.542" Y="11.796" Type="JumpStart" />
         <Point X="35.708" Y="11.796" Type="JumpEnd" />
-        <Point X="36.695" Y="11.796" Type="JumpStart" />
-        <Point X="36.861" Y="11.796" Type="JumpEnd" />
-        <Point X="37.079" Y="11.796" Type="JumpStart" />
-        <Point X="37.246" Y="11.796" Type="JumpEnd" />
-        <Point X="37.445" Y="11.796" Type="JumpStart" />
-        <Point X="37.611" Y="11.796" Type="JumpEnd" />
+        <Point X="36.69" Y="11.796" Type="JumpStart" />
+        <Point X="36.857" Y="11.796" Type="JumpEnd" />
+        <Point X="37.07" Y="11.796" Type="JumpStart" />
+        <Point X="37.236" Y="11.796" Type="JumpEnd" />
+        <Point X="37.44" Y="11.796" Type="JumpStart" />
+        <Point X="37.607" Y="11.796" Type="JumpEnd" />
         <Point X="38.301" Y="11.796" Type="JumpStart" />
         <Point X="38.468" Y="11.796" Type="JumpEnd" />
         <Point X="41.707" Y="11.796" />
@@ -307,10 +266,10 @@
       <Path>
         <Point X="19.937" Y="7.546" />
         <Point X="19.937" Y="12.059" />
-        <Point X="20.704" Y="12.059" Type="JumpStart" />
-        <Point X="20.871" Y="12.059" Type="JumpEnd" />
-        <Point X="20.929" Y="12.059" Type="JumpStart" />
-        <Point X="21.096" Y="12.059" Type="JumpEnd" />
+        <Point X="20.76" Y="12.059" Type="JumpStart" />
+        <Point X="20.927" Y="12.059" Type="JumpEnd" />
+        <Point X="20.964" Y="12.059" Type="JumpStart" />
+        <Point X="21.13" Y="12.059" Type="JumpEnd" />
         <Point X="21.823" Y="12.059" Type="JumpStart" />
         <Point X="21.989" Y="12.059" Type="JumpEnd" />
         <Point X="22.948" Y="12.059" Type="JumpStart" />
@@ -333,12 +292,12 @@
         <Point X="31.539" Y="12.059" Type="JumpEnd" />
         <Point X="35.542" Y="12.059" Type="JumpStart" />
         <Point X="35.708" Y="12.059" Type="JumpEnd" />
-        <Point X="36.695" Y="12.059" Type="JumpStart" />
-        <Point X="36.861" Y="12.059" Type="JumpEnd" />
-        <Point X="37.079" Y="12.059" Type="JumpStart" />
-        <Point X="37.246" Y="12.059" Type="JumpEnd" />
-        <Point X="37.445" Y="12.059" Type="JumpStart" />
-        <Point X="37.611" Y="12.059" Type="JumpEnd" />
+        <Point X="36.69" Y="12.059" Type="JumpStart" />
+        <Point X="36.857" Y="12.059" Type="JumpEnd" />
+        <Point X="37.07" Y="12.059" Type="JumpStart" />
+        <Point X="37.236" Y="12.059" Type="JumpEnd" />
+        <Point X="37.44" Y="12.059" Type="JumpStart" />
+        <Point X="37.607" Y="12.059" Type="JumpEnd" />
         <Point X="38.301" Y="12.059" Type="JumpStart" />
         <Point X="38.468" Y="12.059" Type="JumpEnd" />
         <Point X="41.624" Y="12.059" Type="JumpStart" />
@@ -422,15 +381,15 @@
       <FileName>ValueObject\BaleIdentification.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.GuidanceReporttDetails">
+  <Class Name="Wiedpug.Domain.Entities.GuidanceReportDetails">
     <Position X="17.75" Y="15.25" Width="2.75" />
     <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
       <Path>
         <Point X="19.406" Y="15.25" />
         <Point X="19.406" Y="12.6" />
-        <Point X="20.704" Y="12.6" Type="JumpStart" />
-        <Point X="20.871" Y="12.6" Type="JumpEnd" />
-        <Point X="20.929" Y="12.6" Type="JumpStart" />
+        <Point X="20.76" Y="12.6" Type="JumpStart" />
+        <Point X="20.927" Y="12.6" Type="JumpEnd" />
+        <Point X="20.964" Y="12.6" Type="JumpStart" />
         <Point X="21.208" Y="12.6" Type="JumpEnd" />
         <Point X="22.948" Y="12.6" Type="JumpStart" />
         <Point X="23.115" Y="12.6" Type="JumpEnd" />
@@ -452,12 +411,12 @@
         <Point X="31.833" Y="12.6" Type="JumpEnd" />
         <Point X="35.542" Y="12.6" Type="JumpStart" />
         <Point X="35.708" Y="12.6" Type="JumpEnd" />
-        <Point X="36.695" Y="12.6" Type="JumpStart" />
-        <Point X="36.861" Y="12.6" Type="JumpEnd" />
-        <Point X="37.079" Y="12.6" Type="JumpStart" />
-        <Point X="37.246" Y="12.6" Type="JumpEnd" />
-        <Point X="37.445" Y="12.6" Type="JumpStart" />
-        <Point X="37.611" Y="12.6" Type="JumpEnd" />
+        <Point X="36.69" Y="12.6" Type="JumpStart" />
+        <Point X="36.857" Y="12.6" Type="JumpEnd" />
+        <Point X="37.07" Y="12.6" Type="JumpStart" />
+        <Point X="37.236" Y="12.6" Type="JumpEnd" />
+        <Point X="37.44" Y="12.6" Type="JumpStart" />
+        <Point X="37.607" Y="12.6" Type="JumpEnd" />
         <Point X="38.301" Y="12.6" Type="JumpStart" />
         <Point X="38.468" Y="12.6" Type="JumpEnd" />
         <Point X="40.967" Y="12.6" />
@@ -544,9 +503,9 @@
         <Point X="23.115" Y="12.594" Type="JumpStart" />
         <Point X="22.948" Y="12.594" Type="JumpEnd" />
         <Point X="21.208" Y="12.594" Type="JumpStart" />
-        <Point X="20.929" Y="12.594" Type="JumpEnd" />
-        <Point X="20.871" Y="12.594" Type="JumpStart" />
-        <Point X="20.704" Y="12.594" Type="JumpEnd" />
+        <Point X="20.964" Y="12.594" Type="JumpEnd" />
+        <Point X="20.927" Y="12.594" Type="JumpStart" />
+        <Point X="20.76" Y="12.594" Type="JumpEnd" />
         <Point X="18.25" Y="12.594" />
       </Path>
     </AssociationLine>
@@ -590,18 +549,18 @@
     <AssociationLine Name="ReissueChargeFlag" Type="Wiedpug.Domain.Enums.ReissueChargeFlag" ManuallyRouted="true">
       <Path>
         <Point X="30.5" Y="23.898" />
-        <Point X="32.917" Y="23.898" Type="JumpStart" />
-        <Point X="33.083" Y="23.898" Type="JumpEnd" />
-        <Point X="33.792" Y="23.898" Type="JumpStart" />
-        <Point X="33.958" Y="23.898" Type="JumpEnd" />
+        <Point X="33.026" Y="23.898" Type="JumpStart" />
+        <Point X="33.193" Y="23.898" Type="JumpEnd" />
+        <Point X="33.846" Y="23.898" Type="JumpStart" />
+        <Point X="34.013" Y="23.898" Type="JumpEnd" />
         <Point X="34.75" Y="23.898" />
         <Point X="34.75" Y="20.01" />
         <Point X="35.542" Y="20.01" Type="JumpStart" />
         <Point X="35.708" Y="20.01" Type="JumpEnd" />
         <Point X="36.31" Y="20.01" Type="JumpStart" />
         <Point X="36.477" Y="20.01" Type="JumpEnd" />
-        <Point X="37.079" Y="20.01" Type="JumpStart" />
-        <Point X="37.246" Y="20.01" Type="JumpEnd" />
+        <Point X="37.07" Y="20.01" Type="JumpStart" />
+        <Point X="37.236" Y="20.01" Type="JumpEnd" />
         <Point X="39.453" Y="20.01" Type="JumpStart" />
         <Point X="39.619" Y="20.01" Type="JumpEnd" />
         <Point X="40" Y="20.01" />
@@ -655,18 +614,18 @@
         <Point X="30.135" Y="20.78" Type="JumpEnd" />
         <Point X="30.299" Y="20.78" Type="JumpStart" />
         <Point X="30.465" Y="20.78" Type="JumpEnd" />
-        <Point X="32.917" Y="20.78" Type="JumpStart" />
-        <Point X="33.083" Y="20.78" Type="JumpEnd" />
-        <Point X="33.792" Y="20.78" Type="JumpStart" />
-        <Point X="33.958" Y="20.78" Type="JumpEnd" />
+        <Point X="33.026" Y="20.78" Type="JumpStart" />
+        <Point X="33.193" Y="20.78" Type="JumpEnd" />
+        <Point X="33.846" Y="20.78" Type="JumpStart" />
+        <Point X="34.013" Y="20.78" Type="JumpEnd" />
         <Point X="34.667" Y="20.78" Type="JumpStart" />
         <Point X="34.833" Y="20.78" Type="JumpEnd" />
         <Point X="35.542" Y="20.78" Type="JumpStart" />
         <Point X="35.708" Y="20.78" Type="JumpEnd" />
         <Point X="36.31" Y="20.78" Type="JumpStart" />
         <Point X="36.477" Y="20.78" Type="JumpEnd" />
-        <Point X="37.079" Y="20.78" Type="JumpStart" />
-        <Point X="37.246" Y="20.78" Type="JumpEnd" />
+        <Point X="37.07" Y="20.78" Type="JumpStart" />
+        <Point X="37.236" Y="20.78" Type="JumpEnd" />
         <Point X="39.536" Y="20.78" />
         <Point X="39.536" Y="15.644" />
         <Point X="41.254" Y="15.644" Type="JumpStart" />
@@ -713,18 +672,18 @@
         <Point X="30.135" Y="20.296" Type="JumpEnd" />
         <Point X="30.299" Y="20.296" Type="JumpStart" />
         <Point X="30.465" Y="20.296" Type="JumpEnd" />
-        <Point X="32.917" Y="20.296" Type="JumpStart" />
-        <Point X="33.083" Y="20.296" Type="JumpEnd" />
-        <Point X="33.792" Y="20.296" Type="JumpStart" />
-        <Point X="33.958" Y="20.296" Type="JumpEnd" />
+        <Point X="33.026" Y="20.296" Type="JumpStart" />
+        <Point X="33.193" Y="20.296" Type="JumpEnd" />
+        <Point X="33.846" Y="20.296" Type="JumpStart" />
+        <Point X="34.013" Y="20.296" Type="JumpEnd" />
         <Point X="34.667" Y="20.296" Type="JumpStart" />
         <Point X="34.833" Y="20.296" Type="JumpEnd" />
         <Point X="35.542" Y="20.296" Type="JumpStart" />
         <Point X="35.708" Y="20.296" Type="JumpEnd" />
         <Point X="36.31" Y="20.296" Type="JumpStart" />
         <Point X="36.477" Y="20.296" Type="JumpEnd" />
-        <Point X="37.079" Y="20.296" Type="JumpStart" />
-        <Point X="37.246" Y="20.296" Type="JumpEnd" />
+        <Point X="37.07" Y="20.296" Type="JumpStart" />
+        <Point X="37.236" Y="20.296" Type="JumpEnd" />
         <Point X="39.453" Y="20.296" Type="JumpStart" />
         <Point X="39.619" Y="20.296" Type="JumpEnd" />
         <Point X="40" Y="20.296" />
@@ -758,10 +717,10 @@
         <Point X="14.333" Y="20.363" Type="JumpEnd" />
         <Point X="17.135" Y="20.363" Type="JumpStart" />
         <Point X="17.302" Y="20.363" Type="JumpEnd" />
-        <Point X="20.592" Y="20.363" Type="JumpStart" />
-        <Point X="20.758" Y="20.363" Type="JumpEnd" />
-        <Point X="20.817" Y="20.363" Type="JumpStart" />
-        <Point X="20.983" Y="20.363" Type="JumpEnd" />
+        <Point X="20.62" Y="20.363" Type="JumpStart" />
+        <Point X="20.786" Y="20.363" Type="JumpEnd" />
+        <Point X="20.862" Y="20.363" Type="JumpStart" />
+        <Point X="21.029" Y="20.363" Type="JumpEnd" />
         <Point X="21.042" Y="20.363" Type="JumpStart" />
         <Point X="21.208" Y="20.363" Type="JumpEnd" />
         <Point X="23.604" Y="20.363" Type="JumpStart" />
@@ -812,16 +771,14 @@
         <Point X="18.083" Y="13.867" Type="JumpEnd" />
         <Point X="19.323" Y="13.867" Type="JumpStart" />
         <Point X="19.489" Y="13.867" Type="JumpEnd" />
-        <Point X="20.704" Y="13.867" Type="JumpStart" />
-        <Point X="20.871" Y="13.867" Type="JumpEnd" />
-        <Point X="20.929" Y="13.867" Type="JumpStart" />
+        <Point X="20.62" Y="13.867" Type="JumpStart" />
+        <Point X="20.927" Y="13.867" Type="JumpEnd" />
+        <Point X="20.964" Y="13.867" Type="JumpStart" />
         <Point X="21.208" Y="13.867" Type="JumpEnd" />
         <Point X="22.948" Y="13.867" Type="JumpStart" />
         <Point X="23.115" Y="13.867" Type="JumpEnd" />
         <Point X="23.604" Y="13.867" Type="JumpStart" />
         <Point X="23.771" Y="13.867" Type="JumpEnd" />
-        <Point X="23.776" Y="13.867" Type="JumpStart" />
-        <Point X="23.943" Y="13.867" Type="JumpEnd" />
         <Point X="23.948" Y="13.867" Type="JumpStart" />
         <Point X="24.115" Y="13.867" Type="JumpEnd" />
         <Point X="24.917" Y="13.867" Type="JumpStart" />
@@ -834,12 +791,12 @@
         <Point X="31.75" Y="12.375" />
         <Point X="35.542" Y="12.375" Type="JumpStart" />
         <Point X="35.708" Y="12.375" Type="JumpEnd" />
-        <Point X="36.695" Y="12.375" Type="JumpStart" />
-        <Point X="36.861" Y="12.375" Type="JumpEnd" />
-        <Point X="37.079" Y="12.375" Type="JumpStart" />
-        <Point X="37.246" Y="12.375" Type="JumpEnd" />
-        <Point X="37.445" Y="12.375" Type="JumpStart" />
-        <Point X="37.611" Y="12.375" Type="JumpEnd" />
+        <Point X="36.69" Y="12.375" Type="JumpStart" />
+        <Point X="36.857" Y="12.375" Type="JumpEnd" />
+        <Point X="37.07" Y="12.375" Type="JumpStart" />
+        <Point X="37.236" Y="12.375" Type="JumpEnd" />
+        <Point X="37.44" Y="12.375" Type="JumpStart" />
+        <Point X="37.607" Y="12.375" Type="JumpEnd" />
         <Point X="38.301" Y="12.375" Type="JumpStart" />
         <Point X="38.468" Y="12.375" Type="JumpEnd" />
         <Point X="41.624" Y="12.375" Type="JumpStart" />
@@ -895,16 +852,16 @@
         <Point X="21.823" Y="8.49" Type="JumpEnd" />
         <Point X="21.333" Y="8.49" Type="JumpStart" />
         <Point X="21.166" Y="8.49" Type="JumpEnd" />
-        <Point X="21.096" Y="8.49" Type="JumpStart" />
-        <Point X="20.929" Y="8.49" Type="JumpEnd" />
-        <Point X="20.871" Y="8.49" Type="JumpStart" />
-        <Point X="20.704" Y="8.49" Type="JumpEnd" />
+        <Point X="21.13" Y="8.49" Type="JumpStart" />
+        <Point X="20.964" Y="8.49" Type="JumpEnd" />
+        <Point X="20.927" Y="8.49" Type="JumpStart" />
+        <Point X="20.76" Y="8.49" Type="JumpEnd" />
         <Point X="20.02" Y="8.49" Type="JumpStart" />
         <Point X="19.854" Y="8.49" Type="JumpEnd" />
-        <Point X="17.049" Y="8.49" Type="JumpStart" />
-        <Point X="16.882" Y="8.49" Type="JumpEnd" />
-        <Point X="16.264" Y="8.49" Type="JumpStart" />
-        <Point X="16.097" Y="8.49" Type="JumpEnd" />
+        <Point X="17.086" Y="8.49" Type="JumpStart" />
+        <Point X="16.919" Y="8.49" Type="JumpEnd" />
+        <Point X="16.339" Y="8.49" Type="JumpStart" />
+        <Point X="16.172" Y="8.49" Type="JumpEnd" />
         <Point X="15.504" Y="8.49" Type="JumpStart" />
         <Point X="15.338" Y="8.49" Type="JumpEnd" />
         <Point X="14.333" Y="8.49" Type="JumpStart" />
@@ -915,20 +872,20 @@
         <Point X="12.241" Y="8.49" Type="JumpEnd" />
         <Point X="11.839" Y="8.49" Type="JumpStart" />
         <Point X="11.672" Y="8.49" Type="JumpEnd" />
-        <Point X="10.355" Y="8.49" Type="JumpStart" />
-        <Point X="10.189" Y="8.49" Type="JumpEnd" />
-        <Point X="10.048" Y="8.49" Type="JumpStart" />
-        <Point X="9.881" Y="8.49" Type="JumpEnd" />
-        <Point X="9.74" Y="8.49" Type="JumpStart" />
-        <Point X="9.573" Y="8.49" Type="JumpEnd" />
-        <Point X="9.466" Y="8.49" Type="JumpStart" />
-        <Point X="9.3" Y="8.49" Type="JumpEnd" />
-        <Point X="9.193" Y="8.49" Type="JumpStart" />
-        <Point X="9.026" Y="8.49" Type="JumpEnd" />
-        <Point X="8.919" Y="8.49" Type="JumpStart" />
-        <Point X="8.753" Y="8.49" Type="JumpEnd" />
-        <Point X="8.708" Y="8.49" Type="JumpStart" />
-        <Point X="8.385" Y="8.49" Type="JumpEnd" />
+        <Point X="10.951" Y="8.49" Type="JumpStart" />
+        <Point X="10.784" Y="8.49" Type="JumpEnd" />
+        <Point X="10.365" Y="8.49" Type="JumpStart" />
+        <Point X="10.198" Y="8.49" Type="JumpEnd" />
+        <Point X="9.974" Y="8.49" Type="JumpStart" />
+        <Point X="9.807" Y="8.49" Type="JumpEnd" />
+        <Point X="9.583" Y="8.49" Type="JumpStart" />
+        <Point X="9.417" Y="8.49" Type="JumpEnd" />
+        <Point X="9.271" Y="8.49" Type="JumpStart" />
+        <Point X="9.104" Y="8.49" Type="JumpEnd" />
+        <Point X="8.997" Y="8.49" Type="JumpStart" />
+        <Point X="8.831" Y="8.49" Type="JumpEnd" />
+        <Point X="8.724" Y="8.49" Type="JumpStart" />
+        <Point X="8.557" Y="8.49" Type="JumpEnd" />
         <Point X="6.333" Y="8.49" Type="JumpStart" />
         <Point X="6.167" Y="8.49" Type="JumpEnd" />
         <Point X="4.25" Y="8.49" />
@@ -1016,7 +973,7 @@
   <Enum Name="Wiedpug.Domain.Enums.CalibrationFlag">
     <Position X="17.75" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAA=</HashCode>
       <FileName>Enums\CalibrationFlag.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -1086,7 +1043,7 @@
   <Enum Name="Wiedpug.Domain.Enums.ReportingFlag">
     <Position X="2.75" Y="32.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>MAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAACAQA=</HashCode>
       <FileName>Enums\ReportingFlag.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -1100,7 +1057,7 @@
   <Enum Name="Wiedpug.Domain.Enums.DarkAndMedullatedFibreRisk" Collapsed="true">
     <Position X="23.75" Y="2.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>CAIAAAAAAAAAAAAAAAAAAAAAtgEAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAABAAAAAAAAgCAAAABhQBAAA=</HashCode>
       <FileName>Enums\DarkAndMedullatedFibreRisk.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -1142,7 +1099,7 @@
   <Enum Name="Wiedpug.Domain.Enums.CombinationFlag" Collapsed="true">
     <Position X="40" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAIAAIAEAAAAAABAACABBgABEAAAAgA=</HashCode>
+      <HashCode>AAAAQAAAAAACAAoAgQAIAAAAAAAIAAAAApABAAAAAAA=</HashCode>
       <FileName>Enums\CombinationFlag.cs</FileName>
     </TypeIdentifier>
   </Enum>
@@ -1163,7 +1120,7 @@
   <Enum Name="Wiedpug.Domain.Enums.LotType">
     <Position X="39.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAABDNhAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAEIAAAgAAUAAQACAAIAAAAA=</HashCode>
       <FileName>Enums\LotType.cs</FileName>
     </TypeIdentifier>
   </Enum>

@@ -48,34 +48,35 @@ builder.Services.AddSwaggerExamplesFromAssemblies(Assembly.GetEntryAssembly());
 var app = builder.Build();
 
 var apiVersionSet = app.NewApiVersionSet()
-            //.HasApiVersion(new ApiVersion(1, "Deprecated")) //Adding a Status of "Deprecated" to mark the version as Deprecated
+                //.HasApiVersion(new ApiVersion(1, "Deprecated")) //Adding a Status of "Deprecated" to mark the version as Deprecated
+            .HasApiVersion(new ApiVersion(0, 0))
             .HasApiVersion(new ApiVersion(1,0))
             .HasApiVersion(new ApiVersion(2,0))            
             .ReportApiVersions()            
             .Build();
 var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(apiVersionSet);
 
-versionedGroup.MapRequestForDataOrStatusEndpoints();
+//versionedGroup.MapRequestForDataOrStatusEndpoints();
 
-versionedGroup.MapTestCertificatesEndpoints();
+//versionedGroup.MapTestCertificatesEndpoints();
 
-versionedGroup.MapAuctionCatalogueEndpoints();
+//versionedGroup.MapAuctionCatalogueEndpoints();
 
-versionedGroup.MapRequestForStatusEndpoints();
+//versionedGroup.MapRequestForStatusEndpoints();
 
 versionedGroup.MapOrganizationDetailsEndpoints();
 
-versionedGroup.MapAuctionCatalogueEndpointsV2();
+//versionedGroup.MapAuctionCatalogueEndpointsV2();
 
-versionedGroup.MapTestStatusEndpoints();
+//versionedGroup.MapTestStatusEndpoints();
 
-versionedGroup.MapTestCertificateUpdateEndpoints();
+//versionedGroup.MapTestCertificateUpdateEndpoints();
 
-versionedGroup.MapTestCertificateRequestsEndpoints();
+//versionedGroup.MapTestCertificateRequestsEndpoints();
 
-versionedGroup.MapTestRequestsVerificationEndpoints();
+//versionedGroup.MapTestRequestsVerificationEndpoints();
 
-versionedGroup.MapLotInvoicesEndpoints();
+//versionedGroup.MapLotInvoicesEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

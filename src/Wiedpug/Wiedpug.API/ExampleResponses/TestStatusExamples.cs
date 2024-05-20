@@ -17,22 +17,22 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = "200715",
+                    DateTransmissionFileCreated = "160117",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = "ABCD",
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXLC",
                     FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestCertificate,
-                    VersionNumber = 31,
+                    TransmissionType = TransmissionType.TestStatus,
+                    VersionNumber = "31",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = "Talman",
                         Version = 10820
                     },
-                    Abn = "72001967184"
+                    ABN = "72001967184"
                 },
                 TestStatusDetails = new List<TestStatusDetail>
                 {
@@ -43,9 +43,9 @@ namespace Wiedpug.API.ExampleResponses
                         ClientCode = "019944",
                         ChargeCode = "0511",
                         LSSampleID = "F885688",
-                        CoreSampleReceived = "2024-04-23",
-                        LSSampleReceived = "2024-04-24",
-                        TRVMatched = "2024-04-24",
+                        CoreSampleReceived = "240423",
+                        LSSampleReceived = "240424",
+                        TRVMatched = "240424",
                         CoreSampleCheckTest = null,
                         LsRetuftRequired = LsRetuftRequired.Required,
                         LsRetuftReceived = null,
@@ -58,9 +58,9 @@ namespace Wiedpug.API.ExampleResponses
                         ClientCode = "019944",
                         ChargeCode = "0511",
                         LSSampleID = "F865734",
-                        CoreSampleReceived = "2024-04-23",
-                        LSSampleReceived = "2024-04-24",
-                        TRVMatched = "2024-04-24",
+                        CoreSampleReceived = "240423",
+                        LSSampleReceived = "240424",
+                        TRVMatched = "240424",
                         CoreSampleCheckTest = null,
                         LsRetuftRequired = null,
                         LsRetuftReceived = null,

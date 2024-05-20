@@ -8,9 +8,12 @@ namespace Wiedpug.Domain.Entities
     public class AuctionCatalogueWoolSaleHeaderLots
     {
         [Required]
-        public required int Season { get; set; }
+        [StringLength(2)]
+        [RegularExpression(Regex.NUMBERS)]
+        public required string Season { get; set; }
 
         [Required]
+        [StringLength(4)]
         public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
@@ -18,14 +21,17 @@ namespace Wiedpug.Domain.Entities
         /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
+        [StringLength(2)]
         public required string CentreStorage { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(Regex.DATE)]
+        [StringLength(6)]
         public required string SaleDate { get; set; }
 
         [Required]
+        [StringLength(1)]
         public required WoolState WoolState { get; set; }
 
         [Required]

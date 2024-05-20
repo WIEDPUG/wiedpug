@@ -25,8 +25,8 @@ namespace Wiedpug.API.ExampleResponses
                             FinalReceiver = "AWTM",
                             AccessPassword = "1111111111",
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                            VersionNumber = 36,
-                            Abn = "00000000000"
+                            VersionNumber = "36",
+                            ABN = "00000000000"
                         },
                         RequestForDataCollection = new List<Domain.Entities.RequestForData>
                         {
@@ -36,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SaleIdentity = new Domain.Entities.SaleIdentity
                                 {
                                     SellingCentreType = "F",
-                                    SaleNumber = 18                                    
+                                    SaleNumber = "18"                                    
                                 },
                                 OrganisationRequested = "AWNF",
                                 SaleDateRequested = "2023-10-31",

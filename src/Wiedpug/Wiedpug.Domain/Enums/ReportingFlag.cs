@@ -11,13 +11,13 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum ReportingFlag
     {
-        [Description("InformationOnly: Code: R. Report, results for this test are supplied for information only")]
-        InformationOnly,
+        [Description("R: Report, results for this test are supplied for information only")]
+        R,
 
-        [Description("ResultsCertified: Code: C. Certificate results for this test are certified")]
-        ResultsCertified,
+        [Description("C: Certificate results for this test are certified")]
+        C,
 
-        [Description("Untested: Code: U. This lot is untested and there are no certificate results")]
-        Untested
+        [Description("U: This lot is untested and there are no certificate results")]
+        U
     }
 }
