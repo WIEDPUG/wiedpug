@@ -23,7 +23,6 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentTransmitter = "AWTX",
                             CurrentReceiver = "AWTM",
                             FinalReceiver = "AWTM",
-                            AccessPassword = "1111111111",
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                             VersionNumber = "36",
                             ABN = "00000000000"

@@ -32,8 +32,6 @@ paths:
                 currentTransmitter: AWTM
                 currentReceiver: AWXTS
                 finalReceiver: AWXTS
-                accessPassword: null
-                accessPasswordReplacement: null
                 transmissionType: null
                 versionNumber: null
                 softwareIdentifier: null
@@ -43,7 +41,7 @@ paths:
                   organisationCode: AWTS
                   nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                   dateLastUpdated: '2020-04-28'
-                  industryGroupID: T
+                  industryGroupId: T
                   transmitterFlag: 'Y'
                   phoneNumber:
                     standardPhoneNumber:
@@ -82,7 +80,7 @@ paths:
                   organisationCode: BUY1
                   nameOfOrganisation: DEMO BUYER 1
                   dateLastUpdated: '2020-04-28'
-                  industryGroupID: E
+                  industryGroupId: E
                   transmitterFlag: 'N'
                   phoneNumber: null
                   abn: null
@@ -109,8 +107,6 @@ paths:
                     currentTransmitter: AWTM
                     currentReceiver: AWXLC
                     finalReceiver: AWXLC
-                    accessPassword: null
-                    accessPasswordReplacement: null
                     transmissionType: null
                     versionNumber: '31'
                     softwareIdentifier:
@@ -123,7 +119,7 @@ paths:
                       organisationCode: AWTS
                       nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                       dateLastUpdated: '2020-04-28'
-                      industryGroupID: T
+                      industryGroupId: T
                       transmitterFlag: 'Y'
                       phoneNumber:
                         standardPhoneNumber:
@@ -162,7 +158,7 @@ paths:
                       organisationCode: BUY1
                       nameOfOrganisation: DEMO BUYER 1
                       dateLastUpdated: '2020-04-28'
-                      industryGroupID: E
+                      industryGroupId: E
                       transmitterFlag: 'N'
                       phoneNumber: null
                       abn: null
@@ -279,8 +275,6 @@ paths:
                     currentTransmitter: AWTM
                     currentReceiver: AWXLC
                     finalReceiver: AWXLC
-                    accessPassword: null
-                    accessPasswordReplacement: null
                     transmissionType: null
                     versionNumber: '31'
                     softwareIdentifier:
@@ -293,7 +287,7 @@ paths:
                       organisationCode: AWTS
                       nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                       dateLastUpdated: '2020-04-28'
-                      industryGroupID: T
+                      industryGroupId: T
                       transmitterFlag: 'Y'
                       phoneNumber:
                         standardPhoneNumber:
@@ -332,7 +326,7 @@ paths:
                       organisationCode: BUY1
                       nameOfOrganisation: DEMO BUYER 1
                       dateLastUpdated: '2020-04-28'
-                      industryGroupID: E
+                      industryGroupId: E
                       transmitterFlag: 'N'
                       phoneNumber: null
                       abn: null
@@ -343,7 +337,7 @@ paths:
                       organisationCode: AWTN
                       nameOfOrganisation: AUSTRALIAN WOOL TESTING AUTH LTD
                       dateLastUpdated: '2020-04-28'
-                      industryGroupID: A
+                      industryGroupId: A
                       transmitterFlag: 'Y'
                       phoneNumber:
                         standardPhoneNumber:
@@ -471,8 +465,6 @@ paths:
                   currentTransmitter: AWTM
                   currentReceiver: AWXTS
                   finalReceiver: AWXTS
-                  accessPassword: null
-                  accessPasswordReplacement: null
                   transmissionType: null
                   versionNumber: null
                   softwareIdentifier: null
@@ -482,7 +474,7 @@ paths:
                     organisationCode: AWTS
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
-                    industryGroupID: T
+                    industryGroupId: T
                     transmitterFlag: 'Y'
                     phoneNumber:
                       standardPhoneNumber:
@@ -590,8 +582,6 @@ paths:
                 currentTransmitter: AWTM
                 currentReceiver: AWXTS
                 finalReceiver: AWXTS
-                accessPassword: null
-                accessPasswordReplacement: null
                 transmissionType: null
                 versionNumber: null
                 softwareIdentifier: null
@@ -601,7 +591,7 @@ paths:
                   organisationCode: AWTS
                   nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                   dateLastUpdated: '2020-04-28'
-                  industryGroupID: T
+                  industryGroupId: T
                   transmitterFlag: 'Y'
                   phoneNumber:
                     standardPhoneNumber:
@@ -653,8 +643,6 @@ paths:
                   currentTransmitter: AWTM
                   currentReceiver: AWXTS
                   finalReceiver: AWXTS
-                  accessPassword: null
-                  accessPasswordReplacement: null
                   transmissionType: null
                   versionNumber: null
                   softwareIdentifier: null
@@ -664,7 +652,7 @@ paths:
                     organisationCode: AWTS
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
-                    industryGroupID: T
+                    industryGroupId: T
                     transmitterFlag: 'Y'
                     phoneNumber:
                       standardPhoneNumber:
@@ -1037,7 +1025,7 @@ components:
     OrganisationDetail:
       required:
         - dateLastUpdated
-        - industryGroupID
+        - industryGroupId
         - nameOfOrganisation
         - organisationCode
         - transmitterFlag
@@ -1061,7 +1049,7 @@ components:
           type: string
           description: Date value in IS standard. e.g. 2024-03-21 (YYYY-MM-DD)
           format: date
-        industryGroupID:
+        industryGroupId:
           maxLength: 1
           minLength: 0
           type: string
@@ -1201,16 +1189,6 @@ components:
           maxLength: 5
           minLength: 0
           type: string
-        accessPassword:
-          maxLength: 10
-          minLength: 0
-          type: string
-          nullable: true
-        accessPasswordReplacement:
-          maxLength: 10
-          minLength: 0
-          type: string
-          nullable: true
         transmissionType:
           $ref: '#/components/schemas/TransmissionType'
         versionNumber:

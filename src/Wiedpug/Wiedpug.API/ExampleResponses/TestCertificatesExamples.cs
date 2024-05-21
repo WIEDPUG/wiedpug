@@ -317,8 +317,6 @@ namespace Wiedpug.API.ExampleResponses
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        AccessPassword = "1111111111",
-                        AccessPasswordReplacement = null,
                         TransmissionType = TransmissionType.TestCertificate,
                         VersionNumber = "31",
                         SoftwareIdentifier = new SoftwareIdentifier

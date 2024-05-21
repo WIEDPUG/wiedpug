@@ -27,7 +27,7 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [StringLength(1)]
-        public required string IndustryGroupID { get; set; }
+        public required string IndustryGroupId { get; set; }
 
         [Required]
         [StringLength(1)]
@@ -41,7 +41,6 @@ namespace Wiedpug.Domain.Entities
         [StringLength(11)]
         [RegularExpression(Regex.NUMBERS)]
         public string? ABN { get; set; }
-
 
         public PhoneNumber? FaxNumber { get; set; }
 

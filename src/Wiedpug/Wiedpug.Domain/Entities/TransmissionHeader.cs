@@ -45,12 +45,6 @@ namespace Wiedpug.Domain.Entities
         [StringLength(5)]
         public required string FinalReceiver { get; set; }
 
-        [StringLength(10)]
-        public string? AccessPassword { get; set; }
-
-        [StringLength(10)]
-        public string? AccessPasswordReplacement { get; set; }
-
         [StringLength(2)]
         public TransmissionType? TransmissionType { get; set; }
 

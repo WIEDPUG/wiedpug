@@ -32,7 +32,7 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader">
     <Position X="22.75" Y="6.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAIAAQAAAAgAEAQgAAAAAAAAAAAIAAJAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAIAAJAAgAQAAAAQI=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -41,7 +41,7 @@
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeader">
     <Position X="29" Y="6.5" Width="2.5" />
-    <AssociationLine Name="WoolSaleHeaderLots" Type="Wiedpug.Domain.Entities.WoolSaleHeaderLots" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="WoolSaleHeaderLots" Type="Wiedpug.Domain.Entities.AuctionCatalogueWoolSaleHeaderLots" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="30.938" Y="7.368" />
         <Point X="30.938" Y="7.743" />
@@ -77,11 +77,11 @@
       <Property Name="Lots" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.WoolSaleHeaderLots">
+  <Class Name="Wiedpug.Domain.Entities.AuctionCatalogueWoolSaleHeaderLots">
     <Position X="28.75" Y="8.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAQQAAQEBAwISAIAACAAAAQAAQAAEgSUAhAA=</HashCode>
-      <FileName>Entities\WoolSaleHeaderLots.cs</FileName>
+      <FileName>Entities\AuctionCatalogueWoolSaleHeaderLots.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="SaleIdentity" />
@@ -103,193 +103,36 @@
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeaderLot">
     <Position X="38.75" Y="8.75" Width="6" />
-    <AssociationLine Name="BaleIdentifications" Type="Wiedpug.Domain.ValueObject.BaleIdentification" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="43.688" Y="9.618" />
-        <Point X="43.688" Y="9.993" />
-        <Point X="40.333" Y="9.993" Type="JumpStart" />
-        <Point X="40.167" Y="9.993" Type="JumpEnd" />
-        <Point X="40.083" Y="9.993" Type="JumpStart" />
-        <Point X="39.917" Y="9.993" Type="JumpEnd" />
-        <Point X="39.896" Y="9.993" Type="JumpStart" />
-        <Point X="39.729" Y="9.993" Type="JumpEnd" />
-        <Point X="39.646" Y="9.993" Type="JumpStart" />
-        <Point X="39.479" Y="9.993" Type="JumpEnd" />
-        <Point X="39.396" Y="9.993" Type="JumpStart" />
-        <Point X="39.229" Y="9.993" Type="JumpEnd" />
-        <Point X="39.146" Y="9.993" Type="JumpStart" />
-        <Point X="38.979" Y="9.993" Type="JumpEnd" />
-        <Point X="38.958" Y="9.993" Type="JumpStart" />
-        <Point X="38.792" Y="9.993" Type="JumpEnd" />
-        <Point X="38.75" Y="9.993" />
-        <Point X="38.75" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="CatalogueLotDescription" Type="Wiedpug.Domain.Entities.CatalogueLotDescription" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="39.062" Y="9.618" />
-        <Point X="39.062" Y="18.875" />
-        <Point X="38.833" Y="18.875" Type="JumpStart" />
-        <Point X="38.667" Y="18.875" Type="JumpEnd" />
-        <Point X="3.25" Y="18.875" />
-        <Point X="3.25" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ColourCombinationDetails" Type="Wiedpug.Domain.Entities.ColourCombinationDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="39.312" Y="9.618" />
-        <Point X="39.312" Y="18.875" />
-        <Point X="38.833" Y="18.875" Type="JumpStart" />
-        <Point X="38.667" Y="18.875" Type="JumpEnd" />
-        <Point X="7.125" Y="18.875" />
-        <Point X="7.125" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ColourDetails" Type="Wiedpug.Domain.Entities.ColourDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="39.562" Y="9.618" />
-        <Point X="39.562" Y="18.875" />
-        <Point X="38.833" Y="18.875" Type="JumpStart" />
-        <Point X="38.667" Y="18.875" Type="JumpEnd" />
-        <Point X="11.375" Y="18.875" />
-        <Point X="11.375" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="CombinationDetails" Type="Wiedpug.Domain.Entities.CombinationDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="39.812" Y="9.618" />
-        <Point X="39.812" Y="18.875" />
-        <Point X="38.833" Y="18.875" Type="JumpStart" />
-        <Point X="38.667" Y="18.875" Type="JumpEnd" />
-        <Point X="15.062" Y="18.875" />
-        <Point X="15.062" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="CoreTestDetails" Type="Wiedpug.Domain.Entities.CoreTestDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="40" Y="9.618" />
-        <Point X="40" Y="18.875" />
-        <Point X="38.833" Y="18.875" Type="JumpStart" />
-        <Point X="38.667" Y="18.875" Type="JumpEnd" />
-        <Point X="19.312" Y="18.875" />
-        <Point X="19.312" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Histograms" Type="Wiedpug.Domain.Aggregates.FibreDiameterHistogram" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="40.25" Y="9.618" />
-        <Point X="40.25" Y="18.875" />
-        <Point X="38.833" Y="18.875" Type="JumpStart" />
-        <Point X="38.667" Y="18.875" Type="JumpEnd" />
-        <Point X="25.625" Y="18.875" />
-        <Point X="25.625" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="InterlotComponentBales" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="38.875" Y="9.618" />
-        <Point X="38.875" Y="18.875" />
-        <Point X="38.833" Y="18.875" Type="JumpStart" />
-        <Point X="38.667" Y="18.875" Type="JumpEnd" />
-        <Point X="32.188" Y="18.875" />
-        <Point X="32.188" Y="19.25" />
-      </Path>
+    <AssociationLine Name="InterlotComponentBales" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale">
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
         <Position X="0.06" Y="0.11" Height="0.182" Width="2.053" />
       </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="LengthAndStrengthCombDetails" Type="Wiedpug.Domain.Entities.LengthAndStrengthCombDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="40.5" Y="9.618" />
-        <Point X="40.5" Y="9.993" />
-        <Point X="43.188" Y="9.993" />
-        <Point X="43.188" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="LotHeader" Type="Wiedpug.Domain.Entities.LotHeader" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="42.063" Y="9.618" />
-        <Point X="42.063" Y="9.993" />
-        <Point X="47.917" Y="9.993" Type="JumpStart" />
-        <Point X="48.083" Y="9.993" Type="JumpEnd" />
-        <Point X="51.75" Y="9.993" />
-        <Point X="51.75" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="LotHeaderExtension" Type="Wiedpug.Domain.Entities.LotHeaderExtension" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="43.438" Y="9.618" />
-        <Point X="43.438" Y="9.993" />
-        <Point X="47.917" Y="9.993" Type="JumpStart" />
-        <Point X="48.083" Y="9.993" Type="JumpEnd" />
-        <Point X="54.667" Y="9.993" Type="JumpStart" />
-        <Point X="54.833" Y="9.993" Type="JumpEnd" />
-        <Point X="58.375" Y="9.993" />
-        <Point X="58.375" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="OmiDetails" Type="Wiedpug.Domain.Entities.OMIDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="42.688" Y="9.618" />
-        <Point X="42.688" Y="9.993" />
-        <Point X="47.917" Y="9.993" Type="JumpStart" />
-        <Point X="48.083" Y="9.993" Type="JumpEnd" />
-        <Point X="54.667" Y="9.993" Type="JumpStart" />
-        <Point X="54.833" Y="9.993" Type="JumpEnd" />
-        <Point X="61.917" Y="9.993" Type="JumpStart" />
-        <Point X="62.083" Y="9.993" Type="JumpEnd" />
-        <Point X="66.292" Y="9.993" Type="JumpStart" />
-        <Point X="66.458" Y="9.993" Type="JumpEnd" />
-        <Point X="70.938" Y="9.993" />
-        <Point X="70.938" Y="19.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="SubjectiveInterlotDetails" Type="Wiedpug.Domain.Entities.SubjectiveInterlotDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="43.062" Y="9.618" />
-        <Point X="43.062" Y="9.993" />
-        <Point X="47.917" Y="9.993" Type="JumpStart" />
-        <Point X="48.083" Y="9.993" Type="JumpEnd" />
-        <Point X="54.667" Y="9.993" Type="JumpStart" />
-        <Point X="54.833" Y="9.993" Type="JumpEnd" />
-        <Point X="61.917" Y="9.993" Type="JumpStart" />
-        <Point X="62.083" Y="9.993" Type="JumpEnd" />
-        <Point X="66.292" Y="9.993" Type="JumpStart" />
-        <Point X="66.458" Y="9.993" Type="JumpEnd" />
-        <Point X="74.542" Y="9.993" Type="JumpStart" />
-        <Point X="74.708" Y="9.993" Type="JumpEnd" />
-        <Point X="78.917" Y="9.993" Type="JumpStart" />
-        <Point X="79.083" Y="9.993" Type="JumpEnd" />
-        <Point X="83.125" Y="9.993" />
-        <Point X="83.125" Y="19.25" />
-      </Path>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACiAACBAAhAAAAgAEEAAIAAQQAAAQABgk=</HashCode>
       <FileName>Aggregates\AuctionCatalogueAggregate\AuctionCatalogueWoolSaleHeaderLot.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="CatalogueLotDescription" />
-      <Property Name="ColourCombinationDetails" />
-      <Property Name="ColourDetails" />
-      <Property Name="CombinationDetails" />
-      <Property Name="CoreTestDetails" />
-      <Property Name="LengthAndStrengthCombDetails" />
-      <Property Name="LengthAndStrengthDetails" />
       <Property Name="LotHeader" />
-      <Property Name="LotHeaderAwexData" />
       <Property Name="LotHeaderExtension" />
-      <Property Name="OmiDetails" />
-      <Property Name="OmlDetails" />
+      <Property Name="LotHeaderAwexData" />
+      <Property Name="ColourDetails" />
       <Property Name="PremiumTestDetails" />
       <Property Name="SubjectiveInterlotDetails" />
+      <Property Name="CombinationDetails" />
+      <Property Name="LengthAndStrengthCombDetails" />
+      <Property Name="LengthAndStrengthDetails" />
+      <Property Name="OmlDetails" />
+      <Property Name="CoreTestDetails" />
+      <Property Name="ColourCombinationDetails" />
+      <Property Name="OmiDetails" />
+      <Property Name="CatalogueLotDescription" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="BaleIdentifications" />
-      <Property Name="Histograms" />
-      <Property Name="InterlotComponentBales" />
       <Property Name="LotHeaderPricings" />
       <Property Name="LotHeaderVendorDeclarations" />
+      <Property Name="BaleIdentifications" />
+      <Property Name="InterlotComponentBales" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.SoftwareIdentifier">

@@ -25,8 +25,6 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentTransmitter = "AWTM",
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
-                            AccessPassword = "1111111111",
-                            AccessPasswordReplacement = null,
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                             VersionNumber = "31",
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
@@ -280,8 +278,6 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentTransmitter = "AWTM",
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
-                            AccessPassword = "1111111111",
-                            AccessPasswordReplacement = null,
                             TransmissionType = Domain.Enums.TransmissionType.PrivateCatalogues,
                             VersionNumber = "31",
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
@@ -523,8 +519,6 @@ namespace Wiedpug.API.ExampleResponses
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        AccessPassword = "1111111111",
-                        AccessPasswordReplacement = null,
                         TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogueUpdates,
                         VersionNumber = "31",
                         SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
@@ -848,8 +842,6 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentTransmitter = "AWTM",
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
-                            AccessPassword = "1111111111",
-                            AccessPasswordReplacement = null,
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                             VersionNumber = "31",
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
