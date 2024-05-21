@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Entities;
 
-namespace Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate
+namespace Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate
 {
     public class OrganisationDetails
     {

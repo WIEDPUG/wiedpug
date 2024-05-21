@@ -16,13 +16,13 @@
       "version": "v0.0"
   },
   "paths": {
-      "/v0/organization-details": {
+      "/v0/organisation-details": {
           "post": {
               "tags": [
-                  "Organization Details"
+                  "Organisation Details"
               ],
-              "summary": "Create or upload the organization details",
-              "operationId": "CreateOrganizationDetails",
+              "summary": "Create or upload the organisation details",
+              "operationId": "CreateOrganisationDetails",
               "requestBody": {
                   "content": {
                       "application/json": {
@@ -318,18 +318,18 @@
               }
           }
       },
-      "/v0/organization-details/data": {
+      "/v0/organisation-details/data": {
           "post": {
               "tags": [
-                  "Organization Details"
+                  "Organisation Details"
               ],
-              "summary": "Retrieves the organizationdetails",
-              "operationId": "GetOrganizationDetails",
+              "summary": "Retrieves the organisationdetails",
+              "operationId": "GetOrganisationDetails",
               "requestBody": {
                   "content": {
                       "application/json": {
                           "schema": {
-                              "$ref": "#/components/schemas/GetOrganizationDetailsRequest"
+                              "$ref": "#/components/schemas/GetOrganisationDetailsRequest"
                           },
                           "example": {
                               "countryOfOrigin": "AU",
@@ -604,13 +604,13 @@
               }
           }
       },
-      "/v0/organization-details/{id}": {
+      "/v0/organisation-details/{id}": {
           "get": {
               "tags": [
-                  "Organization Details"
+                  "Organisation Details"
               ],
-              "summary": "Retrieves the organizationdetail by id",
-              "operationId": "GetOrganizationDetailsById",
+              "summary": "Retrieves the organisationdetail by id",
+              "operationId": "GetOrganisationDetailsById",
               "parameters": [
                   {
                       "name": "id",
@@ -776,10 +776,10 @@
           },
           "put": {
               "tags": [
-                  "Organization Details"
+                  "Organisation Details"
               ],
-              "summary": "Update the organization detail by id",
-              "operationId": "UpdateOrganizationDetailsById",
+              "summary": "Update the organisation detail by id",
+              "operationId": "UpdateOrganisationDetailsById",
               "parameters": [
                   {
                       "name": "id",
@@ -1052,10 +1052,10 @@
           },
           "delete": {
               "tags": [
-                  "Organization Details"
+                  "Organisation Details"
               ],
-              "summary": "Delete or Deactivate organization detail by id",
-              "operationId": "DeleteOrganizationDetailsById",
+              "summary": "Delete or Deactivate organisation detail by id",
+              "operationId": "DeleteOrganisationDetailsById",
               "parameters": [
                   {
                       "name": "id",
@@ -1335,7 +1335,7 @@
               "additionalProperties": false,
               "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
           },
-          "GetOrganizationDetailsRequest": {
+          "GetOrganisationDetailsRequest": {
               "required": [
                   "abn",
                   "countryOfOrigin",

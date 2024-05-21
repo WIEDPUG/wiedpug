@@ -5,7 +5,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class GetOrganizationDetailsRequest
+    public class GetOrganisationDetailsRequest
     {
         [Required]
         [StringLength(2)]

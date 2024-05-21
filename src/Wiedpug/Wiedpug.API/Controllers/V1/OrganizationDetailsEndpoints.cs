@@ -2,19 +2,19 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.Model;
-using Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate;
+using Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate;
 using Wiedpug.Domain.Entities;
 namespace Wiedpug.API.Controllers.V1;
 
-public static class OrganizationDetailsEndpoints
+public static class OrganisationDetailsEndpoints
 {
-    public static void MapOrganizationDetailsEndpoints(this IEndpointRouteBuilder routes)
+    public static void MapOrganisationDetailsEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("/organization-details").WithTags("Organization Details");
+        var group = routes.MapGroup("/organisation-details").WithTags("Organisation Details");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganizationDetailsRequestExample))]
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CreateOrganizationDetails200Example))]
+        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailsRequestExample))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CreateOrganisationDetails200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -23,10 +23,10 @@ public static class OrganizationDetailsEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("CreateOrganizationDetails")
+        .WithName("CreateOrganisationDetails")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Create or upload the organization details"
+            Summary = "Create or upload the organisation details"
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
@@ -36,21 +36,21 @@ public static class OrganizationDetailsEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(GetOrganizationDetailsRequest), typeof(GetOrganizationDetailsRequestExample))]
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(GetOrganizationDetails200Example))]
+        [SwaggerRequestExample(typeof(GetOrganisationDetailsRequest), typeof(GetOrganisationDetailsRequestExample))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(GetOrganisationDetails200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] GetOrganizationDetailsRequest model) =>
+        ([FromBody] GetOrganisationDetailsRequest model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetOrganizationDetails")
+        .WithName("GetOrganisationDetails")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Retrieves the organizationdetails"
+            Summary = "Retrieves the organisationdetails"
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
@@ -60,7 +60,7 @@ public static class OrganizationDetailsEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapGet("/{id}",
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(OrganizationDetailExample))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(OrganisationDetailExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
@@ -69,10 +69,10 @@ public static class OrganizationDetailsEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetOrganizationDetailsById")
+        .WithName("GetOrganisationDetailsById")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Retrieves the organizationdetail by id"
+            Summary = "Retrieves the organisationdetail by id"
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
@@ -81,8 +81,8 @@ public static class OrganizationDetailsEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPut("/{id}",
-        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganizationDetailRequestExample))]
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(OrganizationDetailExample))]
+        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailRequestExample))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(OrganisationDetailExample))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -92,10 +92,10 @@ public static class OrganizationDetailsEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("UpdateOrganizationDetailsById")
+        .WithName("UpdateOrganisationDetailsById")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Update the organization detail by id"
+            Summary = "Update the organisation detail by id"
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
@@ -114,10 +114,10 @@ public static class OrganizationDetailsEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("DeleteOrganizationDetailsById")
+        .WithName("DeleteOrganisationDetailsById")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Delete or Deactivate organization detail by id"
+            Summary = "Delete or Deactivate organisation detail by id"
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

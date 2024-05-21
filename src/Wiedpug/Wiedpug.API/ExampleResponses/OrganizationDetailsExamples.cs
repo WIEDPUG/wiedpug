@@ -1,14 +1,14 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates;
-using Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate;
+using Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class OrganizationDetailsRequestExample : IExamplesProvider<OrganisationDetails>
+    public class OrganisationDetailsRequestExample : IExamplesProvider<OrganisationDetails>
     {
         public OrganisationDetails GetExamples()
         {
@@ -99,7 +99,7 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class OrganizationDetailExample : IExamplesProvider<OrganisationDetails>
+    public class OrganisationDetailExample : IExamplesProvider<OrganisationDetails>
     {
         public OrganisationDetails GetExamples()
         {
@@ -178,7 +178,7 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class OrganizationDetailRequestExample : IExamplesProvider<OrganisationDetails>
+    public class OrganisationDetailRequestExample : IExamplesProvider<OrganisationDetails>
     {
         public OrganisationDetails GetExamples()
         {
@@ -255,11 +255,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class GetOrganizationDetailsRequestExample : IExamplesProvider<GetOrganizationDetailsRequest>
+    public class GetOrganisationDetailsRequestExample : IExamplesProvider<GetOrganisationDetailsRequest>
     {
-        public GetOrganizationDetailsRequest GetExamples()
+        public GetOrganisationDetailsRequest GetExamples()
         {
-            return new GetOrganizationDetailsRequest()
+            return new GetOrganisationDetailsRequest()
             {
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = "ABCD",
@@ -280,7 +280,7 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class GetOrganizationDetails200Example : IExamplesProvider<ApiResult>
+    public class GetOrganisationDetails200Example : IExamplesProvider<ApiResult>
     {
         public ApiResult GetExamples()
         {
@@ -437,7 +437,7 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class OrganizationDetails200Example : IExamplesProvider<ApiResult>
+    public class OrganisationDetails200Example : IExamplesProvider<ApiResult>
     {
         public ApiResult GetExamples()
         {
@@ -594,7 +594,7 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class CreateOrganizationDetails200Example : IExamplesProvider<ApiResult>
+    public class CreateOrganisationDetails200Example : IExamplesProvider<ApiResult>
     {
         public ApiResult GetExamples()
         {
