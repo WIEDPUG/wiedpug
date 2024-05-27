@@ -115,7 +115,7 @@ paths:
                               clientCrossReference: null
                               packCondition: 'N'
                             lotHeaderExtension:
-                              coreTestSamplingDate: '190117'
+                              coreTestSamplingDate: '2019-01-17'
                               woolDescriptionComment: null
                               woolDescription: MF6S
                               gstTaxInvoiceFlag: true
@@ -158,7 +158,7 @@ paths:
                               expectedBarbe: 111
                               team3HauteurCvPercentage: 36.9
                               team3RomainePercentage: 11.2
-                              dateIssued: '170110'
+                              dateIssued: '2017-01-10'
                               stapleStrengthLowest25Percent: 24
                             omlDetails: null
                             coreTestDetails:
@@ -199,8 +199,8 @@ paths:
                                   curvatureMeanDegPerMm: 61
                                   meanMinimum: null
                                   meanMaximum: null
-                                  coreTestSamplingDate: '170110'
-                                  dateIssued: '170110'
+                                  coreTestSamplingDate: '2017-01-10'
+                                  dateIssued: '2017-01-10'
                                   factorLaserscanNumerator: null
                                   factorLaserscanDenominator: null
                                 fibreDiameterHistogramDetails: null
@@ -228,8 +228,8 @@ paths:
               New Private Catalogue:
                 value:
                   - transmissionHeader:
-                      dateFormatLastRevised: '200715'
-                      dateTransmissionFileCreated: '160117'
+                      dateFormatLastRevised: '2020-07-15'
+                      dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator: ABCD
                       currentTransmitter: AWTM
@@ -253,7 +253,7 @@ paths:
                             sellingCentreType: M
                             saleNumber: 29
                           centreStorage: M
-                          saleDate: '170119'
+                          saleDate: '2017-01-19'
                           woolState: '1'
                           packType: '6'
                           currency: AUD
@@ -277,10 +277,10 @@ paths:
                         woolSaleHeaderExtension:
                           storageOrganisation: ABCD
                           storageDescription: 45 MAIN ST
-                          paymentDueDate: '170127'
+                          paymentDueDate: '2017-01-27'
                           discountRate: 1.5
                           maximumDaysDiscount: 0
-                          dateStorageChargeCommences: '170124'
+                          dateStorageChargeCommences: '2017-01-24'
                           storageChargePerBalePerDay: 0.245
                           penaltyInterestRate: 11.5
                           lotAvailableDate: null
@@ -313,7 +313,7 @@ paths:
                               clientCrossReference: null
                               packCondition: 'N'
                             lotHeaderExtension:
-                              coreTestSamplingDate: '190117'
+                              coreTestSamplingDate: '2019-01-17'
                               woolDescriptionComment: null
                               woolDescription: MF6S
                               gstTaxInvoiceFlag: true
@@ -356,7 +356,7 @@ paths:
                               expectedBarbe: 111
                               team3HauteurCvPercentage: 36.9
                               team3RomainePercentage: 11.2
-                              dateIssued: '170110'
+                              dateIssued: '2017-01-10'
                               stapleStrengthLowest25Percent: 24
                             omlDetails: null
                             coreTestDetails:
@@ -397,8 +397,8 @@ paths:
                                   curvatureMeanDegPerMm: 61
                                   meanMinimum: null
                                   meanMaximum: null
-                                  coreTestSamplingDate: '170110'
-                                  dateIssued: '170110'
+                                  coreTestSamplingDate: '2017-01-10'
+                                  dateIssued: '2017-01-10'
                                   factorLaserscanNumerator: null
                                   factorLaserscanDenominator: null
                                 fibreDiameterHistogramDetails: null
@@ -499,8 +499,8 @@ paths:
                 $ref: '#/components/schemas/AuctionCatalogue'
             example:
               - transmissionHeader:
-                  dateFormatLastRevised: '200715'
-                  dateTransmissionFileCreated: '160117'
+                  dateFormatLastRevised: '2020-07-15'
+                  dateTransmissionFileCreated: '2016-01-17'
                   countryOfOrigin: AU
                   documentOriginator: ABCD
                   currentTransmitter: AWTM
@@ -525,7 +525,7 @@ paths:
                         sellingCentreType: M
                         saleNumber: 29
                       centreStorage: M
-                      saleDate: '170119'
+                      saleDate: '2017-01-19'
                       woolState: A
                       packType: F
                       currency: AUD
@@ -549,10 +549,10 @@ paths:
                     woolSaleHeaderExtension:
                       storageOrganisation: ABCD
                       storageDescription: 45 MAIN ST
-                      paymentDueDate: '170127'
+                      paymentDueDate: '2017-01-27'
                       discountRate: 1.5
                       maximumDaysDiscount: 0
-                      dateStorageChargeCommences: '170124'
+                      dateStorageChargeCommences: '2017-01-24'
                       storageChargePerBalePerDay: 0.245
                       penaltyInterestRate: 11.5
                       lotAvailableDate: null
@@ -585,7 +585,7 @@ paths:
                           clientCrossReference: null
                           packCondition: 'N'
                         lotHeaderExtension:
-                          coreTestSamplingDate: '190117'
+                          coreTestSamplingDate: '2019-01-17'
                           woolDescriptionComment: null
                           woolDescription: MF6S
                           gstTaxInvoiceFlag: true
@@ -628,7 +628,7 @@ paths:
                           expectedBarbe: 111
                           team3HauteurCvPercentage: 36.9
                           team3RomainePercentage: 11.2
-                          dateIssued: '170110'
+                          dateIssued: '2017-01-10'
                           stapleStrengthLowest25Percent: 24
                         omlDetails: null
                         coreTestDetails:
@@ -669,8 +669,8 @@ paths:
                               curvatureMeanDegPerMm: 61
                               meanMinimum: null
                               meanMaximum: null
-                              coreTestSamplingDate: '170110'
-                              dateIssued: '170110'
+                              coreTestSamplingDate: '2017-01-10'
+                              dateIssued: '2017-01-10'
                               factorLaserscanNumerator: null
                               factorLaserscanDenominator: null
                             fibreDiameterHistogramDetails:
@@ -770,7 +770,7 @@ paths:
                       sellingCentreType: F
                       saleNumber: 18
                     organisationRequested: AWNF
-                    saleDateRequested: '231031'
+                    saleDateRequested: '2023-10-31'
                     startDateTimeStatusRequest: null
                     endDateTimeStatusRequest: null
                     useNetworkDateTime: false
@@ -785,7 +785,7 @@ paths:
                       sellingCentreType: F
                       saleNumber: 18
                     organisationRequested: AWNF
-                    saleDateRequested: '231031'
+                    saleDateRequested: '2023-10-31'
                     startDateTimeStatusRequest: null
                     endDateTimeStatusRequest: null
                     useNetworkDateTime: false
@@ -802,7 +802,7 @@ paths:
                       sellingCentreType: F
                       saleNumber: 18
                     organisationRequested: AWNF
-                    saleDateRequested: '231031'
+                    saleDateRequested: '2023-10-31'
                     startDateTimeStatusRequest: null
                     endDateTimeStatusRequest: null
                     useNetworkDateTime: false
@@ -825,8 +825,8 @@ paths:
                 message: null
                 data:
                   - transmissionHeader:
-                      dateFormatLastRevised: '200715'
-                      dateTransmissionFileCreated: '160117'
+                      dateFormatLastRevised: '2020-07-15'
+                      dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator: ABCD
                       currentTransmitter: AWTM
@@ -847,7 +847,7 @@ paths:
                             sellingCentreType: M
                             saleNumber: 29
                           centreStorage: M
-                          saleDate: '170119'
+                          saleDate: '2017-01-19'
                           woolState: '1'
                           packType: '9'
                           currency: AUD
@@ -871,10 +871,10 @@ paths:
                         woolSaleHeaderExtension:
                           storageOrganisation: ABCD
                           storageDescription: 45 MAIN ST
-                          paymentDueDate: '170127'
+                          paymentDueDate: '2017-01-27'
                           discountRate: 1.5
                           maximumDaysDiscount: 0
-                          dateStorageChargeCommences: '170124'
+                          dateStorageChargeCommences: '2017-01-24'
                           storageChargePerBalePerDay: 0.245
                           penaltyInterestRate: 11.5
                           lotAvailableDate: null
@@ -907,7 +907,7 @@ paths:
                               clientCrossReference: null
                               packCondition: 'N'
                             lotHeaderExtension:
-                              coreTestSamplingDate: '190117'
+                              coreTestSamplingDate: '2019-01-17'
                               woolDescriptionComment: null
                               woolDescription: MF6S
                               gstTaxInvoiceFlag: true
@@ -950,7 +950,7 @@ paths:
                               expectedBarbe: 111
                               team3HauteurCvPercentage: 36.9
                               team3RomainePercentage: 11.2
-                              dateIssued: '170110'
+                              dateIssued: '2017-01-10'
                               stapleStrengthLowest25Percent: 24
                             omlDetails: null
                             coreTestDetails:
@@ -991,8 +991,8 @@ paths:
                                   curvatureMeanDegPerMm: 61
                                   meanMinimum: null
                                   meanMaximum: null
-                                  coreTestSamplingDate: '170110'
-                                  dateIssued: '170110'
+                                  coreTestSamplingDate: '2017-01-10'
+                                  dateIssued: '2017-01-10'
                                   factorLaserscanNumerator: null
                                   factorLaserscanDenominator: null
                                 fibreDiameterHistogramDetails: null

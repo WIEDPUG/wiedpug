@@ -126,7 +126,7 @@ namespace Wiedpug.API.ExampleResponses
                                         },
                                         LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                         {
-                                            CoreTestSamplingDate = "190117",
+                                            CoreTestSamplingDate = "2019-01-17",
                                             WoolDescriptionComment = null,
                                             WoolDescription = "MF6S",
                                             GstTaxInvoiceFlag = true,
@@ -173,7 +173,7 @@ namespace Wiedpug.API.ExampleResponses
                                             ExpectedBarbe = 111,
                                             Team3HauteurCvPercentage = 36.9,
                                             Team3RomainePercentage = 11.2,
-                                            DateIssued = "170110",
+                                            DateIssued = "2017-01-10",
                                             StapleStrengthLowest25Percent = 24
                                         },
                                         CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
@@ -218,8 +218,8 @@ namespace Wiedpug.API.ExampleResponses
                                                     CurvatureMeanDegPerMm = 61,
                                                     MeanMinimum = null,
                                                     MeanMaximum = null,
-                                                    CoreTestSamplingDate = "170110",
-                                                    DateIssued = "170110",
+                                                    CoreTestSamplingDate = "2017-01-10",
+                                                    DateIssued = "2017-01-10",
                                                     FactorLaserscanNumerator = null,
                                                     FactorLaserscanDenominator = null
                                                 }
@@ -280,8 +280,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new Domain.Entities.TransmissionHeader
                         {
-                            DateFormatLastRevised = "200715",
-                            DateTransmissionFileCreated = "160117",
+                            DateFormatLastRevised = "2020-07-15",
+                            DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = "ABCD",
                             CurrentTransmitter = "AWTM",
@@ -318,7 +318,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SaleNumber = 29
                                     },
                                     CentreStorage = "M",
-                                    SaleDate = "170119",
+                                    SaleDate = "2017-01-19",
                                     WoolState = WoolState._1,
                                     PackType = PackType._6,
                                     Currency = "AUD",
@@ -344,10 +344,10 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     StorageOrganisation = "ABCD",
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = "170127",
+                                    PaymentDueDate = "2017-01-27",
                                     DiscountRate = 1.5,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = "170124",
+                                    DateStorageChargeCommences = "2017-01-24",
                                     StorageChargePerBalePerDay = 0.245,
                                     PenaltyInterestRate = 11.5,
                                     LotAvailableDate = null,
@@ -387,7 +387,7 @@ namespace Wiedpug.API.ExampleResponses
                                         },
                                         LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                         {
-                                            CoreTestSamplingDate = "190117",
+                                            CoreTestSamplingDate = "2019-01-17",
                                             WoolDescriptionComment = null,
                                             WoolDescription = "MF6S",
                                             GstTaxInvoiceFlag = true,
@@ -434,7 +434,7 @@ namespace Wiedpug.API.ExampleResponses
                                             ExpectedBarbe = 111,
                                             Team3HauteurCvPercentage = 36.9,
                                             Team3RomainePercentage = 11.2,
-                                            DateIssued = "170110",
+                                            DateIssued = "2017-01-10",
                                             StapleStrengthLowest25Percent = 24
                                         },
                                         CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
@@ -479,8 +479,8 @@ namespace Wiedpug.API.ExampleResponses
                                                     CurvatureMeanDegPerMm = 61,
                                                     MeanMinimum = null,
                                                     MeanMaximum = null,
-                                                    CoreTestSamplingDate = "170110",
-                                                    DateIssued = "170110",
+                                                    CoreTestSamplingDate = "2017-01-10",
+                                                    DateIssued = "2017-01-10",
                                                     FactorLaserscanNumerator = null,
                                                     FactorLaserscanDenominator = null
                                                 }
@@ -529,8 +529,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
                     {
-                        DateFormatLastRevised = "200715",
-                        DateTransmissionFileCreated = "160117",
+                        DateFormatLastRevised = "2020-07-15",
+                        DateTransmissionFileCreated = "2016-01-17",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = "ABCD",
                         CurrentTransmitter = "AWTM",
@@ -568,7 +568,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SaleNumber = 29
                                 },
                                 CentreStorage = "M",
-                                SaleDate = "170119",
+                                SaleDate = "2017-01-19",
                                 WoolState = WoolState.A,
                                 PackType = PackType.F,
                                 Currency = "AUD",
@@ -594,10 +594,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 StorageOrganisation = "ABCD",
                                 StorageDescription = "45 MAIN ST",
-                                PaymentDueDate = "170127",
+                                PaymentDueDate = "2017-01-27",
                                 DiscountRate = 1.5,
                                 MaximumDaysDiscount = 0,
-                                DateStorageChargeCommences = "170124",
+                                DateStorageChargeCommences = "2017-01-24",
                                 StorageChargePerBalePerDay = 0.245,
                                 PenaltyInterestRate = 11.5,
                                 LotAvailableDate = null,
@@ -637,7 +637,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                     {
-                                        CoreTestSamplingDate = "190117",
+                                        CoreTestSamplingDate = "2019-01-17",
                                         WoolDescriptionComment = null,
                                         WoolDescription = "MF6S",
                                         GstTaxInvoiceFlag = true,
@@ -684,7 +684,7 @@ namespace Wiedpug.API.ExampleResponses
                                         ExpectedBarbe = 111,
                                         Team3HauteurCvPercentage = 36.9,
                                         Team3RomainePercentage = 11.2,
-                                        DateIssued = "170110",
+                                        DateIssued = "2017-01-10",
                                         StapleStrengthLowest25Percent = 24
                                     },
                                     CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
@@ -729,8 +729,8 @@ namespace Wiedpug.API.ExampleResponses
                                                 CurvatureMeanDegPerMm = 61,
                                                 MeanMinimum = null,
                                                 MeanMaximum = null,
-                                                CoreTestSamplingDate = "170110",
-                                                DateIssued = "170110",
+                                                CoreTestSamplingDate = "2017-01-10",
+                                                DateIssued = "2017-01-10",
                                                 FactorLaserscanNumerator = null,
                                                 FactorLaserscanDenominator = null
                                             },
@@ -786,7 +786,7 @@ namespace Wiedpug.API.ExampleResponses
                             SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
-                        SaleDateRequested = "231031",
+                        SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
@@ -806,7 +806,7 @@ namespace Wiedpug.API.ExampleResponses
                             SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
-                        SaleDateRequested = "231031",
+                        SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
@@ -832,7 +832,7 @@ namespace Wiedpug.API.ExampleResponses
                             SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
-                        SaleDateRequested = "231031",
+                        SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.PrivateDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
@@ -861,8 +861,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new Domain.Entities.TransmissionHeader
                         {
-                            DateFormatLastRevised = "200715",
-                            DateTransmissionFileCreated = "160117",
+                            DateFormatLastRevised = "2020007-15",
+                            DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = "ABCD",
                             CurrentTransmitter = "AWTM",
@@ -891,7 +891,7 @@ namespace Wiedpug.API.ExampleResponses
                                             SaleNumber = 29
                                         },
                                         CentreStorage = "M",
-                                        SaleDate = "170119",
+                                        SaleDate = "2017-01-19",
                                         WoolState = WoolState._1,
                                         PackType = PackType._9,
                                         Currency = "AUD",
@@ -917,10 +917,10 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                         StorageOrganisation = "ABCD",
                                         StorageDescription = "45 MAIN ST",
-                                        PaymentDueDate = "170127",
+                                        PaymentDueDate = "2017-01-27",
                                         DiscountRate = 1.5,
                                         MaximumDaysDiscount = 0,
-                                        DateStorageChargeCommences = "170124",
+                                        DateStorageChargeCommences = "2017-01-24",
                                         StorageChargePerBalePerDay = 0.245,
                                         PenaltyInterestRate = 11.5,
                                         LotAvailableDate = null,
@@ -960,7 +960,7 @@ namespace Wiedpug.API.ExampleResponses
                                             },
                                             LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                             {
-                                                CoreTestSamplingDate = "190117",
+                                                CoreTestSamplingDate = "2019-01-17",
                                                 WoolDescriptionComment = null,
                                                 WoolDescription = "MF6S",
                                                 GstTaxInvoiceFlag = true,
@@ -1007,7 +1007,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 ExpectedBarbe = 111,
                                                 Team3HauteurCvPercentage = 36.9,
                                                 Team3RomainePercentage = 11.2,
-                                                DateIssued = "170110",
+                                                DateIssued = "2017-01-10",
                                                 StapleStrengthLowest25Percent = 24
                                             },
                                             CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
@@ -1052,8 +1052,8 @@ namespace Wiedpug.API.ExampleResponses
                                                         CurvatureMeanDegPerMm = 61,
                                                         MeanMinimum = null,
                                                         MeanMaximum = null,
-                                                        CoreTestSamplingDate = "170110",
-                                                        DateIssued = "170110",
+                                                        CoreTestSamplingDate = "2017-01-10",
+                                                        DateIssued = "2017-01-10",
                                                         FactorLaserscanNumerator = null,
                                                         FactorLaserscanDenominator = null
                                                     }
