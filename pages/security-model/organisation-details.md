@@ -17,9 +17,9 @@
 
 |      Action                   | Administrator       | Member            | 
 |-------------------------------|---------------------|-------------------|
-| organization-details:read     | ✓                   | ✓                | 
-| organization-details:write    | ✓                   |                   |  
+| organisation-details:read     | ✓                   | ✓                | 
+| organisation-details:write    | ✓                   |                   |  
 
-**Administrator:** Full access (read/write) to OrganizationDetails.
+**Administrator:** Full access (read/write) to OrganisationDetails.
 
-**Member:** Read access to OrganizationDetails.
+**Member:** Read access to OrganisationDetails.
