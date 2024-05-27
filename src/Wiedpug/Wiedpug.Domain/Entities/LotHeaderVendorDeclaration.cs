@@ -6,7 +6,9 @@ namespace Wiedpug.Domain.Entities
 {
     public class LotHeaderVendorDeclaration
     {
-        public List<QualitySchemeDetail>? QualitySchemes { get; set; }        
+        public List<QualitySchemeDetail>? QualitySchemes { get; set; }
+
+        [StringLength(2)]
         public MulesingStatus? MulesingStatus { get; set; } // FIELD NUMBER 12 - Mulesing Status - Start: 79, Size: 2, Data Type: ID, Justification: L, Requirement Designator: C
 
     }

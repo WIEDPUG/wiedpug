@@ -23,6 +23,7 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXTS",
                     FinalReceiver = "AWXTS",
+                    TransmissionType = TransmissionType.OrganisationDetails,
                     SoftwareIdentifier = null,
                     ABN = "43006014106"
                 },
@@ -33,7 +34,7 @@ namespace Wiedpug.API.ExampleResponses
                         OrganisationCode = "AWTS",
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
-                        IndustryGroupId="T",
+                        IndustryGroupId= IndustryGroupId.T,
                         TransmitterFlag="Y",
                         ABN = null,
                         PhoneNumber= new PhoneNumber {
@@ -86,7 +87,7 @@ namespace Wiedpug.API.ExampleResponses
                         OrganisationCode = "BUY1",
                         NameOfOrganisation = "DEMO BUYER 1",
                         DateLastUpdated="2020-04-28",
-                        IndustryGroupId= "E",
+                        IndustryGroupId= IndustryGroupId.E,
                         TransmitterFlag= "N",
                         ABN = null,
                         PhoneNumber= null,
@@ -114,6 +115,7 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXTS",
                     FinalReceiver = "AWXTS",
+                    TransmissionType = TransmissionType.OrganisationDetails,
                     SoftwareIdentifier = null,
                     ABN = "43006014106"
                 },
@@ -125,7 +127,7 @@ namespace Wiedpug.API.ExampleResponses
                         OrganisationCode = "AWTS",
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
-                        IndustryGroupId="T",
+                        IndustryGroupId=IndustryGroupId.T,
                         TransmitterFlag="Y",
                         ABN = null,
                         PhoneNumber= new PhoneNumber {
@@ -193,6 +195,7 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentTransmitter = "AWTM",
                     CurrentReceiver = "AWXTS",
                     FinalReceiver = "AWXTS",
+                    TransmissionType = TransmissionType.OrganisationDetails,
                     SoftwareIdentifier = null,
                     ABN = "43006014106"
                 },
@@ -203,7 +206,7 @@ namespace Wiedpug.API.ExampleResponses
                         OrganisationCode = "AWTS",
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
-                        IndustryGroupId="T",
+                        IndustryGroupId= IndustryGroupId.E,
                         TransmitterFlag="Y",
                         ABN = null,
                         PhoneNumber= new PhoneNumber {
@@ -263,28 +266,25 @@ namespace Wiedpug.API.ExampleResponses
             {
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = "ABCD",
-                    CurrentTransmitter = "AWTM",
-                    CurrentReceiver = "AWXLC",
-                    FinalReceiver = "AWXLC",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
-                        SoftwareCompany = "Talman",
-                        Version = 10820
+                        SoftwareCompany = SoftwareCompany.Talman,
+                        Version = 1082
                     },
                     ABN = "72001967184",
                     StartDateTimeStatusRequest = "2024-02-01T19:25:04Z",
                     EndDateTimeStatusRequest = "2024-03-21T19:25:04Z",
-                    UserNetworkDateTime = true
+                    UseNetworkDateTime = true
             };
         }
     }
 
-    public class GetOrganisationDetails200Example : IExamplesProvider<ApiResult>
+    public class GetOrganisationDetails200Example : IExamplesProvider<ApiResult<OrganisationDetails>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<OrganisationDetails> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<OrganisationDetails>()
             {
                 IsSuccessful = true,
                 Message = null,
@@ -299,12 +299,13 @@ namespace Wiedpug.API.ExampleResponses
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        VersionNumber = "31",
+                        VersionNumber = 31,
+                        TransmissionType = TransmissionType.OrganisationDetails,
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",
-                            SoftwareCompany = "ABC",
-                            Version = 10820
+                            SoftwareCompany = SoftwareCompany.Modiano,
+                            Version = 1082
                         },
                         ABN = "72001925678"
                     },
@@ -316,7 +317,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "AWTS",
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId="T",
+                            IndustryGroupId= IndustryGroupId.E,
                             TransmitterFlag="Y",
                             ABN = null,
                             PhoneNumber= new PhoneNumber {
@@ -369,7 +370,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "BUY1",
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId= "E",
+                            IndustryGroupId= IndustryGroupId.E,
                             TransmitterFlag= "N",
                             ABN = null,
                             PhoneNumber= null,
@@ -383,7 +384,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "AWTN",
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId= "A",
+                            IndustryGroupId= IndustryGroupId.A,
                             TransmitterFlag= "Y",
                             ABN = null,
                             PhoneNumber= new PhoneNumber
@@ -456,12 +457,13 @@ namespace Wiedpug.API.ExampleResponses
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        VersionNumber = "31",
+                        VersionNumber = 31,
+                        TransmissionType = TransmissionType.OrganisationDetails,
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",
-                            SoftwareCompany = "ABC",
-                            Version = 10820
+                            SoftwareCompany = SoftwareCompany.AWTA,
+                            Version = 1082
                         },
                         ABN = "72001925678"
                     },
@@ -473,7 +475,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "AWTS",
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId="T",
+                            IndustryGroupId=IndustryGroupId.E,
                             TransmitterFlag="Y",
                             ABN = null,
                             PhoneNumber= new PhoneNumber {
@@ -526,7 +528,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "BUY1",
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId= "E",
+                            IndustryGroupId= IndustryGroupId.E,
                             TransmitterFlag= "N",
                             ABN = null,
                             PhoneNumber= null,
@@ -540,7 +542,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "AWTN",
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId= "A",
+                            IndustryGroupId= IndustryGroupId.A,
                             TransmitterFlag= "Y",
                             ABN = null,
                             PhoneNumber= new PhoneNumber
@@ -613,12 +615,13 @@ namespace Wiedpug.API.ExampleResponses
                         CurrentTransmitter = "AWTM",
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
-                        VersionNumber = "31",
+                        VersionNumber = 31,
+                        TransmissionType = TransmissionType.OrganisationDetails,
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",
-                            SoftwareCompany = "ABC",
-                            Version = 10820
+                            SoftwareCompany = SoftwareCompany.AWTA,
+                            Version = 1082
                         },
                         ABN = "72001925678"
                     },
@@ -630,7 +633,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "AWTS",
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId="T",
+                            IndustryGroupId=IndustryGroupId.T,
                             TransmitterFlag="Y",
                             ABN = null,
                             PhoneNumber= new PhoneNumber {
@@ -683,7 +686,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "BUY1",
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
-                            IndustryGroupId= "E",
+                            IndustryGroupId= IndustryGroupId.E,
                             TransmitterFlag= "N",
                             ABN = null,
                             PhoneNumber= null,

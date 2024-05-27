@@ -32,7 +32,7 @@ paths:
                 currentTransmitter: AWTM
                 currentReceiver: AWXTS
                 finalReceiver: AWXTS
-                transmissionType: null
+                transmissionType: 11
                 versionNumber: null
                 softwareIdentifier: null
                 abn: '43006014106'
@@ -107,11 +107,11 @@ paths:
                     currentTransmitter: AWTM
                     currentReceiver: AWXLC
                     finalReceiver: AWXLC
-                    transmissionType: null
-                    versionNumber: '31'
+                    transmissionType: 11
+                    versionNumber: 31
                     softwareIdentifier:
-                      softwareCompany: ABC
-                      version: 10820
+                      softwareCompany: 8
+                      version: 1082
                       programName: NETR
                     abn: '72001925678'
                   organisationDetailCollection:
@@ -244,17 +244,14 @@ paths:
             example:
               countryOfOrigin: AU
               documentOriginator: ABCD
-              currentTransmitter: AWTM
-              currentReceiver: AWXLC
-              finalReceiver: AWXLC
               softwareIdentifier:
-                softwareCompany: Talman
-                version: 10820
+                softwareCompany: 1
+                version: 1082
                 programName: NETR
               abn: '72001967184'
               startDateTimeStatusRequest: '2024-02-01T19:25:04Z'
               endDateTimeStatusRequest: '2024-03-21T19:25:04Z'
-              userNetworkDateTime: true
+              useNetworkDateTime: true
         required: true
       responses:
         '200':
@@ -262,7 +259,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ApiResult'
+                $ref: '#/components/schemas/OrganisationDetailsApiResult'
               example:
                 isSuccessful: true
                 message: null
@@ -275,11 +272,11 @@ paths:
                     currentTransmitter: AWTM
                     currentReceiver: AWXLC
                     finalReceiver: AWXLC
-                    transmissionType: null
-                    versionNumber: '31'
+                    transmissionType: 11
+                    versionNumber: 31
                     softwareIdentifier:
-                      softwareCompany: ABC
-                      version: 10820
+                      softwareCompany: 6
+                      version: 1082
                       programName: NETR
                     abn: '72001925678'
                   organisationDetailCollection:
@@ -287,7 +284,7 @@ paths:
                       organisationCode: AWTS
                       nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                       dateLastUpdated: '2020-04-28'
-                      industryGroupId: T
+                      industryGroupId: E
                       transmitterFlag: 'Y'
                       phoneNumber:
                         standardPhoneNumber:
@@ -455,7 +452,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ApiResult'
+                $ref: '#/components/schemas/OrganisationDetailApiResult'
               example:
                 transmissionHeader:
                   dateFormatLastRevised: '2020-07-15'
@@ -465,7 +462,7 @@ paths:
                   currentTransmitter: AWTM
                   currentReceiver: AWXTS
                   finalReceiver: AWXTS
-                  transmissionType: null
+                  transmissionType: 11
                   versionNumber: null
                   softwareIdentifier: null
                   abn: '43006014106'
@@ -582,7 +579,7 @@ paths:
                 currentTransmitter: AWTM
                 currentReceiver: AWXTS
                 finalReceiver: AWXTS
-                transmissionType: null
+                transmissionType: 11
                 versionNumber: null
                 softwareIdentifier: null
                 abn: '43006014106'
@@ -591,7 +588,7 @@ paths:
                   organisationCode: AWTS
                   nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                   dateLastUpdated: '2020-04-28'
-                  industryGroupId: T
+                  industryGroupId: E
                   transmitterFlag: 'Y'
                   phoneNumber:
                     standardPhoneNumber:
@@ -643,7 +640,7 @@ paths:
                   currentTransmitter: AWTM
                   currentReceiver: AWXTS
                   finalReceiver: AWXTS
-                  transmissionType: null
+                  transmissionType: 11
                   versionNumber: null
                   softwareIdentifier: null
                   abn: '43006014106'
@@ -969,27 +966,12 @@ components:
       required:
         - abn
         - countryOfOrigin
-        - currentReceiver
-        - currentTransmitter
         - documentOriginator
-        - finalReceiver
       type: object
       properties:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentTransmitter:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
-        finalReceiver:
           maxLength: 5
           minLength: 0
           type: string
@@ -1003,7 +985,7 @@ components:
         startDateTimeStatusRequest:
           maxLength: 20
           minLength: 0
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
           description: 'Date and Time in UTC format in ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ e.g. 2024-03-21T19:25:04Z'
           format: date-time
@@ -1011,17 +993,30 @@ components:
         endDateTimeStatusRequest:
           maxLength: 20
           minLength: 0
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
           description: 'Date and Time in UTC format in ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ. e.g. 2024-03-21T19:25:04Z'
           format: date-time
           nullable: true
-        userNetworkDateTime:
-          maxLength: 6
+        useNetworkDateTime:
+          maxLength: 4
           minLength: 0
           type: boolean
           nullable: true
       additionalProperties: false
+    IndustryGroupId:
+      enum:
+        - A
+        - C
+        - E
+        - D
+        - M
+        - P
+        - S
+        - T
+        - V
+      type: string
+      description: 'A: Agent / Broker<br />C: Carrier<br />E: Exporter / Buyer<br />D: Dump<br />M: Miscellaneous<br />P: Port<br />S: Shipping<br />T: Test House<br />V: Vessel'
     OrganisationDetail:
       required:
         - dateLastUpdated
@@ -1043,16 +1038,14 @@ components:
           minLength: 0
           type: string
         dateLastUpdated:
-          maxLength: 6
+          maxLength: 10
           minLength: 0
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in IS standard. e.g. 2024-03-21 (YYYY-MM-DD)
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
           format: date
         industryGroupId:
-          maxLength: 1
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/IndustryGroupId'
         transmitterFlag:
           maxLength: 1
           minLength: 0
@@ -1079,6 +1072,22 @@ components:
             $ref: '#/components/schemas/Contact'
           nullable: true
       additionalProperties: false
+    OrganisationDetailApiResult:
+      required:
+        - isSuccessful
+      type: object
+      properties:
+        isSuccessful:
+          type: boolean
+          description: Indicator if the request has been successfully processed.
+        message:
+          type: string
+          description: Contains information about the response if applicable.
+          nullable: true
+        data:
+          $ref: '#/components/schemas/OrganisationDetail'
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
     OrganisationDetails:
       required:
         - organisationDetailCollection
@@ -1092,6 +1101,22 @@ components:
           items:
             $ref: '#/components/schemas/OrganisationDetail'
       additionalProperties: false
+    OrganisationDetailsApiResult:
+      required:
+        - isSuccessful
+      type: object
+      properties:
+        isSuccessful:
+          type: boolean
+          description: Indicator if the request has been successfully processed.
+        message:
+          type: string
+          description: Contains information about the response if applicable.
+          nullable: true
+        data:
+          $ref: '#/components/schemas/OrganisationDetails'
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
     PhoneNumber:
       required:
         - standardPhoneNumber
@@ -1106,18 +1131,26 @@ components:
           description: Used for landline or fax extentions
           nullable: true
       additionalProperties: false
+    SoftwareCompany:
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+      type: integer
+      description: '1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA'
+      format: int32
     SoftwareIdentifier:
       type: object
       properties:
         softwareCompany:
-          maxLength: 1
-          minLength: 0
-          type: string
-          nullable: true
+          $ref: '#/components/schemas/SoftwareCompany'
         version:
-          maxLength: 4
-          minLength: 0
-          pattern: ^[0-9]+$
+          pattern: '-?\d{1,4}'
           type: integer
           description: Version no. e.g. 2400
           format: int32
@@ -1155,6 +1188,7 @@ components:
         - dateTransmissionFileCreated
         - documentOriginator
         - finalReceiver
+        - transmissionType
       type: object
       properties:
         dateFormatLastRevised:
@@ -1162,14 +1196,14 @@ components:
           minLength: 0
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO standard. e.g. 2024-03-21 (YYYY-MM-DD)
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
           format: date
         dateTransmissionFileCreated:
           maxLength: 10
           minLength: 0
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO standard. e.g. 2024-03-21 (YYYY-MM-DD)
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
           format: date
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
@@ -1192,10 +1226,10 @@ components:
         transmissionType:
           $ref: '#/components/schemas/TransmissionType'
         versionNumber:
-          maxLength: 2
-          minLength: 0
-          pattern: ^[0-9]+$
-          type: string
+          pattern: '-?\d{1,2}'
+          type: integer
+          description: Two digits. e.g. 99
+          format: int32
           nullable: true
         softwareIdentifier:
           $ref: '#/components/schemas/SoftwareIdentifier'
@@ -1204,7 +1238,7 @@ components:
           minLength: 0
           pattern: ^[0-9]+$
           type: string
-          description: Australian Business Number
+          description: Australian Business Number, 11 digits string
       additionalProperties: false
     TransmissionType:
       enum:

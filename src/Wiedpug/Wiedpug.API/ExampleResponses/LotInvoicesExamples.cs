@@ -29,12 +29,12 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
                             TransmissionType = TransmissionType.TestCertificate,
-                            VersionNumber = "31",
+                            VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
-                                SoftwareCompany = "Talman",
-                                Version = 10820
+                                SoftwareCompany = SoftwareCompany.Talman,
+                                Version = 1082
                             },
                             ABN = "72001967184"
                         },
@@ -48,7 +48,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SaleIdentity = new Domain.Entities.SaleIdentity
                                     {
                                         SellingCentreType = "M",
-                                        SaleNumber = "29"
+                                        SaleNumber = 29
                                     },
                                     CentreStorage = "M",
                                     SaleDate = "2017-01-19",

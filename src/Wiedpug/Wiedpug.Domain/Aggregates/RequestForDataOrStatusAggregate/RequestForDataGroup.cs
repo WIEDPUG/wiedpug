@@ -9,7 +9,6 @@ namespace Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate
         public required TransmissionHeader TransmissionHeader{ get; set; }
 
         [Required]
-        [MaxLength(53)]
         public required List<RequestForData> RequestForDataCollection { get; set; }
     }
 }

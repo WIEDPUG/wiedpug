@@ -9,7 +9,7 @@ namespace Wiedpug.Domain.Entities
         public string? SellingCentreType { get; set; }
 
         [StringLength(2)]
-        [RegularExpression(Regex.NUMBERS)]
-        public string? SaleNumber { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        public int? SaleNumber { get; set; }
     }
 }

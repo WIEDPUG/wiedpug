@@ -23,12 +23,12 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentReceiver = "AWXLC",
                     FinalReceiver = "AWXLC",
                     TransmissionType = TransmissionType.TestRequestVerification,
-                    VersionNumber = "31",
+                    VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
-                        SoftwareCompany = "Talman",
-                        Version = 10820
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
                     },
                     ABN = "72001967184"
                 },

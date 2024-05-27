@@ -12,11 +12,11 @@ namespace Wiedpug.Domain.ValueObject
     {
         [Required]
         [StringLength(3)]
-        [RegularExpression(Regex.NUMBERS)]
+        [RegularExpression(RegexPattern.NUMBERS)]
         public required string CountryCode { get; set; }
 
         [Required]
-        [RegularExpression(Regex.NUMBERS)]
+        [RegularExpression(RegexPattern.NUMBERS)]
         [StringLength(15)]
         public required string Number { get; set; }
     }

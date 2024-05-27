@@ -8,20 +8,20 @@ namespace Wiedpug.Domain.Entities
     public class TransmissionHeader
     {
         /// <summary>
-        /// Date value in ISO standard. e.g. 2024-03-21 (YYYY-MM-DD)
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>        
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [StringLength(10)]
         public required string DateFormatLastRevised { get; set; }
 
         /// <summary>
-        /// Date value in ISO standard. e.g. 2024-03-21 (YYYY-MM-DD)
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [StringLength(10)]
         public required string DateTransmissionFileCreated { get; set; }
 
@@ -45,22 +45,25 @@ namespace Wiedpug.Domain.Entities
         [StringLength(5)]
         public required string FinalReceiver { get; set; }
 
+        [Required]
         [StringLength(2)]
-        public TransmissionType? TransmissionType { get; set; }
+        public required TransmissionType TransmissionType { get; set; }
 
-        [StringLength(2)]
-        [RegularExpression(Regex.NUMBERS)]
-        public string? VersionNumber { get; set; }
+        /// <summary>
+        /// Two digits. e.g. 99
+        /// </summary>
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        public int? VersionNumber { get; set; }
 
         [StringLength(9)]
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
         /// <summary>
-        /// Australian Business Number
+        /// Australian Business Number, 11 digits string
         /// </summary>
         [Required]
         [StringLength(11)]
-        [RegularExpression(Regex.NUMBERS)]
+        [RegularExpression(RegexPattern.NUMBERS)]
         public required string ABN { get; set; }
 
     }

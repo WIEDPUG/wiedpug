@@ -11,7 +11,7 @@ public static class AuctionCatalogueEndpoints
     public static void MapAuctionCatalogueEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/auction-catalogue")
-            .MapToApiVersion(1,0)
+            .MapToApiVersion(0,0)
             .WithTags("Auction Catalogue");
             ////Uncomment below to mark all endpoints in this file as Deprecated
             //.WithOpenApi(o => new(o)

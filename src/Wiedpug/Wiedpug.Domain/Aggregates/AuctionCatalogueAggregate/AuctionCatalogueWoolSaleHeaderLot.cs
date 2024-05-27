@@ -9,7 +9,6 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public LotHeader? LotHeader { get; set; }
         public LotHeaderExtension? LotHeaderExtension { get; set; }
 
-        [MaxLength(2)]
         public List<LotHeaderPricingData>? LotHeaderPricings { get; set; }
         public LotHeaderAwexData? LotHeaderAwexData { get; set; }
 

@@ -10,7 +10,9 @@ public static class OrganisationDetailsEndpoints
 {
     public static void MapOrganisationDetailsEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("/organisation-details").WithTags("Organisation Details");
+        var group = routes.MapGroup("/organisation-details")
+            .MapToApiVersion(0, 0).
+            WithTags("Organisation Details");
 
         group.MapPost("/",
         [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailsRequestExample))]
@@ -52,7 +54,7 @@ public static class OrganisationDetailsEndpoints
         {
             Summary = "Retrieves the organisationdetails"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<OrganisationDetails>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
@@ -74,7 +76,7 @@ public static class OrganisationDetailsEndpoints
         {
             Summary = "Retrieves the organisationdetail by id"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<OrganisationDetail>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status404NotFound, contentType: "application/problem+json")

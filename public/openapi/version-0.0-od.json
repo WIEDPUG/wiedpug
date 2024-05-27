@@ -1,0 +1,1731 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "WIEDPUG API",
+      "description": "API Documentation for the WIEDPUG Network",
+      "termsOfService": "https://wiedpug.github.io/wiedpug",
+      "contact": {
+        "name": "WIEDPUG Team",
+        "url": "https://wiedpug.github.io/wiedpug",
+        "email": "changethis@email.com"
+      },
+      "license": {
+        "name": "Applicable License",
+        "url": "https://wiedpug.github.io/wiedpug"
+      },
+      "version": "v0.0"
+    },
+    "paths": {
+      "/v0/organisation-details": {
+        "post": {
+          "tags": [
+            "Organisation Details"
+          ],
+          "summary": "Create or upload the organisation details",
+          "operationId": "CreateOrganisationDetails",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisationDetails"
+                },
+                "example": {
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2020-07-15",
+                    "dateTransmissionFileCreated": "2016-01-17",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": "AWTM",
+                    "currentTransmitter": "AWTM",
+                    "currentReceiver": "AWXTS",
+                    "finalReceiver": "AWXTS",
+                    "transmissionType": 11,
+                    "versionNumber": null,
+                    "softwareIdentifier": null,
+                    "abn": "43006014106"
+                  },
+                  "organisationDetailCollection": [
+                    {
+                      "id": null,
+                      "organisationCode": "AWTS",
+                      "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
+                      "dateLastUpdated": "2020-04-28",
+                      "industryGroupId": "T",
+                      "transmitterFlag": "Y",
+                      "phoneNumber": {
+                        "standardPhoneNumber": {
+                          "countryCode": "61",
+                          "number": "0389004637"
+                        },
+                        "extension": null
+                      },
+                      "abn": null,
+                      "faxNumber": {
+                        "standardPhoneNumber": {
+                          "countryCode": "61",
+                          "number": "0320874405"
+                        },
+                        "extension": null
+                      },
+                      "addresses": [
+                        {
+                          "firstName": null,
+                          "lastName": null,
+                          "organisationName": null,
+                          "premise": null,
+                          "street": "28 GREAT SOUTH ROAD",
+                          "suburb": "KENSINGTON",
+                          "city": null,
+                          "regionOrState": null,
+                          "postCode": "3031",
+                          "country": "AU"
+                        }
+                      ],
+                      "contacts": [
+                        {
+                          "description": null,
+                          "firstName": "HEAD OFFICE",
+                          "lastName": null,
+                          "phoneNumber": {
+                            "standardPhoneNumber": {
+                              "countryCode": "61",
+                              "number": "0310108809"
+                            },
+                            "extension": null
+                          },
+                          "mobileNumber": null,
+                          "email": null
+                        }
+                      ]
+                    },
+                    {
+                      "id": null,
+                      "organisationCode": "BUY1",
+                      "nameOfOrganisation": "DEMO BUYER 1",
+                      "dateLastUpdated": "2020-04-28",
+                      "industryGroupId": "E",
+                      "transmitterFlag": "N",
+                      "phoneNumber": null,
+                      "abn": null,
+                      "faxNumber": null,
+                      "addresses": [],
+                      "contacts": []
+                    }
+                  ]
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ApiResult"
+                  },
+                  "example": {
+                    "isSuccessful": true,
+                    "message": null,
+                    "data": {
+                      "transmissionHeader": {
+                        "dateFormatLastRevised": "2020-07-15",
+                        "dateTransmissionFileCreated": "2016-01-17",
+                        "countryOfOrigin": "AU",
+                        "documentOriginator": "ABCD",
+                        "currentTransmitter": "AWTM",
+                        "currentReceiver": "AWXLC",
+                        "finalReceiver": "AWXLC",
+                        "transmissionType": 11,
+                        "versionNumber": 31,
+                        "softwareIdentifier": {
+                          "softwareCompany": 8,
+                          "version": 1082,
+                          "programName": "NETR"
+                        },
+                        "abn": "72001925678"
+                      },
+                      "organisationDetailCollection": [
+                        {
+                          "id": "1",
+                          "organisationCode": "AWTS",
+                          "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
+                          "dateLastUpdated": "2020-04-28",
+                          "industryGroupId": "T",
+                          "transmitterFlag": "Y",
+                          "phoneNumber": {
+                            "standardPhoneNumber": {
+                              "countryCode": "61",
+                              "number": "0317229370"
+                            },
+                            "extension": null
+                          },
+                          "abn": null,
+                          "faxNumber": {
+                            "standardPhoneNumber": {
+                              "countryCode": "61",
+                              "number": "03763262290"
+                            },
+                            "extension": null
+                          },
+                          "addresses": [
+                            {
+                              "firstName": null,
+                              "lastName": null,
+                              "organisationName": null,
+                              "premise": null,
+                              "street": "88 HARBOR ROAD",
+                              "suburb": "KENSINGTON",
+                              "city": null,
+                              "regionOrState": null,
+                              "postCode": "3031",
+                              "country": "AU"
+                            }
+                          ],
+                          "contacts": [
+                            {
+                              "description": null,
+                              "firstName": "HEAD OFFICE",
+                              "lastName": null,
+                              "phoneNumber": {
+                                "standardPhoneNumber": {
+                                  "countryCode": "61",
+                                  "number": "0309332782"
+                                },
+                                "extension": null
+                              },
+                              "mobileNumber": null,
+                              "email": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "2",
+                          "organisationCode": "BUY1",
+                          "nameOfOrganisation": "DEMO BUYER 1",
+                          "dateLastUpdated": "2020-04-28",
+                          "industryGroupId": "E",
+                          "transmitterFlag": "N",
+                          "phoneNumber": null,
+                          "abn": null,
+                          "faxNumber": null,
+                          "addresses": [],
+                          "contacts": []
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                    "title": "One or more validation errors occurred",
+                    "status": 400,
+                    "detail": "",
+                    "errors": {
+                      "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                        "The field DateFormatLastRevised is required",
+                        "The field DateFormatLastRevised must match regulart expression pattern..."
+                      ],
+                      "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                        "The field CountryOfOrigin is required"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                    "title": "Unauthorized",
+                    "status": 401,
+                    "detail": "Missing authentication credentials",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Forbidden",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "You don't have permission to access this resource",
+                    "status": 403,
+                    "detail": "You don't have a 'read' access to access this resource",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                    "title": "An error occurred while processing your required",
+                    "status": 500,
+                    "detail": "Error details..",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                    "title": "An error occurred while processing your required",
+                    "status": 500,
+                    "detail": "Error details..",
+                    "errors": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v0/organisation-details/data": {
+        "post": {
+          "tags": [
+            "Organisation Details"
+          ],
+          "summary": "Retrieves the organisationdetails",
+          "operationId": "GetOrganisationDetails",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetOrganisationDetailsRequest"
+                },
+                "example": {
+                  "countryOfOrigin": "AU",
+                  "documentOriginator": "ABCD",
+                  "softwareIdentifier": {
+                    "softwareCompany": 1,
+                    "version": 1082,
+                    "programName": "NETR"
+                  },
+                  "abn": "72001967184",
+                  "startDateTimeStatusRequest": "2024-02-01T19:25:04Z",
+                  "endDateTimeStatusRequest": "2024-03-21T19:25:04Z",
+                  "useNetworkDateTime": true
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/OrganisationDetailsApiResult"
+                  },
+                  "example": {
+                    "isSuccessful": true,
+                    "message": null,
+                    "data": {
+                      "transmissionHeader": {
+                        "dateFormatLastRevised": "2020-07-15",
+                        "dateTransmissionFileCreated": "2016-01-17",
+                        "countryOfOrigin": "AU",
+                        "documentOriginator": "ABCD",
+                        "currentTransmitter": "AWTM",
+                        "currentReceiver": "AWXLC",
+                        "finalReceiver": "AWXLC",
+                        "transmissionType": 11,
+                        "versionNumber": 31,
+                        "softwareIdentifier": {
+                          "softwareCompany": 6,
+                          "version": 1082,
+                          "programName": "NETR"
+                        },
+                        "abn": "72001925678"
+                      },
+                      "organisationDetailCollection": [
+                        {
+                          "id": "1",
+                          "organisationCode": "AWTS",
+                          "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
+                          "dateLastUpdated": "2020-04-28",
+                          "industryGroupId": "E",
+                          "transmitterFlag": "Y",
+                          "phoneNumber": {
+                            "standardPhoneNumber": {
+                              "countryCode": "61",
+                              "number": "0317229370"
+                            },
+                            "extension": null
+                          },
+                          "abn": null,
+                          "faxNumber": {
+                            "standardPhoneNumber": {
+                              "countryCode": "61",
+                              "number": "03763262290"
+                            },
+                            "extension": null
+                          },
+                          "addresses": [
+                            {
+                              "firstName": null,
+                              "lastName": null,
+                              "organisationName": null,
+                              "premise": null,
+                              "street": "88 HARBOR ROAD",
+                              "suburb": "KENSINGTON",
+                              "city": null,
+                              "regionOrState": null,
+                              "postCode": "3031",
+                              "country": "AU"
+                            }
+                          ],
+                          "contacts": [
+                            {
+                              "description": null,
+                              "firstName": "HEAD OFFICE",
+                              "lastName": null,
+                              "phoneNumber": {
+                                "standardPhoneNumber": {
+                                  "countryCode": "61",
+                                  "number": "0309332782"
+                                },
+                                "extension": null
+                              },
+                              "mobileNumber": null,
+                              "email": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "2",
+                          "organisationCode": "BUY1",
+                          "nameOfOrganisation": "DEMO BUYER 1",
+                          "dateLastUpdated": "2020-04-28",
+                          "industryGroupId": "E",
+                          "transmitterFlag": "N",
+                          "phoneNumber": null,
+                          "abn": null,
+                          "faxNumber": null,
+                          "addresses": [],
+                          "contacts": []
+                        },
+                        {
+                          "id": "3",
+                          "organisationCode": "AWTN",
+                          "nameOfOrganisation": "AUSTRALIAN WOOL TESTING AUTH LTD",
+                          "dateLastUpdated": "2020-04-28",
+                          "industryGroupId": "A",
+                          "transmitterFlag": "Y",
+                          "phoneNumber": {
+                            "standardPhoneNumber": {
+                              "countryCode": "61",
+                              "number": "0254009986"
+                            },
+                            "extension": null
+                          },
+                          "abn": null,
+                          "faxNumber": null,
+                          "addresses": [
+                            {
+                              "firstName": null,
+                              "lastName": null,
+                              "organisationName": null,
+                              "premise": null,
+                              "street": "367 NEW HAMMER STREET",
+                              "suburb": "NEWCASTLE",
+                              "city": null,
+                              "regionOrState": null,
+                              "postCode": "2031",
+                              "country": "AU"
+                            }
+                          ],
+                          "contacts": [
+                            {
+                              "description": null,
+                              "firstName": "MIKE",
+                              "lastName": "PWOELL",
+                              "phoneNumber": {
+                                "standardPhoneNumber": {
+                                  "countryCode": "61",
+                                  "number": "0387569072"
+                                },
+                                "extension": null
+                              },
+                              "mobileNumber": {
+                                "standardPhoneNumber": {
+                                  "countryCode": "61",
+                                  "number": "0353298764"
+                                },
+                                "extension": null
+                              },
+                              "email": "mpowell@awtn.co.au"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                    "title": "One or more validation errors occurred",
+                    "status": 400,
+                    "detail": "",
+                    "errors": {
+                      "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                        "The field DateFormatLastRevised is required",
+                        "The field DateFormatLastRevised must match regulart expression pattern..."
+                      ],
+                      "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                        "The field CountryOfOrigin is required"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                    "title": "Unauthorized",
+                    "status": 401,
+                    "detail": "Missing authentication credentials",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Forbidden",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "You don't have permission to access this resource",
+                    "status": 403,
+                    "detail": "You don't have a 'read' access to access this resource",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "Resource not found",
+                    "status": 404,
+                    "detail": null,
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                    "title": "An error occurred while processing your required",
+                    "status": 500,
+                    "detail": "Error details..",
+                    "errors": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v0/organisation-details/{id}": {
+        "get": {
+          "tags": [
+            "Organisation Details"
+          ],
+          "summary": "Retrieves the organisationdetail by id",
+          "operationId": "GetOrganisationDetailsById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/OrganisationDetailApiResult"
+                  },
+                  "example": {
+                    "transmissionHeader": {
+                      "dateFormatLastRevised": "2020-07-15",
+                      "dateTransmissionFileCreated": "2016-01-17",
+                      "countryOfOrigin": "AU",
+                      "documentOriginator": "AWTM",
+                      "currentTransmitter": "AWTM",
+                      "currentReceiver": "AWXTS",
+                      "finalReceiver": "AWXTS",
+                      "transmissionType": 11,
+                      "versionNumber": null,
+                      "softwareIdentifier": null,
+                      "abn": "43006014106"
+                    },
+                    "organisationDetailCollection": [
+                      {
+                        "id": "1",
+                        "organisationCode": "AWTS",
+                        "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
+                        "dateLastUpdated": "2020-04-28",
+                        "industryGroupId": "T",
+                        "transmitterFlag": "Y",
+                        "phoneNumber": {
+                          "standardPhoneNumber": {
+                            "countryCode": "61",
+                            "number": "0389004637"
+                          },
+                          "extension": null
+                        },
+                        "abn": null,
+                        "faxNumber": {
+                          "standardPhoneNumber": {
+                            "countryCode": "61",
+                            "number": "0320874405"
+                          },
+                          "extension": null
+                        },
+                        "addresses": [
+                          {
+                            "firstName": null,
+                            "lastName": null,
+                            "organisationName": null,
+                            "premise": null,
+                            "street": "28 GREAT SOUTH ROAD",
+                            "suburb": "KENSINGTON",
+                            "city": null,
+                            "regionOrState": null,
+                            "postCode": "3031",
+                            "country": "AU"
+                          }
+                        ],
+                        "contacts": [
+                          {
+                            "description": null,
+                            "firstName": "HEAD OFFICE",
+                            "lastName": null,
+                            "phoneNumber": {
+                              "standardPhoneNumber": {
+                                "countryCode": "61",
+                                "number": "0310108809"
+                              },
+                              "extension": null
+                            },
+                            "mobileNumber": null,
+                            "email": null
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                    "title": "Unauthorized",
+                    "status": 401,
+                    "detail": "Missing authentication credentials",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Forbidden",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "You don't have permission to access this resource",
+                    "status": 403,
+                    "detail": "You don't have a 'read' access to access this resource",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "Resource not found",
+                    "status": 404,
+                    "detail": null,
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                    "title": "An error occurred while processing your required",
+                    "status": 500,
+                    "detail": "Error details..",
+                    "errors": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Organisation Details"
+          ],
+          "summary": "Update the organisation detail by id",
+          "operationId": "UpdateOrganisationDetailsById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisationDetail"
+                },
+                "example": {
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2020-07-15",
+                    "dateTransmissionFileCreated": "2016-01-17",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": "AWTM",
+                    "currentTransmitter": "AWTM",
+                    "currentReceiver": "AWXTS",
+                    "finalReceiver": "AWXTS",
+                    "transmissionType": 11,
+                    "versionNumber": null,
+                    "softwareIdentifier": null,
+                    "abn": "43006014106"
+                  },
+                  "organisationDetailCollection": [
+                    {
+                      "id": null,
+                      "organisationCode": "AWTS",
+                      "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
+                      "dateLastUpdated": "2020-04-28",
+                      "industryGroupId": "E",
+                      "transmitterFlag": "Y",
+                      "phoneNumber": {
+                        "standardPhoneNumber": {
+                          "countryCode": "61",
+                          "number": "0389004637"
+                        },
+                        "extension": null
+                      },
+                      "abn": null,
+                      "faxNumber": {
+                        "standardPhoneNumber": {
+                          "countryCode": "61",
+                          "number": "0320874405"
+                        },
+                        "extension": null
+                      },
+                      "addresses": [
+                        {
+                          "firstName": null,
+                          "lastName": null,
+                          "organisationName": null,
+                          "premise": null,
+                          "street": "28 GREAT SOUTH ROAD",
+                          "suburb": "KENSINGTON",
+                          "city": null,
+                          "regionOrState": null,
+                          "postCode": "3031",
+                          "country": "AU"
+                        }
+                      ],
+                      "contacts": [
+                        {
+                          "description": null,
+                          "firstName": "HEAD OFFICE",
+                          "lastName": null,
+                          "phoneNumber": {
+                            "standardPhoneNumber": {
+                              "countryCode": "61",
+                              "number": "0310108809"
+                            },
+                            "extension": null
+                          },
+                          "mobileNumber": null,
+                          "email": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ApiResult"
+                  },
+                  "example": {
+                    "transmissionHeader": {
+                      "dateFormatLastRevised": "2020-07-15",
+                      "dateTransmissionFileCreated": "2016-01-17",
+                      "countryOfOrigin": "AU",
+                      "documentOriginator": "AWTM",
+                      "currentTransmitter": "AWTM",
+                      "currentReceiver": "AWXTS",
+                      "finalReceiver": "AWXTS",
+                      "transmissionType": 11,
+                      "versionNumber": null,
+                      "softwareIdentifier": null,
+                      "abn": "43006014106"
+                    },
+                    "organisationDetailCollection": [
+                      {
+                        "id": "1",
+                        "organisationCode": "AWTS",
+                        "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
+                        "dateLastUpdated": "2020-04-28",
+                        "industryGroupId": "T",
+                        "transmitterFlag": "Y",
+                        "phoneNumber": {
+                          "standardPhoneNumber": {
+                            "countryCode": "61",
+                            "number": "0389004637"
+                          },
+                          "extension": null
+                        },
+                        "abn": null,
+                        "faxNumber": {
+                          "standardPhoneNumber": {
+                            "countryCode": "61",
+                            "number": "0320874405"
+                          },
+                          "extension": null
+                        },
+                        "addresses": [
+                          {
+                            "firstName": null,
+                            "lastName": null,
+                            "organisationName": null,
+                            "premise": null,
+                            "street": "28 GREAT SOUTH ROAD",
+                            "suburb": "KENSINGTON",
+                            "city": null,
+                            "regionOrState": null,
+                            "postCode": "3031",
+                            "country": "AU"
+                          }
+                        ],
+                        "contacts": [
+                          {
+                            "description": null,
+                            "firstName": "HEAD OFFICE",
+                            "lastName": null,
+                            "phoneNumber": {
+                              "standardPhoneNumber": {
+                                "countryCode": "61",
+                                "number": "0310108809"
+                              },
+                              "extension": null
+                            },
+                            "mobileNumber": null,
+                            "email": null
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                    "title": "One or more validation errors occurred",
+                    "status": 400,
+                    "detail": "",
+                    "errors": {
+                      "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                        "The field DateFormatLastRevised is required",
+                        "The field DateFormatLastRevised must match regulart expression pattern..."
+                      ],
+                      "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                        "The field CountryOfOrigin is required"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                    "title": "Unauthorized",
+                    "status": 401,
+                    "detail": "Missing authentication credentials",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Forbidden",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "You don't have permission to access this resource",
+                    "status": 403,
+                    "detail": "You don't have a 'read' access to access this resource",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "Resource not found",
+                    "status": 404,
+                    "detail": null,
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                    "title": "An error occurred while processing your required",
+                    "status": 500,
+                    "detail": "Error details..",
+                    "errors": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Organisation Details"
+          ],
+          "summary": "Delete or Deactivate organisation detail by id",
+          "operationId": "DeleteOrganisationDetailsById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ApiResult"
+                  },
+                  "example": {
+                    "isSuccessful": true,
+                    "message": null,
+                    "data": null
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "Unauthorized",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                    "title": "Unauthorized",
+                    "status": 401,
+                    "detail": "Missing authentication credentials",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Forbidden",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "You don't have permission to access this resource",
+                    "status": 403,
+                    "detail": "You don't have a 'read' access to access this resource",
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                    "title": "Resource not found",
+                    "status": 404,
+                    "detail": null,
+                    "errors": null
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/problem+json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CustomProblemDetails"
+                  },
+                  "example": {
+                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                    "title": "An error occurred while processing your required",
+                    "status": 500,
+                    "detail": "Error details..",
+                    "errors": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Address": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "lastName": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "organisationName": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "premise": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "street": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "suburb": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "city": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "regionOrState": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "postCode": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "country": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "ApiResult": {
+          "required": [
+            "isSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "isSuccessful": {
+              "type": "boolean",
+              "description": "Indicator if the request has been successfully processed."
+            },
+            "message": {
+              "type": "string",
+              "description": "Contains information about the response if applicable.",
+              "nullable": true
+            },
+            "data": {
+              "description": "Contains response data. e.g. Auction Catalogue",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false,
+          "description": "A standard API response object used for all successful API responses"
+        },
+        "Contact": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "firstName": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "lastName": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            },
+            "phoneNumber": {
+              "$ref": "#/components/schemas/PhoneNumber"
+            },
+            "mobileNumber": {
+              "$ref": "#/components/schemas/PhoneNumber"
+            },
+            "email": {
+              "maxLength": 80,
+              "minLength": 0,
+              "type": "string",
+              "format": "email",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "CountryCode": {
+          "enum": [
+            "AU",
+            "NZ",
+            "FR",
+            "ZA"
+          ],
+          "type": "string",
+          "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa"
+        },
+        "CustomProblemDetails": {
+          "required": [
+            "status",
+            "title"
+          ],
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+              "nullable": true
+            },
+            "title": {
+              "minLength": 1,
+              "type": "string",
+              "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+            },
+            "status": {
+              "type": "integer",
+              "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+              "format": "int32"
+            },
+            "detail": {
+              "type": "string",
+              "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.",
+              "nullable": true
+            },
+            "errors": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false,
+          "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+        },
+        "GetOrganisationDetailsRequest": {
+          "required": [
+            "abn",
+            "countryOfOrigin",
+            "documentOriginator"
+          ],
+          "type": "object",
+          "properties": {
+            "countryOfOrigin": {
+              "$ref": "#/components/schemas/CountryCode"
+            },
+            "documentOriginator": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            },
+            "softwareIdentifier": {
+              "$ref": "#/components/schemas/SoftwareIdentifier"
+            },
+            "abn": {
+              "maxLength": 11,
+              "minLength": 0,
+              "type": "string",
+              "description": "Australian Business Number"
+            },
+            "startDateTimeStatusRequest": {
+              "maxLength": 20,
+              "minLength": 0,
+              "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+              "type": "string",
+              "description": "Date and Time in UTC format in ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ e.g. 2024-03-21T19:25:04Z",
+              "format": "date-time",
+              "nullable": true
+            },
+            "endDateTimeStatusRequest": {
+              "maxLength": 20,
+              "minLength": 0,
+              "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+              "type": "string",
+              "description": "Date and Time in UTC format in ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ. e.g. 2024-03-21T19:25:04Z",
+              "format": "date-time",
+              "nullable": true
+            },
+            "useNetworkDateTime": {
+              "maxLength": 4,
+              "minLength": 0,
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "IndustryGroupId": {
+          "enum": [
+            "A",
+            "C",
+            "E",
+            "D",
+            "M",
+            "P",
+            "S",
+            "T",
+            "V"
+          ],
+          "type": "string",
+          "description": "A: Agent / Broker<br />C: Carrier<br />E: Exporter / Buyer<br />D: Dump<br />M: Miscellaneous<br />P: Port<br />S: Shipping<br />T: Test House<br />V: Vessel"
+        },
+        "OrganisationDetail": {
+          "required": [
+            "dateLastUpdated",
+            "industryGroupId",
+            "nameOfOrganisation",
+            "organisationCode",
+            "transmitterFlag"
+          ],
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "nullable": true
+            },
+            "organisationCode": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            },
+            "nameOfOrganisation": {
+              "maxLength": 50,
+              "minLength": 0,
+              "type": "string"
+            },
+            "dateLastUpdated": {
+              "maxLength": 10,
+              "minLength": 0,
+              "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+              "type": "string",
+              "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+              "format": "date"
+            },
+            "industryGroupId": {
+              "$ref": "#/components/schemas/IndustryGroupId"
+            },
+            "transmitterFlag": {
+              "maxLength": 1,
+              "minLength": 0,
+              "type": "string"
+            },
+            "phoneNumber": {
+              "$ref": "#/components/schemas/PhoneNumber"
+            },
+            "abn": {
+              "maxLength": 11,
+              "minLength": 0,
+              "pattern": "^[0-9]+$",
+              "type": "string",
+              "description": "Australian Business Number",
+              "nullable": true
+            },
+            "faxNumber": {
+              "$ref": "#/components/schemas/PhoneNumber"
+            },
+            "addresses": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Address"
+              },
+              "nullable": true
+            },
+            "contacts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Contact"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "OrganisationDetailApiResult": {
+          "required": [
+            "isSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "isSuccessful": {
+              "type": "boolean",
+              "description": "Indicator if the request has been successfully processed."
+            },
+            "message": {
+              "type": "string",
+              "description": "Contains information about the response if applicable.",
+              "nullable": true
+            },
+            "data": {
+              "$ref": "#/components/schemas/OrganisationDetail"
+            }
+          },
+          "additionalProperties": false,
+          "description": "A standard API response object used for all successful API responses"
+        },
+        "OrganisationDetails": {
+          "required": [
+            "organisationDetailCollection",
+            "transmissionHeader"
+          ],
+          "type": "object",
+          "properties": {
+            "transmissionHeader": {
+              "$ref": "#/components/schemas/TransmissionHeader"
+            },
+            "organisationDetailCollection": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/OrganisationDetail"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "OrganisationDetailsApiResult": {
+          "required": [
+            "isSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "isSuccessful": {
+              "type": "boolean",
+              "description": "Indicator if the request has been successfully processed."
+            },
+            "message": {
+              "type": "string",
+              "description": "Contains information about the response if applicable.",
+              "nullable": true
+            },
+            "data": {
+              "$ref": "#/components/schemas/OrganisationDetails"
+            }
+          },
+          "additionalProperties": false,
+          "description": "A standard API response object used for all successful API responses"
+        },
+        "PhoneNumber": {
+          "required": [
+            "standardPhoneNumber"
+          ],
+          "type": "object",
+          "properties": {
+            "standardPhoneNumber": {
+              "$ref": "#/components/schemas/StandardPhoneNumber"
+            },
+            "extension": {
+              "maxLength": 15,
+              "minLength": 0,
+              "type": "string",
+              "description": "Used for landline or fax extentions",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "SoftwareCompany": {
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "type": "integer",
+          "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA",
+          "format": "int32"
+        },
+        "SoftwareIdentifier": {
+          "type": "object",
+          "properties": {
+            "softwareCompany": {
+              "$ref": "#/components/schemas/SoftwareCompany"
+            },
+            "version": {
+              "pattern": "-?\\d{1,4}",
+              "type": "integer",
+              "description": "Version no. e.g. 2400",
+              "format": "int32",
+              "nullable": true
+            },
+            "programName": {
+              "maxLength": 4,
+              "minLength": 0,
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "StandardPhoneNumber": {
+          "required": [
+            "countryCode",
+            "number"
+          ],
+          "type": "object",
+          "properties": {
+            "countryCode": {
+              "maxLength": 3,
+              "minLength": 0,
+              "pattern": "^[0-9]+$",
+              "type": "string"
+            },
+            "number": {
+              "maxLength": 15,
+              "minLength": 0,
+              "pattern": "^[0-9]+$",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "TransmissionHeader": {
+          "required": [
+            "abn",
+            "countryOfOrigin",
+            "currentReceiver",
+            "currentTransmitter",
+            "dateFormatLastRevised",
+            "dateTransmissionFileCreated",
+            "documentOriginator",
+            "finalReceiver",
+            "transmissionType"
+          ],
+          "type": "object",
+          "properties": {
+            "dateFormatLastRevised": {
+              "maxLength": 10,
+              "minLength": 0,
+              "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+              "type": "string",
+              "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+              "format": "date"
+            },
+            "dateTransmissionFileCreated": {
+              "maxLength": 10,
+              "minLength": 0,
+              "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+              "type": "string",
+              "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+              "format": "date"
+            },
+            "countryOfOrigin": {
+              "$ref": "#/components/schemas/CountryCode"
+            },
+            "documentOriginator": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            },
+            "currentTransmitter": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            },
+            "currentReceiver": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            },
+            "finalReceiver": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            },
+            "transmissionType": {
+              "$ref": "#/components/schemas/TransmissionType"
+            },
+            "versionNumber": {
+              "pattern": "-?\\d{1,2}",
+              "type": "integer",
+              "description": "Two digits. e.g. 99",
+              "format": "int32",
+              "nullable": true
+            },
+            "softwareIdentifier": {
+              "$ref": "#/components/schemas/SoftwareIdentifier"
+            },
+            "abn": {
+              "maxLength": 11,
+              "minLength": 0,
+              "pattern": "^[0-9]+$",
+              "type": "string",
+              "description": "Australian Business Number, 11 digits string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "TransmissionType": {
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            13,
+            16,
+            17,
+            50,
+            52,
+            55,
+            56,
+            60,
+            64,
+            98,
+            99
+          ],
+          "type": "integer",
+          "description": "The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement",
+          "format": "int32"
+        }
+      },
+      "securitySchemes": {
+        "Bearer": {
+          "type": "apiKey",
+          "description": "JWT Access Token that is added in the Authorization header of the HTTP request. Example: \"Authorization: Bearer {token}\". The JWT serves as a credential that proves the identity of the client to the server.",
+          "name": "Authorization",
+          "in": "header"
+        },
+        "oauth2": {
+          "type": "oauth2",
+          "description": "Authentication for client applications by providing Client ID and Client Secret for an JWT Access Token.",
+          "flows": {
+            "clientCredentials": {
+              "tokenUrl": "/auth-server/oauth/token",
+              "scopes": {}
+            }
+          }
+        }
+      }
+    },
+    "security": [
+      {
+        "Bearer": []
+      }
+    ]
+  }

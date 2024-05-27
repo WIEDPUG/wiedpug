@@ -18,22 +18,31 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new Domain.Entities.TransmissionHeader
                         {
-                            DateFormatLastRevised = "200715",
-                            DateTransmissionFileCreated = "160117",
+                            DateFormatLastRevised = "2020-07-15",
+                            DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = "ABCD",
                             CurrentTransmitter = "AWTM",
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                            VersionNumber = "31",
+                            VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
-                                SoftwareCompany = "Talman",
-                                Version = 10820
+                                SoftwareCompany = SoftwareCompany.Talman,
+                                Version = 1082
                             },
                             ABN = "72001967184"
+                        },
+                        TransferConfig = new TransferConfig
+                        {
+                            TransferType = TransferType.Broadcast,
+                            InclusionExclusionList = new List<string>
+                            {
+                                "AMSC",
+                                "FIBC"
+                            },
                         },
                         WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
                         {
@@ -41,14 +50,14 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                                 {
-                                    Season = "16",
+                                    Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
                                     {
                                         SellingCentreType = "M",
-                                        SaleNumber = "29"
+                                        SaleNumber = 29
                                     },
                                     CentreStorage = "M",
-                                    SaleDate = "170119",
+                                    SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     Currency = "AUD",
@@ -74,10 +83,10 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     StorageOrganisation = "ABCD",
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = "170127",
-                                    DiscountRate = 1.5,
+                                    PaymentDueDate = "2017-01-27",
+                                    DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = "170124",
+                                    DateStorageChargeCommences = "2017-01-24",
                                     StorageChargePerBalePerDay = 0.245,
                                     PenaltyInterestRate = 11.5,
                                     LotAvailableDate = null,
@@ -279,14 +288,22 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
                             TransmissionType = Domain.Enums.TransmissionType.PrivateCatalogues,
-                            VersionNumber = "31",
+                            VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
-                                SoftwareCompany = "Talman",
-                                Version = 10820
+                                SoftwareCompany = SoftwareCompany.Talman,
+                                Version = 1082
                             },
                             ABN = "72001967184"
+                        },
+                        TransferConfig = new TransferConfig
+                        {
+                            TransferType = TransferType.PrivateSend,
+                            InclusionExclusionList = new List<string>
+                            {
+                                "AWXLC"
+                            }
                         },
                         WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
                         {
@@ -294,11 +311,11 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                                 {
-                                    Season = "16",
+                                    Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
                                     {
                                         SellingCentreType = "M",
-                                        SaleNumber = "29"
+                                        SaleNumber = 29
                                     },
                                     CentreStorage = "M",
                                     SaleDate = "170119",
@@ -520,14 +537,23 @@ namespace Wiedpug.API.ExampleResponses
                         CurrentReceiver = "AWXLC",
                         FinalReceiver = "AWXLC",
                         TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogueUpdates,
-                        VersionNumber = "31",
+                        VersionNumber = 31,
                         SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                         {
                             ProgramName = "NETR",
-                            SoftwareCompany = "Talman",
-                            Version = 10820
+                            SoftwareCompany = SoftwareCompany.Talman,
+                            Version = 1082
                         },
                         ABN = "72001967184"
+                    },
+                    TransferConfig = new TransferConfig
+                        {
+                            TransferType = TransferType.Broadcast,
+                            InclusionExclusionList = new List<string>
+                            {
+                                "AWMS",
+                                "FCBB"
+                            }
                     },
                     WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
                     {
@@ -535,11 +561,11 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                             {
-                                Season = "16",
+                                Season = 16,
                                 SaleIdentity = new Domain.Entities.SaleIdentity
                                 {
                                     SellingCentreType = "M",
-                                    SaleNumber = "29"
+                                    SaleNumber = 29
                                 },
                                 CentreStorage = "M",
                                 SaleDate = "170119",
@@ -757,11 +783,11 @@ namespace Wiedpug.API.ExampleResponses
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
                             SellingCentreType = "F",
-                            SaleNumber = "18"
+                            SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "231031",
-                        UserNetworkDateTime = false,
+                        UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
@@ -777,11 +803,11 @@ namespace Wiedpug.API.ExampleResponses
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
                             SellingCentreType = "F",
-                            SaleNumber = "18"
+                            SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "231031",
-                        UserNetworkDateTime = false,
+                        UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
@@ -803,11 +829,11 @@ namespace Wiedpug.API.ExampleResponses
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
                             SellingCentreType = "F",
-                            SaleNumber = "18"
+                            SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "231031",
-                        UserNetworkDateTime = false,
+                        UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.PrivateDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
@@ -843,12 +869,12 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentReceiver = "AWXLC",
                             FinalReceiver = "AWXLC",
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                            VersionNumber = "31",
+                            VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
-                                SoftwareCompany = "Talman",
-                                Version = 10820
+                                SoftwareCompany = SoftwareCompany.AWTA,
+                                Version = 1082
                             },
                             ABN = "72001967184"
                         },
@@ -858,11 +884,11 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
                                     {
-                                        Season = "16",
+                                        Season = 16,
                                         SaleIdentity = new Domain.Entities.SaleIdentity
                                         {
                                             SellingCentreType = "M",
-                                            SaleNumber = "29"
+                                            SaleNumber = 29
                                         },
                                         CentreStorage = "M",
                                         SaleDate = "170119",

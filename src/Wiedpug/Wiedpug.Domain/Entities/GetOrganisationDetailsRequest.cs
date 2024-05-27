@@ -15,18 +15,6 @@ namespace Wiedpug.Domain.Entities
         [StringLength(5)]
         public required string DocumentOriginator { get; set; }
 
-        [Required]
-        [StringLength(5)]
-        public required string CurrentTransmitter { get; set; }
-
-        [Required]
-        [StringLength(5)]
-        public required string CurrentReceiver { get; set; }
-
-        [Required]
-        [StringLength(5)]
-        public required string FinalReceiver { get; set; }
-
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
         /// <summary>
@@ -52,7 +40,7 @@ namespace Wiedpug.Domain.Entities
         [StringLength(20)]
         public string? EndDateTimeStatusRequest { get; set; }
 
-        [StringLength(6)]
-        public bool? UserNetworkDateTime { get; set; }
+        [StringLength(4)]
+        public bool? UseNetworkDateTime { get; set; }
     }
 }

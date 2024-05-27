@@ -39,7 +39,7 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DATE_AND_TIME_WITH_OFFSET_ISO8601)]
         public string? EndDateTimeStatusRequest { get; set; }
 
-        public bool? UserNetworkDateTime { get; set; }
+        public bool? UseNetworkDateTime { get; set; }
 
         [Required]
         public required RequestTypeForData RequestType { get; set; }

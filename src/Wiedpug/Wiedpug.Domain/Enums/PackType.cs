@@ -11,7 +11,7 @@ namespace Wiedpug.Domain.Enums
         [Description("0: Standard (farm) bale")]
         _0,
 
-        [Description("B1: Bag/butt")]
+        [Description("1: Bag/butt")]
         _1,
 
         [Description("2: Lightweight bale")]

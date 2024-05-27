@@ -24,7 +24,7 @@ namespace Wiedpug.API.ExampleResponses
                             CurrentReceiver = "AWTM",
                             FinalReceiver = "AWTM",
                             TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                            VersionNumber = "36",
+                            VersionNumber = 36,
                             ABN = "00000000000"
                         },
                         RequestForDataCollection = new List<Domain.Entities.RequestForData>
@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SaleIdentity = new Domain.Entities.SaleIdentity
                                 {
                                     SellingCentreType = "F",
-                                    SaleNumber = "18"                                    
+                                    SaleNumber = 18                                    
                                 },
                                 OrganisationRequested = "AWNF",
                                 SaleDateRequested = "2023-10-31",
