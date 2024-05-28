@@ -109,7 +109,7 @@ namespace Wiedpug.Domain.Entities
         /// `true` = Final Catalogue. `false` = Not Final Catalogue
         /// </summary>
         [Required]
-        [StringLength(4)]
+        [StringLength(5)]
         public required bool IsFinalCatalogue { get; set; }
 
         /// <summary>

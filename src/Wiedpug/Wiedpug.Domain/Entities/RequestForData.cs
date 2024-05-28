@@ -40,7 +40,7 @@ namespace Wiedpug.Domain.Entities
         [StringLength(24)]
         public string? EndDateTimeStatusRequest { get; set; }
 
-        [StringLength(4)]
+        [StringLength(5)]
         public bool? UserNetworkDateTime { get; set; }
 
         [Required]

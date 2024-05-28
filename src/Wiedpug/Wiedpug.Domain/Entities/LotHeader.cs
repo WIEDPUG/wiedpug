@@ -36,7 +36,7 @@ namespace Wiedpug.Domain.Entities
         /// It is used in New Zealand only.
         /// `true` = Normal Lot, `false` = No Lot
         /// </summary>
-        [StringLength(4)]
+        [StringLength(5)]
         public bool? IsNoLot { get; set; } // FIELD NUMBER 8 - No Lot Flag - Start: 28, Size: 1, Data Type: ID, Justification: F, Requirement Designator: C
 
         [StringLength(1)]
@@ -46,8 +46,9 @@ namespace Wiedpug.Domain.Entities
         [StringLength(1)]
         public required UpdateType UpdateType { get; set; } // FIELD NUMBER 10 - Update Type - Start: 30, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
+        [Required]
         [StringLength(6)]
-        public CatalogueSymbol? CatalogueSymbols { get; set; } // FIELD NUMBER 11 - Catalogue Symbols - Start: 31, Size: 6, Data Type: ID, Justification: L, Requirement Designator: M
+        public required CatalogueSymbol CatalogueSymbols { get; set; } // FIELD NUMBER 11 - Catalogue Symbols - Start: 31, Size: 6, Data Type: ID, Justification: L, Requirement Designator: M
 
         [Required]
         [StringLength(2)]

@@ -89,7 +89,7 @@ namespace Wiedpug.Domain.Entities
         /// flase: for a unsecured L/S sample <br />
         /// </summary>
         [Required]
-        [StringLength(4)]
+        [StringLength(5)]
         public required bool isLsSampleSecured { get; set; }
 
         /// <summary>

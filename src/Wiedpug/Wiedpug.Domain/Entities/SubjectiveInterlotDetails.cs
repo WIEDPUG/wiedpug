@@ -40,8 +40,9 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public required double Vmb { get; set; }
 
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double HardHeadsBase { get; set; }
+        public required double HardHeadsBase { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_5_2)]

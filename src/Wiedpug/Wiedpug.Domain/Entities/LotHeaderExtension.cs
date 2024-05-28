@@ -37,7 +37,7 @@ namespace Wiedpug.Domain.Entities
         /// `true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.
         /// </summary>
         /// 
-        [StringLength(4)]
+        [StringLength(5)]
         public bool? GstTaxInvoiceFlag { get; set; } // FIELD NUMBER 6 - GST Tax Invoice Flag - Start: 44, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]

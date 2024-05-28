@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate.OrganisationDetails">
-    <Position X="1.5" Y="0.75" Width="4" />
+  <Class Name="Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate.OrganisationDetails" Collapsed="true">
+    <Position X="1.75" Y="1.25" Width="1.75" />
+    <AssociationLine Name="OrganisationDetailCollection" Type="Wiedpug.Domain.Entities.OrganisationDetail">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-4.192" Y="0.177" Height="0.182" Width="3.921" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\OrganisationDetailsAggregate\OrganisationDetails.cs</FileName>
@@ -13,63 +18,85 @@
       <Property Name="OrganisationDetailCollection" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.OrganisationDetail">
-    <Position X="7" Y="2" Width="2.75" />
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="2.75" />
+    <Members>
+      <Property Name="ABN" Hidden="true" />
+      <Property Name="CurrentReceiver" Hidden="true" />
+      <Property Name="CurrentTransmitter" Hidden="true" />
+      <Property Name="DateFormatLastRevised" Hidden="true" />
+      <Property Name="DateTransmissionFileCreated" Hidden="true" />
+      <Property Name="DocumentOriginator" Hidden="true" />
+      <Property Name="FinalReceiver" Hidden="true" />
+      <Property Name="VersionNumber" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAIAAJAAgAQAAAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.OrganisationDetail" Collapsed="true">
+    <Position X="3" Y="2.75" Width="2.25" />
     <Members>
       <Property Name="ABN" Hidden="true" />
       <Property Name="DateLastUpdated" Hidden="true" />
       <Property Name="Id" Hidden="true" />
-      <Property Name="IndustryGroupId" Hidden="true" />
       <Property Name="NameOfOrganisation" Hidden="true" />
       <Property Name="OrganisationCode" Hidden="true" />
       <Property Name="TransmitterFlag" Hidden="true" />
     </Members>
+    <AssociationLine Name="Contacts" Type="Wiedpug.Domain.ValueObject.Contact" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.831" />
+        <Point X="5.625" Y="2.831" />
+        <Point X="5.625" Y="4.031" />
+        <Point X="7.25" Y="4.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Addresses" Type="Wiedpug.Domain.ValueObject.Address" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.875" Y="3.312" />
+        <Point X="4.875" Y="6.031" />
+        <Point X="6.75" Y="6.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="FaxNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.184" Y="0.177" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>BABCAAAAAAAAgAAAEAAAQAAAEAAAIAAAAAAEAAACAAI=</HashCode>
       <FileName>Entities\OrganisationDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="FaxNumber" />
       <Property Name="PhoneNumber" />
+      <Property Name="FaxNumber" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Addresses" />
       <Property Name="Contacts" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="3" Y="2.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAIAAJAAgAQAAAAQI=</HashCode>
-      <FileName>Entities\TransmissionHeader.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Wiedpug.Domain.ValueObject.Address" Collapsed="true">
-    <Position X="11.75" Y="2" Width="1.5" />
+    <Position X="6.75" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAUAACAAAAAgIAAAAAAAAAAIAAAAAAAIAgAAAEAg=</HashCode>
       <FileName>ValueObject\Address.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.ValueObject.Contact">
-    <Position X="12" Y="3.5" Width="3.5" />
-    <Members>
-      <Property Name="Description" Hidden="true" />
-      <Property Name="Email" Hidden="true" />
-      <Property Name="FirstName" Hidden="true" />
-      <Property Name="LastName" Hidden="true" />
-    </Members>
+  <Class Name="Wiedpug.Domain.ValueObject.Contact" Collapsed="true">
+    <Position X="7.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACEAAACAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>ValueObject\Contact.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="MobileNumber" />
-      <Property Name="PhoneNumber" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.PhoneNumber" Collapsed="true">
-    <Position X="8" Y="6.5" Width="1.5" />
+    <Position X="2.25" Y="7" Width="2.25" />
+    <Members>
+      <Property Name="Extension" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>ValueObject\PhoneNumber.cs</FileName>

@@ -13,7 +13,7 @@ namespace Wiedpug.Domain.Entities
         [StringLength(15)]
         public required string BaleDescription { get; set; } // FIELD NUMBER 4 - Bale Description - Start: 34, Size: 15, Data Type: AN, Justification: L, Requirement Designator: M
 
-        [StringLength(15)]
+        [StringLength(4)]
         public string? AreaOfOrigin { get; set; } // FIELD NUMBER 5 - Area of Origin - Start: 49, Size: 4, Data Type: AN, Justification: L, Requirement Designator: C
 
         [StringLength(20)]

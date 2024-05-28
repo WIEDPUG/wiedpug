@@ -14,28 +14,28 @@ public static class OrganisationDetailsEndpoints
             .MapToApiVersion(0, 0).
             WithTags("Organisation Details");
 
-        group.MapPost("/",
-        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailsRequestExample))]
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CreateOrganisationDetails200Example))]
-        [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
-        [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
-        [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
-        [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] OrganisationDetails model) =>
-        {
-            //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
-        })
-        .WithName("CreateOrganisationDetails")
-        .WithOpenApi(o => new(o)
-        {
-            Summary = "Create or upload the organisation details"
-        })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+        //group.MapPost("/",
+        //[SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailsRequestExample))]
+        //[SwaggerResponseExample(StatusCodes.Status200OK, typeof(CreateOrganisationDetails200Example))]
+        //[SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
+        //[SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
+        //[SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
+        //[SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
+        //([FromBody] OrganisationDetails model) =>
+        //{
+        //    //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
+        //})
+        //.WithName("CreateOrganisationDetails")
+        //.WithOpenApi(o => new(o)
+        //{
+        //    Summary = "Create or upload the organisation details"
+        //})
+        //.Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        //.Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
+        //.Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
+        //.Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        //.Produces<CustomProblemDetails>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
+        //.Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
         [SwaggerRequestExample(typeof(GetOrganisationDetailsRequest), typeof(GetOrganisationDetailsRequestExample))]

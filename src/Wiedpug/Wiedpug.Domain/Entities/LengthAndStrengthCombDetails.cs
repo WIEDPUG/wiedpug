@@ -126,7 +126,7 @@ namespace Wiedpug.Domain.Entities
         /// `false` for a unsecured L/S sample <br />
         /// </summary>
         [Required]
-        [StringLength(4)]
+        [StringLength(5)]
         public required bool IsLsSampleSecured { get; set; }
 
         /// <summary>

@@ -99,7 +99,7 @@ paths:
                               isNoLot: null
                               sourceCode: null
                               updateType: A
-                              catalogueSymbols: null
+                              catalogueSymbols: A
                               packMaterial: 'N'
                               lotType: 4
                               lightestIndividualBaleWeight: 149
@@ -297,7 +297,7 @@ paths:
                               isNoLot: null
                               sourceCode: null
                               updateType: A
-                              catalogueSymbols: null
+                              catalogueSymbols: C
                               packMaterial: 'N'
                               lotType: 1
                               lightestIndividualBaleWeight: 149
@@ -569,7 +569,7 @@ paths:
                           isNoLot: null
                           sourceCode: null
                           updateType: A
-                          catalogueSymbols: null
+                          catalogueSymbols: A
                           packMaterial: 'N'
                           lotType: 2
                           lightestIndividualBaleWeight: 149
@@ -777,7 +777,7 @@ paths:
                     requestType: BroadcastDataRequest
                     woolTypeGroup: MFLC
                     recordTypesToBeExcluded:
-                      - '79B'
+                      - 79B
                       - '84'
                     season: 23
                   - transmissionTypeRequested: 5
@@ -792,7 +792,7 @@ paths:
                     requestType: BroadcastDataRequest
                     woolTypeGroup: MFLC
                     recordTypesToBeExcluded:
-                      - '79B'
+                      - 79B
                       - '31'
                     season: 23
               Request for Private Catalogue Data:
@@ -809,8 +809,8 @@ paths:
                     requestType: PrivateDataRequest
                     woolTypeGroup: MFLC
                     recordTypesToBeExcluded:
-                      - '79B'
-                      - '32A'
+                      - 79B
+                      - 32A
                     season: 23
         required: true
       responses:
@@ -825,7 +825,7 @@ paths:
                 message: null
                 data:
                   - transmissionHeader:
-                      dateFormatLastRevised: '2020-07-15'
+                      dateFormatLastRevised: 2020007-15
                       dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator: ABCD
@@ -891,7 +891,7 @@ paths:
                               isNoLot: null
                               sourceCode: null
                               updateType: A
-                              catalogueSymbols: null
+                              catalogueSymbols: C
                               packMaterial: 'N'
                               lotType: 5
                               lightestIndividualBaleWeight: 149
@@ -1293,7 +1293,7 @@ components:
           type: string
           description: The code for the broker who will raise the invoice for the wool
         isFinalCatalogue:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           description: "Indicates whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section. \r\n`true` = Final Catalogue. `false` = Not Final Catalogue"
@@ -1321,12 +1321,12 @@ components:
       type: object
       properties:
         baleNumber:
-          maxLength: 30
+          maxLength: 5
           minLength: 0
           type: string
           nullable: true
         eBaleId:
-          maxLength: 5
+          maxLength: 30
           minLength: 0
           type: string
           nullable: true
@@ -1360,7 +1360,7 @@ components:
           minLength: 0
           type: string
         areaOfOrigin:
-          maxLength: 15
+          maxLength: 4
           minLength: 0
           type: string
           nullable: true
@@ -1860,19 +1860,19 @@ components:
     CombinationFlag:
       enum:
         - 'N'
-        - 'S'
+        - S
         - '4'
         - '5'
         - '6'
         - '7'
         - '8'
         - '9'
-        - 'A'
-        - 'B'
-        - 'C'
-        - 'D'
-        - 'E'
-        - 'F'
+        - A
+        - B
+        - C
+        - D
+        - E
+        - F
       type: string
       description: 'This field indicates the following: If an Australian Securities Exchange combination was requested and the combination satisfies the contract parameters of ASX the appropriate flag will be transmitted.<br />N. Normal Combination<br />S. ASX24 Combination (formerly SFE)<br />4. ASX19.5 54W Combination<br />5. ASX21.0 55W Combination<br />6. ASX22.6 56W Combination<br />7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W Combination<br />8. ASX19.5 54W and ASX21.0 55W Combination<br />9: ASX21.0 55W and ASX22.6 56W Combination<br />A. ICAP Wool Contract - China Type 54P<br />B. ICAP Wool Contract - China Type 54<br />C. ICAP Wool Contract - China Type 55<br />D. ICAP Wool Contract - China Type 56<br />E. ICAP Wool Contract - China Type 424<br />F. ICAP Wool Contract - China Type Standard'
     CoreTestDetails:
@@ -2013,9 +2013,9 @@ components:
       description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
     DarkAndMedullatedFibreRisk:
       enum:
-        - 'E'
+        - E
         - 'N'
-        - 'D'
+        - D
         - '1'
         - '2'
         - '3'
@@ -2302,7 +2302,7 @@ components:
         lsCertType:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           description: "Specifies whether the L/S sample is secured or not. <br />\r\n`true` for a secured L/S sample <br />\r\n`false` for a unsecured L/S sample <br />"
@@ -2412,7 +2412,7 @@ components:
         lsCertType:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           description: "Specifies whether the L/S sample is secured or not. <br />\r\ntrue: for a secured L/S sample <br />\r\nflase: for a unsecured L/S sample <br />"
@@ -2451,6 +2451,7 @@ components:
     LotHeader:
       required:
         - bales
+        - catalogueSymbols
         - gross
         - lotIdentity
         - lotType
@@ -2487,7 +2488,7 @@ components:
           format: int32
           nullable: true
         isNoLot:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           description: "A flag used to indicate whether or not the lot is included for sale in the auction.\r\nIt is used in New Zealand only.\r\n`true` = Normal Lot, `false` = No Lot"
@@ -2609,7 +2610,7 @@ components:
           type: string
           description: "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\nAlternative valid appraisal descriptions include AWC type, Exporter type. \r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\nThis field is to be always transmitted in upper case."
         gstTaxInvoiceFlag:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           description: '`true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.'
@@ -2947,13 +2948,13 @@ components:
         - '7'
         - '8'
         - '9'
-        - 'A'
-        - 'B'
-        - 'C'
-        - 'D'
-        - 'E'
-        - 'F'
-        - 'Z'
+        - A
+        - B
+        - C
+        - D
+        - E
+        - F
+        - Z
       type: string
       description: 'A code used to indicate how the wool has been baled. The most common type is Farm bales. <strong>Original</strong> - the pack type when the wool was originally baled. <strong>Preferred</strong> - The pack type which the buyer would prefer to be used when his wool is dumped.<br />0: Standard (farm) bale<br />1: Bag/butt<br />2: Lightweight bale<br />3: Jumbo bale<br />4: Single bales (normal density dumped)<br />5: Single bales (high density dumped)<br />6: Single bales (super high density dumped)<br />7: 3 bale tripack (super high density dumped)<br />8: 2 bale tripack (super high density dumped)<br />9: U bales<br />A: 4 or 6 bale unitised (normal density dumped)<br />B: 4 or 6 bale unitised (high density dumped)<br />C: 4 or 6 bale unitised (super high density dumped)<br />D: Two Bale Module (2BM)<br />E: J9 size bale used for scoured wool<br />F: J12 size bale used for scoured wool<br />Z: Mixed (to be used with groups only, that is, record type 12)'
     PremiumTestDetails:
@@ -3104,11 +3105,11 @@ components:
     RecordTypesToBeExcludedForAuctionCatalogue:
       enum:
         - '21'
-        - '51C'
-        - '79B'
+        - 51C
+        - 79B
         - '84'
         - '31'
-        - '32A'
+        - 32A
       type: string
       description: '21: Lot Header<br />51C: Colour Details<br />79B: Interlot component bale header<br />84: Bale Identification<br />31: Fibre Diameter Histogram Header<br />32A: Fibre Diameter Histogram Details'
     ReissueChargeFlag:
@@ -3138,27 +3139,37 @@ components:
         saleIdentity:
           $ref: '#/components/schemas/SaleIdentity'
         organisationRequested:
+          maxLength: 5
+          minLength: 0
           type: string
           nullable: true
         saleDateRequested:
+          maxLength: 10
+          minLength: 0
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO 8601 standard. e.g. 2024-03-21
+          description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
           format: date
           nullable: true
         startDateTimeStatusRequest:
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/
+          maxLength: 20
+          minLength: 0
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
-          description: Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00
+          description: Date and Time value in ISO 8601 standard UTC datetime. e.g. 2024-03-21T19:25:04Z
           format: date-time
           nullable: true
         endDateTimeStatusRequest:
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/
+          maxLength: 20
+          minLength: 0
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
           description: Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00
           format: date-time
           nullable: true
         useNetworkDateTime:
+          maxLength: 5
+          minLength: 0
           type: boolean
           nullable: true
         requestType:
@@ -3166,12 +3177,15 @@ components:
         woolTypeGroup:
           $ref: '#/components/schemas/WoolTypeGroup'
         recordTypesToBeExcluded:
+          maxLength: 80
+          minLength: 0
           type: array
           items:
             $ref: '#/components/schemas/RecordTypesToBeExcludedForAuctionCatalogue'
           description: Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header.
           nullable: true
         season:
+          pattern: '-?\d{1,2}'
           type: integer
           format: int32
           nullable: true
@@ -3263,6 +3277,7 @@ components:
     SubjectiveInterlotDetails:
       required:
         - certificateIdentity
+        - hardHeadsBase
         - laboratory
         - reissueChargeFlag
         - retestFlag
@@ -3592,12 +3607,12 @@ components:
         saleType:
           $ref: '#/components/schemas/SaleType'
         electronicSaleFlag:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           nullable: true
         reservePriceDisplayFlag:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           description: '`true` = Available to Buyers, `false` = Not available to buyers.'
@@ -3622,9 +3637,9 @@ components:
         - '7'
         - '8'
         - '9'
-        - 'A'
-        - 'C'
-        - 'M'
+        - A
+        - C
+        - M
       type: string
       description: The state of the wool itemised in the invoice.<br />1. Greasy<br />2. Dead<br />3. Slipe<br />4. Scoured<br />5. Carbonised<br />6. Wool tops<br />7. Wool noils<br />8. Carded sliver<br />9. Other processed wool<br />A. Alpaca<br />C. Cashmere<br />M. Mohair
     WoolTypeGroup:
