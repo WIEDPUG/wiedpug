@@ -7,7 +7,7 @@ namespace Wiedpug.Domain.Entities
     public class LotHeaderExtension
     {
         /// <summary>
-        /// Date value in ISO 8601 standard. e.g. 2024-03-21.
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21.
         /// For records 31 and 55 this is the date core test was sampled or date combination/OML was requested. 
         /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
         /// </summary>

@@ -46,7 +46,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required decimal WoolBase { get; set; }
+        public required double WoolBase { get; set; }
 
         /// <summary>
         /// Enum for wool preparation category, optional.
