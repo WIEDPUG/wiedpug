@@ -12,25 +12,30 @@ namespace Wiedpug.Domain.Entities
     public class LengthAfterCardingTestDetails
     {
         [Required]
+        [StringLength(11)]
         public required string CertificateIdentity { get; set; }
 
         [Required]
+        [StringLength(1)]
         public required string Laboratory { get; set; }
 
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACBarbe { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
+        [RegularExpression(RegexPattern.DECIMAL_4_1)]
         public double? LACBarbeCV { get; set; }
 
-        public double? LACHauteur { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? LACHauteur { get; set; }
 
-        public double? LACHauteurCV { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? LACHauteurCV { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_ONE_DIGIT)]
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? LACCardWaste { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_6_2)]
         public required double Charge { get; set; }
     }
 }

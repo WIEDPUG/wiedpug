@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Property Identification Code - the property code to identify the source of the wool.
         /// This field is not used in New Zealand transmission.
+        /// For TRV only
         /// </summary>
+        /// 
+        [StringLength(8)]
         public List<string>? PropertyIdentificationCodes { get; set; }
     }
 }

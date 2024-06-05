@@ -56,7 +56,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = "M",
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = "M",
+                                    CentreStorage = Centre.AU_AR,
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -315,7 +315,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = "M",
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = "M",
+                                    CentreStorage = Centre.AU_AU,
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState._1,
                                     PackType = PackType._6,
@@ -563,7 +563,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SellingCentreType = "M",
                                     SaleNumber = 29
                                 },
-                                CentreStorage = "M",
+                                CentreStorage = Centre.AU_A,
                                 SaleDate = "2017-01-19",
                                 WoolState = WoolState.A,
                                 PackType = PackType.F,
@@ -884,7 +884,7 @@ namespace Wiedpug.API.ExampleResponses
                                             SellingCentreType = "M",
                                             SaleNumber = 29
                                         },
-                                        CentreStorage = "M",
+                                        CentreStorage = Centre.AU_AD,
                                         SaleDate = "2017-01-19",
                                         WoolState = WoolState._1,
                                         PackType = PackType._9,

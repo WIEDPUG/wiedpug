@@ -14,8 +14,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "200715",
-                    DateTransmissionFileCreated = "160117",
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = "ABCD",
                     CurrentTransmitter = "AWTM",

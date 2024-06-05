@@ -8,39 +8,45 @@ namespace Wiedpug.Domain.Entities
     public class AdjustmentNoteDetails
     {
         [Required]
+        [StringLength(5)]
         public required Client Client { get; set; }
 
         [Required]
+        [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
         public required int CreditNoteInvoiceNumber { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         public required string DateOfCreditNote { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_6_2)]
         public required double CreditNoteAmount { get; set; }
 
         [Required]
+        [StringLength(5)]
         public required bool IsGSTApplicable { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_6_2)]
         public required double GSTAmount { get; set; }
 
         [Required]
-        public required string ReasonCode { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        public required int ReasonCode { get; set; }
 
         [Required]
+        [StringLength(11)]
         public required string CertificateIdentityOriginal { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         public required string DateOfOriginalInvoice { get; set; }
 
         [Required]
+        [StringLength(11)]
         public required string NewCertificateIdentity { get; set; }
     }
 }

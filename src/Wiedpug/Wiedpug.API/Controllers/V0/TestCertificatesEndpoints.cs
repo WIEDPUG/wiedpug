@@ -51,7 +51,7 @@ public static class TestCertificatesEndpoints
         {
             Summary = "Retrieves the test certificates"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<TestCertificates>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

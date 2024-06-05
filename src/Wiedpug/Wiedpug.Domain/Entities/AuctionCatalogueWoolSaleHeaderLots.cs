@@ -23,8 +23,8 @@ namespace Wiedpug.Domain.Entities
         /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
-        [StringLength(2)]
-        public required string CentreStorage { get; set; }
+        [StringLength(5)]
+        public required Centre CentreStorage { get; set; }
 
         /// <summary>
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)

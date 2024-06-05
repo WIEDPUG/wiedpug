@@ -10,14 +10,18 @@ namespace Wiedpug.Domain.ValueObject
     public class BaleHeader
     {
         [Required]
+        [StringLength(30)]
         public required string Brand { get; set; }
 
         [Required]
+        [StringLength(15)]
         public required string BaleDescription { get; set; }
 
         [Required]
+        [StringLength(4)]
         public required string AreaOfOrigin { get; set; }
 
+        [StringLength(20)]
         public string? LocationWithinStore { get; set; }
     }
 }

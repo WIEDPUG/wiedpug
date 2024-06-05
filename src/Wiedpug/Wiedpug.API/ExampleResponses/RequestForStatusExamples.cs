@@ -24,7 +24,7 @@ namespace Wiedpug.API.ExampleResponses
                     FinalReceiver = "AWTM",
                     TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                     VersionNumber = 36,
-                    ABN = "00000000000"
+                    ABN = "72001967184"
                 },
                 Filters = new List<RequestForStatusFilter>
                 {
@@ -38,7 +38,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "2023-10-31",
-                        UserNetworkDateTime = false,
+                        UseNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
                         {
@@ -74,7 +74,7 @@ namespace Wiedpug.API.ExampleResponses
                         FinalReceiver = "AWTM",
                         TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
                         VersionNumber = 36,
-                        ABN = "00000000000"
+                        ABN = "72001967184"
                     },
                     Responses = new List<TransmissionResponse>
                     {

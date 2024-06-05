@@ -15,8 +15,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "200715",
-                    DateTransmissionFileCreated = "160117",
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = "ABCD",
                     CurrentTransmitter = "AWTM",
@@ -88,8 +88,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "170110",
-                                     DateIssued = "170110",
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },
@@ -207,8 +207,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "170110",
-                                     DateIssued = "170110",
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },
@@ -306,8 +306,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "200715",
-                        DateTransmissionFileCreated = "160117",
+                        DateFormatLastRevised = "2020-07-15",
+                        DateTransmissionFileCreated = "2016-01-17",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = "ABCD",
                         CurrentTransmitter = "AWTM",
@@ -380,8 +380,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "170110",
-                                     DateIssued = "170110",
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },
@@ -477,7 +477,7 @@ namespace Wiedpug.API.ExampleResponses
                             PositionOfBreakPercentageBase = 27,
                             LsCertType = LsCertType.LengthAndStrengthTested,
                             IsLsSampleSecured = false,
-                            DateIssued = "240122"
+                            DateIssued = "2024-01-22"
                         },
                         SublotCertificateNumbers = new List<string>
                         {
@@ -499,8 +499,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "170110",
-                                     DateIssued = "170110",
+                                     CoreTestSamplingDate = "2017-01-10",
+                                     DateIssued = "2017-01-10",
                                      FactorLaserscanNumerator = null,
                                      FactorLaserscanDenominator = null
                                 },

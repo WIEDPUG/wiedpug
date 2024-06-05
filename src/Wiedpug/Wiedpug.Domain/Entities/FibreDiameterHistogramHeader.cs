@@ -59,7 +59,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21. 
         /// </summary>
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [StringLength(10)]
         public string? CoreTestSamplingDate { get; set; } // FIELD NUMBER 16 - Core Test Sampling Date - Start: 38, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
 
@@ -68,7 +68,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [StringLength(10)]
         public required string DateIssued { get; set; } // FIELD NUMBER 17 - Date Issued - Start: 44, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
 

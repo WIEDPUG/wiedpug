@@ -68,7 +68,7 @@
                                                           "sellingCentreType": "M",
                                                           "saleNumber": 29
                                                       },
-                                                      "centreStorage": "M",
+                                                      "centreStorage": "AU_A",
                                                       "saleDate": "2017-01-19",
                                                       "woolState": "A",
                                                       "packType": "2",
@@ -306,7 +306,7 @@
                                                           "sellingCentreType": "M",
                                                           "saleNumber": 29
                                                       },
-                                                      "centreStorage": "M",
+                                                      "centreStorage": "AU_A",
                                                       "saleDate": "2017-01-19",
                                                       "woolState": "1",
                                                       "packType": "6",
@@ -650,7 +650,7 @@
                                                   "sellingCentreType": "M",
                                                   "saleNumber": 29
                                               },
-                                              "centreStorage": "M",
+                                              "centreStorage": "AU_A",
                                               "saleDate": "2017-01-19",
                                               "woolState": "A",
                                               "packType": "F",
@@ -1066,7 +1066,7 @@
                                                           "sellingCentreType": "M",
                                                           "saleNumber": 29
                                                       },
-                                                      "centreStorage": "M",
+                                                      "centreStorage": "AU_A",
                                                       "saleDate": "2017-01-19",
                                                       "woolState": "1",
                                                       "packType": "9",

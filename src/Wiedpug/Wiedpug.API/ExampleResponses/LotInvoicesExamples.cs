@@ -50,7 +50,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = "M",
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = "M",
+                                    CentreStorage = Centre.AU_AR,
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
@@ -76,7 +76,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StorageOrganisation = "ABCD",
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",
-                                    DiscountRate = 1.5,
+                                    DiscountRate = 1.51,
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
                                     StorageChargePerBalePerDay = 0.245,

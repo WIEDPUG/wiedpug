@@ -8,9 +8,11 @@ namespace Wiedpug.Domain.Entities
     public class LotInvoicesWoolSaleHeaderLots
     {
         [Required]
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public required int Season { get; set; }
 
         [Required]
+        [StringLength(4)]
         public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
@@ -18,27 +20,31 @@ namespace Wiedpug.Domain.Entities
         /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
-        public required string CentreStorage { get; set; }
+        [StringLength(5)]
+        public required Centre CentreStorage { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         public required string SaleDate { get; set; }
 
         [Required]
+        [StringLength(1)]
         public required WoolState WoolState { get; set; }
 
         [Required]
+        [StringLength(1)]
         public required PackType PackType { get; set; }
 
         /// <summary>
         /// The Code for the currency in which the sale was made. To obtain the current code list please use the Commonwealth Bank Currency Codes on their website
         /// </summary>
         [Required]
-        [MaxLength(3)]
+        [StringLength(3)]
         public required string Currency { get; set; }
 
         [Required]
+        [StringLength(1)]
         public required WeightUnit WeightUnit { get; set; }
 
         /// <summary>
@@ -47,10 +53,11 @@ namespace Wiedpug.Domain.Entities
         /// In Australia it will always include freight as the Freight Charge field is not used.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public required double PostSaleCharge { get; set; }
 
         [Required]
+        [StringLength(1)]
         public required CalculationBasis CalculationBasis { get; set; }
 
         /// <summary>
@@ -58,47 +65,65 @@ namespace Wiedpug.Domain.Entities
         /// If a freight charge is not included in the post Sale Charge, then the freight charge is the charge levied by the broker should the buyer request that the broker transport the wool to the nearest designated area (usually a shipping port). 
         /// Freight Charge is not used in Australia.
         /// </summary>
+        /// 
+        [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? FreightCharge { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? FreightRebate { get; set; }
 
         /// <summary>
         /// Any charge made for a lot which is not covered by the Post Sale Charge or the Freight charge per Bale fields.
         /// </summary>
+        /// 
+        [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? ChargePerLot { get; set; }
+
+        [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
         public string? InvoiceNumber { get; set; }
 
         /// <summary>
         /// The code for the broker who will raise the invoice for the wool
         /// </summary>
         [Required]
+        [StringLength(5)]
         public required string InvoicingOrganisation { get; set; }
 
         /// <summary>
         /// The broker that is responsible for releasing the wool out of the store
         /// </summary>
         [Required]
+        [StringLength(5)]
         public required string ReleasingOrganisation { get; set; }
 
         [Required]
+        [StringLength(5)]
         public required string SellingOrganisation { get; set; }
 
         [Required]
+        [StringLength(4)]
         public required WoolTypeGroup WoolTypeGroup { get; set; }
         
         [Required]
+        [StringLength(5)]
         public required Centre CentreCatalogue { get; set; }
 
         [Required]
+        [StringLength(1)]
         public required DeliveryBasis DeliveryBasis { get; set; }
 
         /// <summary>
         /// Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.
         /// </summary>
+        /// 
+        [StringLength(5)]
         public Centre? CentreDelivery { get; set; }
 
         /// <summary>
         /// This field is to be used when the PSC includes optional delivery to a second area.
         /// </summary>
+        /// 
+        [StringLength(5)]
         public Centre? AlternateDelivery { get; set; }
     }
 }

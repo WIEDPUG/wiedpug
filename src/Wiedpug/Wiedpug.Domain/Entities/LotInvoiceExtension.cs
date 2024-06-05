@@ -15,32 +15,32 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Optional decimal field for GST on the first cost with two digits precision.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_12_2)]
         public double? GSTFirstCost { get; set; }
 
         /// <summary>
         /// Optional decimal field for GST on total post sale charge with two digits precision.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_12_2)]
         public double? GSTTotalPostSaleCharge { get; set; }
 
         /// <summary>
         /// Required decimal field for total post sale charge with two digits precision.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_12_2)]
         public required double TotalPostSaleCharge { get; set; }
 
         /// <summary>
         /// Optional decimal field for total post sale charge rebate with two digits precision.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_12_2)]
         public double? TotalPostSaleChargeRebate { get; set; }
 
         /// <summary>
         /// Optional decimal field for GST on total post sale charge rebate with two digits precision.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
+        [RegularExpression(RegexPattern.DECIMAL_12_2)]
         public double? GSTTotalPostSaleChargeRebate { get; set; }
 
     }

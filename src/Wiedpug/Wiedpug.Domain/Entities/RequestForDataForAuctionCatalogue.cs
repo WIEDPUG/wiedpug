@@ -25,7 +25,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
         /// </summary>
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [StringLength(10)]
         public string? SaleDateRequested { get; set; }
 

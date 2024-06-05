@@ -25,6 +25,7 @@ namespace Wiedpug.Domain.Shared.Constants
         public const string NUMBER_3_DIGITS = @"-?\d{1,3}";
         public const string NUMBER_4_DIGITS = @"-?\d{1,4}";
         public const string NUMBER_5_DIGITS = @"-?\d{1,5}";
+        public const string NUMBER_8_DIGITS = @"-?\d{1,8}";
         public const string NUMBERS = @"^[0-9]+$";
         /// <summary>
         /// Total 4 digits, 2 digits after the decimal point
@@ -46,6 +47,8 @@ namespace Wiedpug.Domain.Shared.Constants
         /// Total 3 digits, 1 digits after the decimal point
         /// </summary>
         public const string DECIMAL_3_1 = @"^-?\d{1,2}\.\d{1}$";
+        public const string DECIMAL_3_2 = @"^-?\d{1,2}\.\d{2}$";
+        public const string DECIMAL_12_2 = @"^-?\d{1,12}\.\d{2}$";
         /// <summary>
         /// Total 16 digits, 6 digits after the decimal point
         /// </summary>
@@ -58,6 +61,7 @@ namespace Wiedpug.Domain.Shared.Constants
         /// Total 6 digits, 4 digits after the decimal point
         /// </summary>
         public const string DECIMAL_6_4 = @"^-?\d{1,2}\.\d{4}$";
+        public const string DECIMAL_6_1 = @"^-?\d{1,5}\.\d{1}$";
         /// <summary>
         /// Total 6 digits, 2 digits after the decimal point
         /// </summary>
