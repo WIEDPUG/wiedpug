@@ -40,12 +40,6 @@ namespace Wiedpug.API.ExampleResponses
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
-                        {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
-                            RecordTypesToBeExcludedForAuctionCatalogue._51C,
-                        },
                         Season = 23
                     }
                 }

@@ -111,15 +111,10 @@ namespace Wiedpug.API.ExampleResponses
                             Crutched = false,
                             Sex = Sex.R,
                             AgeFrom = 2,
-                            DeclaredQualifierCode1 = null,
-                            DeclaredQualifierCode2 = null,
-                            DeclaredQualifierScale = null,
                             CrutchedWithin3MonthsOfShearing = true,
-                            AgeTo = 5,
-                            DarkAndMedullatedFibreRiskBroker = null
+                            AgeTo = 5
 
-                        },
-                        Bales = null
+                        }
                     },
                     new TestRequestsVerificationDetail
                     {
@@ -199,15 +194,10 @@ namespace Wiedpug.API.ExampleResponses
                             WoolBase = 26.09,
                             Sex = Sex.E,
                             AgeFrom = 1,
-                            DeclaredQualifierCode1 = null,
-                            DeclaredQualifierCode2 = null,
-                            DeclaredQualifierScale = null,
                             CrutchedWithin3MonthsOfShearing = true,
-                            AgeTo = 4,
-                            DarkAndMedullatedFibreRiskBroker = null
+                            AgeTo = 4
 
-                        },
-                        Bales = null
+                        }
                     }
 
                 }

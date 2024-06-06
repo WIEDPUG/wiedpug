@@ -24,7 +24,6 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentReceiver = "AWXTS",
                     FinalReceiver = "AWXTS",
                     TransmissionType = TransmissionType.OrganisationDetails,
-                    SoftwareIdentifier = null,
                     ABN = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
@@ -36,31 +35,23 @@ namespace Wiedpug.API.ExampleResponses
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId= IndustryGroupId.T,
                         TransmitterFlag="Y",
-                        ABN = null,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
                             Number="0389004637"
-                            },
-                            Extension = null
+                            }
                         },
                         FaxNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
                             Number= "0320874405"
-                            }, Extension = null
+                            }
                         },
                         Addresses= new List<Address> {
                             new Address
                             {
-                                FirstName=null,
-                                LastName=null,
-                                OrganisationName=null,
-                                Premise=null,
                                 Street="28 GREAT SOUTH ROAD",
                                 Suburb="KENSINGTON",
-                                City=null,
-                                RegionOrState=null,
                                 PostCode="3031",
                                 Country="AU"
                             }
@@ -69,15 +60,12 @@ namespace Wiedpug.API.ExampleResponses
                             new Contact
                             {
                                 FirstName="HEAD OFFICE",
-                                LastName=null,
                                 PhoneNumber= new PhoneNumber {
                                     StandardPhoneNumber = new StandardPhoneNumber{
                                     CountryCode="61",
                                     Number="0310108809"
-                                    }, Extension = null
-                                },
-                                MobileNumber=null,
-                                Email=null
+                                    }
+                                }
                             } 
                         }
 
@@ -89,9 +77,6 @@ namespace Wiedpug.API.ExampleResponses
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId= IndustryGroupId.E,
                         TransmitterFlag= "N",
-                        ABN = null,
-                        PhoneNumber= null,
-                        FaxNumber= null,
                         Addresses= [],
                         Contacts= []
                     }
@@ -116,7 +101,6 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentReceiver = "AWXTS",
                     FinalReceiver = "AWXTS",
                     TransmissionType = TransmissionType.OrganisationDetails,
-                    SoftwareIdentifier = null,
                     ABN = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
@@ -129,31 +113,23 @@ namespace Wiedpug.API.ExampleResponses
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId=IndustryGroupId.T,
                         TransmitterFlag="Y",
-                        ABN = null,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
                             Number="0389004637"
-                            },
-                            Extension = null
+                            }
                         },
                         FaxNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
                             Number= "0320874405"
-                            }, Extension = null
+                            }
                         },
                         Addresses= new List<Address> {
                             new Address
                             {
-                                FirstName=null,
-                                LastName=null,
-                                OrganisationName=null,
-                                Premise=null,
                                 Street="28 GREAT SOUTH ROAD",
                                 Suburb="KENSINGTON",
-                                City=null,
-                                RegionOrState=null,
                                 PostCode="3031",
                                 Country="AU"
                             }
@@ -162,15 +138,12 @@ namespace Wiedpug.API.ExampleResponses
                             new Contact
                             {
                                 FirstName="HEAD OFFICE",
-                                LastName=null,
                                 PhoneNumber= new PhoneNumber {
                                     StandardPhoneNumber = new StandardPhoneNumber{
                                     CountryCode="61",
                                     Number="0310108809"
-                                    }, Extension = null
-                                },
-                                MobileNumber=null,
-                                Email=null
+                                    }
+                                }
                             }
                         }
 
@@ -196,7 +169,6 @@ namespace Wiedpug.API.ExampleResponses
                     CurrentReceiver = "AWXTS",
                     FinalReceiver = "AWXTS",
                     TransmissionType = TransmissionType.OrganisationDetails,
-                    SoftwareIdentifier = null,
                     ABN = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
@@ -208,30 +180,23 @@ namespace Wiedpug.API.ExampleResponses
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId= IndustryGroupId.E,
                         TransmitterFlag="Y",
-                        ABN = null,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
                             Number="0389004637"
-                            },Extension = null
+                            }
                         },
                         FaxNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
                             Number= "0320874405"
-                            },Extension = null
+                            }
                         },
                         Addresses= new List<Address> {
                             new Address
                             {
-                                FirstName=null,
-                                LastName=null,
-                                OrganisationName=null,
-                                Premise=null,
                                 Street="28 GREAT SOUTH ROAD",
                                 Suburb="KENSINGTON",
-                                City=null,
-                                RegionOrState=null,
                                 PostCode="3031",
                                 Country="AU"
                             }
@@ -240,15 +205,12 @@ namespace Wiedpug.API.ExampleResponses
                             new Contact
                             {
                                 FirstName="HEAD OFFICE",
-                                LastName=null,
                                 PhoneNumber= new PhoneNumber {
                                     StandardPhoneNumber = new StandardPhoneNumber{
                                     CountryCode="61",
                                     Number="0310108809"
-                                    },Extension=null
+                                    }
                                 },
-                                MobileNumber=null,
-                                Email=null
                             }
                         }
 

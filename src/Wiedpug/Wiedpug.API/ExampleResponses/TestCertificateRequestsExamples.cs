@@ -43,19 +43,12 @@ namespace Wiedpug.API.ExampleResponses
                             YieldType2 = YieldType.SchlumbergerCombedDry1PercentTFM,
                             CertificateReference = "XXY1255",
                             ClientsCrossReference = "XXY1255",
-                            DeclaredGross = null,
-                            DeclaredTare = null,
-                            SampleWeightRemoved = null,
                             Bales = 96,
                             Season = 21,
-                            SaleIdentity = null,
-                            LotIdentity = null,
-                            PrintFlag = null,
                             CombinationRequest = CombinationRequest.N,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
                             TEAM3HauteurPrint = false,
-                            CommitType = null,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -74,8 +67,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 }
                             }
-                        },
-                        BaleHeader = null
+                        }
                     },
                                         new TestCertificateRequest
                     {
@@ -86,19 +78,12 @@ namespace Wiedpug.API.ExampleResponses
                             YieldType2 = YieldType.UnitedStatesCustomClean,
                             CertificateReference = "XXY1205",
                             ClientsCrossReference = "XXZ1635",
-                            DeclaredGross = null,
-                            DeclaredTare = null,
-                            SampleWeightRemoved = null,
                             Bales = 96,
                             Season = 21,
-                            SaleIdentity = null,
-                            LotIdentity = null,
-                            PrintFlag = null,
                             CombinationRequest = CombinationRequest.C,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
                             TEAM3HauteurPrint = true,
-                            CommitType = null,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -117,8 +102,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 }
                             }
-                        },
-                        BaleHeader = null
+                        }
                     }
 
 

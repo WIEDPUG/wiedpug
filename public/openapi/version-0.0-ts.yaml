@@ -1,0 +1,433 @@
+openapi: 3.0.1
+info:
+  title: WIEDPUG API
+  description: API Documentation for the WIEDPUG Network
+  termsOfService: https://wiedpug.github.io/wiedpug
+  contact:
+    name: WIEDPUG Team
+    url: https://wiedpug.github.io/wiedpug
+    email: changethis@email.com
+  license:
+    name: Applicable License
+    url: https://wiedpug.github.io/wiedpug
+  version: v0.0
+paths:
+  /v0/test-status:
+    post:
+      tags:
+        - Test Status
+      summary: Test Status
+      description: Used by test houses to update test status
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestStatus'
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: '2020-07-15'
+                dateTransmissionFileCreated: '2016-01-17'
+                countryOfOrigin: AU
+                documentOriginator: ABCD
+                currentTransmitter: AWTM
+                currentReceiver: AWXLC
+                finalReceiver: AWXLC
+                transmissionType: 52
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 8
+                  version: 1082
+                  programName: NETR
+                abn: '72001967184'
+              testStatusDetails:
+                - certificateIDPrefix: FremantleLaboratory
+                  weightNote: '1111877'
+                  clientCode: '019944'
+                  chargeCode: '0511'
+                  lsSampleID: F885688
+                  coreSampleReceived: '240423'
+                  lsSampleReceived: '240424'
+                  trvMatched: '240424'
+                  coreSampleCheckTest: null
+                  lsRetuftRequired: 1
+                  lsRetuftReceived: null
+                  coreTestRecoreRequired: null
+                  coreTestRecoreReceived: null
+                - certificateIDPrefix: FremantleLaboratory
+                  weightNote: '1111832'
+                  clientCode: '019944'
+                  chargeCode: '0511'
+                  lsSampleID: F865734
+                  coreSampleReceived: '240423'
+                  lsSampleReceived: '240424'
+                  trvMatched: '240424'
+                  coreSampleCheckTest: null
+                  lsRetuftRequired: null
+                  lsRetuftReceived: null
+                  coreTestRecoreRequired: null
+                  coreTestRecoreReceived: null
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+              example:
+                isSuccessful: true
+                message: null
+                data: null
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ''
+                errors:
+                  TransmissionHeader.DateFormatLastRevised:
+                    - The field DateFormatLastRevised is required
+                    - The field DateFormatLastRevised must match regulart expression pattern...
+                  TransmissionHeader.CountryOfOrigin:
+                    - The field CountryOfOrigin is required
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
+                errors: null
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
+                errors: null
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/CustomProblemDetails'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
+                errors: null
+components:
+  schemas:
+    ApiResult:
+      required:
+        - isSuccessful
+      type: object
+      properties:
+        isSuccessful:
+          type: boolean
+          description: Indicator if the request has been successfully processed.
+        message:
+          type: string
+          description: Contains information about the response if applicable.
+          nullable: true
+        data:
+          description: Contains response data. e.g. Auction Catalogue
+          nullable: true
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
+    CertificateIDPrefix:
+      enum:
+        - SydneyLaboratory
+        - MelbourneLaboratory
+        - FremantleLaboratory
+      type: string
+      description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+    CoreTestRecoreRequired:
+      enum:
+        - 1
+        - 2
+        - 3
+      type: integer
+      description: '1: Core Test Recore is required – bales must be resampled to complete core test<br />2: Core Test Recore sample received in laboratory<br />3: Core Test Recore testing in progress'
+      format: int32
+    CountryCode:
+      enum:
+        - AU
+        - NZ
+        - FR
+        - ZA
+      type: string
+      description: 'A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa'
+    CustomProblemDetails:
+      required:
+        - status
+        - title
+      type: object
+      properties:
+        type:
+          type: string
+          description: "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
+          nullable: true
+        title:
+          minLength: 1
+          type: string
+          description: "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+        status:
+          type: integer
+          description: The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.
+          format: int32
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.
+          nullable: true
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+            nullable: true
+          description: 'Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { "name": ["Product name is required"], "category": ["Category name cannot be longer than 20 characters."]  }'
+          nullable: true
+      additionalProperties: false
+      description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
+    LsRetuftRequired:
+      enum:
+        - 1
+        - 2
+      type: integer
+      description: '1: Length & Strength Retuft is required<br />2: Length & Strength Retuft sample has been received in laboratory'
+      format: int32
+    SoftwareCompany:
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+      type: integer
+      description: '1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA'
+      format: int32
+    SoftwareIdentifier:
+      type: object
+      properties:
+        softwareCompany:
+          $ref: '#/components/schemas/SoftwareCompany'
+        version:
+          pattern: '-?\d{1,4}'
+          type: integer
+          description: Version no. e.g. 2400
+          format: int32
+          nullable: true
+        programName:
+          maxLength: 4
+          minLength: 0
+          type: string
+          nullable: true
+      additionalProperties: false
+    TestStatus:
+      required:
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        testStatusDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestStatusDetail'
+          nullable: true
+      additionalProperties: false
+    TestStatusDetail:
+      required:
+        - certificateIDPrefix
+        - chargeCode
+        - clientCode
+        - weightNote
+      type: object
+      properties:
+        certificateIDPrefix:
+          $ref: '#/components/schemas/CertificateIDPrefix'
+        weightNote:
+          maxLength: 8
+          minLength: 0
+          type: string
+          description: Required generic string field for weight note.
+        clientCode:
+          minLength: 1
+          pattern: '-?\d{1,6}'
+          type: string
+          description: Required numeric field for client code.
+        chargeCode:
+          minLength: 1
+          pattern: '-?\d{1,6}'
+          type: string
+          description: Required numeric field for charge code.
+        lsSampleID:
+          maxLength: 7
+          minLength: 0
+          type: string
+          description: Optional generic string field for L/S Sample ID.
+          nullable: true
+        coreSampleReceived:
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Optional date field for when the core sample was received.
+          format: date
+          nullable: true
+        lsSampleReceived:
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Optional date field for when the L/S sample was received.
+          format: date
+          nullable: true
+        trvMatched:
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Optional date field for when the TRV matched.
+          format: date
+          nullable: true
+        coreSampleCheckTest:
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Optional date field for core sample check test.
+          format: date
+          nullable: true
+        lsRetuftRequired:
+          $ref: '#/components/schemas/LsRetuftRequired'
+        lsRetuftReceived:
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Optional date field for when L/S retuft was received.
+          format: date
+          nullable: true
+        coreTestRecoreRequired:
+          $ref: '#/components/schemas/CoreTestRecoreRequired'
+        coreTestRecoreReceived:
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Optional date field for when the core test recore was received.
+          format: date
+          nullable: true
+      additionalProperties: false
+    TransmissionHeader:
+      required:
+        - abn
+        - countryOfOrigin
+        - currentReceiver
+        - currentTransmitter
+        - dateFormatLastRevised
+        - dateTransmissionFileCreated
+        - documentOriginator
+        - finalReceiver
+        - transmissionType
+      type: object
+      properties:
+        dateFormatLastRevised:
+          maxLength: 10
+          minLength: 0
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+          format: date
+        dateTransmissionFileCreated:
+          maxLength: 10
+          minLength: 0
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+          format: date
+        countryOfOrigin:
+          $ref: '#/components/schemas/CountryCode'
+        documentOriginator:
+          maxLength: 5
+          minLength: 0
+          type: string
+        currentTransmitter:
+          maxLength: 5
+          minLength: 0
+          type: string
+        currentReceiver:
+          maxLength: 5
+          minLength: 0
+          type: string
+        finalReceiver:
+          maxLength: 5
+          minLength: 0
+          type: string
+        transmissionType:
+          $ref: '#/components/schemas/TransmissionType'
+        versionNumber:
+          pattern: '-?\d{1,2}'
+          type: integer
+          description: Two digits. e.g. 99
+          format: int32
+          nullable: true
+        softwareIdentifier:
+          $ref: '#/components/schemas/SoftwareIdentifier'
+        abn:
+          maxLength: 11
+          minLength: 0
+          pattern: ^[0-9]+$
+          type: string
+          description: Australian Business Number, 11 digits string
+      additionalProperties: false
+    TransmissionType:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 11
+        - 13
+        - 16
+        - 17
+        - 50
+        - 52
+        - 55
+        - 56
+        - 60
+        - 64
+        - 98
+        - 99
+      type: integer
+      description: 'The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement'
+      format: int32
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: 'JWT Access Token that is added in the Authorization header of the HTTP request. Example: "Authorization: Bearer {token}". The JWT serves as a credential that proves the identity of the client to the server.'
+      name: Authorization
+      in: header
+    oauth2:
+      type: oauth2
+      description: Authentication for client applications by providing Client ID and Client Secret for an JWT Access Token.
+      flows:
+        clientCredentials:
+          tokenUrl: /auth-server/oauth/token
+          scopes: {}
+security:
+  - Bearer: []

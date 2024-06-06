@@ -50,7 +50,7 @@
                                 "testCertificateRequestCollection": [
                                     {
                                         "certificateRequest": {
-                                            "printRequirements": "OriginalCertificateCharge",
+                                            "printRequirements": 0,
                                             "yieldType1": 2,
                                             "yieldType2": 4,
                                             "certificateReference": "XXY1255",
@@ -90,7 +90,7 @@
                                     },
                                     {
                                         "certificateRequest": {
-                                            "printRequirements": "OriginalCertificateCharge",
+                                            "printRequirements": 0,
                                             "yieldType1": 1,
                                             "yieldType2": 13,
                                             "certificateReference": "XXY1205",
@@ -2735,26 +2735,31 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
-                        "minLength": 1,
+                        "maxLength": 5,
+                        "minLength": 0,
                         "type": "string"
                     },
                     "currentTransmitter": {
-                        "minLength": 1,
+                        "maxLength": 5,
+                        "minLength": 0,
                         "type": "string"
                     },
                     "currentReceiver": {
-                        "minLength": 1,
+                        "maxLength": 5,
+                        "minLength": 0,
                         "type": "string"
                     },
                     "finalReceiver": {
-                        "minLength": 1,
+                        "maxLength": 5,
+                        "minLength": 0,
                         "type": "string"
                     },
                     "softwareIdentifier": {
                         "$ref": "#/components/schemas/SoftwareIdentifier"
                     },
                     "abn": {
-                        "minLength": 1,
+                        "maxLength": 11,
+                        "minLength": 0,
                         "type": "string",
                         "description": "Australian Business Number"
                     }
@@ -3760,13 +3765,14 @@
             },
             "PrintRequirements": {
                 "enum": [
-                    "OriginalCertificateCharge",
-                    "ReissuedNoCharge",
-                    "ReissuedWithAdditionalCharge",
-                    "ReissuedWithReplacementCharge"
+                    0,
+                    1,
+                    2,
+                    3
                 ],
-                "type": "string",
-                "description": "0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)"
+                "type": "integer",
+                "description": "0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)",
+                "format": "int32"
             },
             "ReissueChargeFlag": {
                 "enum": [

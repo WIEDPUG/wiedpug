@@ -1,0 +1,3538 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "WIEDPUG API",
+        "description": "API Documentation for the WIEDPUG Network",
+        "termsOfService": "https://wiedpug.github.io/wiedpug",
+        "contact": {
+            "name": "WIEDPUG Team",
+            "url": "https://wiedpug.github.io/wiedpug",
+            "email": "changethis@email.com"
+        },
+        "license": {
+            "name": "Applicable License",
+            "url": "https://wiedpug.github.io/wiedpug"
+        },
+        "version": "v0.0"
+    },
+    "paths": {
+        "/v0/lot-invoices": {
+            "post": {
+                "tags": [
+                    "Lot Invoices"
+                ],
+                "summary": "Create or upload the lot invoices",
+                "operationId": "LotInvoices",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LotInvoices"
+                            },
+                            "example": {
+                                "lotInvoiceCollection": [
+                                    {
+                                        "transmissionHeader": {
+                                            "dateFormatLastRevised": "2020-07-15",
+                                            "dateTransmissionFileCreated": "2016-01-17",
+                                            "countryOfOrigin": "AU",
+                                            "documentOriginator": "ABCD",
+                                            "currentTransmitter": "AWTM",
+                                            "currentReceiver": "AWXLC",
+                                            "finalReceiver": "AWXLC",
+                                            "transmissionType": 50,
+                                            "versionNumber": 31,
+                                            "softwareIdentifier": {
+                                                "softwareCompany": 1,
+                                                "version": 1082,
+                                                "programName": "NETR"
+                                            },
+                                            "abn": "72001967184"
+                                        },
+                                        "finalRecieverList": null,
+                                        "woolSales": [
+                                            {
+                                                "woolSaleHeaderLots": {
+                                                    "season": 16,
+                                                    "saleIdentity": {
+                                                        "sellingCentreType": "M",
+                                                        "saleNumber": 29
+                                                    },
+                                                    "centreStorage": "AU_AR",
+                                                    "saleDate": "2017-01-19",
+                                                    "woolState": "C",
+                                                    "packType": "F",
+                                                    "currency": "AUD",
+                                                    "weightUnit": 0,
+                                                    "postSaleCharge": 25.96,
+                                                    "calculationBasis": "B",
+                                                    "freightCharge": 0,
+                                                    "freightRebate": 3.25,
+                                                    "chargePerLot": 0,
+                                                    "invoiceNumber": null,
+                                                    "invoicingOrganisation": "ABCD",
+                                                    "releasingOrganisation": "ABCD",
+                                                    "sellingOrganisation": "ABCD",
+                                                    "woolTypeGroup": "MFLC",
+                                                    "centreCatalogue": "AU_G",
+                                                    "deliveryBasis": "D",
+                                                    "centreDelivery": null,
+                                                    "alternateDelivery": null
+                                                },
+                                                "woolSaleHeaderExtension": {
+                                                    "storageOrganisation": "ABCD",
+                                                    "storageDescription": "45 MAIN ST",
+                                                    "paymentDueDate": "2017-01-27",
+                                                    "discountRate": 1.51,
+                                                    "maximumDaysDiscount": 0,
+                                                    "dateStorageChargeCommences": "2017-01-24",
+                                                    "storageChargePerBalePerDay": 0.245,
+                                                    "penaltyInterestRate": 11.35,
+                                                    "lotAvailableDate": null,
+                                                    "postSaleChargeRebate": null
+                                                },
+                                                "lotInvoiceDetails": [
+                                                    {
+                                                        "lotInvoiceHeader": {
+                                                            "lotIdentity": "39",
+                                                            "bales": 34,
+                                                            "gross": 23,
+                                                            "tare": 12,
+                                                            "regrabSampleWeight": null,
+                                                            "costPerWeightUnit": 25,
+                                                            "firstCost": 12.24,
+                                                            "cleanWeight": null,
+                                                            "yieldType": null,
+                                                            "clientsCrossReference": null,
+                                                            "woolDescription": null,
+                                                            "packMaterial": "K"
+                                                        },
+                                                        "lotInvoiceExtension": {
+                                                            "gstFirstCost": 141.11,
+                                                            "gstTotalPostSaleCharge": 51.8,
+                                                            "totalPostSaleCharge": 0,
+                                                            "totalPostSaleChargeRebate": null,
+                                                            "gstTotalPostSaleChargeRebate": null
+                                                        },
+                                                        "colourDetails": null,
+                                                        "premiumTestDetails": null,
+                                                        "subjectiveInterlotDetails": null,
+                                                        "combinationDetails": null,
+                                                        "lengthAndStrengthCombDetail": null,
+                                                        "lengthAndStrengthDetails": null,
+                                                        "omlDetails": null,
+                                                        "omiDetails": null,
+                                                        "coreTestDetails": null,
+                                                        "colourCombinationDetails": null,
+                                                        "guidanceReportDetails": null,
+                                                        "lotHeaderVendorDeclarations": [
+                                                            {
+                                                                "qualitySchemes": null,
+                                                                "mulesingStatus": "ND"
+                                                            }
+                                                        ],
+                                                        "fibreDiameterHistograms": null,
+                                                        "bales": [
+                                                            {
+                                                                "baleHeader": {
+                                                                    "brand": "FTT",
+                                                                    "baleDescription": "AAC",
+                                                                    "areaOfOrigin": "Melbourne",
+                                                                    "locationWithinStore": "AWTA LTD"
+                                                                },
+                                                                "baleDetails": [
+                                                                    {
+                                                                        "baleNumber": "116",
+                                                                        "baleDetailType": "GreasyOrProcessed",
+                                                                        "showBaleIndicator": null,
+                                                                        "baleRenumber": "181",
+                                                                        "unitNumber": null,
+                                                                        "gross": 181,
+                                                                        "tare": 2,
+                                                                        "baleIdentifications": null
+                                                                    },
+                                                                    {
+                                                                        "baleNumber": "117",
+                                                                        "baleDetailType": "GreasyOrProcessed",
+                                                                        "showBaleIndicator": null,
+                                                                        "baleRenumber": null,
+                                                                        "unitNumber": null,
+                                                                        "gross": 201,
+                                                                        "tare": 2,
+                                                                        "baleIdentifications": null
+                                                                    },
+                                                                    {
+                                                                        "baleNumber": "117",
+                                                                        "baleDetailType": "GreasyOrProcessed",
+                                                                        "showBaleIndicator": null,
+                                                                        "baleRenumber": null,
+                                                                        "unitNumber": null,
+                                                                        "gross": 201,
+                                                                        "tare": 2,
+                                                                        "baleIdentifications": null
+                                                                    },
+                                                                    {
+                                                                        "baleNumber": "126",
+                                                                        "baleDetailType": "GreasyOrProcessed",
+                                                                        "showBaleIndicator": null,
+                                                                        "baleRenumber": null,
+                                                                        "unitNumber": null,
+                                                                        "gross": 179,
+                                                                        "tare": 2,
+                                                                        "baleIdentifications": null
+                                                                    },
+                                                                    {
+                                                                        "baleNumber": "129",
+                                                                        "baleDetailType": "GreasyOrProcessed",
+                                                                        "showBaleIndicator": null,
+                                                                        "baleRenumber": null,
+                                                                        "unitNumber": null,
+                                                                        "gross": 167,
+                                                                        "tare": 2,
+                                                                        "baleIdentifications": null
+                                                                    }
+                                                                ],
+                                                                "propertyIdentificationCodes": null
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResult"
+                                },
+                                "example": {
+                                    "isSuccessful": true,
+                                    "message": null,
+                                    "data": null
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                                    "title": "One or more validation errors occurred",
+                                    "status": 400,
+                                    "detail": "",
+                                    "errors": {
+                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                            "The field DateFormatLastRevised is required",
+                                            "The field DateFormatLastRevised must match regulart expression pattern..."
+                                        ],
+                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                            "The field CountryOfOrigin is required"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                                    "title": "Unauthorized",
+                                    "status": 401,
+                                    "detail": "Missing authentication credentials",
+                                    "errors": null
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                                    "title": "You don't have permission to access this resource",
+                                    "status": 403,
+                                    "detail": "You don't have a 'read' access to access this resource",
+                                    "errors": null
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                                    "title": "An error occurred while processing your required",
+                                    "status": 500,
+                                    "detail": "Error details..",
+                                    "errors": null
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v0/lot-invoices/data": {
+            "post": {
+                "tags": [
+                    "Lot Invoices"
+                ],
+                "summary": "Retrieves the lot invoices",
+                "operationId": "GetLotInvoices",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GetTestCertificatesRequest"
+                            },
+                            "example": {
+                                "saleIdentity": {
+                                    "sellingCentreType": "F",
+                                    "saleNumber": 18
+                                },
+                                "organisationRequested": "AWNF",
+                                "saleDateRequested": "2023-10-31",
+                                "startDateTimeStatusRequest": null,
+                                "endDateTimeStatusRequest": null,
+                                "useNetworkDateTime": false,
+                                "requestType": "BroadcastDataRequest",
+                                "woolTypeGroup": "MFLC",
+                                "recordTypesToBeExcluded": null,
+                                "season": 23
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LotInvoicesApiResult"
+                                },
+                                "example": {
+                                    "isSuccessful": true,
+                                    "message": null,
+                                    "data": {
+                                        "lotInvoiceCollection": [
+                                            {
+                                                "transmissionHeader": {
+                                                    "dateFormatLastRevised": "2020-07-15",
+                                                    "dateTransmissionFileCreated": "2016-01-17",
+                                                    "countryOfOrigin": "AU",
+                                                    "documentOriginator": "ABCD",
+                                                    "currentTransmitter": "AWTM",
+                                                    "currentReceiver": "AWXLC",
+                                                    "finalReceiver": "AWXLC",
+                                                    "transmissionType": 50,
+                                                    "versionNumber": 31,
+                                                    "softwareIdentifier": {
+                                                        "softwareCompany": 1,
+                                                        "version": 1082,
+                                                        "programName": "NETR"
+                                                    },
+                                                    "abn": "72001967184"
+                                                },
+                                                "finalRecieverList": null,
+                                                "woolSales": [
+                                                    {
+                                                        "woolSaleHeaderLots": {
+                                                            "season": 16,
+                                                            "saleIdentity": {
+                                                                "sellingCentreType": "M",
+                                                                "saleNumber": 29
+                                                            },
+                                                            "centreStorage": "AU_AR",
+                                                            "saleDate": "2017-01-19",
+                                                            "woolState": "C",
+                                                            "packType": "F",
+                                                            "currency": "AUD",
+                                                            "weightUnit": 0,
+                                                            "postSaleCharge": 25.96,
+                                                            "calculationBasis": "B",
+                                                            "freightCharge": 0,
+                                                            "freightRebate": 3.25,
+                                                            "chargePerLot": 0,
+                                                            "invoiceNumber": null,
+                                                            "invoicingOrganisation": "ABCD",
+                                                            "releasingOrganisation": "ABCD",
+                                                            "sellingOrganisation": "ABCD",
+                                                            "woolTypeGroup": "MFLC",
+                                                            "centreCatalogue": "AU_G",
+                                                            "deliveryBasis": "D",
+                                                            "centreDelivery": null,
+                                                            "alternateDelivery": null
+                                                        },
+                                                        "woolSaleHeaderExtension": {
+                                                            "storageOrganisation": "ABCD",
+                                                            "storageDescription": "45 MAIN ST",
+                                                            "paymentDueDate": "2017-01-27",
+                                                            "discountRate": 1.51,
+                                                            "maximumDaysDiscount": 0,
+                                                            "dateStorageChargeCommences": "2017-01-24",
+                                                            "storageChargePerBalePerDay": 0.245,
+                                                            "penaltyInterestRate": 11.35,
+                                                            "lotAvailableDate": null,
+                                                            "postSaleChargeRebate": null
+                                                        },
+                                                        "lotInvoiceDetails": [
+                                                            {
+                                                                "lotInvoiceHeader": {
+                                                                    "lotIdentity": "39",
+                                                                    "bales": 34,
+                                                                    "gross": 23,
+                                                                    "tare": 12,
+                                                                    "regrabSampleWeight": null,
+                                                                    "costPerWeightUnit": 25,
+                                                                    "firstCost": 12.24,
+                                                                    "cleanWeight": null,
+                                                                    "yieldType": null,
+                                                                    "clientsCrossReference": null,
+                                                                    "woolDescription": null,
+                                                                    "packMaterial": "K"
+                                                                },
+                                                                "lotInvoiceExtension": {
+                                                                    "gstFirstCost": 141.11,
+                                                                    "gstTotalPostSaleCharge": 51.8,
+                                                                    "totalPostSaleCharge": 0,
+                                                                    "totalPostSaleChargeRebate": null,
+                                                                    "gstTotalPostSaleChargeRebate": null
+                                                                },
+                                                                "colourDetails": null,
+                                                                "premiumTestDetails": null,
+                                                                "subjectiveInterlotDetails": null,
+                                                                "combinationDetails": null,
+                                                                "lengthAndStrengthCombDetail": null,
+                                                                "lengthAndStrengthDetails": null,
+                                                                "omlDetails": null,
+                                                                "omiDetails": null,
+                                                                "coreTestDetails": null,
+                                                                "colourCombinationDetails": null,
+                                                                "guidanceReportDetails": null,
+                                                                "lotHeaderVendorDeclarations": [
+                                                                    {
+                                                                        "qualitySchemes": null,
+                                                                        "mulesingStatus": "ND"
+                                                                    }
+                                                                ],
+                                                                "fibreDiameterHistograms": null,
+                                                                "bales": [
+                                                                    {
+                                                                        "baleHeader": {
+                                                                            "brand": "FTT",
+                                                                            "baleDescription": "AAC",
+                                                                            "areaOfOrigin": "Melbourne",
+                                                                            "locationWithinStore": "AWTA LTD"
+                                                                        },
+                                                                        "baleDetails": [
+                                                                            {
+                                                                                "baleNumber": "116",
+                                                                                "baleDetailType": "GreasyOrProcessed",
+                                                                                "showBaleIndicator": null,
+                                                                                "baleRenumber": "181",
+                                                                                "unitNumber": null,
+                                                                                "gross": 181,
+                                                                                "tare": 2,
+                                                                                "baleIdentifications": null
+                                                                            },
+                                                                            {
+                                                                                "baleNumber": "117",
+                                                                                "baleDetailType": "GreasyOrProcessed",
+                                                                                "showBaleIndicator": null,
+                                                                                "baleRenumber": null,
+                                                                                "unitNumber": null,
+                                                                                "gross": 201,
+                                                                                "tare": 2,
+                                                                                "baleIdentifications": null
+                                                                            },
+                                                                            {
+                                                                                "baleNumber": "117",
+                                                                                "baleDetailType": "GreasyOrProcessed",
+                                                                                "showBaleIndicator": null,
+                                                                                "baleRenumber": null,
+                                                                                "unitNumber": null,
+                                                                                "gross": 201,
+                                                                                "tare": 2,
+                                                                                "baleIdentifications": null
+                                                                            },
+                                                                            {
+                                                                                "baleNumber": "126",
+                                                                                "baleDetailType": "GreasyOrProcessed",
+                                                                                "showBaleIndicator": null,
+                                                                                "baleRenumber": null,
+                                                                                "unitNumber": null,
+                                                                                "gross": 179,
+                                                                                "tare": 2,
+                                                                                "baleIdentifications": null
+                                                                            },
+                                                                            {
+                                                                                "baleNumber": "129",
+                                                                                "baleDetailType": "GreasyOrProcessed",
+                                                                                "showBaleIndicator": null,
+                                                                                "baleRenumber": null,
+                                                                                "unitNumber": null,
+                                                                                "gross": 167,
+                                                                                "tare": 2,
+                                                                                "baleIdentifications": null
+                                                                            }
+                                                                        ],
+                                                                        "propertyIdentificationCodes": null
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                                    "title": "One or more validation errors occurred",
+                                    "status": 400,
+                                    "detail": "",
+                                    "errors": {
+                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                            "The field DateFormatLastRevised is required",
+                                            "The field DateFormatLastRevised must match regulart expression pattern..."
+                                        ],
+                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                            "The field CountryOfOrigin is required"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                                    "title": "Unauthorized",
+                                    "status": 401,
+                                    "detail": "Missing authentication credentials",
+                                    "errors": null
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                                    "title": "You don't have permission to access this resource",
+                                    "status": 403,
+                                    "detail": "You don't have a 'read' access to access this resource",
+                                    "errors": null
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                                    "title": "Resource not found",
+                                    "status": 404,
+                                    "detail": null,
+                                    "errors": null
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                                    "title": "An error occurred while processing your required",
+                                    "status": 500,
+                                    "detail": "Error details..",
+                                    "errors": null
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ApiResult": {
+                "required": [
+                    "isSuccessful"
+                ],
+                "type": "object",
+                "properties": {
+                    "isSuccessful": {
+                        "type": "boolean",
+                        "description": "Indicator if the request has been successfully processed."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Contains information about the response if applicable.",
+                        "nullable": true
+                    },
+                    "data": {
+                        "description": "Contains response data. e.g. Auction Catalogue",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A standard API response object used for all successful API responses"
+            },
+            "Bale": {
+                "type": "object",
+                "properties": {
+                    "baleHeader": {
+                        "$ref": "#/components/schemas/BaleHeader"
+                    },
+                    "baleDetails": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/BaleDetail"
+                        },
+                        "nullable": true
+                    },
+                    "propertyIdentificationCodes": {
+                        "maxLength": 8,
+                        "minLength": 0,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Property Identification Code - the property code to identify the source of the wool.\r\nThis field is not used in New Zealand transmission.\r\nFor TRV only",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "BaleDetail": {
+                "required": [
+                    "baleDetailType",
+                    "baleNumber",
+                    "gross",
+                    "tare"
+                ],
+                "type": "object",
+                "properties": {
+                    "baleNumber": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "baleDetailType": {
+                        "$ref": "#/components/schemas/BaleDetailType"
+                    },
+                    "showBaleIndicator": {
+                        "maxLength": 1,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Property for Greasy/Processed bale detail, not necessary for other types of bale details.",
+                        "nullable": true
+                    },
+                    "baleRenumber": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Property for Renumber BaleDetail, not necessary for other types of bale details.",
+                        "nullable": true
+                    },
+                    "unitNumber": {
+                        "pattern": "-?\\d{1,5}",
+                        "type": "integer",
+                        "description": "Property for Tripacks BaleDetail, not necessary for other types of bale details.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "gross": {
+                        "pattern": "-?\\d{1,4}",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "tare": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "baleIdentifications": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/BaleIdentification"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "BaleDetailType": {
+                "enum": [
+                    "Renumbers",
+                    "GreasyOrProcessed",
+                    "Tripacks"
+                ],
+                "type": "string",
+                "description": "Renumbers: Bale Details - Renumbers<br />GreasyOrProcessed: Bale Details - GreasyOrProcessed<br />Tripacks: Bale Details - Tripacks"
+            },
+            "BaleHeader": {
+                "required": [
+                    "areaOfOrigin",
+                    "baleDescription",
+                    "brand"
+                ],
+                "type": "object",
+                "properties": {
+                    "brand": {
+                        "maxLength": 30,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "baleDescription": {
+                        "maxLength": 15,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "areaOfOrigin": {
+                        "maxLength": 4,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "locationWithinStore": {
+                        "maxLength": 20,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "BaleIdentification": {
+                "type": "object",
+                "properties": {
+                    "baleNumber": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "eBaleId": {
+                        "maxLength": 30,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CalculationBasis": {
+                "enum": [
+                    "B",
+                    "K",
+                    "P"
+                ],
+                "type": "string",
+                "description": "This is used to identify the method used to calculate the post sale charge. The post sale charge may be a per bale, per kilogram or percentage of the price of the wool. Calculation Basis is always per bale in Australia.<br />B: Post sale charge is levied per bale<br />K: The post sale charge is a charge per kil<br />P: The post sale charge is a % of first cost"
+            },
+            "CalibrationFlag": {
+                "enum": [
+                    "O",
+                    "N"
+                ],
+                "type": "string",
+                "description": "O: The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to reference wool, based on illuminant C and 2º observer angle. Old calibration has been deactivated as at 1st January 2001.<br />N: The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to certified tiles, based on illuminant D65 and 10º observer angle, and corrected for any glass effects"
+            },
+            "Centre": {
+                "enum": [
+                    "AU_A",
+                    "AU_AD",
+                    "AU_AR",
+                    "AU_AU",
+                    "AU_B",
+                    "AU_BA",
+                    "AU_BK",
+                    "AU_BL",
+                    "AU_BM",
+                    "AU_BO",
+                    "AU_BR",
+                    "AU_BT",
+                    "AU_C",
+                    "AU_CA",
+                    "AU_CB",
+                    "AU_CC",
+                    "AU_CL",
+                    "AU_CN",
+                    "AU_CO",
+                    "AU_CR",
+                    "AU_CU",
+                    "AU_CW",
+                    "AU_D",
+                    "AU_DE",
+                    "AU_DO",
+                    "AU_DR",
+                    "AU_E",
+                    "AU_ER",
+                    "AU_ES",
+                    "AU_F",
+                    "AU_G",
+                    "AU_GF",
+                    "AU_GI",
+                    "AU_GN",
+                    "AU_GR",
+                    "AU_GU",
+                    "AU_H",
+                    "AU_HA",
+                    "AU_HB",
+                    "AU_HM",
+                    "AU_HO",
+                    "AU_HY",
+                    "AU_I",
+                    "AU_J",
+                    "AU_JA",
+                    "AU_K",
+                    "AU_KE",
+                    "AU_KH",
+                    "AU_KI",
+                    "AU_KN",
+                    "AU_KT",
+                    "AU_KW",
+                    "AU_KY",
+                    "AU_L",
+                    "AU_LC",
+                    "AU_M",
+                    "AU_MA",
+                    "AU_MB",
+                    "AU_MC",
+                    "AU_ME",
+                    "AU_MG",
+                    "AU_MI",
+                    "AU_MO",
+                    "AU_MR",
+                    "AU_MU",
+                    "AU_N",
+                    "AU_NA",
+                    "AU_ND",
+                    "AU_NO",
+                    "AU_NR",
+                    "AU_OB",
+                    "AU_OR",
+                    "AU_P",
+                    "AU_PA",
+                    "AU_PL",
+                    "AU_Q",
+                    "AU_QU",
+                    "AU_R",
+                    "AU_S",
+                    "AU_SG",
+                    "AU_SH",
+                    "AU_SK",
+                    "AU_SW",
+                    "AU_SY",
+                    "AU_T",
+                    "AU_TE",
+                    "AU_U",
+                    "AU_UR",
+                    "AU_V",
+                    "AU_W",
+                    "AU_WA",
+                    "AU_WG",
+                    "AU_WL",
+                    "AU_WN",
+                    "AU_WR",
+                    "AU_WW",
+                    "AU_X",
+                    "AU_Y",
+                    "AU_YA",
+                    "AU_YM",
+                    "AU_YO",
+                    "AU_Z",
+                    "OS_ZA",
+                    "OS_ZB",
+                    "OS_ZC",
+                    "OS_ZD",
+                    "OS_ZE",
+                    "OS_ZF",
+                    "OS_ZG",
+                    "OS_ZH",
+                    "OS_ZI",
+                    "OS_ZJ",
+                    "OS_ZK",
+                    "OS_ZL",
+                    "OS_ZM",
+                    "OS_ZN",
+                    "OS_ZO",
+                    "OS_ZP",
+                    "OS_ZQ",
+                    "OS_ZR",
+                    "OS_ZS",
+                    "OS_ZT",
+                    "OS_ZU",
+                    "OS_ZV",
+                    "OS_ZW",
+                    "OS_ZX",
+                    "OS_ZY",
+                    "OS_ZZ",
+                    "NZ_A",
+                    "NZ_AW",
+                    "NZ_B",
+                    "NZ_BL",
+                    "NZ_BT",
+                    "NZ_C",
+                    "NZ_CV",
+                    "NZ_D",
+                    "NZ_F",
+                    "NZ_FA",
+                    "NZ_G",
+                    "NZ_GD",
+                    "NZ_GO",
+                    "NZ_HA",
+                    "NZ_HS",
+                    "NZ_I",
+                    "NZ_J",
+                    "NZ_K",
+                    "NZ_KA",
+                    "NZ_KP",
+                    "NZ_L",
+                    "NZ_LO",
+                    "NZ_LU",
+                    "NZ_M",
+                    "NZ_MA",
+                    "NZ_MK",
+                    "NZ_MT",
+                    "NZ_MU",
+                    "NZ_N",
+                    "NZ_NE",
+                    "NZ_O",
+                    "NZ_OH",
+                    "NZ_OI",
+                    "NZ_OM",
+                    "NZ_OT",
+                    "NZ_P",
+                    "NZ_PT",
+                    "NZ_PU",
+                    "NZ_R",
+                    "NZ_RG",
+                    "NZ_RI",
+                    "NZ_S",
+                    "NZ_SA",
+                    "NZ_SH",
+                    "NZ_SY",
+                    "NZ_T",
+                    "NZ_TA",
+                    "NZ_TE",
+                    "NZ_TH",
+                    "NZ_TP",
+                    "NZ_U",
+                    "NZ_V",
+                    "NZ_W",
+                    "NZ_WH",
+                    "NZ_WI",
+                    "NZ_WR",
+                    "NZ_WT",
+                    "NZ_WU",
+                    "NZ_X",
+                    "NZ_Y",
+                    "NZ_YP",
+                    "NZ_Z"
+                ],
+                "type": "string",
+                "description": ""
+            },
+            "ColourCombinationDetails": {
+                "required": [
+                    "calibrationFlag",
+                    "certificateIdentity",
+                    "dateIssued",
+                    "laboratory",
+                    "reissueChargeFlag"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "colourX": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourXMinimum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourXMaximum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourY": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourYMinimum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourYMaximum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourZ": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourZMimimum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourZMaximum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourYZ": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourYZMinimum": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourYZMaximum": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "dateIssued": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
+                        "format": "date"
+                    },
+                    "calibrationFlag": {
+                        "$ref": "#/components/schemas/CalibrationFlag"
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ColourDetails": {
+                "required": [
+                    "calibrationFlag",
+                    "certificateIdentity",
+                    "colourX",
+                    "colourY",
+                    "colourZ",
+                    "dateIssued",
+                    "laboratory",
+                    "reissueChargeFlag"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit check number.It is printed at the top of the certificate."
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "colourX": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "colourY": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "colourZ": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "colourYZ": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "coreBulkValue": {
+                        "maxLength": 2,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "colourXAsIs": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourYAsIs": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourZAsIs": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "colourYZAsIs": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "calibrationFlag": {
+                        "$ref": "#/components/schemas/CalibrationFlag"
+                    },
+                    "dateIssued": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
+                        "format": "date"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CombinationDetails": {
+                "required": [
+                    "cleanWeight1",
+                    "combinationFlag"
+                ],
+                "type": "object",
+                "properties": {
+                    "cleanWeight1": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32"
+                    },
+                    "cleanWeight2": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "cleanWeight3": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "cleanWeight4": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "cleanWeight5": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "vmbMinimum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "VMB - Minimum value.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vmbMaximum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "VMB - Maximum value.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "factorWoolBase": {
+                        "pattern": "^-?\\d{1,8}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Factor for Wool Base.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "factorVMB": {
+                        "pattern": "^-?\\d{1,7}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Factor for VMB.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "factorHardHeadsBase": {
+                        "pattern": "^-?\\d{1,7}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Factor for Hard Heads Base.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "factorAirflowMean": {
+                        "pattern": "^-?\\d{1,6}\\.\\d{6}$",
+                        "type": "number",
+                        "description": "Factor for Airflow Mean. Factor used in combination calculation.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "combinationFlag": {
+                        "$ref": "#/components/schemas/CombinationFlag"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CombinationFlag": {
+                "enum": [
+                    "N",
+                    "S",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E",
+                    "F"
+                ],
+                "type": "string",
+                "description": "This field indicates the following: If an Australian Securities Exchange combination was requested and the combination satisfies the contract parameters of ASX the appropriate flag will be transmitted.<br />N. Normal Combination<br />S. ASX24 Combination (formerly SFE)<br />4. ASX19.5 54W Combination<br />5. ASX21.0 55W Combination<br />6. ASX22.6 56W Combination<br />7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W Combination<br />8. ASX19.5 54W and ASX21.0 55W Combination<br />9: ASX21.0 55W and ASX22.6 56W Combination<br />A. ICAP Wool Contract - China Type 54P<br />B. ICAP Wool Contract - China Type 54<br />C. ICAP Wool Contract - China Type 55<br />D. ICAP Wool Contract - China Type 56<br />E. ICAP Wool Contract - China Type 424<br />F. ICAP Wool Contract - China Type Standard"
+            },
+            "CoreTestDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "hardHeadsBase",
+                    "laboratory",
+                    "reissueChargeFlag",
+                    "retestFlag",
+                    "vmb",
+                    "woolBase",
+                    "yield1"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "woolBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "airflowMean": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vmb": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "hardHeadsBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield1": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield2": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield3": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield4": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yieldType1": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "yieldType2": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "retestFlag": {
+                        "$ref": "#/components/schemas/RetestFlag"
+                    },
+                    "yield5": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "vm1": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm2": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm3": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "darkAndMedullatedFibreRisk": {
+                        "$ref": "#/components/schemas/DarkAndMedullatedFibreRisk"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CountryCode": {
+                "enum": [
+                    "AU",
+                    "NZ",
+                    "FR",
+                    "ZA"
+                ],
+                "type": "string",
+                "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa"
+            },
+            "CustomProblemDetails": {
+                "required": [
+                    "status",
+                    "title"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "nullable": true
+                    },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+                        "format": "int32"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.",
+                        "nullable": true
+                    },
+                    "errors": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "nullable": true
+                        },
+                        "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+            },
+            "DarkAndMedullatedFibreRisk": {
+                "enum": [
+                    "E",
+                    "N",
+                    "D",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "type": "string",
+                "description": "E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6"
+            },
+            "DeliveryBasis": {
+                "enum": [
+                    "D",
+                    "L"
+                ],
+                "type": "string",
+                "description": "D: Delivery Nominated Destination<br />L: Loaded on Transport"
+            },
+            "FibreDiameterHistogram": {
+                "type": "object",
+                "properties": {
+                    "fibreDiameterHistogramHeader": {
+                        "$ref": "#/components/schemas/FibreDiameterHistogramHeader"
+                    },
+                    "fibreDiameterHistogramDetails": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FibreDiameterHistogramDetail"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "FibreDiameterHistogramDetail": {
+                "required": [
+                    "fibreMeasurements"
+                ],
+                "type": "object",
+                "properties": {
+                    "fibreMeasurements": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FibreDiameterHistogramDetailMeasurement"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "FibreDiameterHistogramDetailMeasurement": {
+                "required": [
+                    "fibreDiameter",
+                    "fibresMeasuredPercentage"
+                ],
+                "type": "object",
+                "properties": {
+                    "fibreDiameter": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Fibre Diameter for the measurement.",
+                        "format": "int32"
+                    },
+                    "fibresMeasuredPercentage": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{4}$",
+                        "type": "number",
+                        "description": "Percentage of fibres measured for the measurement.",
+                        "format": "double"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "FibreDiameterHistogramHeader": {
+                "required": [
+                    "coefficientOfVariation",
+                    "comfortFactorPercentage",
+                    "dateIssued",
+                    "instrument",
+                    "mean",
+                    "numberOfSpecimens",
+                    "reportingFlag",
+                    "standardDeviation",
+                    "subSamplingMethod"
+                ],
+                "type": "object",
+                "properties": {
+                    "coefficientOfVariation": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "comfortFactorPercentage": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "Percentage of Fibres 30 Microns and under.",
+                        "format": "double"
+                    },
+                    "fibresMeasured": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "reportingFlag": {
+                        "$ref": "#/components/schemas/ReportingFlag"
+                    },
+                    "instrument": {
+                        "$ref": "#/components/schemas/Instrument"
+                    },
+                    "subSamplingMethod": {
+                        "$ref": "#/components/schemas/SubSamplingMethod"
+                    },
+                    "numberOfSpecimens": {
+                        "pattern": "-?\\d{1,4}",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "mean": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "standardDeviation": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "curvatureMeanDegPerMm": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "meanMinimum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "meanMaximum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "coreTestSamplingDate": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "For records 31 and 55 this is the date core test was sampled or date combination/OML was requested.\r\nFor the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.        \r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21.",
+                        "format": "date",
+                        "nullable": true
+                    },
+                    "dateIssued": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO 8601 standard UTC format. e.g. 2024-03-21.",
+                        "format": "date"
+                    },
+                    "factorLaserscanNumerator": {
+                        "pattern": "^-?\\d{1,15}\\.\\d{6}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "factorLaserscanDenominator": {
+                        "pattern": "^-?\\d{1,14}\\.\\d{6}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GetTestCertificatesRequest": {
+                "required": [
+                    "abn",
+                    "countryOfOrigin",
+                    "currentReceiver",
+                    "currentTransmitter",
+                    "documentOriginator",
+                    "finalReceiver"
+                ],
+                "type": "object",
+                "properties": {
+                    "countryOfOrigin": {
+                        "$ref": "#/components/schemas/CountryCode"
+                    },
+                    "documentOriginator": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "currentTransmitter": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "currentReceiver": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "finalReceiver": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "softwareIdentifier": {
+                        "$ref": "#/components/schemas/SoftwareIdentifier"
+                    },
+                    "abn": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Australian Business Number"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GuidanceReportDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "charge",
+                    "laboratory",
+                    "reissueChargeFlag",
+                    "retestFlag",
+                    "yield1"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "laboratory": {
+                        "maxLength": 1,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "woolBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "airflowMean": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vmb": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "hardHeadsBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield1": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield2": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield3": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield4": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yieldType1": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "yieldType2": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "retestFlag": {
+                        "$ref": "#/components/schemas/RetestFlag"
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "vM1": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vM2": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vM3": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "Instrument": {
+                "enum": [
+                    1,
+                    2
+                ],
+                "type": "integer",
+                "description": "1: Laserscan<br />2: OFDA",
+                "format": "int32"
+            },
+            "Laboratory": {
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "type": "integer",
+                "description": "The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority",
+                "format": "int32"
+            },
+            "LengthAndStrengthCombDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "dateIssued",
+                    "isLsSampleSecured",
+                    "laboratory",
+                    "lsCertType",
+                    "positionOfBreakPercentageBase",
+                    "positionOfBreakPercentageMiddle",
+                    "positionOfBreakPercentageTip",
+                    "stapleLength",
+                    "stapleLengthCvPercentage",
+                    "stapleLengthMaximum",
+                    "stapleLengthMinimum",
+                    "stapleStrength",
+                    "stapleStrengthMaximum",
+                    "stapleStrengthMinimum"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "stapleLength": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.",
+                        "format": "int32"
+                    },
+                    "stapleLengthCvPercentage": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Staple length coefficient of variation. This is a measurement of the staple length variability and is reported as a percentage.",
+                        "format": "int32"
+                    },
+                    "stapleStrength": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex",
+                        "format": "int32"
+                    },
+                    "stapleLengthMinimum": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. \r\nMinimum - the lowest value in a range of staple length values.",
+                        "format": "int32"
+                    },
+                    "stapleLengthMaximum": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. \r\nMaximum - the highest value in a range of staple length values.",
+                        "format": "int32"
+                    },
+                    "stapleStrengthMinimum": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex\r\nMinimum - The lowest value in a range of staple strength values",
+                        "format": "int32"
+                    },
+                    "stapleStrengthMaximum": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex\r\nMaximum - The highest value in a range of staple strength value",
+                        "format": "int32"
+                    },
+                    "positionOfBreakPercentageTip": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The position of break indicates the location of the weakest part of the staple.\r\nTip - Percentage of wool staple with a tip section position of break.",
+                        "format": "int32"
+                    },
+                    "positionOfBreakPercentageMiddle": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The position of break indicates the location of the weakest part of the staple. \r\nMiddle - Percentage of wool staples with a middle section position of break.",
+                        "format": "int32"
+                    },
+                    "positionOfBreakPercentageBase": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The position of break indicates the location of the weakest part of the staple. \r\nBase - Percentage of wool staples with a base section position of break.",
+                        "format": "int32"
+                    },
+                    "team3Hauteur": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "lsCertType": {
+                        "$ref": "#/components/schemas/LsCertType"
+                    },
+                    "isLsSampleSecured": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "boolean",
+                        "description": "Specifies whether the L/S sample is secured or not. <br />\r\n`true` for a secured L/S sample <br />\r\n`false` for a unsecured L/S sample <br />"
+                    },
+                    "expectedBarbe": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "Expected Barbe length in the Top. Used for NZ Crossbred wool certificates based on the 2016 calculation. \r\nAny Length and Strength certificate for NZ Crossbred wool will include a calculated Barbe value based on the 2016 calculation.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "team3HauteurCvPercentage": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "Coefficient of Variation of Hauteur. NOTE: Refer to note in `Team3Hauteur`.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "team3RomainePercentage": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "Romaine. NOTE: Refer to note in `Team3Hauteur`.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "dateIssued": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
+                        "format": "date"
+                    },
+                    "stapleStrengthLowest25Percent": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Average Staple Strength of the lowest 25% of staples measured for Strength.",
+                        "format": "int32",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LengthAndStrengthDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "dateIssued",
+                    "isLsSampleSecured",
+                    "laboratory",
+                    "lsCertType",
+                    "positionOfBreakPercentageBase",
+                    "positionOfBreakPercentageMiddle",
+                    "positionOfBreakPercentageTip",
+                    "stapleLength",
+                    "stapleLengthCvPercentage",
+                    "stapleStrength"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "stapleLength": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.",
+                        "format": "int32"
+                    },
+                    "stapleLengthCvPercentage": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Staple length coefficient of variation. This is a measurement of the staple length variability and is reported as a percentage.",
+                        "format": "int32"
+                    },
+                    "stapleStrength": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex",
+                        "format": "int32"
+                    },
+                    "positionOfBreakPercentageTip": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The position of break indicates the location of the weakest part of the staple.\r\nTip - Percentage of wool staple with a tip section position of break.",
+                        "format": "int32"
+                    },
+                    "positionOfBreakPercentageMiddle": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The position of break indicates the location of the weakest part of the staple. \r\nMiddle - Percentage of wool staples with a middle section position of break.",
+                        "format": "int32"
+                    },
+                    "positionOfBreakPercentageBase": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "The position of break indicates the location of the weakest part of the staple. \r\nBase - Percentage of wool staples with a base section position of break.",
+                        "format": "int32"
+                    },
+                    "team3Hauteur": {
+                        "maximum": 99,
+                        "minimum": 0,
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "lsCertType": {
+                        "$ref": "#/components/schemas/LsCertType"
+                    },
+                    "isLsSampleSecured": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "boolean",
+                        "description": "Specifies whether the L/S sample is secured or not. <br />\r\ntrue: for a secured L/S sample <br />\r\nflase: for a unsecured L/S sample <br />"
+                    },
+                    "expectedBarbe": {
+                        "pattern": "-?\\d{1,3}",
+                        "type": "integer",
+                        "description": "Expected Barbe length in the Top. Used for NZ Crossbred wool certificates based on the 2016 calculation. \r\nAny Length and Strength certificate for NZ Crossbred wool will include a calculated Barbe value based on the 2016 calculation.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "team3HauteurCvPercentage": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "Coefficient of Variation of Hauteur. NOTE: Refer to note in `Team3Hauteur`.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "team3RomainePercentage": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "Romaine. NOTE: Refer to note in `Team3Hauteur`.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "dateIssued": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date in ISO 8601 standard UTC date format. e.g. 2024-03-21",
+                        "format": "date"
+                    },
+                    "stapleStrengthLowest25Percent": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Average Staple Strength of the lowest 25% of staples measured for Strength.",
+                        "format": "int32",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LotHeaderVendorDeclaration": {
+                "type": "object",
+                "properties": {
+                    "qualitySchemes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/QualitySchemeDetail"
+                        },
+                        "nullable": true
+                    },
+                    "mulesingStatus": {
+                        "$ref": "#/components/schemas/MulesingStatus"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LotInvoice": {
+                "required": [
+                    "transmissionHeader",
+                    "woolSales"
+                ],
+                "type": "object",
+                "properties": {
+                    "transmissionHeader": {
+                        "$ref": "#/components/schemas/TransmissionHeader"
+                    },
+                    "finalRecieverList": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "woolSales": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/WoolSale"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LotInvoiceDetail": {
+                "required": [
+                    "bales",
+                    "lotHeaderVendorDeclarations",
+                    "lotInvoiceExtension",
+                    "lotInvoiceHeader"
+                ],
+                "type": "object",
+                "properties": {
+                    "lotInvoiceHeader": {
+                        "$ref": "#/components/schemas/LotInvoiceHeader"
+                    },
+                    "lotInvoiceExtension": {
+                        "$ref": "#/components/schemas/LotInvoiceExtension"
+                    },
+                    "colourDetails": {
+                        "$ref": "#/components/schemas/ColourDetails"
+                    },
+                    "premiumTestDetails": {
+                        "$ref": "#/components/schemas/PremiumTestDetails"
+                    },
+                    "subjectiveInterlotDetails": {
+                        "$ref": "#/components/schemas/SubjectiveInterlotDetails"
+                    },
+                    "combinationDetails": {
+                        "$ref": "#/components/schemas/CombinationDetails"
+                    },
+                    "lengthAndStrengthCombDetail": {
+                        "$ref": "#/components/schemas/LengthAndStrengthCombDetails"
+                    },
+                    "lengthAndStrengthDetails": {
+                        "$ref": "#/components/schemas/LengthAndStrengthDetails"
+                    },
+                    "omlDetails": {
+                        "$ref": "#/components/schemas/OMLDetails"
+                    },
+                    "omiDetails": {
+                        "$ref": "#/components/schemas/OMIDetails"
+                    },
+                    "coreTestDetails": {
+                        "$ref": "#/components/schemas/CoreTestDetails"
+                    },
+                    "colourCombinationDetails": {
+                        "$ref": "#/components/schemas/ColourCombinationDetails"
+                    },
+                    "guidanceReportDetails": {
+                        "$ref": "#/components/schemas/GuidanceReportDetails"
+                    },
+                    "lotHeaderVendorDeclarations": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LotHeaderVendorDeclaration"
+                        }
+                    },
+                    "fibreDiameterHistograms": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FibreDiameterHistogram"
+                        },
+                        "nullable": true
+                    },
+                    "bales": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Bale"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LotInvoiceExtension": {
+                "required": [
+                    "totalPostSaleCharge"
+                ],
+                "type": "object",
+                "properties": {
+                    "gstFirstCost": {
+                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Optional decimal field for GST on the first cost with two digits precision.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "gstTotalPostSaleCharge": {
+                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Optional decimal field for GST on total post sale charge with two digits precision.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "totalPostSaleCharge": {
+                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Required decimal field for total post sale charge with two digits precision.",
+                        "format": "double"
+                    },
+                    "totalPostSaleChargeRebate": {
+                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Optional decimal field for total post sale charge rebate with two digits precision.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "gstTotalPostSaleChargeRebate": {
+                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Optional decimal field for GST on total post sale charge rebate with two digits precision.",
+                        "format": "double",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LotInvoiceHeader": {
+                "required": [
+                    "bales",
+                    "costPerWeightUnit",
+                    "firstCost",
+                    "gross",
+                    "lotIdentity",
+                    "packMaterial",
+                    "tare"
+                ],
+                "type": "object",
+                "properties": {
+                    "lotIdentity": {
+                        "maxLength": 6,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Required alphanumeric field for lot identity."
+                    },
+                    "bales": {
+                        "pattern": "-?\\d{1,4}",
+                        "type": "integer",
+                        "description": "Required numeric field for the number of bales.",
+                        "format": "int32"
+                    },
+                    "gross": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Required numeric field for gross weight.",
+                        "format": "int32"
+                    },
+                    "tare": {
+                        "pattern": "-?\\d{1,4}",
+                        "type": "integer",
+                        "description": "Required numeric field for tare weight.",
+                        "format": "int32"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Optional numeric field for regrab sample weight.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "costPerWeightUnit": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Required numeric field for cost per weight unit.",
+                        "format": "int32"
+                    },
+                    "firstCost": {
+                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Required decimal field for first cost with two digits precision.",
+                        "format": "double"
+                    },
+                    "cleanWeight": {
+                        "pattern": "-?\\d{1,5}",
+                        "type": "integer",
+                        "description": "Optional numeric field for clean weight.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "yieldType": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "clientsCrossReference": {
+                        "maxLength": 8,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Optional alphanumeric field for client's cross reference.",
+                        "nullable": true
+                    },
+                    "woolDescription": {
+                        "maxLength": 20,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Optional alphanumeric field for wool description.",
+                        "nullable": true
+                    },
+                    "packMaterial": {
+                        "$ref": "#/components/schemas/PackMaterial"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LotInvoices": {
+                "required": [
+                    "lotInvoiceCollection"
+                ],
+                "type": "object",
+                "properties": {
+                    "lotInvoiceCollection": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LotInvoice"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LotInvoicesApiResult": {
+                "required": [
+                    "isSuccessful"
+                ],
+                "type": "object",
+                "properties": {
+                    "isSuccessful": {
+                        "type": "boolean",
+                        "description": "Indicator if the request has been successfully processed."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Contains information about the response if applicable.",
+                        "nullable": true
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/LotInvoices"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A standard API response object used for all successful API responses"
+            },
+            "LotInvoicesWoolSaleHeaderLots": {
+                "required": [
+                    "calculationBasis",
+                    "centreCatalogue",
+                    "centreStorage",
+                    "currency",
+                    "deliveryBasis",
+                    "invoicingOrganisation",
+                    "packType",
+                    "postSaleCharge",
+                    "releasingOrganisation",
+                    "saleDate",
+                    "saleIdentity",
+                    "season",
+                    "sellingOrganisation",
+                    "weightUnit",
+                    "woolState",
+                    "woolTypeGroup"
+                ],
+                "type": "object",
+                "properties": {
+                    "season": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "saleIdentity": {
+                        "$ref": "#/components/schemas/SaleIdentity"
+                    },
+                    "centreStorage": {
+                        "$ref": "#/components/schemas/Centre"
+                    },
+                    "saleDate": {
+                        "minLength": 1,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "woolState": {
+                        "$ref": "#/components/schemas/WoolState"
+                    },
+                    "packType": {
+                        "$ref": "#/components/schemas/PackType"
+                    },
+                    "currency": {
+                        "maxLength": 3,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "The Code for the currency in which the sale was made. To obtain the current code list please use the Commonwealth Bank Currency Codes on their website"
+                    },
+                    "weightUnit": {
+                        "$ref": "#/components/schemas/WeightUnit"
+                    },
+                    "postSaleCharge": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "This is the published rate for the charge levied by the broker to the buyer for each bale purchased and is included in the last cost of the wool.\r\nIt will not include freight if freight is listed separately in the Freight Charge field, if freight is not listed in the Freight Charge field it will include freight. \r\nIn Australia it will always include freight as the Freight Charge field is not used.",
+                        "format": "double"
+                    },
+                    "calculationBasis": {
+                        "$ref": "#/components/schemas/CalculationBasis"
+                    },
+                    "freightCharge": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "If specified, this is not part of the last cost of the wool. \r\nIf a freight charge is not included in the post Sale Charge, then the freight charge is the charge levied by the broker should the buyer request that the broker transport the wool to the nearest designated area (usually a shipping port). \r\nFreight Charge is not used in Australia.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "freightRebate": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "chargePerLot": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Any charge made for a lot which is not covered by the Post Sale Charge or the Freight charge per Bale fields.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "invoiceNumber": {
+                        "pattern": "-?\\d{1,8}",
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "invoicingOrganisation": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "The code for the broker who will raise the invoice for the wool"
+                    },
+                    "releasingOrganisation": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "The broker that is responsible for releasing the wool out of the store"
+                    },
+                    "sellingOrganisation": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "woolTypeGroup": {
+                        "$ref": "#/components/schemas/WoolTypeGroup"
+                    },
+                    "centreCatalogue": {
+                        "$ref": "#/components/schemas/Centre"
+                    },
+                    "deliveryBasis": {
+                        "$ref": "#/components/schemas/DeliveryBasis"
+                    },
+                    "centreDelivery": {
+                        "$ref": "#/components/schemas/Centre"
+                    },
+                    "alternateDelivery": {
+                        "$ref": "#/components/schemas/Centre"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LsCertType": {
+                "enum": [
+                    0,
+                    1,
+                    2
+                ],
+                "type": "integer",
+                "description": "0: Length & Strength tested<br />1: Length only test requested<br />2: Insufficient staples",
+                "format": "int32"
+            },
+            "MulesingStatus": {
+                "enum": [
+                    "NM",
+                    "LN",
+                    "CM",
+                    "AA",
+                    "M",
+                    "ND"
+                ],
+                "type": "string",
+                "description": "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared"
+            },
+            "OMIDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "hardHeadsBase",
+                    "laboratory",
+                    "reissueChargeFlag",
+                    "retestFlag",
+                    "vmb",
+                    "woolBase",
+                    "yield1"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "woolBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "airflowMean": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vmb": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "hardHeadsBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield1": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield2": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield3": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield4": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yieldType1": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "yieldType2": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "retestFlag": {
+                        "$ref": "#/components/schemas/RetestFlag"
+                    },
+                    "yield5": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "vm1": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm2": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm3": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OMLDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "hardHeadsBase",
+                    "laboratory",
+                    "reissueChargeFlag",
+                    "retestFlag",
+                    "vmb",
+                    "woolBase",
+                    "yield1"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "woolBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "airflowMean": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vmb": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "hardHeadsBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield1": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield2": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield3": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield4": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yieldType1": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "yieldType2": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "retestFlag": {
+                        "$ref": "#/components/schemas/RetestFlag"
+                    },
+                    "yield5": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "vm1": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm2": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm3": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PackMaterial": {
+                "enum": [
+                    "N",
+                    "E",
+                    "J",
+                    "K"
+                ],
+                "type": "string",
+                "description": "Where a line/lot contains a Pack with a lower Material, the lower Material shall apply.The hierarchy from highest to lowest is N, E, J, K. Printed catalogue condition: The code for Nylon packs shall not be printed (but shall be transmitted).<br />N: Nylon Packs (complete lots only)<br />E: Experimental Packs<br />J: Jute packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and/or HDPE 1 and Jute packs)<br />K: HDPE1 packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and HDPE 1 packs)"
+            },
+            "PackType": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E",
+                    "F",
+                    "Z"
+                ],
+                "type": "string",
+                "description": "A code used to indicate how the wool has been baled. The most common type is Farm bales. <strong>Original</strong> - the pack type when the wool was originally baled. <strong>Preferred</strong> - The pack type which the buyer would prefer to be used when his wool is dumped.<br />0: Standard (farm) bale<br />1: Bag/butt<br />2: Lightweight bale<br />3: Jumbo bale<br />4: Single bales (normal density dumped)<br />5: Single bales (high density dumped)<br />6: Single bales (super high density dumped)<br />7: 3 bale tripack (super high density dumped)<br />8: 2 bale tripack (super high density dumped)<br />9: U bales<br />A: 4 or 6 bale unitised (normal density dumped)<br />B: 4 or 6 bale unitised (high density dumped)<br />C: 4 or 6 bale unitised (super high density dumped)<br />D: Two Bale Module (2BM)<br />E: J9 size bale used for scoured wool<br />F: J12 size bale used for scoured wool<br />Z: Mixed (to be used with groups only, that is, record type 12)"
+            },
+            "PremiumTestDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "laboratory",
+                    "reissueChargeFlag",
+                    "retestFlag",
+                    "yield1"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "woolBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "airflowMean": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vmb": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "hardHeadsBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield1": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield2": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield3": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield4": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yieldType1": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "yieldType2": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "retestFlag": {
+                        "$ref": "#/components/schemas/RetestFlag"
+                    },
+                    "yield5": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "vm1": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm2": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm3": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "darkAndMedullatedFibreRisk": {
+                        "$ref": "#/components/schemas/DarkAndMedullatedFibreRisk"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "QualityScheme": {
+                "enum": [
+                    "ASWG",
+                    "AUTH",
+                    "BETC",
+                    "BIOC",
+                    "DAL3",
+                    "EUEC",
+                    "MTEC",
+                    "ACO",
+                    "DBAA",
+                    "USA",
+                    "NASA",
+                    "SXC",
+                    "RWS",
+                    "SBFC",
+                    "SW",
+                    "SWAU",
+                    "TQMS",
+                    "FAP",
+                    "PWIA",
+                    "FERN"
+                ],
+                "type": "string",
+                "description": "The registered four character or less quality scheme code: To obtain the current code list please go to this URL: http://www.awex.com.au/standards/catalogue/<br />ASWG: Australian Superfine Woolgrower Association (Member)<br />AUTH: Authentico<br />BETC: Better Choices (Pain Mitigation)<br />BIOC: BioClip (Biologically Harvested)<br />DAL3: Dalcare-3<br />EUEC: EU Eco label (meets EU Eco standards)<br />MTEC: Merino Tech WA<br />ACO: Organic - Australian Certified Organic<br />DBAA: Organic - Demeter Biodynamic Agriculture Aust.<br />USA: Organic - Meets USA Certification requirements<br />NASA: Organic - National Association for Sustainable Agriculture Aust.<br />SXC: Organic - Southern Cross Certified<br />RWS: Responsible Wool Standard<br />SBFC: Schute Bell Fibre Care<br />SW: SustainaWOOL<br />SWAU: SustainaWOOL Gold<br />TQMS: Traprock QMS/TIMS<br />FAP: Farm Assurance Program<br />PWIA: PGG Wrightson Integrity Assured<br />FERN: Woolcare Fernmark"
+            },
+            "QualitySchemeDetail": {
+                "type": "object",
+                "properties": {
+                    "qualityScheme": {
+                        "$ref": "#/components/schemas/QualityScheme"
+                    },
+                    "qualitySchemeRegistrationId": {
+                        "maxLength": 8,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Registered Identification issued by the relevant Accreditation or Membership organisation.",
+                        "nullable": true
+                    },
+                    "qualitySchemeOtherDetail": {
+                        "maxLength": 13,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Used to transmit (other) information relevant to the Scheme that is required by the buyer(e.g.Month/Year shorn).",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ReissueChargeFlag": {
+                "enum": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "type": "integer",
+                "description": "0: Original certificate charge<br />1: Re-issued no charge<br />2: Re-issued with additional Charge<br />3: Re-issued with replacement charge (credit issued against original certificate)",
+                "format": "int32"
+            },
+            "ReportingFlag": {
+                "enum": [
+                    "R",
+                    "C",
+                    "U"
+                ],
+                "type": "string",
+                "description": "R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results"
+            },
+            "RetestFlag": {
+                "enum": [
+                    0,
+                    1,
+                    2
+                ],
+                "type": "integer",
+                "description": "0: Normal Test<br />1: Retest<br />2: Check Test",
+                "format": "int32"
+            },
+            "SaleIdentity": {
+                "type": "object",
+                "properties": {
+                    "sellingCentreType": {
+                        "maxLength": 2,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "saleNumber": {
+                        "maxLength": 2,
+                        "minLength": 0,
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "SoftwareCompany": {
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "type": "integer",
+                "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA",
+                "format": "int32"
+            },
+            "SoftwareIdentifier": {
+                "type": "object",
+                "properties": {
+                    "softwareCompany": {
+                        "$ref": "#/components/schemas/SoftwareCompany"
+                    },
+                    "version": {
+                        "pattern": "-?\\d{1,4}",
+                        "type": "integer",
+                        "description": "Version no. e.g. 2400",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "programName": {
+                        "maxLength": 4,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "SubSamplingMethod": {
+                "enum": [
+                    1
+                ],
+                "type": "integer",
+                "description": "1: Minicore",
+                "format": "int32"
+            },
+            "SubjectiveInterlotDetails": {
+                "required": [
+                    "certificateIdentity",
+                    "hardHeadsBase",
+                    "laboratory",
+                    "reissueChargeFlag",
+                    "retestFlag",
+                    "vmb",
+                    "woolBase",
+                    "yield1"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIdentity": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "charge": {
+                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "laboratory": {
+                        "$ref": "#/components/schemas/Laboratory"
+                    },
+                    "regrabSampleWeight": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "woolBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample. \r\nMin - The lowest value in a range of Wool Base values. \r\nMax - The highest value in a range of Wool Base values.",
+                        "format": "double"
+                    },
+                    "airflowMean": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vmb": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "hardHeadsBase": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield1": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "yield2": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield3": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yield4": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "yieldType1": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "yieldType2": {
+                        "$ref": "#/components/schemas/YieldType"
+                    },
+                    "retestFlag": {
+                        "$ref": "#/components/schemas/RetestFlag"
+                    },
+                    "yield5": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "reissueChargeFlag": {
+                        "$ref": "#/components/schemas/ReissueChargeFlag"
+                    },
+                    "vm1": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm2": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "vm3": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "darkAndMedullatedFibreRisk": {
+                        "maxLength": 1,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TransmissionHeader": {
+                "required": [
+                    "abn",
+                    "countryOfOrigin",
+                    "currentReceiver",
+                    "currentTransmitter",
+                    "dateFormatLastRevised",
+                    "dateTransmissionFileCreated",
+                    "documentOriginator",
+                    "finalReceiver",
+                    "transmissionType"
+                ],
+                "type": "object",
+                "properties": {
+                    "dateFormatLastRevised": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+                        "format": "date"
+                    },
+                    "dateTransmissionFileCreated": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+                        "format": "date"
+                    },
+                    "countryOfOrigin": {
+                        "$ref": "#/components/schemas/CountryCode"
+                    },
+                    "documentOriginator": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "currentTransmitter": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "currentReceiver": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "finalReceiver": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "transmissionType": {
+                        "$ref": "#/components/schemas/TransmissionType"
+                    },
+                    "versionNumber": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "Two digits. e.g. 99",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "softwareIdentifier": {
+                        "$ref": "#/components/schemas/SoftwareIdentifier"
+                    },
+                    "abn": {
+                        "maxLength": 11,
+                        "minLength": 0,
+                        "pattern": "^[0-9]+$",
+                        "type": "string",
+                        "description": "Australian Business Number, 11 digits string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TransmissionType": {
+                "enum": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    11,
+                    13,
+                    16,
+                    17,
+                    50,
+                    52,
+                    55,
+                    56,
+                    60,
+                    64,
+                    98,
+                    99
+                ],
+                "type": "integer",
+                "description": "The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement",
+                "format": "int32"
+            },
+            "WeightUnit": {
+                "enum": [
+                    0,
+                    1
+                ],
+                "type": "integer",
+                "description": "0: Kilograms<br />1: Pounds",
+                "format": "int32"
+            },
+            "WoolSale": {
+                "required": [
+                    "lotInvoiceDetails",
+                    "woolSaleHeaderExtension",
+                    "woolSaleHeaderLots"
+                ],
+                "type": "object",
+                "properties": {
+                    "woolSaleHeaderLots": {
+                        "$ref": "#/components/schemas/LotInvoicesWoolSaleHeaderLots"
+                    },
+                    "woolSaleHeaderExtension": {
+                        "$ref": "#/components/schemas/WoolSaleHeaderExtension"
+                    },
+                    "lotInvoiceDetails": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LotInvoiceDetail"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "WoolSaleHeaderExtension": {
+                "required": [
+                    "dateStorageChargeCommences",
+                    "discountRate",
+                    "maximumDaysDiscount",
+                    "penaltyInterestRate",
+                    "storageChargePerBalePerDay",
+                    "storageOrganisation"
+                ],
+                "type": "object",
+                "properties": {
+                    "storageOrganisation": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "This is the organisation store that is storing the wool. \r\nNote: If there is more than one organisation in a centre, then separate AWEX codes are required for each store.\r\nIt is not necessarily the same as the Releasing Organisation."
+                    },
+                    "storageDescription": {
+                        "maxLength": 15,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.",
+                        "nullable": true
+                    },
+                    "paymentDueDate": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "The date on which payment is due. Also known as Prompt Date.\r\nDate value in ISO 8601 standard UTC format. e.g. 2024-03-21",
+                        "format": "date",
+                        "nullable": true
+                    },
+                    "discountRate": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Total 4 digits with 2 digits after the decimal point. e.g. 23.76",
+                        "format": "double"
+                    },
+                    "maximumDaysDiscount": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "description": "2 digits number. e.g. 23",
+                        "format": "int32"
+                    },
+                    "dateStorageChargeCommences": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
+                        "format": "date"
+                    },
+                    "storageChargePerBalePerDay": {
+                        "pattern": "^-?\\d{1}\\.\\d{3}$",
+                        "type": "number",
+                        "description": "Total 4 digits with 3 digits after the decimal point. e.g. 23.76",
+                        "format": "double"
+                    },
+                    "penaltyInterestRate": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Total 4 digits with 2 digits after the decimal point. e.g. 23.76",
+                        "format": "double"
+                    },
+                    "lotAvailableDate": {
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "The first date on which the wool is available for purchase.\r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21.",
+                        "format": "date",
+                        "nullable": true
+                    },
+                    "postSaleChargeRebate": {
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "The total (extended) amount of Post Sale Charge Rebate for the Lot. \r\nThis value is provided where a value in the Post Sale Charge Rebate field exists (11A)\r\nTotal 5 digits with 2 digits after the decimal point. e.g. 123.76",
+                        "format": "double",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "WoolState": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "A",
+                    "C",
+                    "M"
+                ],
+                "type": "string",
+                "description": "The state of the wool itemised in the invoice.<br />1. Greasy<br />2. Dead<br />3. Slipe<br />4. Scoured<br />5. Carbonised<br />6. Wool tops<br />7. Wool noils<br />8. Carded sliver<br />9. Other processed wool<br />A. Alpaca<br />C. Cashmere<br />M. Mohair"
+            },
+            "WoolTypeGroup": {
+                "enum": [
+                    "MFLC",
+                    "MSKT",
+                    "XBFS",
+                    "ODDS"
+                ],
+                "type": "string",
+                "description": "A code to indicate which section of the sale that lot belongs.<br />MFLC: Merino fleece types<br />MSKT: Merino fleece types<br />XBFS: Merino fleece types<br />ODDS: Merino fleece types"
+            },
+            "YieldType": {
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    42,
+                    43
+                ],
+                "type": "integer",
+                "description": "Yield Type indicates either the type of yield transmitted in another field or record, or the type of yield used to arrive at the value in another field.<br />1. RESERVED<br />2. RESERVED<br />3. Estimated.<br />4. Schlumberger Combed Dry (1% TFM)<br />5. Schlumberger Combed Dry (2% TFM)<br />7. Noble Combed in Oil<br />8. IWTO Scoured Yield at 16% Regain<br />9. IWTO Scoured Yield at 17% Regain<br />10. Japanese Clean Scoured<br />11. Australian Carbonising<br />12. IWTO Clean Wool Content, 17% Regain<br />13. United States Custom Clean<br />14. Card Sliver<br />15. ASTM Clean Wool Fibre Present<br />16. Noble Dry Combed<br />17. Schlumberger Combed in Oil (4.6% TFM)<br />18. Noble Combed Dry<br />19. Theoretical Card Sliver<br />20. ASTM Laboratory Scoured Yield<br />21. Conditioned at 12.00%<br />22. Conditioned at 13.00%<br />23. Conditioned at 13.50%<br />24: Conditioned at 13.64%<br />25. Conditioned at 14.00%<br />26. Conditioned at 14.40%<br />27. Conditioned at 15.00%<br />28. Conditioned at 16.00%<br />29. Conditioned at 17.00%<br />30. Conditioned at 18.00%<br />31. Conditioned at 18.25%<br />32. Japanese Clean Scoured at 17%<br />33. New Zealand Process Yield<br />42. IWT0 Schlumberger Oil T&N (2.0% & T.FM.)<br />43. IWTO Clean Wool Content, 16% Regain",
+                "format": "int32"
+            }
+        },
+        "securitySchemes": {
+            "Bearer": {
+                "type": "apiKey",
+                "description": "JWT Access Token that is added in the Authorization header of the HTTP request. Example: \"Authorization: Bearer {token}\". The JWT serves as a credential that proves the identity of the client to the server.",
+                "name": "Authorization",
+                "in": "header"
+            },
+            "oauth2": {
+                "type": "oauth2",
+                "description": "Authentication for client applications by providing Client ID and Client Secret for an JWT Access Token.",
+                "flows": {
+                    "clientCredentials": {
+                        "tokenUrl": "/auth-server/oauth/token",
+                        "scopes": {}
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "Bearer": []
+        }
+    ]
+}

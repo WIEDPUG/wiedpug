@@ -41,7 +41,7 @@ paths:
                 abn: '72001967184'
               testCertificateRequestCollection:
                 - certificateRequest:
-                    printRequirements: OriginalCertificateCharge
+                    printRequirements: 0
                     yieldType1: 2
                     yieldType2: 4
                     certificateReference: XXY1255
@@ -71,7 +71,7 @@ paths:
                         laboratory: 1
                   baleHeader: null
                 - certificateRequest:
-                    printRequirements: OriginalCertificateCharge
+                    printRequirements: 0
                     yieldType1: 1
                     yieldType2: 13
                     certificateReference: XXY1205
@@ -2152,21 +2152,26 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
-          minLength: 1
+          maxLength: 5
+          minLength: 0
           type: string
         currentTransmitter:
-          minLength: 1
+          maxLength: 5
+          minLength: 0
           type: string
         currentReceiver:
-          minLength: 1
+          maxLength: 5
+          minLength: 0
           type: string
         finalReceiver:
-          minLength: 1
+          maxLength: 5
+          minLength: 0
           type: string
         softwareIdentifier:
           $ref: '#/components/schemas/SoftwareIdentifier'
         abn:
-          minLength: 1
+          maxLength: 11
+          minLength: 0
           type: string
           description: Australian Business Number
       additionalProperties: false
@@ -2982,12 +2987,13 @@ components:
       description: 'P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf Combination/OML Certificate and associated sub-lots<br />S: Pdf associated sub-lots excluding the Combination/OML Certificate<br />C: Pdf Combination Certificate in Chinese and English<br />E: Pdf Combination Certificate in Chinese and English & associated sublots in English)<br />M: Pdf Combination Certificate in English & Mulesing Status report<br />N: Pdf Mulesing Status report only'
     PrintRequirements:
       enum:
-        - OriginalCertificateCharge
-        - ReissuedNoCharge
-        - ReissuedWithAdditionalCharge
-        - ReissuedWithReplacementCharge
-      type: string
+        - 0
+        - 1
+        - 2
+        - 3
+      type: integer
       description: '0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)'
+      format: int32
     ReissueChargeFlag:
       enum:
         - 0

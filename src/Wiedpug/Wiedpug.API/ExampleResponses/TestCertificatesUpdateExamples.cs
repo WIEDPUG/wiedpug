@@ -39,14 +39,8 @@ namespace Wiedpug.API.ExampleResponses
                         Bales = 2,
                         BaleDescription = "AAA M",
                         WoolBase = 60.43,
-                        WoolPreparationCategoryFrom = null,
-                        WoolPreparationCategoryTo = null,
                         MulesingStatusFrom = MulesingStatus.ND,
-                        MulesingStatusTo = MulesingStatus.M,
-                        SaleIdentityFrom = null,
-                        SaleIdentityTo = null,
-                        LotIdentityFrom = null,
-                        LotIdentityTo = null
+                        MulesingStatusTo = MulesingStatus.M
                     },
                     new TestCertificateUpdateDetail {
                         CertificateIdentity = "316071189T5",
@@ -55,14 +49,8 @@ namespace Wiedpug.API.ExampleResponses
                         Bales = 7,
                         BaleDescription = "AAA M",
                         WoolBase = 65.12,
-                        WoolPreparationCategoryFrom = null,
-                        WoolPreparationCategoryTo = null,
                         MulesingStatusFrom = MulesingStatus.AA,
-                        MulesingStatusTo = MulesingStatus.M,
-                        SaleIdentityFrom = null,
-                        SaleIdentityTo = null,
-                        LotIdentityFrom = null,
-                        LotIdentityTo = null
+                        MulesingStatusTo = MulesingStatus.M
                     },
                     new TestCertificateUpdateDetail {
                         CertificateIdentity = "315701332B6",
@@ -71,14 +59,8 @@ namespace Wiedpug.API.ExampleResponses
                         Bales = 8,
                         BaleDescription = "PCA M",
                         WoolBase = 50.31,
-                        WoolPreparationCategoryFrom = null,
-                        WoolPreparationCategoryTo = null,
                         MulesingStatusFrom = MulesingStatus.NM,
-                        MulesingStatusTo = MulesingStatus.M,
-                        SaleIdentityFrom = null,
-                        SaleIdentityTo = null,
-                        LotIdentityFrom = null,
-                        LotIdentityTo = null
+                        MulesingStatusTo = MulesingStatus.M
                     }
                 }
             };

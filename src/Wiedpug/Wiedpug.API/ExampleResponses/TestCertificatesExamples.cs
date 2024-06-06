@@ -89,9 +89,7 @@ namespace Wiedpug.API.ExampleResponses
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
                                      CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
-                                     FactorLaserscanNumerator = null,
-                                     FactorLaserscanDenominator = null
+                                     DateIssued = "2017-01-10"
                                 },
                                 FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
                                 {
@@ -208,9 +206,7 @@ namespace Wiedpug.API.ExampleResponses
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
                                      CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
-                                     FactorLaserscanNumerator = null,
-                                     FactorLaserscanDenominator = null
+                                     DateIssued = "2017-01-10"
                                 },
                                 FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
                                 {
@@ -381,9 +377,7 @@ namespace Wiedpug.API.ExampleResponses
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
                                      CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
-                                     FactorLaserscanNumerator = null,
-                                     FactorLaserscanDenominator = null
+                                     DateIssued = "2017-01-10"
                                 },
                                 FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
                                 {
@@ -500,9 +494,7 @@ namespace Wiedpug.API.ExampleResponses
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
                                      CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10",
-                                     FactorLaserscanNumerator = null,
-                                     FactorLaserscanDenominator = null
+                                     DateIssued = "2017-01-10"
                                 },
                                 FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
                                 {

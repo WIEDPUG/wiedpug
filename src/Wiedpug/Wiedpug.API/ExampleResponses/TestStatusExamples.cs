@@ -46,11 +46,7 @@ namespace Wiedpug.API.ExampleResponses
                         CoreSampleReceived = "240423",
                         LSSampleReceived = "240424",
                         TRVMatched = "240424",
-                        CoreSampleCheckTest = null,
-                        LsRetuftRequired = LsRetuftRequired.Required,
-                        LsRetuftReceived = null,
-                        CoreTestRecoreRequired = null,
-                        CoreTestRecoreReceived = null
+                        LsRetuftRequired = LsRetuftRequired.Required
                     },
                     new TestStatusDetail {
                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -60,12 +56,7 @@ namespace Wiedpug.API.ExampleResponses
                         LSSampleID = "F865734",
                         CoreSampleReceived = "240423",
                         LSSampleReceived = "240424",
-                        TRVMatched = "240424",
-                        CoreSampleCheckTest = null,
-                        LsRetuftRequired = null,
-                        LsRetuftReceived = null,
-                        CoreTestRecoreRequired = null,
-                        CoreTestRecoreReceived = null
+                        TRVMatched = "240424"
                     }
                 }
             };
