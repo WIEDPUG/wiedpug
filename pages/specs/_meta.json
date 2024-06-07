@@ -2,5 +2,6 @@
     "0.0-tc-tcu-tcr": "TC, TCU, TCR",
     "0.0-trv": "TRV",
     "0.0-li": "LI",
-    "0.0-ts": "TS"
+    "0.0-ts": "TS",
+    "0.0-drv": "DRV"
 }

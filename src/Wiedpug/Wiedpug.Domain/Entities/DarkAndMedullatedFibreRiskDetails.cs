@@ -122,16 +122,16 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double WoolBase { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? DMFRErrorField1 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? DMFRErrorField2 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? DMFRErrorField3 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? DMFRErrorField4 { get; set; }
 
     }
