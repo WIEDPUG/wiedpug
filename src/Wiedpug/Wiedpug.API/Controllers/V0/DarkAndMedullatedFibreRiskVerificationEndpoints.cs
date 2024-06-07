@@ -19,7 +19,7 @@ public static class DarkAndMedullatedFibreRiskVerificationEndpoints
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] TestRequestsVerification model) =>
+        ([FromBody] DarkAndMedullatedFibreRiskVerification model) =>
             {
                
             })        
