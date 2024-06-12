@@ -4,6 +4,7 @@ using Wiedpug.Domain.Aggregates.RequestForStatusAggregate;
 using Wiedpug.Domain.Aggregates.StatusReplyAggregate;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
@@ -18,11 +19,7 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2022-07-25",
                     DateTransmissionFileCreated = "2024-03-21",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = "AWTX",
-                    CurrentTransmitter = "AWTX",
-                    CurrentReceiver = "AWTM",
-                    FinalReceiver = "AWTM",
-                    TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
+                    DocumentOriginator = new Organisation { OrganizationCode = "AWTX" },
                     VersionNumber = 36,
                     ABN = "72001967184"
                 },
@@ -62,11 +59,10 @@ namespace Wiedpug.API.ExampleResponses
                         DateFormatLastRevised = "2022-07-25",
                         DateTransmissionFileCreated = "2024-03-21",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                        DocumentOriginator = "AWTX",
-                        CurrentTransmitter = "AWTX",
-                        CurrentReceiver = "AWTM",
-                        FinalReceiver = "AWTM",
-                        TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
+                        DocumentOriginator = new Organisation
+                        {
+                            OrganizationCode = "AWTX"
+                        },
                         VersionNumber = 36,
                         ABN = "72001967184"
                     },

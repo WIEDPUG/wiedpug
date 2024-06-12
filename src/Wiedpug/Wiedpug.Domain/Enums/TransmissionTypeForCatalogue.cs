@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Wiedpug.Domain.Enums
 {
     [Description("")]
-    public enum TransmissionTypeForAuctionCatalogue
+    public enum TransmissionTypeForCatalogue
     {
         [Description("2: Auction Catalogues")]
         AuctionCatalogues = 2,

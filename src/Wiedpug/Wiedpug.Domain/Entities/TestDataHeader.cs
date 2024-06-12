@@ -13,8 +13,8 @@ namespace Wiedpug.Domain.Entities
     public class TestDataHeader
     {
         [Required]
-        [StringLength(5)]
-        public required Client Client { get; set; }
+        [StringLength(8)]
+        public required Organisation Client { get; set; }
 
         [StringLength(2)]
         public int? Season { get; set; }

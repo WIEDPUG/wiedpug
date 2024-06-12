@@ -6,20 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class RequestForDataForAuctionCatalogue
+    public class RequestForDataForCatalogue
     {
         [Required]
         [StringLength(1)]
-        public required TransmissionTypeForAuctionCatalogue TransmissionTypeRequested { get; set; }
+        public required TransmissionTypeForCatalogue TransmissionTypeRequested { get; set; }
 
         [StringLength(4)]
         public SaleIdentity? SaleIdentity { get; set; }
 
-        [StringLength(5)]
-        public string? OrganisationRequested { get; set; }
+        [StringLength(8)]
+        public Organisation? OrganisationRequested { get; set; }
 
         /// <summary>
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
@@ -61,7 +62,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         /// 
         [StringLength(80)]
-        public List<RecordTypesToBeExcludedForAuctionCatalogue>? RecordTypesToBeExcluded { get; set; }
+        public List<ExcludedType>? ExcludedTypes { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Season { get; set; }

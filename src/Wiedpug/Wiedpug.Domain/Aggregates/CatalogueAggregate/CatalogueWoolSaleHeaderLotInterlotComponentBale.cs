@@ -4,7 +4,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
 {
-    public class AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale
+    public class CatalogueWoolSaleHeaderLotInterlotComponentBale
     {
         [Required]
         public required InterlotComponentBaleHeader InterlotComponentBaleHeader { get; set; }

@@ -3,16 +3,17 @@ using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class AuctionCatalogueRequestExamples : IMultipleExamplesProvider<List<AuctionCatalogue>>
+    public class CatalogueRequestExamples : IMultipleExamplesProvider<List<Catalogue>>
     {
-        public IEnumerable<SwaggerExample<List<AuctionCatalogue>>> GetExamples()
+        public IEnumerable<SwaggerExample<List<Catalogue>>> GetExamples()
         {
             yield return SwaggerExample.Create(
                 "New Auction Catalogue",
-                new List<AuctionCatalogue>
+                new List<Catalogue>
                 {
                     new()
                     {
@@ -21,11 +22,10 @@ namespace Wiedpug.API.ExampleResponses
                             DateFormatLastRevised = "2020-07-15",
                             DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                            DocumentOriginator = "ABCD",
-                            CurrentTransmitter = "AWTM",
-                            CurrentReceiver = "AWXLC",
-                            FinalReceiver = "AWXLC",
-                            TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
+                            DocumentOriginator =new Organisation
+                            {
+                                OrganizationCode = "AWTA"
+                            },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
@@ -35,20 +35,25 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ABN = "72001967184"
                         },
+                        CatalogueType = CatalogueType.AuctionCatalogues,
                         TransferConfig = new TransferConfig
                         {
                             TransferType = TransferType.Broadcast,
-                            InclusionExclusionList = new List<string>
+                            ExclusionList = new List<Organisation>
                             {
-                                "AMSC",
-                                "FIBC"
+                                new Organisation{
+                                   OrganizationCode = "AMSC"
+                                },
+                                new Organisation{
+                                   OrganizationCode = "FIBC"
+                                }
                             },
                         },
-                        WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
+                        WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
                         {
-                            new AuctionCatalogueWoolSaleHeader
+                            new CatalogueWoolSaleHeader
                             {
-                                WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
+                                WoolSaleHeaderLots = new WoolSaleHeaderLots //10
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -67,20 +72,23 @@ namespace Wiedpug.API.ExampleResponses
                                     FreightCharge = 0.00,
                                     FreightRebate = 3.25,
                                     ChargePerLot = 0.00,
-                                    InvoiceNumber = null,
                                     CatalogueSection = CatalogueSection.FLC,
                                     IsFinalCatalogue = true,
-                                    InvoicingOrganisation = "ABCD",
-                                    ReleasingOrganisation = "ABCD",
-                                    SellingOrganisation = "ABCD",
+                                    InvoicingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                    ReleasingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                    SellingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
                                     DeliveryBasis = DeliveryBasis.D,
-                                    CentreDelivery = null,
-                                    AlternateDelivery = null
-                                },
-                                WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension //11A
-                                {
                                     StorageOrganisation = "ABCD",
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",
@@ -89,13 +97,11 @@ namespace Wiedpug.API.ExampleResponses
                                     DateStorageChargeCommences = "2017-01-24",
                                     StorageChargePerBalePerDay = 0.245,
                                     PenaltyInterestRate = 11.35,
-                                    LotAvailableDate = null,
-                                    PostSaleChargeRebate = null
                                 },
                                 // No 11BA
-                                Lots = new List<AuctionCatalogueWoolSaleHeaderLot>
+                                Lots = new List<CatalogueWoolSaleHeaderLot>
                                 {
-                                    new AuctionCatalogueWoolSaleHeaderLot
+                                    new CatalogueWoolSaleHeaderLot
                                     {
                                         LotHeader = new Domain.Entities.LotHeader //20
                                         {
@@ -103,38 +109,22 @@ namespace Wiedpug.API.ExampleResponses
                                             Bales = 8,
                                             Gross = 1316,
                                             Tare = 16,
-                                            RegrabSampleWeight = null,
                                             CataloguePageNumber = 65,
-                                            IsNoLot = null,
-                                            SourceCode = null,
                                             UpdateType = UpdateType.A,
                                             CatalogueSymbols = CatalogueSymbol.A,
                                             PackMaterial = PackMaterial.N,
                                             LotType = LotType.SubjectivelyMatchedInterlot,
                                             LightestIndividualBaleWeight = 149,
                                             ReportingFlag = ReportingFlag.R,
-                                            FirstOfferSeason = null,
-                                            FirstOfferSaleIdentity = null,
-                                            FirstOfferLotIdentity = null,
                                             CostPerWeightUnit = 0,
                                             CleanWeight = 0,
-                                            YieldType = null,
-                                            WeightUnit = null,
-                                            OfferType = null,
-                                            ClientCrossReference = null,
                                             PackCondition = PackCondition.N
                                         },
                                         LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                         {
                                             CoreTestSamplingDate = "2019-01-17",
-                                            WoolDescriptionComment = null,
                                             WoolDescription = "MF6S",
                                             GstTaxInvoiceFlag = true,
-                                            BrokerReservePrice = null,
-                                            GrowerReservePrice = null,
-                                            OpeningPrice = null,
-                                            ValuationPrice = null,
-                                            WoolDescriptionAuditCode = null,
                                             NumberOfOverweightBales = 0
         ,                               },
                                         //No 21B
@@ -142,46 +132,40 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             AwexId = "MF6S",
                                             AppraiserId = "99192",
-                                            ClassersRegisteredNumber = "998921",
-                                            AwexIdComment = null,
-                                            AwexIdAuditCode = null
+                                            ClassersRegisteredNumber = "998921"
                                         },
                                         LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
                                         {
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
-                                                QualitySchemes = null,
                                                 MulesingStatus = MulesingStatus.NM
                                             }
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                         {
                                             CertificateIdentity = "300000664L6",
-                                            Charge = null,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = 0,
                                             StapleLength = 73,
+                                            Charge = 188.50,
                                             StapleLengthCvPercentage = 16,
                                             StapleStrength = 35,
                                             PositionOfBreakPercentageTip = 77,
                                             PositionOfBreakPercentageMiddle = 23,
                                             PositionOfBreakPercentageBase = 0,
                                             Team3Hauteur = 72,
-                                            ReissueChargeFlag = null,
                                             LsCertType = LsCertType.LengthAndStrengthTested,
-                                            isLsSampleSecured = true,
                                             ExpectedBarbe = 111,
                                             Team3HauteurCvPercentage = 36.9,
                                             Team3RomainePercentage = 11.2,
                                             DateIssued = "2017-01-10",
-                                            StapleStrengthLowest25Percent = 24
+                                            StapleStrengthLowest25Percent = 24,
+                                            isLsSampleSecured = true
                                         },
                                         CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                         {
                                             CertificateIdentity = "300000499P7",
-                                            Charge = null,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                            RegrabSampleWeight = null,
                                             WoolBase = 64.29,
                                             AirflowMean = 0.0,
                                             Vmb = 1.3,
@@ -190,8 +174,6 @@ namespace Wiedpug.API.ExampleResponses
                                             Yield2 = 78.50,
                                             Yield3 = 75.70,
                                             Yield4 = 72.10,
-                                            YieldType1 = null,
-                                            YieldType2 = null,
                                             RetestFlag = RetestFlag.NormalTest,
                                             Yield5 = 77.80,
                                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -217,9 +199,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     StandardDeviation = 4.0,
                                                     CurvatureMeanDegPerMm = 61,
                                                     CoreTestSamplingDate = "2017-01-10",
-                                                    DateIssued = "2017-01-10",
-                                                    FactorLaserscanNumerator = null,
-                                                    FactorLaserscanDenominator = null
+                                                    DateIssued = "2017-01-10"
                                                 }
                                             }
                                         },
@@ -228,9 +208,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Brand = "SALTBUSH/DOWNS",
                                             BaleDescription = "AAAM",
                                             AreaOfOrigin = "V11",
-                                            LocationWithinStore = null,
                                             Bales = 8,
-                                            Postcode = null
                                         },
                                         BaleIdentifications = new List<Domain.ValueObject.BaleIdentification> //84
                                         {
@@ -240,9 +218,9 @@ namespace Wiedpug.API.ExampleResponses
                                                 BaleNumber = "1"
                                             }
                                         },
-                                        InterlotComponentBales = new List<AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale>
+                                        InterlotComponentBales = new List<CatalogueWoolSaleHeaderLotInterlotComponentBale>
                                         {
-                                            new AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale
+                                            new CatalogueWoolSaleHeaderLotInterlotComponentBale
                                             {
                                                 InterlotComponentBaleHeader = new InterlotComponentBaleHeader //79B
                                                 {
@@ -272,7 +250,7 @@ namespace Wiedpug.API.ExampleResponses
 
             yield return SwaggerExample.Create(
                 "New Private Catalogue",
-                new List<AuctionCatalogue>
+                new List<Catalogue>
                 {
                     new()
                     {
@@ -281,11 +259,10 @@ namespace Wiedpug.API.ExampleResponses
                             DateFormatLastRevised = "2020-07-15",
                             DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                            DocumentOriginator = "ABCD",
-                            CurrentTransmitter = "AWTM",
-                            CurrentReceiver = "AWXLC",
-                            FinalReceiver = "AWXLC",
-                            TransmissionType = Domain.Enums.TransmissionType.PrivateCatalogues,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
@@ -295,19 +272,23 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ABN = "72001967184"
                         },
+                        CatalogueType=CatalogueType.AuctionCatalogues,
                         TransferConfig = new TransferConfig
                         {
                             TransferType = TransferType.PrivateSend,
-                            InclusionExclusionList = new List<string>
+                            InclusionList = new List<Organisation>
                             {
-                                "AWXLC"
+                                new Organisation
+                                {
+                                    OrganizationCode="AWXLC"
+                                }
                             }
                         },
-                        WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
+                        WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
                         {
-                            new AuctionCatalogueWoolSaleHeader
+                            new CatalogueWoolSaleHeader
                             {
-                                WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
+                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -326,20 +307,20 @@ namespace Wiedpug.API.ExampleResponses
                                     FreightCharge = 0.00,
                                     FreightRebate = 3.25,
                                     ChargePerLot = 0.00,
-                                    InvoiceNumber = null,
                                     CatalogueSection = CatalogueSection.FLC,
                                     IsFinalCatalogue = true,
-                                    InvoicingOrganisation = "ABCD",
-                                    ReleasingOrganisation = "ABCD",
-                                    SellingOrganisation = "ABCD",
+                                    InvoicingOrganisation = new Organisation { OrganizationCode = "ABCD" },
+                                    ReleasingOrganisation =  new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                    SellingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
                                     DeliveryBasis = DeliveryBasis.D,
-                                    CentreDelivery = null,
-                                    AlternateDelivery = null
-                                },
-                                WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension //11A
-                                {
                                     StorageOrganisation = "ABCD",
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",
@@ -347,14 +328,12 @@ namespace Wiedpug.API.ExampleResponses
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
                                     StorageChargePerBalePerDay = 0.245,
-                                    PenaltyInterestRate = 11.35,
-                                    LotAvailableDate = null,
-                                    PostSaleChargeRebate = null
+                                    PenaltyInterestRate = 11.35
                                 },
                                 // No 11BA
-                                Lots = new List<AuctionCatalogueWoolSaleHeaderLot>
+                                Lots = new List<CatalogueWoolSaleHeaderLot>
                                 {
-                                    new AuctionCatalogueWoolSaleHeaderLot
+                                    new CatalogueWoolSaleHeaderLot
                                     {
                                         LotHeader = new Domain.Entities.LotHeader //20
                                         {
@@ -362,38 +341,22 @@ namespace Wiedpug.API.ExampleResponses
                                             Bales = 8,
                                             Gross = 1316,
                                             Tare = 16,
-                                            RegrabSampleWeight = null,
                                             CataloguePageNumber = 65,
-                                            IsNoLot = null,
-                                            SourceCode = null,
                                             UpdateType = UpdateType.A,
                                             CatalogueSymbols = CatalogueSymbol.C,
                                             PackMaterial = PackMaterial.N,
                                             LotType = LotType.ClassedGrowerLot,
                                             LightestIndividualBaleWeight = 149,
                                             ReportingFlag = ReportingFlag.R,
-                                            FirstOfferSeason = null,
-                                            FirstOfferSaleIdentity = null,
-                                            FirstOfferLotIdentity = null,
                                             CostPerWeightUnit = 0,
                                             CleanWeight = 0,
-                                            YieldType = null,
-                                            WeightUnit = null,
-                                            OfferType = null,
-                                            ClientCrossReference = null,
                                             PackCondition = PackCondition.N
                                         },
                                         LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                         {
                                             CoreTestSamplingDate = "2019-01-17",
-                                            WoolDescriptionComment = null,
                                             WoolDescription = "MF6S",
                                             GstTaxInvoiceFlag = true,
-                                            BrokerReservePrice = null,
-                                            GrowerReservePrice = null,
-                                            OpeningPrice = null,
-                                            ValuationPrice = null,
-                                            WoolDescriptionAuditCode = null,
                                             NumberOfOverweightBales = 0
         ,                               },
                                         //No 21B
@@ -401,24 +364,21 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             AwexId = "MF6S",
                                             AppraiserId = "99192",
-                                            ClassersRegisteredNumber = "998921",
-                                            AwexIdComment = null,
-                                            AwexIdAuditCode = null
+                                            ClassersRegisteredNumber = "998921"
                                         },
                                         LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
                                         {
                                             new Domain.Entities.LotHeaderVendorDeclaration
                                             {
-                                                QualitySchemes = null,
                                                 MulesingStatus = MulesingStatus.AA
                                             }
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                         {
                                             CertificateIdentity = "300000664L6",
-                                            Charge = null,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = 0,
+                                            Charge = 256.23,
                                             StapleLength = 73,
                                             StapleLengthCvPercentage = 16,
                                             StapleStrength = 35,
@@ -426,7 +386,6 @@ namespace Wiedpug.API.ExampleResponses
                                             PositionOfBreakPercentageMiddle = 23,
                                             PositionOfBreakPercentageBase = 0,
                                             Team3Hauteur = 72,
-                                            ReissueChargeFlag = null,
                                             LsCertType = LsCertType.LengthAndStrengthTested,
                                             isLsSampleSecured = true,
                                             ExpectedBarbe = 111,
@@ -438,9 +397,7 @@ namespace Wiedpug.API.ExampleResponses
                                         CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                         {
                                             CertificateIdentity = "300000499P7",
-                                            Charge = null,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                            RegrabSampleWeight = null,
                                             WoolBase = 64.29,
                                             AirflowMean = 0.0,
                                             Vmb = 1.3,
@@ -449,8 +406,6 @@ namespace Wiedpug.API.ExampleResponses
                                             Yield2 = 78.50,
                                             Yield3 = 75.70,
                                             Yield4 = 72.10,
-                                            YieldType1 = null,
-                                            YieldType2 = null,
                                             RetestFlag = RetestFlag.NormalTest,
                                             Yield5 = 77.80,
                                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -476,9 +431,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     StandardDeviation = 4.0,
                                                     CurvatureMeanDegPerMm = 61,
                                                     CoreTestSamplingDate = "2017-01-10",
-                                                    DateIssued = "2017-01-10",
-                                                    FactorLaserscanNumerator = null,
-                                                    FactorLaserscanDenominator = null
+                                                    DateIssued = "2017-01-10"
                                                 }
                                             }
                                         },
@@ -487,13 +440,11 @@ namespace Wiedpug.API.ExampleResponses
                                             Brand = "SALTBUSH/DOWNS",
                                             BaleDescription = "AAAM",
                                             AreaOfOrigin = "V11",
-                                            LocationWithinStore = null,
                                             Bales = 8,
-                                            Postcode = null
                                         },
-                                        InterlotComponentBales = new List<AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale>
+                                        InterlotComponentBales = new List<CatalogueWoolSaleHeaderLotInterlotComponentBale>
                                         {
-                                            new AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale
+                                            new CatalogueWoolSaleHeaderLotInterlotComponentBale
                                             {
                                                 InterlotComponentBaleHeader = new InterlotComponentBaleHeader //79B
                                                 {
@@ -515,11 +466,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class AuctionCatalogueUpdatesRequestExample : IExamplesProvider<List<AuctionCatalogue>>
+    public class CatalogueUpdatesRequestExample : IExamplesProvider<List<Catalogue>>
     {
-        public List<AuctionCatalogue> GetExamples()
+        public List<Catalogue> GetExamples()
         {
-            return new List<AuctionCatalogue>
+            return new List<Catalogue>
             {
                 new()
                 {
@@ -528,11 +479,7 @@ namespace Wiedpug.API.ExampleResponses
                         DateFormatLastRevised = "2020-07-15",
                         DateTransmissionFileCreated = "2016-01-17",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                        DocumentOriginator = "ABCD",
-                        CurrentTransmitter = "AWTM",
-                        CurrentReceiver = "AWXLC",
-                        FinalReceiver = "AWXLC",
-                        TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogueUpdates,
+                        DocumentOriginator = new Organisation { OrganizationCode = "ABCD" },
                         VersionNumber = 31,
                         SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                         {
@@ -542,20 +489,21 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         ABN = "72001967184"
                     },
+                    CatalogueType = CatalogueType.AuctionCatalogues,
                     TransferConfig = new TransferConfig
                         {
                             TransferType = TransferType.Broadcast,
-                            InclusionExclusionList = new List<string>
+                            ExclusionList = new List<Organisation>
                             {
-                                "AWMS",
-                                "FCBB"
+                                new Organisation { OrganizationCode = "AWMS" },
+                                new Organisation { OrganizationCode = "FCBB" }
                             }
                     },
-                    WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
+                    WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
                     {
-                        new AuctionCatalogueWoolSaleHeader
+                        new CatalogueWoolSaleHeader
                         {
-                            WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
+                            WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                             {
                                 Season = 16,
                                 SaleIdentity = new Domain.Entities.SaleIdentity
@@ -574,20 +522,23 @@ namespace Wiedpug.API.ExampleResponses
                                 FreightCharge = 0.00,
                                 FreightRebate = 3.25,
                                 ChargePerLot = 0.00,
-                                InvoiceNumber = null,
                                 CatalogueSection = CatalogueSection.FLC,
                                 IsFinalCatalogue = true,
-                                InvoicingOrganisation = "ABCD",
-                                ReleasingOrganisation = "ABCD",
-                                SellingOrganisation = "ABCD",
+                                InvoicingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                ReleasingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                SellingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                                 WoolTypeGroup = WoolTypeGroup.MFLC,
                                 CentreCatalogue = Centre.AU_G,
                                 DeliveryBasis = DeliveryBasis.D,
-                                CentreDelivery = null,
-                                AlternateDelivery = null
-                            },
-                            WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension //11A
-                            {
                                 StorageOrganisation = "ABCD",
                                 StorageDescription = "45 MAIN ST",
                                 PaymentDueDate = "2017-01-27",
@@ -596,13 +547,12 @@ namespace Wiedpug.API.ExampleResponses
                                 DateStorageChargeCommences = "2017-01-24",
                                 StorageChargePerBalePerDay = 0.245,
                                 PenaltyInterestRate = 11.35,
-                                LotAvailableDate = null,
-                                PostSaleChargeRebate = null
                             },
+
                             // No 11BA
-                            Lots = new List<AuctionCatalogueWoolSaleHeaderLot>
+                            Lots = new List<CatalogueWoolSaleHeaderLot>
                             {
-                                new AuctionCatalogueWoolSaleHeaderLot
+                                new CatalogueWoolSaleHeaderLot
                                 {
                                     LotHeader = new Domain.Entities.LotHeader //20
                                     {
@@ -610,38 +560,21 @@ namespace Wiedpug.API.ExampleResponses
                                         Bales = 8,
                                         Gross = 1316,
                                         Tare = 16,
-                                        RegrabSampleWeight = null,
                                         CataloguePageNumber = 65,
-                                        IsNoLot = null,
-                                        SourceCode = null,
                                         UpdateType = UpdateType.A,
                                         CatalogueSymbols = CatalogueSymbol.A,
                                         PackMaterial = PackMaterial.N,
                                         LotType = LotType.ObjectivelyMatchedLot,
                                         LightestIndividualBaleWeight = 149,
                                         ReportingFlag = ReportingFlag.R,
-                                        FirstOfferSeason = null,
-                                        FirstOfferSaleIdentity = null,
-                                        FirstOfferLotIdentity = null,
                                         CostPerWeightUnit = 0,
                                         CleanWeight = 0,
-                                        YieldType = null,
-                                        WeightUnit = null,
-                                        OfferType = null,
-                                        ClientCrossReference = null,
                                         PackCondition = PackCondition.N
                                     },
                                     LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                     {
                                         CoreTestSamplingDate = "2019-01-17",
-                                        WoolDescriptionComment = null,
                                         WoolDescription = "MF6S",
-                                        GstTaxInvoiceFlag = true,
-                                        BrokerReservePrice = null,
-                                        GrowerReservePrice = null,
-                                        OpeningPrice = null,
-                                        ValuationPrice = null,
-                                        WoolDescriptionAuditCode = null,
                                         NumberOfOverweightBales = 0
     ,                               },
                                     //No 21B
@@ -649,22 +582,20 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                         AwexId = "MF6S",
                                         AppraiserId = "99192",
-                                        ClassersRegisteredNumber = "998921",
-                                        AwexIdComment = null,
-                                        AwexIdAuditCode = null
+                                        ClassersRegisteredNumber = "998921"
                                     },
                                     LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
                                     {
                                         new Domain.Entities.LotHeaderVendorDeclaration
                                         {
-                                            QualitySchemes = null,
+
                                             MulesingStatus = MulesingStatus.AA
                                         }
                                     },
                                     LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                     {
                                         CertificateIdentity = "300000664L6",
-                                        Charge = null,
+                                        Charge = 230.23,
                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                         RegrabSampleWeight = 0,
                                         StapleLength = 73,
@@ -674,7 +605,6 @@ namespace Wiedpug.API.ExampleResponses
                                         PositionOfBreakPercentageMiddle = 23,
                                         PositionOfBreakPercentageBase = 0,
                                         Team3Hauteur = 72,
-                                        ReissueChargeFlag = null,
                                         LsCertType = LsCertType.LengthAndStrengthTested,
                                         isLsSampleSecured = true,
                                         ExpectedBarbe = 111,
@@ -686,7 +616,6 @@ namespace Wiedpug.API.ExampleResponses
                                     CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                     {
                                         CertificateIdentity = "300000499P7",
-                                        Charge = null,
                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                         RegrabSampleWeight = null,
                                         WoolBase = 64.29,
@@ -697,8 +626,6 @@ namespace Wiedpug.API.ExampleResponses
                                         Yield2 = 78.50,
                                         Yield3 = 75.70,
                                         Yield4 = 72.10,
-                                        YieldType1 = null,
-                                        YieldType2 = null,
                                         RetestFlag = RetestFlag.NormalTest,
                                         Yield5 = 77.80,
                                         ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -724,9 +651,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 StandardDeviation = 4.0,
                                                 CurvatureMeanDegPerMm = 61,
                                                 CoreTestSamplingDate = "2017-01-10",
-                                                DateIssued = "2017-01-10",
-                                                FactorLaserscanNumerator = null,
-                                                FactorLaserscanDenominator = null
+                                                DateIssued = "2017-01-10"
                                             },
                                             FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
                                             {
@@ -763,51 +688,66 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDataAuctionCatalogueRequestExamples : IMultipleExamplesProvider<List<RequestForDataForAuctionCatalogue>>
+    public class RequestForDataCatalogueRequestExamples : IMultipleExamplesProvider<List<RequestForDataForCatalogue>>
     {        
-        IEnumerable<SwaggerExample<List<RequestForDataForAuctionCatalogue>>> IMultipleExamplesProvider<List<RequestForDataForAuctionCatalogue>>.GetExamples()
+        IEnumerable<SwaggerExample<List<RequestForDataForCatalogue>>> IMultipleExamplesProvider<List<RequestForDataForCatalogue>>.GetExamples()
         {
             yield return SwaggerExample.Create(
                 "Request for Auction Catalogue Data and Updates",
-                new List<RequestForDataForAuctionCatalogue>
+                new List<RequestForDataForCatalogue>
                 {
                     new()
                     {
-                        TransmissionTypeRequested = Domain.Enums.TransmissionTypeForAuctionCatalogue.AuctionCatalogues,
+                        TransmissionTypeRequested = Domain.Enums.TransmissionTypeForCatalogue.AuctionCatalogues,
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
                             SellingCentreType = "F",
                             SaleNumber = 18
                         },
-                        OrganisationRequested = "AWNF",
+                        OrganisationRequested = new Organisation { OrganizationCode = "AWNF" },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
+                        ExcludedTypes = new List<ExcludedType>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._84,                            
+                            new ExcludedType
+                            {
+                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._79B
+                            },
+                            new ExcludedType
+                            {
+                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._84
+                            }                          
                         },
                         Season = 23
                     },
                     new()
                     {
-                        TransmissionTypeRequested = Domain.Enums.TransmissionTypeForAuctionCatalogue.AuctionCatalogueUpdates,
+                        TransmissionTypeRequested = Domain.Enums.TransmissionTypeForCatalogue.AuctionCatalogueUpdates,
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
                             SellingCentreType = "F",
                             SaleNumber = 18
                         },
-                        OrganisationRequested = "AWNF",
+                        OrganisationRequested = new Organisation
+                        {
+                            OrganizationCode = "AWNF"
+                        },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
+                        ExcludedTypes = new List<ExcludedType>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._31,
+                            new ExcludedType
+                            {
+                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._79B
+                            },
+                            new ExcludedType
+                            {
+                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._31
+                            }
                         },
                         Season = 23
                     }
@@ -815,25 +755,34 @@ namespace Wiedpug.API.ExampleResponses
 
             yield return SwaggerExample.Create(
                 "Request for Private Catalogue Data",
-                new List<RequestForDataForAuctionCatalogue>
+                new List<RequestForDataForCatalogue>
                 {
                     new()
                     {
-                        TransmissionTypeRequested = Domain.Enums.TransmissionTypeForAuctionCatalogue.PrivateCatalogues,
+                        TransmissionTypeRequested = Domain.Enums.TransmissionTypeForCatalogue.PrivateCatalogues,
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
                             SellingCentreType = "F",
                             SaleNumber = 18
                         },
-                        OrganisationRequested = "AWNF",
+                        OrganisationRequested = new Organisation
+                        {
+                            OrganizationCode = "AWNF"
+                        },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         RequestType = Domain.Enums.RequestTypeForData.PrivateDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        RecordTypesToBeExcluded = new List<RecordTypesToBeExcludedForAuctionCatalogue>
+                        ExcludedTypes = new List<ExcludedType>
                         {
-                            RecordTypesToBeExcludedForAuctionCatalogue._79B,
-                            RecordTypesToBeExcludedForAuctionCatalogue._32A,
+                            new ExcludedType
+                            {
+                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._79B
+                            },
+                            new ExcludedType
+                            {
+                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._32A
+                            }
                         },
                         Season = 23
                     }
@@ -841,15 +790,15 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDataAuctionCatalogue200Example : IExamplesProvider<ApiResult<List<AuctionCatalogue>>>
+    public class RequestForDataCatalogue200Example : IExamplesProvider<ApiResult<List<Catalogue>>>
     {
-        public ApiResult<List<AuctionCatalogue>> GetExamples()
+        public ApiResult<List<Catalogue>> GetExamples()
         {
-            return new ApiResult<List<AuctionCatalogue>>()
+            return new ApiResult<List<Catalogue>>()
             {
                 IsSuccessful = true,
                 Message = null,
-                Data = new List<AuctionCatalogue>()
+                Data = new List<Catalogue>()
                 {
                     new()
                     {
@@ -858,11 +807,10 @@ namespace Wiedpug.API.ExampleResponses
                             DateFormatLastRevised = "2020007-15",
                             DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                            DocumentOriginator = "ABCD",
-                            CurrentTransmitter = "AWTM",
-                            CurrentReceiver = "AWXLC",
-                            FinalReceiver = "AWXLC",
-                            TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
@@ -872,11 +820,12 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ABN = "72001967184"
                         },
-                        WoolSaleHeaders = new List<AuctionCatalogueWoolSaleHeader>
+                        CatalogueType=CatalogueType.AuctionCatalogues,
+                        WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
                             {
-                                new AuctionCatalogueWoolSaleHeader
+                                new CatalogueWoolSaleHeader
                                 {
-                                    WoolSaleHeaderLots = new Domain.Entities.AuctionCatalogueWoolSaleHeaderLots //10
+                                    WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                                     {
                                         Season = 16,
                                         SaleIdentity = new Domain.Entities.SaleIdentity
@@ -895,20 +844,23 @@ namespace Wiedpug.API.ExampleResponses
                                         FreightCharge = 0.00,
                                         FreightRebate = 3.25,
                                         ChargePerLot = 0.00,
-                                        InvoiceNumber = null,
                                         CatalogueSection = CatalogueSection.FLC,
                                         IsFinalCatalogue = true,
-                                        InvoicingOrganisation = "ABCD",
-                                        ReleasingOrganisation = "ABCD",
-                                        SellingOrganisation = "ABCD",
+                                        InvoicingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                        ReleasingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                        SellingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                                         WoolTypeGroup = WoolTypeGroup.MFLC,
                                         CentreCatalogue = Centre.AU_G,
                                         DeliveryBasis = DeliveryBasis.D,
-                                        CentreDelivery = null,
-                                        AlternateDelivery = null
-                                    },
-                                    WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension //11A
-                                    {
                                         StorageOrganisation = "ABCD",
                                         StorageDescription = "45 MAIN ST",
                                         PaymentDueDate = "2017-01-27",
@@ -917,13 +869,11 @@ namespace Wiedpug.API.ExampleResponses
                                         DateStorageChargeCommences = "2017-01-24",
                                         StorageChargePerBalePerDay = 0.245,
                                         PenaltyInterestRate = 11.35,
-                                        LotAvailableDate = null,
-                                        PostSaleChargeRebate = null
                                     },
                                     // No 11BA
-                                    Lots = new List<AuctionCatalogueWoolSaleHeaderLot>
+                                    Lots = new List<CatalogueWoolSaleHeaderLot>
                                     {
-                                        new AuctionCatalogueWoolSaleHeaderLot
+                                        new CatalogueWoolSaleHeaderLot
                                         {
                                             LotHeader = new Domain.Entities.LotHeader //20
                                             {
@@ -931,38 +881,21 @@ namespace Wiedpug.API.ExampleResponses
                                                 Bales = 8,
                                                 Gross = 1316,
                                                 Tare = 16,
-                                                RegrabSampleWeight = null,
                                                 CataloguePageNumber = 65,
-                                                IsNoLot = null,
-                                                SourceCode = null,
                                                 UpdateType = UpdateType.A,
                                                 CatalogueSymbols = CatalogueSymbol.C,
                                                 PackMaterial = PackMaterial.N,
                                                 LotType = LotType.OtherBulkClassLot,
                                                 LightestIndividualBaleWeight = 149,
                                                 ReportingFlag = ReportingFlag.R,
-                                                FirstOfferSeason = null,
-                                                FirstOfferSaleIdentity = null,
-                                                FirstOfferLotIdentity = null,
                                                 CostPerWeightUnit = 0,
                                                 CleanWeight = 0,
-                                                YieldType = null,
-                                                WeightUnit = null,
-                                                OfferType = null,
-                                                ClientCrossReference = null,
                                                 PackCondition = PackCondition.N
                                             },
                                             LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
                                             {
                                                 CoreTestSamplingDate = "2019-01-17",
-                                                WoolDescriptionComment = null,
                                                 WoolDescription = "MF6S",
-                                                GstTaxInvoiceFlag = true,
-                                                BrokerReservePrice = null,
-                                                GrowerReservePrice = null,
-                                                OpeningPrice = null,
-                                                ValuationPrice = null,
-                                                WoolDescriptionAuditCode = null,
                                                 NumberOfOverweightBales = 0
             ,                               },
                                             //No 21B
@@ -970,22 +903,19 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 AwexId = "MF6S",
                                                 AppraiserId = "99192",
-                                                ClassersRegisteredNumber = "998921",
-                                                AwexIdComment = null,
-                                                AwexIdAuditCode = null
+                                                ClassersRegisteredNumber = "998921"
                                             },
                                             LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
                                             {
                                                 new Domain.Entities.LotHeaderVendorDeclaration
                                                 {
-                                                    QualitySchemes = null,
                                                     MulesingStatus = MulesingStatus.M
                                                 }
                                             },
                                             LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                             {
                                                 CertificateIdentity = "300000664L6",
-                                                Charge = null,
+                                                Charge = 174.30,
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                 RegrabSampleWeight = 0,
                                                 StapleLength = 73,
@@ -1007,9 +937,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                             {
                                                 CertificateIdentity = "300000499P7",
-                                                Charge = null,
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                                RegrabSampleWeight = null,
                                                 WoolBase = 64.29,
                                                 AirflowMean = 0.0,
                                                 Vmb = 1.3,
@@ -1018,8 +946,6 @@ namespace Wiedpug.API.ExampleResponses
                                                 Yield2 = 78.50,
                                                 Yield3 = 75.70,
                                                 Yield4 = 72.10,
-                                                YieldType1 = null,
-                                                YieldType2 = null,
                                                 RetestFlag = RetestFlag.NormalTest,
                                                 Yield5 = 77.80,
                                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -1045,9 +971,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         StandardDeviation = 4.0,
                                                         CurvatureMeanDegPerMm = 61,
                                                         CoreTestSamplingDate = "2017-01-10",
-                                                        DateIssued = "2017-01-10",
-                                                        FactorLaserscanNumerator = null,
-                                                        FactorLaserscanDenominator = null
+                                                        DateIssued = "2017-01-10"
                                                     }
                                                 }
                                             },
@@ -1056,12 +980,8 @@ namespace Wiedpug.API.ExampleResponses
                                                 Brand = "SALTBUSH/DOWNS",
                                                 BaleDescription = "AAAM",
                                                 AreaOfOrigin = "V11",
-                                                LocationWithinStore = null,
-                                                Bales = 8,
-                                                Postcode = null
-                                            },
-                                            BaleIdentifications = null,
-                                            InterlotComponentBales = null
+                                                Bales = 8
+                                            }
                                         }
                                     }
                                 }

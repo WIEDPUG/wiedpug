@@ -30,24 +30,8 @@ namespace Wiedpug.Domain.Entities
         public required CountryCode CountryOfOrigin { get; set; }
 
         [Required]
-        [StringLength(5)]
-        public required string DocumentOriginator { get; set; }
-
-        [Required]
-        [StringLength(5)]
-        public required string CurrentTransmitter { get; set; }
-
-        [Required]
-        [StringLength(5)]
-        public required string CurrentReceiver { get; set; }
-
-        [Required]
-        [StringLength(5)]
-        public required string FinalReceiver { get; set; }
-
-        [Required]
-        [StringLength(2)]
-        public required TransmissionType TransmissionType { get; set; }
+        [StringLength(8)]
+        public required Organisation DocumentOriginator { get; set; }
 
         /// <summary>
         /// Two digits. e.g. 99

@@ -8,8 +8,8 @@ namespace Wiedpug.Domain.Entities
     public class AdjustmentNoteDetails
     {
         [Required]
-        [StringLength(5)]
-        public required Client Client { get; set; }
+        [StringLength(8)]
+        public required Organisation Client { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]

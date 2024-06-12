@@ -13,7 +13,7 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [StringLength(5)]
-        public required string DocumentOriginator { get; set; }
+        public required Organisation DocumentOriginator { get; set; }
 
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 

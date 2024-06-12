@@ -18,11 +18,10 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2020-07-15",
                     DateTransmissionFileCreated = "2016-01-17",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = "ABCD",
-                    CurrentTransmitter = "AWTM",
-                    CurrentReceiver = "AWXLC",
-                    FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestRequestVerification,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganizationCode = "AWTA"
+                    },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
@@ -37,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TestDataHeader = new TestDataHeader
                         {
-                            Client = new Client
+                            Client = new Organisation
                             {
                                 OrganizationCode = "AWTA"
                             },
@@ -120,7 +119,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TestDataHeader = new TestDataHeader
                         {
-                            Client = new Client
+                            Client = new Organisation
                             {
                                 OrganizationCode = "AWTA"
                             },

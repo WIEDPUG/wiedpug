@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 using static System.Collections.Specialized.BitVector32;
 
 namespace Wiedpug.Domain.Entities
@@ -86,19 +87,19 @@ namespace Wiedpug.Domain.Entities
         /// The code for the broker who will raise the invoice for the wool
         /// </summary>
         [Required]
-        [StringLength(5)]
-        public required string InvoicingOrganisation { get; set; }
+        [StringLength(8)]
+        public required Organisation InvoicingOrganisation { get; set; }
 
         /// <summary>
         /// The broker that is responsible for releasing the wool out of the store
         /// </summary>
         [Required]
         [StringLength(5)]
-        public required string ReleasingOrganisation { get; set; }
+        public required Organisation ReleasingOrganisation { get; set; }
 
         [Required]
         [StringLength(5)]
-        public required string SellingOrganisation { get; set; }
+        public required Organisation SellingOrganisation { get; set; }
 
         [Required]
         [StringLength(4)]

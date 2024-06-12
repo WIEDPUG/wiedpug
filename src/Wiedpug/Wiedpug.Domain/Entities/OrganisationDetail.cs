@@ -10,8 +10,8 @@ namespace Wiedpug.Domain.Entities
         public string? Id { get; set; }
 
         [Required]
-        [StringLength(5)]
-        public required string OrganisationCode { get; set; }
+        [StringLength(8)]
+        public required Organisation Organisation { get; set; }
 
         [Required]
         [StringLength(50)]

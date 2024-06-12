@@ -25,7 +25,10 @@ paths:
               $ref: '#/components/schemas/GetOrganisationDetailsRequest'
             example:
               countryOfOrigin: AU
-              documentOriginator: ABCD
+              documentOriginator:
+                organizationCode: ABCD
+                centre: null
+                organizationID: null
               softwareIdentifier:
                 softwareCompany: 1
                 version: 1082
@@ -50,11 +53,10 @@ paths:
                     dateFormatLastRevised: '2020-07-15'
                     dateTransmissionFileCreated: '2016-01-17'
                     countryOfOrigin: AU
-                    documentOriginator: ABCD
-                    currentTransmitter: AWTM
-                    currentReceiver: AWXLC
-                    finalReceiver: AWXLC
-                    transmissionType: 11
+                    documentOriginator:
+                      organizationCode: ABCD
+                      centre: null
+                      organizationID: null
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 6
@@ -63,7 +65,10 @@ paths:
                     abn: '72001925678'
                   organisationDetailCollection:
                     - id: '1'
-                      organisationCode: AWTS
+                      organisation:
+                        organizationCode: AWTS
+                        centre: null
+                        organizationID: null
                       nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: E
@@ -102,7 +107,10 @@ paths:
                           mobileNumber: null
                           email: null
                     - id: '2'
-                      organisationCode: BUY1
+                      organisation:
+                        organizationCode: ABCD
+                        centre: null
+                        organizationID: null
                       nameOfOrganisation: DEMO BUYER 1
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: E
@@ -110,10 +118,13 @@ paths:
                       phoneNumber: null
                       abn: null
                       faxNumber: null
-                      addresses: []
-                      contacts: []
+                      addresses: null
+                      contacts: null
                     - id: '3'
-                      organisationCode: AWTN
+                      organisation:
+                        organizationCode: AWTN
+                        centre: null
+                        organizationID: null
                       nameOfOrganisation: AUSTRALIAN WOOL TESTING AUTH LTD
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: A
@@ -240,17 +251,19 @@ paths:
                   dateFormatLastRevised: '2020-07-15'
                   dateTransmissionFileCreated: '2016-01-17'
                   countryOfOrigin: AU
-                  documentOriginator: AWTM
-                  currentTransmitter: AWTM
-                  currentReceiver: AWXTS
-                  finalReceiver: AWXTS
-                  transmissionType: 11
+                  documentOriginator:
+                    organizationCode: ABCD
+                    centre: null
+                    organizationID: null
                   versionNumber: null
                   softwareIdentifier: null
                   abn: '43006014106'
                 organisationDetailCollection:
                   - id: '1'
-                    organisationCode: AWTS
+                    organisation:
+                      organizationCode: ABCD
+                      centre: null
+                      organizationID: null
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
                     industryGroupId: T
@@ -357,17 +370,19 @@ paths:
                 dateFormatLastRevised: '2020-07-15'
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
-                documentOriginator: AWTM
-                currentTransmitter: AWTM
-                currentReceiver: AWXTS
-                finalReceiver: AWXTS
-                transmissionType: 11
+                documentOriginator:
+                  organizationCode: ABCD
+                  centre: null
+                  organizationID: null
                 versionNumber: null
                 softwareIdentifier: null
                 abn: '43006014106'
               organisationDetailCollection:
                 - id: null
-                  organisationCode: AWTS
+                  organisation:
+                    organizationCode: ABCD
+                    centre: null
+                    organizationID: null
                   nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                   dateLastUpdated: '2020-04-28'
                   industryGroupId: E
@@ -418,17 +433,19 @@ paths:
                   dateFormatLastRevised: '2020-07-15'
                   dateTransmissionFileCreated: '2016-01-17'
                   countryOfOrigin: AU
-                  documentOriginator: AWTM
-                  currentTransmitter: AWTM
-                  currentReceiver: AWXTS
-                  finalReceiver: AWXTS
-                  transmissionType: 11
+                  documentOriginator:
+                    organizationCode: ABCD
+                    centre: null
+                    organizationID: null
                   versionNumber: null
                   softwareIdentifier: null
                   abn: '43006014106'
                 organisationDetailCollection:
                   - id: '1'
-                    organisationCode: AWTS
+                    organisation:
+                      organizationCode: ABCD
+                      centre: null
+                      organizationID: null
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
                     industryGroupId: T
@@ -674,6 +691,200 @@ components:
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses
+    Centre:
+      enum:
+        - AU_A
+        - AU_AD
+        - AU_AR
+        - AU_AU
+        - AU_B
+        - AU_BA
+        - AU_BK
+        - AU_BL
+        - AU_BM
+        - AU_BO
+        - AU_BR
+        - AU_BT
+        - AU_C
+        - AU_CA
+        - AU_CB
+        - AU_CC
+        - AU_CL
+        - AU_CN
+        - AU_CO
+        - AU_CR
+        - AU_CU
+        - AU_CW
+        - AU_D
+        - AU_DE
+        - AU_DO
+        - AU_DR
+        - AU_E
+        - AU_ER
+        - AU_ES
+        - AU_F
+        - AU_G
+        - AU_GF
+        - AU_GI
+        - AU_GN
+        - AU_GR
+        - AU_GU
+        - AU_H
+        - AU_HA
+        - AU_HB
+        - AU_HM
+        - AU_HO
+        - AU_HY
+        - AU_I
+        - AU_J
+        - AU_JA
+        - AU_K
+        - AU_KE
+        - AU_KH
+        - AU_KI
+        - AU_KN
+        - AU_KT
+        - AU_KW
+        - AU_KY
+        - AU_L
+        - AU_LC
+        - AU_M
+        - AU_MA
+        - AU_MB
+        - AU_MC
+        - AU_ME
+        - AU_MG
+        - AU_MI
+        - AU_MO
+        - AU_MR
+        - AU_MU
+        - AU_N
+        - AU_NA
+        - AU_ND
+        - AU_NO
+        - AU_NR
+        - AU_OB
+        - AU_OR
+        - AU_P
+        - AU_PA
+        - AU_PL
+        - AU_Q
+        - AU_QU
+        - AU_R
+        - AU_S
+        - AU_SG
+        - AU_SH
+        - AU_SK
+        - AU_SW
+        - AU_SY
+        - AU_T
+        - AU_TE
+        - AU_U
+        - AU_UR
+        - AU_V
+        - AU_W
+        - AU_WA
+        - AU_WG
+        - AU_WL
+        - AU_WN
+        - AU_WR
+        - AU_WW
+        - AU_X
+        - AU_Y
+        - AU_YA
+        - AU_YM
+        - AU_YO
+        - AU_Z
+        - OS_ZA
+        - OS_ZB
+        - OS_ZC
+        - OS_ZD
+        - OS_ZE
+        - OS_ZF
+        - OS_ZG
+        - OS_ZH
+        - OS_ZI
+        - OS_ZJ
+        - OS_ZK
+        - OS_ZL
+        - OS_ZM
+        - OS_ZN
+        - OS_ZO
+        - OS_ZP
+        - OS_ZQ
+        - OS_ZR
+        - OS_ZS
+        - OS_ZT
+        - OS_ZU
+        - OS_ZV
+        - OS_ZW
+        - OS_ZX
+        - OS_ZY
+        - OS_ZZ
+        - NZ_A
+        - NZ_AW
+        - NZ_B
+        - NZ_BL
+        - NZ_BT
+        - NZ_C
+        - NZ_CV
+        - NZ_D
+        - NZ_F
+        - NZ_FA
+        - NZ_G
+        - NZ_GD
+        - NZ_GO
+        - NZ_HA
+        - NZ_HS
+        - NZ_I
+        - NZ_J
+        - NZ_K
+        - NZ_KA
+        - NZ_KP
+        - NZ_L
+        - NZ_LO
+        - NZ_LU
+        - NZ_M
+        - NZ_MA
+        - NZ_MK
+        - NZ_MT
+        - NZ_MU
+        - NZ_N
+        - NZ_NE
+        - NZ_O
+        - NZ_OH
+        - NZ_OI
+        - NZ_OM
+        - NZ_OT
+        - NZ_P
+        - NZ_PT
+        - NZ_PU
+        - NZ_R
+        - NZ_RG
+        - NZ_RI
+        - NZ_S
+        - NZ_SA
+        - NZ_SH
+        - NZ_SY
+        - NZ_T
+        - NZ_TA
+        - NZ_TE
+        - NZ_TH
+        - NZ_TP
+        - NZ_U
+        - NZ_V
+        - NZ_W
+        - NZ_WH
+        - NZ_WI
+        - NZ_WR
+        - NZ_WT
+        - NZ_WU
+        - NZ_X
+        - NZ_Y
+        - NZ_YP
+        - NZ_Z
+      type: string
+      description: ''
     Contact:
       type: object
       properties:
@@ -754,9 +965,7 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
-          maxLength: 5
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/Organisation'
         softwareIdentifier:
           $ref: '#/components/schemas/SoftwareIdentifier'
         abn:
@@ -781,7 +990,7 @@ components:
           format: date-time
           nullable: true
         useNetworkDateTime:
-          maxLength: 4
+          maxLength: 5
           minLength: 0
           type: boolean
           nullable: true
@@ -799,22 +1008,36 @@ components:
         - V
       type: string
       description: 'A: Agent / Broker<br />C: Carrier<br />E: Exporter / Buyer<br />D: Dump<br />M: Miscellaneous<br />P: Port<br />S: Shipping<br />T: Test House<br />V: Vessel'
+    Organisation:
+      type: object
+      properties:
+        organizationCode:
+          maxLength: 3
+          minLength: 0
+          type: string
+          nullable: true
+        centre:
+          $ref: '#/components/schemas/Centre'
+        organizationID:
+          maxLength: 5
+          minLength: 0
+          type: string
+          nullable: true
+      additionalProperties: false
     OrganisationDetail:
       required:
         - dateLastUpdated
         - industryGroupId
         - nameOfOrganisation
-        - organisationCode
+        - organisation
         - transmitterFlag
       type: object
       properties:
         id:
           type: string
           nullable: true
-        organisationCode:
-          maxLength: 5
-          minLength: 0
-          type: string
+        organisation:
+          $ref: '#/components/schemas/Organisation'
         nameOfOrganisation:
           maxLength: 50
           minLength: 0
@@ -964,13 +1187,9 @@ components:
       required:
         - abn
         - countryOfOrigin
-        - currentReceiver
-        - currentTransmitter
         - dateFormatLastRevised
         - dateTransmissionFileCreated
         - documentOriginator
-        - finalReceiver
-        - transmissionType
       type: object
       properties:
         dateFormatLastRevised:
@@ -990,23 +1209,7 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentTransmitter:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
-        finalReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
-        transmissionType:
-          $ref: '#/components/schemas/TransmissionType'
+          $ref: '#/components/schemas/Organisation'
         versionNumber:
           pattern: '-?\d{1,2}'
           type: integer
@@ -1022,32 +1225,6 @@ components:
           type: string
           description: Australian Business Number, 11 digits string
       additionalProperties: false
-    TransmissionType:
-      enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 11
-        - 13
-        - 16
-        - 17
-        - 50
-        - 52
-        - 55
-        - 56
-        - 60
-        - 64
-        - 98
-        - 99
-      type: integer
-      description: 'The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement'
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

@@ -61,13 +61,13 @@ var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(api
 
 //versionedGroup.MapTestCertificatesEndpoints();
 
-//versionedGroup.MapAuctionCatalogueEndpoints();
+//versionedGroup.MapCatalogueEndpoints();
 
 //versionedGroup.MapRequestForStatusEndpoints();
 
-//versionedGroup.MapOrganisationDetailsEndpoints();
+versionedGroup.MapOrganisationDetailsEndpoints();
 
-//versionedGroup.MapAuctionCatalogueEndpointsV2();
+//versionedGroup.MapCatalogueEndpointsV2();
 
 //versionedGroup.MapTestStatusEndpoints();
 
@@ -79,7 +79,7 @@ var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(api
 
 //versionedGroup.MapLotInvoicesEndpoints();
 
-versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
+//versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

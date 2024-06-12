@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -29,8 +30,8 @@ namespace Wiedpug.Domain.Entities
         /// Generic string field.
         /// </summary>
         [Required]
-        [StringLength(5)]
-        public required string Client { get; set; }
+        [StringLength(8)]
+        public required Organisation Client { get; set; }
 
         /// <summary>
         /// Numeric field.

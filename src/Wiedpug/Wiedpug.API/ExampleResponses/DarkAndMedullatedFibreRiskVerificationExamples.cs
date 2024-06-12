@@ -18,11 +18,10 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2020-07-15",
                     DateTransmissionFileCreated = "2016-01-17",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = "ABCD",
-                    CurrentTransmitter = "AWTM",
-                    CurrentReceiver = "AWXLC",
-                    FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestStatus,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganizationCode = "ABCD"
+                    },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
                     {

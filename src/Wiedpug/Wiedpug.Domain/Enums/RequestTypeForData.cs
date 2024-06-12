@@ -3,7 +3,6 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum RequestTypeForData
     {
         [Description("1: Private Data Request")] //For PC - Returns AC

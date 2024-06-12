@@ -22,12 +22,10 @@ namespace Wiedpug.API.ExampleResponses
                             DateFormatLastRevised = "2020-07-15",
                             DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                            DocumentOriginator = "ABCD",
-                            CurrentTransmitter = "AWTM",
-                            CurrentReceiver = "AWXLC",
-                            FinalReceiver = "AWXLC",
-                            TransmissionType = TransmissionType.TestCertificate,
-                            VersionNumber = 31,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
@@ -59,9 +57,18 @@ namespace Wiedpug.API.ExampleResponses
                                     FreightCharge = 0.00,
                                     FreightRebate = 3.25,
                                     ChargePerLot = 0.00,
-                                    InvoicingOrganisation = "ABCD",
-                                    ReleasingOrganisation = "ABCD",
-                                    SellingOrganisation = "ABCD",
+                                    InvoicingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                    ReleasingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                    SellingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
                                     DeliveryBasis = DeliveryBasis.D
@@ -206,12 +213,10 @@ namespace Wiedpug.API.ExampleResponses
                             DateFormatLastRevised = "2020-07-15",
                             DateTransmissionFileCreated = "2016-01-17",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                            DocumentOriginator = "ABCD",
-                            CurrentTransmitter = "AWTM",
-                            CurrentReceiver = "AWXLC",
-                            FinalReceiver = "AWXLC",
-                            TransmissionType = TransmissionType.TestCertificate,
-                            VersionNumber = 31,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
@@ -243,9 +248,18 @@ namespace Wiedpug.API.ExampleResponses
                                     FreightCharge = 0.00,
                                     FreightRebate = 3.25,
                                     ChargePerLot = 0.00,
-                                    InvoicingOrganisation = "ABCD",
-                                    ReleasingOrganisation = "ABCD",
-                                    SellingOrganisation = "ABCD",
+                                    InvoicingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                    ReleasingOrganisation = new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
+                                    SellingOrganisation =new Organisation
+                            {
+                                OrganizationCode = "ABCD"
+                            },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
                                     DeliveryBasis = DeliveryBasis.D

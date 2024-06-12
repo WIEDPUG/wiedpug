@@ -1,6 +1,7 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
@@ -19,12 +20,10 @@ namespace Wiedpug.API.ExampleResponses
                             DateFormatLastRevised = "2022-07-25",
                             DateTransmissionFileCreated = "2024-03-21",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                            DocumentOriginator = "AWTX",
-                            CurrentTransmitter = "AWTX",
-                            CurrentReceiver = "AWTM",
-                            FinalReceiver = "AWTM",
-                            TransmissionType = Domain.Enums.TransmissionType.AuctionCatalogues,
-                            VersionNumber = 36,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganizationCode = "AWTX"
+                            },VersionNumber = 36,
                             ABN = "00000000000"
                         },
                         RequestForDataCollection = new List<Domain.Entities.RequestForData>

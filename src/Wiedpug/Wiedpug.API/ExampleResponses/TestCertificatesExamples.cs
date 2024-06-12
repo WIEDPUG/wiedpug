@@ -18,11 +18,10 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2020-07-15",
                     DateTransmissionFileCreated = "2016-01-17",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = "ABCD",
-                    CurrentTransmitter = "AWTM",
-                    CurrentReceiver = "AWXLC",
-                    FinalReceiver = "AWXLC",
-                    TransmissionType = TransmissionType.TestCertificate,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganizationCode = "ABCD"
+                    },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
@@ -37,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificate {
                         TestDataHeader = new TestDataHeader
                         {
-                            Client = new Client
+                            Client = new Organisation
                             {
                                 OrganizationCode = "AWTA"
                             },
@@ -150,7 +149,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TestDataHeader = new TestDataHeader
                         {
-                            Client = new Client
+                            Client = new Organisation
                             {
                                 OrganizationCode = "AWTA"
                             },
@@ -275,11 +274,23 @@ namespace Wiedpug.API.ExampleResponses
             return new GetTestCertificatesRequest()
             {
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = "ABCD",
-                    CurrentTransmitter = "AWTM",
-                    CurrentReceiver = "AWXLC",
-                    FinalReceiver = "AWXLC",
-                    SoftwareIdentifier = new SoftwareIdentifier
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganizationCode = "AWTA"
+                    },
+                CurrentTransmitter = new Organisation
+                {
+                    OrganizationCode = "AWTA"
+                },
+                CurrentReceiver = new Organisation
+                {
+                    OrganizationCode = "AWXLC"
+                },
+                FinalReceiver = new Organisation
+                {
+                    OrganizationCode = "AWXLC"
+                },
+                SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.Talman,
@@ -305,11 +316,10 @@ namespace Wiedpug.API.ExampleResponses
                         DateFormatLastRevised = "2020-07-15",
                         DateTransmissionFileCreated = "2016-01-17",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                        DocumentOriginator = "ABCD",
-                        CurrentTransmitter = "AWTM",
-                        CurrentReceiver = "AWXLC",
-                        FinalReceiver = "AWXLC",
-                        TransmissionType = TransmissionType.TestCertificate,
+                        DocumentOriginator = new Organisation
+                        {
+                            OrganizationCode = "AWTA"
+                        },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
@@ -325,7 +335,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TestDataHeader = new TestDataHeader
                         {
-                            Client = new Client
+                            Client = new Organisation
                             {
                                 OrganizationCode = "AWTA"
                             },
@@ -438,7 +448,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TestDataHeader = new TestDataHeader
                         {
-                            Client = new Client
+                            Client = new Organisation
                             {
                                 OrganizationCode = "AWTA"
                             },

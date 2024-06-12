@@ -11,20 +11,20 @@ namespace Wiedpug.Domain.Entities
         public required CountryCode CountryOfOrigin { get; set; }
 
         [Required]
-        [StringLength(5)]
-        public required string DocumentOriginator { get; set; }
+        [StringLength(8)]
+        public required Organisation DocumentOriginator { get; set; }
 
         [Required]
-        [StringLength(5)]
-        public required string CurrentTransmitter { get; set; }
+        [StringLength(8)]
+        public required Organisation CurrentTransmitter { get; set; }
 
         [Required]
-        [StringLength(5)]
-        public required string CurrentReceiver { get; set; }
+        [StringLength(8)]
+        public required Organisation CurrentReceiver { get; set; }
 
         [Required]
-        [StringLength(5)]
-        public required string FinalReceiver { get; set; }
+        [StringLength(8)]
+        public required Organisation FinalReceiver { get; set; }
 
         [StringLength(9)]
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }

@@ -4,7 +4,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
 {
-    public class AuctionCatalogueWoolSaleHeaderLot
+    public class CatalogueWoolSaleHeaderLot
     {
         public LotHeader? LotHeader { get; set; }
         public LotHeaderExtension? LotHeaderExtension { get; set; }
@@ -38,7 +38,7 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         /// <summary>
         /// This field is completely optional when sending Auction Catalogue Updates
         /// </summary>
-        public List<AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale>? InterlotComponentBales { get; set; }
+        public List<CatalogueWoolSaleHeaderLotInterlotComponentBale>? InterlotComponentBales { get; set; }
 
     }
 }

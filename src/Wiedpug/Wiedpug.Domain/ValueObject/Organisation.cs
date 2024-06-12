@@ -8,7 +8,7 @@ using Wiedpug.Domain.Enums;
 
 namespace Wiedpug.Domain.ValueObject
 {
-    public class Client
+    public class Organisation
     {
         [StringLength(3)]
         public string? OrganizationCode { get; set; }
