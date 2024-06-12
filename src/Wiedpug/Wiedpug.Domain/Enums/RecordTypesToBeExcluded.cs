@@ -18,10 +18,6 @@ namespace Wiedpug.Domain.Enums
         _09,
         [Description("10:Wool Sale Header – Lots")]
         _10,
-        [Description("11A: Wool Sale Header – Extension")]
-        _11A,
-        [Description("11B: Wool Sale Header – Non Auction")]
-        _11B,
         [Description("12: Wool Sale Header – Groups")]
         _12,
         [Description("13: Lot Price and Buyer Details")]
