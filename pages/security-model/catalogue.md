@@ -17,9 +17,9 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| auction-catalogue:write  | ✓                   |                |
-| auction-catalogue:read   | ✓                   | ✓                |
-| auction-catalogue:limited-write  |                   | ✓                |
+| catalogue:write  | ✓                   |                |
+| catalogue:read   | ✓                   | ✓                |
+| catalogue:limited-write  |                   | ✓                |
 
 **Administrator:** `read` and `write` access allows the administrator to transmit Auction Catalogue, Private Catalogue and Auction Catalogue Updates to the network, as well as request for data.
 

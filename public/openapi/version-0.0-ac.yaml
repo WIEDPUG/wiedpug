@@ -832,7 +832,6 @@ paths:
                     startDateTimeStatusRequest: null
                     endDateTimeStatusRequest: null
                     useNetworkDateTime: false
-                    requestType: 4
                     woolTypeGroup: MFLC
                     excludedTypes:
                       - recordTypesToBeExcluded: 79B
@@ -852,7 +851,6 @@ paths:
                     startDateTimeStatusRequest: null
                     endDateTimeStatusRequest: null
                     useNetworkDateTime: false
-                    requestType: 4
                     woolTypeGroup: MFLC
                     excludedTypes:
                       - recordTypesToBeExcluded: 79B
@@ -874,7 +872,6 @@ paths:
                     startDateTimeStatusRequest: null
                     endDateTimeStatusRequest: null
                     useNetworkDateTime: false
-                    requestType: 1
                     woolTypeGroup: MFLC
                     excludedTypes:
                       - recordTypesToBeExcluded: 79B
@@ -3198,7 +3195,6 @@ components:
       description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
     RequestForDataForCatalogue:
       required:
-        - requestType
         - transmissionTypeRequested
       type: object
       properties:
@@ -3237,8 +3233,6 @@ components:
           minLength: 0
           type: boolean
           nullable: true
-        requestType:
-          $ref: '#/components/schemas/RequestTypeForData'
         woolTypeGroup:
           $ref: '#/components/schemas/WoolTypeGroup'
         excludedTypes:
@@ -3255,14 +3249,6 @@ components:
           format: int32
           nullable: true
       additionalProperties: false
-    RequestTypeForData:
-      enum:
-        - 1
-        - 3
-        - 4
-      type: integer
-      description: '1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
-      format: int32
     RetestFlag:
       enum:
         - 0

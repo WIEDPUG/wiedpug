@@ -49,10 +49,6 @@ namespace Wiedpug.Domain.Entities
         [StringLength(5)]
         public bool? UseNetworkDateTime { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public required RequestTypeForData RequestType { get; set; }
-
         [StringLength(4)]
         public WoolTypeGroup? WoolTypeGroup { get; set; }
 

@@ -707,7 +707,6 @@ namespace Wiedpug.API.ExampleResponses
                         OrganisationRequested = new Organisation { OrganizationCode = "AWNF" },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
-                        RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         ExcludedTypes = new List<ExcludedType>
                         {
@@ -736,7 +735,6 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
-                        RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         ExcludedTypes = new List<ExcludedType>
                         {
@@ -771,7 +769,6 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
-                        RequestType = Domain.Enums.RequestTypeForData.PrivateDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         ExcludedTypes = new List<ExcludedType>
                         {
