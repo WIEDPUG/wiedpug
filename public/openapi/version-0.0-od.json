@@ -32,9 +32,7 @@
                             "example": {
                                 "countryOfOrigin": "AU",
                                 "documentOriginator": {
-                                    "organizationCode": "ABCD",
-                                    "centre": null,
-                                    "organizationID": null
+                                    "organizationCode": "ABCD"
                                 },
                                 "softwareIdentifier": {
                                     "softwareCompany": 1,
@@ -60,16 +58,13 @@
                                 },
                                 "example": {
                                     "isSuccessful": true,
-                                    "message": null,
                                     "data": {
                                         "transmissionHeader": {
                                             "dateFormatLastRevised": "2020-07-15",
                                             "dateTransmissionFileCreated": "2016-01-17",
                                             "countryOfOrigin": "AU",
                                             "documentOriginator": {
-                                                "organizationCode": "ABCD",
-                                                "centre": null,
-                                                "organizationID": null
+                                                "organizationCode": "ABCD"
                                             },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
@@ -83,9 +78,7 @@
                                             {
                                                 "id": "1",
                                                 "organisation": {
-                                                    "organizationCode": "AWTS",
-                                                    "centre": null,
-                                                    "organizationID": null
+                                                    "organizationCode": "AWTS"
                                                 },
                                                 "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                                 "dateLastUpdated": "2020-04-28",
@@ -95,71 +88,48 @@
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
                                                         "number": "0317229370"
-                                                    },
-                                                    "extension": null
+                                                    }
                                                 },
-                                                "abn": null,
                                                 "faxNumber": {
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
                                                         "number": "03763262290"
-                                                    },
-                                                    "extension": null
+                                                    }
                                                 },
                                                 "addresses": [
                                                     {
-                                                        "firstName": null,
-                                                        "lastName": null,
-                                                        "organisationName": null,
-                                                        "premise": null,
                                                         "street": "88 HARBOR ROAD",
                                                         "suburb": "KENSINGTON",
-                                                        "city": null,
-                                                        "regionOrState": null,
                                                         "postCode": "3031",
                                                         "country": "AU"
                                                     }
                                                 ],
                                                 "contacts": [
                                                     {
-                                                        "description": null,
                                                         "firstName": "HEAD OFFICE",
-                                                        "lastName": null,
                                                         "phoneNumber": {
                                                             "standardPhoneNumber": {
                                                                 "countryCode": "61",
                                                                 "number": "0309332782"
-                                                            },
-                                                            "extension": null
-                                                        },
-                                                        "mobileNumber": null,
-                                                        "email": null
+                                                            }
+                                                        }
                                                     }
                                                 ]
                                             },
                                             {
                                                 "id": "2",
                                                 "organisation": {
-                                                    "organizationCode": "ABCD",
-                                                    "centre": null,
-                                                    "organizationID": null
+                                                    "organizationCode": "ABCD"
                                                 },
                                                 "nameOfOrganisation": "DEMO BUYER 1",
                                                 "dateLastUpdated": "2020-04-28",
                                                 "industryGroupId": "E",
-                                                "transmitterFlag": "N",
-                                                "phoneNumber": null,
-                                                "abn": null,
-                                                "faxNumber": null,
-                                                "addresses": null,
-                                                "contacts": null
+                                                "transmitterFlag": "N"
                                             },
                                             {
                                                 "id": "3",
                                                 "organisation": {
-                                                    "organizationCode": "AWTN",
-                                                    "centre": null,
-                                                    "organizationID": null
+                                                    "organizationCode": "AWTN"
                                                 },
                                                 "nameOfOrganisation": "AUSTRALIAN WOOL TESTING AUTH LTD",
                                                 "dateLastUpdated": "2020-04-28",
@@ -169,43 +139,31 @@
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
                                                         "number": "0254009986"
-                                                    },
-                                                    "extension": null
+                                                    }
                                                 },
-                                                "abn": null,
-                                                "faxNumber": null,
                                                 "addresses": [
                                                     {
-                                                        "firstName": null,
-                                                        "lastName": null,
-                                                        "organisationName": null,
-                                                        "premise": null,
                                                         "street": "367 NEW HAMMER STREET",
                                                         "suburb": "NEWCASTLE",
-                                                        "city": null,
-                                                        "regionOrState": null,
                                                         "postCode": "2031",
                                                         "country": "AU"
                                                     }
                                                 ],
                                                 "contacts": [
                                                     {
-                                                        "description": null,
                                                         "firstName": "MIKE",
                                                         "lastName": "PWOELL",
                                                         "phoneNumber": {
                                                             "standardPhoneNumber": {
                                                                 "countryCode": "61",
                                                                 "number": "0387569072"
-                                                            },
-                                                            "extension": null
+                                                            }
                                                         },
                                                         "mobileNumber": {
                                                             "standardPhoneNumber": {
                                                                 "countryCode": "61",
                                                                 "number": "0353298764"
-                                                            },
-                                                            "extension": null
+                                                            }
                                                         },
                                                         "email": "mpowell@awtn.co.au"
                                                     }
@@ -253,8 +211,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                                     "title": "Unauthorized",
                                     "status": 401,
-                                    "detail": "Missing authentication credentials",
-                                    "errors": null
+                                    "detail": "Missing authentication credentials"
                                 }
                             }
                         }
@@ -270,8 +227,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "You don't have permission to access this resource",
                                     "status": 403,
-                                    "detail": "You don't have a 'read' access to access this resource",
-                                    "errors": null
+                                    "detail": "You don't have a 'read' access to access this resource"
                                 }
                             }
                         }
@@ -286,9 +242,7 @@
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "Resource not found",
-                                    "status": 404,
-                                    "detail": null,
-                                    "errors": null
+                                    "status": 404
                                 }
                             }
                         }
@@ -304,8 +258,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                                     "title": "An error occurred while processing your required",
                                     "status": 500,
-                                    "detail": "Error details..",
-                                    "errors": null
+                                    "detail": "Error details.."
                                 }
                             }
                         }
@@ -344,21 +297,15 @@
                                         "dateTransmissionFileCreated": "2016-01-17",
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
-                                            "organizationCode": "ABCD",
-                                            "centre": null,
-                                            "organizationID": null
+                                            "organizationCode": "ABCD"
                                         },
-                                        "versionNumber": null,
-                                        "softwareIdentifier": null,
                                         "abn": "43006014106"
                                     },
                                     "organisationDetailCollection": [
                                         {
                                             "id": "1",
                                             "organisation": {
-                                                "organizationCode": "ABCD",
-                                                "centre": null,
-                                                "organizationID": null
+                                                "organizationCode": "ABCD"
                                             },
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
@@ -368,45 +315,31 @@
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
                                                     "number": "0389004637"
-                                                },
-                                                "extension": null
+                                                }
                                             },
-                                            "abn": null,
                                             "faxNumber": {
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
                                                     "number": "0320874405"
-                                                },
-                                                "extension": null
+                                                }
                                             },
                                             "addresses": [
                                                 {
-                                                    "firstName": null,
-                                                    "lastName": null,
-                                                    "organisationName": null,
-                                                    "premise": null,
                                                     "street": "28 GREAT SOUTH ROAD",
                                                     "suburb": "KENSINGTON",
-                                                    "city": null,
-                                                    "regionOrState": null,
                                                     "postCode": "3031",
                                                     "country": "AU"
                                                 }
                                             ],
                                             "contacts": [
                                                 {
-                                                    "description": null,
                                                     "firstName": "HEAD OFFICE",
-                                                    "lastName": null,
                                                     "phoneNumber": {
                                                         "standardPhoneNumber": {
                                                             "countryCode": "61",
                                                             "number": "0310108809"
-                                                        },
-                                                        "extension": null
-                                                    },
-                                                    "mobileNumber": null,
-                                                    "email": null
+                                                        }
+                                                    }
                                                 }
                                             ]
                                         }
@@ -426,8 +359,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                                     "title": "Unauthorized",
                                     "status": 401,
-                                    "detail": "Missing authentication credentials",
-                                    "errors": null
+                                    "detail": "Missing authentication credentials"
                                 }
                             }
                         }
@@ -443,8 +375,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "You don't have permission to access this resource",
                                     "status": 403,
-                                    "detail": "You don't have a 'read' access to access this resource",
-                                    "errors": null
+                                    "detail": "You don't have a 'read' access to access this resource"
                                 }
                             }
                         }
@@ -459,9 +390,7 @@
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "Resource not found",
-                                    "status": 404,
-                                    "detail": null,
-                                    "errors": null
+                                    "status": 404
                                 }
                             }
                         }
@@ -477,8 +406,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                                     "title": "An error occurred while processing your required",
                                     "status": 500,
-                                    "detail": "Error details..",
-                                    "errors": null
+                                    "detail": "Error details.."
                                 }
                             }
                         }
@@ -513,21 +441,14 @@
                                     "dateTransmissionFileCreated": "2016-01-17",
                                     "countryOfOrigin": "AU",
                                     "documentOriginator": {
-                                        "organizationCode": "ABCD",
-                                        "centre": null,
-                                        "organizationID": null
+                                        "organizationCode": "ABCD"
                                     },
-                                    "versionNumber": null,
-                                    "softwareIdentifier": null,
                                     "abn": "43006014106"
                                 },
                                 "organisationDetailCollection": [
                                     {
-                                        "id": null,
                                         "organisation": {
-                                            "organizationCode": "ABCD",
-                                            "centre": null,
-                                            "organizationID": null
+                                            "organizationCode": "ABCD"
                                         },
                                         "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                         "dateLastUpdated": "2020-04-28",
@@ -537,45 +458,31 @@
                                             "standardPhoneNumber": {
                                                 "countryCode": "61",
                                                 "number": "0389004637"
-                                            },
-                                            "extension": null
+                                            }
                                         },
-                                        "abn": null,
                                         "faxNumber": {
                                             "standardPhoneNumber": {
                                                 "countryCode": "61",
                                                 "number": "0320874405"
-                                            },
-                                            "extension": null
+                                            }
                                         },
                                         "addresses": [
                                             {
-                                                "firstName": null,
-                                                "lastName": null,
-                                                "organisationName": null,
-                                                "premise": null,
                                                 "street": "28 GREAT SOUTH ROAD",
                                                 "suburb": "KENSINGTON",
-                                                "city": null,
-                                                "regionOrState": null,
                                                 "postCode": "3031",
                                                 "country": "AU"
                                             }
                                         ],
                                         "contacts": [
                                             {
-                                                "description": null,
                                                 "firstName": "HEAD OFFICE",
-                                                "lastName": null,
                                                 "phoneNumber": {
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
                                                         "number": "0310108809"
-                                                    },
-                                                    "extension": null
-                                                },
-                                                "mobileNumber": null,
-                                                "email": null
+                                                    }
+                                                }
                                             }
                                         ]
                                     }
@@ -599,21 +506,15 @@
                                         "dateTransmissionFileCreated": "2016-01-17",
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
-                                            "organizationCode": "ABCD",
-                                            "centre": null,
-                                            "organizationID": null
+                                            "organizationCode": "ABCD"
                                         },
-                                        "versionNumber": null,
-                                        "softwareIdentifier": null,
                                         "abn": "43006014106"
                                     },
                                     "organisationDetailCollection": [
                                         {
                                             "id": "1",
                                             "organisation": {
-                                                "organizationCode": "ABCD",
-                                                "centre": null,
-                                                "organizationID": null
+                                                "organizationCode": "ABCD"
                                             },
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
@@ -623,45 +524,31 @@
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
                                                     "number": "0389004637"
-                                                },
-                                                "extension": null
+                                                }
                                             },
-                                            "abn": null,
                                             "faxNumber": {
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
                                                     "number": "0320874405"
-                                                },
-                                                "extension": null
+                                                }
                                             },
                                             "addresses": [
                                                 {
-                                                    "firstName": null,
-                                                    "lastName": null,
-                                                    "organisationName": null,
-                                                    "premise": null,
                                                     "street": "28 GREAT SOUTH ROAD",
                                                     "suburb": "KENSINGTON",
-                                                    "city": null,
-                                                    "regionOrState": null,
                                                     "postCode": "3031",
                                                     "country": "AU"
                                                 }
                                             ],
                                             "contacts": [
                                                 {
-                                                    "description": null,
                                                     "firstName": "HEAD OFFICE",
-                                                    "lastName": null,
                                                     "phoneNumber": {
                                                         "standardPhoneNumber": {
                                                             "countryCode": "61",
                                                             "number": "0310108809"
-                                                        },
-                                                        "extension": null
-                                                    },
-                                                    "mobileNumber": null,
-                                                    "email": null
+                                                        }
+                                                    }
                                                 }
                                             ]
                                         }
@@ -706,8 +593,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                                     "title": "Unauthorized",
                                     "status": 401,
-                                    "detail": "Missing authentication credentials",
-                                    "errors": null
+                                    "detail": "Missing authentication credentials"
                                 }
                             }
                         }
@@ -723,8 +609,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "You don't have permission to access this resource",
                                     "status": 403,
-                                    "detail": "You don't have a 'read' access to access this resource",
-                                    "errors": null
+                                    "detail": "You don't have a 'read' access to access this resource"
                                 }
                             }
                         }
@@ -739,9 +624,7 @@
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "Resource not found",
-                                    "status": 404,
-                                    "detail": null,
-                                    "errors": null
+                                    "status": 404
                                 }
                             }
                         }
@@ -757,8 +640,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                                     "title": "An error occurred while processing your required",
                                     "status": 500,
-                                    "detail": "Error details..",
-                                    "errors": null
+                                    "detail": "Error details.."
                                 }
                             }
                         }
@@ -790,9 +672,7 @@
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
-                                    "message": null,
-                                    "data": null
+                                    "isSuccessful": true
                                 }
                             }
                         }
@@ -808,8 +688,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                                     "title": "Unauthorized",
                                     "status": 401,
-                                    "detail": "Missing authentication credentials",
-                                    "errors": null
+                                    "detail": "Missing authentication credentials"
                                 }
                             }
                         }
@@ -825,8 +704,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "You don't have permission to access this resource",
                                     "status": 403,
-                                    "detail": "You don't have a 'read' access to access this resource",
-                                    "errors": null
+                                    "detail": "You don't have a 'read' access to access this resource"
                                 }
                             }
                         }
@@ -841,9 +719,7 @@
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "Resource not found",
-                                    "status": 404,
-                                    "detail": null,
-                                    "errors": null
+                                    "status": 404
                                 }
                             }
                         }
@@ -859,8 +735,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                                     "title": "An error occurred while processing your required",
                                     "status": 500,
-                                    "detail": "Error details..",
-                                    "errors": null
+                                    "detail": "Error details.."
                                 }
                             }
                         }
@@ -1314,20 +1189,32 @@
             "Organisation": {
                 "type": "object",
                 "properties": {
+                    "organizationAndCentre": {
+                        "$ref": "#/components/schemas/OrganisationAndCentre"
+                    },
                     "organizationCode": {
-                        "maxLength": 3,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
-                    },
-                    "centre": {
-                        "$ref": "#/components/schemas/Centre"
-                    },
-                    "organizationID": {
                         "maxLength": 5,
                         "minLength": 0,
                         "type": "string",
                         "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OrganisationAndCentre": {
+                "required": [
+                    "centre",
+                    "organizationCode"
+                ],
+                "type": "object",
+                "properties": {
+                    "organizationCode": {
+                        "maxLength": 3,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "centre": {
+                        "$ref": "#/components/schemas/Centre"
                     }
                 },
                 "additionalProperties": false

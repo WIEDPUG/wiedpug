@@ -101,7 +101,13 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                         {
-                            CertificateIdentity = "300000664L6",
+                            CertificateIdentity = new CertificateIdentity
+                            {
+                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                CertificateIDNumber = "16547898",
+                                CertificateIDSuffix = CertificateIDSuffix.L,
+                                CertificateIDCD = 6
+                            },
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.P,
@@ -184,7 +190,13 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                         {
-                            CertificateIdentity = "300000664L6",
+                            CertificateIdentity = new CertificateIdentity
+                            {
+                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                CertificateIDNumber = "300000664",
+                                CertificateIDSuffix = CertificateIDSuffix.L,
+                                CertificateIDCD = 6
+                            },
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.B,

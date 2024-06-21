@@ -116,7 +116,7 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [StringLength(11)]
-        public required string CertificateIdentity { get; set; }
+        public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]

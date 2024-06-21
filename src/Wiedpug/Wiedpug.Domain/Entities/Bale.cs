@@ -10,6 +10,7 @@ namespace Wiedpug.Domain.Entities
 {
     public class Bale
     {
+        [Required]
         public required BaleHeader BaleHeader { get; set; }
 
         public List<BaleDetail>? BaleDetails { get; set; }

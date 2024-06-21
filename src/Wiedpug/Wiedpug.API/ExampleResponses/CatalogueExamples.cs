@@ -24,7 +24,7 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator =new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganizationCode ="AWTA"
                             },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
@@ -143,7 +143,13 @@ namespace Wiedpug.API.ExampleResponses
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                         {
-                                            CertificateIdentity = "300000664L6",
+                                            CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000664",
+                                                CertificateIDSuffix = CertificateIDSuffix.L,
+                                                CertificateIDCD = 6
+                                            },
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = 0,
                                             StapleLength = 73,
@@ -164,7 +170,13 @@ namespace Wiedpug.API.ExampleResponses
                                         },
                                         CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                         {
-                                            CertificateIdentity = "300000499P7",
+                                            CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000499",
+                                                CertificateIDSuffix = CertificateIDSuffix.P,
+                                                CertificateIDCD = 7
+                                            },
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             WoolBase = 64.29,
                                             AirflowMean = 0.0,
@@ -375,7 +387,13 @@ namespace Wiedpug.API.ExampleResponses
                                         },
                                         LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                         {
-                                            CertificateIdentity = "300000664L6",
+                                            CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000664",
+                                                CertificateIDSuffix = CertificateIDSuffix.L,
+                                                CertificateIDCD = 6
+                                            },
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = 0,
                                             Charge = 256.23,
@@ -396,7 +414,13 @@ namespace Wiedpug.API.ExampleResponses
                                         },
                                         CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                         {
-                                            CertificateIdentity = "300000499P7",
+                                           CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000499",
+                                                CertificateIDSuffix = CertificateIDSuffix.P,
+                                                CertificateIDCD = 7
+                                            },
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             WoolBase = 64.29,
                                             AirflowMean = 0.0,
@@ -594,7 +618,13 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                     {
-                                        CertificateIdentity = "300000664L6",
+                                        CertificateIdentity = new CertificateIdentity
+                                        {
+                                            CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                            CertificateIDSuffix = CertificateIDSuffix.C,
+                                            CertificateIDNumber = "00000664",
+                                            CertificateIDCD = 6
+                                        },
                                         Charge = 230.23,
                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                         RegrabSampleWeight = 0,
@@ -615,7 +645,14 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                     {
-                                        CertificateIdentity = "300000499P7",
+                                        CertificateIdentity = new CertificateIdentity
+                                        {
+                                            CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                            CertificateIDSuffix = CertificateIDSuffix.M,
+                                            CertificateIDNumber = "00000499",
+                                            CertificateIDCD = 5
+
+                                        },
                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                         RegrabSampleWeight = null,
                                         WoolBase = 64.29,
@@ -911,7 +948,13 @@ namespace Wiedpug.API.ExampleResponses
                                             },
                                             LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
                                             {
-                                                CertificateIdentity = "300000664L6",
+                                              CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000664",
+                                                CertificateIDSuffix = CertificateIDSuffix.L,
+                                                CertificateIDCD = 6
+                                            },
                                                 Charge = 174.30,
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                 RegrabSampleWeight = 0,
@@ -933,7 +976,13 @@ namespace Wiedpug.API.ExampleResponses
                                             },
                                             CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
                                             {
-                                                CertificateIdentity = "300000499P7",
+                                              CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000499",
+                                                CertificateIDSuffix = CertificateIDSuffix.P,
+                                                CertificateIDCD = 7
+                                            },
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                 WoolBase = 64.29,
                                                 AirflowMean = 0.0,

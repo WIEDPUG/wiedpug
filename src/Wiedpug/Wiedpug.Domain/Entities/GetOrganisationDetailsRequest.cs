@@ -12,7 +12,7 @@ namespace Wiedpug.Domain.Entities
         public required CountryCode CountryOfOrigin { get; set; }
 
         [Required]
-        [StringLength(5)]
+        [StringLength(8)]
         public required Organisation DocumentOriginator { get; set; }
 
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }

@@ -55,7 +55,12 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         OMLDetails = new OMLDetails
                             {
-                                CertificateIdentity =  "SFSF",
+                                CertificateIdentity =  new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "23456787",
+                                    CertificateIDSuffix = CertificateIDSuffix.D,
+                                    CertificateIDCD = 7
+                                },
                                 Charge = 100.00,
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                 WoolBase = 20.00,
@@ -168,7 +173,12 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
                         {
-                            CertificateIdentity = "dsfafhdfa",
+                            CertificateIdentity =  new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "23456787",
+                                    CertificateIDSuffix = CertificateIDSuffix.D,
+                                    CertificateIDCD = 7
+                                },
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
                             StapleLengthCvPercentage = 25,
@@ -354,7 +364,12 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         OMLDetails = new OMLDetails
                         {
-                            CertificateIdentity =  "SFSF",
+                           CertificateIdentity =  new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "23456787",
+                                    CertificateIDSuffix = CertificateIDSuffix.D,
+                                    CertificateIDCD = 7
+                           },
                             Charge = 100.00,
                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                             WoolBase = 20.00,
@@ -467,7 +482,12 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
                         {
-                            CertificateIdentity = "dsfafhdfa",
+                            CertificateIdentity =  new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "23456787",
+                                    CertificateIDSuffix = CertificateIDSuffix.D,
+                                    CertificateIDCD = 7
+                             },
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
                             StapleLengthCvPercentage = 25,

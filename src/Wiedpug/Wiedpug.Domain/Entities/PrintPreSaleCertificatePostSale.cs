@@ -13,7 +13,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [StringLength(11)]
-        public required string CertificateIdentity { get; set; }
+        public required CertificateIdentity CertificateIdentity { get; set; }
 
         /// <summary>
         /// Required generic string field for weight note.

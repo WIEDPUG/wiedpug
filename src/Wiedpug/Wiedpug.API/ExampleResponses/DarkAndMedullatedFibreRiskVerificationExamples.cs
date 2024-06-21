@@ -52,7 +52,13 @@ namespace Wiedpug.API.ExampleResponses
                         AgeTo = 23,
                         DarkAndMedullatedFibreRiskBroker = DarkAndMedullatedFibreRiskBroker.Risklevel1,
                         DarkandMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
-                        CertificateIdentity = "37483937P89",
+                        CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000499",
+                                                CertificateIDSuffix = CertificateIDSuffix.P,
+                                                CertificateIDCD = 7
+                                            },
                         WoolBase = 32.14,
                         DMFRErrorField1 = 12,
                         DMFRErrorField2 = 18,

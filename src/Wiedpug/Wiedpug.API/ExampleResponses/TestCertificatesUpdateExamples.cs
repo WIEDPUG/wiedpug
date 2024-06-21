@@ -31,8 +31,13 @@ namespace Wiedpug.API.ExampleResponses
                     ABN = "72001967184"
                 },
                 TestCertificateUpdateDetails = new List<TestCertificateUpdateDetail> {
-                    new TestCertificateUpdateDetail { 
-                        CertificateIdentity = "316101382L6",
+                    new TestCertificateUpdateDetail {
+                        CertificateIdentity =  new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "16101382",
+                                    CertificateIDSuffix = CertificateIDSuffix.L,
+                                    CertificateIDCD = 6
+                                },
                         ReissueType = ReissueType._06,
                         Client = new Organisation { OrganizationCode = "AABBC" },
                         Bales = 2,
@@ -42,7 +47,12 @@ namespace Wiedpug.API.ExampleResponses
                         MulesingStatusTo = MulesingStatus.M
                     },
                     new TestCertificateUpdateDetail {
-                        CertificateIdentity = "316071189T5",
+                        CertificateIdentity =  new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "16101382",
+                                    CertificateIDSuffix = CertificateIDSuffix.M,
+                                    CertificateIDCD = 5
+                                },
                         ReissueType = ReissueType._05,
                         Client = new Organisation { OrganizationCode = "ACAC" },
                         Bales = 7,
@@ -52,7 +62,12 @@ namespace Wiedpug.API.ExampleResponses
                         MulesingStatusTo = MulesingStatus.M
                     },
                     new TestCertificateUpdateDetail {
-                        CertificateIdentity = "315701332B6",
+                        CertificateIdentity =  new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "15701332",
+                                    CertificateIDSuffix = CertificateIDSuffix.B,
+                                    CertificateIDCD = 6
+                                },
                         ReissueType = ReissueType._02,
                         Client = new Organisation { OrganizationCode = "AAAAA" },
                         Bales = 8,

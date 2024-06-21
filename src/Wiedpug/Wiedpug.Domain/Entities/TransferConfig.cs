@@ -20,10 +20,8 @@ namespace Wiedpug.Domain.Entities
         [StringLength(10)]
         public required TransferType TransferType { get; set; }
 
-        [StringLength(10)]
         public List<Organisation>? InclusionList { get; set; }
 
-        [StringLength(10)]
         public List<Organisation>? ExclusionList { get; set; }
     }
 }

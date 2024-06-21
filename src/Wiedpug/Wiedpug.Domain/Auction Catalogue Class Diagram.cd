@@ -1,317 +1,199 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogue" Collapsed="true">
-    <Position X="14.75" Y="6.5" Width="3" />
-    <AssociationLine Name="TransmissionHeader" Type="Wiedpug.Domain.Entities.TransmissionHeader" FixedFromPoint="true" FixedToPoint="true">
+  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.Catalogue">
+    <Position X="18" Y="14.25" Width="2.5" />
+    <AssociationLine Name="CatalogueType" Type="Wiedpug.Domain.Enums.CatalogueType" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="17.75" Y="6.75" />
-        <Point X="18.125" Y="6.75" />
-        <Point X="18.125" Y="6.781" />
-        <Point X="20" Y="6.781" />
+        <Point X="19.25" Y="14.25" />
+        <Point X="19.25" Y="12.688" />
+        <Point X="17" Y="12.688" />
       </Path>
-    </AssociationLine>
-    <AssociationLine Name="WoolSaleHeaders" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeader" FixedFromPoint="true">
-      <Path>
-        <Point X="16.156" Y="7.062" />
-        <Point X="16.156" Y="8.25" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.122" Y="0.327" />
-      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAIAAAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Aggregates\AuctionCatalogueAggregate\AuctionCatalogue.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAACACAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\CatalogueAggregate\Catalogue.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Property Name="CatalogueType" />
       <Property Name="TransmissionHeader" />
-      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="WoolSaleHeaders" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="14.75" Y="5.25" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
-      <FileName>Entities\TransferConfig.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="20" Y="6.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAIAAJAAgAQAAAAQI=</HashCode>
-      <FileName>Entities\TransmissionHeader.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeader" Collapsed="true">
-    <Position X="14.5" Y="8.25" Width="4" />
-    <AssociationLine Name="WoolSaleHeaderNonAuction" Type="Wiedpug.Domain.Entities.WoolSaleHeaderNonAuction" FixedFromPoint="true" FixedToPoint="true">
+  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.CatalogueWoolSaleHeader">
+    <Position X="19" Y="16.75" Width="4.75" />
+    <AssociationLine Name="WoolSaleHeaderLots" Type="Wiedpug.Domain.Entities.WoolSaleHeaderLots" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="18.5" Y="8.562" />
-        <Point X="18.875" Y="8.562" />
-        <Point X="18.875" Y="8.593" />
-        <Point X="21.25" Y="8.593" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Lots" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeaderLot" FixedFromPoint="true">
-      <Path>
-        <Point X="15.875" Y="8.812" />
-        <Point X="15.875" Y="16" />
+        <Point X="19" Y="17.25" />
+        <Point X="18.625" Y="17.25" />
+        <Point X="18.625" Y="17.281" />
+        <Point X="16.75" Y="17.281" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAAAAAABAAACAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
-      <FileName>Aggregates\AuctionCatalogueAggregate\AuctionCatalogueWoolSaleHeader.cs</FileName>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\CatalogueAggregate\CatalogueWoolSaleHeader.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="WoolSaleHeaderLots" />
-      <Property Name="WoolSaleHeaderExtension" />
-      <Property Name="WoolSaleHeaderNonAuction" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Lots" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeaderLot" Collapsed="true">
-    <Position X="11.75" Y="16" Width="7" />
-    <AssociationLine Name="LotHeader" Type="Wiedpug.Domain.Entities.LotHeader" FixedFromPoint="true" FixedToPoint="true">
+  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.CatalogueWoolSaleHeaderLot">
+    <Position X="21" Y="24" Width="4" />
+    <AssociationLine Name="BaleIdentifications" Type="Wiedpug.Domain.ValueObject.BaleIdentification" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="18.188" Y="16.562" />
-        <Point X="18.188" Y="18.968" />
-        <Point X="26.5" Y="18.968" />
+        <Point X="23.438" Y="24" />
+        <Point X="23.438" Y="19.531" />
+        <Point X="27.25" Y="19.531" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="LotHeaderPricings" Type="Wiedpug.Domain.Entities.LotHeaderPricingData" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="CatalogueLotDescription" Type="Wiedpug.Domain.Entities.CatalogueLotDescription" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="12.125" Y="16.562" />
-        <Point X="12.125" Y="19.281" />
-        <Point X="9" Y="19.281" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="LotHeaderAwexData" Type="Wiedpug.Domain.Entities.LotHeaderAwexData" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="17.188" Y="16" />
-        <Point X="17.188" Y="12.968" />
-        <Point X="20.25" Y="12.968" />
+        <Point X="22.938" Y="24" />
+        <Point X="22.938" Y="18.031" />
+        <Point X="26" Y="18.031" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="ColourDetails" Type="Wiedpug.Domain.Entities.ColourDetails" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="14.062" Y="16.562" />
-        <Point X="14.062" Y="22.125" />
-        <Point X="14.75" Y="22.125" />
+        <Point X="23.938" Y="24" />
+        <Point X="23.938" Y="21.031" />
+        <Point X="26.5" Y="21.031" />
       </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.586" Y="0.561" />
-      </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="PremiumTestDetails" Type="Wiedpug.Domain.Entities.PremiumTestDetails" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="CombinationDetails" Type="Wiedpug.Domain.Entities.CombinationDetails" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="17.562" Y="16.562" />
-        <Point X="17.562" Y="21" />
-        <Point X="20.25" Y="21" />
+        <Point X="24.375" Y="24" />
+        <Point X="24.375" Y="22.281" />
+        <Point X="28.25" Y="22.281" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Histograms" Type="Wiedpug.Domain.Entities.FibreDiameterHistogram" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.688" Y="24" />
+        <Point X="24.688" Y="23.438" />
+        <Point X="31.75" Y="23.438" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LotHeaderPricings" Type="Wiedpug.Domain.Entities.LotHeaderPricingData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="23.438" Y="24.868" />
+        <Point X="23.438" Y="30.031" />
+        <Point X="27.25" Y="30.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="OmlDetails" Type="Wiedpug.Domain.Entities.OMLDetails" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.625" Y="24.868" />
+        <Point X="21.625" Y="26.031" />
+        <Point X="19.5" Y="26.031" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="SubjectiveInterlotDetails" Type="Wiedpug.Domain.Entities.SubjectiveInterlotDetails" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="18.562" Y="16.562" />
-        <Point X="18.562" Y="18.531" />
-        <Point X="22.5" Y="18.531" />
+        <Point X="21.062" Y="24.062" />
+        <Point X="20.625" Y="24.062" />
+        <Point X="20.625" Y="22.546" />
+        <Point X="17.25" Y="22.546" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="LengthAndStrengthCombDetails" Type="Wiedpug.Domain.Entities.LengthAndStrengthCombDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="LotHeaderAwexData" Type="Wiedpug.Domain.Entities.LotHeaderAwexData" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="17.875" Y="16.562" />
-        <Point X="17.875" Y="19.594" />
-        <Point X="22.75" Y="19.594" />
+        <Point X="24" Y="24.868" />
+        <Point X="24" Y="28.426" />
+        <Point X="27.5" Y="28.426" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="LengthAndStrengthDetails" Type="Wiedpug.Domain.Entities.LengthAndStrengthDetails" FixedFromPoint="true">
+    <AssociationLine Name="LotHeader" Type="Wiedpug.Domain.Entities.LotHeader" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.375" Y="16.562" />
-        <Point X="13.375" Y="22.281" />
-        <Point X="13" Y="22.281" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.601" Y="0.485" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="OmlDetails" Type="Wiedpug.Domain.Entities.OMLDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="12.75" Y="16.562" />
-        <Point X="12.75" Y="20.718" />
-        <Point X="11" Y="20.718" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ColourCombinationDetails" Type="Wiedpug.Domain.Entities.ColourCombinationDetails">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.863" Y="0.27" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="OmiDetails" Type="Wiedpug.Domain.Entities.OMIDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="11.875" Y="16.562" />
-        <Point X="11.875" Y="17.531" />
-        <Point X="10" Y="17.531" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="BaleIdentifications" Type="Wiedpug.Domain.ValueObject.BaleIdentification" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.375" Y="16" />
-        <Point X="13.375" Y="13.89" />
-        <Point X="10.5" Y="13.89" />
+        <Point X="22.188" Y="24.868" />
+        <Point X="22.188" Y="27.431" />
+        <Point X="19.5" Y="27.431" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACiAACBAAhAAAAgAEEAAIAAQQAAAQABgk=</HashCode>
-      <FileName>Aggregates\AuctionCatalogueAggregate\AuctionCatalogueWoolSaleHeaderLot.cs</FileName>
+      <FileName>Aggregates\CatalogueAggregate\CatalogueWoolSaleHeaderLot.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="LotHeader" />
-      <Property Name="LotHeaderExtension" />
-      <Property Name="LotHeaderAwexData" />
+      <Property Name="CatalogueLotDescription" />
+      <Property Name="ColourCombinationDetails" />
       <Property Name="ColourDetails" />
-      <Property Name="PremiumTestDetails" />
-      <Property Name="SubjectiveInterlotDetails" />
       <Property Name="CombinationDetails" />
+      <Property Name="CoreTestDetails" />
       <Property Name="LengthAndStrengthCombDetails" />
       <Property Name="LengthAndStrengthDetails" />
-      <Property Name="OmlDetails" />
-      <Property Name="CoreTestDetails" />
-      <Property Name="ColourCombinationDetails" />
+      <Property Name="LotHeader" />
+      <Property Name="LotHeaderAwexData" />
+      <Property Name="LotHeaderExtension" />
       <Property Name="OmiDetails" />
-      <Property Name="CatalogueLotDescription" />
+      <Property Name="OmlDetails" />
+      <Property Name="PremiumTestDetails" />
+      <Property Name="SubjectiveInterlotDetails" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
+      <Property Name="BaleIdentifications" />
+      <Property Name="Histograms" />
+      <Property Name="InterlotComponentBales" />
       <Property Name="LotHeaderPricings" />
       <Property Name="LotHeaderVendorDeclarations" />
-      <Property Name="Histograms" />
-      <Property Name="BaleIdentifications" />
-      <Property Name="InterlotComponentBales" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.WoolSaleHeaderExtension" Collapsed="true">
-    <Position X="9.75" Y="8.25" Width="2.25" />
+  <Class Name="Wiedpug.Domain.Entities.WoolSaleHeaderLots" Collapsed="true">
+    <Position X="13.5" Y="17" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACQAAAAAAAAABECCAAIAAAAAAAAAEBAAAgAA=</HashCode>
-      <FileName>Entities\WoolSaleHeaderExtension.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.AuctionCatalogueWoolSaleHeaderLots" Collapsed="true">
-    <Position X="17.5" Y="9.75" Width="3.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAQAQQAAQEBAwISAIAACAAAAQAAQAAEgSUAhAA=</HashCode>
-      <FileName>Entities\AuctionCatalogueWoolSaleHeaderLots.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.WoolSaleHeaderNonAuction" Collapsed="true">
-    <Position X="21.25" Y="8.25" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAgAAAAACAAAAAAABAAAAAAAAACACAAAAAAAIAAAgA=</HashCode>
-      <FileName>Entities\WoolSaleHeaderNonAuction.cs</FileName>
+      <HashCode>AAAgAAAQCSQAAQEBAxITEKCACIACASAAQAAEhaUAhgA=</HashCode>
+      <FileName>Entities\WoolSaleHeaderLots.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.BaleIdentification" Collapsed="true">
-    <Position X="8.5" Y="13.5" Width="2" />
+    <Position X="27.25" Y="19.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>ValueObject\BaleIdentification.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.CatalogueLotDescription" Collapsed="true">
-    <Position X="19" Y="10.75" Width="3.25" />
+    <Position X="26" Y="17.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAACAACgAAAABAACAAAAAAAAAABAAA=</HashCode>
       <FileName>Entities\CatalogueLotDescription.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.ColourCombinationDetails" Collapsed="true">
-    <Position X="14.75" Y="20" Width="2.5" />
+    <Position X="16.5" Y="18.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>gAEAAAAAcBwACYAAAAAAAAAAAACAJAAAAFgAAAQAAAA=</HashCode>
       <FileName>Entities\ColourCombinationDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.ColourDetails" Collapsed="true">
-    <Position X="14.75" Y="21.75" Width="3.25" />
+    <Position X="26.5" Y="20.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAIIAAAwACYAAIAAAAAAAAAAAIEAAQFgAAAQAAAA=</HashCode>
       <FileName>Entities\ColourDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.CombinationDetails" Collapsed="true">
-    <Position X="20.5" Y="14" Width="2.5" />
+    <Position X="28.25" Y="22" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQEEAAAAAAAgQAAAABAAAACQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\CombinationDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.CoreTestDetails" Collapsed="true">
-    <Position X="22.25" Y="15" Width="2.5" />
+    <Position X="26.25" Y="25.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAIAAA=</HashCode>
       <FileName>Entities\CoreTestDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthCombDetails" Collapsed="true">
-    <Position X="22.75" Y="19.5" Width="3.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAABEEEAwACQAEEEAAAAAAGAAAIhUAAIoAAAAAAAE=</HashCode>
-      <FileName>Entities\LengthAndStrengthCombDetails.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthDetails" Collapsed="true">
-    <Position X="9.25" Y="22" Width="3.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAEEEAwACQAEAAAAEAAAGAAAIgUAAIoAAAAAAAE=</HashCode>
-      <FileName>Entities\LengthAndStrengthDetails.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.LotHeader" Collapsed="true">
-    <Position X="26.5" Y="18.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gAIABAMAEAwxAAAIAAgAAIAAAAESCAAAAAGAAIIABAA=</HashCode>
-      <FileName>Entities\LotHeader.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.LotHeaderAwexData" Collapsed="true">
-    <Position X="20.25" Y="12.5" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>CAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIQAAAAACAAAA=</HashCode>
-      <FileName>Entities\LotHeaderAwexData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.LotHeaderExtension" Collapsed="true">
-    <Position X="10.25" Y="10.25" Width="3.25" />
-    <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAgAACCAAAAgAAAAAAAAgAEAAAAAAQoAA=</HashCode>
-      <FileName>Entities\LotHeaderExtension.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.LotHeaderPricingData" Collapsed="true">
-    <Position X="6.5" Y="19" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
-      <FileName>Entities\LotHeaderPricingData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale" Collapsed="true">
-    <Position X="6.75" Y="11.75" Width="4.5" />
-    <TypeIdentifier>
-      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>Aggregates\AuctionCatalogueAggregate\AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="InterlotComponentBaleHeader" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="BaleIdentifications" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogram" Collapsed="true">
-    <Position X="5.25" Y="16" Width="3.5" />
+  <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogram">
+    <Position X="31.75" Y="23" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\FibreDiameterHistogram.cs</FileName>
@@ -323,71 +205,117 @@
       <Property Name="FibreDiameterHistogramDetails" />
     </ShowAsCollectionAssociation>
   </Class>
+  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.CatalogueWoolSaleHeaderLotInterlotComponentBale" Collapsed="true">
+    <Position X="14.5" Y="20" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Aggregates\CatalogueAggregate\CatalogueWoolSaleHeaderLotInterlotComponentBale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthCombDetails" Collapsed="true">
+    <Position X="29.25" Y="25.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABEEEAwACQAEEEAAAAAAGAAAIhUAAIoAAAAAAAE=</HashCode>
+      <FileName>Entities\LengthAndStrengthCombDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthDetails" Collapsed="true">
+    <Position X="33.25" Y="25.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEEEAwACQAEAAAAEAAAGAAAIgUAAIoAAAAAAAE=</HashCode>
+      <FileName>Entities\LengthAndStrengthDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LotHeader" Collapsed="true">
+    <Position X="18" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIABAMAEAwxAAAIAAgAAIAAAAESCAAAAAGAAIIABAA=</HashCode>
+      <FileName>Entities\LotHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LotHeaderAwexData" Collapsed="true">
+    <Position X="27.5" Y="28.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIQAAAAACAAAA=</HashCode>
+      <FileName>Entities\LotHeaderAwexData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LotHeaderExtension" Collapsed="true">
+    <Position X="17.75" Y="30.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAgAACCAAAAgAAAAAAAAgAEAAAAAAQoAA=</HashCode>
+      <FileName>Entities\LotHeaderExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LotHeaderPricingData" Collapsed="true">
+    <Position X="27.25" Y="29.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Entities\LotHeaderPricingData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Wiedpug.Domain.Entities.LotHeaderVendorDeclaration" Collapsed="true">
-    <Position X="21.75" Y="17" Width="3.5" />
+    <Position X="29.25" Y="27.25" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAAA=</HashCode>
       <FileName>Entities\LotHeaderVendorDeclaration.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.OMIDetails" Collapsed="true">
-    <Position X="7" Y="17.25" Width="3" />
+    <Position X="17.5" Y="28.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAAAAA=</HashCode>
       <FileName>Entities\OMIDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.OMLDetails" Collapsed="true">
-    <Position X="8" Y="20.25" Width="3" />
+    <Position X="18" Y="25.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAAAAA=</HashCode>
       <FileName>Entities\OMLDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PremiumTestDetails" Collapsed="true">
-    <Position X="20.25" Y="20.75" Width="2.75" />
+    <Position X="16.5" Y="24.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAIAAA=</HashCode>
       <FileName>Entities\PremiumTestDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.SubjectiveInterlotDetails" Collapsed="true">
-    <Position X="22.5" Y="18.25" Width="3" />
+    <Position X="15" Y="22.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAECAAACwAAQAAAEAJAAAAAAAAIAAAAAgEAQAIAAA=</HashCode>
       <FileName>Entities\SubjectiveInterlotDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.InterlotComponentBaleHeader" Collapsed="true">
-    <Position X="5.5" Y="10.5" Width="3.5" />
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
+    <Position X="23.25" Y="13.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAACgAAAABAACAAAAAAAAAABAAA=</HashCode>
-      <FileName>Entities\InterlotComponentBaleHeader.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAAAAAgAQAAAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogramDetail" Collapsed="true">
-    <Position X="3.25" Y="14.5" Width="3.5" />
+    <Position X="38" Y="22" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\FibreDiameterHistogramDetail.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="FibreMeasurements" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogramHeader" Collapsed="true">
-    <Position X="0.75" Y="16" Width="2.75" />
+    <Position X="33.5" Y="21.25" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAFAAACACAAiAACAgAAADAgAAAAEAAEABAAAQAI=</HashCode>
       <FileName>Entities\FibreDiameterHistogramHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.ValueObject.FibreDiameterHistogramDetailMeasurement" Collapsed="true">
-    <Position X="9.25" Y="14.75" Width="3.25" />
+  <Enum Name="Wiedpug.Domain.Enums.CatalogueType" Collapsed="true">
+    <Position X="15.5" Y="12.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAACAAAAAA=</HashCode>
-      <FileName>ValueObject\FibreDiameterHistogramDetailMeasurement.cs</FileName>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Enums\CatalogueType.cs</FileName>
     </TypeIdentifier>
-  </Class>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -94,11 +94,11 @@ namespace Wiedpug.Domain.Entities
         /// The broker that is responsible for releasing the wool out of the store
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [StringLength(8)]
         public required Organisation ReleasingOrganisation { get; set; }
 
         [Required]
-        [StringLength(5)]
+        [StringLength(8)]
         public required Organisation SellingOrganisation { get; set; }
 
         [Required]

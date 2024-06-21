@@ -27,8 +27,6 @@ paths:
               countryOfOrigin: AU
               documentOriginator:
                 organizationCode: ABCD
-                centre: null
-                organizationID: null
               softwareIdentifier:
                 softwareCompany: 1
                 version: 1082
@@ -47,7 +45,6 @@ paths:
                 $ref: '#/components/schemas/OrganisationDetailsApiResult'
               example:
                 isSuccessful: true
-                message: null
                 data:
                   transmissionHeader:
                     dateFormatLastRevised: '2020-07-15'
@@ -55,8 +52,6 @@ paths:
                     countryOfOrigin: AU
                     documentOriginator:
                       organizationCode: ABCD
-                      centre: null
-                      organizationID: null
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 6
@@ -67,8 +62,6 @@ paths:
                     - id: '1'
                       organisation:
                         organizationCode: AWTS
-                        centre: null
-                        organizationID: null
                       nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: E
@@ -77,54 +70,31 @@ paths:
                         standardPhoneNumber:
                           countryCode: '61'
                           number: '0317229370'
-                        extension: null
-                      abn: null
                       faxNumber:
                         standardPhoneNumber:
                           countryCode: '61'
                           number: '03763262290'
-                        extension: null
                       addresses:
-                        - firstName: null
-                          lastName: null
-                          organisationName: null
-                          premise: null
-                          street: 88 HARBOR ROAD
+                        - street: 88 HARBOR ROAD
                           suburb: KENSINGTON
-                          city: null
-                          regionOrState: null
                           postCode: '3031'
                           country: AU
                       contacts:
-                        - description: null
-                          firstName: HEAD OFFICE
-                          lastName: null
+                        - firstName: HEAD OFFICE
                           phoneNumber:
                             standardPhoneNumber:
                               countryCode: '61'
                               number: '0309332782'
-                            extension: null
-                          mobileNumber: null
-                          email: null
                     - id: '2'
                       organisation:
                         organizationCode: ABCD
-                        centre: null
-                        organizationID: null
                       nameOfOrganisation: DEMO BUYER 1
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: E
                       transmitterFlag: 'N'
-                      phoneNumber: null
-                      abn: null
-                      faxNumber: null
-                      addresses: null
-                      contacts: null
                     - id: '3'
                       organisation:
                         organizationCode: AWTN
-                        centre: null
-                        organizationID: null
                       nameOfOrganisation: AUSTRALIAN WOOL TESTING AUTH LTD
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: A
@@ -133,34 +103,22 @@ paths:
                         standardPhoneNumber:
                           countryCode: '61'
                           number: '0254009986'
-                        extension: null
-                      abn: null
-                      faxNumber: null
                       addresses:
-                        - firstName: null
-                          lastName: null
-                          organisationName: null
-                          premise: null
-                          street: 367 NEW HAMMER STREET
+                        - street: 367 NEW HAMMER STREET
                           suburb: NEWCASTLE
-                          city: null
-                          regionOrState: null
                           postCode: '2031'
                           country: AU
                       contacts:
-                        - description: null
-                          firstName: MIKE
+                        - firstName: MIKE
                           lastName: PWOELL
                           phoneNumber:
                             standardPhoneNumber:
                               countryCode: '61'
                               number: '0387569072'
-                            extension: null
                           mobileNumber:
                             standardPhoneNumber:
                               countryCode: '61'
                               number: '0353298764'
-                            extension: null
                           email: mpowell@awtn.co.au
         '400':
           description: Bad Request
@@ -190,7 +148,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -202,7 +159,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '404':
           description: Not Found
           content:
@@ -213,8 +169,6 @@ paths:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
                 status: 404
-                detail: null
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -226,7 +180,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
   /v0/organisation-details/{id}:
     get:
       tags:
@@ -253,17 +206,11 @@ paths:
                   countryOfOrigin: AU
                   documentOriginator:
                     organizationCode: ABCD
-                    centre: null
-                    organizationID: null
-                  versionNumber: null
-                  softwareIdentifier: null
                   abn: '43006014106'
                 organisationDetailCollection:
                   - id: '1'
                     organisation:
                       organizationCode: ABCD
-                      centre: null
-                      organizationID: null
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
                     industryGroupId: T
@@ -272,35 +219,21 @@ paths:
                       standardPhoneNumber:
                         countryCode: '61'
                         number: '0389004637'
-                      extension: null
-                    abn: null
                     faxNumber:
                       standardPhoneNumber:
                         countryCode: '61'
                         number: '0320874405'
-                      extension: null
                     addresses:
-                      - firstName: null
-                        lastName: null
-                        organisationName: null
-                        premise: null
-                        street: 28 GREAT SOUTH ROAD
+                      - street: 28 GREAT SOUTH ROAD
                         suburb: KENSINGTON
-                        city: null
-                        regionOrState: null
                         postCode: '3031'
                         country: AU
                     contacts:
-                      - description: null
-                        firstName: HEAD OFFICE
-                        lastName: null
+                      - firstName: HEAD OFFICE
                         phoneNumber:
                           standardPhoneNumber:
                             countryCode: '61'
                             number: '0310108809'
-                          extension: null
-                        mobileNumber: null
-                        email: null
         '401':
           description: Unauthorized
           content:
@@ -312,7 +245,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -324,7 +256,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '404':
           description: Not Found
           content:
@@ -335,8 +266,6 @@ paths:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
                 status: 404
-                detail: null
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -348,7 +277,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
     put:
       tags:
         - Organisation Details
@@ -372,17 +300,10 @@ paths:
                 countryOfOrigin: AU
                 documentOriginator:
                   organizationCode: ABCD
-                  centre: null
-                  organizationID: null
-                versionNumber: null
-                softwareIdentifier: null
                 abn: '43006014106'
               organisationDetailCollection:
-                - id: null
-                  organisation:
+                - organisation:
                     organizationCode: ABCD
-                    centre: null
-                    organizationID: null
                   nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                   dateLastUpdated: '2020-04-28'
                   industryGroupId: E
@@ -391,35 +312,21 @@ paths:
                     standardPhoneNumber:
                       countryCode: '61'
                       number: '0389004637'
-                    extension: null
-                  abn: null
                   faxNumber:
                     standardPhoneNumber:
                       countryCode: '61'
                       number: '0320874405'
-                    extension: null
                   addresses:
-                    - firstName: null
-                      lastName: null
-                      organisationName: null
-                      premise: null
-                      street: 28 GREAT SOUTH ROAD
+                    - street: 28 GREAT SOUTH ROAD
                       suburb: KENSINGTON
-                      city: null
-                      regionOrState: null
                       postCode: '3031'
                       country: AU
                   contacts:
-                    - description: null
-                      firstName: HEAD OFFICE
-                      lastName: null
+                    - firstName: HEAD OFFICE
                       phoneNumber:
                         standardPhoneNumber:
                           countryCode: '61'
                           number: '0310108809'
-                        extension: null
-                      mobileNumber: null
-                      email: null
         required: true
       responses:
         '200':
@@ -435,17 +342,11 @@ paths:
                   countryOfOrigin: AU
                   documentOriginator:
                     organizationCode: ABCD
-                    centre: null
-                    organizationID: null
-                  versionNumber: null
-                  softwareIdentifier: null
                   abn: '43006014106'
                 organisationDetailCollection:
                   - id: '1'
                     organisation:
                       organizationCode: ABCD
-                      centre: null
-                      organizationID: null
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
                     industryGroupId: T
@@ -454,35 +355,21 @@ paths:
                       standardPhoneNumber:
                         countryCode: '61'
                         number: '0389004637'
-                      extension: null
-                    abn: null
                     faxNumber:
                       standardPhoneNumber:
                         countryCode: '61'
                         number: '0320874405'
-                      extension: null
                     addresses:
-                      - firstName: null
-                        lastName: null
-                        organisationName: null
-                        premise: null
-                        street: 28 GREAT SOUTH ROAD
+                      - street: 28 GREAT SOUTH ROAD
                         suburb: KENSINGTON
-                        city: null
-                        regionOrState: null
                         postCode: '3031'
                         country: AU
                     contacts:
-                      - description: null
-                        firstName: HEAD OFFICE
-                        lastName: null
+                      - firstName: HEAD OFFICE
                         phoneNumber:
                           standardPhoneNumber:
                             countryCode: '61'
                             number: '0310108809'
-                          extension: null
-                        mobileNumber: null
-                        email: null
         '400':
           description: Bad Request
           content:
@@ -511,7 +398,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -523,7 +409,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '404':
           description: Not Found
           content:
@@ -534,8 +419,6 @@ paths:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
                 status: 404
-                detail: null
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -547,7 +430,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
     delete:
       tags:
         - Organisation Details
@@ -568,8 +450,6 @@ paths:
                 $ref: '#/components/schemas/ApiResult'
               example:
                 isSuccessful: true
-                message: null
-                data: null
         '401':
           description: Unauthorized
           content:
@@ -581,7 +461,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -593,7 +472,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '404':
           description: Not Found
           content:
@@ -604,8 +482,6 @@ paths:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
                 status: 404
-                detail: null
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -617,7 +493,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
 components:
   schemas:
     Address:
@@ -1011,18 +886,26 @@ components:
     Organisation:
       type: object
       properties:
+        organizationAndCentre:
+          $ref: '#/components/schemas/OrganisationAndCentre'
         organizationCode:
-          maxLength: 3
-          minLength: 0
-          type: string
-          nullable: true
-        centre:
-          $ref: '#/components/schemas/Centre'
-        organizationID:
           maxLength: 5
           minLength: 0
           type: string
           nullable: true
+      additionalProperties: false
+    OrganisationAndCentre:
+      required:
+        - centre
+        - organizationCode
+      type: object
+      properties:
+        organizationCode:
+          maxLength: 3
+          minLength: 0
+          type: string
+        centre:
+          $ref: '#/components/schemas/Centre'
       additionalProperties: false
     OrganisationDetail:
       required:

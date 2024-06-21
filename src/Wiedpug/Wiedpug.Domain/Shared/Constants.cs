@@ -21,11 +21,13 @@ namespace Wiedpug.Domain.Shared.Constants
         public const string DATE_AND_TIME_UTC_ISO8601 = @"^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$";
         public const string NUMBER_2_DIGITS = @"-?\d{1,2}";
         public const string NUMBER_6_DIGITS = @"-?\d{1,6}";
+        public const string NUMBER_10_DIGITS = @"-?\d{1,10}";
         public const string NUMBER_11_DIGITS = @"-?\d{1,11}";
         public const string NUMBER_3_DIGITS = @"-?\d{1,3}";
         public const string NUMBER_4_DIGITS = @"-?\d{1,4}";
         public const string NUMBER_5_DIGITS = @"-?\d{1,5}";
         public const string NUMBER_8_DIGITS = @"-?\d{1,8}";
+        public const string NUMBER_9_DIGITS = @"-?\d{1,9}";
         public const string NUMBERS = @"^[0-9]+$";
         /// <summary>
         /// Total 4 digits, 2 digits after the decimal point

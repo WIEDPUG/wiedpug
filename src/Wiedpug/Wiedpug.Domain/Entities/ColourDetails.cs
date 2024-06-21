@@ -11,7 +11,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [StringLength(11)]
-        public required string CertificateIdentity { get; set; } // FIELD NUMBER 3 - Certificate Identity - Start: 4, Size: 11, Data Type: GR, Justification: F, Requirement Designator: M
+        public required CertificateIdentity CertificateIdentity { get; set; } // FIELD NUMBER 3 - Certificate Identity - Start: 4, Size: 11, Data Type: GR, Justification: F, Requirement Designator: M
 
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? Charge { get; set; } // FIELD NUMBER 4 - Charge - Start: 15, Size: 6, Data Type: D2, Justification: R, Requirement Designator: N/A, Value: spaces

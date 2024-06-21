@@ -38,7 +38,7 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [StringLength(11)]
-        public required string CertificateIdentityOriginal { get; set; }
+        public required CertificateIdentity CertificateIdentityOriginal { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -47,6 +47,6 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [StringLength(11)]
-        public required string NewCertificateIdentity { get; set; }
+        public required CertificateIdentity NewCertificateIdentity { get; set; }
     }
 }
