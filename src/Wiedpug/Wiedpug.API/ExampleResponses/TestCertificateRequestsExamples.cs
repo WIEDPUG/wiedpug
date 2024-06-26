@@ -20,7 +20,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationCode = "AWTX"
+                        OrganisationId = "AWTX"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier

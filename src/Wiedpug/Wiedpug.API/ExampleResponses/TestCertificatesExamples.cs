@@ -20,7 +20,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationCode = "ABCD"
+                        OrganisationId = "ABCD"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -38,7 +38,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationCode = "AWTA"
+                                OrganisationId = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
@@ -156,7 +156,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationCode = "AWTA"
+                                OrganisationId = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
@@ -293,30 +293,17 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new GetTestCertificatesRequest()
             {
-                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = new Organisation
-                    {
-                        OrganisationCode = "AWTA"
-                    },
-                CurrentTransmitter = new Organisation
+                SaleIdentity = new Domain.Entities.SaleIdentity
                 {
-                    OrganisationCode = "AWTA"
+                    SellingCentreType = SellingCentreType.AU_F,
+                    SaleNumber = 18
                 },
-                CurrentReceiver = new Organisation
-                {
-                    OrganisationCode = "AWXLC"
-                },
-                FinalReceiver = new Organisation
-                {
-                    OrganisationCode = "AWXLC"
-                },
-                SoftwareIdentifier = new SoftwareIdentifier
-                    {
-                        ProgramName = "NETR",
-                        SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
-                    },
-                    ABN = "72001967184"
+                OrganisationRequested = "AWNF",
+                SaleDateRequested = "2023-10-31",
+                UseNetworkDateTime = false,
+                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
+                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
+                Season = 23
             };
         }
     }
@@ -338,7 +325,7 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationCode = "AWTA"
+                            OrganisationId = "AWTA"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -357,7 +344,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationCode = "AWTA"
+                                OrganisationId = "AWTA"
                             },
                             LotIdentityOrGroupName = new LotIdentityOrGroupName
                             {
@@ -475,7 +462,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationCode = "AWTA"
+                                OrganisationId = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,

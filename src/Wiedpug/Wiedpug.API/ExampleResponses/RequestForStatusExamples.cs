@@ -19,7 +19,7 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2022-07-25",
                     DateTransmissionFileCreated = "2024-03-21",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = new Organisation { OrganisationCode = "AWTX" },
+                    DocumentOriginator = new Organisation { OrganisationId = "AWTX" },
                     VersionNumber = 36,
                     ABN = "72001967184"
                 },
@@ -30,7 +30,7 @@ namespace Wiedpug.API.ExampleResponses
                         TransmissionTypeRequested = Domain.Enums.TransmissionType.AuctionCatalogues,
                         SaleIdentity = new Domain.Entities.SaleIdentity
                         {
-                            SellingCentreType = "F",
+                            SellingCentreType = SellingCentreType.AU_F,
                             SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
@@ -61,7 +61,7 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationCode = "AWTX"
+                            OrganisationId = "AWTX"
                         },
                         VersionNumber = 36,
                         ABN = "72001967184"

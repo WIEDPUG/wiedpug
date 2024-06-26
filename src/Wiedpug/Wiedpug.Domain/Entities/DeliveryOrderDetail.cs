@@ -12,20 +12,26 @@ namespace Wiedpug.Domain.Entities
     public class DeliveryOrderDetail
     {
         [Required]
+        [StringLength(1)]
         public required DeliveryOrderType DeliveryOrderType { get; set; }
 
         [Required]
+        [StringLength(10)]
         public required string DeliveryOrderNumber { get; set; }
 
         [Required]
-        public required string ReleasingOrganisation { get; set; }
+        [StringLength(8)]
+        public required Organisation ReleasingOrganisation { get; set; }
 
-        public string? MarkingOrganisation { get; set; }
+        [StringLength(8)]
+        public Organisation? MarkingOrganisation { get; set; }
 
+        [StringLength(10)]
         public string? PreviousDeliveryOrderNumber { get; set; }
 
         [Required]
-        public required string Carrier { get; set; }
+        [StringLength(10)]
+        public required Organisation Carrier { get; set; }
 
         public CountermarkColour? CountermarkColour { get; set; }
 

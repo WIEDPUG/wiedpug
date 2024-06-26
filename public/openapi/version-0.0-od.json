@@ -32,7 +32,7 @@
                             "example": {
                                 "countryOfOrigin": "AU",
                                 "documentOriginator": {
-                                    "organisationCode": "ABCD"
+                                    "organisationId": "ABCD"
                                 },
                                 "softwareIdentifier": {
                                     "softwareCompany": 1,
@@ -64,7 +64,7 @@
                                             "dateTransmissionFileCreated": "2016-01-17",
                                             "countryOfOrigin": "AU",
                                             "documentOriginator": {
-                                                "organisationCode": "ABCD"
+                                                "organisationId": "ABCD"
                                             },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
@@ -78,7 +78,7 @@
                                             {
                                                 "id": "1",
                                                 "organisation": {
-                                                    "organisationCode": "AWTS"
+                                                    "organisationId": "AWTS"
                                                 },
                                                 "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                                 "dateLastUpdated": "2020-04-28",
@@ -119,7 +119,7 @@
                                             {
                                                 "id": "2",
                                                 "organisation": {
-                                                    "organisationCode": "ABCD"
+                                                    "organisationId": "ABCD"
                                                 },
                                                 "nameOfOrganisation": "DEMO BUYER 1",
                                                 "dateLastUpdated": "2020-04-28",
@@ -129,7 +129,7 @@
                                             {
                                                 "id": "3",
                                                 "organisation": {
-                                                    "organisationCode": "AWTN"
+                                                    "organisationId": "AWTN"
                                                 },
                                                 "nameOfOrganisation": "AUSTRALIAN WOOL TESTING AUTH LTD",
                                                 "dateLastUpdated": "2020-04-28",
@@ -297,7 +297,7 @@
                                         "dateTransmissionFileCreated": "2016-01-17",
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
-                                            "organisationCode": "ABCD"
+                                            "organisationId": "ABCD"
                                         },
                                         "abn": "43006014106"
                                     },
@@ -305,7 +305,7 @@
                                         {
                                             "id": "1",
                                             "organisation": {
-                                                "organisationCode": "ABCD"
+                                                "organisationId": "ABCD"
                                             },
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
@@ -441,14 +441,14 @@
                                     "dateTransmissionFileCreated": "2016-01-17",
                                     "countryOfOrigin": "AU",
                                     "documentOriginator": {
-                                        "organisationCode": "ABCD"
+                                        "organisationId": "ABCD"
                                     },
                                     "abn": "43006014106"
                                 },
                                 "organisationDetailCollection": [
                                     {
                                         "organisation": {
-                                            "organisationCode": "ABCD"
+                                            "organisationId": "ABCD"
                                         },
                                         "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                         "dateLastUpdated": "2020-04-28",
@@ -506,7 +506,7 @@
                                         "dateTransmissionFileCreated": "2016-01-17",
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
-                                            "organisationCode": "ABCD"
+                                            "organisationId": "ABCD"
                                         },
                                         "abn": "43006014106"
                                     },
@@ -514,7 +514,7 @@
                                         {
                                             "id": "1",
                                             "organisation": {
-                                                "organisationCode": "ABCD"
+                                                "organisationId": "ABCD"
                                             },
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
@@ -1189,10 +1189,10 @@
             "Organisation": {
                 "type": "object",
                 "properties": {
-                    "organisationAndCentre": {
-                        "$ref": "#/components/schemas/OrganisationAndCentre"
+                    "organisationCodeAndCentre": {
+                        "$ref": "#/components/schemas/OrganisationCodeAndCentre"
                     },
-                    "organisationCode": {
+                    "organisationId": {
                         "maxLength": 5,
                         "minLength": 0,
                         "type": "string",
@@ -1201,7 +1201,7 @@
                 },
                 "additionalProperties": false
             },
-            "OrganisationAndCentre": {
+            "OrganisationCodeAndCentre": {
                 "required": [
                     "centre",
                     "organisationCode"

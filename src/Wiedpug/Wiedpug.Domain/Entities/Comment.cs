@@ -11,6 +11,7 @@ namespace Wiedpug.Domain.Entities
     public class Comment
     {
         [Required]
+        [StringLength(80)]
         public required string Text { get; set; }
     }
 }

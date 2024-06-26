@@ -41,7 +41,7 @@
                                                 "dateTransmissionFileCreated": "2016-01-17",
                                                 "countryOfOrigin": "AU",
                                                 "documentOriginator": {
-                                                    "organisationCode": "AWTA"
+                                                    "organisationId": "AWTA"
                                                 },
                                                 "versionNumber": 31,
                                                 "softwareIdentifier": {
@@ -56,10 +56,10 @@
                                                 "transferType": "Broadcast",
                                                 "exclusionList": [
                                                     {
-                                                        "organisationCode": "AMSC"
+                                                        "organisationId": "AMSC"
                                                     },
                                                     {
-                                                        "organisationCode": "FIBC"
+                                                        "organisationId": "FIBC"
                                                     }
                                                 ]
                                             },
@@ -68,7 +68,7 @@
                                                     "woolSaleHeaderLots": {
                                                         "season": 16,
                                                         "saleIdentity": {
-                                                            "sellingCentreType": "M",
+                                                            "sellingCentreType": "AU_F",
                                                             "saleNumber": 29
                                                         },
                                                         "centreStorage": "AU_AR",
@@ -84,14 +84,14 @@
                                                         "chargePerLot": 0,
                                                         "catalogueSection": "FLC",
                                                         "invoicingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "isFinalCatalogue": true,
                                                         "releasingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "sellingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "woolTypeGroup": "MFLC",
                                                         "centreCatalogue": "AU_G",
@@ -251,7 +251,7 @@
                                                 "dateTransmissionFileCreated": "2016-01-17",
                                                 "countryOfOrigin": "AU",
                                                 "documentOriginator": {
-                                                    "organisationCode": "ABCD"
+                                                    "organisationId": "ABCD"
                                                 },
                                                 "versionNumber": 31,
                                                 "softwareIdentifier": {
@@ -266,7 +266,7 @@
                                                 "transferType": "PrivateSend",
                                                 "inclusionList": [
                                                     {
-                                                        "organisationCode": "AWXLC"
+                                                        "organisationId": "AWXLC"
                                                     }
                                                 ]
                                             },
@@ -275,7 +275,7 @@
                                                     "woolSaleHeaderLots": {
                                                         "season": 16,
                                                         "saleIdentity": {
-                                                            "sellingCentreType": "M",
+                                                            "sellingCentreType": "AU_M",
                                                             "saleNumber": 29
                                                         },
                                                         "centreStorage": "AU_AU",
@@ -291,14 +291,14 @@
                                                         "chargePerLot": 0,
                                                         "catalogueSection": "FLC",
                                                         "invoicingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "isFinalCatalogue": true,
                                                         "releasingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "sellingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "woolTypeGroup": "MFLC",
                                                         "centreCatalogue": "AU_G",
@@ -556,7 +556,7 @@
                                         "dateTransmissionFileCreated": "2016-01-17",
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
-                                            "organisationCode": "ABCD"
+                                            "organisationId": "ABCD"
                                         },
                                         "versionNumber": 31,
                                         "softwareIdentifier": {
@@ -571,10 +571,10 @@
                                         "transferType": "Broadcast",
                                         "exclusionList": [
                                             {
-                                                "organisationCode": "AWMS"
+                                                "organisationId": "AWMS"
                                             },
                                             {
-                                                "organisationCode": "FCBB"
+                                                "organisationId": "FCBB"
                                             }
                                         ]
                                     },
@@ -583,7 +583,7 @@
                                             "woolSaleHeaderLots": {
                                                 "season": 16,
                                                 "saleIdentity": {
-                                                    "sellingCentreType": "M",
+                                                    "sellingCentreType": "AU_M",
                                                     "saleNumber": 29
                                                 },
                                                 "centreStorage": "AU_A",
@@ -599,14 +599,14 @@
                                                 "chargePerLot": 0,
                                                 "catalogueSection": "FLC",
                                                 "invoicingOrganisation": {
-                                                    "organisationCode": "ABCD"
+                                                    "organisationId": "ABCD"
                                                 },
                                                 "isFinalCatalogue": true,
                                                 "releasingOrganisation": {
-                                                    "organisationCode": "ABCD"
+                                                    "organisationId": "ABCD"
                                                 },
                                                 "sellingOrganisation": {
-                                                    "organisationCode": "ABCD"
+                                                    "organisationId": "ABCD"
                                                 },
                                                 "woolTypeGroup": "MFLC",
                                                 "centreCatalogue": "AU_G",
@@ -860,11 +860,11 @@
                                         {
                                             "transmissionTypeRequested": 2,
                                             "saleIdentity": {
-                                                "sellingCentreType": "F",
+                                                "sellingCentreType": "AU_F",
                                                 "saleNumber": 18
                                             },
                                             "organisationRequested": {
-                                                "organisationCode": "AWNF"
+                                                "organisationId": "AWNF"
                                             },
                                             "saleDateRequested": "2023-10-31",
                                             "useNetworkDateTime": false,
@@ -882,11 +882,11 @@
                                         {
                                             "transmissionTypeRequested": 5,
                                             "saleIdentity": {
-                                                "sellingCentreType": "F",
+                                                "sellingCentreType": "AU_F",
                                                 "saleNumber": 18
                                             },
                                             "organisationRequested": {
-                                                "organisationCode": "AWNF"
+                                                "organisationId": "AWNF"
                                             },
                                             "saleDateRequested": "2023-10-31",
                                             "useNetworkDateTime": false,
@@ -908,11 +908,11 @@
                                         {
                                             "transmissionTypeRequested": 3,
                                             "saleIdentity": {
-                                                "sellingCentreType": "F",
+                                                "sellingCentreType": "AU_F",
                                                 "saleNumber": 18
                                             },
                                             "organisationRequested": {
-                                                "organisationCode": "AWNF"
+                                                "organisationId": "AWNF"
                                             },
                                             "saleDateRequested": "2023-10-31",
                                             "useNetworkDateTime": false,
@@ -951,7 +951,7 @@
                                                 "dateTransmissionFileCreated": "2016-01-17",
                                                 "countryOfOrigin": "AU",
                                                 "documentOriginator": {
-                                                    "organisationCode": "ABCD"
+                                                    "organisationId": "ABCD"
                                                 },
                                                 "versionNumber": 31,
                                                 "softwareIdentifier": {
@@ -967,7 +967,7 @@
                                                     "woolSaleHeaderLots": {
                                                         "season": 16,
                                                         "saleIdentity": {
-                                                            "sellingCentreType": "M",
+                                                            "sellingCentreType": "AU_M",
                                                             "saleNumber": 29
                                                         },
                                                         "centreStorage": "AU_AD",
@@ -983,14 +983,14 @@
                                                         "chargePerLot": 0,
                                                         "catalogueSection": "FLC",
                                                         "invoicingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "isFinalCatalogue": true,
                                                         "releasingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "sellingOrganisation": {
-                                                            "organisationCode": "ABCD"
+                                                            "organisationId": "ABCD"
                                                         },
                                                         "woolTypeGroup": "MFLC",
                                                         "centreCatalogue": "AU_G",
@@ -3370,10 +3370,10 @@
             "Organisation": {
                 "type": "object",
                 "properties": {
-                    "organisationAndCentre": {
-                        "$ref": "#/components/schemas/OrganisationAndCentre"
+                    "organisationCodeAndCentre": {
+                        "$ref": "#/components/schemas/OrganisationCodeAndCentre"
                     },
-                    "organisationCode": {
+                    "organisationId": {
                         "maxLength": 5,
                         "minLength": 0,
                         "type": "string",
@@ -3382,7 +3382,7 @@
                 },
                 "additionalProperties": false
             },
-            "OrganisationAndCentre": {
+            "OrganisationCodeAndCentre": {
                 "required": [
                     "centre",
                     "organisationCode"
@@ -3801,10 +3801,7 @@
                 "type": "object",
                 "properties": {
                     "sellingCentreType": {
-                        "maxLength": 2,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
+                        "$ref": "#/components/schemas/SellingCentreType"
                     },
                     "saleNumber": {
                         "maxLength": 2,
@@ -3827,6 +3824,26 @@
                 ],
                 "type": "string",
                 "description": "A: Auction (open cry)<br />T: Tender<br />O: Offer<br />AV: Availability<br />E: Electronic Sale"
+            },
+            "SellingCentreType": {
+                "enum": [
+                    "NZ_C",
+                    "NZ_N",
+                    "AU_A",
+                    "AU_AU",
+                    "AU_B",
+                    "AU_F",
+                    "AU_G",
+                    "AU_L",
+                    "AU_M",
+                    "AU_N",
+                    "AU_R",
+                    "AU_S",
+                    "PS",
+                    "T"
+                ],
+                "type": "string",
+                "description": "NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales"
             },
             "SoftwareCompany": {
                 "enum": [

@@ -20,7 +20,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationCode = "AWTA"
+                        OrganisationId = "AWTA"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -38,7 +38,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationCode = "AWTA"
+                                OrganisationId = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
@@ -117,7 +117,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationCode = "AWTA"
+                                OrganisationId = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,

@@ -11,9 +11,9 @@ namespace Wiedpug.Domain.ValueObject
     public class Organisation
     {
         [StringLength(8)]
-        public OrganisationAndCentre? OrganisationAndCentre { get; set; }
+        public OrganisationCodeAndCentre? OrganisationCodeAndCentre { get; set; }
 
         [StringLength(5)]
-        public string? OrganisationCode { get; set; }
+        public string? OrganisationId { get; set; }
     }
 }

@@ -33,7 +33,7 @@ paths:
                       dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator:
-                        organisationCode: AWTA
+                        organisationId: AWTA
                       versionNumber: 31
                       softwareIdentifier:
                         softwareCompany: 1
@@ -44,13 +44,13 @@ paths:
                     transferConfig:
                       transferType: Broadcast
                       exclusionList:
-                        - organisationCode: AMSC
-                        - organisationCode: FIBC
+                        - organisationId: AMSC
+                        - organisationId: FIBC
                     woolSaleHeaders:
                       - woolSaleHeaderLots:
                           season: 16
                           saleIdentity:
-                            sellingCentreType: M
+                            sellingCentreType: AU_F
                             saleNumber: 29
                           centreStorage: AU_AR
                           saleDate: '2017-01-19'
@@ -65,12 +65,12 @@ paths:
                           chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           isFinalCatalogue: true
                           releasingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           sellingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           woolTypeGroup: MFLC
                           centreCatalogue: AU_G
                           deliveryBasis: D
@@ -194,7 +194,7 @@ paths:
                       dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator:
-                        organisationCode: ABCD
+                        organisationId: ABCD
                       versionNumber: 31
                       softwareIdentifier:
                         softwareCompany: 1
@@ -205,12 +205,12 @@ paths:
                     transferConfig:
                       transferType: PrivateSend
                       inclusionList:
-                        - organisationCode: AWXLC
+                        - organisationId: AWXLC
                     woolSaleHeaders:
                       - woolSaleHeaderLots:
                           season: 16
                           saleIdentity:
-                            sellingCentreType: M
+                            sellingCentreType: AU_M
                             saleNumber: 29
                           centreStorage: AU_AU
                           saleDate: '2017-01-19'
@@ -225,12 +225,12 @@ paths:
                           chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           isFinalCatalogue: true
                           releasingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           sellingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           woolTypeGroup: MFLC
                           centreCatalogue: AU_G
                           deliveryBasis: D
@@ -420,7 +420,7 @@ paths:
                   dateTransmissionFileCreated: '2016-01-17'
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABCD
+                    organisationId: ABCD
                   versionNumber: 31
                   softwareIdentifier:
                     softwareCompany: 1
@@ -431,13 +431,13 @@ paths:
                 transferConfig:
                   transferType: Broadcast
                   exclusionList:
-                    - organisationCode: AWMS
-                    - organisationCode: FCBB
+                    - organisationId: AWMS
+                    - organisationId: FCBB
                 woolSaleHeaders:
                   - woolSaleHeaderLots:
                       season: 16
                       saleIdentity:
-                        sellingCentreType: M
+                        sellingCentreType: AU_M
                         saleNumber: 29
                       centreStorage: AU_A
                       saleDate: '2017-01-19'
@@ -452,12 +452,12 @@ paths:
                       chargePerLot: 0
                       catalogueSection: FLC
                       invoicingOrganisation:
-                        organisationCode: ABCD
+                        organisationId: ABCD
                       isFinalCatalogue: true
                       releasingOrganisation:
-                        organisationCode: ABCD
+                        organisationId: ABCD
                       sellingOrganisation:
-                        organisationCode: ABCD
+                        organisationId: ABCD
                       woolTypeGroup: MFLC
                       centreCatalogue: AU_G
                       deliveryBasis: D
@@ -640,10 +640,10 @@ paths:
                 value:
                   - transmissionTypeRequested: 2
                     saleIdentity:
-                      sellingCentreType: F
+                      sellingCentreType: AU_F
                       saleNumber: 18
                     organisationRequested:
-                      organisationCode: AWNF
+                      organisationId: AWNF
                     saleDateRequested: '2023-10-31'
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
@@ -653,10 +653,10 @@ paths:
                     season: 23
                   - transmissionTypeRequested: 5
                     saleIdentity:
-                      sellingCentreType: F
+                      sellingCentreType: AU_F
                       saleNumber: 18
                     organisationRequested:
-                      organisationCode: AWNF
+                      organisationId: AWNF
                     saleDateRequested: '2023-10-31'
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
@@ -668,10 +668,10 @@ paths:
                 value:
                   - transmissionTypeRequested: 3
                     saleIdentity:
-                      sellingCentreType: F
+                      sellingCentreType: AU_F
                       saleNumber: 18
                     organisationRequested:
-                      organisationCode: AWNF
+                      organisationId: AWNF
                     saleDateRequested: '2023-10-31'
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
@@ -695,7 +695,7 @@ paths:
                       dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator:
-                        organisationCode: ABCD
+                        organisationId: ABCD
                       versionNumber: 31
                       softwareIdentifier:
                         softwareCompany: 8
@@ -707,7 +707,7 @@ paths:
                       - woolSaleHeaderLots:
                           season: 16
                           saleIdentity:
-                            sellingCentreType: M
+                            sellingCentreType: AU_M
                             saleNumber: 29
                           centreStorage: AU_AD
                           saleDate: '2017-01-19'
@@ -722,12 +722,12 @@ paths:
                           chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           isFinalCatalogue: true
                           releasingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           sellingOrganisation:
-                            organisationCode: ABCD
+                            organisationId: ABCD
                           woolTypeGroup: MFLC
                           centreCatalogue: AU_G
                           deliveryBasis: D
@@ -2648,15 +2648,15 @@ components:
     Organisation:
       type: object
       properties:
-        organisationAndCentre:
-          $ref: '#/components/schemas/OrganisationAndCentre'
-        organisationCode:
+        organisationCodeAndCentre:
+          $ref: '#/components/schemas/OrganisationCodeAndCentre'
+        organisationId:
           maxLength: 5
           minLength: 0
           type: string
           nullable: true
       additionalProperties: false
-    OrganisationAndCentre:
+    OrganisationCodeAndCentre:
       required:
         - centre
         - organisationCode
@@ -3009,10 +3009,7 @@ components:
       type: object
       properties:
         sellingCentreType:
-          maxLength: 2
-          minLength: 0
-          type: string
-          nullable: true
+          $ref: '#/components/schemas/SellingCentreType'
         saleNumber:
           maxLength: 2
           minLength: 0
@@ -3030,6 +3027,24 @@ components:
         - E
       type: string
       description: 'A: Auction (open cry)<br />T: Tender<br />O: Offer<br />AV: Availability<br />E: Electronic Sale'
+    SellingCentreType:
+      enum:
+        - NZ_C
+        - NZ_N
+        - AU_A
+        - AU_AU
+        - AU_B
+        - AU_F
+        - AU_G
+        - AU_L
+        - AU_M
+        - AU_N
+        - AU_R
+        - AU_S
+        - PS
+        - T
+      type: string
+      description: 'NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales'
     SoftwareCompany:
       enum:
         - 1

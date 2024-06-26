@@ -24,7 +24,7 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
@@ -43,7 +43,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
                                     {
-                                        SellingCentreType = "M",
+                                        SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
                                     CentreStorage = Centre.AU_AR,
@@ -59,15 +59,15 @@ namespace Wiedpug.API.ExampleResponses
                                     ChargePerLot = 0.00,
                                     InvoicingOrganisation = new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },
                                     ReleasingOrganisation = new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },
                                     SellingOrganisation = new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
@@ -181,7 +181,7 @@ namespace Wiedpug.API.ExampleResponses
             {
                 SaleIdentity = new Domain.Entities.SaleIdentity
                 {
-                    SellingCentreType = "F",
+                    SellingCentreType = SellingCentreType.AU_F,
                     SaleNumber = 18
                 },
                 OrganisationRequested = "AWNF",
@@ -215,7 +215,7 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
@@ -234,7 +234,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
                                     {
-                                        SellingCentreType = "M",
+                                        SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
                                     CentreStorage = Centre.AU_AR,
@@ -250,15 +250,15 @@ namespace Wiedpug.API.ExampleResponses
                                     ChargePerLot = 0.00,
                                     InvoicingOrganisation = new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },
                                     ReleasingOrganisation = new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },
                                     SellingOrganisation =new Organisation
                             {
-                                OrganisationCode = "ABCD"
+                                OrganisationId = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,

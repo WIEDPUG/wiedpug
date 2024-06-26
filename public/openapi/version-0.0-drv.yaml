@@ -29,7 +29,7 @@ paths:
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
                 documentOriginator:
-                  organisationCode: ABCD
+                  organisationId: ABCD
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 8
@@ -619,15 +619,15 @@ components:
     Organisation:
       type: object
       properties:
-        organisationAndCentre:
-          $ref: '#/components/schemas/OrganisationAndCentre'
-        organisationCode:
+        organisationCodeAndCentre:
+          $ref: '#/components/schemas/OrganisationCodeAndCentre'
+        organisationId:
           maxLength: 5
           minLength: 0
           type: string
           nullable: true
       additionalProperties: false
-    OrganisationAndCentre:
+    OrganisationCodeAndCentre:
       required:
         - centre
         - organisationCode

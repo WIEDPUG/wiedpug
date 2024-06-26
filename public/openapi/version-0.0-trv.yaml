@@ -29,7 +29,7 @@ paths:
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
                 documentOriginator:
-                  organisationCode: AWTA
+                  organisationId: AWTA
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 8
@@ -39,7 +39,7 @@ paths:
               testRequestsVerificationDetails:
                 - testDataHeader:
                     client:
-                      organisationCode: AWTA
+                      organisationId: AWTA
                     lotIdentity: '567545'
                     weightNote: '12345678'
                     bales: 1
@@ -104,7 +104,7 @@ paths:
                     ageTo: 5
                 - testDataHeader:
                     client:
-                      organisationCode: AWTA
+                      organisationId: AWTA
                     lotIdentity: '567545'
                     weightNote: '12345678'
                     bales: 1
@@ -844,15 +844,15 @@ components:
     Organisation:
       type: object
       properties:
-        organisationAndCentre:
-          $ref: '#/components/schemas/OrganisationAndCentre'
-        organisationCode:
+        organisationCodeAndCentre:
+          $ref: '#/components/schemas/OrganisationCodeAndCentre'
+        organisationId:
           maxLength: 5
           minLength: 0
           type: string
           nullable: true
       additionalProperties: false
-    OrganisationAndCentre:
+    OrganisationCodeAndCentre:
       required:
         - centre
         - organisationCode
@@ -869,10 +869,7 @@ components:
       type: object
       properties:
         sellingCentreType:
-          maxLength: 2
-          minLength: 0
-          type: string
-          nullable: true
+          $ref: '#/components/schemas/SellingCentreType'
         saleNumber:
           maxLength: 2
           minLength: 0
@@ -881,6 +878,24 @@ components:
           format: int32
           nullable: true
       additionalProperties: false
+    SellingCentreType:
+      enum:
+        - NZ_C
+        - NZ_N
+        - AU_A
+        - AU_AU
+        - AU_B
+        - AU_F
+        - AU_G
+        - AU_L
+        - AU_M
+        - AU_N
+        - AU_R
+        - AU_S
+        - PS
+        - T
+      type: string
+      description: 'NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales'
     Sex:
       enum:
         - E

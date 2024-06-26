@@ -8,7 +8,7 @@ using Wiedpug.Domain.Enums;
 
 namespace Wiedpug.Domain.ValueObject
 {
-    public class OrganisationAndCentre
+    public class OrganisationCodeAndCentre
     {
         [Required]
         [StringLength(3)]

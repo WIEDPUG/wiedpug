@@ -1,6 +1,7 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate;
+using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
@@ -22,7 +23,7 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationCode = "AWTX"
+                                OrganisationId = "AWTX"
                             },VersionNumber = 36,
                             ABN = "00000000000"
                         },
@@ -33,7 +34,7 @@ namespace Wiedpug.API.ExampleResponses
                                 TransmissionTypeRequested = Domain.Enums.TransmissionType.AuctionCatalogues,
                                 SaleIdentity = new Domain.Entities.SaleIdentity
                                 {
-                                    SellingCentreType = "F",
+                                    SellingCentreType = SellingCentreType.AU_F,
                                     SaleNumber = 18                                    
                                 },
                                 OrganisationRequested = "AWNF",

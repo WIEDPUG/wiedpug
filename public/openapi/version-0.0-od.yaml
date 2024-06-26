@@ -26,7 +26,7 @@ paths:
             example:
               countryOfOrigin: AU
               documentOriginator:
-                organisationCode: ABCD
+                organisationId: ABCD
               softwareIdentifier:
                 softwareCompany: 1
                 version: 1082
@@ -51,7 +51,7 @@ paths:
                     dateTransmissionFileCreated: '2016-01-17'
                     countryOfOrigin: AU
                     documentOriginator:
-                      organisationCode: ABCD
+                      organisationId: ABCD
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 6
@@ -61,7 +61,7 @@ paths:
                   organisationDetailCollection:
                     - id: '1'
                       organisation:
-                        organisationCode: AWTS
+                        organisationId: AWTS
                       nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: E
@@ -87,14 +87,14 @@ paths:
                               number: '0309332782'
                     - id: '2'
                       organisation:
-                        organisationCode: ABCD
+                        organisationId: ABCD
                       nameOfOrganisation: DEMO BUYER 1
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: E
                       transmitterFlag: 'N'
                     - id: '3'
                       organisation:
-                        organisationCode: AWTN
+                        organisationId: AWTN
                       nameOfOrganisation: AUSTRALIAN WOOL TESTING AUTH LTD
                       dateLastUpdated: '2020-04-28'
                       industryGroupId: A
@@ -205,12 +205,12 @@ paths:
                   dateTransmissionFileCreated: '2016-01-17'
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABCD
+                    organisationId: ABCD
                   abn: '43006014106'
                 organisationDetailCollection:
                   - id: '1'
                     organisation:
-                      organisationCode: ABCD
+                      organisationId: ABCD
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
                     industryGroupId: T
@@ -299,11 +299,11 @@ paths:
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
                 documentOriginator:
-                  organisationCode: ABCD
+                  organisationId: ABCD
                 abn: '43006014106'
               organisationDetailCollection:
                 - organisation:
-                    organisationCode: ABCD
+                    organisationId: ABCD
                   nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                   dateLastUpdated: '2020-04-28'
                   industryGroupId: E
@@ -341,12 +341,12 @@ paths:
                   dateTransmissionFileCreated: '2016-01-17'
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABCD
+                    organisationId: ABCD
                   abn: '43006014106'
                 organisationDetailCollection:
                   - id: '1'
                     organisation:
-                      organisationCode: ABCD
+                      organisationId: ABCD
                     nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
                     dateLastUpdated: '2020-04-28'
                     industryGroupId: T
@@ -886,15 +886,15 @@ components:
     Organisation:
       type: object
       properties:
-        organisationAndCentre:
-          $ref: '#/components/schemas/OrganisationAndCentre'
-        organisationCode:
+        organisationCodeAndCentre:
+          $ref: '#/components/schemas/OrganisationCodeAndCentre'
+        organisationId:
           maxLength: 5
           minLength: 0
           type: string
           nullable: true
       additionalProperties: false
-    OrganisationAndCentre:
+    OrganisationCodeAndCentre:
       required:
         - centre
         - organisationCode
