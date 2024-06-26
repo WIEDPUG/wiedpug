@@ -33,7 +33,7 @@ paths:
                       dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator:
-                        organizationCode: AWTA
+                        organisationCode: AWTA
                       versionNumber: 31
                       softwareIdentifier:
                         softwareCompany: 1
@@ -44,8 +44,8 @@ paths:
                     transferConfig:
                       transferType: Broadcast
                       exclusionList:
-                        - organizationCode: AMSC
-                        - organizationCode: FIBC
+                        - organisationCode: AMSC
+                        - organisationCode: FIBC
                     woolSaleHeaders:
                       - woolSaleHeaderLots:
                           season: 16
@@ -65,12 +65,12 @@ paths:
                           chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           isFinalCatalogue: true
                           releasingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           sellingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           woolTypeGroup: MFLC
                           centreCatalogue: AU_G
                           deliveryBasis: D
@@ -194,7 +194,7 @@ paths:
                       dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator:
-                        organizationCode: ABCD
+                        organisationCode: ABCD
                       versionNumber: 31
                       softwareIdentifier:
                         softwareCompany: 1
@@ -205,7 +205,7 @@ paths:
                     transferConfig:
                       transferType: PrivateSend
                       inclusionList:
-                        - organizationCode: AWXLC
+                        - organisationCode: AWXLC
                     woolSaleHeaders:
                       - woolSaleHeaderLots:
                           season: 16
@@ -225,12 +225,12 @@ paths:
                           chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           isFinalCatalogue: true
                           releasingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           sellingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           woolTypeGroup: MFLC
                           centreCatalogue: AU_G
                           deliveryBasis: D
@@ -420,7 +420,7 @@ paths:
                   dateTransmissionFileCreated: '2016-01-17'
                   countryOfOrigin: AU
                   documentOriginator:
-                    organizationCode: ABCD
+                    organisationCode: ABCD
                   versionNumber: 31
                   softwareIdentifier:
                     softwareCompany: 1
@@ -431,8 +431,8 @@ paths:
                 transferConfig:
                   transferType: Broadcast
                   exclusionList:
-                    - organizationCode: AWMS
-                    - organizationCode: FCBB
+                    - organisationCode: AWMS
+                    - organisationCode: FCBB
                 woolSaleHeaders:
                   - woolSaleHeaderLots:
                       season: 16
@@ -452,12 +452,12 @@ paths:
                       chargePerLot: 0
                       catalogueSection: FLC
                       invoicingOrganisation:
-                        organizationCode: ABCD
+                        organisationCode: ABCD
                       isFinalCatalogue: true
                       releasingOrganisation:
-                        organizationCode: ABCD
+                        organisationCode: ABCD
                       sellingOrganisation:
-                        organizationCode: ABCD
+                        organisationCode: ABCD
                       woolTypeGroup: MFLC
                       centreCatalogue: AU_G
                       deliveryBasis: D
@@ -643,7 +643,7 @@ paths:
                       sellingCentreType: F
                       saleNumber: 18
                     organisationRequested:
-                      organizationCode: AWNF
+                      organisationCode: AWNF
                     saleDateRequested: '2023-10-31'
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
@@ -656,7 +656,7 @@ paths:
                       sellingCentreType: F
                       saleNumber: 18
                     organisationRequested:
-                      organizationCode: AWNF
+                      organisationCode: AWNF
                     saleDateRequested: '2023-10-31'
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
@@ -671,7 +671,7 @@ paths:
                       sellingCentreType: F
                       saleNumber: 18
                     organisationRequested:
-                      organizationCode: AWNF
+                      organisationCode: AWNF
                     saleDateRequested: '2023-10-31'
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
@@ -695,7 +695,7 @@ paths:
                       dateTransmissionFileCreated: '2016-01-17'
                       countryOfOrigin: AU
                       documentOriginator:
-                        organizationCode: ABCD
+                        organisationCode: ABCD
                       versionNumber: 31
                       softwareIdentifier:
                         softwareCompany: 8
@@ -722,12 +722,12 @@ paths:
                           chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           isFinalCatalogue: true
                           releasingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           sellingOrganisation:
-                            organizationCode: ABCD
+                            organisationCode: ABCD
                           woolTypeGroup: MFLC
                           centreCatalogue: AU_G
                           deliveryBasis: D
@@ -1374,11 +1374,6 @@ components:
       properties:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -1472,11 +1467,6 @@ components:
       properties:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
-        charge:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -1643,11 +1633,6 @@ components:
       properties:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -1988,11 +1973,6 @@ components:
       properties:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2057,8 +2037,6 @@ components:
           description: "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used."
           format: int32
           nullable: true
-        reissueChargeFlag:
-          $ref: '#/components/schemas/ReissueChargeFlag'
         lsCertType:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
@@ -2101,6 +2079,7 @@ components:
     LengthAndStrengthDetails:
       required:
         - certificateIdentity
+        - charge
         - dateIssued
         - isLsSampleSecured
         - laboratory
@@ -2119,7 +2098,6 @@ components:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2165,8 +2143,6 @@ components:
           description: "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used."
           format: int32
           nullable: true
-        reissueChargeFlag:
-          $ref: '#/components/schemas/ReissueChargeFlag'
         lsCertType:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
@@ -2499,11 +2475,6 @@ components:
       properties:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2677,9 +2648,9 @@ components:
     Organisation:
       type: object
       properties:
-        organizationAndCentre:
+        organisationAndCentre:
           $ref: '#/components/schemas/OrganisationAndCentre'
-        organizationCode:
+        organisationCode:
           maxLength: 5
           minLength: 0
           type: string
@@ -2688,10 +2659,10 @@ components:
     OrganisationAndCentre:
       required:
         - centre
-        - organizationCode
+        - organisationCode
       type: object
       properties:
-        organizationCode:
+        organisationCode:
           maxLength: 3
           minLength: 0
           type: string
@@ -2738,9 +2709,9 @@ components:
     PremiumTestDetails:
       required:
         - certificateIdentity
+        - charge
         - laboratory
         - reissueChargeFlag
-        - retestFlag
         - yield1
       type: object
       properties:
@@ -2750,7 +2721,6 @@ components:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -3144,11 +3114,6 @@ components:
       properties:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:

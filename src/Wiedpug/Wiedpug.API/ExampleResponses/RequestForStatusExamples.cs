@@ -19,7 +19,7 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2022-07-25",
                     DateTransmissionFileCreated = "2024-03-21",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = new Organisation { OrganizationCode = "AWTX" },
+                    DocumentOriginator = new Organisation { OrganisationCode = "AWTX" },
                     VersionNumber = 36,
                     ABN = "72001967184"
                 },
@@ -61,7 +61,7 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganizationCode = "AWTX"
+                            OrganisationCode = "AWTX"
                         },
                         VersionNumber = 36,
                         ABN = "72001967184"

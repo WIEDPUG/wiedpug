@@ -19,7 +19,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "ABCD"
+                        OrganisationCode = "ABCD"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -39,7 +39,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDCD = 6
                                 },
                         ReissueType = ReissueType._06,
-                        Client = new Organisation { OrganizationCode = "AABBC" },
+                        Client = new Organisation { OrganisationCode = "AABBC" },
                         Bales = 2,
                         BaleDescription = "AAA M",
                         WoolBase = 60.43,
@@ -54,7 +54,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDCD = 5
                                 },
                         ReissueType = ReissueType._05,
-                        Client = new Organisation { OrganizationCode = "ACAC" },
+                        Client = new Organisation { OrganisationCode = "ACAC" },
                         Bales = 7,
                         BaleDescription = "AAA M",
                         WoolBase = 65.12,
@@ -69,7 +69,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDCD = 6
                                 },
                         ReissueType = ReissueType._02,
-                        Client = new Organisation { OrganizationCode = "AAAAA" },
+                        Client = new Organisation { OrganisationCode = "AAAAA" },
                         Bales = 8,
                         BaleDescription = "PCA M",
                         WoolBase = 50.31,

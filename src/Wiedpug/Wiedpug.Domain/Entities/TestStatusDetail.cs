@@ -47,6 +47,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public string? CoreSampleReceived { get; set; }
 
         /// <summary>
@@ -54,6 +55,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public string? LSSampleReceived { get; set; }
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public string? TRVMatched { get; set; }
 
         /// <summary>
@@ -68,6 +71,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public string? CoreSampleCheckTest { get; set; }
 
         /// <summary>
@@ -82,6 +86,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public string? LsRetuftReceived { get; set; }
 
         /// <summary>
@@ -96,6 +101,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public string? CoreTestRecoreReceived { get; set; }
     }
 

@@ -22,7 +22,7 @@ namespace Wiedpug.Domain.Aggregates.LotInvoicesAggregate
 
         public SubjectiveInterlotDetails? SubjectiveInterlotDetails { get;set; }
 
-        public CombinationDetails? CombinationDetails { get; set; }
+        public LotInvoiceCombinationDetails? CombinationDetails { get; set; }
 
         public LengthAndStrengthCombDetails? LengthAndStrengthCombDetail { get; set; }
         public LengthAndStrengthDetails? LengthAndStrengthDetails { get; set;}

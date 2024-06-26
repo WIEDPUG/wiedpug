@@ -2,27 +2,27 @@
 {
     public class TestCertificate
     {
-        public required TestDataHeader  TestDataHeader { get; set; }
+        public required TestCertificateTestDataHeader  TestDataHeader { get; set; }
 
-        public ColourDetails? ColorDetails { get; set; }
+        public TestCertificateColourDetails? ColorDetails { get; set; }
 
-        public PremiumTestDetails? PremiumTestDetails { get; set; }
+        public TestCertificatePremiumTestDetails? PremiumTestDetails { get; set; }
 
-        public SubjectiveInterlotDetails? SubjectiveInterlotDetails { get; set;}
+        public TestCertificateSubjectiveInterlotDetails? SubjectiveInterlotDetails { get; set;}
 
-        public CombinationDetails? CombinationDetails {  get; set; }
+        public TestCertificateCombinationDetails? CombinationDetails {  get; set; }
         
-        public LengthAndStrengthCombDetails? LengthAndStrengthCombDetails { get; set;}
+        public TestCertificateLengthAndStrengthCombDetails? LengthAndStrengthCombDetails { get; set;}
 
-        public LengthAndStrengthDetails? LengthAndStrengthDetails { get; set; }  
+        public TestCertificateLengthAndStrengthDetails? LengthAndStrengthDetails { get; set; }  
 
-        public OMLDetails? OMLDetails { get; set; }
+        public TestCertificateOMLDetails? OMLDetails { get; set; }
 
-        public CoreTestDetails? CoreTestDetails { get; set; }
+        public TestCertificateCoreTestDetails? CoreTestDetails { get; set; }
 
-        public ColourCombinationDetails? ColorCombinationDetails { get; set; }
+        public TestCertificateColourCombinationDetails? ColorCombinationDetails { get; set; }
 
-        public OMIDetails? OMIDetials {  get; set; }
+        public TestCertificateOMIDetails? OMIDetials {  get; set; }
 
         public PostSaleCoreTestDetails? PostSaleCoreTestDetails { get;set; }
 
@@ -41,7 +41,7 @@
         /// <summary>
         /// A collection of Certificate Identities
         /// </summary>
-        public List<string>? SublotCertificateNumbers { get; set; }
+        public List<CertificateIdentity>? SublotCertificateNumbers { get; set; }
 
         public List<FibreDiameterHistogram>? FibreDiameterHistograms { get; set; }
 

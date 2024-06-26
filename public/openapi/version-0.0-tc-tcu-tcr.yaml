@@ -28,11 +28,8 @@ paths:
                 dateFormatLastRevised: '2020-07-15'
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
-                documentOriginator: ABCD
-                currentTransmitter: AWTM
-                currentReceiver: AWXLC
-                finalReceiver: AWXLC
-                transmissionType: 8
+                documentOriginator:
+                  organisationCode: AWTX
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -46,60 +43,68 @@ paths:
                     yieldType2: 4
                     certificateReference: XXY1255
                     clientsCrossReference: XXY1255
-                    declaredGross: null
-                    declaredTare: null
-                    sampleWeightRemoved: null
                     bales: 96
                     season: 21
-                    saleIdentity: null
-                    lotIdentity: null
-                    printFlag: null
                     combinationRequest: 'N'
                     autoAdditionalMeasurementRequired: 'N'
                     additionalPrintRequirements: 0
                     teaM3HauteurPrint: false
-                    commitType: null
                     certificateRequestDetails:
-                      - certificateIdentity: 315969534P9
+                      - certificateIdentity:
+                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDSuffix: P
+                          certificateIDNumber: '15969534'
+                          certificateIDCD: 9
                         woolbase: 63.16
                         laboratory: 1
-                      - certificateIdentity: 315998357P0
+                      - certificateIdentity:
+                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDSuffix: P
+                          certificateIDNumber: '00000499'
+                          certificateIDCD: 7
                         woolbase: 61.52
                         laboratory: 1
-                      - certificateIdentity: 316022762P9
+                      - certificateIdentity:
+                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDSuffix: P
+                          certificateIDNumber: '00000499'
+                          certificateIDCD: 7
                         woolbase: 61.44
                         laboratory: 1
-                  baleHeader: null
                 - certificateRequest:
                     printRequirements: 0
                     yieldType1: 1
                     yieldType2: 13
                     certificateReference: XXY1205
                     clientsCrossReference: XXZ1635
-                    declaredGross: null
-                    declaredTare: null
-                    sampleWeightRemoved: null
                     bales: 96
                     season: 21
-                    saleIdentity: null
-                    lotIdentity: null
-                    printFlag: null
                     combinationRequest: C
                     autoAdditionalMeasurementRequired: 'N'
                     additionalPrintRequirements: 3
                     teaM3HauteurPrint: true
-                    commitType: null
                     certificateRequestDetails:
-                      - certificateIdentity: 568369534L6
+                      - certificateIdentity:
+                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDSuffix: P
+                          certificateIDNumber: '00000499'
+                          certificateIDCD: 7
                         woolbase: 53.74
                         laboratory: 1
-                      - certificateIdentity: 455818307B3
+                      - certificateIdentity:
+                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDSuffix: P
+                          certificateIDNumber: '00000499'
+                          certificateIDCD: 7
                         woolbase: 52.01
                         laboratory: 1
-                      - certificateIdentity: 226932560N1
+                      - certificateIdentity:
+                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDSuffix: P
+                          certificateIDNumber: '00000499'
+                          certificateIDCD: 7
                         woolbase: 54.26
                         laboratory: 1
-                  baleHeader: null
         required: true
       responses:
         '200':
@@ -110,8 +115,6 @@ paths:
                 $ref: '#/components/schemas/ApiResult'
               example:
                 isSuccessful: true
-                message: null
-                data: null
         '400':
           description: Bad Request
           content:
@@ -140,7 +143,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -152,7 +154,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -164,7 +165,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
   /v0/test-certificate-update:
     post:
       tags:
@@ -181,11 +181,8 @@ paths:
                 dateFormatLastRevised: '2020-07-15'
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
-                documentOriginator: ABCD
-                currentTransmitter: AWTM
-                currentReceiver: AWXLC
-                finalReceiver: AWXLC
-                transmissionType: 60
+                documentOriginator:
+                  organisationCode: ABCD
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -193,48 +190,45 @@ paths:
                   programName: NETR
                 abn: '72001967184'
               testCertificateUpdateDetails:
-                - certificateIdentity: 316101382L6
+                - certificateIdentity:
+                    certificateIDPrefix: FremantleLaboratory
+                    certificateIDSuffix: L
+                    certificateIDNumber: '16101382'
+                    certificateIDCD: 6
                   reissueType: '06'
-                  client: AABBC
+                  client:
+                    organisationCode: AABBC
                   bales: 2
                   baleDescription: AAA M
                   woolBase: 60.43
-                  woolPreparationCategoryFrom: null
-                  woolPreparationCategoryTo: null
                   mulesingStatusFrom: ND
                   mulesingStatusTo: M
-                  saleIdentityFrom: null
-                  saleIdentityTo: null
-                  lotIdentityFrom: null
-                  lotIdentityTo: null
-                - certificateIdentity: 316071189T5
+                - certificateIdentity:
+                    certificateIDPrefix: FremantleLaboratory
+                    certificateIDSuffix: M
+                    certificateIDNumber: '16101382'
+                    certificateIDCD: 5
                   reissueType: '05'
-                  client: ACAC
+                  client:
+                    organisationCode: ACAC
                   bales: 7
                   baleDescription: AAA M
                   woolBase: 65.12
-                  woolPreparationCategoryFrom: null
-                  woolPreparationCategoryTo: null
                   mulesingStatusFrom: AA
                   mulesingStatusTo: M
-                  saleIdentityFrom: null
-                  saleIdentityTo: null
-                  lotIdentityFrom: null
-                  lotIdentityTo: null
-                - certificateIdentity: 315701332B6
+                - certificateIdentity:
+                    certificateIDPrefix: FremantleLaboratory
+                    certificateIDSuffix: B
+                    certificateIDNumber: '15701332'
+                    certificateIDCD: 6
                   reissueType: '02'
-                  client: AAAAA
+                  client:
+                    organisationCode: AAAAA
                   bales: 8
                   baleDescription: PCA M
                   woolBase: 50.31
-                  woolPreparationCategoryFrom: null
-                  woolPreparationCategoryTo: null
                   mulesingStatusFrom: NM
                   mulesingStatusTo: M
-                  saleIdentityFrom: null
-                  saleIdentityTo: null
-                  lotIdentityFrom: null
-                  lotIdentityTo: null
         required: true
       responses:
         '200':
@@ -245,8 +239,6 @@ paths:
                 $ref: '#/components/schemas/ApiResult'
               example:
                 isSuccessful: true
-                message: null
-                data: null
         '400':
           description: Bad Request
           content:
@@ -275,7 +267,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -287,7 +278,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -299,7 +289,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
   /v0/test-certificates:
     post:
       tags:
@@ -316,11 +305,8 @@ paths:
                 dateFormatLastRevised: '2020-07-15'
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
-                documentOriginator: ABCD
-                currentTransmitter: AWTM
-                currentReceiver: AWXLC
-                finalReceiver: AWXLC
-                transmissionType: 50
+                documentOriginator:
+                  organisationCode: ABCD
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -330,82 +316,37 @@ paths:
               testCertificateCollection:
                 - testDataHeader:
                     client:
-                      organizationCode: AWTA
-                      centre: null
-                      organizationID: null
-                    season: null
-                    saleIdentity: null
-                    centreStorage: null
-                    lotIdentity: null
-                    groupNumber: null
-                    weightNote: null
-                    clientsCrossReference: null
+                      organisationCode: AWTA
+                    lotIdentityOrGroupName:
+                      lotIdentity: '234234'
                     bales: 1
                     gross: 1
                     tare: 1
                     regrabSampleWeight: 1
                     weightUnit: 0
-                    mulesingStatus: null
-                    declaredGross: null
-                    declaredTare: null
                     lotType: 7
                     centreAuction: AU_A
                     sourceCode: 1
                     reportingFlag: R
-                    scouredType: NotScoured
-                    gstAmount: null
+                    scouredType: 0
                     isGSTApplicable: false
                     isCompanyABNApplicable: false
-                  colorDetails: null
-                  premiumTestDetails: null
-                  subjectiveInterlotDetails: null
-                  combinationDetails:
-                    cleanWeight1: 10
-                    cleanWeight2: null
-                    cleanWeight3: null
-                    cleanWeight4: null
-                    cleanWeight5: null
-                    vmbMinimum: null
-                    vmbMaximum: null
-                    factorWoolBase: null
-                    factorVMB: null
-                    factorHardHeadsBase: null
-                    factorAirflowMean: null
-                    combinationFlag: null
-                  lengthAndStrengthCombDetails: null
-                  lengthAndStrengthDetails: null
                   omlDetails:
-                    certificateIdentity: SFSF
+                    certificateIdentity:
+                      certificateIDPrefix: FremantleLaboratory
+                      certificateIDSuffix: D
+                      certificateIDNumber: '23456787'
+                      certificateIDCD: 7
                     charge: 100
                     laboratory: 1
-                    regrabSampleWeight: null
                     woolBase: 20
-                    airflowMean: null
                     vmb: 10
                     hardHeadsBase: 3.5
                     yield1: 1.2
-                    yield2: null
-                    yield3: null
-                    yield4: null
                     yieldType1: 1
-                    yieldType2: null
                     retestFlag: 0
-                    yield5: null
                     reissueChargeFlag: 0
                     vm1: 20
-                    vm2: null
-                    vm3: null
-                  coreTestDetails: null
-                  colorCombinationDetails: null
-                  omiDetials: null
-                  postSaleCoreTestDetails: null
-                  guidanceReporttDetails: null
-                  scouredTestDetails: null
-                  dichloromethaneTestDetails: null
-                  conditioningTestDetails: null
-                  lengthAfterCardingTestDetails: null
-                  lengthAdjustmentNoteDetails: null
-                  sublotCertificateNumbers: null
                   fibreDiameterHistograms:
                     - fibreDiameterHistogramHeader:
                         coefficientOfVariation: 19.9
@@ -418,12 +359,8 @@ paths:
                         mean: 20.1
                         standardDeviation: 4
                         curvatureMeanDegPerMm: 61
-                        meanMinimum: null
-                        meanMaximum: null
                         coreTestSamplingDate: '2017-01-10'
                         dateIssued: '2017-01-10'
-                        factorLaserscanNumerator: null
-                        factorLaserscanDenominator: null
                       fibreDiameterHistogramDetails:
                         - fibreMeasurements:
                             - fibreDiameter: 23
@@ -440,44 +377,31 @@ paths:
                               fibresMeasuredPercentage: 0.174
                             - fibreDiameter: 21
                               fibresMeasuredPercentage: 0.1955
-                  bales: null
                 - testDataHeader:
                     client:
-                      organizationCode: AWTA
-                      centre: null
-                      organizationID: null
-                    season: null
-                    saleIdentity: null
-                    centreStorage: null
-                    lotIdentity: null
-                    groupNumber: null
-                    weightNote: null
-                    clientsCrossReference: null
+                      organisationCode: AWTA
+                    lotIdentityOrGroupName:
+                      lotIdentity: '123456'
                     bales: 1
                     gross: 1
                     tare: 1
                     regrabSampleWeight: 1
                     weightUnit: 0
-                    mulesingStatus: null
-                    declaredGross: null
-                    declaredTare: null
                     lotType: 4
                     centreAuction: AU_A
                     sourceCode: 1
                     reportingFlag: U
-                    scouredType: NotScoured
-                    gstAmount: null
+                    scouredType: 0
                     isGSTApplicable: false
                     isCompanyABNApplicable: false
-                  colorDetails: null
-                  premiumTestDetails: null
-                  subjectiveInterlotDetails: null
-                  combinationDetails: null
                   lengthAndStrengthCombDetails:
-                    certificateIdentity: dsfafhdfa
-                    charge: null
+                    certificateIdentity:
+                      certificateIDPrefix: FremantleLaboratory
+                      certificateIDSuffix: D
+                      certificateIDNumber: '23456787'
+                      certificateIDCD: 7
+                    charge: 123.25
                     laboratory: 2
-                    regrabSampleWeight: null
                     stapleLength: 13
                     stapleLengthCvPercentage: 25
                     stapleStrength: 14
@@ -488,30 +412,15 @@ paths:
                     positionOfBreakPercentageTip: 26
                     positionOfBreakPercentageMiddle: 34
                     positionOfBreakPercentageBase: 27
-                    team3Hauteur: null
-                    reissueChargeFlag: null
+                    reissueChargeFlag: 0
                     lsCertType: 0
                     isLsSampleSecured: false
-                    expectedBarbe: null
-                    team3HauteurCvPercentage: null
-                    team3RomainePercentage: null
                     dateIssued: '2024-01-22'
-                    stapleStrengthLowest25Percent: null
-                  lengthAndStrengthDetails: null
-                  omlDetails: null
-                  coreTestDetails: null
-                  colorCombinationDetails: null
-                  omiDetials: null
-                  postSaleCoreTestDetails: null
-                  guidanceReporttDetails: null
-                  scouredTestDetails: null
-                  dichloromethaneTestDetails: null
-                  conditioningTestDetails: null
-                  lengthAfterCardingTestDetails: null
-                  lengthAdjustmentNoteDetails: null
                   sublotCertificateNumbers:
-                    - fdsafsdaf
-                    - ygdfgdfdf
+                    - certificateIDPrefix: FremantleLaboratory
+                      certificateIDSuffix: D
+                      certificateIDNumber: '23456787'
+                      certificateIDCD: 7
                   fibreDiameterHistograms:
                     - fibreDiameterHistogramHeader:
                         coefficientOfVariation: 19.9
@@ -524,12 +433,8 @@ paths:
                         mean: 20.1
                         standardDeviation: 4
                         curvatureMeanDegPerMm: 61
-                        meanMinimum: null
-                        meanMaximum: null
                         coreTestSamplingDate: '2017-01-10'
                         dateIssued: '2017-01-10'
-                        factorLaserscanNumerator: null
-                        factorLaserscanDenominator: null
                       fibreDiameterHistogramDetails:
                         - fibreMeasurements:
                             - fibreDiameter: 23
@@ -546,7 +451,6 @@ paths:
                               fibresMeasuredPercentage: 0.174
                             - fibreDiameter: 21
                               fibresMeasuredPercentage: 0.1955
-                  bales: null
         required: true
       responses:
         '200':
@@ -557,8 +461,6 @@ paths:
                 $ref: '#/components/schemas/ApiResult'
               example:
                 isSuccessful: true
-                message: null
-                data: null
         '400':
           description: Bad Request
           content:
@@ -587,7 +489,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -599,7 +500,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -611,7 +511,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
   /v0/test-certificates/data:
     post:
       tags:
@@ -625,10 +524,14 @@ paths:
               $ref: '#/components/schemas/GetTestCertificatesRequest'
             example:
               countryOfOrigin: AU
-              documentOriginator: ABCD
-              currentTransmitter: AWTM
-              currentReceiver: AWXLC
-              finalReceiver: AWXLC
+              documentOriginator:
+                organisationCode: AWTA
+              currentTransmitter:
+                organisationCode: AWTA
+              currentReceiver:
+                organisationCode: AWXLC
+              finalReceiver:
+                organisationCode: AWXLC
               softwareIdentifier:
                 softwareCompany: 1
                 version: 1082
@@ -644,17 +547,13 @@ paths:
                 $ref: '#/components/schemas/TestCertificatesApiResult'
               example:
                 isSuccessful: true
-                message: null
                 data:
                   transmissionHeader:
                     dateFormatLastRevised: '2020-07-15'
                     dateTransmissionFileCreated: '2016-01-17'
                     countryOfOrigin: AU
-                    documentOriginator: ABCD
-                    currentTransmitter: AWTM
-                    currentReceiver: AWXLC
-                    finalReceiver: AWXLC
-                    transmissionType: 50
+                    documentOriginator:
+                      organisationCode: AWTA
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 1
@@ -664,82 +563,37 @@ paths:
                   testCertificateCollection:
                     - testDataHeader:
                         client:
-                          organizationCode: AWTA
-                          centre: null
-                          organizationID: null
-                        season: null
-                        saleIdentity: null
-                        centreStorage: null
-                        lotIdentity: null
-                        groupNumber: null
-                        weightNote: null
-                        clientsCrossReference: null
+                          organisationCode: AWTA
+                        lotIdentityOrGroupName:
+                          lotIdentity: '123456'
                         bales: 1
                         gross: 1
                         tare: 1
                         regrabSampleWeight: 1
                         weightUnit: 0
-                        mulesingStatus: null
-                        declaredGross: null
-                        declaredTare: null
                         lotType: 3
                         centreAuction: AU_A
                         sourceCode: 1
                         reportingFlag: R
-                        scouredType: NotScoured
-                        gstAmount: null
+                        scouredType: 0
                         isGSTApplicable: false
                         isCompanyABNApplicable: false
-                      colorDetails: null
-                      premiumTestDetails: null
-                      subjectiveInterlotDetails: null
-                      combinationDetails:
-                        cleanWeight1: 10
-                        cleanWeight2: null
-                        cleanWeight3: null
-                        cleanWeight4: null
-                        cleanWeight5: null
-                        vmbMinimum: null
-                        vmbMaximum: null
-                        factorWoolBase: null
-                        factorVMB: null
-                        factorHardHeadsBase: null
-                        factorAirflowMean: null
-                        combinationFlag: null
-                      lengthAndStrengthCombDetails: null
-                      lengthAndStrengthDetails: null
                       omlDetails:
-                        certificateIdentity: SFSF
+                        certificateIdentity:
+                          certificateIDPrefix: FremantleLaboratory
+                          certificateIDSuffix: D
+                          certificateIDNumber: '23456787'
+                          certificateIDCD: 7
                         charge: 100
                         laboratory: 1
-                        regrabSampleWeight: null
                         woolBase: 20
-                        airflowMean: null
                         vmb: 10
                         hardHeadsBase: 3.5
                         yield1: 1.2
-                        yield2: null
-                        yield3: null
-                        yield4: null
                         yieldType1: 1
-                        yieldType2: null
                         retestFlag: 0
-                        yield5: null
                         reissueChargeFlag: 0
                         vm1: 20
-                        vm2: null
-                        vm3: null
-                      coreTestDetails: null
-                      colorCombinationDetails: null
-                      omiDetials: null
-                      postSaleCoreTestDetails: null
-                      guidanceReporttDetails: null
-                      scouredTestDetails: null
-                      dichloromethaneTestDetails: null
-                      conditioningTestDetails: null
-                      lengthAfterCardingTestDetails: null
-                      lengthAdjustmentNoteDetails: null
-                      sublotCertificateNumbers: null
                       fibreDiameterHistograms:
                         - fibreDiameterHistogramHeader:
                             coefficientOfVariation: 19.9
@@ -752,12 +606,8 @@ paths:
                             mean: 20.1
                             standardDeviation: 4
                             curvatureMeanDegPerMm: 61
-                            meanMinimum: null
-                            meanMaximum: null
                             coreTestSamplingDate: '2017-01-10'
                             dateIssued: '2017-01-10'
-                            factorLaserscanNumerator: null
-                            factorLaserscanDenominator: null
                           fibreDiameterHistogramDetails:
                             - fibreMeasurements:
                                 - fibreDiameter: 23
@@ -774,44 +624,31 @@ paths:
                                   fibresMeasuredPercentage: 0.174
                                 - fibreDiameter: 21
                                   fibresMeasuredPercentage: 0.1955
-                      bales: null
                     - testDataHeader:
                         client:
-                          organizationCode: AWTA
-                          centre: null
-                          organizationID: null
-                        season: null
-                        saleIdentity: null
-                        centreStorage: null
-                        lotIdentity: null
-                        groupNumber: null
-                        weightNote: null
-                        clientsCrossReference: null
+                          organisationCode: AWTA
+                        lotIdentityOrGroupName:
+                          lotIdentity: '123456'
                         bales: 1
                         gross: 1
                         tare: 1
                         regrabSampleWeight: 1
                         weightUnit: 0
-                        mulesingStatus: null
-                        declaredGross: null
-                        declaredTare: null
                         lotType: 3
                         centreAuction: AU_A
                         sourceCode: 1
                         reportingFlag: C
-                        scouredType: NotScoured
-                        gstAmount: null
+                        scouredType: 0
                         isGSTApplicable: false
                         isCompanyABNApplicable: false
-                      colorDetails: null
-                      premiumTestDetails: null
-                      subjectiveInterlotDetails: null
-                      combinationDetails: null
                       lengthAndStrengthCombDetails:
-                        certificateIdentity: dsfafhdfa
-                        charge: null
+                        certificateIdentity:
+                          certificateIDPrefix: FremantleLaboratory
+                          certificateIDSuffix: D
+                          certificateIDNumber: '23456787'
+                          certificateIDCD: 7
+                        charge: 156.34
                         laboratory: 2
-                        regrabSampleWeight: null
                         stapleLength: 13
                         stapleLengthCvPercentage: 25
                         stapleStrength: 14
@@ -822,30 +659,15 @@ paths:
                         positionOfBreakPercentageTip: 26
                         positionOfBreakPercentageMiddle: 34
                         positionOfBreakPercentageBase: 27
-                        team3Hauteur: null
-                        reissueChargeFlag: null
+                        reissueChargeFlag: 2
                         lsCertType: 0
                         isLsSampleSecured: false
-                        expectedBarbe: null
-                        team3HauteurCvPercentage: null
-                        team3RomainePercentage: null
                         dateIssued: '2024-01-22'
-                        stapleStrengthLowest25Percent: null
-                      lengthAndStrengthDetails: null
-                      omlDetails: null
-                      coreTestDetails: null
-                      colorCombinationDetails: null
-                      omiDetials: null
-                      postSaleCoreTestDetails: null
-                      guidanceReporttDetails: null
-                      scouredTestDetails: null
-                      dichloromethaneTestDetails: null
-                      conditioningTestDetails: null
-                      lengthAfterCardingTestDetails: null
-                      lengthAdjustmentNoteDetails: null
                       sublotCertificateNumbers:
-                        - fdsafsdaf
-                        - ygdfgdfdf
+                        - certificateIDPrefix: FremantleLaboratory
+                          certificateIDSuffix: D
+                          certificateIDNumber: '23456787'
+                          certificateIDCD: 7
                       fibreDiameterHistograms:
                         - fibreDiameterHistogramHeader:
                             coefficientOfVariation: 19.9
@@ -858,12 +680,8 @@ paths:
                             mean: 20.1
                             standardDeviation: 4
                             curvatureMeanDegPerMm: 61
-                            meanMinimum: null
-                            meanMaximum: null
                             coreTestSamplingDate: '2017-01-10'
                             dateIssued: '2017-01-10'
-                            factorLaserscanNumerator: null
-                            factorLaserscanDenominator: null
                           fibreDiameterHistogramDetails:
                             - fibreMeasurements:
                                 - fibreDiameter: 23
@@ -880,7 +698,6 @@ paths:
                                   fibresMeasuredPercentage: 0.174
                                 - fibreDiameter: 21
                                   fibresMeasuredPercentage: 0.1955
-                      bales: null
         '400':
           description: Bad Request
           content:
@@ -909,7 +726,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -921,7 +737,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '404':
           description: Not Found
           content:
@@ -932,8 +747,6 @@ paths:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
                 status: 404
-                detail: null
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -945,7 +758,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
 components:
   schemas:
     AdditionalPrintRequirements:
@@ -976,13 +788,14 @@ components:
       type: object
       properties:
         client:
-          $ref: '#/components/schemas/Client'
+          $ref: '#/components/schemas/Organisation'
         creditNoteInvoiceNumber:
           pattern: '-?\d{1,8}'
           type: integer
           format: int32
         dateOfCreditNote:
-          minLength: 1
+          maxLength: 10
+          minLength: 0
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
@@ -1003,18 +816,15 @@ components:
           type: integer
           format: int32
         certificateIdentityOriginal:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         dateOfOriginalInvoice:
-          minLength: 1
+          maxLength: 10
+          minLength: 0
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
         newCertificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
       additionalProperties: false
     ApiResult:
       required:
@@ -1042,6 +852,8 @@ components:
       type: string
       description: 'N: Automatic combinations not required<br />L: Automatic Length & Strength Combination required<br />C: Automatic Colour Combination is required<br />B: Both Length & Strength and Colour combinations required'
     Bale:
+      required:
+        - baleHeader
       type: object
       properties:
         baleHeader:
@@ -1132,6 +944,10 @@ components:
           maxLength: 4
           minLength: 0
           type: string
+        bales:
+          type: integer
+          format: int32
+          nullable: true
         locationWithinStore:
           maxLength: 20
           minLength: 0
@@ -1352,6 +1168,53 @@ components:
         - NZ_Z
       type: string
       description: ''
+    CertificateIDPrefix:
+      enum:
+        - SydneyLaboratory
+        - MelbourneLaboratory
+        - FremantleLaboratory
+      type: string
+      description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+    CertificateIDSuffix:
+      enum:
+        - B
+        - C
+        - D
+        - F
+        - I
+        - J
+        - L
+        - M
+        - 'N'
+        - Q
+        - P
+        - R
+        - W
+        - 'Y'
+      type: string
+      description: 'B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test Certificate – Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br />J: Combination - Yield & Micron, Length & Strength, Colour<br />L: Length & Strength<br />M: Objectively Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class – Quality Managed<br />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />R: Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core Test'
+    CertificateIdentity:
+      required:
+        - certificateIDCD
+        - certificateIDNumber
+        - certificateIDPrefix
+        - certificateIDSuffix
+      type: object
+      properties:
+        certificateIDPrefix:
+          $ref: '#/components/schemas/CertificateIDPrefix'
+        certificateIDSuffix:
+          $ref: '#/components/schemas/CertificateIDSuffix'
+        certificateIDNumber:
+          maxLength: 8
+          minLength: 0
+          type: string
+        certificateIDCD:
+          maxLength: 1
+          minLength: 0
+          type: integer
+          format: int32
+      additionalProperties: false
     CertificateRequest:
       required:
         - bales
@@ -1438,284 +1301,13 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         woolbase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
           format: double
         laboratory:
           $ref: '#/components/schemas/Laboratory'
-      additionalProperties: false
-    Client:
-      type: object
-      properties:
-        organizationCode:
-          maxLength: 3
-          minLength: 0
-          type: string
-          nullable: true
-        centre:
-          $ref: '#/components/schemas/Centre'
-        organizationID:
-          maxLength: 5
-          minLength: 0
-          type: string
-          nullable: true
-      additionalProperties: false
-    ColourCombinationDetails:
-      required:
-        - calibrationFlag
-        - certificateIdentity
-        - dateIssued
-        - laboratory
-        - reissueChargeFlag
-      type: object
-      properties:
-        certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        laboratory:
-          $ref: '#/components/schemas/Laboratory'
-        regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
-        colourX:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourXMinimum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourXMaximum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourY:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourYMinimum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourYMaximum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourZ:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourZMimimum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourZMaximum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourYZ:
-          pattern: ^-?\d{1,3}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourYZMinimum:
-          pattern: ^-?\d{1,3}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourYZMaximum:
-          pattern: ^-?\d{1,3}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        dateIssued:
-          maxLength: 10
-          minLength: 0
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
-          type: string
-          description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
-          format: date
-        calibrationFlag:
-          $ref: '#/components/schemas/CalibrationFlag'
-        reissueChargeFlag:
-          $ref: '#/components/schemas/ReissueChargeFlag'
-      additionalProperties: false
-    ColourDetails:
-      required:
-        - calibrationFlag
-        - certificateIdentity
-        - colourX
-        - colourY
-        - colourZ
-        - dateIssued
-        - laboratory
-        - reissueChargeFlag
-      type: object
-      properties:
-        certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-          description: The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit check number.It is printed at the top of the certificate.
-        charge:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        laboratory:
-          $ref: '#/components/schemas/Laboratory'
-        regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-        colourX:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        colourY:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        colourZ:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        colourYZ:
-          pattern: ^-?\d{1,3}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        coreBulkValue:
-          maxLength: 2
-          minLength: 0
-          type: string
-          nullable: true
-        reissueChargeFlag:
-          $ref: '#/components/schemas/ReissueChargeFlag'
-        colourXAsIs:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourYAsIs:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourZAsIs:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        colourYZAsIs:
-          pattern: ^-?\d{1,3}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        calibrationFlag:
-          $ref: '#/components/schemas/CalibrationFlag'
-        dateIssued:
-          maxLength: 10
-          minLength: 0
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
-          type: string
-          description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
-          format: date
-      additionalProperties: false
-    CombinationDetails:
-      required:
-        - cleanWeight1
-        - combinationFlag
-      type: object
-      properties:
-        cleanWeight1:
-          pattern: '-?\d{1,6}'
-          type: integer
-          description: Clean weight = Net Weight X Yield
-          format: int32
-        cleanWeight2:
-          pattern: '-?\d{1,6}'
-          type: integer
-          description: Clean weight = Net Weight X Yield
-          format: int32
-          nullable: true
-        cleanWeight3:
-          pattern: '-?\d{1,6}'
-          type: integer
-          description: Clean weight = Net Weight X Yield
-          format: int32
-          nullable: true
-        cleanWeight4:
-          pattern: '-?\d{1,6}'
-          type: integer
-          description: Clean weight = Net Weight X Yield
-          format: int32
-          nullable: true
-        cleanWeight5:
-          pattern: '-?\d{1,6}'
-          type: integer
-          description: Clean weight = Net Weight X Yield
-          format: int32
-          nullable: true
-        vmbMinimum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          description: VMB - Minimum value.
-          format: double
-          nullable: true
-        vmbMaximum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          description: VMB - Maximum value.
-          format: double
-          nullable: true
-        factorWoolBase:
-          pattern: ^-?\d{1,8}\.\d{2}$
-          type: number
-          description: Factor for Wool Base.
-          format: double
-          nullable: true
-        factorVMB:
-          pattern: ^-?\d{1,7}\.\d{2}$
-          type: number
-          description: Factor for VMB.
-          format: double
-          nullable: true
-        factorHardHeadsBase:
-          pattern: ^-?\d{1,7}\.\d{2}$
-          type: number
-          description: Factor for Hard Heads Base.
-          format: double
-          nullable: true
-        factorAirflowMean:
-          pattern: ^-?\d{1,6}\.\d{6}$
-          type: number
-          description: Factor for Airflow Mean. Factor used in combination calculation.
-          format: double
-          nullable: true
-        combinationFlag:
-          $ref: '#/components/schemas/CombinationFlag'
       additionalProperties: false
     CombinationFlag:
       enum:
@@ -1750,6 +1342,7 @@ components:
       required:
         - certificateIdentity
         - charge
+        - dateIssued
         - gainLossOfInvoiceMass
         - invoiceMassFlag
         - laboratory
@@ -1763,9 +1356,7 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
@@ -1818,105 +1409,11 @@ components:
         invoiceMassFlag:
           $ref: '#/components/schemas/InvoiceMassFlag'
         dateIssued:
+          maxLength: 10
+          minLength: 0
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
-          nullable: true
-      additionalProperties: false
-    CoreTestDetails:
-      required:
-        - certificateIdentity
-        - hardHeadsBase
-        - laboratory
-        - reissueChargeFlag
-        - retestFlag
-        - vmb
-        - woolBase
-        - yield1
-      type: object
-      properties:
-        certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        laboratory:
-          $ref: '#/components/schemas/Laboratory'
-        regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
-        woolBase:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-        airflowMean:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vmb:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        hardHeadsBase:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        yield1:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-        yield2:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield3:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield4:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yieldType1:
-          $ref: '#/components/schemas/YieldType'
-        yieldType2:
-          $ref: '#/components/schemas/YieldType'
-        retestFlag:
-          $ref: '#/components/schemas/RetestFlag'
-        yield5:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        reissueChargeFlag:
-          $ref: '#/components/schemas/ReissueChargeFlag'
-        vm1:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vm2:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vm3:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        darkAndMedullatedFibreRisk:
-          $ref: '#/components/schemas/DarkAndMedullatedFibreRisk'
       additionalProperties: false
     CountryCode:
       enum:
@@ -1976,6 +1473,7 @@ components:
       required:
         - certificateIdentity
         - charge
+        - dateIssued
         - dichloromethaneDryBasis
         - laboratory
         - reissueChargeFlag
@@ -1983,9 +1481,7 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
@@ -2013,7 +1509,6 @@ components:
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
-          nullable: true
       additionalProperties: false
     FibreDiameterHistogram:
       type: object
@@ -2152,21 +1647,13 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
-          maxLength: 5
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/Organisation'
         currentTransmitter:
-          maxLength: 5
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/Organisation'
         currentReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/Organisation'
         finalReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/Organisation'
         softwareIdentifier:
           $ref: '#/components/schemas/SoftwareIdentifier'
         abn:
@@ -2182,13 +1669,393 @@ components:
         - laboratory
         - reissueChargeFlag
         - retestFlag
+      type: object
+      properties:
+        certificateIdentity:
+          $ref: '#/components/schemas/CertificateIdentity'
+        charge:
+          pattern: ^-?\d{1,4}\.\d{2}$
+          type: number
+          format: double
+        laboratory:
+          maxLength: 1
+          minLength: 0
+          type: string
+        regrabSampleWeight:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+          nullable: true
+        woolBase:
+          pattern: ^-?\d{1,2}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        airflowMean:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vmb:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        hardHeadsBase:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        yield1:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yield2:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yield3:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yield4:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yieldType1:
+          $ref: '#/components/schemas/YieldType'
+        yieldType2:
+          $ref: '#/components/schemas/YieldType'
+        retestFlag:
+          $ref: '#/components/schemas/RetestFlag'
+        reissueChargeFlag:
+          $ref: '#/components/schemas/ReissueChargeFlag'
+        vM1:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vM2:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vM3:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+      additionalProperties: false
+    Instrument:
+      enum:
+        - 1
+        - 2
+      type: integer
+      description: '1: Laserscan<br />2: OFDA'
+      format: int32
+    InvoiceMassFlag:
+      enum:
+        - G
+        - L
+      type: string
+      description: 'G: Invoice Mass is a Gain<br />L: Invoice Mass is a Loss'
+    Laboratory:
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+      type: integer
+      description: 'The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority'
+      format: int32
+    LengthAfterCardingTestDetails:
+      required:
+        - certificateIdentity
+        - charge
+        - laboratory
+      type: object
+      properties:
+        certificateIdentity:
+          $ref: '#/components/schemas/CertificateIdentity'
+        laboratory:
+          maxLength: 1
+          minLength: 0
+          type: string
+        lacBarbe:
+          pattern: '-?\d{1,3}'
+          type: integer
+          format: int32
+          nullable: true
+        lacBarbeCV:
+          pattern: ^-?\d{1,3}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        lacHauteur:
+          pattern: '-?\d{1,3}'
+          type: integer
+          format: int32
+          nullable: true
+        lacHauteurCV:
+          pattern: '-?\d{1,3}'
+          type: integer
+          format: int32
+          nullable: true
+        lacCardWaste:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        charge:
+          pattern: ^-?\d{1,4}\.\d{2}$
+          type: number
+          format: double
+      additionalProperties: false
+    LotIdentityOrGroupName:
+      type: object
+      properties:
+        lotIdentity:
+          maxLength: 6
+          minLength: 0
+          type: string
+          nullable: true
+        grouoName:
+          maxLength: 6
+          minLength: 0
+          type: string
+          nullable: true
+      additionalProperties: false
+    LotType:
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+      type: integer
+      description: 'A code used to describe wool lot preparation. It is not wool type. `*` wool meets clip preparation guidelines.`#` wool does not necessarily meet clip preparation guidelines<br />1: (Suffix - P) Classed Grower Lot *<br />2: (Suffix - M) Objectively Matched Lot<br />3: (Suffix - J) Combined Certificate<br />4: (Suffix - I) Subjectively Matched Interlot<br />5: (Suffix - B) Other Bulk Class Lot #<br />6: Not Used<br />7: (Suffix - N) Objectively Matched Interlot<br />8: (Suffix - Q) Classed Bulk Class Lot – Quality Managed *<br />9: (Suffix - D) Other Grower Lot #'
+      format: int32
+    LsCertType:
+      enum:
+        - 0
+        - 1
+        - 2
+      type: integer
+      description: '0: Length & Strength tested<br />1: Length only test requested<br />2: Insufficient staples'
+      format: int32
+    MulesingStatus:
+      enum:
+        - NM
+        - LN
+        - CM
+        - AA
+        - M
+        - ND
+      type: string
+      description: 'NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared'
+    Organisation:
+      type: object
+      properties:
+        organisationAndCentre:
+          $ref: '#/components/schemas/OrganisationAndCentre'
+        organisationCode:
+          maxLength: 5
+          minLength: 0
+          type: string
+          nullable: true
+      additionalProperties: false
+    OrganisationAndCentre:
+      required:
+        - centre
+        - organisationCode
+      type: object
+      properties:
+        organisationCode:
+          maxLength: 3
+          minLength: 0
+          type: string
+        centre:
+          $ref: '#/components/schemas/Centre'
+      additionalProperties: false
+    PostSaleCoreTestDetails:
+      required:
+        - certificateIdentity
+        - charge
+        - laboratory
+        - reissueChargeFlag
+        - retestFlag
+        - woolBase
         - yield1
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
+          $ref: '#/components/schemas/CertificateIdentity'
+        charge:
+          pattern: ^-?\d{1,4}\.\d{2}$
+          type: number
+          format: double
+        laboratory:
+          maxLength: 1
           minLength: 0
           type: string
+        regrabSampleWeight:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+          nullable: true
+        woolBase:
+          pattern: ^-?\d{1,2}\.\d{2}$
+          type: number
+          format: double
+        airflowMean:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vmb:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        hardHeadsBase:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        yield1:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+        yield2:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yield3:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yield4:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yieldType1:
+          $ref: '#/components/schemas/YieldType'
+        yieldType2:
+          $ref: '#/components/schemas/YieldType'
+        retestFlag:
+          $ref: '#/components/schemas/RetestFlag'
+        reissueChargeFlag:
+          $ref: '#/components/schemas/ReissueChargeFlag'
+        vM1:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vM2:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vM3:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+      additionalProperties: false
+    PrintFlag:
+      enum:
+        - Normal
+        - A
+        - S
+        - C
+        - E
+        - M
+        - 'N'
+      type: string
+      description: 'P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf Combination/OML Certificate and associated sub-lots<br />S: Pdf associated sub-lots excluding the Combination/OML Certificate<br />C: Pdf Combination Certificate in Chinese and English<br />E: Pdf Combination Certificate in Chinese and English & associated sublots in English)<br />M: Pdf Combination Certificate in English & Mulesing Status report<br />N: Pdf Mulesing Status report only'
+    PrintRequirements:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+      type: integer
+      description: '0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)'
+      format: int32
+    ReissueChargeFlag:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+      type: integer
+      description: '0: Original certificate charge<br />1: Re-issued no charge<br />2: Re-issued with additional Charge<br />3: Re-issued with replacement charge (credit issued against original certificate)'
+      format: int32
+    ReissueType:
+      enum:
+        - '01'
+        - '02'
+        - '03'
+        - '04'
+        - '05'
+        - '06'
+        - '07'
+      type: string
+      description: '01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change'
+    ReportingFlag:
+      enum:
+        - R
+        - C
+        - U
+      type: string
+      description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
+    RetestFlag:
+      enum:
+        - 0
+        - 1
+        - 2
+      type: integer
+      description: '0: Normal Test<br />1: Retest<br />2: Check Test'
+      format: int32
+    SaleIdentity:
+      type: object
+      properties:
+        sellingCentreType:
+          maxLength: 2
+          minLength: 0
+          type: string
+          nullable: true
+        saleNumber:
+          maxLength: 2
+          minLength: 0
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+          nullable: true
+      additionalProperties: false
+    ScouredTestDetails:
+      required:
+        - alcoholExtractableMatterDryBasis
+        - ashContentDryBasis
+        - certificateIdentity
+        - charge
+        - hardHeadsBase
+        - laboratory
+        - reissueChargeFlag
+        - retestFlag
+        - vmb
+        - yield1
+      type: object
+      properties:
+        certificateIdentity:
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
@@ -2262,77 +2129,473 @@ components:
           type: number
           format: double
           nullable: true
+        ashContentDryBasis:
+          pattern: ^-?\d{1,2}\.\d{2}$
+          type: number
+          format: double
+        alcoholExtractableMatterDryBasis:
+          pattern: ^-?\d{1,2}\.\d{2}$
+          type: number
+          format: double
       additionalProperties: false
-    Instrument:
+    ScouredType:
       enum:
+        - 0
         - 1
         - 2
+        - 3
+        - 4
+        - 5
+        - 6
       type: integer
-      description: '1: Laserscan<br />2: OFDA'
+      description: '0: Not Scoured<br />1: Scoured Aqueous<br />2: Scoured Dual Solvent<br />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe'
       format: int32
-    InvoiceMassFlag:
-      enum:
-        - G
-        - L
-      type: string
-      description: 'G: Invoice Mass is a Gain<br />L: Invoice Mass is a Loss'
-    Laboratory:
+    SoftwareCompany:
       enum:
         - 1
         - 2
         - 3
         - 4
+        - 5
+        - 6
+        - 7
+        - 8
       type: integer
-      description: 'The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority'
+      description: '1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA'
       format: int32
-    LengthAfterCardingTestDetails:
+    SoftwareIdentifier:
+      type: object
+      properties:
+        softwareCompany:
+          $ref: '#/components/schemas/SoftwareCompany'
+        version:
+          pattern: '-?\d{1,4}'
+          type: integer
+          description: Version no. e.g. 2400
+          format: int32
+          nullable: true
+        programName:
+          maxLength: 4
+          minLength: 0
+          type: string
+          nullable: true
+      additionalProperties: false
+    SourceCode:
+      enum:
+        - 1
+        - 2
+        - 3
+      type: integer
+      description: 'Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br />3: BulkClass'
+      format: int32
+    SubSamplingMethod:
+      enum:
+        - 1
+      type: integer
+      description: '1: Minicore'
+      format: int32
+    TestCertificate:
+      type: object
+      properties:
+        testDataHeader:
+          $ref: '#/components/schemas/TestCertificateTestDataHeader'
+        colorDetails:
+          $ref: '#/components/schemas/TestCertificateColourDetails'
+        premiumTestDetails:
+          $ref: '#/components/schemas/TestCertificatePremiumTestDetails'
+        subjectiveInterlotDetails:
+          $ref: '#/components/schemas/TestCertificateSubjectiveInterlotDetails'
+        combinationDetails:
+          $ref: '#/components/schemas/TestCertificateCombinationDetails'
+        lengthAndStrengthCombDetails:
+          $ref: '#/components/schemas/TestCertificateLengthAndStrengthCombDetails'
+        lengthAndStrengthDetails:
+          $ref: '#/components/schemas/TestCertificateLengthAndStrengthDetails'
+        omlDetails:
+          $ref: '#/components/schemas/TestCertificateOMLDetails'
+        coreTestDetails:
+          $ref: '#/components/schemas/TestCertificateCoreTestDetails'
+        colorCombinationDetails:
+          $ref: '#/components/schemas/TestCertificateColourCombinationDetails'
+        omiDetials:
+          $ref: '#/components/schemas/TestCertificateOMIDetails'
+        postSaleCoreTestDetails:
+          $ref: '#/components/schemas/PostSaleCoreTestDetails'
+        guidanceReporttDetails:
+          $ref: '#/components/schemas/GuidanceReportDetails'
+        scouredTestDetails:
+          $ref: '#/components/schemas/ScouredTestDetails'
+        dichloromethaneTestDetails:
+          $ref: '#/components/schemas/DichloromethaneTestDetails'
+        conditioningTestDetails:
+          $ref: '#/components/schemas/ConditioningTestDetails'
+        lengthAfterCardingTestDetails:
+          $ref: '#/components/schemas/LengthAfterCardingTestDetails'
+        lengthAdjustmentNoteDetails:
+          $ref: '#/components/schemas/AdjustmentNoteDetails'
+        sublotCertificateNumbers:
+          type: array
+          items:
+            $ref: '#/components/schemas/CertificateIdentity'
+          description: A collection of Certificate Identities
+          nullable: true
+        fibreDiameterHistograms:
+          type: array
+          items:
+            $ref: '#/components/schemas/FibreDiameterHistogram'
+          nullable: true
+        bales:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bale'
+          nullable: true
+      additionalProperties: false
+    TestCertificateColourCombinationDetails:
       required:
+        - calibrationFlag
         - certificateIdentity
         - charge
+        - dateIssued
         - laboratory
+        - reissueChargeFlag
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-        laboratory:
-          maxLength: 1
-          minLength: 0
-          type: string
-        lacBarbe:
-          pattern: '-?\d{1,3}'
-          type: integer
-          format: int32
-          nullable: true
-        lacBarbeCV:
-          pattern: ^-?\d{1,3}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        lacHauteur:
-          pattern: '-?\d{1,3}'
-          type: integer
-          format: int32
-          nullable: true
-        lacHauteurCV:
-          pattern: '-?\d{1,3}'
-          type: integer
-          format: int32
-          nullable: true
-        lacCardWaste:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
+        laboratory:
+          $ref: '#/components/schemas/Laboratory'
+        regrabSampleWeight:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+          nullable: true
+        colourX:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourXMinimum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourXMaximum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourY:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourYMinimum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourYMaximum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourZ:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourZMimimum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourZMaximum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourYZ:
+          pattern: ^-?\d{1,3}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourYZMinimum:
+          pattern: ^-?\d{1,3}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourYZMaximum:
+          pattern: ^-?\d{1,3}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        dateIssued:
+          maxLength: 10
+          minLength: 0
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
+          format: date
+        calibrationFlag:
+          $ref: '#/components/schemas/CalibrationFlag'
+        reissueChargeFlag:
+          $ref: '#/components/schemas/ReissueChargeFlag'
       additionalProperties: false
-    LengthAndStrengthCombDetails:
+    TestCertificateColourDetails:
+      required:
+        - calibrationFlag
+        - certificateIdentity
+        - charge
+        - colourX
+        - colourY
+        - colourZ
+        - dateIssued
+        - laboratory
+        - reissueChargeFlag
+      type: object
+      properties:
+        certificateIdentity:
+          $ref: '#/components/schemas/CertificateIdentity'
+        charge:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+        laboratory:
+          $ref: '#/components/schemas/Laboratory'
+        regrabSampleWeight:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+        colourX:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        colourY:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        colourZ:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        colourYZ:
+          pattern: ^-?\d{1,3}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        coreBulkValue:
+          maxLength: 2
+          minLength: 0
+          type: string
+          nullable: true
+        reissueChargeFlag:
+          $ref: '#/components/schemas/ReissueChargeFlag'
+        colourXAsIs:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourYAsIs:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourZAsIs:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        colourYZAsIs:
+          pattern: ^-?\d{1,3}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        calibrationFlag:
+          $ref: '#/components/schemas/CalibrationFlag'
+        dateIssued:
+          maxLength: 10
+          minLength: 0
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
+          format: date
+      additionalProperties: false
+    TestCertificateCombinationDetails:
+      required:
+        - cleanWeight1
+        - combinationFlag
+        - factorHardHeadsBase
+        - factorVMB
+        - factorWoolBase
+        - vmbMaximum
+        - vmbMinimum
+      type: object
+      properties:
+        cleanWeight1:
+          pattern: '-?\d{1,6}'
+          type: integer
+          description: Clean weight = Net Weight X Yield
+          format: int32
+        cleanWeight2:
+          pattern: '-?\d{1,6}'
+          type: integer
+          description: Clean weight = Net Weight X Yield
+          format: int32
+          nullable: true
+        cleanWeight3:
+          pattern: '-?\d{1,6}'
+          type: integer
+          description: Clean weight = Net Weight X Yield
+          format: int32
+          nullable: true
+        cleanWeight4:
+          pattern: '-?\d{1,6}'
+          type: integer
+          description: Clean weight = Net Weight X Yield
+          format: int32
+          nullable: true
+        cleanWeight5:
+          pattern: '-?\d{1,6}'
+          type: integer
+          description: Clean weight = Net Weight X Yield
+          format: int32
+          nullable: true
+        vmbMinimum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          description: VMB - Minimum value.
+          format: double
+        vmbMaximum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          description: VMB - Maximum value.
+          format: double
+        factorWoolBase:
+          pattern: ^-?\d{1,8}\.\d{2}$
+          type: number
+          description: Factor for Wool Base.
+          format: double
+        factorVMB:
+          pattern: ^-?\d{1,7}\.\d{2}$
+          type: number
+          description: Factor for VMB.
+          format: double
+        factorHardHeadsBase:
+          pattern: ^-?\d{1,7}\.\d{2}$
+          type: number
+          description: Factor for Hard Heads Base.
+          format: double
+        factorAirflowMean:
+          pattern: ^-?\d{1,6}\.\d{6}$
+          type: number
+          description: Factor for Airflow Mean. Factor used in combination calculation.
+          format: double
+          nullable: true
+        combinationFlag:
+          $ref: '#/components/schemas/CombinationFlag'
+      additionalProperties: false
+    TestCertificateCoreTestDetails:
       required:
         - certificateIdentity
+        - charge
+        - darkAndMedullatedFibreRisk
+        - hardHeadsBase
+        - laboratory
+        - reissueChargeFlag
+        - retestFlag
+        - vmb
+        - woolBase
+        - yield1
+      type: object
+      properties:
+        certificateIdentity:
+          $ref: '#/components/schemas/CertificateIdentity'
+        charge:
+          pattern: ^-?\d{1,4}\.\d{2}$
+          type: number
+          format: double
+        laboratory:
+          $ref: '#/components/schemas/Laboratory'
+        regrabSampleWeight:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+          nullable: true
+        woolBase:
+          pattern: ^-?\d{1,2}\.\d{2}$
+          type: number
+          format: double
+        airflowMean:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vmb:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        hardHeadsBase:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+        yield1:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+        yield2:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yield3:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yield4:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        yieldType1:
+          $ref: '#/components/schemas/YieldType'
+        yieldType2:
+          $ref: '#/components/schemas/YieldType'
+        retestFlag:
+          $ref: '#/components/schemas/RetestFlag'
+        yield5:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        reissueChargeFlag:
+          $ref: '#/components/schemas/ReissueChargeFlag'
+        vm1:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vm2:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        vm3:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          format: double
+          nullable: true
+        darkAndMedullatedFibreRisk:
+          $ref: '#/components/schemas/DarkAndMedullatedFibreRisk'
+      additionalProperties: false
+    TestCertificateLengthAndStrengthCombDetails:
+      required:
+        - certificateIdentity
+        - charge
         - dateIssued
         - isLsSampleSecured
         - laboratory
@@ -2340,6 +2603,7 @@ components:
         - positionOfBreakPercentageBase
         - positionOfBreakPercentageMiddle
         - positionOfBreakPercentageTip
+        - reissueChargeFlag
         - stapleLength
         - stapleLengthCvPercentage
         - stapleLengthMaximum
@@ -2350,14 +2614,11 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2463,9 +2724,10 @@ components:
           format: int32
           nullable: true
       additionalProperties: false
-    LengthAndStrengthDetails:
+    TestCertificateLengthAndStrengthDetails:
       required:
         - certificateIdentity
+        - charge
         - dateIssued
         - isLsSampleSecured
         - laboratory
@@ -2473,20 +2735,18 @@ components:
         - positionOfBreakPercentageBase
         - positionOfBreakPercentageMiddle
         - positionOfBreakPercentageTip
+        - reissueChargeFlag
         - stapleLength
         - stapleLengthCvPercentage
         - stapleStrength
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2573,41 +2833,10 @@ components:
           format: int32
           nullable: true
       additionalProperties: false
-    LotType:
-      enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-      type: integer
-      description: 'A code used to describe wool lot preparation. It is not wool type. `*` wool meets clip preparation guidelines.`#` wool does not necessarily meet clip preparation guidelines<br />1: (Suffix - P) Classed Grower Lot *<br />2: (Suffix - M) Objectively Matched Lot<br />3: (Suffix - J) Combined Certificate<br />4: (Suffix - I) Subjectively Matched Interlot<br />5: (Suffix - B) Other Bulk Class Lot #<br />6: Not Used<br />7: (Suffix - N) Objectively Matched Interlot<br />8: (Suffix - Q) Classed Bulk Class Lot – Quality Managed *<br />9: (Suffix - D) Other Grower Lot #'
-      format: int32
-    LsCertType:
-      enum:
-        - 0
-        - 1
-        - 2
-      type: integer
-      description: '0: Length & Strength tested<br />1: Length only test requested<br />2: Insufficient staples'
-      format: int32
-    MulesingStatus:
-      enum:
-        - NM
-        - LN
-        - CM
-        - AA
-        - M
-        - ND
-      type: string
-      description: 'NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared'
-    OMIDetails:
+    TestCertificateOMIDetails:
       required:
         - certificateIdentity
+        - charge
         - hardHeadsBase
         - laboratory
         - reissueChargeFlag
@@ -2618,14 +2847,11 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2698,27 +2924,24 @@ components:
           format: double
           nullable: true
       additionalProperties: false
-    OMLDetails:
+    TestCertificateOMLDetails:
       required:
         - certificateIdentity
+        - charge
         - hardHeadsBase
         - laboratory
         - reissueChargeFlag
-        - retestFlag
         - vmb
         - woolBase
         - yield1
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2791,7 +3014,7 @@ components:
           format: double
           nullable: true
       additionalProperties: false
-    PostSaleCoreTestDetails:
+    TestCertificatePremiumTestDetails:
       required:
         - certificateIdentity
         - charge
@@ -2802,101 +3025,11 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-        laboratory:
-          maxLength: 1
-          minLength: 0
-          type: string
-        regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
-        woolBase:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        airflowMean:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vmb:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        hardHeadsBase:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        yield1:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-        yield2:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield3:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield4:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yieldType1:
-          $ref: '#/components/schemas/YieldType'
-        yieldType2:
-          $ref: '#/components/schemas/YieldType'
-        retestFlag:
-          $ref: '#/components/schemas/RetestFlag'
-        reissueChargeFlag:
-          $ref: '#/components/schemas/ReissueChargeFlag'
-        vM1:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vM2:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vM3:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-      additionalProperties: false
-    PremiumTestDetails:
-      required:
-        - certificateIdentity
-        - laboratory
-        - reissueChargeFlag
-        - retestFlag
-        - yield1
-      type: object
-      properties:
-        certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -2974,233 +3107,33 @@ components:
         darkAndMedullatedFibreRisk:
           $ref: '#/components/schemas/DarkAndMedullatedFibreRisk'
       additionalProperties: false
-    PrintFlag:
-      enum:
-        - Normal
-        - A
-        - S
-        - C
-        - E
-        - M
-        - 'N'
-      type: string
-      description: 'P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf Combination/OML Certificate and associated sub-lots<br />S: Pdf associated sub-lots excluding the Combination/OML Certificate<br />C: Pdf Combination Certificate in Chinese and English<br />E: Pdf Combination Certificate in Chinese and English & associated sublots in English)<br />M: Pdf Combination Certificate in English & Mulesing Status report<br />N: Pdf Mulesing Status report only'
-    PrintRequirements:
-      enum:
-        - 0
-        - 1
-        - 2
-        - 3
-      type: integer
-      description: '0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)'
-      format: int32
-    ReissueChargeFlag:
-      enum:
-        - 0
-        - 1
-        - 2
-        - 3
-      type: integer
-      description: '0: Original certificate charge<br />1: Re-issued no charge<br />2: Re-issued with additional Charge<br />3: Re-issued with replacement charge (credit issued against original certificate)'
-      format: int32
-    ReissueType:
-      enum:
-        - '01'
-        - '02'
-        - '03'
-        - '04'
-        - '05'
-        - '06'
-        - '07'
-      type: string
-      description: '01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change'
-    ReportingFlag:
-      enum:
-        - R
-        - C
-        - U
-      type: string
-      description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
-    RetestFlag:
-      enum:
-        - 0
-        - 1
-        - 2
-      type: integer
-      description: '0: Normal Test<br />1: Retest<br />2: Check Test'
-      format: int32
-    SaleIdentity:
+    TestCertificateRequest:
+      required:
+        - certificateRequest
       type: object
       properties:
-        sellingCentreType:
-          maxLength: 2
-          minLength: 0
-          type: string
-          nullable: true
-        saleNumber:
-          maxLength: 2
-          minLength: 0
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
+        certificateRequest:
+          $ref: '#/components/schemas/CertificateRequest'
+        baleHeader:
+          $ref: '#/components/schemas/BaleHeader'
+      additionalProperties: false
+    TestCertificateRequests:
+      required:
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
+        testCertificateRequestCollection:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestCertificateRequest'
           nullable: true
       additionalProperties: false
-    ScouredTestDetails:
+    TestCertificateSubjectiveInterlotDetails:
       required:
-        - alcoholExtractableMatterDryBasis
-        - ashContentDryBasis
         - certificateIdentity
         - charge
-        - laboratory
-        - reissueChargeFlag
-        - retestFlag
-        - yield1
-      type: object
-      properties:
-        certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-        charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-        laboratory:
-          maxLength: 1
-          minLength: 0
-          type: string
-        regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
-        woolBase:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        airflowMean:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vmb:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        hardHeadsBase:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-        yield1:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-        yield2:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield3:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield4:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yieldType1:
-          $ref: '#/components/schemas/YieldType'
-        yieldType2:
-          $ref: '#/components/schemas/YieldType'
-        retestFlag:
-          $ref: '#/components/schemas/RetestFlag'
-        reissueChargeFlag:
-          $ref: '#/components/schemas/ReissueChargeFlag'
-        vM1:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vM2:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        vM3:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
-        ashContentDryBasis:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-        alcoholExtractableMatterDryBasis:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-      additionalProperties: false
-    ScouredType:
-      enum:
-        - NotScoured
-        - ScouredAqueous
-        - ScouredDualSolvent
-        - Carbonised
-        - Mohair
-        - Noils
-        - Slipe
-      type: string
-      description: '0: Not Scoured<br />1: Scoured Aqueous<br />2: Scoured Dual Solvent<br />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe'
-    SoftwareCompany:
-      enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-      type: integer
-      description: '1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA'
-      format: int32
-    SoftwareIdentifier:
-      type: object
-      properties:
-        softwareCompany:
-          $ref: '#/components/schemas/SoftwareCompany'
-        version:
-          pattern: '-?\d{1,4}'
-          type: integer
-          description: Version no. e.g. 2400
-          format: int32
-          nullable: true
-        programName:
-          maxLength: 4
-          minLength: 0
-          type: string
-          nullable: true
-      additionalProperties: false
-    SourceCode:
-      enum:
-        - 1
-        - 2
-        - 3
-      type: integer
-      description: 'Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br />3: BulkClass'
-      format: int32
-    SubSamplingMethod:
-      enum:
-        - 1
-      type: integer
-      description: '1: Minicore'
-      format: int32
-    SubjectiveInterlotDetails:
-      required:
-        - certificateIdentity
         - hardHeadsBase
         - laboratory
         - reissueChargeFlag
@@ -3211,14 +3144,11 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
+          $ref: '#/components/schemas/CertificateIdentity'
         charge:
           pattern: ^-?\d{1,4}\.\d{2}$
           type: number
           format: double
-          nullable: true
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
@@ -3298,84 +3228,102 @@ components:
           type: string
           nullable: true
       additionalProperties: false
-    TestCertificate:
+    TestCertificateTestDataHeader:
+      required:
+        - bales
+        - client
+        - gross
+        - isCompanyABNApplicable
+        - isGSTApplicable
+        - lotIdentityOrGroupName
+        - reportingFlag
+        - tare
+        - weightUnit
       type: object
       properties:
-        testDataHeader:
-          $ref: '#/components/schemas/TestDataHeader'
-        colorDetails:
-          $ref: '#/components/schemas/ColourDetails'
-        premiumTestDetails:
-          $ref: '#/components/schemas/PremiumTestDetails'
-        subjectiveInterlotDetails:
-          $ref: '#/components/schemas/SubjectiveInterlotDetails'
-        combinationDetails:
-          $ref: '#/components/schemas/CombinationDetails'
-        lengthAndStrengthCombDetails:
-          $ref: '#/components/schemas/LengthAndStrengthCombDetails'
-        lengthAndStrengthDetails:
-          $ref: '#/components/schemas/LengthAndStrengthDetails'
-        omlDetails:
-          $ref: '#/components/schemas/OMLDetails'
-        coreTestDetails:
-          $ref: '#/components/schemas/CoreTestDetails'
-        colorCombinationDetails:
-          $ref: '#/components/schemas/ColourCombinationDetails'
-        omiDetials:
-          $ref: '#/components/schemas/OMIDetails'
-        postSaleCoreTestDetails:
-          $ref: '#/components/schemas/PostSaleCoreTestDetails'
-        guidanceReporttDetails:
-          $ref: '#/components/schemas/GuidanceReportDetails'
-        scouredTestDetails:
-          $ref: '#/components/schemas/ScouredTestDetails'
-        dichloromethaneTestDetails:
-          $ref: '#/components/schemas/DichloromethaneTestDetails'
-        conditioningTestDetails:
-          $ref: '#/components/schemas/ConditioningTestDetails'
-        lengthAfterCardingTestDetails:
-          $ref: '#/components/schemas/LengthAfterCardingTestDetails'
-        lengthAdjustmentNoteDetails:
-          $ref: '#/components/schemas/AdjustmentNoteDetails'
-        sublotCertificateNumbers:
-          type: array
-          items:
-            type: string
-          description: A collection of Certificate Identities
+        client:
+          $ref: '#/components/schemas/Organisation'
+        season:
+          maxLength: 2
+          minLength: 0
+          type: integer
+          format: int32
           nullable: true
-        fibreDiameterHistograms:
-          type: array
-          items:
-            $ref: '#/components/schemas/FibreDiameterHistogram'
+        saleIdentity:
+          $ref: '#/components/schemas/SaleIdentity'
+        centreStorage:
+          $ref: '#/components/schemas/Centre'
+        lotIdentityOrGroupName:
+          $ref: '#/components/schemas/LotIdentityOrGroupName'
+        weightNote:
+          maxLength: 8
+          minLength: 0
+          type: string
+          nullable: true
+        clientsCrossReference:
+          maxLength: 8
+          minLength: 0
+          type: string
           nullable: true
         bales:
-          type: array
-          items:
-            $ref: '#/components/schemas/Bale'
+          pattern: '-?\d{1,4}'
+          type: integer
+          format: int32
+        gross:
+          pattern: '-?\d{1,6}'
+          type: integer
+          format: int32
+        tare:
+          pattern: '-?\d{1,4}'
+          type: integer
+          format: int32
+        regrabSampleWeight:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
           nullable: true
-      additionalProperties: false
-    TestCertificateRequest:
-      required:
-        - certificateRequest
-      type: object
-      properties:
-        certificateRequest:
-          $ref: '#/components/schemas/CertificateRequest'
-        baleHeader:
-          $ref: '#/components/schemas/BaleHeader'
-      additionalProperties: false
-    TestCertificateRequests:
-      required:
-        - transmissionHeader
-      type: object
-      properties:
-        transmissionHeader:
-          $ref: '#/components/schemas/TransmissionHeader'
-        testCertificateRequestCollection:
-          type: array
-          items:
-            $ref: '#/components/schemas/TestCertificateRequest'
+        weightUnit:
+          $ref: '#/components/schemas/WeightUnit'
+        mulesingStatus:
+          $ref: '#/components/schemas/MulesingStatus'
+        declaredGross:
+          maxLength: 6
+          minLength: 0
+          type: integer
+          format: int32
           nullable: true
+        declaredTare:
+          maxLength: 4
+          minLength: 0
+          type: integer
+          format: int32
+          nullable: true
+        lotType:
+          $ref: '#/components/schemas/LotType'
+        centreAuction:
+          $ref: '#/components/schemas/Centre'
+        sourceCode:
+          $ref: '#/components/schemas/SourceCode'
+        reportingFlag:
+          $ref: '#/components/schemas/ReportingFlag'
+        scouredType:
+          $ref: '#/components/schemas/ScouredType'
+        gstAmount:
+          pattern: ^-?\d{1,4}\.\d{2}$
+          type: number
+          description: A GST Amount with 2 digits after the decimal point
+          format: double
+          nullable: true
+        isGSTApplicable:
+          maxLength: 5
+          minLength: 0
+          type: boolean
+          description: A Flag to determine if GST apply to invoice
+        isCompanyABNApplicable:
+          maxLength: 5
+          minLength: 0
+          type: boolean
+          description: A Flag to determine if Compnay ABN apply to invoice
       additionalProperties: false
     TestCertificateUpdate:
       required:
@@ -3401,17 +3349,11 @@ components:
       type: object
       properties:
         certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-          description: Generic string field.
+          $ref: '#/components/schemas/CertificateIdentity'
         reissueType:
           $ref: '#/components/schemas/ReissueType'
         client:
-          maxLength: 5
-          minLength: 0
-          type: string
-          description: Generic string field.
+          $ref: '#/components/schemas/Organisation'
         bales:
           pattern: '-?\d{1,4}'
           type: integer
@@ -3489,120 +3431,13 @@ components:
           $ref: '#/components/schemas/TestCertificates'
       additionalProperties: false
       description: A standard API response object used for all successful API responses
-    TestDataHeader:
-      required:
-        - bales
-        - client
-        - gross
-        - isCompanyABNApplicable
-        - isGSTApplicable
-        - reportingFlag
-        - tare
-        - weightUnit
-      type: object
-      properties:
-        client:
-          $ref: '#/components/schemas/Client'
-        season:
-          maxLength: 2
-          minLength: 0
-          type: integer
-          format: int32
-          nullable: true
-        saleIdentity:
-          $ref: '#/components/schemas/SaleIdentity'
-        centreStorage:
-          $ref: '#/components/schemas/Centre'
-        lotIdentity:
-          maxLength: 6
-          minLength: 0
-          type: string
-          nullable: true
-        groupNumber:
-          maxLength: 6
-          minLength: 0
-          type: string
-          nullable: true
-        weightNote:
-          maxLength: 8
-          minLength: 0
-          type: string
-          nullable: true
-        clientsCrossReference:
-          maxLength: 8
-          minLength: 0
-          type: string
-          nullable: true
-        bales:
-          pattern: '-?\d{1,4}'
-          type: integer
-          format: int32
-        gross:
-          pattern: '-?\d{1,6}'
-          type: integer
-          format: int32
-        tare:
-          pattern: '-?\d{1,4}'
-          type: integer
-          format: int32
-        regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-        weightUnit:
-          $ref: '#/components/schemas/WeightUnit'
-        mulesingStatus:
-          $ref: '#/components/schemas/MulesingStatus'
-        declaredGross:
-          maxLength: 6
-          minLength: 0
-          type: integer
-          format: int32
-          nullable: true
-        declaredTare:
-          maxLength: 4
-          minLength: 0
-          type: integer
-          format: int32
-          nullable: true
-        lotType:
-          $ref: '#/components/schemas/LotType'
-        centreAuction:
-          $ref: '#/components/schemas/Centre'
-        sourceCode:
-          $ref: '#/components/schemas/SourceCode'
-        reportingFlag:
-          $ref: '#/components/schemas/ReportingFlag'
-        scouredType:
-          $ref: '#/components/schemas/ScouredType'
-        gstAmount:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          description: A GST Amount with 2 digits after the decimal point
-          format: double
-          nullable: true
-        isGSTApplicable:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          description: A Flag to determine if GST apply to invoice
-        isCompanyABNApplicable:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          description: A Flag to determine if Compnay ABN apply to invoice
-      additionalProperties: false
     TransmissionHeader:
       required:
         - abn
         - countryOfOrigin
-        - currentReceiver
-        - currentTransmitter
         - dateFormatLastRevised
         - dateTransmissionFileCreated
         - documentOriginator
-        - finalReceiver
-        - transmissionType
       type: object
       properties:
         dateFormatLastRevised:
@@ -3622,23 +3457,7 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentTransmitter:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
-        finalReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
-        transmissionType:
-          $ref: '#/components/schemas/TransmissionType'
+          $ref: '#/components/schemas/Organisation'
         versionNumber:
           pattern: '-?\d{1,2}'
           type: integer
@@ -3654,32 +3473,6 @@ components:
           type: string
           description: Australian Business Number, 11 digits string
       additionalProperties: false
-    TransmissionType:
-      enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 11
-        - 13
-        - 16
-        - 17
-        - 50
-        - 52
-        - 55
-        - 56
-        - 60
-        - 64
-        - 98
-        - 99
-      type: integer
-      description: 'The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement'
-      format: int32
     WeightUnit:
       enum:
         - 0

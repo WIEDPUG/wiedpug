@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum ScouredType
     {
         [Description("0: Not Scoured")]

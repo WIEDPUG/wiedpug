@@ -4,12 +4,15 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class LengthAndStrengthCombDetails
+    public class TestCertificateLengthAndStrengthCombDetails
     {
         [Required]
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [Required]
+        [RegularExpression(RegexPattern.DECIMAL_6_2)]
+        public required double Charge { get; set; }
 
         [Required]
         [StringLength(1)]
@@ -110,6 +113,10 @@ namespace Wiedpug.Domain.Entities
         /// 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? Team3Hauteur { get; set; }
+
+        [StringLength(1)]
+        [Required]
+        public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [Required]
         [StringLength(1)]

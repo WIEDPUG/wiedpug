@@ -22,7 +22,7 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganizationCode = "AWTX"
+                                OrganisationCode = "AWTX"
                             },VersionNumber = 36,
                             ABN = "00000000000"
                         },

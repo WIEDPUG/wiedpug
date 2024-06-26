@@ -34,11 +34,9 @@
                                     "dateFormatLastRevised": "2020-07-15",
                                     "dateTransmissionFileCreated": "2016-01-17",
                                     "countryOfOrigin": "AU",
-                                    "documentOriginator": "ABCD",
-                                    "currentTransmitter": "AWTM",
-                                    "currentReceiver": "AWXLC",
-                                    "finalReceiver": "AWXLC",
-                                    "transmissionType": 52,
+                                    "documentOriginator": {
+                                        "organisationCode": "ABCD"
+                                    },
                                     "versionNumber": 31,
                                     "softwareIdentifier": {
                                         "softwareCompany": 8,
@@ -66,7 +64,12 @@
                                         "ageTo": 23,
                                         "darkAndMedullatedFibreRiskBroker": 1,
                                         "darkandMedullatedFibreRisk": "D",
-                                        "certificateIdentity": "37483937P89",
+                                        "certificateIdentity": {
+                                            "certificateIDPrefix": "MelbourneLaboratory",
+                                            "certificateIDSuffix": "P",
+                                            "certificateIDNumber": "00000499",
+                                            "certificateIDCD": 7
+                                        },
                                         "woolBase": 32.14,
                                         "dmfrErrorField1": 12,
                                         "dmfrErrorField2": 18,
@@ -88,9 +91,7 @@
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
-                                    "message": null,
-                                    "data": null
+                                    "isSuccessful": true
                                 }
                             }
                         }
@@ -131,8 +132,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                                     "title": "Unauthorized",
                                     "status": 401,
-                                    "detail": "Missing authentication credentials",
-                                    "errors": null
+                                    "detail": "Missing authentication credentials"
                                 }
                             }
                         }
@@ -148,8 +148,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "You don't have permission to access this resource",
                                     "status": 403,
-                                    "detail": "You don't have a 'read' access to access this resource",
-                                    "errors": null
+                                    "detail": "You don't have a 'read' access to access this resource"
                                 }
                             }
                         }
@@ -165,8 +164,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                                     "title": "An error occurred while processing your required",
                                     "status": 500,
-                                    "detail": "Error details..",
-                                    "errors": null
+                                    "detail": "Error details.."
                                 }
                             }
                         }
@@ -199,6 +197,260 @@
                 },
                 "additionalProperties": false,
                 "description": "A standard API response object used for all successful API responses"
+            },
+            "Centre": {
+                "enum": [
+                    "AU_A",
+                    "AU_AD",
+                    "AU_AR",
+                    "AU_AU",
+                    "AU_B",
+                    "AU_BA",
+                    "AU_BK",
+                    "AU_BL",
+                    "AU_BM",
+                    "AU_BO",
+                    "AU_BR",
+                    "AU_BT",
+                    "AU_C",
+                    "AU_CA",
+                    "AU_CB",
+                    "AU_CC",
+                    "AU_CL",
+                    "AU_CN",
+                    "AU_CO",
+                    "AU_CR",
+                    "AU_CU",
+                    "AU_CW",
+                    "AU_D",
+                    "AU_DE",
+                    "AU_DO",
+                    "AU_DR",
+                    "AU_E",
+                    "AU_ER",
+                    "AU_ES",
+                    "AU_F",
+                    "AU_G",
+                    "AU_GF",
+                    "AU_GI",
+                    "AU_GN",
+                    "AU_GR",
+                    "AU_GU",
+                    "AU_H",
+                    "AU_HA",
+                    "AU_HB",
+                    "AU_HM",
+                    "AU_HO",
+                    "AU_HY",
+                    "AU_I",
+                    "AU_J",
+                    "AU_JA",
+                    "AU_K",
+                    "AU_KE",
+                    "AU_KH",
+                    "AU_KI",
+                    "AU_KN",
+                    "AU_KT",
+                    "AU_KW",
+                    "AU_KY",
+                    "AU_L",
+                    "AU_LC",
+                    "AU_M",
+                    "AU_MA",
+                    "AU_MB",
+                    "AU_MC",
+                    "AU_ME",
+                    "AU_MG",
+                    "AU_MI",
+                    "AU_MO",
+                    "AU_MR",
+                    "AU_MU",
+                    "AU_N",
+                    "AU_NA",
+                    "AU_ND",
+                    "AU_NO",
+                    "AU_NR",
+                    "AU_OB",
+                    "AU_OR",
+                    "AU_P",
+                    "AU_PA",
+                    "AU_PL",
+                    "AU_Q",
+                    "AU_QU",
+                    "AU_R",
+                    "AU_S",
+                    "AU_SG",
+                    "AU_SH",
+                    "AU_SK",
+                    "AU_SW",
+                    "AU_SY",
+                    "AU_T",
+                    "AU_TE",
+                    "AU_U",
+                    "AU_UR",
+                    "AU_V",
+                    "AU_W",
+                    "AU_WA",
+                    "AU_WG",
+                    "AU_WL",
+                    "AU_WN",
+                    "AU_WR",
+                    "AU_WW",
+                    "AU_X",
+                    "AU_Y",
+                    "AU_YA",
+                    "AU_YM",
+                    "AU_YO",
+                    "AU_Z",
+                    "OS_ZA",
+                    "OS_ZB",
+                    "OS_ZC",
+                    "OS_ZD",
+                    "OS_ZE",
+                    "OS_ZF",
+                    "OS_ZG",
+                    "OS_ZH",
+                    "OS_ZI",
+                    "OS_ZJ",
+                    "OS_ZK",
+                    "OS_ZL",
+                    "OS_ZM",
+                    "OS_ZN",
+                    "OS_ZO",
+                    "OS_ZP",
+                    "OS_ZQ",
+                    "OS_ZR",
+                    "OS_ZS",
+                    "OS_ZT",
+                    "OS_ZU",
+                    "OS_ZV",
+                    "OS_ZW",
+                    "OS_ZX",
+                    "OS_ZY",
+                    "OS_ZZ",
+                    "NZ_A",
+                    "NZ_AW",
+                    "NZ_B",
+                    "NZ_BL",
+                    "NZ_BT",
+                    "NZ_C",
+                    "NZ_CV",
+                    "NZ_D",
+                    "NZ_F",
+                    "NZ_FA",
+                    "NZ_G",
+                    "NZ_GD",
+                    "NZ_GO",
+                    "NZ_HA",
+                    "NZ_HS",
+                    "NZ_I",
+                    "NZ_J",
+                    "NZ_K",
+                    "NZ_KA",
+                    "NZ_KP",
+                    "NZ_L",
+                    "NZ_LO",
+                    "NZ_LU",
+                    "NZ_M",
+                    "NZ_MA",
+                    "NZ_MK",
+                    "NZ_MT",
+                    "NZ_MU",
+                    "NZ_N",
+                    "NZ_NE",
+                    "NZ_O",
+                    "NZ_OH",
+                    "NZ_OI",
+                    "NZ_OM",
+                    "NZ_OT",
+                    "NZ_P",
+                    "NZ_PT",
+                    "NZ_PU",
+                    "NZ_R",
+                    "NZ_RG",
+                    "NZ_RI",
+                    "NZ_S",
+                    "NZ_SA",
+                    "NZ_SH",
+                    "NZ_SY",
+                    "NZ_T",
+                    "NZ_TA",
+                    "NZ_TE",
+                    "NZ_TH",
+                    "NZ_TP",
+                    "NZ_U",
+                    "NZ_V",
+                    "NZ_W",
+                    "NZ_WH",
+                    "NZ_WI",
+                    "NZ_WR",
+                    "NZ_WT",
+                    "NZ_WU",
+                    "NZ_X",
+                    "NZ_Y",
+                    "NZ_YP",
+                    "NZ_Z"
+                ],
+                "type": "string",
+                "description": ""
+            },
+            "CertificateIDPrefix": {
+                "enum": [
+                    "SydneyLaboratory",
+                    "MelbourneLaboratory",
+                    "FremantleLaboratory"
+                ],
+                "type": "string",
+                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory"
+            },
+            "CertificateIDSuffix": {
+                "enum": [
+                    "B",
+                    "C",
+                    "D",
+                    "F",
+                    "I",
+                    "J",
+                    "L",
+                    "M",
+                    "N",
+                    "Q",
+                    "P",
+                    "R",
+                    "W",
+                    "Y"
+                ],
+                "type": "string",
+                "description": "B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test Certificate – Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br />J: Combination - Yield & Micron, Length & Strength, Colour<br />L: Length & Strength<br />M: Objectively Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class – Quality Managed<br />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />R: Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core Test"
+            },
+            "CertificateIdentity": {
+                "required": [
+                    "certificateIDCD",
+                    "certificateIDNumber",
+                    "certificateIDPrefix",
+                    "certificateIDSuffix"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIDPrefix": {
+                        "$ref": "#/components/schemas/CertificateIDPrefix"
+                    },
+                    "certificateIDSuffix": {
+                        "$ref": "#/components/schemas/CertificateIDSuffix"
+                    },
+                    "certificateIDNumber": {
+                        "maxLength": 8,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "certificateIDCD": {
+                        "maxLength": 1,
+                        "minLength": 0,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
             },
             "CountryCode": {
                 "enum": [
@@ -364,9 +616,7 @@
                         "$ref": "#/components/schemas/DarkAndMedullatedFibreRisk"
                     },
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -492,6 +742,39 @@
                 "type": "string",
                 "description": "W: Combing Weaners & Lambs<br />L: Carding Lambs<br />U: Plucked & Dead<br />K: Shorn from Skins<br />G: Fellmongered<br />O: Overgrown<br />N: Non-conforming lot<br />T: Not required"
             },
+            "Organisation": {
+                "type": "object",
+                "properties": {
+                    "organisationAndCentre": {
+                        "$ref": "#/components/schemas/OrganisationAndCentre"
+                    },
+                    "organisationCode": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OrganisationAndCentre": {
+                "required": [
+                    "centre",
+                    "organisationCode"
+                ],
+                "type": "object",
+                "properties": {
+                    "organisationCode": {
+                        "maxLength": 3,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "centre": {
+                        "$ref": "#/components/schemas/Centre"
+                    }
+                },
+                "additionalProperties": false
+            },
             "Sex": {
                 "enum": [
                     "E",
@@ -543,13 +826,9 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
-                    "currentReceiver",
-                    "currentTransmitter",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
-                    "documentOriginator",
-                    "finalReceiver",
-                    "transmissionType"
+                    "documentOriginator"
                 ],
                 "type": "object",
                 "properties": {
@@ -573,27 +852,7 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "currentTransmitter": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "currentReceiver": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "finalReceiver": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "transmissionType": {
-                        "$ref": "#/components/schemas/TransmissionType"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "versionNumber": {
                         "pattern": "-?\\d{1,2}",
@@ -614,34 +873,6 @@
                     }
                 },
                 "additionalProperties": false
-            },
-            "TransmissionType": {
-                "enum": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    11,
-                    13,
-                    16,
-                    17,
-                    50,
-                    52,
-                    55,
-                    56,
-                    60,
-                    64,
-                    98,
-                    99
-                ],
-                "type": "integer",
-                "description": "The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement",
-                "format": "int32"
             }
         },
         "securitySchemes": {

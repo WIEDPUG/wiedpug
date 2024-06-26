@@ -21,6 +21,8 @@ namespace Wiedpug.Domain.ValueObject
         [StringLength(4)]
         public required string AreaOfOrigin { get; set; }
 
+        public int? Bales {  get; set; }
+
         [StringLength(20)]
         public string? LocationWithinStore { get; set; }
     }

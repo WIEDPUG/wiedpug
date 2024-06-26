@@ -20,7 +20,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "AWTA"
+                        OrganisationCode = "AWTA"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -38,19 +38,17 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
                             Tare = 1,
-                            RegrabSampleWeight=1,
+                            LotIdentity = "567545",
                             WeightUnit = WeightUnit.Kilograms,
+                            WeightNote = "12345678",
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = Centre.AU_A,
                             SourceCode = SourceCode.Grower,
-                            ReportingFlag = ReportingFlag.R,
-                            ScouredType = ScouredType.NotScoured,
-                            IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
                         TestRequestVerification = new TestRequestVerification
@@ -99,20 +97,12 @@ namespace Wiedpug.API.ExampleResponses
                             LACHauteurCVPercentMin = 10,
                             LACHauteurCVPercentMax = 20
                         },
-                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
+                        DarkAndMedullatedFibreRiskDetails = new TestRequestVerificationDarkAndMedullatedFibreRiskDetails
                         {
-                            CertificateIdentity = new CertificateIdentity
-                            {
-                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                CertificateIDNumber = "16547898",
-                                CertificateIDSuffix = CertificateIDSuffix.L,
-                                CertificateIDCD = 6
-                            },
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.P,
                             ContactWithExoticBreeds = true,
-                            WoolBase = 23.24,
                             Crutched = false,
                             Sex = Sex.R,
                             AgeFrom = 2,
@@ -127,19 +117,17 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
                             Tare = 1,
-                            RegrabSampleWeight=1,
+                            LotIdentity = "567545",
+                            WeightNote = "12345678",
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = Centre.AU_BA,
                             SourceCode = SourceCode.Dealer,
-                            ReportingFlag = ReportingFlag.R,
-                            ScouredType = ScouredType.ScouredDualSolvent,
-                            IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
                         TestRequestVerification = new TestRequestVerification
@@ -188,21 +176,13 @@ namespace Wiedpug.API.ExampleResponses
                             LACHauteurCVPercentMin = 13,
                             LACHauteurCVPercentMax = 27
                         },
-                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
+                        DarkAndMedullatedFibreRiskDetails = new TestRequestVerificationDarkAndMedullatedFibreRiskDetails
                         {
-                            CertificateIdentity = new CertificateIdentity
-                            {
-                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                CertificateIDNumber = "300000664",
-                                CertificateIDSuffix = CertificateIDSuffix.L,
-                                CertificateIDCD = 6
-                            },
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.B,
                             ContactWithExoticBreeds = false,
                             Crutched = false,
-                            WoolBase = 26.09,
                             Sex = Sex.E,
                             AgeFrom = 1,
                             CrutchedWithin3MonthsOfShearing = true,

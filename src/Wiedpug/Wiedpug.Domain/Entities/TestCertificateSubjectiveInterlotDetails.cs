@@ -4,7 +4,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class ScouredTestDetails
+    public class TestCertificateSubjectiveInterlotDetails
     {
         [Required]
         [StringLength(11)]
@@ -16,20 +16,30 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [StringLength(1)]
-        public required string Laboratory { get; set; }
+        public required Laboratory Laboratory { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
+        /// 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? RegrabSampleWeight { get; set; }
 
+        /// <summary>
+        /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample. 
+        /// Min - The lowest value in a range of Wool Base values. 
+        /// Max - The highest value in a range of Wool Base values.
+        /// </summary>
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? WoolBase { get; set; }
+        public required double WoolBase { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? AirflowMean { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public required double VMB { get; set; }
+        public required double Vmb { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
@@ -58,25 +68,23 @@ namespace Wiedpug.Domain.Entities
         [StringLength(1)]
         public required RetestFlag RetestFlag { get; set; }
 
+        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        public double? Yield5 { get; set; }
+
         [Required]
         [StringLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM1 { get; set; }
+        public double? Vm1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM2 { get; set; }
+        public double? Vm2 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM3 { get; set; }
+        public double? Vm3 { get; set; }
 
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double AshContentDryBasis { get; set; }
-
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double  AlcoholExtractableMatterDryBasis { get; set; }
+        [StringLength(1)]
+        public string? DarkAndMedullatedFibreRisk { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
@@ -59,15 +59,15 @@ namespace Wiedpug.API.ExampleResponses
                                     ChargePerLot = 0.00,
                                     InvoicingOrganisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                                     ReleasingOrganisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                                     SellingOrganisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,
@@ -215,7 +215,7 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
@@ -250,15 +250,15 @@ namespace Wiedpug.API.ExampleResponses
                                     ChargePerLot = 0.00,
                                     InvoicingOrganisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                                     ReleasingOrganisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                                     SellingOrganisation =new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = Centre.AU_G,

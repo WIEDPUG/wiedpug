@@ -27,6 +27,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public required string SaleDate { get; set; }
 
         [Required]
@@ -101,9 +102,8 @@ namespace Wiedpug.Domain.Entities
         [StringLength(8)]
         public required Organisation SellingOrganisation { get; set; }
 
-        [Required]
         [StringLength(4)]
-        public required WoolTypeGroup WoolTypeGroup { get; set; }
+        public WoolTypeGroup? WoolTypeGroup { get; set; }
         
         [Required]
         [StringLength(5)]

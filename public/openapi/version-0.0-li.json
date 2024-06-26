@@ -36,11 +36,9 @@
                                             "dateFormatLastRevised": "2020-07-15",
                                             "dateTransmissionFileCreated": "2016-01-17",
                                             "countryOfOrigin": "AU",
-                                            "documentOriginator": "ABCD",
-                                            "currentTransmitter": "AWTM",
-                                            "currentReceiver": "AWXLC",
-                                            "finalReceiver": "AWXLC",
-                                            "transmissionType": 50,
+                                            "documentOriginator": {
+                                                "organisationCode": "ABCD"
+                                            },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
                                                 "softwareCompany": 1,
@@ -49,7 +47,6 @@
                                             },
                                             "abn": "72001967184"
                                         },
-                                        "finalRecieverList": null,
                                         "woolSales": [
                                             {
                                                 "woolSaleHeaderLots": {
@@ -69,15 +66,18 @@
                                                     "freightCharge": 0,
                                                     "freightRebate": 3.25,
                                                     "chargePerLot": 0,
-                                                    "invoiceNumber": null,
-                                                    "invoicingOrganisation": "ABCD",
-                                                    "releasingOrganisation": "ABCD",
-                                                    "sellingOrganisation": "ABCD",
+                                                    "invoicingOrganisation": {
+                                                        "organisationCode": "ABCD"
+                                                    },
+                                                    "releasingOrganisation": {
+                                                        "organisationCode": "ABCD"
+                                                    },
+                                                    "sellingOrganisation": {
+                                                        "organisationCode": "ABCD"
+                                                    },
                                                     "woolTypeGroup": "MFLC",
                                                     "centreCatalogue": "AU_G",
-                                                    "deliveryBasis": "D",
-                                                    "centreDelivery": null,
-                                                    "alternateDelivery": null
+                                                    "deliveryBasis": "D"
                                                 },
                                                 "woolSaleHeaderExtension": {
                                                     "storageOrganisation": "ABCD",
@@ -87,9 +87,7 @@
                                                     "maximumDaysDiscount": 0,
                                                     "dateStorageChargeCommences": "2017-01-24",
                                                     "storageChargePerBalePerDay": 0.245,
-                                                    "penaltyInterestRate": 11.35,
-                                                    "lotAvailableDate": null,
-                                                    "postSaleChargeRebate": null
+                                                    "penaltyInterestRate": 11.35
                                                 },
                                                 "lotInvoiceDetails": [
                                                     {
@@ -98,40 +96,20 @@
                                                             "bales": 34,
                                                             "gross": 23,
                                                             "tare": 12,
-                                                            "regrabSampleWeight": null,
                                                             "costPerWeightUnit": 25,
                                                             "firstCost": 12.24,
-                                                            "cleanWeight": null,
-                                                            "yieldType": null,
-                                                            "clientsCrossReference": null,
-                                                            "woolDescription": null,
                                                             "packMaterial": "K"
                                                         },
                                                         "lotInvoiceExtension": {
                                                             "gstFirstCost": 141.11,
                                                             "gstTotalPostSaleCharge": 51.8,
-                                                            "totalPostSaleCharge": 0,
-                                                            "totalPostSaleChargeRebate": null,
-                                                            "gstTotalPostSaleChargeRebate": null
+                                                            "totalPostSaleCharge": 0
                                                         },
-                                                        "colourDetails": null,
-                                                        "premiumTestDetails": null,
-                                                        "subjectiveInterlotDetails": null,
-                                                        "combinationDetails": null,
-                                                        "lengthAndStrengthCombDetail": null,
-                                                        "lengthAndStrengthDetails": null,
-                                                        "omlDetails": null,
-                                                        "omiDetails": null,
-                                                        "coreTestDetails": null,
-                                                        "colourCombinationDetails": null,
-                                                        "guidanceReportDetails": null,
                                                         "lotHeaderVendorDeclarations": [
                                                             {
-                                                                "qualitySchemes": null,
                                                                 "mulesingStatus": "ND"
                                                             }
                                                         ],
-                                                        "fibreDiameterHistograms": null,
                                                         "bales": [
                                                             {
                                                                 "baleHeader": {
@@ -144,55 +122,35 @@
                                                                     {
                                                                         "baleNumber": "116",
                                                                         "baleDetailType": "GreasyOrProcessed",
-                                                                        "showBaleIndicator": null,
                                                                         "baleRenumber": "181",
-                                                                        "unitNumber": null,
                                                                         "gross": 181,
-                                                                        "tare": 2,
-                                                                        "baleIdentifications": null
+                                                                        "tare": 2
                                                                     },
                                                                     {
                                                                         "baleNumber": "117",
                                                                         "baleDetailType": "GreasyOrProcessed",
-                                                                        "showBaleIndicator": null,
-                                                                        "baleRenumber": null,
-                                                                        "unitNumber": null,
                                                                         "gross": 201,
-                                                                        "tare": 2,
-                                                                        "baleIdentifications": null
+                                                                        "tare": 2
                                                                     },
                                                                     {
                                                                         "baleNumber": "117",
                                                                         "baleDetailType": "GreasyOrProcessed",
-                                                                        "showBaleIndicator": null,
-                                                                        "baleRenumber": null,
-                                                                        "unitNumber": null,
                                                                         "gross": 201,
-                                                                        "tare": 2,
-                                                                        "baleIdentifications": null
+                                                                        "tare": 2
                                                                     },
                                                                     {
                                                                         "baleNumber": "126",
                                                                         "baleDetailType": "GreasyOrProcessed",
-                                                                        "showBaleIndicator": null,
-                                                                        "baleRenumber": null,
-                                                                        "unitNumber": null,
                                                                         "gross": 179,
-                                                                        "tare": 2,
-                                                                        "baleIdentifications": null
+                                                                        "tare": 2
                                                                     },
                                                                     {
                                                                         "baleNumber": "129",
                                                                         "baleDetailType": "GreasyOrProcessed",
-                                                                        "showBaleIndicator": null,
-                                                                        "baleRenumber": null,
-                                                                        "unitNumber": null,
                                                                         "gross": 167,
-                                                                        "tare": 2,
-                                                                        "baleIdentifications": null
+                                                                        "tare": 2
                                                                     }
-                                                                ],
-                                                                "propertyIdentificationCodes": null
+                                                                ]
                                                             }
                                                         ]
                                                     }
@@ -215,9 +173,7 @@
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
-                                    "message": null,
-                                    "data": null
+                                    "isSuccessful": true
                                 }
                             }
                         }
@@ -258,8 +214,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                                     "title": "Unauthorized",
                                     "status": 401,
-                                    "detail": "Missing authentication credentials",
-                                    "errors": null
+                                    "detail": "Missing authentication credentials"
                                 }
                             }
                         }
@@ -275,8 +230,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "You don't have permission to access this resource",
                                     "status": 403,
-                                    "detail": "You don't have a 'read' access to access this resource",
-                                    "errors": null
+                                    "detail": "You don't have a 'read' access to access this resource"
                                 }
                             }
                         }
@@ -292,8 +246,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                                     "title": "An error occurred while processing your required",
                                     "status": 500,
-                                    "detail": "Error details..",
-                                    "errors": null
+                                    "detail": "Error details.."
                                 }
                             }
                         }
@@ -321,12 +274,9 @@
                                 },
                                 "organisationRequested": "AWNF",
                                 "saleDateRequested": "2023-10-31",
-                                "startDateTimeStatusRequest": null,
-                                "endDateTimeStatusRequest": null,
                                 "useNetworkDateTime": false,
-                                "requestType": "BroadcastDataRequest",
+                                "requestType": 4,
                                 "woolTypeGroup": "MFLC",
-                                "recordTypesToBeExcluded": null,
                                 "season": 23
                             }
                         }
@@ -343,7 +293,6 @@
                                 },
                                 "example": {
                                     "isSuccessful": true,
-                                    "message": null,
                                     "data": {
                                         "lotInvoiceCollection": [
                                             {
@@ -351,11 +300,9 @@
                                                     "dateFormatLastRevised": "2020-07-15",
                                                     "dateTransmissionFileCreated": "2016-01-17",
                                                     "countryOfOrigin": "AU",
-                                                    "documentOriginator": "ABCD",
-                                                    "currentTransmitter": "AWTM",
-                                                    "currentReceiver": "AWXLC",
-                                                    "finalReceiver": "AWXLC",
-                                                    "transmissionType": 50,
+                                                    "documentOriginator": {
+                                                        "organisationCode": "ABCD"
+                                                    },
                                                     "versionNumber": 31,
                                                     "softwareIdentifier": {
                                                         "softwareCompany": 1,
@@ -364,7 +311,6 @@
                                                     },
                                                     "abn": "72001967184"
                                                 },
-                                                "finalRecieverList": null,
                                                 "woolSales": [
                                                     {
                                                         "woolSaleHeaderLots": {
@@ -384,15 +330,18 @@
                                                             "freightCharge": 0,
                                                             "freightRebate": 3.25,
                                                             "chargePerLot": 0,
-                                                            "invoiceNumber": null,
-                                                            "invoicingOrganisation": "ABCD",
-                                                            "releasingOrganisation": "ABCD",
-                                                            "sellingOrganisation": "ABCD",
+                                                            "invoicingOrganisation": {
+                                                                "organisationCode": "ABCD"
+                                                            },
+                                                            "releasingOrganisation": {
+                                                                "organisationCode": "ABCD"
+                                                            },
+                                                            "sellingOrganisation": {
+                                                                "organisationCode": "ABCD"
+                                                            },
                                                             "woolTypeGroup": "MFLC",
                                                             "centreCatalogue": "AU_G",
-                                                            "deliveryBasis": "D",
-                                                            "centreDelivery": null,
-                                                            "alternateDelivery": null
+                                                            "deliveryBasis": "D"
                                                         },
                                                         "woolSaleHeaderExtension": {
                                                             "storageOrganisation": "ABCD",
@@ -402,9 +351,7 @@
                                                             "maximumDaysDiscount": 0,
                                                             "dateStorageChargeCommences": "2017-01-24",
                                                             "storageChargePerBalePerDay": 0.245,
-                                                            "penaltyInterestRate": 11.35,
-                                                            "lotAvailableDate": null,
-                                                            "postSaleChargeRebate": null
+                                                            "penaltyInterestRate": 11.35
                                                         },
                                                         "lotInvoiceDetails": [
                                                             {
@@ -413,40 +360,20 @@
                                                                     "bales": 34,
                                                                     "gross": 23,
                                                                     "tare": 12,
-                                                                    "regrabSampleWeight": null,
                                                                     "costPerWeightUnit": 25,
                                                                     "firstCost": 12.24,
-                                                                    "cleanWeight": null,
-                                                                    "yieldType": null,
-                                                                    "clientsCrossReference": null,
-                                                                    "woolDescription": null,
                                                                     "packMaterial": "K"
                                                                 },
                                                                 "lotInvoiceExtension": {
                                                                     "gstFirstCost": 141.11,
                                                                     "gstTotalPostSaleCharge": 51.8,
-                                                                    "totalPostSaleCharge": 0,
-                                                                    "totalPostSaleChargeRebate": null,
-                                                                    "gstTotalPostSaleChargeRebate": null
+                                                                    "totalPostSaleCharge": 0
                                                                 },
-                                                                "colourDetails": null,
-                                                                "premiumTestDetails": null,
-                                                                "subjectiveInterlotDetails": null,
-                                                                "combinationDetails": null,
-                                                                "lengthAndStrengthCombDetail": null,
-                                                                "lengthAndStrengthDetails": null,
-                                                                "omlDetails": null,
-                                                                "omiDetails": null,
-                                                                "coreTestDetails": null,
-                                                                "colourCombinationDetails": null,
-                                                                "guidanceReportDetails": null,
                                                                 "lotHeaderVendorDeclarations": [
                                                                     {
-                                                                        "qualitySchemes": null,
                                                                         "mulesingStatus": "ND"
                                                                     }
                                                                 ],
-                                                                "fibreDiameterHistograms": null,
                                                                 "bales": [
                                                                     {
                                                                         "baleHeader": {
@@ -459,55 +386,35 @@
                                                                             {
                                                                                 "baleNumber": "116",
                                                                                 "baleDetailType": "GreasyOrProcessed",
-                                                                                "showBaleIndicator": null,
                                                                                 "baleRenumber": "181",
-                                                                                "unitNumber": null,
                                                                                 "gross": 181,
-                                                                                "tare": 2,
-                                                                                "baleIdentifications": null
+                                                                                "tare": 2
                                                                             },
                                                                             {
                                                                                 "baleNumber": "117",
                                                                                 "baleDetailType": "GreasyOrProcessed",
-                                                                                "showBaleIndicator": null,
-                                                                                "baleRenumber": null,
-                                                                                "unitNumber": null,
                                                                                 "gross": 201,
-                                                                                "tare": 2,
-                                                                                "baleIdentifications": null
+                                                                                "tare": 2
                                                                             },
                                                                             {
                                                                                 "baleNumber": "117",
                                                                                 "baleDetailType": "GreasyOrProcessed",
-                                                                                "showBaleIndicator": null,
-                                                                                "baleRenumber": null,
-                                                                                "unitNumber": null,
                                                                                 "gross": 201,
-                                                                                "tare": 2,
-                                                                                "baleIdentifications": null
+                                                                                "tare": 2
                                                                             },
                                                                             {
                                                                                 "baleNumber": "126",
                                                                                 "baleDetailType": "GreasyOrProcessed",
-                                                                                "showBaleIndicator": null,
-                                                                                "baleRenumber": null,
-                                                                                "unitNumber": null,
                                                                                 "gross": 179,
-                                                                                "tare": 2,
-                                                                                "baleIdentifications": null
+                                                                                "tare": 2
                                                                             },
                                                                             {
                                                                                 "baleNumber": "129",
                                                                                 "baleDetailType": "GreasyOrProcessed",
-                                                                                "showBaleIndicator": null,
-                                                                                "baleRenumber": null,
-                                                                                "unitNumber": null,
                                                                                 "gross": 167,
-                                                                                "tare": 2,
-                                                                                "baleIdentifications": null
+                                                                                "tare": 2
                                                                             }
-                                                                        ],
-                                                                        "propertyIdentificationCodes": null
+                                                                        ]
                                                                     }
                                                                 ]
                                                             }
@@ -557,8 +464,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                                     "title": "Unauthorized",
                                     "status": 401,
-                                    "detail": "Missing authentication credentials",
-                                    "errors": null
+                                    "detail": "Missing authentication credentials"
                                 }
                             }
                         }
@@ -574,8 +480,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "You don't have permission to access this resource",
                                     "status": 403,
-                                    "detail": "You don't have a 'read' access to access this resource",
-                                    "errors": null
+                                    "detail": "You don't have a 'read' access to access this resource"
                                 }
                             }
                         }
@@ -590,9 +495,7 @@
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                                     "title": "Resource not found",
-                                    "status": 404,
-                                    "detail": null,
-                                    "errors": null
+                                    "status": 404
                                 }
                             }
                         }
@@ -608,8 +511,7 @@
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                                     "title": "An error occurred while processing your required",
                                     "status": 500,
-                                    "detail": "Error details..",
-                                    "errors": null
+                                    "detail": "Error details.."
                                 }
                             }
                         }
@@ -644,6 +546,9 @@
                 "description": "A standard API response object used for all successful API responses"
             },
             "Bale": {
+                "required": [
+                    "baleHeader"
+                ],
                 "type": "object",
                 "properties": {
                     "baleHeader": {
@@ -758,6 +663,11 @@
                         "maxLength": 4,
                         "minLength": 0,
                         "type": "string"
+                    },
+                    "bales": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
                     },
                     "locationWithinStore": {
                         "maxLength": 20,
@@ -999,6 +909,64 @@
                 "type": "string",
                 "description": ""
             },
+            "CertificateIDPrefix": {
+                "enum": [
+                    "SydneyLaboratory",
+                    "MelbourneLaboratory",
+                    "FremantleLaboratory"
+                ],
+                "type": "string",
+                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory"
+            },
+            "CertificateIDSuffix": {
+                "enum": [
+                    "B",
+                    "C",
+                    "D",
+                    "F",
+                    "I",
+                    "J",
+                    "L",
+                    "M",
+                    "N",
+                    "Q",
+                    "P",
+                    "R",
+                    "W",
+                    "Y"
+                ],
+                "type": "string",
+                "description": "B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test Certificate – Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br />J: Combination - Yield & Micron, Length & Strength, Colour<br />L: Length & Strength<br />M: Objectively Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class – Quality Managed<br />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />R: Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core Test"
+            },
+            "CertificateIdentity": {
+                "required": [
+                    "certificateIDCD",
+                    "certificateIDNumber",
+                    "certificateIDPrefix",
+                    "certificateIDSuffix"
+                ],
+                "type": "object",
+                "properties": {
+                    "certificateIDPrefix": {
+                        "$ref": "#/components/schemas/CertificateIDPrefix"
+                    },
+                    "certificateIDSuffix": {
+                        "$ref": "#/components/schemas/CertificateIDSuffix"
+                    },
+                    "certificateIDNumber": {
+                        "maxLength": 8,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "certificateIDCD": {
+                        "maxLength": 1,
+                        "minLength": 0,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
             "ColourCombinationDetails": {
                 "required": [
                     "calibrationFlag",
@@ -1010,15 +978,7 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -1132,16 +1092,7 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string",
-                        "description": "The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit check number.It is printed at the top of the certificate."
-                    },
-                    "charge": {
-                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -1219,95 +1170,6 @@
                 },
                 "additionalProperties": false
             },
-            "CombinationDetails": {
-                "required": [
-                    "cleanWeight1",
-                    "combinationFlag"
-                ],
-                "type": "object",
-                "properties": {
-                    "cleanWeight1": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32"
-                    },
-                    "cleanWeight2": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
-                        "nullable": true
-                    },
-                    "cleanWeight3": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
-                        "nullable": true
-                    },
-                    "cleanWeight4": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
-                        "nullable": true
-                    },
-                    "cleanWeight5": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
-                        "nullable": true
-                    },
-                    "vmbMinimum": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
-                        "type": "number",
-                        "description": "VMB - Minimum value.",
-                        "format": "double",
-                        "nullable": true
-                    },
-                    "vmbMaximum": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
-                        "type": "number",
-                        "description": "VMB - Maximum value.",
-                        "format": "double",
-                        "nullable": true
-                    },
-                    "factorWoolBase": {
-                        "pattern": "^-?\\d{1,8}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "Factor for Wool Base.",
-                        "format": "double",
-                        "nullable": true
-                    },
-                    "factorVMB": {
-                        "pattern": "^-?\\d{1,7}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "Factor for VMB.",
-                        "format": "double",
-                        "nullable": true
-                    },
-                    "factorHardHeadsBase": {
-                        "pattern": "^-?\\d{1,7}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "Factor for Hard Heads Base.",
-                        "format": "double",
-                        "nullable": true
-                    },
-                    "factorAirflowMean": {
-                        "pattern": "^-?\\d{1,6}\\.\\d{6}$",
-                        "type": "number",
-                        "description": "Factor for Airflow Mean. Factor used in combination calculation.",
-                        "format": "double",
-                        "nullable": true
-                    },
-                    "combinationFlag": {
-                        "$ref": "#/components/schemas/CombinationFlag"
-                    }
-                },
-                "additionalProperties": false
-            },
             "CombinationFlag": {
                 "enum": [
                     "N",
@@ -1342,15 +1204,7 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -1696,24 +1550,16 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "currentTransmitter": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "currentReceiver": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "finalReceiver": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "softwareIdentifier": {
                         "$ref": "#/components/schemas/SoftwareIdentifier"
@@ -1733,15 +1579,12 @@
                     "charge",
                     "laboratory",
                     "reissueChargeFlag",
-                    "retestFlag",
-                    "yield1"
+                    "retestFlag"
                 ],
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
                         "pattern": "^-?\\d{1,4}\\.\\d{2}$",
@@ -1784,7 +1627,8 @@
                     "yield1": {
                         "pattern": "^-?\\d{1,3}\\.\\d{2}$",
                         "type": "number",
-                        "format": "double"
+                        "format": "double",
+                        "nullable": true
                     },
                     "yield2": {
                         "pattern": "^-?\\d{1,3}\\.\\d{2}$",
@@ -1878,15 +1722,7 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -1965,9 +1801,6 @@
                         "format": "int32",
                         "nullable": true
                     },
-                    "reissueChargeFlag": {
-                        "$ref": "#/components/schemas/ReissueChargeFlag"
-                    },
                     "lsCertType": {
                         "$ref": "#/components/schemas/LsCertType"
                     },
@@ -2019,6 +1852,7 @@
             "LengthAndStrengthDetails": {
                 "required": [
                     "certificateIdentity",
+                    "charge",
                     "dateIssued",
                     "isLsSampleSecured",
                     "laboratory",
@@ -2033,15 +1867,12 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
                         "pattern": "^-?\\d{1,4}\\.\\d{2}$",
                         "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "format": "double"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -2096,9 +1927,6 @@
                         "description": "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.",
                         "format": "int32",
                         "nullable": true
-                    },
-                    "reissueChargeFlag": {
-                        "$ref": "#/components/schemas/ReissueChargeFlag"
                     },
                     "lsCertType": {
                         "$ref": "#/components/schemas/LsCertType"
@@ -2190,6 +2018,94 @@
                 },
                 "additionalProperties": false
             },
+            "LotInvoiceCombinationDetails": {
+                "required": [
+                    "cleanWeight1",
+                    "factorHardHeadsBase",
+                    "factorVMB",
+                    "factorWoolBase",
+                    "vmbMaximum",
+                    "vmbMinimum"
+                ],
+                "type": "object",
+                "properties": {
+                    "cleanWeight1": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32"
+                    },
+                    "cleanWeight2": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "cleanWeight3": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "cleanWeight4": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "cleanWeight5": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Clean weight = Net Weight X Yield",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "vmbMinimum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "VMB - Minimum value.",
+                        "format": "double"
+                    },
+                    "vmbMaximum": {
+                        "pattern": "^-?\\d{1,2}\\.\\d{1}$",
+                        "type": "number",
+                        "description": "VMB - Maximum value.",
+                        "format": "double"
+                    },
+                    "factorWoolBase": {
+                        "pattern": "^-?\\d{1,8}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Factor for Wool Base.",
+                        "format": "double"
+                    },
+                    "factorVMB": {
+                        "pattern": "^-?\\d{1,7}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Factor for VMB.",
+                        "format": "double"
+                    },
+                    "factorHardHeadsBase": {
+                        "pattern": "^-?\\d{1,7}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Factor for Hard Heads Base.",
+                        "format": "double"
+                    },
+                    "factorAirflowMean": {
+                        "pattern": "^-?\\d{1,6}\\.\\d{6}$",
+                        "type": "number",
+                        "description": "Factor for Airflow Mean. Factor used in combination calculation.",
+                        "format": "double",
+                        "nullable": true
+                    },
+                    "combinationFlag": {
+                        "$ref": "#/components/schemas/CombinationFlag"
+                    }
+                },
+                "additionalProperties": false
+            },
             "LotInvoiceDetail": {
                 "required": [
                     "bales",
@@ -2215,7 +2131,7 @@
                         "$ref": "#/components/schemas/SubjectiveInterlotDetails"
                     },
                     "combinationDetails": {
-                        "$ref": "#/components/schemas/CombinationDetails"
+                        "$ref": "#/components/schemas/LotInvoiceCombinationDetails"
                     },
                     "lengthAndStrengthCombDetail": {
                         "$ref": "#/components/schemas/LengthAndStrengthCombDetails"
@@ -2441,8 +2357,7 @@
                     "season",
                     "sellingOrganisation",
                     "weightUnit",
-                    "woolState",
-                    "woolTypeGroup"
+                    "woolState"
                 ],
                 "type": "object",
                 "properties": {
@@ -2458,7 +2373,8 @@
                         "$ref": "#/components/schemas/Centre"
                     },
                     "saleDate": {
-                        "minLength": 1,
+                        "maxLength": 10,
+                        "minLength": 0,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "format": "date"
@@ -2513,21 +2429,13 @@
                         "nullable": true
                     },
                     "invoicingOrganisation": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string",
-                        "description": "The code for the broker who will raise the invoice for the wool"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "releasingOrganisation": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string",
-                        "description": "The broker that is responsible for releasing the wool out of the store"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "sellingOrganisation": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "woolTypeGroup": {
                         "$ref": "#/components/schemas/WoolTypeGroup"
@@ -2583,15 +2491,7 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -2699,9 +2599,7 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
                         "pattern": "^-?\\d{1,4}\\.\\d{2}$",
@@ -2801,6 +2699,39 @@
                 },
                 "additionalProperties": false
             },
+            "Organisation": {
+                "type": "object",
+                "properties": {
+                    "organisationAndCentre": {
+                        "$ref": "#/components/schemas/OrganisationAndCentre"
+                    },
+                    "organisationCode": {
+                        "maxLength": 5,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OrganisationAndCentre": {
+                "required": [
+                    "centre",
+                    "organisationCode"
+                ],
+                "type": "object",
+                "properties": {
+                    "organisationCode": {
+                        "maxLength": 3,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "centre": {
+                        "$ref": "#/components/schemas/Centre"
+                    }
+                },
+                "additionalProperties": false
+            },
             "PackMaterial": {
                 "enum": [
                     "N",
@@ -2837,23 +2768,20 @@
             "PremiumTestDetails": {
                 "required": [
                     "certificateIdentity",
+                    "charge",
                     "laboratory",
                     "reissueChargeFlag",
-                    "retestFlag",
                     "yield1"
                 ],
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
                         "pattern": "^-?\\d{1,4}\\.\\d{2}$",
                         "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "format": "double"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -3111,15 +3039,7 @@
                 "type": "object",
                 "properties": {
                     "certificateIdentity": {
-                        "maxLength": 11,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
@@ -3225,13 +3145,9 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
-                    "currentReceiver",
-                    "currentTransmitter",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
-                    "documentOriginator",
-                    "finalReceiver",
-                    "transmissionType"
+                    "documentOriginator"
                 ],
                 "type": "object",
                 "properties": {
@@ -3255,27 +3171,7 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "currentTransmitter": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "currentReceiver": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "finalReceiver": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string"
-                    },
-                    "transmissionType": {
-                        "$ref": "#/components/schemas/TransmissionType"
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "versionNumber": {
                         "pattern": "-?\\d{1,2}",
@@ -3296,34 +3192,6 @@
                     }
                 },
                 "additionalProperties": false
-            },
-            "TransmissionType": {
-                "enum": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    11,
-                    13,
-                    16,
-                    17,
-                    50,
-                    52,
-                    55,
-                    56,
-                    60,
-                    64,
-                    98,
-                    99
-                ],
-                "type": "integer",
-                "description": "The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement",
-                "format": "int32"
             },
             "WeightUnit": {
                 "enum": [
@@ -3362,6 +3230,7 @@
                     "dateStorageChargeCommences",
                     "discountRate",
                     "maximumDaysDiscount",
+                    "paymentDueDate",
                     "penaltyInterestRate",
                     "storageChargePerBalePerDay",
                     "storageOrganisation"
@@ -3387,8 +3256,7 @@
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "The date on which payment is due. Also known as Prompt Date.\r\nDate value in ISO 8601 standard UTC format. e.g. 2024-03-21",
-                        "format": "date",
-                        "nullable": true
+                        "format": "date"
                     },
                     "discountRate": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",

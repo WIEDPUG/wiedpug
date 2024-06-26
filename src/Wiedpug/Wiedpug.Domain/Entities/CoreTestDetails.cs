@@ -14,9 +14,6 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
-        
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public double? Charge { get; set; }
 
         [Required]
         [StringLength(1)]

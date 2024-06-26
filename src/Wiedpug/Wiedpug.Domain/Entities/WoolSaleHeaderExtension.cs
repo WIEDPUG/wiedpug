@@ -24,10 +24,12 @@ namespace Wiedpug.Domain.Entities
         /// The date on which payment is due. Also known as Prompt Date.
         /// Date value in ISO 8601 standard UTC format. e.g. 2024-03-21
         /// </summary>
+        /// 
+        [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [StringLength(10)]
-        public string? PaymentDueDate { get; set; } // FIELD NUMBER 5 - Payment Due Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
+        public required string PaymentDueDate { get; set; } // FIELD NUMBER 5 - Payment Due Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
         /// <summary>
         /// Total 4 digits with 2 digits after the decimal point. e.g. 23.76

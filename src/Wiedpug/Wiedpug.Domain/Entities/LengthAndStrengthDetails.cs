@@ -10,8 +10,9 @@ namespace Wiedpug.Domain.Entities
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double? Charge { get; set; }
+        public required double Charge { get; set; }
 
         [Required]
         [StringLength(1)]
@@ -75,9 +76,6 @@ namespace Wiedpug.Domain.Entities
         [Range(0, 99)]
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Team3Hauteur { get; set; }
-
-        [StringLength(1)]
-        public ReissueChargeFlag? ReissueChargeFlag { get; set; }
 
         [Required]
         [StringLength(1)]

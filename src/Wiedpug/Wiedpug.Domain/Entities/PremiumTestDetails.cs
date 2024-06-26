@@ -10,8 +10,9 @@ namespace Wiedpug.Domain.Entities
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public double? Charge { get; set; }
+        public required double Charge { get; set; }
 
         [Required]
         [StringLength(1)]
@@ -51,9 +52,8 @@ namespace Wiedpug.Domain.Entities
         [StringLength(2)]
         public YieldType? YieldType2 { get; set; }
 
-        [Required]
         [StringLength(1)]
-        public required RetestFlag RetestFlag { get; set; }
+        public RetestFlag? RetestFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? Yield5 { get; set; }

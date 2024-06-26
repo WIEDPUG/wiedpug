@@ -12,7 +12,7 @@ namespace Wiedpug.Domain.ValueObject
     {
         [Required]
         [StringLength(3)]
-        public required string OrganizationCode { get; set; }
+        public required string OrganisationCode { get; set; }
 
         [Required]
         [StringLength(5)]

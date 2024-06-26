@@ -77,11 +77,11 @@
       <FileName>Aggregates\AuctionCatalogueAggregate\AuctionCatalogueWoolSaleHeaderLotInterlotComponentBale.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.OrganizationDetailsAggregate.OrganisationDetails" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate.OrganisationDetails" Collapsed="true">
     <Position X="11" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Aggregates\OrganizationDetailsAggregate\OrganisationDetails.cs</FileName>
+      <FileName>Aggregates\OrganisationDetailsAggregate\OrganisationDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.StatusReplyAggregate.StatusReply" Collapsed="true">

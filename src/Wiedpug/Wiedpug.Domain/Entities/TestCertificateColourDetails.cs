@@ -4,7 +4,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class ColourDetails
+    public class TestCertificateColourDetails
     {
         /// <summary>
         /// The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit check number.It is printed at the top of the certificate.
@@ -12,6 +12,10 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; } // FIELD NUMBER 3 - Certificate Identity - Start: 4, Size: 11, Data Type: GR, Justification: F, Requirement Designator: M
+
+        [Required]
+        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        public required double Charge { get; set; } // FIELD NUMBER 4 - Charge - Start: 15, Size: 6, Data Type: D2, Justification: R, Requirement Designator: N/A, Value: spaces
 
         [Required]
         [StringLength(1)]

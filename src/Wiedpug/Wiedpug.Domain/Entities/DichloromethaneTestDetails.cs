@@ -33,6 +33,7 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double DichloromethaneDryBasis { get; set; }
 
+        [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [StringLength(10)]

@@ -20,7 +20,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "ABCD"
+                        OrganisationCode = "ABCD"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier

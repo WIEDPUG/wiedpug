@@ -1,35 +1,41 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class ScouredTestDetails
+    public class TestCertificateCoreTestDetails
     {
         [Required]
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
-
+        
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_6_2)]
         public required double Charge { get; set; }
 
         [Required]
         [StringLength(1)]
-        public required string Laboratory { get; set; }
+        public required Laboratory Laboratory { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? RegrabSampleWeight { get; set; }
 
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? WoolBase { get; set; }
+        public required double WoolBase { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? AirflowMean { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public required double VMB { get; set; }
+        public required double Vmb { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
@@ -58,25 +64,24 @@ namespace Wiedpug.Domain.Entities
         [StringLength(1)]
         public required RetestFlag RetestFlag { get; set; }
 
+        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        public double? Yield5 { get; set; }
+
         [Required]
         [StringLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM1 { get; set; }
+        public double? Vm1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM2 { get; set; }
+        public double? Vm2 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM3 { get; set; }
+        public double? Vm3 { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double AshContentDryBasis { get; set; }
-
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double  AlcoholExtractableMatterDryBasis { get; set; }
+        [StringLength(1)]
+        public required DarkAndMedullatedFibreRisk DarkAndMedullatedFibreRisk { get; set; }
     }
 }

@@ -63,8 +63,10 @@ namespace Wiedpug.Domain.Entities
         [StringLength (1)]
         public required InvoiceMassFlag InvoiceMassFlag { get; set; }
 
+        [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public required string DateIssued { get; set; }
     }
 }

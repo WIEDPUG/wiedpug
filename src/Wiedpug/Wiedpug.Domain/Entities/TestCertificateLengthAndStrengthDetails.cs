@@ -4,21 +4,20 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class LengthAndStrengthCombDetails
+    public class TestCertificateLengthAndStrengthDetails
     {
         [Required]
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [Required]
+        [RegularExpression(RegexPattern.DECIMAL_6_2)]
+        public required double Charge { get; set; }
 
         [Required]
         [StringLength(1)]
         public required Laboratory Laboratory { get; set; }
 
-        /// <summary>
-        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate
-        /// </summary>
-        /// 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? RegrabSampleWeight { get; set; }
 
@@ -43,40 +42,6 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public required int StapleStrength { get; set; }
-
-        /// <summary>
-        /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. 
-        /// Minimum - the lowest value in a range of staple length values.
-        /// </summary>
-        [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public required int StapleLengthMinimum { get; set; }
-
-        /// <summary>
-        /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. 
-        /// Maximum - the highest value in a range of staple length values.
-        /// </summary>
-        [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public required int StapleLengthMaximum { get; set; }
-
-        /// <summary>
-        /// The force required to break a staple of given thickness. 
-        /// The average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex
-        /// Minimum - The lowest value in a range of staple strength values 
-        /// </summary>
-        [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public required int StapleStrengthMinimum { get; set; }        
-
-        /// <summary>
-        /// The force required to break a staple of given thickness. 
-        /// The average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex
-        /// Maximum - The highest value in a range of staple strength value
-        /// </summary>
-        [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public required int StapleStrengthMaximum { get; set; }
 
         /// <summary>
         /// The position of break indicates the location of the weakest part of the staple.
@@ -108,8 +73,13 @@ namespace Wiedpug.Domain.Entities
         /// A check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(0, 99)]
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Team3Hauteur { get; set; }
+
+        [Required]
+        [StringLength(1)]
+        public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [Required]
         [StringLength(1)]
@@ -117,12 +87,12 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// Specifies whether the L/S sample is secured or not. <br />
-        /// `true` for a secured L/S sample <br />
-        /// `false` for a unsecured L/S sample <br />
+        /// true: for a secured L/S sample <br />
+        /// flase: for a unsecured L/S sample <br />
         /// </summary>
         [Required]
         [StringLength(5)]
-        public required bool IsLsSampleSecured { get; set; }
+        public required bool isLsSampleSecured { get; set; }
 
         /// <summary>
         /// Expected Barbe length in the Top. Used for NZ Crossbred wool certificates based on the 2016 calculation. 
@@ -141,12 +111,11 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Romaine. NOTE: Refer to note in `Team3Hauteur`.
         /// </summary>
-        /// 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? Team3RomainePercentage { get; set; }
 
         /// <summary>
-        /// Date value in ISO 8601 standard. e.g. 2024-03-21
+        /// Date in ISO 8601 standard UTC date format. e.g. 2024-03-21
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]

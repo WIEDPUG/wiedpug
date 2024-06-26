@@ -20,7 +20,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "ABCD"
+                        OrganisationCode = "ABCD"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -34,15 +34,19 @@ namespace Wiedpug.API.ExampleResponses
                 TestCertificateCollection = new List<TestCertificate>
                 {
                     new TestCertificate {
-                        TestDataHeader = new TestDataHeader
+                        TestDataHeader = new TestCertificateTestDataHeader
                         {
                             Client = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
                             Tare = 1,
+                            LotIdentityOrGroupName = new LotIdentityOrGroupName
+                            {
+                                LotIdentity = "234234"
+                            },
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.ObjectivelyMatchedInterlot,
@@ -53,7 +57,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        OMLDetails = new OMLDetails
+                        OMLDetails = new TestCertificateOMLDetails
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -72,10 +76,6 @@ namespace Wiedpug.API.ExampleResponses
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
 
-                        },
-                        CombinationDetails = new CombinationDetails
-                        {
-                            CleanWeight1 = 10
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> {
                             new FibreDiameterHistogram
@@ -152,16 +152,20 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificate
                     {
-                        TestDataHeader = new TestDataHeader
+                        TestDataHeader = new TestCertificateTestDataHeader
                         {
                             Client = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
                             Tare = 1,
                             RegrabSampleWeight=1,
+                            LotIdentityOrGroupName = new LotIdentityOrGroupName
+                            {
+                                LotIdentity = "123456"
+                            },
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.SubjectivelyMatchedInterlot,
                             CentreAuction = Centre.AU_A,
@@ -171,7 +175,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
+                        LengthAndStrengthCombDetails = new TestCertificateLengthAndStrengthCombDetails
                         {
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -179,6 +183,8 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
+                            Charge = 123.25,
+                            ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
                             StapleLengthCvPercentage = 25,
@@ -194,10 +200,14 @@ namespace Wiedpug.API.ExampleResponses
                             IsLsSampleSecured = false,
                             DateIssued = "2024-01-22"
                         },
-                        SublotCertificateNumbers = new List<string>
+                        SublotCertificateNumbers = new List<CertificateIdentity>
                         {
-                            "fdsafsdaf",
-                            "ygdfgdfdf"
+                            new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "23456787",
+                                    CertificateIDSuffix = CertificateIDSuffix.D,
+                                    CertificateIDCD = 7
+                                },
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> {
                             new FibreDiameterHistogram
@@ -286,19 +296,19 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "AWTA"
+                        OrganisationCode = "AWTA"
                     },
                 CurrentTransmitter = new Organisation
                 {
-                    OrganizationCode = "AWTA"
+                    OrganisationCode = "AWTA"
                 },
                 CurrentReceiver = new Organisation
                 {
-                    OrganizationCode = "AWXLC"
+                    OrganisationCode = "AWXLC"
                 },
                 FinalReceiver = new Organisation
                 {
-                    OrganizationCode = "AWXLC"
+                    OrganisationCode = "AWXLC"
                 },
                 SoftwareIdentifier = new SoftwareIdentifier
                     {
@@ -328,7 +338,7 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganizationCode = "AWTA"
+                            OrganisationCode = "AWTA"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -343,11 +353,15 @@ namespace Wiedpug.API.ExampleResponses
                     {
                     new TestCertificate 
                     {
-                        TestDataHeader = new TestDataHeader
+                        TestDataHeader = new TestCertificateTestDataHeader
                         {
                             Client = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
+                            },
+                            LotIdentityOrGroupName = new LotIdentityOrGroupName
+                            {
+                                LotIdentity = "123456"
                             },
                             Bales = 1,
                             Gross = 1,
@@ -362,7 +376,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        OMLDetails = new OMLDetails
+                        OMLDetails = new TestCertificateOMLDetails
                         {
                            CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -380,10 +394,6 @@ namespace Wiedpug.API.ExampleResponses
                             RetestFlag = RetestFlag.NormalTest,
                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                             Vm1 = 20.0
-                        },
-                        CombinationDetails = new CombinationDetails
-                        {
-                            CleanWeight1 = 10
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> 
                         {
@@ -461,16 +471,20 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificate
                     {
-                        TestDataHeader = new TestDataHeader
+                        TestDataHeader = new TestCertificateTestDataHeader
                         {
                             Client = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
                             },
                             Bales = 1,
                             Gross = 1,
                             Tare = 1,
                             RegrabSampleWeight=1,
+                            LotIdentityOrGroupName = new LotIdentityOrGroupName
+                            {
+                                LotIdentity = "123456"
+                            },
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = Centre.AU_A,
@@ -480,7 +494,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
+                        LengthAndStrengthCombDetails = new TestCertificateLengthAndStrengthCombDetails
                         {
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -490,6 +504,8 @@ namespace Wiedpug.API.ExampleResponses
                              },
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
+                            Charge = 156.34,
+                            ReissueChargeFlag = ReissueChargeFlag.ReissuedWithAdditionalCharge,
                             StapleLengthCvPercentage = 25,
                             StapleStrength = 14,
                             StapleLengthMinimum = 13,
@@ -503,10 +519,14 @@ namespace Wiedpug.API.ExampleResponses
                             IsLsSampleSecured = false,
                             DateIssued = "2024-01-22"
                         },
-                        SublotCertificateNumbers = new List<string>
+                        SublotCertificateNumbers = new List<CertificateIdentity>
                         {
-                            "fdsafsdaf",
-                            "ygdfgdfdf"
+                            new CertificateIdentity{
+                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                    CertificateIDNumber = "23456787",
+                                    CertificateIDSuffix = CertificateIDSuffix.D,
+                                    CertificateIDCD = 7
+                             }
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> {
                             new FibreDiameterHistogram

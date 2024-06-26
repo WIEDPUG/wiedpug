@@ -15,6 +15,9 @@ namespace Wiedpug.Domain.ValueObject
         [StringLength(5)]
         public required string BaleNumber { get; set; }
 
+        /// <summary>
+        /// Type of bale details, can be Renumbers, GreasyOrProcessesd, or Tripacks
+        /// </summary>
         [Required]
         [StringLength(20)]
         public required BaleDetailType BaleDetailType { get; set; }

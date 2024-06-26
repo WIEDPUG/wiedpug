@@ -28,11 +28,8 @@ paths:
                 dateFormatLastRevised: '2020-07-15'
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
-                documentOriginator: ABCD
-                currentTransmitter: AWTM
-                currentReceiver: AWXLC
-                finalReceiver: AWXLC
-                transmissionType: 55
+                documentOriginator:
+                  organisationCode: AWTA
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 8
@@ -42,31 +39,16 @@ paths:
               testRequestsVerificationDetails:
                 - testDataHeader:
                     client:
-                      organizationCode: AWTA
-                      centre: null
-                      organizationID: null
-                    season: null
-                    saleIdentity: null
-                    centreStorage: null
-                    lotIdentity: null
-                    groupNumber: null
-                    weightNote: null
-                    clientsCrossReference: null
+                      organisationCode: AWTA
+                    lotIdentity: '567545'
+                    weightNote: '12345678'
                     bales: 1
                     gross: 1
                     tare: 1
-                    regrabSampleWeight: 1
                     weightUnit: 0
-                    mulesingStatus: null
-                    declaredGross: null
-                    declaredTare: null
                     lotType: 3
                     centreAuction: AU_A
                     sourceCode: 1
-                    reportingFlag: R
-                    scouredType: NotScoured
-                    gstAmount: null
-                    isGSTApplicable: false
                     isCompanyABNApplicable: false
                   testRequestVerification:
                     laboratory: 1
@@ -114,54 +96,24 @@ paths:
                     declaredBreed: A
                     declaredWoolSubCategory: 'N'
                     declaredWoolCategory: P
-                    declaredQualifierCode1: null
-                    declaredQualifierCode2: null
-                    declaredQualifierCode3: null
-                    declaredQualifierCode4: null
-                    declaredQualifierCode5: null
-                    declaredQualifierScale: null
                     contactWithExoticBreeds: true
                     crutched: false
                     crutchedWithin3MonthsOfShearing: true
                     sex: R
                     ageFrom: 2
                     ageTo: 5
-                    darkAndMedullatedFibreRiskBroker: null
-                    darkandMedullatedFibreRisk: null
-                    certificateIdentity: 300000664L6
-                    woolBase: 23.24
-                    dmfrErrorField1: null
-                    dmfrErrorField2: null
-                    dmfrErrorField3: null
-                    dmfrErrorField4: null
-                  bales: null
                 - testDataHeader:
                     client:
-                      organizationCode: AWTA
-                      centre: null
-                      organizationID: null
-                    season: null
-                    saleIdentity: null
-                    centreStorage: null
-                    lotIdentity: null
-                    groupNumber: null
-                    weightNote: null
-                    clientsCrossReference: null
+                      organisationCode: AWTA
+                    lotIdentity: '567545'
+                    weightNote: '12345678'
                     bales: 1
                     gross: 1
                     tare: 1
-                    regrabSampleWeight: 1
                     weightUnit: 0
-                    mulesingStatus: null
-                    declaredGross: null
-                    declaredTare: null
                     lotType: 3
                     centreAuction: AU_BA
                     sourceCode: 2
-                    reportingFlag: R
-                    scouredType: ScouredDualSolvent
-                    gstAmount: null
-                    isGSTApplicable: false
                     isCompanyABNApplicable: false
                   testRequestVerification:
                     laboratory: 1
@@ -209,27 +161,12 @@ paths:
                     declaredBreed: A
                     declaredWoolSubCategory: 'N'
                     declaredWoolCategory: B
-                    declaredQualifierCode1: null
-                    declaredQualifierCode2: null
-                    declaredQualifierCode3: null
-                    declaredQualifierCode4: null
-                    declaredQualifierCode5: null
-                    declaredQualifierScale: null
                     contactWithExoticBreeds: false
                     crutched: false
                     crutchedWithin3MonthsOfShearing: true
                     sex: E
                     ageFrom: 1
                     ageTo: 4
-                    darkAndMedullatedFibreRiskBroker: null
-                    darkandMedullatedFibreRisk: null
-                    certificateIdentity: 300000664L6
-                    woolBase: 26.09
-                    dmfrErrorField1: null
-                    dmfrErrorField2: null
-                    dmfrErrorField3: null
-                    dmfrErrorField4: null
-                  bales: null
         required: true
       responses:
         '200':
@@ -240,8 +177,6 @@ paths:
                 $ref: '#/components/schemas/ApiResult'
               example:
                 isSuccessful: true
-                message: null
-                data: null
         '400':
           description: Bad Request
           content:
@@ -270,7 +205,6 @@ paths:
                 title: Unauthorized
                 status: 401
                 detail: Missing authentication credentials
-                errors: null
         '403':
           description: Forbidden
           content:
@@ -282,7 +216,6 @@ paths:
                 title: You don't have permission to access this resource
                 status: 403
                 detail: You don't have a 'read' access to access this resource
-                errors: null
         '500':
           description: Internal Server Error
           content:
@@ -294,7 +227,6 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-                errors: null
 components:
   schemas:
     ApiResult:
@@ -315,6 +247,8 @@ components:
       additionalProperties: false
       description: A standard API response object used for all successful API responses
     Bale:
+      required:
+        - baleHeader
       type: object
       properties:
         baleHeader:
@@ -405,6 +339,10 @@ components:
           maxLength: 4
           minLength: 0
           type: string
+        bales:
+          type: integer
+          format: int32
+          nullable: true
         locationWithinStore:
           maxLength: 20
           minLength: 0
@@ -619,22 +557,6 @@ components:
         - NZ_Z
       type: string
       description: ''
-    Client:
-      type: object
-      properties:
-        organizationCode:
-          maxLength: 3
-          minLength: 0
-          type: string
-          nullable: true
-        centre:
-          $ref: '#/components/schemas/Centre'
-        organizationID:
-          maxLength: 5
-          minLength: 0
-          type: string
-          nullable: true
-      additionalProperties: false
     ContractLimitRequirements:
       type: object
       properties:
@@ -812,19 +734,6 @@ components:
           nullable: true
       additionalProperties: false
       description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
-    DarkAndMedullatedFibreRisk:
-      enum:
-        - E
-        - 'N'
-        - D
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-      type: string
-      description: 'E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6'
     DarkAndMedullatedFibreRiskBroker:
       enum:
         - 1
@@ -836,99 +745,6 @@ components:
       type: integer
       description: '1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6'
       format: int32
-    DarkAndMedullatedFibreRiskDetails:
-      required:
-        - ageFrom
-        - certificateIdentity
-        - contactWithExoticBreeds
-        - crutched
-        - declaredBreed
-        - declaredWoolCategory
-        - declaredWoolSubCategory
-        - sex
-        - woolBase
-      type: object
-      properties:
-        declaredBreed:
-          $ref: '#/components/schemas/DeclaredBreed'
-        declaredWoolSubCategory:
-          $ref: '#/components/schemas/DeclaredWoolSubCategory'
-        declaredWoolCategory:
-          $ref: '#/components/schemas/DeclaredWoolCategory'
-        declaredQualifierCode1:
-          $ref: '#/components/schemas/DeclaredQualifierCode'
-        declaredQualifierCode2:
-          $ref: '#/components/schemas/DeclaredQualifierCode'
-        declaredQualifierCode3:
-          $ref: '#/components/schemas/DeclaredQualifierCode'
-        declaredQualifierCode4:
-          $ref: '#/components/schemas/DeclaredQualifierCode'
-        declaredQualifierCode5:
-          $ref: '#/components/schemas/DeclaredQualifierCode'
-        declaredQualifierScale:
-          $ref: '#/components/schemas/DeclaredQualifierScale'
-        contactWithExoticBreeds:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          description: "Boolean type for contact with exotic breeds.\r\nTrue for contact with exotic breeds. False for not contact with exotic breeds."
-        crutched:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          description: "Boolean type for crutched status. \r\nTrue for crutched, False for not crutched."
-        crutchedWithin3MonthsOfShearing:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          description: Boolean type for crutching within 3 months of shearing.
-          nullable: true
-        sex:
-          $ref: '#/components/schemas/Sex'
-        ageFrom:
-          pattern: '-?\d{1,2}'
-          type: integer
-          description: Required numeric field for minimum age.
-          format: int32
-        ageTo:
-          pattern: '-?\d{1,2}'
-          type: integer
-          description: Optional numeric field for maximum age.
-          format: int32
-          nullable: true
-        darkAndMedullatedFibreRiskBroker:
-          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskBroker'
-        darkandMedullatedFibreRisk:
-          $ref: '#/components/schemas/DarkAndMedullatedFibreRisk'
-        certificateIdentity:
-          maxLength: 11
-          minLength: 0
-          type: string
-        woolBase:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-        dmfrErrorField1:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: integer
-          format: int32
-          nullable: true
-        dmfrErrorField2:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: integer
-          format: int32
-          nullable: true
-        dmfrErrorField3:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: integer
-          format: int32
-          nullable: true
-        dmfrErrorField4:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: integer
-          format: int32
-          nullable: true
-      additionalProperties: false
     DeclaredBreed:
       enum:
         - A
@@ -1025,13 +841,30 @@ components:
         - ND
       type: string
       description: 'NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared'
-    ReportingFlag:
-      enum:
-        - R
-        - C
-        - U
-      type: string
-      description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
+    Organisation:
+      type: object
+      properties:
+        organisationAndCentre:
+          $ref: '#/components/schemas/OrganisationAndCentre'
+        organisationCode:
+          maxLength: 5
+          minLength: 0
+          type: string
+          nullable: true
+      additionalProperties: false
+    OrganisationAndCentre:
+      required:
+        - centre
+        - organisationCode
+      type: object
+      properties:
+        organisationCode:
+          maxLength: 3
+          minLength: 0
+          type: string
+        centre:
+          $ref: '#/components/schemas/Centre'
+      additionalProperties: false
     SaleIdentity:
       type: object
       properties:
@@ -1048,17 +881,6 @@ components:
           format: int32
           nullable: true
       additionalProperties: false
-    ScouredType:
-      enum:
-        - NotScoured
-        - ScouredAqueous
-        - ScouredDualSolvent
-        - Carbonised
-        - Mohair
-        - Noils
-        - Slipe
-      type: string
-      description: '0: Not Scoured<br />1: Scoured Aqueous<br />2: Scoured Dual Solvent<br />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe'
     Sex:
       enum:
         - E
@@ -1110,15 +932,14 @@ components:
         - bales
         - client
         - gross
-        - isCompanyABNApplicable
-        - isGSTApplicable
-        - reportingFlag
+        - lotIdentity
         - tare
+        - weightNote
         - weightUnit
       type: object
       properties:
         client:
-          $ref: '#/components/schemas/Client'
+          $ref: '#/components/schemas/Organisation'
         season:
           maxLength: 2
           minLength: 0
@@ -1133,17 +954,10 @@ components:
           maxLength: 6
           minLength: 0
           type: string
-          nullable: true
-        groupNumber:
-          maxLength: 6
-          minLength: 0
-          type: string
-          nullable: true
         weightNote:
           maxLength: 8
           minLength: 0
           type: string
-          nullable: true
         clientsCrossReference:
           maxLength: 8
           minLength: 0
@@ -1159,10 +973,6 @@ components:
           format: int32
         tare:
           pattern: '-?\d{1,4}'
-          type: integer
-          format: int32
-        regrabSampleWeight:
-          pattern: '-?\d{1,2}'
           type: integer
           format: int32
         weightUnit:
@@ -1187,26 +997,12 @@ components:
           $ref: '#/components/schemas/Centre'
         sourceCode:
           $ref: '#/components/schemas/SourceCode'
-        reportingFlag:
-          $ref: '#/components/schemas/ReportingFlag'
-        scouredType:
-          $ref: '#/components/schemas/ScouredType'
-        gstAmount:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          description: A GST Amount with 2 digits after the decimal point
-          format: double
-          nullable: true
-        isGSTApplicable:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          description: A Flag to determine if GST apply to invoice
         isCompanyABNApplicable:
           maxLength: 5
           minLength: 0
           type: boolean
           description: A Flag to determine if Compnay ABN apply to invoice
+          nullable: true
       additionalProperties: false
     TestRequestVerification:
       required:
@@ -1311,6 +1107,67 @@ components:
           type: boolean
           nullable: true
       additionalProperties: false
+    TestRequestVerificationDarkAndMedullatedFibreRiskDetails:
+      required:
+        - ageFrom
+        - contactWithExoticBreeds
+        - crutched
+        - declaredBreed
+        - declaredWoolCategory
+        - declaredWoolSubCategory
+        - sex
+      type: object
+      properties:
+        declaredBreed:
+          $ref: '#/components/schemas/DeclaredBreed'
+        declaredWoolSubCategory:
+          $ref: '#/components/schemas/DeclaredWoolSubCategory'
+        declaredWoolCategory:
+          $ref: '#/components/schemas/DeclaredWoolCategory'
+        declaredQualifierCode1:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode2:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode3:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode4:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierCode5:
+          $ref: '#/components/schemas/DeclaredQualifierCode'
+        declaredQualifierScale:
+          $ref: '#/components/schemas/DeclaredQualifierScale'
+        contactWithExoticBreeds:
+          maxLength: 5
+          minLength: 0
+          type: boolean
+          description: "Boolean type for contact with exotic breeds.\r\nTrue for contact with exotic breeds. False for not contact with exotic breeds."
+        crutched:
+          maxLength: 5
+          minLength: 0
+          type: boolean
+          description: "Boolean type for crutched status. \r\nTrue for crutched, False for not crutched."
+        crutchedWithin3MonthsOfShearing:
+          maxLength: 5
+          minLength: 0
+          type: boolean
+          description: Boolean type for crutching within 3 months of shearing.
+          nullable: true
+        sex:
+          $ref: '#/components/schemas/Sex'
+        ageFrom:
+          pattern: '-?\d{1,2}'
+          type: integer
+          description: Required numeric field for minimum age.
+          format: int32
+        ageTo:
+          pattern: '-?\d{1,2}'
+          type: integer
+          description: Optional numeric field for maximum age.
+          format: int32
+          nullable: true
+        darkAndMedullatedFibreRiskBroker:
+          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskBroker'
+      additionalProperties: false
     TestRequestsVerification:
       required:
         - transmissionHeader
@@ -1337,7 +1194,7 @@ components:
         contractLimitRequirements:
           $ref: '#/components/schemas/ContractLimitRequirements'
         darkAndMedullatedFibreRiskDetails:
-          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskDetails'
+          $ref: '#/components/schemas/TestRequestVerificationDarkAndMedullatedFibreRiskDetails'
         bales:
           type: array
           items:
@@ -1348,13 +1205,9 @@ components:
       required:
         - abn
         - countryOfOrigin
-        - currentReceiver
-        - currentTransmitter
         - dateFormatLastRevised
         - dateTransmissionFileCreated
         - documentOriginator
-        - finalReceiver
-        - transmissionType
       type: object
       properties:
         dateFormatLastRevised:
@@ -1374,23 +1227,7 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentTransmitter:
-          maxLength: 5
-          minLength: 0
-          type: string
-        currentReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
-        finalReceiver:
-          maxLength: 5
-          minLength: 0
-          type: string
-        transmissionType:
-          $ref: '#/components/schemas/TransmissionType'
+          $ref: '#/components/schemas/Organisation'
         versionNumber:
           pattern: '-?\d{1,2}'
           type: integer
@@ -1406,32 +1243,6 @@ components:
           type: string
           description: Australian Business Number, 11 digits string
       additionalProperties: false
-    TransmissionType:
-      enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 11
-        - 13
-        - 16
-        - 17
-        - 50
-        - 52
-        - 55
-        - 56
-        - 60
-        - 64
-        - 98
-        - 99
-      type: integer
-      description: 'The code used to indicate what type of documents is being transmitted, eg. Brokers’ catalogues or lot invoices.<br />0: Lot Invoices<br />1: Delivery Orders<br />2: Auction Catalogues<br />3: Private Catalogues<br />4: Group Invoices<br />5: Auction Catalogue Updates<br />6: Request Post-Sale Printing of Pre-Sale Certificates<br />7: Statements<br />8: Test Certificate Requests<br />11: Organisation Details<br />13: Lot Price and Buyer<br />16: Delivery Order Summary<br />17: Payment Advice<br />50: Test Certificate<br />52: Test Status<br />55: Test Request Verification<br />56: Dark and Medullated Fibre Risk Verification<br />60: Test Certificate Update<br />64: Payment Confirmation File<br />98: Text File<br />99: Password Replacement'
-      format: int32
     WeightUnit:
       enum:
         - 0

@@ -4,11 +4,15 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class ColourCombinationDetails
+    public class TestCertificateColourCombinationDetails
     {
         [Required]
         [StringLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
+        
+        [Required]
+        [RegularExpression(RegexPattern.DECIMAL_6_2)]
+        public required double Charge { get; set; }
 
         [Required]
         [StringLength(1)]

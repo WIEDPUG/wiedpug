@@ -21,7 +21,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "AWTM"
+                        OrganisationCode = "AWTM"
                     },
                     ABN = "43006014106"
                 },
@@ -31,7 +31,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         Organisation = new Organisation
                             {
-                                OrganizationCode = "AWTS"
+                                OrganisationCode = "AWTS"
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
@@ -76,7 +76,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         Organisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                         NameOfOrganisation = "DEMO BUYER 1",
                         DateLastUpdated="2020-04-28",
@@ -101,7 +101,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "ABCD"
+                        OrganisationCode = "ABCD"
                     },
                     ABN = "43006014106"
                 },
@@ -112,7 +112,7 @@ namespace Wiedpug.API.ExampleResponses
                         Id = "1",
                         Organisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
@@ -171,7 +171,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "ABCD"
+                        OrganisationCode = "ABCD"
                     },
                     ABN = "43006014106"
                 },
@@ -181,7 +181,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         Organisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
@@ -236,7 +236,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganizationCode = "ABCD"
+                        OrganisationCode = "ABCD"
                     },
                 SoftwareIdentifier = new SoftwareIdentifier
                     {
@@ -269,7 +269,7 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganizationCode = "ABCD"
+                            OrganisationCode = "ABCD"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -287,7 +287,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "1",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "AWTS"
+                                OrganisationCode = "AWTS"
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
@@ -333,7 +333,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "2",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "ABCD"
+                                OrganisationCode = "ABCD"
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
@@ -345,7 +345,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "3",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "AWTN"
+                                OrganisationCode = "AWTN"
                             },
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
@@ -412,7 +412,7 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganizationCode = "ABCD"
+                            OrganisationCode = "ABCD"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -430,7 +430,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "1",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
@@ -477,7 +477,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "2",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "BUY1"
+                                OrganisationCode = "BUY1"
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
@@ -489,7 +489,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "3",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "AWTN"
+                                OrganisationCode = "AWTN"
                             },
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
@@ -557,7 +557,7 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganizationCode = "ABCD"
+                            OrganisationCode = "ABCD"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -575,7 +575,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "1",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "AWTA"
+                                OrganisationCode = "AWTA"
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
@@ -622,7 +622,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "2",
                             Organisation = new Organisation
                             {
-                                OrganizationCode = "BUY1"
+                                OrganisationCode = "BUY1"
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",

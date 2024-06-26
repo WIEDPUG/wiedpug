@@ -21,8 +21,9 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? RegrabSampleWeight { get; set; }
 
+        [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? WoolBase { get; set; }
+        public required double WoolBase { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? AirflowMean { get; set; }

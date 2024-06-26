@@ -18,6 +18,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public required string DateOfCreditNote { get; set; }
 
         [Required]
@@ -43,6 +44,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [StringLength(10)]
         public required string DateOfOriginalInvoice { get; set; }
 
         [Required]

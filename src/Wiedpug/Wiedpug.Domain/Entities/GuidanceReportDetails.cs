@@ -38,9 +38,8 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double HardHeadsBase { get; set; }
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public required double Yield1 { get; set; }
+        public double? Yield1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? Yield2 { get; set; }
