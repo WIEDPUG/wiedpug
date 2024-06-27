@@ -11,11 +11,11 @@ namespace Wiedpug.Domain.Entities
         public required string ClientsReference { get; set; }
 
         [Required]
-        public required Organisation AccountReference { get; set; }
+        public required string AccountReference { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public required decimal Amount { get; set; }
+        [RegularExpression(RegexPattern.DECIMAL_9_2)]
+        public required double Amount { get; set; }
 
         public AmountType? AmountType { get; set; }
 
@@ -23,8 +23,8 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DATE_ISO8601)]
         public string? ItemDate { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_TWO_DIGITS)]
-        public decimal? GstAmount { get; set; }
+        [RegularExpression(RegexPattern.DECIMAL_6_2)]
+        public double? GstAmount { get; set; }
 
         /// <summary>
         /// Boolean value of wethear GST amount is applicable to invoice

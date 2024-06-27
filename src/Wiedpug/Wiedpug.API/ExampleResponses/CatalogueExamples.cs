@@ -881,17 +881,17 @@ namespace Wiedpug.API.ExampleResponses
                                         CatalogueSection = CatalogueSection.FLC,
                                         IsFinalCatalogue = true,
                                         InvoicingOrganisation = new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
-                                        ReleasingOrganisation = new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
-                                        SellingOrganisation = new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
+                                        {
+                                            OrganisationId = "ABCD"
+                                        },
+                                         ReleasingOrganisation = new Organisation
+                                        {
+                                            OrganisationId = "ABCD"
+                                        },
+                                         SellingOrganisation = new Organisation
+                                        {
+                                            OrganisationId = "ABCD"
+                                        },
                                         WoolTypeGroup = WoolTypeGroup.MFLC,
                                         CentreCatalogue = Centre.AU_G,
                                         DeliveryBasis = DeliveryBasis.D,

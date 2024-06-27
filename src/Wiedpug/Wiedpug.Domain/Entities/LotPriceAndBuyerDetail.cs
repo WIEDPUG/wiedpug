@@ -5,7 +5,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class PriceAndBuyerDetail
+    public class LotPriceAndBuyerDetail
     {
         /// <summary>
         /// Required alphanumeric field for lot identity.

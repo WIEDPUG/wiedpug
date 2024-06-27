@@ -9,8 +9,9 @@ namespace Wiedpug.Domain.Aggregates.StatementsAggregate
         public required StatementHeader StatementHeader { get; set; }
 
         [Required]
-        public List<StatementDetail>? StatementDetails { get; set; }
+        public required List<StatementDetail> StatementDetails { get; set; }
 
+        [Required]
         public required StatementTrailer StatementTrailer { get; set; }
     }
 }

@@ -6,11 +6,13 @@ namespace Wiedpug.Domain.Entities
 {
     public class SaleIdentity
     {
+        [Required]
         [StringLength(2)]
-        public SellingCentreType SellingCentreType { get; set; }
+        public required SellingCentreType SellingCentreType { get; set; }
 
+        [Required]
         [StringLength(2)]
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? SaleNumber { get; set; }
+        public required int SaleNumber { get; set; }
     }
 }

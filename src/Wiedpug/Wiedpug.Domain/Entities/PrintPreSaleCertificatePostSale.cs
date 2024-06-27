@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -34,7 +35,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [StringLength(5)]
-        public required string BuyingOrganisation { get; set; }
+        public required Organisation BuyingOrganisation { get; set; }
 
         /// <summary>
         /// Required enum type for sale outcome.
@@ -62,7 +63,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [StringLength(4)]
-        public required string SaleIdentity { get; set; }
+        public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
         /// Required enum type for centre-storage.

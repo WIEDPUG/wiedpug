@@ -48,7 +48,7 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     new PaymentAdviceDetail
                     {
-                                WoolSaleHeaderLots = new PaymentAdviceWoolSaleHeaderLots
+                            WoolSaleHeaderLots = new PaymentAdviceWoolSaleHeaderLots
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
