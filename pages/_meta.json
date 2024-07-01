@@ -5,6 +5,7 @@
     "security-model": "Security Model",
     "http-response-codes": "HTTP Response Codes",    
     "openapi-specs": "OpenAPI Specs",
+    "business-rules":"Business Rules",
     "release-versions": "Release Versions",
     "specs":"specs-internal-review"
   }
