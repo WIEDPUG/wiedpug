@@ -38,6 +38,9 @@
                                     "documentOriginator": {
                                         "organisationId": "ABCD"
                                     },
+                                    "currentReceiver": {
+                                        "organisationId": "ATWA"
+                                    },
                                     "versionNumber": 31,
                                     "softwareIdentifier": {
                                         "softwareCompany": 1,
@@ -212,6 +215,9 @@
                                             "documentOriginator": {
                                                 "organisationId": "AWTA"
                                             },
+                                            "currentReceiver": {
+                                                "organisationId": "ATWA"
+                                            },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
                                                 "softwareCompany": 1,
@@ -228,7 +234,10 @@
                                                     "certificateIDNumber": "234567",
                                                     "certificateIDCD": 6
                                                 },
-                                                "weightNote": "L1234567",
+                                                "weightNote": {
+                                                    "prefix": "L",
+                                                    "suffix": "1234567"
+                                                },
                                                 "lotIdentity": "45567L",
                                                 "buyingOrganisation": {
                                                     "organisationId": "ATWM"
@@ -747,10 +756,7 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "weightNote": {
-                        "maxLength": 8,
-                        "minLength": 0,
-                        "type": "string",
-                        "description": "Required generic string field for weight note."
+                        "$ref": "#/components/schemas/WeightNote"
                     },
                     "lotIdentity": {
                         "maxLength": 6,
@@ -1041,6 +1047,7 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
+                    "currentReceiver",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
                     "documentOriginator"
@@ -1069,6 +1076,9 @@
                     "documentOriginator": {
                         "$ref": "#/components/schemas/Organisation"
                     },
+                    "currentReceiver": {
+                        "$ref": "#/components/schemas/Organisation"
+                    },
                     "versionNumber": {
                         "pattern": "-?\\d{1,2}",
                         "type": "integer",
@@ -1085,6 +1095,27 @@
                         "pattern": "^[0-9]+$",
                         "type": "string",
                         "description": "Australian Business Number, 11 digits string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "WeightNote": {
+                "required": [
+                    "prefix",
+                    "suffix"
+                ],
+                "type": "object",
+                "properties": {
+                    "prefix": {
+                        "maxLength": 1,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "suffix": {
+                        "maxLength": 7,
+                        "minLength": 0,
+                        "pattern": "-?\\d{1,7}",
+                        "type": "string"
                     }
                 },
                 "additionalProperties": false

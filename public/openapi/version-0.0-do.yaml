@@ -25,75 +25,78 @@ paths:
             schema:
               $ref: '#/components/schemas/DeliveryOrdersAndShippingInstructions'
             example:
-              transmissionHeader:
-                dateFormatLastRevised: '2020-07-15'
-                dateTransmissionFileCreated: '2016-01-17'
-                countryOfOrigin: AU
-                documentOriginator:
-                  organisationId: ABCD
-                versionNumber: 31
-                softwareIdentifier:
-                  softwareCompany: 1
-                  version: 1082
-                  programName: NETR
-                abn: '72001967184'
-              finalReceiverList:
-                - organisationId: AWTS
-              consignments:
-                - consignmentHeader:
-                    consignmentReference: '1256745909'
-                    shipper:
-                      organisationId: BTTA
-                  countermarkHeadmarks:
-                    - countermarkHeadmarkLine1: '1234567789'
-                      countermarkHeadmarkLine2: '1234098765'
-                  deliveryOrders:
-                    - deliveryOrderDetail:
-                        deliveryOrderType: O
-                        deliveryOrderNumber: '4567891209'
-                        releasingOrganisation:
-                          organisationId: AWTS
-                        carrier:
-                          organisationId: BTWA
-                        applyRenumbers: false
-                        applyGrossWeights: false
-                        applyNetWeights: false
-                      deliveryOrderLots:
-                        - deliveryOrderLotHeader:
-                            invoicingOrganisation:
-                              organisationId: AWTW
-                            sellingOrganisation:
-                              organisationId: TTMA
-                            season: 23
-                            saleIdentity:
-                              sellingCentreType: AU_N
-                              saleNumber: 23
-                            centreStorage: AU_A
-                            storageOrganisation:
-                              organisationId: MBCC
-                            lotIdentityOrGroupName:
-                              lotIdentity: '552467'
-                            bales: 30
-                            gross: 1520
-                            tare: 30
-                            totalBalesInLot: 30
-                            packTypeOriginal: '1'
-                            packTypePreferred: '2'
-                            woolState: '3'
-                            packMaterial: K
-                          countermarkHeadmarks:
-                            - countermarkHeadmarkLine1: '1234567789'
-                              countermarkHeadmarkLine2: '1234098765'
-                          bales:
-                            - baleHeader:
-                                brand: ABCD
-                                baleDescription: bale description
-                                areaOfOrigin: MELB
-                              baleDetails:
-                                - baleNumber: '12345'
-                                  baleDetailType: Renumbers
-                                  gross: 1233
-                                  tare: 23
+              deliveryOrdersAndShippingInstructionCollection:
+                - transmissionHeader:
+                    dateFormatLastRevised: '2020-07-15'
+                    dateTransmissionFileCreated: '2016-01-17'
+                    countryOfOrigin: AU
+                    documentOriginator:
+                      organisationId: ABCD
+                    currentReceiver:
+                      organisationId: ATWA
+                    versionNumber: 31
+                    softwareIdentifier:
+                      softwareCompany: 1
+                      version: 1082
+                      programName: NETR
+                    abn: '72001967184'
+                  finalReceiverList:
+                    - organisationId: AWTS
+                  consignments:
+                    - consignmentHeader:
+                        consignmentReference: '1256745909'
+                        shipper:
+                          organisationId: BTTA
+                      countermarkHeadmarks:
+                        - countermarkHeadmarkLine1: '1234567789'
+                          countermarkHeadmarkLine2: '1234098765'
+                      deliveryOrders:
+                        - deliveryOrderDetail:
+                            deliveryOrderType: O
+                            deliveryOrderNumber: '4567891209'
+                            releasingOrganisation:
+                              organisationId: AWTS
+                            carrier:
+                              organisationId: BTWA
+                            applyRenumbers: false
+                            applyGrossWeights: false
+                            applyNetWeights: false
+                          deliveryOrderLots:
+                            - deliveryOrderLotHeader:
+                                invoicingOrganisation:
+                                  organisationId: AWTW
+                                sellingOrganisation:
+                                  organisationId: TTMA
+                                season: 23
+                                saleIdentity:
+                                  sellingCentreType: AU_N
+                                  saleNumber: 23
+                                centreStorage: AU_A
+                                storageOrganisation:
+                                  organisationId: MBCC
+                                lotIdentityOrGroupName:
+                                  lotIdentity: '552467'
+                                bales: 30
+                                gross: 1520
+                                tare: 30
+                                totalBalesInLot: 30
+                                packTypeOriginal: '1'
+                                packTypePreferred: '2'
+                                woolState: '3'
+                                packMaterial: K
+                              countermarkHeadmarks:
+                                - countermarkHeadmarkLine1: '1234567789'
+                                  countermarkHeadmarkLine2: '1234098765'
+                              bales:
+                                - baleHeader:
+                                    brand: ABCD
+                                    baleDescription: bale description
+                                    areaOfOrigin: MELB
+                                  baleDetails:
+                                    - baleNumber: '12345'
+                                      baleDetailType: Renumbers
+                                      gross: 1233
+                                      tare: 23
         required: true
       responses:
         '200':
@@ -186,75 +189,78 @@ paths:
               example:
                 isSuccessful: true
                 data:
-                  transmissionHeader:
-                    dateFormatLastRevised: '2020-07-15'
-                    dateTransmissionFileCreated: '2016-01-17'
-                    countryOfOrigin: AU
-                    documentOriginator:
-                      organisationId: ABCD
-                    versionNumber: 31
-                    softwareIdentifier:
-                      softwareCompany: 1
-                      version: 1082
-                      programName: NETR
-                    abn: '72001967184'
-                  finalReceiverList:
-                    - organisationId: AWTS
-                  consignments:
-                    - consignmentHeader:
-                        consignmentReference: '1256745909'
-                        shipper:
-                          organisationId: BTTA
-                      countermarkHeadmarks:
-                        - countermarkHeadmarkLine1: '1234567789'
-                          countermarkHeadmarkLine2: '1234098765'
-                      deliveryOrders:
-                        - deliveryOrderDetail:
-                            deliveryOrderType: O
-                            deliveryOrderNumber: '4567891209'
-                            releasingOrganisation:
-                              organisationId: AWTS
-                            carrier:
-                              organisationId: BTWA
-                            applyRenumbers: false
-                            applyGrossWeights: false
-                            applyNetWeights: false
-                          deliveryOrderLots:
-                            - deliveryOrderLotHeader:
-                                invoicingOrganisation:
-                                  organisationId: AWTW
-                                sellingOrganisation:
-                                  organisationId: TTMA
-                                season: 23
-                                saleIdentity:
-                                  sellingCentreType: AU_N
-                                  saleNumber: 23
-                                centreStorage: AU_A
-                                storageOrganisation:
-                                  organisationId: MBCC
-                                lotIdentityOrGroupName:
-                                  lotIdentity: '552467'
-                                bales: 30
-                                gross: 1520
-                                tare: 30
-                                totalBalesInLot: 30
-                                packTypeOriginal: '1'
-                                packTypePreferred: '2'
-                                woolState: '3'
-                                packMaterial: K
-                              countermarkHeadmarks:
-                                - countermarkHeadmarkLine1: '1234567789'
-                                  countermarkHeadmarkLine2: '1234098765'
-                              bales:
-                                - baleHeader:
-                                    brand: ABCD
-                                    baleDescription: bale description
-                                    areaOfOrigin: MELB
-                                  baleDetails:
-                                    - baleNumber: '12345'
-                                      baleDetailType: Renumbers
-                                      gross: 1233
-                                      tare: 23
+                  deliveryOrdersAndShippingInstructionCollection:
+                    - transmissionHeader:
+                        dateFormatLastRevised: '2020-07-15'
+                        dateTransmissionFileCreated: '2016-01-17'
+                        countryOfOrigin: AU
+                        documentOriginator:
+                          organisationId: ABCD
+                        currentReceiver:
+                          organisationId: ATWA
+                        versionNumber: 31
+                        softwareIdentifier:
+                          softwareCompany: 1
+                          version: 1082
+                          programName: NETR
+                        abn: '72001967184'
+                      finalReceiverList:
+                        - organisationId: AWTS
+                      consignments:
+                        - consignmentHeader:
+                            consignmentReference: '1256745909'
+                            shipper:
+                              organisationId: BTTA
+                          countermarkHeadmarks:
+                            - countermarkHeadmarkLine1: '1234567789'
+                              countermarkHeadmarkLine2: '1234098765'
+                          deliveryOrders:
+                            - deliveryOrderDetail:
+                                deliveryOrderType: O
+                                deliveryOrderNumber: '4567891209'
+                                releasingOrganisation:
+                                  organisationId: AWTS
+                                carrier:
+                                  organisationId: BTWA
+                                applyRenumbers: false
+                                applyGrossWeights: false
+                                applyNetWeights: false
+                              deliveryOrderLots:
+                                - deliveryOrderLotHeader:
+                                    invoicingOrganisation:
+                                      organisationId: AWTW
+                                    sellingOrganisation:
+                                      organisationId: TTMA
+                                    season: 23
+                                    saleIdentity:
+                                      sellingCentreType: AU_N
+                                      saleNumber: 23
+                                    centreStorage: AU_A
+                                    storageOrganisation:
+                                      organisationId: MBCC
+                                    lotIdentityOrGroupName:
+                                      lotIdentity: '552467'
+                                    bales: 30
+                                    gross: 1520
+                                    tare: 30
+                                    totalBalesInLot: 30
+                                    packTypeOriginal: '1'
+                                    packTypePreferred: '2'
+                                    woolState: '3'
+                                    packMaterial: K
+                                  countermarkHeadmarks:
+                                    - countermarkHeadmarkLine1: '1234567789'
+                                      countermarkHeadmarkLine2: '1234098765'
+                                  bales:
+                                    - baleHeader:
+                                        brand: ABCD
+                                        baleDescription: bale description
+                                        areaOfOrigin: MELB
+                                      baleDetails:
+                                        - baleNumber: '12345'
+                                          baleDetailType: Renumbers
+                                          gross: 1233
+                                          tare: 23
         '400':
           description: Bad Request
           content:
@@ -1069,7 +1075,7 @@ components:
         - O
       type: string
       description: 'L: Local Delivery Order<br />O: Export/Overseas Del.Order'
-    DeliveryOrdersAndShippingInstructions:
+    DeliveryOrdersAndShippingInstruction:
       required:
         - consignments
         - transmissionHeader
@@ -1088,6 +1094,16 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Consignment'
+      additionalProperties: false
+    DeliveryOrdersAndShippingInstructions:
+      required:
+        - deliveryOrdersAndShippingInstructionCollection
+      type: object
+      properties:
+        deliveryOrdersAndShippingInstructionCollection:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeliveryOrdersAndShippingInstruction'
       additionalProperties: false
     DeliveryOrdersAndShippingInstructionsApiResult:
       required:
@@ -1240,6 +1256,9 @@ components:
       description: '1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
       format: int32
     SaleIdentity:
+      required:
+        - saleNumber
+        - sellingCentreType
       type: object
       properties:
         sellingCentreType:
@@ -1250,7 +1269,6 @@ components:
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
-          nullable: true
       additionalProperties: false
     SellingCentreType:
       enum:
@@ -1304,6 +1322,7 @@ components:
       required:
         - abn
         - countryOfOrigin
+        - currentReceiver
         - dateFormatLastRevised
         - dateTransmissionFileCreated
         - documentOriginator
@@ -1326,6 +1345,8 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
+          $ref: '#/components/schemas/Organisation'
+        currentReceiver:
           $ref: '#/components/schemas/Organisation'
         versionNumber:
           pattern: '-?\d{1,2}'

@@ -26,6 +26,7 @@ namespace Wiedpug.Domain.Shared.Constants
         public const string NUMBER_3_DIGITS = @"-?\d{1,3}";
         public const string NUMBER_4_DIGITS = @"-?\d{1,4}";
         public const string NUMBER_5_DIGITS = @"-?\d{1,5}";
+        public const string NUMBER_7_DIGITS = @"-?\d{1,7}";
         public const string NUMBER_8_DIGITS = @"-?\d{1,8}";
         public const string NUMBER_9_DIGITS = @"-?\d{1,9}";
         public const string NUMBERS = @"^[0-9]+$";

@@ -66,6 +66,9 @@
                                             "documentOriginator": {
                                                 "organisationId": "ABCD"
                                             },
+                                            "currentReceiver": {
+                                                "organisationId": "ATWA"
+                                            },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
                                                 "softwareCompany": 6,
@@ -299,6 +302,9 @@
                                         "documentOriginator": {
                                             "organisationId": "ABCD"
                                         },
+                                        "currentReceiver": {
+                                            "organisationId": "ATWA"
+                                        },
                                         "abn": "43006014106"
                                     },
                                     "organisationDetailCollection": [
@@ -443,6 +449,9 @@
                                     "documentOriginator": {
                                         "organisationId": "ABCD"
                                     },
+                                    "currentReceiver": {
+                                        "organisationId": "ATWA"
+                                    },
                                     "abn": "43006014106"
                                 },
                                 "organisationDetailCollection": [
@@ -507,6 +516,9 @@
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
                                             "organisationId": "ABCD"
+                                        },
+                                        "currentReceiver": {
+                                            "organisationId": "ATWA"
                                         },
                                         "abn": "43006014106"
                                     },
@@ -1433,6 +1445,7 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
+                    "currentReceiver",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
                     "documentOriginator"
@@ -1459,6 +1472,9 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
+                        "$ref": "#/components/schemas/Organisation"
+                    },
+                    "currentReceiver": {
                         "$ref": "#/components/schemas/Organisation"
                     },
                     "versionNumber": {

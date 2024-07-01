@@ -39,6 +39,9 @@
                                             "documentOriginator": {
                                                 "organisationId": "ABCD"
                                             },
+                                            "currentReceiver": {
+                                                "organisationId": "ATWA"
+                                            },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
                                                 "softwareCompany": 1,
@@ -302,6 +305,9 @@
                                                     "countryOfOrigin": "AU",
                                                     "documentOriginator": {
                                                         "organisationId": "ABCD"
+                                                    },
+                                                    "currentReceiver": {
+                                                        "organisationId": "ATWA"
                                                     },
                                                     "versionNumber": 31,
                                                     "softwareIdentifier": {
@@ -3006,6 +3012,10 @@
                 "format": "int32"
             },
             "SaleIdentity": {
+                "required": [
+                    "saleNumber",
+                    "sellingCentreType"
+                ],
                 "type": "object",
                 "properties": {
                     "sellingCentreType": {
@@ -3016,8 +3026,7 @@
                         "minLength": 0,
                         "pattern": "-?\\d{1,2}",
                         "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "format": "int32"
                     }
                 },
                 "additionalProperties": false
@@ -3207,6 +3216,7 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
+                    "currentReceiver",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
                     "documentOriginator"
@@ -3233,6 +3243,9 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
+                        "$ref": "#/components/schemas/Organisation"
+                    },
+                    "currentReceiver": {
                         "$ref": "#/components/schemas/Organisation"
                     },
                     "versionNumber": {

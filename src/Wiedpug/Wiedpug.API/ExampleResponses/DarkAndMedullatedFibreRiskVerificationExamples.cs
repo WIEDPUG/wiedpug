@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using Swashbuckle.AspNetCore.Filters;
+using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.LotInvoicesAggregate;
+using Wiedpug.Domain.Aggregates.TextAggregate;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.ValueObject;
@@ -21,6 +23,10 @@ namespace Wiedpug.API.ExampleResponses
                     DocumentOriginator = new Organisation
                     {
                         OrganisationId = "ABCD"
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -70,5 +76,102 @@ namespace Wiedpug.API.ExampleResponses
                 }
             };
         }
+
+        public class RequestForDarkAndMedullatedFibreRiskVerificationExample : IExamplesProvider<RequestForDarkAndMedullatedFibreRiskVerification>
+        {
+            public RequestForDarkAndMedullatedFibreRiskVerification GetExamples()
+            {
+                return new RequestForDarkAndMedullatedFibreRiskVerification()
+                {
+                    SaleIdentity = new Domain.Entities.SaleIdentity
+                    {
+                        SellingCentreType = SellingCentreType.AU_M,
+                        SaleNumber = 18
+                    },
+                    OrganisationRequested = "AWNF",
+                    SaleDateRequested = "2023-10-31",
+                    UseNetworkDateTime = false,
+                    RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
+                    WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
+                    Season = 23
+                };
+            }
+        }
+
+        public class RequestForDarkAndMedullatedFibreRiskVerification200Example : IExamplesProvider<ApiResult>
+        {
+            public ApiResult GetExamples()
+            {
+                return new ApiResult()
+                {
+                    IsSuccessful = true,
+                    Message = null,
+                    Data =  new DarkAndMedullatedFibreRiskVerification()
+                    {
+                        TransmissionHeader = new TransmissionHeader
+                        {
+                            DateFormatLastRevised = "2020-07-15",
+                            DateTransmissionFileCreated = "2016-01-17",
+                            CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganisationId = "ABCD"
+                            },
+                            CurrentReceiver = new Organisation
+                            {
+                                OrganisationId = "ATWA"
+                            },
+                            VersionNumber = 31,
+                            SoftwareIdentifier = new SoftwareIdentifier
+                            {
+                                ProgramName = "NETR",
+                                SoftwareCompany = SoftwareCompany.AWTA,
+                                Version = 1082
+                            },
+                            ABN = "72001967184"
+                        },
+                        DarkAndMedullatedFibreRiskDetailsCollection = new List<DarkAndMedullatedFibreRiskDetails>
+                {
+                    new DarkAndMedullatedFibreRiskDetails
+                    {
+                        DeclaredBreed = DeclaredBreed.A,
+                        DeclaredWoolSubCategory=DeclaredWoolSubCategory.W,
+                        DeclaredWoolCategory=DeclaredWoolCategory.P,
+                        DeclaredQualifierCode1=DeclaredQualifierCode.H,
+                        DeclaredQualifierCode2 = DeclaredQualifierCode.D,
+                        DeclaredQualifierCode3 = DeclaredQualifierCode.H,
+                        DeclaredQualifierCode4 = DeclaredQualifierCode.S,
+                        DeclaredQualifierCode5 = DeclaredQualifierCode.T,
+                        DeclaredQualifierScale =DeclaredQualifierScale.LightOrOdd,
+                        ContactWithExoticBreeds = true,
+                        Crutched = true,
+                        CrutchedWithin3MonthsOfShearing = false,
+                        Sex = Sex.E,
+                        AgeFrom = 12,
+                        AgeTo = 23,
+                        DarkAndMedullatedFibreRiskBroker = DarkAndMedullatedFibreRiskBroker.Risklevel1,
+                        DarkandMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
+                        CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDNumber = "00000499",
+                                                CertificateIDSuffix = CertificateIDSuffix.P,
+                                                CertificateIDCD = 7
+                                            },
+                        WoolBase = 32.14,
+                        DMFRErrorField1 = 12,
+                        DMFRErrorField2 = 18,
+                        DMFRErrorField3 = 9,
+                        DMFRErrorField4 = 2
+                    }
+
+
+                }
+                    }
+                };
+            }
+        }
+
+
     }
 }

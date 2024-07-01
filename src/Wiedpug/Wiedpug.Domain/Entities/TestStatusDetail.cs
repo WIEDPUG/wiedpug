@@ -19,7 +19,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [StringLength(8)]
-        public required string WeightNote { get; set; }
+        public required WeightNote WeightNote { get; set; }
 
         /// <summary>
         /// Required numeric field for client code.

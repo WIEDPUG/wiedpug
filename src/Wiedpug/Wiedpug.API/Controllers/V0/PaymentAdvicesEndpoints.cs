@@ -13,13 +13,13 @@ public static class PaymentAdvicesEndpoints
         var group = routes.MapGroup("payment-advice").WithTags("Payment Advice");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(PaymentAdvice), typeof(CreatePaymentAdvicesRequestExample))]
+        [SwaggerRequestExample(typeof(PaymentAdvices), typeof(CreatePaymentAdvicesRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] PaymentAdvice model) =>
+        ([FromBody] PaymentAdvices model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
@@ -52,7 +52,7 @@ public static class PaymentAdvicesEndpoints
         {
             Summary = "Retrieves the payment advices"
         })
-        .Produces<ApiResult<PaymentAdvice>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<PaymentAdvices>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

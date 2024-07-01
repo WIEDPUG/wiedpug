@@ -21,6 +21,10 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2020-07-15",
                     DateTransmissionFileCreated = "2016-01-17",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                     DocumentOriginator = new Organisation
                     {
                         OrganisationId = "ABCD"
@@ -45,7 +49,10 @@ namespace Wiedpug.API.ExampleResponses
                             CertificateIDSuffix = CertificateIDSuffix.F,
                             CertificateIDCD = 6,
                         },
-                        WeightNote = "L1234567",
+                        WeightNote = new WeightNote{
+                            Prefix = "L",
+                            Suffix = "1234567",
+                        },
                         LotIdentity = "45567L",
                         BuyingOrganisation = new Organisation
                         {
@@ -104,6 +111,10 @@ namespace Wiedpug.API.ExampleResponses
                         DateFormatLastRevised = "2020-07-15",
                         DateTransmissionFileCreated = "2016-01-17",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                        CurrentReceiver = new Organisation
+                        {
+                            OrganisationId = "ATWA"
+                        },
                         DocumentOriginator = new Organisation
                         {
                             OrganisationId = "AWTA"
@@ -128,7 +139,10 @@ namespace Wiedpug.API.ExampleResponses
                             CertificateIDSuffix = CertificateIDSuffix.F,
                             CertificateIDCD = 6,
                         },
-                        WeightNote = "L1234567",
+                        WeightNote = new WeightNote{
+                            Prefix = "L",
+                            Suffix = "1234567",
+                        },
                         LotIdentity = "45567L",
                         BuyingOrganisation = new Organisation
                         {

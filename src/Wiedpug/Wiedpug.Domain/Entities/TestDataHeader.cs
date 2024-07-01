@@ -32,7 +32,7 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [StringLength(8)]
-        public required string WeightNote { get; set; }
+        public required WeightNote WeightNote { get; set; }
 
         [StringLength(8)]
         public string? ClientsCrossReference { get; set; }

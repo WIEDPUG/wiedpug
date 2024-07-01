@@ -22,6 +22,10 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         OrganisationId = "AWTX"
                     },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ACBB"
+                    },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
                     {

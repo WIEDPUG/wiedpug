@@ -26,6 +26,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationId = "ABCD"
                             },VersionNumber = 31,
+                                                CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
                                 ProgramName = "NETR",
@@ -217,6 +221,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationId = "ABCD"
                             },VersionNumber = 31,
+                                                CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                             SoftwareIdentifier = new SoftwareIdentifier
                             {
                                 ProgramName = "NETR",

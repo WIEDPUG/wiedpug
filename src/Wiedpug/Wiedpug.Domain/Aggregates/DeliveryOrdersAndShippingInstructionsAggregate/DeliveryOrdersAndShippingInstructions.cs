@@ -7,12 +7,6 @@ namespace Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggrega
     public class DeliveryOrdersAndShippingInstructions
     {
         [Required]
-        public required TransmissionHeader TransmissionHeader { get; set; }
-
-        [StringLength(8)]
-        public List<Organisation>? FinalReceiverList { get; set; }
-
-        [Required]
-        public required List<Consignment> Consignments { get; set; }
+        public required List<DeliveryOrdersAndShippingInstruction> DeliveryOrdersAndShippingInstructionCollection { get; set; }
     }
 }

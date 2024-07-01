@@ -31,6 +31,8 @@ paths:
                 countryOfOrigin: AU
                 documentOriginator:
                   organisationId: ABCD
+                currentReceiver:
+                  organisationId: ATWA
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -171,6 +173,8 @@ paths:
                     countryOfOrigin: AU
                     documentOriginator:
                       organisationId: AWTA
+                    currentReceiver:
+                      organisationId: ATWA
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 1
@@ -887,6 +891,7 @@ components:
       required:
         - abn
         - countryOfOrigin
+        - currentReceiver
         - dateFormatLastRevised
         - dateTransmissionFileCreated
         - documentOriginator
@@ -909,6 +914,8 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
+          $ref: '#/components/schemas/Organisation'
+        currentReceiver:
           $ref: '#/components/schemas/Organisation'
         versionNumber:
           pattern: '-?\d{1,2}'

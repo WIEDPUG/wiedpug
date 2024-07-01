@@ -25,6 +25,10 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         OrganisationId = "ABCD"
                     },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
@@ -103,6 +107,10 @@ namespace Wiedpug.API.ExampleResponses
                         DocumentOriginator = new Organisation
                         {
                             OrganisationId = "AWTA"
+                        },
+                        CurrentReceiver = new Organisation
+                        {
+                            OrganisationId = "BCCA"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier

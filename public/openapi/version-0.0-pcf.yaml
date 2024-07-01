@@ -30,7 +30,9 @@ paths:
                 dateTransmissionFileCreated: '2016-01-17'
                 countryOfOrigin: AU
                 documentOriginator:
-                  organisationCode: ABCD
+                  organisationId: ABCD
+                currentReceiver:
+                  organisationId: ATWA
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -40,7 +42,7 @@ paths:
               confirmations:
                 - paymentHeader:
                     clientCode:
-                      organisationCode: AWCED
+                      organisationId: AWCED
                     statementDate: '2024-05-11'
                     amountEmitted: 0
                     statementPaymentDate: '2024-06-01'
@@ -126,7 +128,7 @@ paths:
               $ref: '#/components/schemas/RequestForPaymentConfirmation'
             example:
               saleIdentity:
-                sellingCentreType: F
+                sellingCentreType: AU_F
                 saleNumber: 18
               organisationRequested: AWNF
               saleDateRequested: '2023-10-31'
@@ -150,7 +152,9 @@ paths:
                     dateTransmissionFileCreated: '2016-01-17'
                     countryOfOrigin: AU
                     documentOriginator:
-                      organisationCode: AWTA
+                      organisationId: AWTA
+                    currentReceiver:
+                      organisationId: BCCA
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 1
@@ -160,7 +164,7 @@ paths:
                   confirmations:
                     - paymentHeader:
                         clientCode:
-                          organisationCode: AWCED
+                          organisationId: AWCED
                         statementDate: '2024-05-11'
                         amountEmitted: 0
                         statementPaymentDate: '2024-06-01'
@@ -503,15 +507,15 @@ components:
     Organisation:
       type: object
       properties:
-        organisationAndCentre:
-          $ref: '#/components/schemas/OrganisationAndCentre'
-        organisationCode:
+        organisationCodeAndCentre:
+          $ref: '#/components/schemas/OrganisationCodeAndCentre'
+        organisationId:
           maxLength: 5
           minLength: 0
           type: string
           nullable: true
       additionalProperties: false
-    OrganisationAndCentre:
+    OrganisationCodeAndCentre:
       required:
         - centre
         - organisationCode
@@ -700,21 +704,38 @@ components:
       description: '1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
       format: int32
     SaleIdentity:
+      required:
+        - saleNumber
+        - sellingCentreType
       type: object
       properties:
         sellingCentreType:
-          maxLength: 2
-          minLength: 0
-          type: string
-          nullable: true
+          $ref: '#/components/schemas/SellingCentreType'
         saleNumber:
           maxLength: 2
           minLength: 0
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
-          nullable: true
       additionalProperties: false
+    SellingCentreType:
+      enum:
+        - NZ_C
+        - NZ_N
+        - AU_A
+        - AU_AU
+        - AU_B
+        - AU_F
+        - AU_G
+        - AU_L
+        - AU_M
+        - AU_N
+        - AU_R
+        - AU_S
+        - PS
+        - T
+      type: string
+      description: 'NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales'
     SoftwareCompany:
       enum:
         - 1
@@ -749,6 +770,7 @@ components:
       required:
         - abn
         - countryOfOrigin
+        - currentReceiver
         - dateFormatLastRevised
         - dateTransmissionFileCreated
         - documentOriginator
@@ -771,6 +793,8 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
+          $ref: '#/components/schemas/Organisation'
+        currentReceiver:
           $ref: '#/components/schemas/Organisation'
         versionNumber:
           pattern: '-?\d{1,2}'

@@ -30,6 +30,8 @@ paths:
                 countryOfOrigin: AU
                 documentOriginator:
                   organisationId: AWTX
+                currentReceiver:
+                  organisationId: ACBB
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -183,6 +185,8 @@ paths:
                 countryOfOrigin: AU
                 documentOriginator:
                   organisationId: ABCD
+                currentReceiver:
+                  organisationId: ATWA
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -307,6 +311,8 @@ paths:
                 countryOfOrigin: AU
                 documentOriginator:
                   organisationId: ABCD
+                currentReceiver:
+                  organisationId: ATWA
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 1
@@ -549,6 +555,8 @@ paths:
                     countryOfOrigin: AU
                     documentOriginator:
                       organisationId: AWTA
+                    currentReceiver:
+                      organisationId: ATWA
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 1
@@ -2059,6 +2067,9 @@ components:
       description: '0: Normal Test<br />1: Retest<br />2: Check Test'
       format: int32
     SaleIdentity:
+      required:
+        - saleNumber
+        - sellingCentreType
       type: object
       properties:
         sellingCentreType:
@@ -2069,7 +2080,6 @@ components:
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
-          nullable: true
       additionalProperties: false
     ScouredTestDetails:
       required:
@@ -3484,6 +3494,7 @@ components:
       required:
         - abn
         - countryOfOrigin
+        - currentReceiver
         - dateFormatLastRevised
         - dateTransmissionFileCreated
         - documentOriginator
@@ -3506,6 +3517,8 @@ components:
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
         documentOriginator:
+          $ref: '#/components/schemas/Organisation'
+        currentReceiver:
           $ref: '#/components/schemas/Organisation'
         versionNumber:
           pattern: '-?\d{1,2}'

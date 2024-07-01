@@ -23,6 +23,10 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         OrganisationId = "AWTM"
                     },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                     ABN = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
@@ -103,6 +107,10 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         OrganisationId = "ABCD"
                     },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                     ABN = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
@@ -172,6 +180,10 @@ namespace Wiedpug.API.ExampleResponses
                     DocumentOriginator = new Organisation
                     {
                         OrganisationId = "ABCD"
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
                     },
                     ABN = "43006014106"
                 },
@@ -270,6 +282,10 @@ namespace Wiedpug.API.ExampleResponses
                         DocumentOriginator = new Organisation
                         {
                             OrganisationId = "ABCD"
+                        },
+                        CurrentReceiver = new Organisation
+                        {
+                            OrganisationId = "ATWA"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -413,6 +429,10 @@ namespace Wiedpug.API.ExampleResponses
                         DocumentOriginator = new Organisation
                         {
                             OrganisationId = "ABCD"
+                        },
+                        CurrentReceiver = new Organisation
+                        {
+                            OrganisationId = "ATWA"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -558,6 +578,10 @@ namespace Wiedpug.API.ExampleResponses
                         DocumentOriginator = new Organisation
                         {
                             OrganisationId = "ABCD"
+                        },
+                        CurrentReceiver = new Organisation
+                        {
+                            OrganisationId = "ATWA"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier

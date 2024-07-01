@@ -28,77 +28,84 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/PaymentAdvice"
+                                "$ref": "#/components/schemas/PaymentAdvices"
                             },
                             "example": {
-                                "transmissionHeader": {
-                                    "dateFormatLastRevised": "2020-07-15",
-                                    "dateTransmissionFileCreated": "2016-01-17",
-                                    "countryOfOrigin": "AU",
-                                    "documentOriginator": {
-                                        "organisationCode": "ABCD"
-                                    },
-                                    "versionNumber": 31,
-                                    "softwareIdentifier": {
-                                        "softwareCompany": 1,
-                                        "version": 1082,
-                                        "programName": "NETR"
-                                    },
-                                    "abn": "72001967184"
-                                },
-                                "finalreceiverList": [
+                                "paymentAdviceCollection": [
                                     {
-                                        "organisationCode": "ABEF"
-                                    },
-                                    {
-                                        "organisationCode": "ABFF"
-                                    }
-                                ],
-                                "paymentAdviceDetailList": [
-                                    {
-                                        "woolSaleHeaderLots": {
-                                            "season": 16,
-                                            "saleIdentity": {
-                                                "sellingCentreType": "M",
-                                                "saleNumber": 29
+                                        "transmissionHeader": {
+                                            "dateFormatLastRevised": "2020-07-15",
+                                            "dateTransmissionFileCreated": "2016-01-17",
+                                            "countryOfOrigin": "AU",
+                                            "documentOriginator": {
+                                                "organisationId": "ABCD"
                                             },
-                                            "centreStorage": "AU_AR",
-                                            "saleDate": "2017-01-19",
-                                            "woolState": "A",
-                                            "packType": "2",
-                                            "invoicingOrganisation": {
-                                                "organisationCode": "ABCD"
+                                            "currentReceiver": {
+                                                "organisationId": "ATWA"
                                             },
-                                            "sellingOrganisation": {
-                                                "organisationCode": "ABCD"
+                                            "versionNumber": 31,
+                                            "softwareIdentifier": {
+                                                "softwareCompany": 1,
+                                                "version": 1082,
+                                                "programName": "NETR"
                                             },
-                                            "centreCatalogue": "AU_G",
-                                            "deliveryBasis": "D",
-                                            "storageOrganisation": "ABCD",
-                                            "storageDescription": "45 MAIN ST",
-                                            "discountRate": 1.5,
-                                            "maximumDaysDiscount": 0,
-                                            "dateStorageChargeCommences": "2017-01-24",
-                                            "storageChargePerBalePerDay": 0.245,
-                                            "penaltyInterestRate": 11.35
+                                            "abn": "72001967184"
                                         },
-                                        "lotPaymentDetails": [
+                                        "finalreceiverList": [
                                             {
-                                                "lotIdentity": "123256",
-                                                "lotLastCost": 23.45
+                                                "organisationId": "ABEF"
+                                            },
+                                            {
+                                                "organisationId": "ABFF"
                                             }
                                         ],
-                                        "paymentSummary": {
-                                            "lastCostPaid": 67,
-                                            "discountAmount": 23,
-                                            "netAmountPaid": 77,
-                                            "datePaymentMade": "2024-05-24"
-                                        }
-                                    }
-                                ],
-                                "comments": [
-                                    {
-                                        "text": "dfsfbsdfafsafs fdsa"
+                                        "paymentAdviceDetailList": [
+                                            {
+                                                "woolSaleHeaderLots": {
+                                                    "season": 16,
+                                                    "saleIdentity": {
+                                                        "sellingCentreType": "AU_M",
+                                                        "saleNumber": 29
+                                                    },
+                                                    "centreStorage": "AU_AR",
+                                                    "saleDate": "2017-01-19",
+                                                    "woolState": "A",
+                                                    "packType": "2",
+                                                    "invoicingOrganisation": {
+                                                        "organisationId": "ABCD"
+                                                    },
+                                                    "sellingOrganisation": {
+                                                        "organisationId": "ABCD"
+                                                    },
+                                                    "centreCatalogue": "AU_G",
+                                                    "deliveryBasis": "D",
+                                                    "storageOrganisation": "ABCD",
+                                                    "storageDescription": "45 MAIN ST",
+                                                    "discountRate": 1.5,
+                                                    "maximumDaysDiscount": 0,
+                                                    "dateStorageChargeCommences": "2017-01-24",
+                                                    "storageChargePerBalePerDay": 0.245,
+                                                    "penaltyInterestRate": 11.35
+                                                },
+                                                "lotPaymentDetails": [
+                                                    {
+                                                        "lotIdentity": "123256",
+                                                        "lotLastCost": 23.45
+                                                    }
+                                                ],
+                                                "paymentSummary": {
+                                                    "lastCostPaid": 67,
+                                                    "discountAmount": 23,
+                                                    "netAmountPaid": 77,
+                                                    "datePaymentMade": "2024-05-24"
+                                                }
+                                            }
+                                        ],
+                                        "comments": [
+                                            {
+                                                "text": "dfsfbsdfafsafs fdsa"
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -211,7 +218,7 @@
                             },
                             "example": {
                                 "saleIdentity": {
-                                    "sellingCentreType": "F",
+                                    "sellingCentreType": "AU_M",
                                     "saleNumber": 18
                                 },
                                 "organisationRequested": "AWNF",
@@ -231,71 +238,78 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/PaymentAdviceApiResult"
+                                    "$ref": "#/components/schemas/PaymentAdvicesApiResult"
                                 },
                                 "example": {
                                     "isSuccessful": true,
                                     "data": {
-                                        "transmissionHeader": {
-                                            "dateFormatLastRevised": "2020-07-15",
-                                            "dateTransmissionFileCreated": "2016-01-17",
-                                            "countryOfOrigin": "AU",
-                                            "documentOriginator": {
-                                                "organisationCode": "AWTA"
-                                            },
-                                            "versionNumber": 31,
-                                            "softwareIdentifier": {
-                                                "softwareCompany": 1,
-                                                "version": 1082,
-                                                "programName": "NETR"
-                                            },
-                                            "abn": "72001967184"
-                                        },
-                                        "paymentAdviceDetailList": [
+                                        "paymentAdviceCollection": [
                                             {
-                                                "woolSaleHeaderLots": {
-                                                    "season": 16,
-                                                    "saleIdentity": {
-                                                        "sellingCentreType": "M",
-                                                        "saleNumber": 29
+                                                "transmissionHeader": {
+                                                    "dateFormatLastRevised": "2020-07-15",
+                                                    "dateTransmissionFileCreated": "2016-01-17",
+                                                    "countryOfOrigin": "AU",
+                                                    "documentOriginator": {
+                                                        "organisationId": "AWTA"
                                                     },
-                                                    "centreStorage": "AU_AR",
-                                                    "saleDate": "2017-01-19",
-                                                    "woolState": "A",
-                                                    "packType": "2",
-                                                    "invoicingOrganisation": {
-                                                        "organisationCode": "ABCD"
+                                                    "currentReceiver": {
+                                                        "organisationId": "MNCL"
                                                     },
-                                                    "sellingOrganisation": {
-                                                        "organisationCode": "ABCD"
+                                                    "versionNumber": 31,
+                                                    "softwareIdentifier": {
+                                                        "softwareCompany": 1,
+                                                        "version": 1082,
+                                                        "programName": "NETR"
                                                     },
-                                                    "centreCatalogue": "AU_G",
-                                                    "deliveryBasis": "D",
-                                                    "storageOrganisation": "ABCD",
-                                                    "storageDescription": "45 MAIN ST",
-                                                    "discountRate": 1.5,
-                                                    "maximumDaysDiscount": 0,
-                                                    "dateStorageChargeCommences": "2017-01-24",
-                                                    "storageChargePerBalePerDay": 0.245,
-                                                    "penaltyInterestRate": 11.35
+                                                    "abn": "72001967184"
                                                 },
-                                                "lotPaymentDetails": [
+                                                "paymentAdviceDetailList": [
                                                     {
-                                                        "lotIdentity": "123256",
-                                                        "lotLastCost": 23.45
+                                                        "woolSaleHeaderLots": {
+                                                            "season": 16,
+                                                            "saleIdentity": {
+                                                                "sellingCentreType": "AU_M",
+                                                                "saleNumber": 29
+                                                            },
+                                                            "centreStorage": "AU_AR",
+                                                            "saleDate": "2017-01-19",
+                                                            "woolState": "A",
+                                                            "packType": "2",
+                                                            "invoicingOrganisation": {
+                                                                "organisationId": "ABCD"
+                                                            },
+                                                            "sellingOrganisation": {
+                                                                "organisationId": "ABCD"
+                                                            },
+                                                            "centreCatalogue": "AU_G",
+                                                            "deliveryBasis": "D",
+                                                            "storageOrganisation": "ABCD",
+                                                            "storageDescription": "45 MAIN ST",
+                                                            "discountRate": 1.5,
+                                                            "maximumDaysDiscount": 0,
+                                                            "dateStorageChargeCommences": "2017-01-24",
+                                                            "storageChargePerBalePerDay": 0.245,
+                                                            "penaltyInterestRate": 11.35
+                                                        },
+                                                        "lotPaymentDetails": [
+                                                            {
+                                                                "lotIdentity": "123256",
+                                                                "lotLastCost": 23.45
+                                                            }
+                                                        ],
+                                                        "paymentSummary": {
+                                                            "lastCostPaid": 67,
+                                                            "discountAmount": 23,
+                                                            "netAmountPaid": 77,
+                                                            "datePaymentMade": "2024-05-24"
+                                                        }
                                                     }
                                                 ],
-                                                "paymentSummary": {
-                                                    "lastCostPaid": 67,
-                                                    "discountAmount": 23,
-                                                    "netAmountPaid": 77,
-                                                    "datePaymentMade": "2024-05-24"
-                                                }
-                                            }
-                                        ],
-                                        "comments": [
-                                            {
-                                                "text": "dfsfbsdfafsafs fdsa"
+                                                "comments": [
+                                                    {
+                                                        "text": "dfsfbsdfafsafs fdsa"
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -787,10 +801,10 @@
             "Organisation": {
                 "type": "object",
                 "properties": {
-                    "organisationAndCentre": {
-                        "$ref": "#/components/schemas/OrganisationAndCentre"
+                    "organisationCodeAndCentre": {
+                        "$ref": "#/components/schemas/OrganisationCodeAndCentre"
                     },
-                    "organisationCode": {
+                    "organisationId": {
                         "maxLength": 5,
                         "minLength": 0,
                         "type": "string",
@@ -799,7 +813,7 @@
                 },
                 "additionalProperties": false
             },
-            "OrganisationAndCentre": {
+            "OrganisationCodeAndCentre": {
                 "required": [
                     "centre",
                     "organisationCode"
@@ -872,28 +886,6 @@
                     }
                 },
                 "additionalProperties": false
-            },
-            "PaymentAdviceApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
-                "type": "object",
-                "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
-                    "message": {
-                        "type": "string",
-                        "description": "Contains information about the response if applicable.",
-                        "nullable": true
-                    },
-                    "data": {
-                        "$ref": "#/components/schemas/PaymentAdvice"
-                    }
-                },
-                "additionalProperties": false,
-                "description": "A standard API response object used for all successful API responses"
             },
             "PaymentAdviceDetail": {
                 "required": [
@@ -1048,6 +1040,43 @@
                 },
                 "additionalProperties": false
             },
+            "PaymentAdvices": {
+                "required": [
+                    "paymentAdviceCollection"
+                ],
+                "type": "object",
+                "properties": {
+                    "paymentAdviceCollection": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/PaymentAdvice"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PaymentAdvicesApiResult": {
+                "required": [
+                    "isSuccessful"
+                ],
+                "type": "object",
+                "properties": {
+                    "isSuccessful": {
+                        "type": "boolean",
+                        "description": "Indicator if the request has been successfully processed."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Contains information about the response if applicable.",
+                        "nullable": true
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/PaymentAdvices"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A standard API response object used for all successful API responses"
+            },
             "PaymentSummary": {
                 "required": [
                     "datePaymentMade",
@@ -1169,24 +1198,44 @@
                 "format": "int32"
             },
             "SaleIdentity": {
+                "required": [
+                    "saleNumber",
+                    "sellingCentreType"
+                ],
                 "type": "object",
                 "properties": {
                     "sellingCentreType": {
-                        "maxLength": 2,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
+                        "$ref": "#/components/schemas/SellingCentreType"
                     },
                     "saleNumber": {
                         "maxLength": 2,
                         "minLength": 0,
                         "pattern": "-?\\d{1,2}",
                         "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "format": "int32"
                     }
                 },
                 "additionalProperties": false
+            },
+            "SellingCentreType": {
+                "enum": [
+                    "NZ_C",
+                    "NZ_N",
+                    "AU_A",
+                    "AU_AU",
+                    "AU_B",
+                    "AU_F",
+                    "AU_G",
+                    "AU_L",
+                    "AU_M",
+                    "AU_N",
+                    "AU_R",
+                    "AU_S",
+                    "PS",
+                    "T"
+                ],
+                "type": "string",
+                "description": "NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales"
             },
             "SoftwareCompany": {
                 "enum": [
@@ -1229,6 +1278,7 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
+                    "currentReceiver",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
                     "documentOriginator"
@@ -1255,6 +1305,9 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
+                        "$ref": "#/components/schemas/Organisation"
+                    },
+                    "currentReceiver": {
                         "$ref": "#/components/schemas/Organisation"
                     },
                     "versionNumber": {

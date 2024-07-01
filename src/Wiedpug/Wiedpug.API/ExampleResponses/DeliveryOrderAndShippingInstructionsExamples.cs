@@ -17,7 +17,11 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new DeliveryOrdersAndShippingInstructions()
             {
-                TransmissionHeader = new TransmissionHeader
+                DeliveryOrdersAndShippingInstructionCollection = new List<DeliveryOrdersAndShippingInstruction>
+                {
+                    new DeliveryOrdersAndShippingInstruction
+                    {
+                                        TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
                     DateTransmissionFileCreated = "2016-01-17",
@@ -25,6 +29,10 @@ namespace Wiedpug.API.ExampleResponses
                     DocumentOriginator = new Organisation
                     {
                         OrganisationId = "ABCD"
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -156,6 +164,8 @@ namespace Wiedpug.API.ExampleResponses
                         }
                     }
                 }
+                    }
+                }
             };
         }
     }
@@ -191,7 +201,11 @@ namespace Wiedpug.API.ExampleResponses
                 Message = null,
                 Data = new DeliveryOrdersAndShippingInstructions()
                 {
-                    TransmissionHeader = new TransmissionHeader
+                    DeliveryOrdersAndShippingInstructionCollection = new List<DeliveryOrdersAndShippingInstruction>
+                    {
+                        new DeliveryOrdersAndShippingInstruction
+                        {
+                                                TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
                         DateTransmissionFileCreated = "2016-01-17",
@@ -199,6 +213,10 @@ namespace Wiedpug.API.ExampleResponses
                         DocumentOriginator = new Organisation
                         {
                             OrganisationId = "ABCD"
+                        },
+                        CurrentReceiver = new Organisation
+                        {
+                            OrganisationId = "ATWA"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -330,6 +348,8 @@ namespace Wiedpug.API.ExampleResponses
                         }
                     }
                 }
+                        }
+                    }
                 }
             };
         }

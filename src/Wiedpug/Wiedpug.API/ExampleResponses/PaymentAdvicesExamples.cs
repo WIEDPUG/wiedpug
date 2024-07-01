@@ -9,13 +9,17 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class CreatePaymentAdvicesRequestExample : IExamplesProvider<PaymentAdvice>
+    public class CreatePaymentAdvicesRequestExample : IExamplesProvider<PaymentAdvices>
     {
-        public PaymentAdvice GetExamples()
+        public PaymentAdvices GetExamples()
         {
-            return new PaymentAdvice()
+            return new PaymentAdvices()
             {
-                TransmissionHeader = new TransmissionHeader
+                PaymentAdviceCollection = new List<PaymentAdvice>
+                {
+                    new PaymentAdvice
+                    {
+                                        TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
                     DateTransmissionFileCreated = "2016-01-17",
@@ -23,6 +27,10 @@ namespace Wiedpug.API.ExampleResponses
                     DocumentOriginator = new Organisation
                     {
                         OrganisationId = "ABCD"
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -86,7 +94,7 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     LotIdentity = "123256",
                                     LotLastCost = 23.45
-                                    
+
                                 }
                             },
                             PaymentSummary = new PaymentSummary
@@ -104,6 +112,8 @@ namespace Wiedpug.API.ExampleResponses
                     new Comment
                     {
                         Text = "dfsfbsdfafsafs fdsa"
+                    }
+                }
                     }
                 }
             };
@@ -139,9 +149,13 @@ namespace Wiedpug.API.ExampleResponses
             {
                 IsSuccessful = true,
                 Message = null,
-                Data = new PaymentAdvice
+                Data = new PaymentAdvices
                 {
-                    TransmissionHeader = new TransmissionHeader
+                    PaymentAdviceCollection = new List<PaymentAdvice>
+                    {
+                        new PaymentAdvice
+                        {
+                                                TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
                         DateTransmissionFileCreated = "2016-01-17",
@@ -149,6 +163,10 @@ namespace Wiedpug.API.ExampleResponses
                         DocumentOriginator = new Organisation
                         {
                             OrganisationId = "AWTA"
+                        },
+                        CurrentReceiver = new Organisation
+                        {
+                            OrganisationId = "MNCL"
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -221,8 +239,8 @@ namespace Wiedpug.API.ExampleResponses
                         Text = "dfsfbsdfafsafs fdsa"
                     }
                 }
-
-
+                        }
+                    }
 
                 }
             };

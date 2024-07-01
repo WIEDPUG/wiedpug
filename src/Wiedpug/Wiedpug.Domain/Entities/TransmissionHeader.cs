@@ -33,6 +33,10 @@ namespace Wiedpug.Domain.Entities
         [StringLength(8)]
         public required Organisation DocumentOriginator { get; set; }
 
+        [Required]
+        [StringLength(8)]
+        public required Organisation CurrentReceiver { get; set; }
+
         /// <summary>
         /// Two digits. e.g. 99
         /// </summary>

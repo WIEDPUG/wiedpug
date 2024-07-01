@@ -31,104 +31,111 @@
                                 "$ref": "#/components/schemas/DeliveryOrdersAndShippingInstructions"
                             },
                             "example": {
-                                "transmissionHeader": {
-                                    "dateFormatLastRevised": "2020-07-15",
-                                    "dateTransmissionFileCreated": "2016-01-17",
-                                    "countryOfOrigin": "AU",
-                                    "documentOriginator": {
-                                        "organisationId": "ABCD"
-                                    },
-                                    "versionNumber": 31,
-                                    "softwareIdentifier": {
-                                        "softwareCompany": 1,
-                                        "version": 1082,
-                                        "programName": "NETR"
-                                    },
-                                    "abn": "72001967184"
-                                },
-                                "finalReceiverList": [
+                                "deliveryOrdersAndShippingInstructionCollection": [
                                     {
-                                        "organisationId": "AWTS"
-                                    }
-                                ],
-                                "consignments": [
-                                    {
-                                        "consignmentHeader": {
-                                            "consignmentReference": "1256745909",
-                                            "shipper": {
-                                                "organisationId": "BTTA"
-                                            }
+                                        "transmissionHeader": {
+                                            "dateFormatLastRevised": "2020-07-15",
+                                            "dateTransmissionFileCreated": "2016-01-17",
+                                            "countryOfOrigin": "AU",
+                                            "documentOriginator": {
+                                                "organisationId": "ABCD"
+                                            },
+                                            "currentReceiver": {
+                                                "organisationId": "ATWA"
+                                            },
+                                            "versionNumber": 31,
+                                            "softwareIdentifier": {
+                                                "softwareCompany": 1,
+                                                "version": 1082,
+                                                "programName": "NETR"
+                                            },
+                                            "abn": "72001967184"
                                         },
-                                        "countermarkHeadmarks": [
+                                        "finalReceiverList": [
                                             {
-                                                "countermarkHeadmarkLine1": "1234567789",
-                                                "countermarkHeadmarkLine2": "1234098765"
+                                                "organisationId": "AWTS"
                                             }
                                         ],
-                                        "deliveryOrders": [
+                                        "consignments": [
                                             {
-                                                "deliveryOrderDetail": {
-                                                    "deliveryOrderType": "O",
-                                                    "deliveryOrderNumber": "4567891209",
-                                                    "releasingOrganisation": {
-                                                        "organisationId": "AWTS"
-                                                    },
-                                                    "carrier": {
-                                                        "organisationId": "BTWA"
-                                                    },
-                                                    "applyRenumbers": false,
-                                                    "applyGrossWeights": false,
-                                                    "applyNetWeights": false
+                                                "consignmentHeader": {
+                                                    "consignmentReference": "1256745909",
+                                                    "shipper": {
+                                                        "organisationId": "BTTA"
+                                                    }
                                                 },
-                                                "deliveryOrderLots": [
+                                                "countermarkHeadmarks": [
                                                     {
-                                                        "deliveryOrderLotHeader": {
-                                                            "invoicingOrganisation": {
-                                                                "organisationId": "AWTW"
+                                                        "countermarkHeadmarkLine1": "1234567789",
+                                                        "countermarkHeadmarkLine2": "1234098765"
+                                                    }
+                                                ],
+                                                "deliveryOrders": [
+                                                    {
+                                                        "deliveryOrderDetail": {
+                                                            "deliveryOrderType": "O",
+                                                            "deliveryOrderNumber": "4567891209",
+                                                            "releasingOrganisation": {
+                                                                "organisationId": "AWTS"
                                                             },
-                                                            "sellingOrganisation": {
-                                                                "organisationId": "TTMA"
+                                                            "carrier": {
+                                                                "organisationId": "BTWA"
                                                             },
-                                                            "season": 23,
-                                                            "saleIdentity": {
-                                                                "sellingCentreType": "AU_N",
-                                                                "saleNumber": 23
-                                                            },
-                                                            "centreStorage": "AU_A",
-                                                            "storageOrganisation": {
-                                                                "organisationId": "MBCC"
-                                                            },
-                                                            "lotIdentityOrGroupName": {
-                                                                "lotIdentity": "552467"
-                                                            },
-                                                            "bales": 30,
-                                                            "gross": 1520,
-                                                            "tare": 30,
-                                                            "totalBalesInLot": 30,
-                                                            "packTypeOriginal": "1",
-                                                            "packTypePreferred": "2",
-                                                            "woolState": "3",
-                                                            "packMaterial": "K"
+                                                            "applyRenumbers": false,
+                                                            "applyGrossWeights": false,
+                                                            "applyNetWeights": false
                                                         },
-                                                        "countermarkHeadmarks": [
+                                                        "deliveryOrderLots": [
                                                             {
-                                                                "countermarkHeadmarkLine1": "1234567789",
-                                                                "countermarkHeadmarkLine2": "1234098765"
-                                                            }
-                                                        ],
-                                                        "bales": [
-                                                            {
-                                                                "baleHeader": {
-                                                                    "brand": "ABCD",
-                                                                    "baleDescription": "bale description",
-                                                                    "areaOfOrigin": "MELB"
+                                                                "deliveryOrderLotHeader": {
+                                                                    "invoicingOrganisation": {
+                                                                        "organisationId": "AWTW"
+                                                                    },
+                                                                    "sellingOrganisation": {
+                                                                        "organisationId": "TTMA"
+                                                                    },
+                                                                    "season": 23,
+                                                                    "saleIdentity": {
+                                                                        "sellingCentreType": "AU_N",
+                                                                        "saleNumber": 23
+                                                                    },
+                                                                    "centreStorage": "AU_A",
+                                                                    "storageOrganisation": {
+                                                                        "organisationId": "MBCC"
+                                                                    },
+                                                                    "lotIdentityOrGroupName": {
+                                                                        "lotIdentity": "552467"
+                                                                    },
+                                                                    "bales": 30,
+                                                                    "gross": 1520,
+                                                                    "tare": 30,
+                                                                    "totalBalesInLot": 30,
+                                                                    "packTypeOriginal": "1",
+                                                                    "packTypePreferred": "2",
+                                                                    "woolState": "3",
+                                                                    "packMaterial": "K"
                                                                 },
-                                                                "baleDetails": [
+                                                                "countermarkHeadmarks": [
                                                                     {
-                                                                        "baleNumber": "12345",
-                                                                        "baleDetailType": "Renumbers",
-                                                                        "gross": 1233,
-                                                                        "tare": 23
+                                                                        "countermarkHeadmarkLine1": "1234567789",
+                                                                        "countermarkHeadmarkLine2": "1234098765"
+                                                                    }
+                                                                ],
+                                                                "bales": [
+                                                                    {
+                                                                        "baleHeader": {
+                                                                            "brand": "ABCD",
+                                                                            "baleDescription": "bale description",
+                                                                            "areaOfOrigin": "MELB"
+                                                                        },
+                                                                        "baleDetails": [
+                                                                            {
+                                                                                "baleNumber": "12345",
+                                                                                "baleDetailType": "Renumbers",
+                                                                                "gross": 1233,
+                                                                                "tare": 23
+                                                                            }
+                                                                        ]
                                                                     }
                                                                 ]
                                                             }
@@ -274,104 +281,111 @@
                                 "example": {
                                     "isSuccessful": true,
                                     "data": {
-                                        "transmissionHeader": {
-                                            "dateFormatLastRevised": "2020-07-15",
-                                            "dateTransmissionFileCreated": "2016-01-17",
-                                            "countryOfOrigin": "AU",
-                                            "documentOriginator": {
-                                                "organisationId": "ABCD"
-                                            },
-                                            "versionNumber": 31,
-                                            "softwareIdentifier": {
-                                                "softwareCompany": 1,
-                                                "version": 1082,
-                                                "programName": "NETR"
-                                            },
-                                            "abn": "72001967184"
-                                        },
-                                        "finalReceiverList": [
+                                        "deliveryOrdersAndShippingInstructionCollection": [
                                             {
-                                                "organisationId": "AWTS"
-                                            }
-                                        ],
-                                        "consignments": [
-                                            {
-                                                "consignmentHeader": {
-                                                    "consignmentReference": "1256745909",
-                                                    "shipper": {
-                                                        "organisationId": "BTTA"
-                                                    }
+                                                "transmissionHeader": {
+                                                    "dateFormatLastRevised": "2020-07-15",
+                                                    "dateTransmissionFileCreated": "2016-01-17",
+                                                    "countryOfOrigin": "AU",
+                                                    "documentOriginator": {
+                                                        "organisationId": "ABCD"
+                                                    },
+                                                    "currentReceiver": {
+                                                        "organisationId": "ATWA"
+                                                    },
+                                                    "versionNumber": 31,
+                                                    "softwareIdentifier": {
+                                                        "softwareCompany": 1,
+                                                        "version": 1082,
+                                                        "programName": "NETR"
+                                                    },
+                                                    "abn": "72001967184"
                                                 },
-                                                "countermarkHeadmarks": [
+                                                "finalReceiverList": [
                                                     {
-                                                        "countermarkHeadmarkLine1": "1234567789",
-                                                        "countermarkHeadmarkLine2": "1234098765"
+                                                        "organisationId": "AWTS"
                                                     }
                                                 ],
-                                                "deliveryOrders": [
+                                                "consignments": [
                                                     {
-                                                        "deliveryOrderDetail": {
-                                                            "deliveryOrderType": "O",
-                                                            "deliveryOrderNumber": "4567891209",
-                                                            "releasingOrganisation": {
-                                                                "organisationId": "AWTS"
-                                                            },
-                                                            "carrier": {
-                                                                "organisationId": "BTWA"
-                                                            },
-                                                            "applyRenumbers": false,
-                                                            "applyGrossWeights": false,
-                                                            "applyNetWeights": false
+                                                        "consignmentHeader": {
+                                                            "consignmentReference": "1256745909",
+                                                            "shipper": {
+                                                                "organisationId": "BTTA"
+                                                            }
                                                         },
-                                                        "deliveryOrderLots": [
+                                                        "countermarkHeadmarks": [
                                                             {
-                                                                "deliveryOrderLotHeader": {
-                                                                    "invoicingOrganisation": {
-                                                                        "organisationId": "AWTW"
+                                                                "countermarkHeadmarkLine1": "1234567789",
+                                                                "countermarkHeadmarkLine2": "1234098765"
+                                                            }
+                                                        ],
+                                                        "deliveryOrders": [
+                                                            {
+                                                                "deliveryOrderDetail": {
+                                                                    "deliveryOrderType": "O",
+                                                                    "deliveryOrderNumber": "4567891209",
+                                                                    "releasingOrganisation": {
+                                                                        "organisationId": "AWTS"
                                                                     },
-                                                                    "sellingOrganisation": {
-                                                                        "organisationId": "TTMA"
+                                                                    "carrier": {
+                                                                        "organisationId": "BTWA"
                                                                     },
-                                                                    "season": 23,
-                                                                    "saleIdentity": {
-                                                                        "sellingCentreType": "AU_N",
-                                                                        "saleNumber": 23
-                                                                    },
-                                                                    "centreStorage": "AU_A",
-                                                                    "storageOrganisation": {
-                                                                        "organisationId": "MBCC"
-                                                                    },
-                                                                    "lotIdentityOrGroupName": {
-                                                                        "lotIdentity": "552467"
-                                                                    },
-                                                                    "bales": 30,
-                                                                    "gross": 1520,
-                                                                    "tare": 30,
-                                                                    "totalBalesInLot": 30,
-                                                                    "packTypeOriginal": "1",
-                                                                    "packTypePreferred": "2",
-                                                                    "woolState": "3",
-                                                                    "packMaterial": "K"
+                                                                    "applyRenumbers": false,
+                                                                    "applyGrossWeights": false,
+                                                                    "applyNetWeights": false
                                                                 },
-                                                                "countermarkHeadmarks": [
+                                                                "deliveryOrderLots": [
                                                                     {
-                                                                        "countermarkHeadmarkLine1": "1234567789",
-                                                                        "countermarkHeadmarkLine2": "1234098765"
-                                                                    }
-                                                                ],
-                                                                "bales": [
-                                                                    {
-                                                                        "baleHeader": {
-                                                                            "brand": "ABCD",
-                                                                            "baleDescription": "bale description",
-                                                                            "areaOfOrigin": "MELB"
+                                                                        "deliveryOrderLotHeader": {
+                                                                            "invoicingOrganisation": {
+                                                                                "organisationId": "AWTW"
+                                                                            },
+                                                                            "sellingOrganisation": {
+                                                                                "organisationId": "TTMA"
+                                                                            },
+                                                                            "season": 23,
+                                                                            "saleIdentity": {
+                                                                                "sellingCentreType": "AU_N",
+                                                                                "saleNumber": 23
+                                                                            },
+                                                                            "centreStorage": "AU_A",
+                                                                            "storageOrganisation": {
+                                                                                "organisationId": "MBCC"
+                                                                            },
+                                                                            "lotIdentityOrGroupName": {
+                                                                                "lotIdentity": "552467"
+                                                                            },
+                                                                            "bales": 30,
+                                                                            "gross": 1520,
+                                                                            "tare": 30,
+                                                                            "totalBalesInLot": 30,
+                                                                            "packTypeOriginal": "1",
+                                                                            "packTypePreferred": "2",
+                                                                            "woolState": "3",
+                                                                            "packMaterial": "K"
                                                                         },
-                                                                        "baleDetails": [
+                                                                        "countermarkHeadmarks": [
                                                                             {
-                                                                                "baleNumber": "12345",
-                                                                                "baleDetailType": "Renumbers",
-                                                                                "gross": 1233,
-                                                                                "tare": 23
+                                                                                "countermarkHeadmarkLine1": "1234567789",
+                                                                                "countermarkHeadmarkLine2": "1234098765"
+                                                                            }
+                                                                        ],
+                                                                        "bales": [
+                                                                            {
+                                                                                "baleHeader": {
+                                                                                    "brand": "ABCD",
+                                                                                    "baleDescription": "bale description",
+                                                                                    "areaOfOrigin": "MELB"
+                                                                                },
+                                                                                "baleDetails": [
+                                                                                    {
+                                                                                        "baleNumber": "12345",
+                                                                                        "baleDetailType": "Renumbers",
+                                                                                        "gross": 1233,
+                                                                                        "tare": 23
+                                                                                    }
+                                                                                ]
                                                                             }
                                                                         ]
                                                                     }
@@ -1408,7 +1422,7 @@
                 "type": "string",
                 "description": "L: Local Delivery Order<br />O: Export/Overseas Del.Order"
             },
-            "DeliveryOrdersAndShippingInstructions": {
+            "DeliveryOrdersAndShippingInstruction": {
                 "required": [
                     "consignments",
                     "transmissionHeader"
@@ -1431,6 +1445,21 @@
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Consignment"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "DeliveryOrdersAndShippingInstructions": {
+                "required": [
+                    "deliveryOrdersAndShippingInstructionCollection"
+                ],
+                "type": "object",
+                "properties": {
+                    "deliveryOrdersAndShippingInstructionCollection": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DeliveryOrdersAndShippingInstruction"
                         }
                     }
                 },
@@ -1626,6 +1655,10 @@
                 "format": "int32"
             },
             "SaleIdentity": {
+                "required": [
+                    "saleNumber",
+                    "sellingCentreType"
+                ],
                 "type": "object",
                 "properties": {
                     "sellingCentreType": {
@@ -1636,8 +1669,7 @@
                         "minLength": 0,
                         "pattern": "-?\\d{1,2}",
                         "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "format": "int32"
                     }
                 },
                 "additionalProperties": false
@@ -1703,6 +1735,7 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
+                    "currentReceiver",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
                     "documentOriginator"
@@ -1729,6 +1762,9 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
+                        "$ref": "#/components/schemas/Organisation"
+                    },
+                    "currentReceiver": {
                         "$ref": "#/components/schemas/Organisation"
                     },
                     "versionNumber": {

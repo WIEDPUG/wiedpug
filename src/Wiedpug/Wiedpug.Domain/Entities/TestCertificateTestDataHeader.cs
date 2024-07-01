@@ -31,7 +31,7 @@ namespace Wiedpug.Domain.Entities
         public required LotIdentityOrGroupName LotIdentityOrGroupName { get; set; }
 
         [StringLength(8)]
-        public string? WeightNote { get; set; }
+        public WeightNote? WeightNote { get; set; }
 
         [StringLength(8)]
         public string? ClientsCrossReference { get; set; }

@@ -26,6 +26,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationId ="AWTA"
                             },
+                                                CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
@@ -275,6 +279,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationId = "ABCD"
                             },
+                                                CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {
@@ -505,6 +513,10 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation { OrganisationId = "ABCD" },
                         VersionNumber = 31,
+                                            CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                         SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                         {
                             ProgramName = "NETR",
@@ -845,6 +857,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationId = "ABCD"
                             },
+                                                CurrentReceiver = new Organisation
+                    {
+                        OrganisationId = "ATWA"
+                    },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {

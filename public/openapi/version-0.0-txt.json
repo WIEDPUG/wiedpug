@@ -40,6 +40,9 @@
                                             "documentOriginator": {
                                                 "organisationId": "ABCD"
                                             },
+                                            "currentReceiver": {
+                                                "organisationId": "ATWA"
+                                            },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
                                                 "softwareCompany": 1,
@@ -203,6 +206,9 @@
                                                     "countryOfOrigin": "AU",
                                                     "documentOriginator": {
                                                         "organisationId": "ABCD"
+                                                    },
+                                                    "currentReceiver": {
+                                                        "organisationId": "ATWA"
                                                     },
                                                     "versionNumber": 31,
                                                     "softwareIdentifier": {
@@ -869,6 +875,7 @@
                 "required": [
                     "abn",
                     "countryOfOrigin",
+                    "currentReceiver",
                     "dateFormatLastRevised",
                     "dateTransmissionFileCreated",
                     "documentOriginator"
@@ -895,6 +902,9 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "documentOriginator": {
+                        "$ref": "#/components/schemas/Organisation"
+                    },
+                    "currentReceiver": {
                         "$ref": "#/components/schemas/Organisation"
                     },
                     "versionNumber": {
