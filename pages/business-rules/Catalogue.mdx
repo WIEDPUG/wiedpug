@@ -1,7 +1,772 @@
 # Business Rules 
 
-## Section One 
+## Catalogue 
 
 
-Add text here. 
+This file type is used by brokers to transmit auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited. Brokers may transmit catalogue data for a sale in one or more parts. The first part will usually contain 80% or more of the total data for the sale, with subsequent transmissions comprising only the additional data not in the first transmission. Subsequent transmissions may also include changes or deletions of lots previously transmitted. Catalogue transmissions should comply with the AWEX Wool Selling Rules.
+
+Picking up the first and subsequent transmissions does not necessarily mean a complete catalogue is available. A discrepancy report will also be available with the printed catalogue at the show floor, and will indicate such items as late results, corrections to transmitted data, additional "no lots" known at the time etc., that have occurred subsequent to the last transmission sent.
+
+The last transmission sent for a particular section of a sale catalogue will be flagged as a final transmission to indicate that no more transmissions will be sent. Note that this transmission need not include any lot records for the related catalogue section if previously transmitted data is unchanged.
+
+ 1. Loop F1.
+This loop is repeated until all catalogues have been transmitted.
+
+2. Loop EI.
+This loop is repeated until all of the codes to which the document is to be included or excluded have been listed.
+
+ 3. Loop S1.
+New type 10/11A records will be required whenever any field on either of these records is different to preceding 10/11A transmitted  in current S1 loop.
+
+ 4. Loop L1.
+This loop is repeated for each lot falling under the sale header. If the transmission is the final transmission for the related S1 loop, and previously transmitted information is not being changed, then no lot data is required. 
+
+The type 51C, 51I, 51F, 51J, 51K, 51L, 51M, 51P, 51X and 51N records are included in the transmission if, and only if, the lot has the corresponding certificate. They may be included in any order. A type 51M will be followed by a type 51J for OML certificates. A type 51P will be followed by a type 51J for combination certificates. A type 51N will be followed by a type 51J for OMI certificates.
+
+For more information on test certificates see Test Certificate in the Data Dictionary.
+
+5. Loop L2.
+This loop is repeated for each forward price record (maximum of two).  Optional and only required if forward prices apply in a non auction sale.
+
+6. Loop L3.
+This loop is repeated if more than three quality schemes are required. The Mulesing Status field is to be only included on the first loop. The record is repeated until all quality scheme information has been transmitted.
+
+7. Loop B1.
+This loop is repeated until all bale identification details are transmitted for all grower lots.
+
+8. Loop B2.
+This loop can be repeated for interlots and objectively matched lots. A new type 79B record will be included each time the Brand, Bale Description, Area of Origin or Location change.
+
+9. Loop B3.
+This loop is repeated until all bale identification details are transmitted for each 79B record.
+
+10. Loop F2 + F3.
+ Loop F2 is repeated if the lot has been tested using different instrument types e.g. Laserscan and OFDA.
+
+Loop F3 is repeated if the lot has more than 9 occurrences of Fibre Diameter readings.  The maximum number of type 32 records within loop F3 is 9.
+11. Loop T1.
+This loop is repeated until all of the required 99 records are transmitted.
+
+12. Record Type 00 - Transmission Header.
+If the file is transmitted from the original transmitter to the final receiver through an intermediary, the values for Current Transmitter and Current Receiver will vary on the different legs of the journey.
+
+Final Receiver.
+For rules on populating this field reference the Exclusion/Inclusion 08 record notes in the data dictionary.
+
+Access Password.
+This is the password used by the Current Transmitter when transmitting to the Current Receiver.
+
+Version Number.
+This number must be provided when testing transmissions for new version releases. 
+
+13. Record Type 10 - Wool Sale Header - Lots.
+Season.
+If the wool is to be sold at an auction sale, Season is the season of the auction sale; if it is to be sold at a private treaty sale, it is the season in which the wool was first sold (if the wool has been resold this will not necessarily be the same as the season of the current sale).
+
+Sale Identity 
+This group field contains the data elements: 
+•        Selling Centre/Type 
+•        Sale Number 
+
+In Australia, the Selling Centre/Type may be a reserved code – refer Data Dictionary. Traditionally these reserved codes are assigned to the transmission of rostered open cry auction catalogues. 
+
+Organisations transmitting other types of public catalogues must use a non-reserved Selling Centre/Type. Should an organisation require a code to be allocated for their exclusive use then please contact the WIEDPUG Secretary. 
+
+In Australia, auction catalogues transmitted to the network for the reserved open cry auction selling centres are validated against a Sale Roster.  All other selling centres by default are not validated against a sale roster.  An organisation that has been allocated a code for their exclusive use, that requires validation, will need to contact the network provider to make necessary arrangements.
+
+Centre - Storage.
+The code for the Centre where the wool is presently stored. Centre - Storage will always match the Centre within Storage Organisation.
+
+Centre - Delivery.
+CONDITION
+Mandatory if a freight charge is nominated. 
+It is the nominated delivery centre that the freight charge or freight rebate applies to.
+
+Catalogue Section.
+Under existing auction arrangements, each catalogue should be separately sectionalised. Also refer catalogue page number.
+
+Final Catalogue Flag.
+The last transmission sent will be flagged as a final transmission to indicate that no more transmissions for that catalogue section are expected. If the transmission is the final transmission for a particular catalogue section, and previously transmitted information is not being changed, then the S1 loop of transmission need only to contain the type 10 record. The type 20, 51 and 80 records are not required, but only if the Final Catalogue Flag is set to ‘yes’ and there are no amendments required to the section.
+
+Freight Rebate.
+If a freight charge is included in the Post Sale Charge, then the freight rebate is the amount repaid by the broker to the buyer should the buyer not require the broker to transport the wool to the delivery centre.
+
+Invoicing Organisation.
+This is the organisation responsible for the invoicing of the wool, and to whom payment for the wool will be directed.  It is often the same as the releasing organisation and the selling organisation.
+
+Releasing Organisation.
+This is the organisation responsible for the storage of the wool, and to whom electronic or paper delivery orders will be directed for release to the buyer. It is often the same as the invoicing organisation and the selling organisation.
+
+Selling Organisation.
+This is the organisation responsible for performing the auction in which the wool is to be sold. It is often the same as the invoicing organisation and the document originator.
+Delivery Basis.
+This may have one of several values:
+Delivered Nominated Destination (D).  The post sale charge includes freight to a nominated destination, usually the main shipping centre, and this will be invoiced at the time of sale the destination is nominated by the delivery centre. Loaded on Transport (L). The post sale charge does not include freight to the delivery centre. If the buyer requests that the broker arrange transport, the broker will apply a freight charge at the time of shipping.
+
+Wool Type Group.
+This is similar to the catalogue section which groups the lots by a range of wool types. This field can be used for restricting the selection of catalogues from the network. This field must be sent for all Auction Catalogue transmissions.
+
+14. Record Type 11A - Wool Sale Header - Extension.
+Storage Description.
+CONDITION
+Mandatory when Storage Organisation is not sufficient to efficiently identify the facility where the wool is stored. This may be a shed number, street address etc.
+If there is more than one organisation within the Centre – Storage, a separate AWEX code is required for each organisation. If an AWEX code does not exist, apply for one from AWEX-EDI. 
+
+Lot Available Date
+The first date on which the wool is available for purchase.
+
+
+ 15. Record Type 20 - Lot Header.
+Catalogue Page Number.
+CONDITION 
+Mandatory in New Zealand, optional in Australia.
+The page number is transmitted to ensure that the receiver can replicate the published paper catalogue, by grouping lots into a single unique page number, within a selling broker’s catalogue.  A single seller’s catalogue is defined as the same Season, Sale Identity, and Selling Organisation.
+
+If a catalogue page number is not transmitted then the receiver will assume there will be 17 lots per page – starting at the first transmitted lot per catalogue section.
+
+No Lot Flag.
+CONDITION 
+1.  	Mandatory in New Zealand for all NO LOTS.
+2.  	Mandatory in Australia for NO LOTS where the No Lot is the first lot in a catalogue section, and 	page numbers are not being transmitted.
+In New Zealand, this field is used to indicate those lots appearing on the printed auction catalogue as NO LOTS. 
+
+In Australia NO LOTS are not transmitted, and lots withdrawn from sale i.e. "no lotted" since the first catalogue transmission has occurred will be marked with an update flag of "deleted" on subsequent transmissions.
+
+Reporting Flag 
+CONDITION 
+This field is mandatory in Australia and Not Applicable in New Zealand.
+
+First Offer Season.
+CONDITION 
+This field is mandatory on lots reoffered by Buyers or Sellers through a public auction system, subject to the following definitions.
+ 
+1. First Offer Season is defined as the Season when the lot was offered with grab sample at a public auction for the first time.
+ 
+2. In this context a lot is defined to be offered when it has been subject to a transaction process resulting in a Sale Outcome of    S(Sold), TR (Transferred), PI (Passed In), or NB (No Bid). 
+ 
+3. Lots with a Sale Outcome of WD (Withdrawn) or Null are not offered. 
+ 
+4. In this context a Reoffer initiated by the seller shall be defined when the wool:
+           a)  retains the sellers internal lot reference number, or
+           b) retains its pre sale test certificate identity, and
+   c) has been subject to prior public auction transaction process resulting in a Sale Outcome of PI (Passed In), or NB (No Bid).    
+ 
+5. In this context, a Reoffer initiated by a Buyer shall be defined as when the wool:
+           a) retains its (prepurchase) pre sale test certificate identity, and
+   b) has been subject to a prior public auction transaction process with a Sale Outcome of S (Sold) or TR (Transferred) resulting in a change of ownership.
+ 
+6. In the case of public auction this information is supplied for buyers to cross reference or locate their wool appraisal made on the First Offer showing.  
+
+First Offer Sale Identity.
+CONDITION 
+This field is mandatory on lots reoffered by Buyers or Sellers through a public auction system, subject to the following definitions.
+ 
+1. First Offer Sale Identity is defined as the Sale when the lot was offered with grab sample at a public auction for the first time.
+ 
+2. In this context a lot is defined to be offered when it has been subject to a transaction process resulting in a Sale Outcome of    S(Sold), TR (Transferred), PI (Passed In), or NB (No Bid). 
+ 
+3. Lots with a Sale Outcome of WD (Withdrawn) or Null are not offered. 
+ 
+4. In this context a Reoffer initiated by the seller shall be defined when the wool:
+           a)  retains the sellers internal lot reference number, or
+           b) retains its pre sale test certificate identity, and
+   c) has been subject to prior public auction transaction process resulting in a Sale Outcome of PI (Passed In), or NB (No Bid).    
+ 
+5. In this context, a Reoffer initiated by a Buyer shall be defined as when the wool:
+           a) retains its (prepurchase) pre sale test certificate identity, and
+   b) has been subject to a prior public auction transaction process with a Sale Outcome of S (Sold) or TR (Transferred) resulting in a change of ownership.
+ 
+6. In the case of public auction this information is supplied for buyers to cross reference or locate their wool appraisal made on the First Offer showing.  
+
+First Offer Lot Identity.
+CONDITION 
+This field is mandatory on lots reoffered by Buyers or Sellers through a public auction system, subject to the following definitions.
+ 
+1. First Offer Lot Identity is defined as the Sale when the lot was offered with grab sample at a public auction for the first time.
+ 
+2. In this context a lot is defined to be offered when it has been subject to a transaction process resulting in a Sale Outcome of    S(Sold), TR (Transferred), PI (Passed In), or NB (No Bid). 
+ 
+3. Lots with a Sale Outcome of WD (Withdrawn) or Null are not offered. 
+ 
+4. In this context a Reoffer initiated by the seller shall be defined when the wool:
+           a)  retains the sellers internal lot reference number, or
+           b) retains its pre sale test certificate identity, and
+   c) has been subject to prior public auction transaction process resulting in a Sale Outcome of PI (Passed In), or NB (No Bid).    
+ 
+5. In this context, a Reoffer initiated by a Buyer shall be defined as when the wool:
+           a) retains its (prepurchase) pre sale test certificate identity, and
+   b) has been subject to a prior public auction transaction process with a Sale Outcome of S (Sold) or TR (Transferred) resulting in a change of ownership.
+ 
+6. In the case of public auction this information is supplied for buyers to cross reference or locate their wool appraisal made on the First Offer showing.  
+	
+Update Type.
+If a lot is included in a transmission for the first time, the update type will be set to "added". Hence all lots in the first transmission will have this update type.
+
+The update type will be set to "changed" if any information about a lot has changed on a subsequent transmission.
+
+The update type will be set to "deleted" if the lot is withdrawn from sale or "no lotted" on a subsequent transmission. Where a lot is being "deleted", the type 51 and type 79B records relating to the lot should not be transmitted.
+
+Lot Type.
+Under existing auction arrangements, each lot type should be separately sectionalised in catalogues for each catalogue section, storage location, and lot type. Lot Type is related to Catalogue Sections.
+
+Lightest Individual Bale Weight 
+CONDITION 
+This field is mandatory in Australia and is optional in NZ.
+
+Client Cross Reference.
+Contains the client reference for this lot.
+
+16. Record Type 21A - Lot Header - Appraisal Data.
+	
+Core Test Sampling Date
+CONDITION
+In Australia this field is mandatory: If the “Reporting Flag” field in the 20 record is R or C this is the date the core test was sampled or the date the Combination/OML was requested.  If the “Reporting Flag” in the 20 record is U this is the last date of weighing for untested wool.
+In New Zealand: This is the date core test was sampled or date combination/OML was requested.
+
+Wool Description Comment.
+This field provides for additional comments relating to the information contained in the Wool Description field.
+
+Wool Description.
+This field contains a description that is either an AWEX-ID description or another appraisal description.  Alternative valid appraisal descriptions include AWC type, Exporter type.  The AWEX-ID description must conform to the current AWEX-ID code standard.  If sending an AWC type, the first character of this field must be set to W, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to P followed by the type.  If sending AWEX-ID the type starts from position one of the field (i.e. there are no leading characters).
+
+Wool Description Audit Code
+CONDITION
+Used by a Seller where they are publishing an Audited AWEX-ID. The Audit Code is issued to the Seller by AWEX.
+
+Number of Overweight Bales
+CONDITION
+This field is mandatory in Australia when the lot has bales that have a Reweigh Gross Kg over 204 kg and is optional in NZ.
+
+17. Record Type 21C - Lot Header - AWEX Data.
+
+This is a conditional record that is to exist in Public Auction (AC) and Private (PC) Catalogue documents.  The condition is that it is mandatory in AC transmissions to the EDI Networks and conditional in AC transmissions from the EDI networks with only EDI Codes owned by AWEX receiving the record.  In PC transmissions the condition is that it is mandatory in any transmissions that are being transmitted for AWEX and optional for all other transmissions.  It is conditional in PC transmissions from the EDI networks with only EDI Codes owned by AWEX receiving the record.
+
+The AWEX record contains data that:
+a) is not intended to be accessed by other catalogue receivers, or
+b) is subject to privacy legislation, or
+c) is not in the public domain.
+
+Classer’s Registered Number
+CONDITION
+Classer’s Registered Number is mandatory for all classed wools and optional for non-classed wools.
+
+AWEX-ID Audit Code
+CONDITION
+Used by a Seller where they are publishing an Audited AWEX-ID. The Audit Code is issued to the Seller by AWEX (see also Wool Description Audit Code).
+
+18. Record Type 25A – Lot Header – Vendor Declaration
+
+This is a mandatory record that exists in Public Auction (AC), Auction Catalogue Updates (ACU), Private (PC) Catalogue, Lot Invoice (LI) and Group Invoice (GI) documents.
+
+This record can be used to carry detail information where a lot is eligible for a recognised Quality, Membership or Accreditation Scheme. A lot may be eligible for multiple Quality Schemes.
+
+RegistrationID is the Registered Identification issued by the relevant Accreditation or Membership organisation. This ID may be applicable at a property, grower or lot level.
+
+Other Detail can be used to transmit (other) information relevant to the Scheme that is required by the buyer (e.g. Month/Year shorn).
+
+Mulesing Status
+CONDITION
+This field is mandatory in Australia and optional outside Australia. 
+Refer to definition in data dictionary for transmitting blanks within Australia.
+
+19. Record Type 31 & 32A – Fibre Diameter Histograms
+If Laserscan or OFDA results are transmitted, the record types 31, 32A and will follow the associated record types (51P, 51I, 51F, 51M, 51N, 51J)
+
+Mean Minimum
+CONDITION
+Mean Minimum will only be transmitted if the Laserscan or OFDA results are for a Combination or OML.  A record type 51J must precede record type 31.
+
+Mean Maximum
+CONDITION
+Mean Maximum will only be transmitted if the Laserscan or OFDA results are for a Combination or OML.  A record type 51J must precede record type 31.
+
+Core Test Sampling Date
+CONDITION
+This is the date the core test was sampled or the date the Combination/OML was requested.
+
+Date Issued
+This is the date the yield and laserscan certificate was issued. 
+
+Factor – Laserscan Numerator & Factor – Laserscan Denominator
+CONDITION
+These factors will be supplied if a record type 51J has been transmitted for the lot.
+
+20. Record Type 51.
+Regrab Sample Weight.
+CONDITION 
+	A value must be transmitted in this field whenever a regrab sample has been taken from the lot.
+21. Record Types 51F, 51I, 51M, 51P,  51N -
+
+Yield and Yield Types.
+The Yield Type fields indicate which yields are being transmitted in the type 51F, 51I, 51M, 51N or 51P record (and, if a combination or OML certificate is being transmitted, which clean weights are being transmitted in the type 51J record).
+
+If both Yield Type - (1) and Yield Type - (2) are blank
+	(applicable to Core Tests, Combinations, OML’s)
+	Yield - (1) contains the Schlumberger Dry Yield
+	Yield - (2) contains the IWTO Scoured yield
+	Yield - (3) contains the Japanese Clean Scoured yield
+	Yield - (4) contains the Australian Carbonising yield.
+	Yield - (5) contains the IWTO Scoured yield at 16% regain in Australia (For Core Tests only)
+	Yield - (5) will be blank (For Combinations and OML’s only)
+The Yield (2) will be the Scoured Yield with 17% regain in Australia and New Zealand, and the Yield (4) will be Australian Carbonising Yield in Australia and Scoured Yield with 16% regain in New Zealand. 
+
+If Yield Type - (1) is blank and Yield Type - (2) contains a value (Request to AWTA Ltd for a non-standard yield)
+	(applicable to Core Tests, Combinations and OML’s)
+	Yield - (1) contains the Schlumberger Dry Yield
+	Yield - (2) contains the IWTO Scoured yield
+	Yield - (3) contains the Japanese Clean Scoured yield
+	Yield - (4) contains the Australian Carbonising yield.
+	Yield - (5) contains the yield corresponding to the value in Yield Type – (2)
+The Yield (2) will be the Scoured Yield with 17% regain in Australia and New Zealand, and the Yield (4) will be Australian Carbonising Yield in Australia and Scoured Yield with 16% regain in New Zealand.
+
+If Yield Type - (1) contains a value and Yield Type - (2) is blank
+	(applicable to Combinations)
+	Yield - (1) will contain the yield corresponding to the value in Yield Type - (1)
+	Yield - (2) will be blank
+	Yield - (3) will be blank
+	Yield - (4) will be blank.
+	Yield - (5) will be blank.
+
+If both Yield Type - (1) and Yield Type - (2) contain a value
+	(applicable to Combinations)
+	Yield - (1) will contain the yield corresponding to the value in Yield Type - (1)
+	Yield - (2) will contain the yield corresponding to the value in Yield Type - (2)
+	Yield - (3) will be blank
+	Yield - (4) will be blank.
+	Yield - (5) will be blank.
+
+
+VM1, VM2, VM3.
+Data should be transmitted in these fields whenever it is available. Receivers should not assume that there will always be data in these fields, as transmitters can include it in their transmissions only when they received the certificate by transmission from the Test House. The sum of VM1, VM2 and VM3 should be the same as VMB, where:
+	VM1 is type 'B' on the catalogue (i.e. spiral burr, clover burr and other soft burr),
+	VM2 is type 'S' on the catalogue (i.e. seed, shive and other small particles), and
+VM3 is type 'H' on the catalogue (i.e. hard heads - twigs).
+
+22. Record Type 51C - Colour Details.
+In Australia, the fields Colour – X, Colour – Y, Colour – Z and Colour – Y-Z are mandatory.  Colour – Y-Z contains a value for Colour Y - Colour Z, that is, average yellowness. The field has an optional leading sign. 
+
+In New Zealand the three fields Colour X, Colour Y and Colour Z are mandatory. The field Colour Y - Z must be left blank. Colour X, Colour Y and Colour Z are all positive numbers, with one decimal place.
+
+Where the test is conducted on greasy wool, Colour – X (As-is), Colour – Y (As-is), Colour – Z (As-is) and Colour – Y-Z (As-is) will be transmitted as zeros.
+
+Where the test is conducted on scoured wool,  Colour – X, Colour – Y, Colour – Z and Colour – Y-Z are the base values and the fields Colour – X (As-is), Colour – Y (As-is), Colour – Z (As-is) and Colour – Y-Z (As-is) are mandatory.
+
+23. Record Type 51F - Premium Test Details.
+The fields marked C will contain data whenever the Test House was able to include this data in the certificate.
+
+24. Record Type 51J - OML/OMI/Combination Details.
+Clean Weights.
+The type of clean weight transmitted in the Clean Weight fields is indicated by the values in the Yield Type fields in the type 51M, 51N or 51P record. For each yield transmitted in the type 51M, 51N or 51P record, there will be a corresponding Clean Weight in the type 51J record.
+
+If both Yield Type - (1) and Yield Type - (2) in the type 51M, 51N or 51P record are blank
+	Clean Weight - (1) contains the Schlumberger Dry clean weight
+	Clean Weight - (2) contains the IWTO Scoured clean weight
+	Clean Weight - (3) contains the Japanese Clean Scoured clean weight
+	Clean Weight - (4) contains the Australian Carbonising clean weight.
+	Clean Weight - (5) will be blank
+The Clean Weight (2) will be the Scoured Clean Weight with 17% regain in Australia and New Zealand, and the Clean Weight (4) will be Australian Carbonising Clean Weight in Australia and Scoured Clean Weight with 16% regain in New Zealand.
+
+If Yield Type - (1) is blank and Yield Type - (2) contains a value in the type 51M, 51N or 51P record
+	Clean Weight - (1) contains the Schlumberger Dry clean weight
+	Clean Weight - (2) contains the IWTO Scoured clean weight
+	Clean Weight - (3) contains the Japanese Clean Scoured clean weight
+	Clean Weight - (4) contains the Australian Carbonising clean weight.
+	Clean Weight - (5) will contain the clean weight corresponding to the value in Yield Type – (2).
+The Clean Weight (2) will be the Scoured Clean Weight with 17% regain in Australia and New Zealand, and the Clean Weight (4) will be Australian Carbonising Clean Weight in Australia and Scoured Clean Weight with 16% regain in New Zealand.
+
+If Yield Type - (1) contains a value and Yield Type - (2) is blank in the type 51M, 51N or 51P record
+	Clean Weight - (1) will contain the clean weight corresponding to the value in Yield Type - (1)
+	Clean Weight - (2) will be blank
+	Clean Weight - (3) will be blank
+	Clean Weight - (4) will be blank.
+	Clean Weight - (5) will be blank
+
+If both Yield Type - (1) and Yield Type - (2) contain a value in the type 51M, 51N or 51P record
+	Clean Weight - (1) will contain the clean weight corresponding to the value in Yield Type - (1)
+	Clean Weight - (2) will contain the clean weight corresponding to the value in Yield Type - (2)
+	Clean Weight - (3) will be blank
+	Clean Weight - (4) will be blank.
+	Clean Weight - (5) will be blank
+
+25. Record Type 51L - Length and Strength Details.
+Staple Strength.
+This field will contain a value of zero if either the strength measurement was not requested, or the strength measurement could not be performed (if, for example, the staples were too short). The LS-Cert-Type will be set to 1 if the test was length only and 2 if there were insufficient staples to obtain a result.
+
+Staple Strength – Lowest 25%
+This field will contain a value if a Staple Strength is also present and the measurement is available.  It represents the Average Staple Strength of the lowest 25% of staples measured for Strength.
+
+TEAM-3 Hauteur, TEAM-3 Hauteur – CV (%), TEAM-3 Romaine (%)
+Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations.  Anything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.  A check against the Date Issued field in the 51L record will determine which TEAM formula has been used.
+
+26. Record Type 51K - Length & Strength Comb Details
+Staple Strength.
+This field will contain a value of zero if any sublot within the combination does not have a strength measurement result.
+
+Staple Strength – Lowest 25%
+This field will contain a value if a Staple Strength is also present and the measurement is available.  It represents the combined Average Staple Strength of the lowest 25% of staples measured for Strength.
+
+TEAM-3 Hauteur, TEAM-3 Hauteur – CV (%), TEAM-3 Romaine (%)
+Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations even if the sublots were originally based on the TEAM-2 calculations.  Anything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.  A check against the Date Issued field in the 51K record will determine which TEAM formula has been used.
+
+27. Record Type 79A - Catalogue Bale Header.
+This record contains the Brand, Bale Description, Area of Origin and Location that applies to the overall lot as printed in the catalogue.
+
+Area of Origin and Location.
+CONDITION
+	For interlots, Area of Origin is not used as this applies to interlot components only.
+Bales
+Contains the total bales interlot, or the total bales for all components of the interlot.
+
+28. Record Type 79B - Interlot Component Bale Header.
+This record can be repeated for interlots and objectively matched lots. A new type 79B record must be included each time the Brand, Bales Description, Area of Origin or Location change within an interlot.  This information is not usually printed in the hardcopy catalogue.
+Bales
+Contains the bales for that interlot component only.
+
+29. Record Type 99 - Transmission Totals.
+CONDITION
+For every record type in the transmission file two field values are required; the first identifies the record type, the second contains the number of records of the type in the file. All record types with sub-types are totalled as one record type. This means that if the file contains five type 51P records, ten 51C records and five 51L records, the type 99 record will contain a count of twenty type 51 records. 
+  
+EXAMPLE
+
+The following is an example of three lots.
+
+The printed catalogue would show these lots as follows -
+ 
+
+The transmission for the catalogue would show these lots as follows -
+00150720170116AUABCD AWTM AWXLCAWXLC                    023110820NETR72001967184
+1016M 29M 17011910AUD002596B0000032500000        FLC YABCD ABCD ABCD MFLCG D    
+11AABCD 45 MAIN ST     17012701500017012402451150000000                         
+200006710008001316001600065  A        1149C00    0000000000000000000 00         
+21A170109              MF6S.               Y000000000000000000000000          00
+21CMF6S.               99192 998921                                             
+25A                                                                           PR
+51L300000664L6      10007316035077023000072             00        36911217011024
+51P300000499P7      100642900001300007440078500757007210    007780    0000130001
+31199987004000C1100042010400610000000170109170110                               
+79ASALTBUSH/DOWNS                AAAM           V11                     0008    
+200006720002000398000400065  A        1199C00    0000000000000000000 00         
+21A161228              MWF4E.              Y000000000000000000000000          00
+21CMWF4E.              99192 997969                                             
+25A10                       07                       05                       PR
+51L300000687L5      10009114031057043000071             00        49210717010423
+51P300000128P2      100613000000200007140073600722006830    007300    000002000N
+31219993004000C1100041690370720000000161228161230                               
+79ANARAPASTCO                    SUPAAAM        V24                     0002    
+200006730010001863002000066  A        1146C00    0000000000000000000 00         
+21A161228              MF4E.               Y000000000000000000000000          00
+21CMF4E.               99192 997969                                             
+25A10                       07                       05                       PR
+51L300005701L4      10010216045005090005076             00        55106017010428
+51P300000337P9      100632200000100007370075800745007060    007520    0000010001
+31189994004000C1100041800340680000000161228161230                               
+79ANARAPASTCO                    AAAM           V24                     0010    
+9900    110    111    120    321    625    331    351    679    399    1        
+
+
+
+
+ 
+
+A fuller explanation of a lot from a transmission file follows. This is an example of a reply file from the network resulting from a Request for Data (RFD) for Auction Catalogue document (AC).  (Note where a “-” appears in the record, this represents a space in the record)
+
+Record 1. (Transmission Header) -	
+00150720170116AUABCD-AWTM-AWXLCAWXLC--------------------023110820NETR72001967184
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	00	The record type for the transmission header 00
+2	3	8	150720	The last time the transmission formats were updated was 20 July 2015
+3	9	14	170116	This file was transmitted on 16 January 2017
+4	15	16	AU	The file is being transmitted in Australia
+5	17	21	ABCD 	The file was first transmitted by ABC Wool Brokers in Bendigo. 
+6	22	26	AWTM	The current transmitter is AWTM.
+7	27	31	AWXLC	The file will end the first leg of its journey at AWX in Lane Cove
+8	32	36	AWXLC	The file will end the final leg of its journey at AWX in Lane Cove
+9	37	46		Blank, password is not returned in a reply file from the network
+10	47	56		Blank
+11	57	58	02	Transmission type 02 for Auction Catalogues
+12	59	60	31	This is Version 31
+13	61	69	10820NETR	This file was created by software company Talman and the version number is 0820 by a programme named NETR
+14	70	80	72001967184	This is the company’s Australian Business Number. (Document Originator)
+
+
+Record 2  (Wool Sale Header - Lots) – 
+1016M-29M-17011910AUD002596B0000032500000--------FLC-YABCD ABCD ABCD MFLCG D----    
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	10	The record type for the sale header is 10
+2	3	4	16	The season is 16/17, so 16 is transmitted
+3	5	8	M 29	The sale is to be held in Melbourne and it is the 29th sale in Melbourne for this season
+4	9	10	M	The wool is stored in Melbourne
+5	11	16	170119	This lot will be sold on 19 January 2017
+6	17	17	1	The wool is in a greasy state
+7	18	18	0	The wool is packed in farm bales
+8	19	21	AUD	Amounts in this transmission are in Australian Dollars.
+9	22	22	0	Weights in this transmissions are in kilograms
+10	23	27	02596	The Post sale Charge is $25.96 Australian dollars.
+11	28	28	B	The Post sale charge was levied on a per bale basis
+12	29	32	0000	There is no Freight Charge.
+13	33	36	0325	The Freight Rebate is $3.25
+14	37	41	00000	Blank – Charge per lot is not applicable to document AC
+15	42	49		Blank – Invoice number is not applicable to document AC
+16	50	53	FLC	The catalogue section for these lots is Fleece
+17	54	54	Y	This is the final transmission of the catalogue
+18	55	59	ABCD	Payment is to be made to ABC Wool Brokers in Bendigo (printed as Invoicing Broker on the catalogue)
+19	60	64	ABCD	Delivery Orders to be sent to ABC Wool Brokers in Bendigo (printed as Releasing Broker on the catalogue)
+20	65	69	ABCD	The auction is being held by ABC Wool Brokers in Bendigo (printed as Selling Broker on the catalogue)
+21	70	73	MFLC	The wool type group is Merino Fleece
+22	74	75	G	The Auction is being held in Geelong
+23	76	76	D	The delivery basis is Delivery Nominated Destination. 
+24	77	78		There is no delivery centre
+25	79	80		There is no Centre- Alternate Delivery
+
+
+Record 3  (Wool Sale Header - Extension) - 
+11AABCD 45 MAIN ST-----17012701500017012402451150000000-------------------------                         
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	11	The record type for the sale header is 11
+2	3	4	A	The record sub type for the Sale Header Extension is A
+3	4	5	ABCD	Storage Organisation is ABCD
+4	9	15	45 MAIN ST     	Storage Description is 45 MAIN ST
+5	24	29	170127	The Payment date is 27 January 2017
+6	30	33	0150	The discount rate is 1.50
+7	34	35	00	There are no discounted days
+8	36	41	170124	Date storage charge commences is 24 January 2017
+9	42	45	0245	$0.245 (24.5 cents)  storage charge per bale per day
+10	46	49	1150	11.50% Penalty interest rate
+11	50	55	000000	Lot Available Date not supplied
+12	56	80		Blank
+
+
+Record 4 (Lot Header for lot 1) -
+200006710008001316001600065--A--------1149C00----0000000000000000000-00---------         
+
+           Position
+Field           Start     End      Data		             Explanation
+1	1	2	20	The record type for the lot header is 20
+2	3	8	000671	The lot number is 671
+3	9	12	0008	There are 8 bales in the lot
+4	13	18	001316	The gross weight for the lot is 1316 kgs. Note that on the printed catalogue, the net weight is shown
+5	19	22	0016	The tare for the lot is 16 kgs
+6	23	24	00	There is no regrab sample weight.
+7	25	27	065	The catalogue page number is 65.
+8	28	28		Blank as it is a normal lot
+9	29	29		Where this lot was sourced from is not provided
+10	30	30	A	This lot is being "Added" to the catalogue
+11	31	36		Catalogue symbol(s) – not classed
+12	37	38		Pack Material is not provided
+13	39	39	1	Lot type – clip line
+14	40	43	149	Lightest individual bale weight is 149kg gross.
+15	43	43	C	The results are certified
+16	44	45	00	Blank or zero as this is not a re-offer
+17	46	49		Blank as this is not a re-offer
+18	50	55	000000	Blank as this is not a re-offer
+19	56	61	000000	Blank as there is no reserve price for the lot. 
+20	62	66	00000	Blank as there is no additional yield supplied
+21	67	68	00	Standard yields are provided
+22	69	69		Blank/zero Weights are in kilograms
+23	70	71	00	There is no Offer Type
+24	72	79		Blank – there is no Client’s Cross Reference
+25	80	80	N	New Pack
+
+
+Record 5 (Lot Header –Extension for lot 1) -
+21A170109--------------MF6S.---------------Y000000000000000000000000----------00
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	21	The record type for the lot header is 21
+2	3	3	A	The record sub type for the lot header extension is A
+3	4	9	170109	Bales were sampled on 9 January 2017
+4	10	23		Blank as there is no comment
+5	24	43	MF6S.	The wool description is MF6S.
+6	44	44	Y	GST is applicable
+7	45	50	000000	Blank/zeros - Brokers Reserve Price  is optional
+8	51	56	000000	Blank/zeros - Grower Reserve Price is optional
+9	57	62	000000	Blank/zeros - Opening Price is optional
+10	63	68	000000	Blank/zeros - Valuation Price is optional
+11	69	78		Blank – no Wool Description audit code is supplied.
+12	79	80	00	Number of Overweight Bales is zero
+
+
+Record 6 (Lot Header – AWEX Data for lot 1) -
+21CMF6S.---------------99192 998921---------------------------------------------                                             
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	21	The record type for the lot header is 21
+2	3	3	C	The record sub type for the lot header extension is C
+3	4	23	MF6S.	The AWEX-ID is MF6S.
+4	24	29	99192	Appraiser ID is 99192
+5	30	35	998921	The Classer Registered Number is998921
+6	36	49		Blank as there is no AWEX ID Comment
+7	50	59		Blank as there is no AWEX ID Audit Code
+8	60	80		Blank
+
+
+Record 7 (Lot Header – Vendor Declaration for Lot 1) -
+25A---------------------------------------------------------------------------PR
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	25	The record type for the lot header Vendor Declaration is 25
+2	3	3	A	The record sub type is A
+3	4	7		Blank as there is no Quality Scheme
+4	8	15		Blank as there is no Quality Scheme Registration ID
+5	16	28		Blank as there is no Quality Scheme details
+6	29	32		Blank as there is no Quality Scheme
+7	33	40		Blank as there is no Quality Scheme Registration ID
+8	41	53		Blank as there is no Quality Scheme details
+9	54	57		Blank as there is no Quality Scheme
+10	58	65		Blank as there is no Quality Scheme Registration ID
+11	66	78		Blank as there is no Quality Scheme details
+12	79	80	AA	Mulesed with Analgesic &/or Anaesthetic
+
+
+Record 8 (Length and Strength Details for Lot 1) -
+51L300000664L6------10007316035077023000072-------------00--------36911217011024
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	51	The record type for test certificate details
+2	3	3	L	The record sub-type for a length and strength certificate
+3	4	14	300000664L6	The certificate Identity  is 300000664L6
+4	15	20		Data is not transmitted in this field
+5	21	21	1	The wool was tested by AWTA Ltd
+6	22	23	00	No regrab sample
+7	24	26	073	The staple length is 73 mm
+8	27	28	16	The staple length CV is 16%
+9	29	31	035	The staple strength is 35 newtons per kilotex
+10	32	34	077	77% of the staples broke in the tip
+11	35	37	023	23% of the staples broke in the middle
+12	38	40	000	0% of the staples broke in the base
+13	41	43	72	TEAM-3 hauteur is 72 mm
+14	44	55		Blank
+15	56	56		Blank
+16	57	57	0	Length and strength tested
+17	58	58	0	Sample is secured
+18	59	61	111	Expected Barbe is 111
+19	62	66		Blank
+20	67	69	369	TEAM-3 Hauteur CV is 36.9%
+21	70	72	112	TEAM-3 Romaine is 11.2 %
+22	73	78	170110	The test was issued on 10 January 2017
+23	79	80	24	The staple strength of the lowest 25% is 24 newtons per kilotex
+
+
+Record 9 (PTC Certificate for Lot 1) -
+51P300000499P7------100642900001300007440078500757007210----007780----0000130001
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	51	The record type for test certificate details is 51
+2	3	3	P	The record sub-type for a PTC certificate is P
+3	4	14	300000499P7	The certificate Identity  is 300000499P7
+4	15	20		Data is not transmitted in this field
+5	21	21	1	The wool was tested by AWTA Ltd
+6	22	23	00	No regrab sample. 
+7	24	27	6429	The wool base is 64.29%
+8	28	30	000	The lot was not tested for Airflow.
+9	31	33	13	The VMware is 1.3%
+10	34	36	000	The Hard Heads base is 0.0%
+11	37	41	07440	The Schlumberger yield is 74.40%
+12	42	46	07850	The IWTO scoured yield is 78.50 %
+13	47	51	07570	The Japanese clean scoured yield is 75.70%
+14	52	56	07210	The Australian carbonising yield is72.10%
+15	57	58		Blank for the 5 standard yields.
+16	59	60		Blank for the 5 standard yields.
+17	61	61	0	This test is a normal  test and has not been check tested or retested
+18	62	66	07780	The scoured yield at 16% regain is 77.80 %
+19	67	69		Blank
+20	70	70	0	This is the original certificate charge
+21	71	73	000	The VM1 is 0.0% (Printed as VMC-B)
+22	74	76	013	The VM2 is 0.9% (Printed as VMC-S)
+23	77	79	000	The VM3 is 0.0% (Printed as VMC-H)
+24	80	80	1	The Dark and Medullated Fibre Risk level is 1(lowest)
+
+
+Record 10 (Fibre Diameter Histogram Header for Lot 1) -
+31199987004000C1100042010400610000000170109170110-------------------------------
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	31	The record type for Fibre Diameter Histogram Header
+2	3	5	199	The Co-efficient of Variation of diameter is 19.9 %
+3	6	8	987	The comfort Factor is 98.7 %
+4	9	14	4000	4000 fibres were measured
+5	15	15	C	The results are certified to IWTO 12.
+6	16	16	1	The measurements were taken on a Laserscan instrument
+7	17	17	1	A minicore was used to get a sub sample
+8	18	21	0004	4 specimens were tested
+9	22	24	201	The mean fibre diameter is 20.1 microns
+10	25	27	040	The standard deviation of diameter is 4.0 microns
+11	28	30	061	The mean fibre curvature is 61 deg/mm
+12	31	31		Blank
+13	32	34	000	This is a core test, Mean minimum is not applicable
+14	35	37	000	This is a core test, Mean maximum is not applicable
+15	38	43	170109	The core test was sampled on 9 January 2017
+16	44	49	170110	The certificate was issued on 10 January 2017
+17	50	65		This is a core test, Factors not applicable
+18	66	80		This is a core test, Factors not applicable
+
+
+Record 11 (Catalogue Lot Description for Lot 1) -
+79ASALTBUSH/DOWNS----------------AAAM-----------V11---------------------0008----    
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	79	The record type for the bale header is 79
+2	3	3	A	The sub-record type for the bale header is A
+3	4	33	SALTBUSH/DOWNS	The growers brand is SALTBUSH/DOWNS
+4	34	48	AAAM	The description of the wool is AAA M
+5	49	52	V11	The wool was grown in Wool Statistical Area V11
+6	53	72		It was not necessary to describe to location of the bales within the store
+7	73	86	0008	There are 8 bales within this lot, all with the same brand, description and area of origin
+8	77	80		Blank, The postcode is not available
+
+
+Record 12 to Record 19 describe the second lot in the file (refer to example for lot one)
+
+Record 20 to Record 27 describe the third lot in the file (refer to example for lot one)
+
+
+Record 28 (Transmission Totals) -
+9900----110----111----120----321----625----331----351----679----399----1--------
+
+          Position
+Field           Start     End      Data		             Explanation
+1	1	2	99	The record type for the transmission total is 99
+2	3	4	00	
+3	5	9	1	There is one type 00 record in the file
+4	10	11	10	
+5	12	16	1	There is one type 10 record in the file
+6	17	18	11	
+7	19	23	1	There is one  type 11 record in the file
+8	24	25	20	
+9	26	30	3	There are 3 type 20 records in the file
+10	31	32	21	
+11	33	37	6	There are 6 type 21 records in the file
+12	38	39	25	
+13	40	44	3	There are 3 type 25 records in the file
+14	45	46	31	
+15	47	51	3	There are 3 type 31 records in the file
+16	52	53	51	
+17	54	58	6	There are 6 type 51 records in the file
+18	59	60	79	
+19	61	65	3	There are 3 type 79 records in the file
+20	66	67	99	
+21	68	72	1	There is one  type 99 record in the file
+22-24	73	80		Blank
+
+Note:
+•	The clean weights are shown in the printed catalogue, but are not transmitted.
+•	The yields appear in a different order in the transmission from that used in the printed catalogue.
+•	As the yields are transmitted to 2 decimal places, and printed to 1 decimal place, there may be rounding errors occurring when comparing the two.
+
+
+
+ 
  
