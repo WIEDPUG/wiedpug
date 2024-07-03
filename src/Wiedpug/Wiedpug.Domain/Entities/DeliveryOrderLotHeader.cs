@@ -44,21 +44,26 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
+        [StringLength(4)]
         public required int Bales { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [StringLength(6)]
         public required int Gross { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
+        [StringLength(4)]
         public required int Tare { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [StringLength(2)]
         public int? RegrabSampleWeight { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
+        [StringLength(4)]
         public required int TotalBalesInLot { get; set; }
 
         [Required]
@@ -81,6 +86,7 @@ namespace Wiedpug.Domain.Entities
         public CertificateIdentity? CertificateIdentity { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [StringLength(6)]
         public int? RenumbersFirstBaleNumber { get; set; }
 
         [StringLength(10)]

@@ -912,14 +912,18 @@
                 "type": "object",
                 "properties": {
                     "clientsReference": {
-                        "minLength": 1,
+                        "maxLength": 30,
+                        "minLength": 0,
                         "type": "string"
                     },
                     "accountReference": {
-                        "minLength": 1,
+                        "maxLength": 11,
+                        "minLength": 0,
                         "type": "string"
                     },
                     "amount": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -928,22 +932,30 @@
                         "$ref": "#/components/schemas/AmountType"
                     },
                     "itemDate": {
+                        "maxLength": 10,
+                        "minLength": 0,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "format": "date",
                         "nullable": true
                     },
                     "gstAmount": {
+                        "maxLength": 6,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,4}\\.\\d{2}$",
                         "type": "number",
                         "format": "double",
                         "nullable": true
                     },
                     "gstTaxInvoiceApplicable": {
+                        "maxLength": 5,
+                        "minLength": 0,
                         "type": "boolean",
                         "description": "Boolean value of wethear GST amount is applicable to invoice\r\nTrue for applicable, False for not applicable"
                     },
                     "companyABNApplicable": {
+                        "maxLength": 5,
+                        "minLength": 0,
                         "type": "boolean",
                         "description": "Boolean value of wethear Company ABN apply to invoice\r\nTrue for applicable, False for not applicable"
                     }
@@ -972,17 +984,24 @@
                         "$ref": "#/components/schemas/Organisation"
                     },
                     "clientCode": {
+                        "maxLength": 6,
+                        "minLength": 0,
+                        "pattern": "-?\\d{1,6}",
                         "type": "integer",
                         "format": "int32"
                     },
                     "statementDate": {
-                        "minLength": 1,
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string"
                     },
                     "debitOrCreditFlag1": {
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "openingBalanceCurrent": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -991,6 +1010,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "openingBalance30": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -999,6 +1020,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "openingBalance60": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -1007,6 +1030,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "openingBalance90": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -1015,6 +1040,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "openingBalance90Plus": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -1041,6 +1068,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "closingBalanceCurrent": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -1049,6 +1078,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "closingBalance30": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -1057,6 +1088,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "closingBalance60": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -1065,6 +1098,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "closingBalance90": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
@@ -1073,6 +1108,8 @@
                         "$ref": "#/components/schemas/DebitCreditFlag"
                     },
                     "closingBalance90Plus": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"

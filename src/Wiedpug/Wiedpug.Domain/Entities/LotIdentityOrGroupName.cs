@@ -8,7 +8,7 @@ namespace Wiedpug.Domain.Entities
         public string? LotIdentity {  get; set; }
 
         [StringLength(6)]
-        public string? GrouoName { get; set; }
+        public string? GroupName { get; set; }
 
     }
 }

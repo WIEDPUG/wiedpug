@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrdersAndShippingInstructions" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="3.25" />
+    <AssociationLine Name="DeliveryOrdersAndShippingInstructionCollection" Type="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrdersAndShippingInstruction">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-4.32" Y="0.839" Height="0.182" Width="4" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\DeliveryOrdersAndShippingInstructionsAggregate\DeliveryOrdersAndShippingInstructions.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DeliveryOrdersAndShippingInstructionCollection" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrdersAndShippingInstruction">
+    <Position X="3.75" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAABAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\DeliveryOrdersAndShippingInstructionsAggregate\DeliveryOrdersAndShippingInstruction.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TransmissionHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Consignments" />
+      <Property Name="FinalReceiverList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.Consignment" Collapsed="true">
+    <Position X="3.5" Y="5.75" Width="3.5" />
+    <AssociationLine Name="CountermarkHeadmarks" Type="Wiedpug.Domain.Entities.CountermarkHeadmark" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.375" Y="6.312" />
+        <Point X="6.375" Y="7.281" />
+        <Point X="11" Y="7.281" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\DeliveryOrdersAndShippingInstructionsAggregate\Consignment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ConsignmentHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CountermarkHeadmarks" />
+      <Property Name="DeliveryOrders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.Organisation" Collapsed="true">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ValueObject\Organisation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.ConsignmentHeader" Collapsed="true">
+    <Position X="8.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAABIEAAAAgKAAgAAEAAAAAAAIAAAQAQKhACAA=</HashCode>
+      <FileName>Entities\ConsignmentHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.CountermarkHeadmark" Collapsed="true">
+    <Position X="11" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CountermarkHeadmark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrder" Collapsed="true">
+    <Position X="4" Y="8" Width="3" />
+    <AssociationLine Name="DeliveryOrderDetail" Type="Wiedpug.Domain.Entities.DeliveryOrderDetail">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.466" Y="0.178" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAEAAAAAAIAA=</HashCode>
+      <FileName>Aggregates\DeliveryOrdersAndShippingInstructionsAggregate\DeliveryOrder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeliveryOrderDetail" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Comments" />
+      <Property Name="DeliveryOrderLots" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.Comment" Collapsed="true">
+    <Position X="9.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Entities\Comment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.DeliveryOrderDetail" Collapsed="true">
+    <Position X="5.75" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACEAAgAAYgCAAAEAAQQQAAAAEACCAAAAAAAAIgAAAAA=</HashCode>
+      <FileName>Entities\DeliveryOrderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrderLot" Collapsed="true">
+    <Position X="4.25" Y="11" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAABAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\DeliveryOrdersAndShippingInstructionsAggregate\DeliveryOrderLot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeliveryOrderLotHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CountermarkHeadmarks" />
+      <Property Name="Bales" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.DeliveryOrderLotHeader" Collapsed="true">
+    <Position X="8.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAQAQhAQAAIEQAIAIAAAARQCAAAQA0kBABAgAA=</HashCode>
+      <FileName>Entities\DeliveryOrderLotHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.Bale" Collapsed="true">
+    <Position X="4.75" Y="12.75" Width="2.25" />
+    <AssociationLine Name="PropertyIdentificationCodes" Type="System.String">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.124" Y="0.164" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Entities\Bale.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaleHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BaleDetails" />
+      <Property Name="PropertyIdentificationCodes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleDetail" Collapsed="true">
+    <Position X="4.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAIBAAAAAAAAABAAAAAAQEAACAABAA=</HashCode>
+      <FileName>ValueObject\BaleDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleHeader" Collapsed="true">
+    <Position X="8" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAACAAAAABAACAAAAAAAAAABAAA=</HashCode>
+      <FileName>ValueObject\BaleHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.String" Collapsed="true">
+    <Position X="11.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -33,12 +33,16 @@ namespace Wiedpug.Domain.Entities
         [StringLength(10)]
         public required Organisation Carrier { get; set; }
 
+        [StringLength(1)]
         public CountermarkColour? CountermarkColour { get; set; }
 
+        [StringLength(1)]
         public CountermarkMarking? CountermarkMarking { get; set; }
 
+        [StringLength(1)]
         public CountermarkSize? CountermarkSize { get; set; }
 
+        [StringLength(1)]
         public CountermarkHeadmarkFlag? CountermarkHeadmarkFlag { get; set; }
 
         /// <summary>
@@ -46,6 +50,7 @@ namespace Wiedpug.Domain.Entities
         /// True for apply renumbers, False for not apply renumbers
         /// </summary>
         [Required]
+        [StringLength(5)]
         public required bool ApplyRenumbers { get; set; }
 
         /// <summary>
@@ -53,6 +58,7 @@ namespace Wiedpug.Domain.Entities
         /// True for apply renumbers, False for not apply renumbers
         /// </summary>
         [Required]
+        [StringLength(5)]
         public required bool ApplyGrossWeights { get; set; }
 
         /// <summary>
@@ -60,13 +66,16 @@ namespace Wiedpug.Domain.Entities
         /// True for apply renumbers, False for not apply renumbers
         /// </summary>
         [Required]
+        [StringLength(5)]
         public required bool ApplyNetWeights { get; set; }
 
+        [StringLength(8)]
         public Organisation? InterimHandlingDestinationCode { get; set; }
 
         [StringLength(80)]
         public string? InterimHandlerDescriptionLine { get; set; }
 
+        [StringLength(8)]
         public Organisation? FinalDestinationCode { get; set; }
 
         [StringLength(80)]

@@ -43,13 +43,11 @@ namespace Wiedpug.Domain.ValueObject
         [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
         public int? UnitNumber { get; set; }
 
-        [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int Gross { get; set; }
+        public int? Gross { get; set; }
 
-        [Required]
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public required int Tare { get; set; }
+        public int? Tare { get; set; }
 
         public List<BaleIdentification>? BaleIdentifications { get; set; }
     }

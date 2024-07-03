@@ -53,21 +53,21 @@ paths:
                     teaM3HauteurPrint: false
                     certificateRequestDetails:
                       - certificateIdentity:
-                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDPrefix: 3
                           certificateIDSuffix: P
                           certificateIDNumber: '15969534'
                           certificateIDCD: 9
                         woolbase: 63.16
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDPrefix: 3
                           certificateIDSuffix: P
                           certificateIDNumber: '00000499'
                           certificateIDCD: 7
                         woolbase: 61.52
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDPrefix: 3
                           certificateIDSuffix: P
                           certificateIDNumber: '00000499'
                           certificateIDCD: 7
@@ -87,21 +87,21 @@ paths:
                     teaM3HauteurPrint: true
                     certificateRequestDetails:
                       - certificateIdentity:
-                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDPrefix: 3
                           certificateIDSuffix: P
                           certificateIDNumber: '00000499'
                           certificateIDCD: 7
                         woolbase: 53.74
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDPrefix: 3
                           certificateIDSuffix: P
                           certificateIDNumber: '00000499'
                           certificateIDCD: 7
                         woolbase: 52.01
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: MelbourneLaboratory
+                          certificateIDPrefix: 3
                           certificateIDSuffix: P
                           certificateIDNumber: '00000499'
                           certificateIDCD: 7
@@ -195,7 +195,7 @@ paths:
                 abn: '72001967184'
               testCertificateUpdateDetails:
                 - certificateIdentity:
-                    certificateIDPrefix: FremantleLaboratory
+                    certificateIDPrefix: 6
                     certificateIDSuffix: L
                     certificateIDNumber: '16101382'
                     certificateIDCD: 6
@@ -208,7 +208,7 @@ paths:
                   mulesingStatusFrom: ND
                   mulesingStatusTo: M
                 - certificateIdentity:
-                    certificateIDPrefix: FremantleLaboratory
+                    certificateIDPrefix: 6
                     certificateIDSuffix: M
                     certificateIDNumber: '16101382'
                     certificateIDCD: 5
@@ -221,7 +221,7 @@ paths:
                   mulesingStatusFrom: AA
                   mulesingStatusTo: M
                 - certificateIdentity:
-                    certificateIDPrefix: FremantleLaboratory
+                    certificateIDPrefix: 6
                     certificateIDSuffix: B
                     certificateIDNumber: '15701332'
                     certificateIDCD: 6
@@ -339,7 +339,7 @@ paths:
                     isCompanyABNApplicable: false
                   omlDetails:
                     certificateIdentity:
-                      certificateIDPrefix: FremantleLaboratory
+                      certificateIDPrefix: 6
                       certificateIDSuffix: D
                       certificateIDNumber: '23456787'
                       certificateIDCD: 7
@@ -402,7 +402,7 @@ paths:
                     isCompanyABNApplicable: false
                   lengthAndStrengthCombDetails:
                     certificateIdentity:
-                      certificateIDPrefix: FremantleLaboratory
+                      certificateIDPrefix: 6
                       certificateIDSuffix: D
                       certificateIDNumber: '23456787'
                       certificateIDCD: 7
@@ -423,7 +423,7 @@ paths:
                     isLsSampleSecured: false
                     dateIssued: '2024-01-22'
                   sublotCertificateNumbers:
-                    - certificateIDPrefix: FremantleLaboratory
+                    - certificateIDPrefix: 6
                       certificateIDSuffix: D
                       certificateIDNumber: '23456787'
                       certificateIDCD: 7
@@ -583,7 +583,7 @@ paths:
                         isCompanyABNApplicable: false
                       omlDetails:
                         certificateIdentity:
-                          certificateIDPrefix: FremantleLaboratory
+                          certificateIDPrefix: 6
                           certificateIDSuffix: D
                           certificateIDNumber: '23456787'
                           certificateIDCD: 7
@@ -646,7 +646,7 @@ paths:
                         isCompanyABNApplicable: false
                       lengthAndStrengthCombDetails:
                         certificateIdentity:
-                          certificateIDPrefix: FremantleLaboratory
+                          certificateIDPrefix: 6
                           certificateIDSuffix: D
                           certificateIDNumber: '23456787'
                           certificateIDCD: 7
@@ -667,7 +667,7 @@ paths:
                         isLsSampleSecured: false
                         dateIssued: '2024-01-22'
                       sublotCertificateNumbers:
-                        - certificateIDPrefix: FremantleLaboratory
+                        - certificateIDPrefix: 6
                           certificateIDSuffix: D
                           certificateIDNumber: '23456787'
                           certificateIDCD: 7
@@ -854,33 +854,10 @@ components:
         - B
       type: string
       description: 'N: Automatic combinations not required<br />L: Automatic Length & Strength Combination required<br />C: Automatic Colour Combination is required<br />B: Both Length & Strength and Colour combinations required'
-    Bale:
-      required:
-        - baleHeader
-      type: object
-      properties:
-        baleHeader:
-          $ref: '#/components/schemas/BaleHeader'
-        baleDetails:
-          type: array
-          items:
-            $ref: '#/components/schemas/BaleDetail'
-          nullable: true
-        propertyIdentificationCodes:
-          maxLength: 8
-          minLength: 0
-          type: array
-          items:
-            type: string
-          description: "Property Identification Code - the property code to identify the source of the wool.\r\nThis field is not used in New Zealand transmission.\r\nFor TRV only"
-          nullable: true
-      additionalProperties: false
     BaleDetail:
       required:
         - baleDetailType
         - baleNumber
-        - gross
-        - tare
       type: object
       properties:
         baleNumber:
@@ -911,10 +888,12 @@ components:
           pattern: '-?\d{1,4}'
           type: integer
           format: int32
+          nullable: true
         tare:
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
+          nullable: true
         baleIdentifications:
           type: array
           items:
@@ -948,6 +927,9 @@ components:
           minLength: 0
           type: string
         bales:
+          maxLength: 4
+          minLength: 0
+          pattern: '-?\d{1,4}'
           type: integer
           format: int32
           nullable: true
@@ -1173,11 +1155,12 @@ components:
       description: ''
     CertificateIDPrefix:
       enum:
-        - SydneyLaboratory
-        - MelbourneLaboratory
-        - FremantleLaboratory
-      type: string
+        - 2
+        - 3
+        - 6
+      type: integer
       description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+      format: int32
     CertificateIDSuffix:
       enum:
         - B
@@ -1264,10 +1247,7 @@ components:
           format: int32
           nullable: true
         saleIdentity:
-          maxLength: 4
-          minLength: 0
-          type: string
-          nullable: true
+          $ref: '#/components/schemas/SaleIdentity'
         lotIdentity:
           maxLength: 6
           minLength: 0
@@ -1855,7 +1835,7 @@ components:
           minLength: 0
           type: string
           nullable: true
-        grouoName:
+        groupName:
           maxLength: 6
           minLength: 0
           type: string
@@ -2306,7 +2286,53 @@ components:
         bales:
           type: array
           items:
-            $ref: '#/components/schemas/Bale'
+            $ref: '#/components/schemas/TestCertificateBale'
+          nullable: true
+      additionalProperties: false
+    TestCertificateBale:
+      required:
+        - baleHeader
+      type: object
+      properties:
+        baleHeader:
+          $ref: '#/components/schemas/TestCertificateBaleHeader'
+        baleDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/BaleDetail'
+          nullable: true
+        propertyIdentificationCodes:
+          maxLength: 8
+          minLength: 0
+          type: array
+          items:
+            type: string
+          description: "Property Identification Code - the property code to identify the source of the wool.\r\nThis field is not used in New Zealand transmission.\r\nFor TRV only"
+          nullable: true
+      additionalProperties: false
+    TestCertificateBaleHeader:
+      required:
+        - areaOfOrigin
+        - baleDescription
+        - brand
+      type: object
+      properties:
+        brand:
+          maxLength: 30
+          minLength: 0
+          type: string
+        baleDescription:
+          maxLength: 15
+          minLength: 0
+          type: string
+        areaOfOrigin:
+          maxLength: 4
+          minLength: 0
+          type: string
+        locationWithinStore:
+          maxLength: 20
+          minLength: 0
+          type: string
           nullable: true
       additionalProperties: false
     TestCertificateColourCombinationDetails:
@@ -3315,10 +3341,7 @@ components:
         lotIdentityOrGroupName:
           $ref: '#/components/schemas/LotIdentityOrGroupName'
         weightNote:
-          maxLength: 8
-          minLength: 0
-          type: string
-          nullable: true
+          $ref: '#/components/schemas/WeightNote'
         clientsCrossReference:
           maxLength: 8
           minLength: 0
@@ -3437,17 +3460,9 @@ components:
         mulesingStatusTo:
           $ref: '#/components/schemas/MulesingStatus'
         saleIdentityFrom:
-          maxLength: 4
-          minLength: 0
-          type: string
-          description: Generic string field, optional.
-          nullable: true
+          $ref: '#/components/schemas/SaleIdentity'
         saleIdentityTo:
-          maxLength: 4
-          minLength: 0
-          type: string
-          description: Generic string field, optional.
-          nullable: true
+          $ref: '#/components/schemas/SaleIdentity'
         lotIdentityFrom:
           maxLength: 6
           minLength: 0
@@ -3534,6 +3549,22 @@ components:
           pattern: ^[0-9]+$
           type: string
           description: Australian Business Number, 11 digits string
+      additionalProperties: false
+    WeightNote:
+      required:
+        - prefix
+        - suffix
+      type: object
+      properties:
+        prefix:
+          maxLength: 1
+          minLength: 0
+          type: string
+        suffix:
+          maxLength: 7
+          minLength: 0
+          pattern: '-?\d{1,7}'
+          type: string
       additionalProperties: false
     WeightUnit:
       enum:

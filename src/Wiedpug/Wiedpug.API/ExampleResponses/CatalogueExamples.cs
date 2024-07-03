@@ -26,10 +26,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationId ="AWTA"
                             },
-                                                CurrentReceiver = new Organisation
-                    {
-                        OrganisationId = "ATWA"
-                    },
+                            CurrentReceiver = new Organisation
+                            {
+                                OrganisationId = "ATWA"
+                            },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                             {

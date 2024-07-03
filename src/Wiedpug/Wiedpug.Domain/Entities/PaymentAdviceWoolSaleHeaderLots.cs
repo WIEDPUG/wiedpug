@@ -61,11 +61,6 @@ namespace Wiedpug.Domain.Entities
         [StringLength(6)]
         public required Centre CentreCatalogue { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public required DeliveryBasis DeliveryBasis { get; set; }
-
-
         // Previous WoolSaleHeader - Extension
 
 

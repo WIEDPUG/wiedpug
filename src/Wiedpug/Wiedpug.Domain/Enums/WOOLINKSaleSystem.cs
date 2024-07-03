@@ -4,6 +4,7 @@ using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Enums
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum WoolinkSaleSystem
     {
 

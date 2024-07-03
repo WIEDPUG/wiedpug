@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Wiedpug.Domain.Aggregates.LotInvoicesAggregate.DarkAndMedullatedFibreRiskVerification" Collapsed="true">
+    <Position X="10.25" Y="1" Width="3.25" />
+    <AssociationLine Name="DarkAndMedullatedFibreRiskDetailsCollection" Type="Wiedpug.Domain.Entities.DarkAndMedullatedFibreRiskDetails" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.312" Y="1.562" />
+        <Point X="13.312" Y="2.781" />
+        <Point X="17" Y="2.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\DarkAndMedullatedFibreRiskVerificationAggregate\DarkAndMedullatedFibreRiskVerification.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TransmissionHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DarkAndMedullatedFibreRiskDetailsCollection" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.DarkAndMedullatedFibreRiskDetails" Collapsed="true">
+    <Position X="17" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQEAoAQBACAgAAAACAAAAABwAsAABgEAAAAAIA=</HashCode>
+      <FileName>Entities\DarkAndMedullatedFibreRiskDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

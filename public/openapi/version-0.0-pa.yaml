@@ -52,13 +52,12 @@ paths:
                         centreStorage: AU_AR
                         saleDate: '2017-01-19'
                         woolState: A
-                        packType: '2'
+                        packType: _2
                         invoicingOrganisation:
                           organisationId: ABCD
                         sellingOrganisation:
                           organisationId: ABCD
                         centreCatalogue: AU_G
-                        deliveryBasis: D
                         storageOrganisation: ABCD
                         storageDescription: 45 MAIN ST
                         discountRate: 1.5
@@ -192,13 +191,12 @@ paths:
                             centreStorage: AU_AR
                             saleDate: '2017-01-19'
                             woolState: A
-                            packType: '2'
+                            packType: _2
                             invoicingOrganisation:
                               organisationId: ABCD
                             sellingOrganisation:
                               organisationId: ABCD
                             centreCatalogue: AU_G
-                            deliveryBasis: D
                             storageOrganisation: ABCD
                             storageDescription: 45 MAIN ST
                             discountRate: 1.5
@@ -574,12 +572,6 @@ components:
       type: integer
       description: '1: Debit<br />2: Credit'
       format: int32
-    DeliveryBasis:
-      enum:
-        - D
-        - L
-      type: string
-      description: 'D: Delivery Nominated Destination<br />L: Loaded on Transport'
     LotPaymentDetail:
       required:
         - lotIdentity
@@ -607,13 +599,15 @@ components:
         chargeType:
           $ref: '#/components/schemas/ChargeType'
         chargeDescription:
+          maxLength: 40
+          minLength: 0
           type: string
           description: Optional alphanumeric field for charge description.
           nullable: true
         currency:
           $ref: '#/components/schemas/Currency'
         chargeAmount:
-          pattern: /^\d+(\.\d{2})?$/
+          pattern: ^-?\d{1,12}\.\d{2}$
           type: number
           description: Required decimal field for charge amount with two digits precision.
           format: double
@@ -646,16 +640,16 @@ components:
       additionalProperties: false
     PackType:
       enum:
-        - '0'
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
+        - _0
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+        - _6
+        - _7
+        - _8
+        - _9
         - A
         - B
         - C
@@ -714,7 +708,6 @@ components:
         - centreCatalogue
         - centreStorage
         - dateStorageChargeCommences
-        - deliveryBasis
         - discountRate
         - invoicingOrganisation
         - maximumDaysDiscount
@@ -755,8 +748,6 @@ components:
           $ref: '#/components/schemas/Organisation'
         centreCatalogue:
           $ref: '#/components/schemas/Centre'
-        deliveryBasis:
-          $ref: '#/components/schemas/DeliveryBasis'
         storageOrganisation:
           maxLength: 5
           minLength: 0
@@ -1043,15 +1034,15 @@ components:
       additionalProperties: false
     WoolState:
       enum:
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+        - _6
+        - _7
+        - _8
+        - _9
         - A
         - C
         - M

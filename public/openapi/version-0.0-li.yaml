@@ -406,8 +406,6 @@ components:
       required:
         - baleDetailType
         - baleNumber
-        - gross
-        - tare
       type: object
       properties:
         baleNumber:
@@ -438,10 +436,12 @@ components:
           pattern: '-?\d{1,4}'
           type: integer
           format: int32
+          nullable: true
         tare:
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
+          nullable: true
         baleIdentifications:
           type: array
           items:
@@ -475,6 +475,9 @@ components:
           minLength: 0
           type: string
         bales:
+          maxLength: 4
+          minLength: 0
+          pattern: '-?\d{1,4}'
           type: integer
           format: int32
           nullable: true
@@ -707,11 +710,12 @@ components:
       description: ''
     CertificateIDPrefix:
       enum:
-        - SydneyLaboratory
-        - MelbourneLaboratory
-        - FremantleLaboratory
-      type: string
+        - 2
+        - 3
+        - 6
+      type: integer
       description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+      format: int32
     CertificateIDSuffix:
       enum:
         - B
@@ -1619,7 +1623,7 @@ components:
         finalRecieverList:
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/Organisation'
           nullable: true
         woolSales:
           type: array

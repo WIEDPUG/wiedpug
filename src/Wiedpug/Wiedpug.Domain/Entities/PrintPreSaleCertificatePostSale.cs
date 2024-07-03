@@ -49,6 +49,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [StringLength(3)]
         public required int Bales { get; set; }
 
         /// <summary>
@@ -56,6 +57,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
+        [StringLength(5)]
         public required int Gross { get; set; }
 
         /// <summary>
@@ -84,6 +86,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         /// 
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [StringLength(6)]
         public int? CostPerWeightUnit { get; set; }
 
         /// <summary>

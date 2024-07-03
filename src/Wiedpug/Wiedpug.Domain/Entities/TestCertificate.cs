@@ -45,6 +45,6 @@
 
         public List<FibreDiameterHistogram>? FibreDiameterHistograms { get; set; }
 
-        public List<Bale>? Bales { get; set; }
+        public List<TestCertificateBale>? Bales { get; set; }
     }
 }

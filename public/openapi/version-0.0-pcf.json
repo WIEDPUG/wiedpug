@@ -754,8 +754,6 @@
             "PaymentHeader": {
                 "required": [
                     "amountEmitted",
-                    "amountWithheldPreviousStatements",
-                    "amountWithheldThisStatement",
                     "bankAccountNumber",
                     "bankBSBNumber",
                     "clientCode",
@@ -768,10 +766,15 @@
                         "$ref": "#/components/schemas/Organisation"
                     },
                     "statementDate": {
-                        "minLength": 1,
+                        "maxLength": 10,
+                        "minLength": 0,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string"
                     },
                     "amountEmitted": {
+                        "maxLength": 9,
+                        "minLength": 0,
+                        "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
                         "format": "double"
                     },
@@ -782,24 +785,32 @@
                         "type": "string"
                     },
                     "bankBSBNumber": {
-                        "minLength": 1,
+                        "maxLength": 6,
+                        "minLength": 0,
                         "pattern": "-?\\d{1,6}",
                         "type": "string"
                     },
                     "bankAccountNumber": {
-                        "minLength": 1,
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "-?\\d{1,9}",
                         "type": "string"
                     },
                     "amountWithheldThisStatement": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
-                        "format": "double"
+                        "format": "double",
+                        "nullable": true
                     },
                     "amountWithheldPreviousStatements": {
+                        "maxLength": 9,
+                        "minLength": 0,
                         "pattern": "^-?\\d{1,7}\\.\\d{2}$",
                         "type": "number",
-                        "format": "double"
+                        "format": "double",
+                        "nullable": true
                     }
                 },
                 "additionalProperties": false

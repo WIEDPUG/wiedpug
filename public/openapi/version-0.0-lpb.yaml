@@ -144,8 +144,8 @@ paths:
     post:
       tags:
         - Lot Price And Buyers
-      summary: Retrieves the texts
-      operationId: RequestForTexts
+      summary: Retrieves the lot price and buyers
+      operationId: RequestForLotPriceAndBuyers
       requestBody:
         content:
           application/json:

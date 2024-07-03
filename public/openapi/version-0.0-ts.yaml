@@ -39,7 +39,7 @@ paths:
                   programName: NETR
                 abn: '72001967184'
               testStatusDetails:
-                - certificateIDPrefix: FremantleLaboratory
+                - certificateIDPrefix: 6
                   weightNote:
                     prefix: '1'
                     suffix: '1234567'
@@ -50,7 +50,7 @@ paths:
                   lsSampleReceived: '240424'
                   trvMatched: '240424'
                   lsRetuftRequired: 1
-                - certificateIDPrefix: FremantleLaboratory
+                - certificateIDPrefix: 6
                   weightNote:
                     prefix: '1'
                     suffix: '1234567'
@@ -167,7 +167,7 @@ paths:
                       programName: NETR
                     abn: '72001967184'
                   testStatusDetails:
-                    - certificateIDPrefix: FremantleLaboratory
+                    - certificateIDPrefix: 6
                       weightNote:
                         prefix: '1'
                         suffix: '1234567'
@@ -178,7 +178,7 @@ paths:
                       lsSampleReceived: '240424'
                       trvMatched: '240424'
                       lsRetuftRequired: 1
-                    - certificateIDPrefix: FremantleLaboratory
+                    - certificateIDPrefix: 6
                       weightNote:
                         prefix: '1'
                         suffix: '1234567'
@@ -463,11 +463,12 @@ components:
       description: ''
     CertificateIDPrefix:
       enum:
-        - SydneyLaboratory
-        - MelbourneLaboratory
-        - FremantleLaboratory
-      type: string
+        - 2
+        - 3
+        - 6
+      type: integer
       description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+      format: int32
     CoreTestRecoreRequired:
       enum:
         - 1

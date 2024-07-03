@@ -49,10 +49,10 @@ public static class LotPriceAndBuyersEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("RequestForTexts")
+        .WithName("RequestForLotPriceAndBuyers")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Retrieves the texts"
+            Summary = "Retrieves the lot price and buyers"
         })
         .Produces<ApiResult<LotPriceAndBuyers>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")

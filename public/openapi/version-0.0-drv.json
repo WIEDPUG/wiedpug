@@ -68,7 +68,7 @@
                                         "darkAndMedullatedFibreRiskBroker": 1,
                                         "darkandMedullatedFibreRisk": "D",
                                         "certificateIdentity": {
-                                            "certificateIDPrefix": "MelbourneLaboratory",
+                                            "certificateIDPrefix": 3,
                                             "certificateIDSuffix": "P",
                                             "certificateIDNumber": "00000499",
                                             "certificateIDCD": 7
@@ -253,7 +253,7 @@
                                                 "darkAndMedullatedFibreRiskBroker": 1,
                                                 "darkandMedullatedFibreRisk": "D",
                                                 "certificateIdentity": {
-                                                    "certificateIDPrefix": "MelbourneLaboratory",
+                                                    "certificateIDPrefix": 3,
                                                     "certificateIDSuffix": "P",
                                                     "certificateIDNumber": "00000499",
                                                     "certificateIDCD": 7
@@ -585,12 +585,13 @@
             },
             "CertificateIDPrefix": {
                 "enum": [
-                    "SydneyLaboratory",
-                    "MelbourneLaboratory",
-                    "FremantleLaboratory"
+                    2,
+                    3,
+                    6
                 ],
-                "type": "string",
-                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory"
+                "type": "integer",
+                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
+                "format": "int32"
             },
             "CertificateIDSuffix": {
                 "enum": [
@@ -699,12 +700,12 @@
                     "E",
                     "N",
                     "D",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6"
+                    "_1",
+                    "_2",
+                    "_3",
+                    "_4",
+                    "_5",
+                    "_6"
                 ],
                 "type": "string",
                 "description": "E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6"

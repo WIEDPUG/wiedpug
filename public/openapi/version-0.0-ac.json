@@ -144,7 +144,7 @@
                                                             ],
                                                             "lengthAndStrengthDetails": {
                                                                 "certificateIdentity": {
-                                                                    "certificateIDPrefix": "MelbourneLaboratory",
+                                                                    "certificateIDPrefix": 3,
                                                                     "certificateIDSuffix": "L",
                                                                     "certificateIDNumber": "00000664",
                                                                     "certificateIDCD": 6
@@ -169,7 +169,7 @@
                                                             },
                                                             "coreTestDetails": {
                                                                 "certificateIdentity": {
-                                                                    "certificateIDPrefix": "MelbourneLaboratory",
+                                                                    "certificateIDPrefix": 3,
                                                                     "certificateIDSuffix": "P",
                                                                     "certificateIDNumber": "00000499",
                                                                     "certificateIDCD": 7
@@ -354,7 +354,7 @@
                                                             ],
                                                             "lengthAndStrengthDetails": {
                                                                 "certificateIdentity": {
-                                                                    "certificateIDPrefix": "MelbourneLaboratory",
+                                                                    "certificateIDPrefix": 3,
                                                                     "certificateIDSuffix": "L",
                                                                     "certificateIDNumber": "00000664",
                                                                     "certificateIDCD": 6
@@ -379,7 +379,7 @@
                                                             },
                                                             "coreTestDetails": {
                                                                 "certificateIdentity": {
-                                                                    "certificateIDPrefix": "MelbourneLaboratory",
+                                                                    "certificateIDPrefix": 3,
                                                                     "certificateIDSuffix": "P",
                                                                     "certificateIDNumber": "00000499",
                                                                     "certificateIDCD": 7
@@ -664,7 +664,7 @@
                                                     ],
                                                     "lengthAndStrengthDetails": {
                                                         "certificateIdentity": {
-                                                            "certificateIDPrefix": "MelbourneLaboratory",
+                                                            "certificateIDPrefix": 3,
                                                             "certificateIDSuffix": "C",
                                                             "certificateIDNumber": "00000664",
                                                             "certificateIDCD": 6
@@ -689,7 +689,7 @@
                                                     },
                                                     "coreTestDetails": {
                                                         "certificateIdentity": {
-                                                            "certificateIDPrefix": "MelbourneLaboratory",
+                                                            "certificateIDPrefix": 3,
                                                             "certificateIDSuffix": "M",
                                                             "certificateIDNumber": "00000499",
                                                             "certificateIDCD": 5
@@ -1051,7 +1051,7 @@
                                                             ],
                                                             "lengthAndStrengthDetails": {
                                                                 "certificateIdentity": {
-                                                                    "certificateIDPrefix": "MelbourneLaboratory",
+                                                                    "certificateIDPrefix": 3,
                                                                     "certificateIDSuffix": "L",
                                                                     "certificateIDNumber": "00000664",
                                                                     "certificateIDCD": 6
@@ -1076,7 +1076,7 @@
                                                             },
                                                             "coreTestDetails": {
                                                                 "certificateIdentity": {
-                                                                    "certificateIDPrefix": "MelbourneLaboratory",
+                                                                    "certificateIDPrefix": 3,
                                                                     "certificateIDSuffix": "P",
                                                                     "certificateIDNumber": "00000499",
                                                                     "certificateIDCD": 7
@@ -1733,12 +1733,13 @@
             },
             "CertificateIDPrefix": {
                 "enum": [
-                    "SydneyLaboratory",
-                    "MelbourneLaboratory",
-                    "FremantleLaboratory"
+                    2,
+                    3,
+                    6
                 ],
-                "type": "string",
-                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory"
+                "type": "integer",
+                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
+                "format": "int32"
             },
             "CertificateIDSuffix": {
                 "enum": [

@@ -50,7 +50,7 @@
                                 },
                                 "testStatusDetails": [
                                     {
-                                        "certificateIDPrefix": "FremantleLaboratory",
+                                        "certificateIDPrefix": 6,
                                         "weightNote": {
                                             "prefix": "1",
                                             "suffix": "1234567"
@@ -64,7 +64,7 @@
                                         "lsRetuftRequired": 1
                                     },
                                     {
-                                        "certificateIDPrefix": "FremantleLaboratory",
+                                        "certificateIDPrefix": 6,
                                         "weightNote": {
                                             "prefix": "1",
                                             "suffix": "1234567"
@@ -232,7 +232,7 @@
                                         },
                                         "testStatusDetails": [
                                             {
-                                                "certificateIDPrefix": "FremantleLaboratory",
+                                                "certificateIDPrefix": 6,
                                                 "weightNote": {
                                                     "prefix": "1",
                                                     "suffix": "1234567"
@@ -246,7 +246,7 @@
                                                 "lsRetuftRequired": 1
                                             },
                                             {
-                                                "certificateIDPrefix": "FremantleLaboratory",
+                                                "certificateIDPrefix": 6,
                                                 "weightNote": {
                                                     "prefix": "1",
                                                     "suffix": "1234567"
@@ -579,12 +579,13 @@
             },
             "CertificateIDPrefix": {
                 "enum": [
-                    "SydneyLaboratory",
-                    "MelbourneLaboratory",
-                    "FremantleLaboratory"
+                    2,
+                    3,
+                    6
                 ],
-                "type": "string",
-                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory"
+                "type": "integer",
+                "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
+                "format": "int32"
             },
             "CoreTestRecoreRequired": {
                 "enum": [

@@ -79,7 +79,6 @@ namespace Wiedpug.API.ExampleResponses
                             },
 
                                     CentreCatalogue = Centre.AU_G,
-                                    DeliveryBasis = DeliveryBasis.D,
                                     StorageOrganisation = "ABCD",
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
@@ -204,7 +203,6 @@ namespace Wiedpug.API.ExampleResponses
                             },
 
                                     CentreCatalogue = Centre.AU_G,
-                                    DeliveryBasis = DeliveryBasis.D,
                                     StorageOrganisation = "ABCD",
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,

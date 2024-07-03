@@ -87,14 +87,14 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         /// 
         [StringLength(4)]
-        public string? SaleIdentityFrom { get; set; }
+        public SaleIdentity? SaleIdentityFrom { get; set; }
 
         /// <summary>
         /// Generic string field, optional.
         /// </summary>
         /// 
         [StringLength(4)]
-        public string? SaleIdentityTo { get; set; }
+        public SaleIdentity? SaleIdentityTo { get; set; }
 
         /// <summary>
         /// Generic alphanumeric field, optional.

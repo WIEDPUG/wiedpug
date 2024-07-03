@@ -78,7 +78,6 @@
                                                         "organisationId": "ABCD"
                                                     },
                                                     "centreCatalogue": "AU_G",
-                                                    "deliveryBasis": "D",
                                                     "storageOrganisation": "ABCD",
                                                     "storageDescription": "45 MAIN ST",
                                                     "discountRate": 1.5,
@@ -282,7 +281,6 @@
                                                                 "organisationId": "ABCD"
                                                             },
                                                             "centreCatalogue": "AU_G",
-                                                            "deliveryBasis": "D",
                                                             "storageOrganisation": "ABCD",
                                                             "storageDescription": "45 MAIN ST",
                                                             "discountRate": 1.5,
@@ -737,14 +735,6 @@
                 "description": "1: Debit<br />2: Credit",
                 "format": "int32"
             },
-            "DeliveryBasis": {
-                "enum": [
-                    "D",
-                    "L"
-                ],
-                "type": "string",
-                "description": "D: Delivery Nominated Destination<br />L: Loaded on Transport"
-            },
             "LotPaymentDetail": {
                 "required": [
                     "lotIdentity",
@@ -779,6 +769,8 @@
                         "$ref": "#/components/schemas/ChargeType"
                     },
                     "chargeDescription": {
+                        "maxLength": 40,
+                        "minLength": 0,
                         "type": "string",
                         "description": "Optional alphanumeric field for charge description.",
                         "nullable": true
@@ -787,7 +779,7 @@
                         "$ref": "#/components/schemas/Currency"
                     },
                     "chargeAmount": {
-                        "pattern": "/^\\d+(\\.\\d{2})?$/",
+                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
                         "type": "number",
                         "description": "Required decimal field for charge amount with two digits precision.",
                         "format": "double"
@@ -922,7 +914,6 @@
                     "centreCatalogue",
                     "centreStorage",
                     "dateStorageChargeCommences",
-                    "deliveryBasis",
                     "discountRate",
                     "invoicingOrganisation",
                     "maximumDaysDiscount",
@@ -972,9 +963,6 @@
                     },
                     "centreCatalogue": {
                         "$ref": "#/components/schemas/Centre"
-                    },
-                    "deliveryBasis": {
-                        "$ref": "#/components/schemas/DeliveryBasis"
                     },
                     "storageOrganisation": {
                         "maxLength": 5,

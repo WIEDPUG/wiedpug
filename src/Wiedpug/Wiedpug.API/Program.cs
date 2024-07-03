@@ -61,7 +61,6 @@ var apiVersionSet = app.NewApiVersionSet()
             .Build();
 var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(apiVersionSet);
 
-//versionedGroup.MapRequestForDataOrStatusEndpoints();
 
 //versionedGroup.MapTestCertificatesEndpoints();
 

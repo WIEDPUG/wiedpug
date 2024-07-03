@@ -21,7 +21,7 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="7" Y="2.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAIAAJAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -33,7 +33,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>BABCAAAAAAAAgAAAEAAAQAAAEAAAIAAAAAAEAAACAAI=</HashCode>
+      <HashCode>BABCAAAAAAAAAAAAEAAAQAAAEAAAIAAAAAAEEAACAAI=</HashCode>
       <FileName>Entities\OrganisationDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -53,14 +53,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.Contact" Collapsed="true">
-    <Position X="7.25" Y="5.75" Width="1.5" />
+    <Position X="2.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACEAAACAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>ValueObject\Contact.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.PhoneNumber" Collapsed="true">
-    <Position X="3.25" Y="6.75" Width="2.25" />
+    <Position X="3.75" Y="6.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>ValueObject\PhoneNumber.cs</FileName>

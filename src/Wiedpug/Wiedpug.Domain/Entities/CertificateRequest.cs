@@ -44,7 +44,7 @@ namespace Wiedpug.Domain.Entities
         public int? Season { get; set; }
 
         [StringLength(4)]
-        public string? SaleIdentity { get; set; }
+        public SaleIdentity? SaleIdentity { get; set; }
 
         [StringLength(6)]
         public string? LotIdentity { get; set; }

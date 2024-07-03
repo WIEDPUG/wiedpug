@@ -163,7 +163,7 @@ paths:
                     abn: '72001967184'
                   printPreSaleCertificatePostSales:
                     - certificateIdentity:
-                        certificateIDPrefix: SydneyLaboratory
+                        certificateIDPrefix: 2
                         certificateIDSuffix: F
                         certificateIDNumber: '234567'
                         certificateIDCD: 6
@@ -463,11 +463,12 @@ components:
       format: int32
     CertificateIDPrefix:
       enum:
-        - SydneyLaboratory
-        - MelbourneLaboratory
-        - FremantleLaboratory
-      type: string
+        - 2
+        - 3
+        - 6
+      type: integer
       description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+      format: int32
     CertificateIDSuffix:
       enum:
         - B
@@ -612,11 +613,15 @@ components:
         saleOutcome:
           $ref: '#/components/schemas/SaleOutcome'
         bales:
+          maxLength: 3
+          minLength: 0
           pattern: '-?\d{1,3}'
           type: integer
           description: Required numeric field for bales.
           format: int32
         gross:
+          maxLength: 5
+          minLength: 0
           pattern: '-?\d{1,5}'
           type: integer
           description: Required numeric field for gross weight.
@@ -628,6 +633,8 @@ components:
         certificateDeliveryIndicator:
           $ref: '#/components/schemas/CertificateDeliveryIndicator'
         costPerWeightUnit:
+          maxLength: 6
+          minLength: 0
           pattern: '-?\d{1,6}'
           type: integer
           description: Optional numeric field for cost per weight unit.
@@ -897,16 +904,15 @@ components:
       description: 'A code to indicate which section of the sale that lot belongs.<br />MFLC: Merino fleece types<br />MSKT: Merino fleece types<br />XBFS: Merino fleece types<br />ODDS: Merino fleece types'
     WoolinkSaleSystem:
       enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-      type: integer
+        - A
+        - H
+        - O
+        - W
+        - S
+        - T
+        - E
+      type: string
       description: 'A: Auction<br />H: Holding<br />O: Offer board<br />W: Wool International<br />S: Spot Sale<br />T: Tender<br />E:Electronic Auction'
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

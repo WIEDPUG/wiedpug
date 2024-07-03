@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.ValueObject
 {
@@ -21,6 +22,8 @@ namespace Wiedpug.Domain.ValueObject
         [StringLength(4)]
         public required string AreaOfOrigin { get; set; }
 
+        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
+        [StringLength(4)]
         public int? Bales {  get; set; }
 
         [StringLength(20)]

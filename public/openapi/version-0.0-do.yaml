@@ -365,8 +365,6 @@ components:
       required:
         - baleDetailType
         - baleNumber
-        - gross
-        - tare
       type: object
       properties:
         baleNumber:
@@ -397,10 +395,12 @@ components:
           pattern: '-?\d{1,4}'
           type: integer
           format: int32
+          nullable: true
         tare:
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
+          nullable: true
         baleIdentifications:
           type: array
           items:
@@ -434,6 +434,9 @@ components:
           minLength: 0
           type: string
         bales:
+          maxLength: 4
+          minLength: 0
+          pattern: '-?\d{1,4}'
           type: integer
           format: int32
           nullable: true
@@ -653,11 +656,12 @@ components:
       description: ''
     CertificateIDPrefix:
       enum:
-        - SydneyLaboratory
-        - MelbourneLaboratory
-        - FremantleLaboratory
-      type: string
+        - 2
+        - 3
+        - 6
+      type: integer
       description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+      format: int32
     CertificateIDSuffix:
       enum:
         - B
@@ -733,13 +737,18 @@ components:
       type: object
       properties:
         consignmentReference:
-          minLength: 1
+          maxLength: 10
+          minLength: 0
           pattern: '-?\d{1,10}'
           type: string
         subConsignmentReference:
+          maxLength: 10
+          minLength: 0
           type: string
           nullable: true
         ecnCrn:
+          maxLength: 14
+          minLength: 0
           type: string
           nullable: true
         shippingAgent:
@@ -749,35 +758,55 @@ components:
         dumpingOrganisation:
           $ref: '#/components/schemas/Organisation'
         vesselCode:
+          maxLength: 7
+          minLength: 0
           type: string
           nullable: true
         voyageCode:
+          maxLength: 6
+          minLength: 0
           type: string
           nullable: true
         portOfDischargeCode:
+          maxLength: 5
+          minLength: 0
           type: string
           nullable: true
         loadPortCode:
+          maxLength: 5
+          minLength: 0
           type: string
           nullable: true
         shipper:
           $ref: '#/components/schemas/Organisation'
         vesselDescription:
+          maxLength: 30
+          minLength: 0
           type: string
           nullable: true
         loadPortDescription:
+          maxLength: 20
+          minLength: 0
           type: string
           nullable: true
         portOfDischargeDescription:
+          maxLength: 20
+          minLength: 0
           type: string
           nullable: true
         alternatePortOfDischargeCode:
+          maxLength: 5
+          minLength: 0
           type: string
           nullable: true
         alternatePortOfDischargeDescription:
+          maxLength: 30
+          minLength: 0
           type: string
           nullable: true
         bookingReference:
+          maxLength: 30
+          minLength: 0
           type: string
           nullable: true
       additionalProperties: false
@@ -918,12 +947,18 @@ components:
         countermarkHeadmarkFlag:
           $ref: '#/components/schemas/CountermarkHeadmarkFlag'
         applyRenumbers:
+          maxLength: 5
+          minLength: 0
           type: boolean
           description: "Boolean value to indicate wethear to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
         applyGrossWeights:
+          maxLength: 5
+          minLength: 0
           type: boolean
           description: "Boolean value to indicate wethear to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
         applyNetWeights:
+          maxLength: 5
+          minLength: 0
           type: boolean
           description: "Boolean value to indicate wethear to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
         interimHandlingDestinationCode:
@@ -999,23 +1034,33 @@ components:
         lotIdentityOrGroupName:
           $ref: '#/components/schemas/LotIdentityOrGroupName'
         bales:
+          maxLength: 4
+          minLength: 0
           pattern: '-?\d{1,4}'
           type: integer
           format: int32
         gross:
+          maxLength: 6
+          minLength: 0
           pattern: '-?\d{1,6}'
           type: integer
           format: int32
         tare:
+          maxLength: 4
+          minLength: 0
           pattern: '-?\d{1,4}'
           type: integer
           format: int32
         regrabSampleWeight:
+          maxLength: 2
+          minLength: 0
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
           nullable: true
         totalBalesInLot:
+          maxLength: 4
+          minLength: 0
           pattern: '-?\d{1,4}'
           type: integer
           format: int32
@@ -1028,6 +1073,8 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         renumbersFirstBaleNumber:
+          maxLength: 6
+          minLength: 0
           pattern: '-?\d{1,6}'
           type: integer
           format: int32
@@ -1129,7 +1176,7 @@ components:
           minLength: 0
           type: string
           nullable: true
-        grouoName:
+        groupName:
           maxLength: 6
           minLength: 0
           type: string
