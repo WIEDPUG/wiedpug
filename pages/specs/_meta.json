@@ -10,5 +10,6 @@
     "0.0-st": "ST",
     "0.0-rpp": "RPP",
     "0.0-txt": "TXT",
-    "0.0-lpb": "LPB"
+    "0.0-lpb": "LPB",
+    "0.0-api":"API"
 }

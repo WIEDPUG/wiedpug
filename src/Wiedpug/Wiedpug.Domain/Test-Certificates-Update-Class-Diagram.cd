@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateUpdateAggregate.TestCertificateUpdate" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\TestCertificateUpdateAggregate\TestCertificateUpdate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TransmissionHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TestCertificateUpdateDetails" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TestCertificateUpdateDetail" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="4" />
+    <Members>
+      <Property Name="BaleDescription" Hidden="true" />
+      <Property Name="Bales" Hidden="true" />
+      <Property Name="CertificateIdentity" Hidden="true" />
+      <Property Name="Client" Hidden="true" />
+      <Property Name="LotIdentityFrom" Hidden="true" />
+      <Property Name="LotIdentityTo" Hidden="true" />
+      <Property Name="MulesingStatusTo" Hidden="true" />
+      <Property Name="SaleIdentityFrom" Hidden="true" />
+      <Property Name="SaleIdentityTo" Hidden="true" />
+      <Property Name="WoolBase" Hidden="true" />
+      <Property Name="WoolPreparationCategoryTo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQCAQAABICAAAAAAgAAAACAAAAAgMACAAAAQ=</HashCode>
+      <FileName>Entities\TestCertificateUpdateDetail.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WoolPreparationCategoryTo" />
+      <Property Name="MulesingStatusTo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
+    <Position X="4.25" Y="5" Width="3.5" />
+    <Members>
+      <Property Name="CurrentReceiver" Hidden="true" />
+      <Property Name="DateFormatLastRevised" Hidden="true" />
+      <Property Name="DateTransmissionFileCreated" Hidden="true" />
+      <Property Name="DocumentOriginator" Hidden="true" />
+      <Property Name="VersionNumber" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -10,20 +10,20 @@
       <Property Name="PaymentAdviceCollection" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvice">
+  <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvice" Collapsed="true">
     <Position X="11" Y="3" Width="2.5" />
     <AssociationLine Name="FinalreceiverList" Type="Wiedpug.Domain.ValueObject.Organisation" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.25" Y="3.868" />
+        <Point X="13.25" Y="3.562" />
         <Point X="13.25" Y="4.621" />
         <Point X="16" Y="4.621" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="PaymentAdviceDetailList" Type="Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate.PaymentAdviceDetail" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="12.5" Y="3.868" />
-        <Point X="12.5" Y="5.974" />
-        <Point X="14.75" Y="5.974" />
+        <Point X="12.5" Y="3.562" />
+        <Point X="12.5" Y="5.719" />
+        <Point X="14.75" Y="5.719" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -34,9 +34,9 @@
       <Property Name="TransmissionHeader" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="Comments" />
       <Property Name="FinalreceiverList" />
       <Property Name="PaymentAdviceDetailList" />
+      <Property Name="Comments" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
@@ -60,15 +60,15 @@
       <FileName>ValueObject\Organisation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate.PaymentAdviceDetail">
+  <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate.PaymentAdviceDetail" Collapsed="true">
     <Position X="14.75" Y="5.25" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAQA=</HashCode>
       <FileName>Aggregates\PaymentAdvicesAggregate\PaymentAdviceDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="PaymentSummary" />
       <Property Name="WoolSaleHeaderLots" />
+      <Property Name="PaymentSummary" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="LotPaymentDetails" />
@@ -83,7 +83,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.MiscellaneousCharge" Collapsed="true">
-    <Position X="20.5" Y="7.75" Width="2.25" />
+    <Position X="10.25" Y="6.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAEACACAAAIAAAAAAIAAAAAAA=</HashCode>
       <FileName>Entities\MiscellaneousCharge.cs</FileName>
@@ -97,9 +97,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PaymentAdviceWoolSaleHeaderLots" Collapsed="true">
-    <Position X="20.5" Y="6" Width="2.75" />
+    <Position X="19" Y="6.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQCQAAAAAAAQIREKAAAIAAAAAAQAAEBAEAgAA=</HashCode>
+      <HashCode>AAAAAAAQCQAAAAAAAQIBEKAAAIAAAAAAQAAEBAEAgAA=</HashCode>
       <FileName>Entities\PaymentAdviceWoolSaleHeaderLots.cs</FileName>
     </TypeIdentifier>
   </Class>

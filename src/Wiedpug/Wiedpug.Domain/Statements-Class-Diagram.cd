@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statements">
+  <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statements" Collapsed="true">
     <Position X="2" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAACAAAAAAA=</HashCode>
@@ -13,7 +13,7 @@
       <Property Name="StatementCollection" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statement">
+  <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statement" Collapsed="true">
     <Position X="6" Y="2" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAEAAAAAA=</HashCode>

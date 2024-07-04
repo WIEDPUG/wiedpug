@@ -15,7 +15,7 @@
       <Property Name="DeliveryOrdersAndShippingInstructionCollection" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrdersAndShippingInstruction">
+  <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrdersAndShippingInstruction" Collapsed="true">
     <Position X="3.75" Y="3.25" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAAABAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
@@ -25,8 +25,8 @@
       <Property Name="TransmissionHeader" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="Consignments" />
       <Property Name="FinalReceiverList" />
+      <Property Name="Consignments" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.Consignment" Collapsed="true">

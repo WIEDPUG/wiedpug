@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateRequests" Collapsed="true">
+    <Position X="2" Y="0.5" Width="4.25" />
+    <AssociationLine Name="TransmissionHeader" Type="Wiedpug.Domain.Entities.TransmissionHeader">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.116" Y="0.825" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aggregates\TestCertificateRequestsAggregate\TestCertificateRequests.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TransmissionHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TestCertificateRequestCollection" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="2.75" />
+    <Members>
+      <Property Name="CurrentReceiver" Hidden="true" />
+      <Property Name="DateFormatLastRevised" Hidden="true" />
+      <Property Name="DateTransmissionFileCreated" Hidden="true" />
+      <Property Name="DocumentOriginator" Hidden="true" />
+      <Property Name="VersionNumber" Hidden="true" />
+    </Members>
+    <AssociationLine Name="SoftwareIdentifier" Type="Wiedpug.Domain.ValueObject.SoftwareIdentifier">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.514" Y="0.394" Height="0.182" Width="1.623" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SoftwareIdentifier" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TestCertificateRequest" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\TestCertificateRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CertificateRequest" />
+      <Property Name="BaleHeader" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.SoftwareIdentifier" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAg=</HashCode>
+      <FileName>ValueObject\SoftwareIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleHeader" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAACAAAAABAACAAAAAAAAAABAAA=</HashCode>
+      <FileName>ValueObject\BaleHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.CertificateRequest" Collapsed="true">
+    <Position X="11.25" Y="3.25" Width="5" />
+    <Members>
+      <Property Name="Bales" Hidden="true" />
+      <Property Name="CertificateReference" Hidden="true" />
+      <Property Name="ClientsCrossReference" Hidden="true" />
+      <Property Name="CommitType" Hidden="true" />
+      <Property Name="DeclaredGross" Hidden="true" />
+      <Property Name="DeclaredTare" Hidden="true" />
+      <Property Name="LotIdentity" Hidden="true" />
+      <Property Name="SaleIdentity" Hidden="true" />
+      <Property Name="SampleWeightRemoved" Hidden="true" />
+      <Property Name="Season" Hidden="true" />
+      <Property Name="TEAM3HauteurPrint" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEQAAAQACAAAAEAAJAAgAAgEACAIYBACEAAAIAAg=</HashCode>
+      <FileName>Entities\CertificateRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CertificateRequestDetails" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.CertificateRequestDetail" Collapsed="true">
+    <Position X="8" Y="5" Width="2" />
+    <Members>
+      <Property Name="CertificateIdentity" Hidden="true" />
+      <Property Name="Woolbase" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>ValueObject\CertificateRequestDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

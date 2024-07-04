@@ -52,7 +52,7 @@ paths:
                         centreStorage: AU_AR
                         saleDate: '2017-01-19'
                         woolState: A
-                        packType: _2
+                        packType: '2'
                         invoicingOrganisation:
                           organisationId: ABCD
                         sellingOrganisation:
@@ -191,7 +191,7 @@ paths:
                             centreStorage: AU_AR
                             saleDate: '2017-01-19'
                             woolState: A
-                            packType: _2
+                            packType: '2'
                             invoicingOrganisation:
                               organisationId: ABCD
                             sellingOrganisation:
@@ -640,16 +640,16 @@ components:
       additionalProperties: false
     PackType:
       enum:
-        - _0
-        - _1
-        - _2
-        - _3
-        - _4
-        - _5
-        - _6
-        - _7
-        - _8
-        - _9
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
         - A
         - B
         - C
@@ -1034,15 +1034,15 @@ components:
       additionalProperties: false
     WoolState:
       enum:
-        - _1
-        - _2
-        - _3
-        - _4
-        - _5
-        - _6
-        - _7
-        - _8
-        - _9
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
         - A
         - C
         - M
