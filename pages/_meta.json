@@ -7,5 +7,6 @@
     "openapi-specs": "OpenAPI Specs",
     "business-rules":"Business Rules",
     "release-versions": "Release Versions",
-    "specs":"specs-internal-review"
+    "specs":"specs-internal-review",
+    "data-dictionary":"Data Dictionary"
   }
