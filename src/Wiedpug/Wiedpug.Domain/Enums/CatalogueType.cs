@@ -1,13 +1,15 @@
 ﻿using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CatalogueType
     {
-        [Description("1: Auction Catalogues")]
-        AuctionCatalogues = 1,
+        [Description("A: Auction Catalogues")]
+        A,
 
-        [Description("2: Private Catalogues")]
-        PrivateCatalogues = 2
+        [Description("P: Private Catalogues")]
+        P
     }
 }

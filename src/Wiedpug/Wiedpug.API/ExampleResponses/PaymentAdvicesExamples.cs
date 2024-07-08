@@ -41,17 +41,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     ABN = "72001967184"
                 },
-                FinalreceiverList = new List<Organisation>
-                {
-                    new Organisation
-                    {
-                        OrganisationId = "ABEF"
-                    },
-                    new Organisation
-                    {
-                        OrganisationId = "ABFF"
-                    },
-                },
+                        TransferConfig = new TransferConfig
+                        {
+                            TransferType = TransferType.Unrestrict
+                        },
                 PaymentAdviceDetailList = new List<PaymentAdviceDetail>
                 {
                     new PaymentAdviceDetail
@@ -64,7 +57,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = Centre.AU_AR,
+                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AR },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -78,8 +71,8 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationId = "ABCD"
                             },
 
-                                    CentreCatalogue = Centre.AU_G,
-                                    StorageOrganisation = "ABCD",
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
+                                    StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
@@ -188,7 +181,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = Centre.AU_AR,
+                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AR },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -202,8 +195,11 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationId = "ABCD"
                             },
 
-                                    CentreCatalogue = Centre.AU_G,
-                                    StorageOrganisation = "ABCD",
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
+                                    StorageOrganisation = new Organisation
+                                    {
+                                        OrganisationId = "ABCD"
+                                    },
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,

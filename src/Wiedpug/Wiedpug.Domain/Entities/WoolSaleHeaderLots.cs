@@ -83,16 +83,6 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? FreightRebate { get; set; }
-
-        /// <summary>
-        /// Any charge made for a lot which is not covered by the Post Sale Charge or the Freight charge per Bale fields.
-        /// Total 5 digits with 2 digits after the decimal point. e.g. 123.76
-        /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? ChargePerLot { get; set; }
-
-        [StringLength(8)]
-        public string? InvoiceNumber { get; set; }
         
         [Required]
         [StringLength(4)]
@@ -161,7 +151,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [StringLength(5)]
-        public required string StorageOrganisation { get; set; } // FIELD NUMBER 3 - Storage Organisation - Start: 3, Size: 5, Data Type: AN, Justification: L, Requirement Designator: R, Value: '11'
+        public required Organisation StorageOrganisation { get; set; } // FIELD NUMBER 3 - Storage Organisation - Start: 3, Size: 5, Data Type: AN, Justification: L, Requirement Designator: R, Value: '11'
 
         /// <summary>
         /// Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.
@@ -263,8 +253,8 @@ namespace Wiedpug.Domain.Entities
         [StringLength(2)]
         public SaleType? SaleType { get; set; } // FIELD NUMBER 9 - Sale Type - Start: 34, Size: 2, Data Type: ID, Justification: L, Requirement Designator: O
 
-        [StringLength(5)]
-        public bool? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
+        [StringLength(1)]
+        public ElectronicSaleFlag? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
 
         /// <summary>
         /// `true` = Available to Buyers, `false` = Not available to buyers.

@@ -56,7 +56,9 @@ namespace Wiedpug.API.ExampleResponses
                                          OrganisationId="WTTA"
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
-                                     CentreStorage = Centre.AU_AD,
+                                     CentreStorage = new Centre {
+                                        CentreAustralia = CentreAustralia.AU
+                                     },
                                      SaleDate = "2017-01-19",
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
@@ -78,7 +80,7 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                         OrganisationId = "ABCD"
                                     },
-                                    CentreCatalogue = Centre.AU_G
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G }
                                  },
                                  LotPriceAndBuyerDetails = new List<LotPriceAndBuyerDetail>
                                  {
@@ -190,7 +192,7 @@ namespace Wiedpug.API.ExampleResponses
                                          OrganisationId="WTTA"
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
-                                     CentreStorage = Centre.AU_AD,
+                                     CentreStorage = new Centre { CentreAustralia = CentreAustralia.AD },
                                      SaleDate = "2017-01-19",
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
@@ -212,7 +214,7 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                         OrganisationId = "ABCD"
                                     },
-                                    CentreCatalogue = Centre.AU_G
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G }
                                  },
                                  LotPriceAndBuyerDetails = new List<LotPriceAndBuyerDetail>
                                  {

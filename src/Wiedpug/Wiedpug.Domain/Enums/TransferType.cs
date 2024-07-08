@@ -6,11 +6,14 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum TransferType
     {
-        [Description("Broadcast: Send document to all members")]
-        Broadcast,
+        [Description("Unrestrict: Send document to all members")]
+        Unrestrict,
 
-        [Description("PrivateSend: Send document to appointed members")]
-        PrivateSend,
+        [Description("Restrict: Send document to appointed members")]
+        Restrict,
+
+        [Description("Exclude: Send to all members excluding the appointed members")]
+        Exclude,
 
     }
 }

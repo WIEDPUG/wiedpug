@@ -39,11 +39,11 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ABN = "72001967184"
                         },
-                        CatalogueType = CatalogueType.AuctionCatalogues,
+                        CatalogueType = CatalogueType.A,
                         TransferConfig = new TransferConfig
                         {
-                            TransferType = TransferType.Broadcast,
-                            ExclusionList = new List<Organisation>
+                            TransferType = TransferType.Exclude,
+                            FinalReceiverList = new List<Organisation>
                             {
                                 new Organisation{
                                    OrganisationId = "AMSC"
@@ -65,7 +65,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_F,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = Centre.AU_AR,
+                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AU },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -75,7 +75,6 @@ namespace Wiedpug.API.ExampleResponses
                                     CalculationBasis = CalculationBasis.B,
                                     FreightCharge = 0.00,
                                     FreightRebate = 3.25,
-                                    ChargePerLot = 0.00,
                                     CatalogueSection = CatalogueSection.FLC,
                                     IsFinalCatalogue = true,
                                     InvoicingOrganisation = new Organisation
@@ -91,9 +90,12 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationId = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = Centre.AU_G,
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D,
-                                    StorageOrganisation = "ABCD",
+                                    StorageOrganisation = new Organisation
+                                    {
+                                        OrganisationId = "ABCD"
+                                    },
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",
                                     DiscountRate = 1.50,
@@ -115,22 +117,18 @@ namespace Wiedpug.API.ExampleResponses
                                             Tare = 16,
                                             CataloguePageNumber = 65,
                                             UpdateType = UpdateType.A,
-                                            CatalogueSymbols = CatalogueSymbol.A,
                                             PackMaterial = PackMaterial.N,
                                             LotType = LotType.SubjectivelyMatchedInterlot,
                                             LightestIndividualBaleWeight = 149,
                                             ReportingFlag = ReportingFlag.R,
                                             CostPerWeightUnit = 0,
                                             CleanWeight = 0,
-                                            PackCondition = PackCondition.N
-                                        },
-                                        LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
-                                        {
+                                            PackCondition = PackCondition.N,
                                             CoreTestSamplingDate = "2019-01-17",
                                             WoolDescription = "MF6S",
                                             GstTaxInvoiceFlag = true,
                                             NumberOfOverweightBales = 0
-        ,                               },
+                                        },
                                         //No 21B
                                         LotHeaderAwexData = new Domain.Entities.LotHeaderAwexData //21C
                                         {
@@ -292,11 +290,11 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ABN = "72001967184"
                         },
-                        CatalogueType=CatalogueType.AuctionCatalogues,
+                        CatalogueType=CatalogueType.A,
                         TransferConfig = new TransferConfig
                         {
-                            TransferType = TransferType.PrivateSend,
-                            InclusionList = new List<Organisation>
+                            TransferType = TransferType.Exclude,
+                            FinalReceiverList = new List<Organisation>
                             {
                                 new Organisation
                                 {
@@ -316,7 +314,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = Centre.AU_AU,
+                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AU },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState._1,
                                     PackType = PackType._6,
@@ -326,7 +324,6 @@ namespace Wiedpug.API.ExampleResponses
                                     CalculationBasis = CalculationBasis.B,
                                     FreightCharge = 0.00,
                                     FreightRebate = 3.25,
-                                    ChargePerLot = 0.00,
                                     CatalogueSection = CatalogueSection.FLC,
                                     IsFinalCatalogue = true,
                                     InvoicingOrganisation = new Organisation { OrganisationId = "ABCD" },
@@ -339,9 +336,9 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationId = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = Centre.AU_G,
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D,
-                                    StorageOrganisation = "ABCD",
+                                    StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",
                                     DiscountRate = 1.50,
@@ -363,22 +360,18 @@ namespace Wiedpug.API.ExampleResponses
                                             Tare = 16,
                                             CataloguePageNumber = 65,
                                             UpdateType = UpdateType.A,
-                                            CatalogueSymbols = CatalogueSymbol.C,
                                             PackMaterial = PackMaterial.N,
                                             LotType = LotType.ClassedGrowerLot,
                                             LightestIndividualBaleWeight = 149,
                                             ReportingFlag = ReportingFlag.R,
                                             CostPerWeightUnit = 0,
                                             CleanWeight = 0,
-                                            PackCondition = PackCondition.N
-                                        },
-                                        LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
-                                        {
+                                            PackCondition = PackCondition.N,
                                             CoreTestSamplingDate = "2019-01-17",
                                             WoolDescription = "MF6S",
                                             GstTaxInvoiceFlag = true,
                                             NumberOfOverweightBales = 0
-        ,                               },
+                                        },
                                         //No 21B
                                         LotHeaderAwexData = new Domain.Entities.LotHeaderAwexData //21C
                                         {
@@ -525,11 +518,11 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         ABN = "72001967184"
                     },
-                    CatalogueType = CatalogueType.AuctionCatalogues,
+                    CatalogueType = CatalogueType.A,
                     TransferConfig = new TransferConfig
                         {
-                            TransferType = TransferType.Broadcast,
-                            ExclusionList = new List<Organisation>
+                            TransferType = TransferType.Exclude,
+                            FinalReceiverList = new List<Organisation>
                             {
                                 new Organisation { OrganisationId = "AWMS" },
                                 new Organisation { OrganisationId = "FCBB" }
@@ -547,7 +540,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SellingCentreType = SellingCentreType.AU_M,
                                     SaleNumber = 29
                                 },
-                                CentreStorage = Centre.AU_A,
+                                CentreStorage = new Centre { CentreAustralia = CentreAustralia.A },
                                 SaleDate = "2017-01-19",
                                 WoolState = WoolState.A,
                                 PackType = PackType.F,
@@ -557,7 +550,6 @@ namespace Wiedpug.API.ExampleResponses
                                 CalculationBasis = CalculationBasis.B,
                                 FreightCharge = 0.00,
                                 FreightRebate = 3.25,
-                                ChargePerLot = 0.00,
                                 CatalogueSection = CatalogueSection.FLC,
                                 IsFinalCatalogue = true,
                                 InvoicingOrganisation = new Organisation
@@ -573,9 +565,9 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationId = "ABCD"
                             },
                                 WoolTypeGroup = WoolTypeGroup.MFLC,
-                                CentreCatalogue = Centre.AU_G,
+                                CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
                                 DeliveryBasis = DeliveryBasis.D,
-                                StorageOrganisation = "ABCD",
+                                StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
                                 StorageDescription = "45 MAIN ST",
                                 PaymentDueDate = "2017-01-27",
                                 DiscountRate = 1.50,
@@ -598,21 +590,18 @@ namespace Wiedpug.API.ExampleResponses
                                         Tare = 16,
                                         CataloguePageNumber = 65,
                                         UpdateType = UpdateType.A,
-                                        CatalogueSymbols = CatalogueSymbol.A,
                                         PackMaterial = PackMaterial.N,
                                         LotType = LotType.ObjectivelyMatchedLot,
                                         LightestIndividualBaleWeight = 149,
                                         ReportingFlag = ReportingFlag.R,
                                         CostPerWeightUnit = 0,
                                         CleanWeight = 0,
-                                        PackCondition = PackCondition.N
-                                    },
-                                    LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
-                                    {
+                                        PackCondition = PackCondition.N,
                                         CoreTestSamplingDate = "2019-01-17",
                                         WoolDescription = "MF6S",
+                                        GstTaxInvoiceFlag = true,
                                         NumberOfOverweightBales = 0
-    ,                               },
+                                    },
                                     //No 21B
                                     LotHeaderAwexData = new Domain.Entities.LotHeaderAwexData //21C
                                     {
@@ -757,15 +746,15 @@ namespace Wiedpug.API.ExampleResponses
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ExcludedTypes = new List<ExcludedType>
+                        ExcludedTypes = new List<CatalogueExcludedType>
                         {
-                            new ExcludedType
+                            new CatalogueExcludedType
                             {
-                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._79B
+                                RecordTypesToBeExcluded = CatalogueRecordTypesToBeExcluded.InterlotComponentBaleHeader
                             },
-                            new ExcludedType
+                            new CatalogueExcludedType
                             {
-                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._84
+                                RecordTypesToBeExcluded = CatalogueRecordTypesToBeExcluded.BaleIdentification
                             }                          
                         },
                         Season = 23
@@ -785,15 +774,15 @@ namespace Wiedpug.API.ExampleResponses
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ExcludedTypes = new List<ExcludedType>
+                        ExcludedTypes = new List<CatalogueExcludedType>
                         {
-                            new ExcludedType
+                            new CatalogueExcludedType
                             {
-                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._79B
+                                RecordTypesToBeExcluded = CatalogueRecordTypesToBeExcluded.InterlotComponentBaleHeader
                             },
-                            new ExcludedType
+                            new CatalogueExcludedType
                             {
-                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._31
+                                RecordTypesToBeExcluded = CatalogueRecordTypesToBeExcluded.FibreDiameterHistogramHeader
                             }
                         },
                         Season = 23
@@ -819,15 +808,15 @@ namespace Wiedpug.API.ExampleResponses
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ExcludedTypes = new List<ExcludedType>
+                        ExcludedTypes = new List<CatalogueExcludedType>
                         {
-                            new ExcludedType
+                            new CatalogueExcludedType
                             {
-                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._79B
+                                RecordTypesToBeExcluded = CatalogueRecordTypesToBeExcluded.InterlotComponentBaleHeader
                             },
-                            new ExcludedType
+                            new CatalogueExcludedType
                             {
-                                RecordTypesToBeExcluded = RecordTypesToBeExcluded._32A
+                                RecordTypesToBeExcluded = CatalogueRecordTypesToBeExcluded.FibreDiameterHistogramDetails
                             }
                         },
                         Season = 23
@@ -870,7 +859,7 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ABN = "72001967184"
                         },
-                        CatalogueType=CatalogueType.AuctionCatalogues,
+                        CatalogueType=CatalogueType.A,
                         WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
                             {
                                 new CatalogueWoolSaleHeader
@@ -883,7 +872,7 @@ namespace Wiedpug.API.ExampleResponses
                                             SellingCentreType = SellingCentreType.AU_M,
                                             SaleNumber = 29
                                         },
-                                        CentreStorage = Centre.AU_AD,
+                                        CentreStorage = new Centre { CentreAustralia = CentreAustralia.AD },
                                         SaleDate = "2017-01-19",
                                         WoolState = WoolState._1,
                                         PackType = PackType._9,
@@ -893,7 +882,6 @@ namespace Wiedpug.API.ExampleResponses
                                         CalculationBasis = CalculationBasis.B,
                                         FreightCharge = 0.00,
                                         FreightRebate = 3.25,
-                                        ChargePerLot = 0.00,
                                         CatalogueSection = CatalogueSection.FLC,
                                         IsFinalCatalogue = true,
                                         InvoicingOrganisation = new Organisation
@@ -909,9 +897,9 @@ namespace Wiedpug.API.ExampleResponses
                                             OrganisationId = "ABCD"
                                         },
                                         WoolTypeGroup = WoolTypeGroup.MFLC,
-                                        CentreCatalogue = Centre.AU_G,
+                                        CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
                                         DeliveryBasis = DeliveryBasis.D,
-                                        StorageOrganisation = "ABCD",
+                                        StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
                                         StorageDescription = "45 MAIN ST",
                                         PaymentDueDate = "2017-01-27",
                                         DiscountRate = 1.50,
@@ -933,21 +921,17 @@ namespace Wiedpug.API.ExampleResponses
                                                 Tare = 16,
                                                 CataloguePageNumber = 65,
                                                 UpdateType = UpdateType.A,
-                                                CatalogueSymbols = CatalogueSymbol.C,
                                                 PackMaterial = PackMaterial.N,
                                                 LotType = LotType.OtherBulkClassLot,
                                                 LightestIndividualBaleWeight = 149,
                                                 ReportingFlag = ReportingFlag.R,
                                                 CostPerWeightUnit = 0,
                                                 CleanWeight = 0,
-                                                PackCondition = PackCondition.N
-                                            },
-                                            LotHeaderExtension = new Domain.Entities.LotHeaderExtension //21A
-                                            {
+                                                PackCondition = PackCondition.N,
                                                 CoreTestSamplingDate = "2019-01-17",
                                                 WoolDescription = "MF6S",
                                                 NumberOfOverweightBales = 0
-            ,                               },
+                                            },
                                             //No 21B
                                             LotHeaderAwexData = new Domain.Entities.LotHeaderAwexData //21C
                                             {

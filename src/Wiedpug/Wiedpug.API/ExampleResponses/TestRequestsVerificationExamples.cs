@@ -56,7 +56,7 @@ namespace Wiedpug.API.ExampleResponses
                             Suffix = "1234567",
                         },
                             LotType = LotType.CombinedCertificate,
-                            CentreAuction = Centre.AU_A,
+                            CentreAuction = new Centre { CentreAustralia = CentreAustralia.A },
                             SourceCode = SourceCode.Grower,
                             IsCompanyABNApplicable = false
                         },
@@ -138,7 +138,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
-                            CentreAuction = Centre.AU_BA,
+                            CentreAuction = new Centre { CentreAustralia = CentreAustralia.BA },
                             SourceCode = SourceCode.Dealer,
                             IsCompanyABNApplicable = false
                         },
@@ -281,7 +281,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Suffix = "1234567",
                                 },
                                 LotType = LotType.CombinedCertificate,
-                                CentreAuction = Centre.AU_A,
+                                CentreAuction = new Centre { CentreAustralia = CentreAustralia.A },
                                 SourceCode = SourceCode.Grower,
                                 IsCompanyABNApplicable = false
                             },
@@ -363,7 +363,7 @@ namespace Wiedpug.API.ExampleResponses
                                 },
                                 WeightUnit = WeightUnit.Kilograms,
                                 LotType = LotType.CombinedCertificate,
-                                CentreAuction = Centre.AU_BA,
+                                CentreAuction = new Centre { CentreAustralia = CentreAustralia.BA },
                                 SourceCode = SourceCode.Dealer,
                                 IsCompanyABNApplicable = false
                             },

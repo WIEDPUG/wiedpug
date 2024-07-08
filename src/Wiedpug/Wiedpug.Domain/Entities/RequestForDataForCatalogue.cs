@@ -46,6 +46,10 @@ namespace Wiedpug.Domain.Entities
         [StringLength(20)]
         public string? EndDateTimeStatusRequest { get; set; }
 
+        /// <summary>
+        /// Boolean value to indicate wethear to use Network Datetime
+        /// True for use Network Datetime, False for not use
+        /// </summary>
         [StringLength(5)]
         public bool? UseNetworkDateTime { get; set; }
 
@@ -58,7 +62,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         /// 
         [StringLength(80)]
-        public List<ExcludedType>? ExcludedTypes { get; set; }
+        public List<CatalogueExcludedType>? ExcludedTypes { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Season { get; set; }

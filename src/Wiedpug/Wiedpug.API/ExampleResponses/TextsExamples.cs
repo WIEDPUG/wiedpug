@@ -43,12 +43,9 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ABN = "72001967184"
                         },
-                        FinalReceiverList = new List<Organisation>
+                        TransferConfig = new TransferConfig
                         {
-                            new Organisation
-                            {
-                                OrganisationId = "BAAT"
-                            }
+                            TransferType = TransferType.Unrestrict
                         },
                         Comments = new List<Comment> 
                         {
@@ -121,13 +118,6 @@ namespace Wiedpug.API.ExampleResponses
                                 Version = 1082
                             },
                             ABN = "72001967184"
-                        },
-                        FinalReceiverList = new List<Organisation>
-                        {
-                            new Organisation
-                            {
-                                OrganisationId = "BAAT"
-                            }
                         },
                         Comments = new List<Comment>
                         {

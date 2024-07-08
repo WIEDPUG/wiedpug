@@ -18,14 +18,13 @@
   <Class Name="Wiedpug.Domain.Aggregates.DeliveryOrdersAndShippingInstructionsAggregate.DeliveryOrdersAndShippingInstruction" Collapsed="true">
     <Position X="3.75" Y="3.25" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAAAAABAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\DeliveryOrdersAndShippingInstructionsAggregate\DeliveryOrdersAndShippingInstruction.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="FinalReceiverList" />
       <Property Name="Consignments" />
     </ShowAsCollectionAssociation>
   </Class>

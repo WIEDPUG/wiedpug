@@ -12,13 +12,6 @@
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvice" Collapsed="true">
     <Position X="11" Y="3" Width="2.5" />
-    <AssociationLine Name="FinalreceiverList" Type="Wiedpug.Domain.ValueObject.Organisation" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.25" Y="3.562" />
-        <Point X="13.25" Y="4.621" />
-        <Point X="16" Y="4.621" />
-      </Path>
-    </AssociationLine>
     <AssociationLine Name="PaymentAdviceDetailList" Type="Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate.PaymentAdviceDetail" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="12.5" Y="3.562" />
@@ -27,14 +20,13 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAACQAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAACQAAAAAAAAAAIAA=</HashCode>
       <FileName>Aggregates\PaymentAdvicesAggregate\PaymentAdvice.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="FinalreceiverList" />
       <Property Name="PaymentAdviceDetailList" />
       <Property Name="Comments" />
     </ShowAsCollectionAssociation>

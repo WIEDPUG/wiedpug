@@ -47,10 +47,6 @@ namespace Wiedpug.Domain.Entities
         public required UpdateType UpdateType { get; set; } // FIELD NUMBER 10 - Update Type - Start: 30, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [Required]
-        [StringLength(6)]
-        public required CatalogueSymbol CatalogueSymbols { get; set; } // FIELD NUMBER 11 - Catalogue Symbols - Start: 31, Size: 6, Data Type: ID, Justification: L, Requirement Designator: M
-
-        [Required]
         [StringLength(2)]
         public required PackMaterial PackMaterial { get; set; } // FIELD NUMBER 12 - Pack Material - Start: 37, Size: 2, Data Type: ID, Justification: L, Requirement Designator: M
 
@@ -103,5 +99,69 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [StringLength(1)]
         public required PackCondition PackCondition { get; set; } // FIELD NUMBER 25 - Pack Condition - Start: 80, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
+
+
+        // LotHeaderExension
+
+
+        /// <summary>
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21.
+        /// For records 31 and 55 this is the date core test was sampled or date combination/OML was requested. 
+        /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+        /// </summary>
+        [DataType(DataType.Date)]
+        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [StringLength(10)]
+        public string? CoreTestSamplingDate { get; set; } // FIELD NUMBER 3 - Core Test Sampling Date - Start: 4, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
+
+        /// <summary>
+        /// This field provides for additional comments relating to the information contained in the Wool Description field.
+        /// </summary>
+        [StringLength(14)]
+        public string? WoolDescriptionComment { get; set; } // FIELD NUMBER 4 - Wool Description Comment - Start: 10, Size: 14, Data Type: AN, Justification: L, Requirement Designator: O
+
+        /// <summary>
+        /// This field contains a description that is either an AWEX-ID description or another appraisal description.
+        /// Alternative valid appraisal descriptions include AWC type, Exporter type. 
+        /// The AWEX-ID description must conform to the current AWEX-ID code standard.
+        /// If sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). 
+        /// This field is to be always transmitted in upper case.
+        /// </summary>
+        [Required]
+        [StringLength(20)]
+        public required string WoolDescription { get; set; } // FIELD NUMBER 5 - Wool Description - Start: 24, Size: 20, Data Type: AN, Justification: L, Requirement Designator: M
+
+        /// <summary>
+        /// `true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.
+        /// </summary>
+        /// 
+        [StringLength(5)]
+        public bool? GstTaxInvoiceFlag { get; set; } // FIELD NUMBER 6 - GST Tax Invoice Flag - Start: 44, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
+
+        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        public int? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+
+        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        public int? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+
+        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        public int? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+
+        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        public int? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+
+        /// <summary>
+        /// Audit code used for verifying if AWEX-ID was issued by AWEX.
+        /// </summary>
+        /// 
+        [StringLength(10)]
+        public string? WoolDescriptionAuditCode { get; set; } // FIELD NUMBER 11 - Wool Description Audit Code - Start: 69, Size: 10, Data Type: AN, Justification: L, Requirement Designator: O
+
+        /// <summary>
+        /// This is the total number of bales with a Reweigh Gross Kg over 204kg.
+        /// </summary>
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        public int? NumberOfOverweightBales { get; set; } // FIELD NUMBER 12 - Number of Overweight Bales - Start: 79, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
+
     }
 }

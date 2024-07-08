@@ -42,10 +42,10 @@ paths:
                         version: 1082
                         programName: NETR
                       abn: '72001967184'
-                    catalogueType: 1
+                    catalogueType: A
                     transferConfig:
-                      transferType: Broadcast
-                      exclusionList:
+                      transferType: Exclude
+                      finalReceiverList:
                         - organisationId: AMSC
                         - organisationId: FIBC
                     woolSaleHeaders:
@@ -54,7 +54,8 @@ paths:
                           saleIdentity:
                             sellingCentreType: AU_F
                             saleNumber: 29
-                          centreStorage: AU_AR
+                          centreStorage:
+                            centreAustralia: AU
                           saleDate: '2017-01-19'
                           woolState: A
                           packType: '2'
@@ -64,7 +65,6 @@ paths:
                           calculationBasis: B
                           freightCharge: 0
                           freightRebate: 3.25
-                          chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
                             organisationId: ABCD
@@ -74,9 +74,11 @@ paths:
                           sellingOrganisation:
                             organisationId: ABCD
                           woolTypeGroup: MFLC
-                          centreCatalogue: AU_G
+                          centreCatalogue:
+                            centreAustralia: G
                           deliveryBasis: D
-                          storageOrganisation: ABCD
+                          storageOrganisation:
+                            organisationId: ABCD
                           storageDescription: 45 MAIN ST
                           paymentDueDate: '2017-01-27'
                           discountRate: 1.5
@@ -92,7 +94,6 @@ paths:
                               tare: 16
                               cataloguePageNumber: 65
                               updateType: A
-                              catalogueSymbols: A
                               packMaterial: 'N'
                               lotType: 4
                               lightestIndividualBaleWeight: 149
@@ -100,7 +101,6 @@ paths:
                               costPerWeightUnit: 0
                               cleanWeight: 0
                               packCondition: 'N'
-                            lotHeaderExtension:
                               coreTestSamplingDate: '2019-01-17'
                               woolDescription: MF6S
                               gstTaxInvoiceFlag: true
@@ -205,10 +205,10 @@ paths:
                         version: 1082
                         programName: NETR
                       abn: '72001967184'
-                    catalogueType: 1
+                    catalogueType: A
                     transferConfig:
-                      transferType: PrivateSend
-                      inclusionList:
+                      transferType: Exclude
+                      finalReceiverList:
                         - organisationId: AWXLC
                     woolSaleHeaders:
                       - woolSaleHeaderLots:
@@ -216,7 +216,8 @@ paths:
                           saleIdentity:
                             sellingCentreType: AU_M
                             saleNumber: 29
-                          centreStorage: AU_AU
+                          centreStorage:
+                            centreAustralia: AU
                           saleDate: '2017-01-19'
                           woolState: '1'
                           packType: '6'
@@ -226,7 +227,6 @@ paths:
                           calculationBasis: B
                           freightCharge: 0
                           freightRebate: 3.25
-                          chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
                             organisationId: ABCD
@@ -236,9 +236,11 @@ paths:
                           sellingOrganisation:
                             organisationId: ABCD
                           woolTypeGroup: MFLC
-                          centreCatalogue: AU_G
+                          centreCatalogue:
+                            centreAustralia: G
                           deliveryBasis: D
-                          storageOrganisation: ABCD
+                          storageOrganisation:
+                            organisationId: ABCD
                           storageDescription: 45 MAIN ST
                           paymentDueDate: '2017-01-27'
                           discountRate: 1.5
@@ -254,7 +256,6 @@ paths:
                               tare: 16
                               cataloguePageNumber: 65
                               updateType: A
-                              catalogueSymbols: C
                               packMaterial: 'N'
                               lotType: 1
                               lightestIndividualBaleWeight: 149
@@ -262,7 +263,6 @@ paths:
                               costPerWeightUnit: 0
                               cleanWeight: 0
                               packCondition: 'N'
-                            lotHeaderExtension:
                               coreTestSamplingDate: '2019-01-17'
                               woolDescription: MF6S
                               gstTaxInvoiceFlag: true
@@ -433,10 +433,10 @@ paths:
                     version: 1082
                     programName: NETR
                   abn: '72001967184'
-                catalogueType: 1
+                catalogueType: A
                 transferConfig:
-                  transferType: Broadcast
-                  exclusionList:
+                  transferType: Exclude
+                  finalReceiverList:
                     - organisationId: AWMS
                     - organisationId: FCBB
                 woolSaleHeaders:
@@ -445,7 +445,8 @@ paths:
                       saleIdentity:
                         sellingCentreType: AU_M
                         saleNumber: 29
-                      centreStorage: AU_A
+                      centreStorage:
+                        centreAustralia: A
                       saleDate: '2017-01-19'
                       woolState: A
                       packType: F
@@ -455,7 +456,6 @@ paths:
                       calculationBasis: B
                       freightCharge: 0
                       freightRebate: 3.25
-                      chargePerLot: 0
                       catalogueSection: FLC
                       invoicingOrganisation:
                         organisationId: ABCD
@@ -465,9 +465,11 @@ paths:
                       sellingOrganisation:
                         organisationId: ABCD
                       woolTypeGroup: MFLC
-                      centreCatalogue: AU_G
+                      centreCatalogue:
+                        centreAustralia: G
                       deliveryBasis: D
-                      storageOrganisation: ABCD
+                      storageOrganisation:
+                        organisationId: ABCD
                       storageDescription: 45 MAIN ST
                       paymentDueDate: '2017-01-27'
                       discountRate: 1.5
@@ -483,7 +485,6 @@ paths:
                           tare: 16
                           cataloguePageNumber: 65
                           updateType: A
-                          catalogueSymbols: A
                           packMaterial: 'N'
                           lotType: 2
                           lightestIndividualBaleWeight: 149
@@ -491,9 +492,9 @@ paths:
                           costPerWeightUnit: 0
                           cleanWeight: 0
                           packCondition: 'N'
-                        lotHeaderExtension:
                           coreTestSamplingDate: '2019-01-17'
                           woolDescription: MF6S
+                          gstTaxInvoiceFlag: true
                           numberOfOverweightBales: 0
                         lotHeaderAwexData:
                           awexId: MF6S
@@ -654,8 +655,8 @@ paths:
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
                     excludedTypes:
-                      - recordTypesToBeExcluded: 79B
-                      - recordTypesToBeExcluded: '84'
+                      - recordTypesToBeExcluded: InterlotComponentBaleHeader
+                      - recordTypesToBeExcluded: BaleIdentification
                     season: 23
                   - transmissionTypeRequested: 5
                     saleIdentity:
@@ -667,8 +668,8 @@ paths:
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
                     excludedTypes:
-                      - recordTypesToBeExcluded: 79B
-                      - recordTypesToBeExcluded: '31'
+                      - recordTypesToBeExcluded: InterlotComponentBaleHeader
+                      - recordTypesToBeExcluded: FibreDiameterHistogramHeader
                     season: 23
               Request for Private Catalogue Data:
                 value:
@@ -682,8 +683,8 @@ paths:
                     useNetworkDateTime: false
                     woolTypeGroup: MFLC
                     excludedTypes:
-                      - recordTypesToBeExcluded: 79B
-                      - recordTypesToBeExcluded: 32A
+                      - recordTypesToBeExcluded: InterlotComponentBaleHeader
+                      - recordTypesToBeExcluded: FibreDiameterHistogramDetails
                     season: 23
         required: true
       responses:
@@ -710,14 +711,15 @@ paths:
                         version: 1082
                         programName: NETR
                       abn: '72001967184'
-                    catalogueType: 1
+                    catalogueType: A
                     woolSaleHeaders:
                       - woolSaleHeaderLots:
                           season: 16
                           saleIdentity:
                             sellingCentreType: AU_M
                             saleNumber: 29
-                          centreStorage: AU_AD
+                          centreStorage:
+                            centreAustralia: AD
                           saleDate: '2017-01-19'
                           woolState: '1'
                           packType: '9'
@@ -727,7 +729,6 @@ paths:
                           calculationBasis: B
                           freightCharge: 0
                           freightRebate: 3.25
-                          chargePerLot: 0
                           catalogueSection: FLC
                           invoicingOrganisation:
                             organisationId: ABCD
@@ -737,9 +738,11 @@ paths:
                           sellingOrganisation:
                             organisationId: ABCD
                           woolTypeGroup: MFLC
-                          centreCatalogue: AU_G
+                          centreCatalogue:
+                            centreAustralia: G
                           deliveryBasis: D
-                          storageOrganisation: ABCD
+                          storageOrganisation:
+                            organisationId: ABCD
                           storageDescription: 45 MAIN ST
                           paymentDueDate: '2017-01-27'
                           discountRate: 1.5
@@ -755,7 +758,6 @@ paths:
                               tare: 16
                               cataloguePageNumber: 65
                               updateType: A
-                              catalogueSymbols: C
                               packMaterial: 'N'
                               lotType: 5
                               lightestIndividualBaleWeight: 149
@@ -763,7 +765,6 @@ paths:
                               costPerWeightUnit: 0
                               cleanWeight: 0
                               packCondition: 'N'
-                            lotHeaderExtension:
                               coreTestSamplingDate: '2019-01-17'
                               woolDescription: MF6S
                               numberOfOverweightBales: 0
@@ -951,6 +952,16 @@ components:
           items:
             $ref: '#/components/schemas/CatalogueWoolSaleHeader'
       additionalProperties: false
+    CatalogueExcludedType:
+      required:
+        - recordTypesToBeExcluded
+      type: object
+      properties:
+        recordTypesToBeExcluded:
+          $ref: '#/components/schemas/CatalogueRecordTypesToBeExcluded'
+        subTypesToBeExcluded:
+          $ref: '#/components/schemas/SubTypeToBeExcluded'
+      additionalProperties: false
     CatalogueListApiResult:
       required:
         - isSuccessful
@@ -1006,6 +1017,17 @@ components:
           type: string
           nullable: true
       additionalProperties: false
+    CatalogueRecordTypesToBeExcluded:
+      enum:
+        - LotHeaderPricing
+        - LotHeaderAwexData
+        - LotHeaderVendorDeclaration
+        - ColourDetails
+        - InterlotComponentBaleHeader
+        - BaleIdentification
+        - FibreDiameterHistogramHeader
+        - FibreDiameterHistogramDetails
+      type: string
     CatalogueSection:
       enum:
         - BLK
@@ -1019,31 +1041,12 @@ components:
         - XBD
       type: string
       description: 'These are the codes allocated by the local wool authorities to sectionalise the sale catalogues.<br />BLK: ODDS - Black<br />DEAD: ODDS - Dead<br />FLC: MFLC - Merino Fleece<br />FMG: ODDS - Fellmongered<br />ODD: ODDS - Oddments<br />SKIN: ODDS - Skin Wool<br />SKT: MSKT - Skirting<br />TRAD: MFLC / MSKT / XBFS / ODDS - Traditionally Shown<br />XBD: C XBFS - Crossbred (Flc & Skt)'
-    CatalogueSymbol:
-      enum:
-        - A
-        - C
-        - D
-        - G
-        - H
-        - M
-        - O
-        - R
-        - S
-        - T
-        - U
-        - W
-        - X
-        - 'Y'
-      type: string
-      description: 'These are the symbols defined in the AWEX Wool Selling Rules. If this field has no value, it will indicate that there are no catalogue symbols for that lotTo obtain the current code list of values that may be used in this field please go to this URL: http://www.awex.com.au/standards/catalogue<br />A: Dumped Bales<br />C: Charity/Good Cause<br />D: De-banded<br />G: Lot offered under Trial Selling Status<br />H: Classed Samples (bearing Classing House stencil)<br />M: Machine processed (Decotted, crushed or blended)<br />O: Fellmongered<br />R: Reconditioned from wet<br />S: Wool is unclassed<br />T: Tested (where Test House is not AWTA)<br />U: Unskirted or Not Skirted to Code of Practice requirements<br />W: Broker (Re)classed (Classing House stencil - P cert. only)<br />X: Contains Broker Inspected (Classing House stencil - I cert. only)<br />Y: Pigmented and/or Medullated Fibre Risk (Run with or Black section)'
     CatalogueType:
       enum:
-        - 1
-        - 2
-      type: integer
-      description: '1: Auction Catalogues<br />2: Private Catalogues'
-      format: int32
+        - A
+        - P
+      type: string
+      description: 'A: Auction Catalogues<br />P: Private Catalogues'
     CatalogueWoolSaleHeader:
       required:
         - lots
@@ -1064,8 +1067,6 @@ components:
       properties:
         lotHeader:
           $ref: '#/components/schemas/LotHeader'
-        lotHeaderExtension:
-          $ref: '#/components/schemas/LotHeaderExtension'
         lotHeaderPricings:
           type: array
           items:
@@ -1131,197 +1132,215 @@ components:
           nullable: true
       additionalProperties: false
     Centre:
+      type: object
+      properties:
+        centreAustralia:
+          $ref: '#/components/schemas/CentreAustralia'
+        centreNewZealand:
+          $ref: '#/components/schemas/CentreNewZealand'
+        centreOverseas:
+          $ref: '#/components/schemas/CentreOverseas'
+      additionalProperties: false
+    CentreAustralia:
       enum:
-        - AU_A
-        - AU_AD
-        - AU_AR
-        - AU_AU
-        - AU_B
-        - AU_BA
-        - AU_BK
-        - AU_BL
-        - AU_BM
-        - AU_BO
-        - AU_BR
-        - AU_BT
-        - AU_C
-        - AU_CA
-        - AU_CB
-        - AU_CC
-        - AU_CL
-        - AU_CN
-        - AU_CO
-        - AU_CR
-        - AU_CU
-        - AU_CW
-        - AU_D
-        - AU_DE
-        - AU_DO
-        - AU_DR
-        - AU_E
-        - AU_ER
-        - AU_ES
-        - AU_F
-        - AU_G
-        - AU_GF
-        - AU_GI
-        - AU_GN
-        - AU_GR
-        - AU_GU
-        - AU_H
-        - AU_HA
-        - AU_HB
-        - AU_HM
-        - AU_HO
-        - AU_HY
-        - AU_I
-        - AU_J
-        - AU_JA
-        - AU_K
-        - AU_KE
-        - AU_KH
-        - AU_KI
-        - AU_KN
-        - AU_KT
-        - AU_KW
-        - AU_KY
-        - AU_L
-        - AU_LC
-        - AU_M
-        - AU_MA
-        - AU_MB
-        - AU_MC
-        - AU_ME
-        - AU_MG
-        - AU_MI
-        - AU_MO
-        - AU_MR
-        - AU_MU
-        - AU_N
-        - AU_NA
-        - AU_ND
-        - AU_NO
-        - AU_NR
-        - AU_OB
-        - AU_OR
-        - AU_P
-        - AU_PA
-        - AU_PL
-        - AU_Q
-        - AU_QU
-        - AU_R
-        - AU_S
-        - AU_SG
-        - AU_SH
-        - AU_SK
-        - AU_SW
-        - AU_SY
-        - AU_T
-        - AU_TE
-        - AU_U
-        - AU_UR
-        - AU_V
-        - AU_W
-        - AU_WA
-        - AU_WG
-        - AU_WL
-        - AU_WN
-        - AU_WR
-        - AU_WW
-        - AU_X
-        - AU_Y
-        - AU_YA
-        - AU_YM
-        - AU_YO
-        - AU_Z
-        - OS_ZA
-        - OS_ZB
-        - OS_ZC
-        - OS_ZD
-        - OS_ZE
-        - OS_ZF
-        - OS_ZG
-        - OS_ZH
-        - OS_ZI
-        - OS_ZJ
-        - OS_ZK
-        - OS_ZL
-        - OS_ZM
-        - OS_ZN
-        - OS_ZO
-        - OS_ZP
-        - OS_ZQ
-        - OS_ZR
-        - OS_ZS
-        - OS_ZT
-        - OS_ZU
-        - OS_ZV
-        - OS_ZW
-        - OS_ZX
-        - OS_ZY
-        - OS_ZZ
-        - NZ_A
-        - NZ_AW
-        - NZ_B
-        - NZ_BL
-        - NZ_BT
-        - NZ_C
-        - NZ_CV
-        - NZ_D
-        - NZ_F
-        - NZ_FA
-        - NZ_G
-        - NZ_GD
-        - NZ_GO
-        - NZ_HA
-        - NZ_HS
-        - NZ_I
-        - NZ_J
-        - NZ_K
-        - NZ_KA
-        - NZ_KP
-        - NZ_L
-        - NZ_LO
-        - NZ_LU
-        - NZ_M
-        - NZ_MA
-        - NZ_MK
-        - NZ_MT
-        - NZ_MU
-        - NZ_N
-        - NZ_NE
-        - NZ_O
-        - NZ_OH
-        - NZ_OI
-        - NZ_OM
-        - NZ_OT
-        - NZ_P
-        - NZ_PT
-        - NZ_PU
-        - NZ_R
-        - NZ_RG
-        - NZ_RI
-        - NZ_S
-        - NZ_SA
-        - NZ_SH
-        - NZ_SY
-        - NZ_T
-        - NZ_TA
-        - NZ_TE
-        - NZ_TH
-        - NZ_TP
-        - NZ_U
-        - NZ_V
-        - NZ_W
-        - NZ_WH
-        - NZ_WI
-        - NZ_WR
-        - NZ_WT
-        - NZ_WU
-        - NZ_X
-        - NZ_Y
-        - NZ_YP
-        - NZ_Z
+        - A
+        - AD
+        - AR
+        - AU
+        - B
+        - BA
+        - BK
+        - BL
+        - BM
+        - BO
+        - BR
+        - BT
+        - C
+        - CA
+        - CB
+        - CC
+        - CL
+        - CN
+        - CO
+        - CR
+        - CU
+        - CW
+        - D
+        - DE
+        - DO
+        - DR
+        - E
+        - ER
+        - ES
+        - F
+        - G
+        - GF
+        - GI
+        - GN
+        - GR
+        - GU
+        - H
+        - HA
+        - HB
+        - HM
+        - HO
+        - HY
+        - I
+        - J
+        - JA
+        - K
+        - KE
+        - KH
+        - KI
+        - KN
+        - KT
+        - KW
+        - KY
+        - L
+        - LC
+        - M
+        - MA
+        - MB
+        - MC
+        - ME
+        - MG
+        - MI
+        - MO
+        - MR
+        - MU
+        - 'N'
+        - NA
+        - ND
+        - 'NO'
+        - NR
+        - OB
+        - OR
+        - P
+        - PA
+        - PL
+        - Q
+        - QU
+        - R
+        - S
+        - SG
+        - SH
+        - SK
+        - SW
+        - SY
+        - T
+        - TE
+        - U
+        - UR
+        - V
+        - W
+        - WA
+        - WG
+        - WL
+        - WN
+        - WR
+        - WW
+        - X
+        - 'Y'
+        - YA
+        - YM
+        - YO
+        - Z
+      type: string
+      description: ''
+    CentreNewZealand:
+      enum:
+        - A
+        - AW
+        - B
+        - BL
+        - BT
+        - C
+        - CV
+        - D
+        - F
+        - FA
+        - G
+        - GD
+        - GO
+        - HA
+        - HS
+        - I
+        - J
+        - K
+        - KA
+        - KP
+        - L
+        - LO
+        - LU
+        - M
+        - MA
+        - MK
+        - MT
+        - MU
+        - 'N'
+        - NE
+        - O
+        - OH
+        - OI
+        - OM
+        - OT
+        - P
+        - PT
+        - PU
+        - R
+        - RG
+        - RI
+        - S
+        - SA
+        - SH
+        - SY
+        - T
+        - TA
+        - TE
+        - TH
+        - TP
+        - U
+        - V
+        - W
+        - WH
+        - WI
+        - WR
+        - WT
+        - WU
+        - X
+        - 'Y'
+        - YP
+        - Z
+      type: string
+      description: ''
+    CentreOverseas:
+      enum:
+        - ZA
+        - ZB
+        - ZC
+        - ZD
+        - ZE
+        - ZF
+        - ZG
+        - ZH
+        - ZI
+        - ZJ
+        - ZK
+        - ZL
+        - ZM
+        - ZN
+        - ZO
+        - ZP
+        - ZQ
+        - ZR
+        - ZS
+        - ZT
+        - ZU
+        - ZV
+        - ZW
+        - ZX
+        - ZY
+        - ZZ
       type: string
       description: ''
     CertificateIDPrefix:
@@ -1776,16 +1795,12 @@ components:
         - L
       type: string
       description: 'D: Delivery Nominated Destination<br />L: Loaded on Transport'
-    ExcludedType:
-      required:
-        - recordTypesToBeExcluded
-      type: object
-      properties:
-        recordTypesToBeExcluded:
-          $ref: '#/components/schemas/RecordTypesToBeExcluded'
-        subTypesToBeExcluded:
-          $ref: '#/components/schemas/SubTypeToBeExcluded'
-      additionalProperties: false
+    ElectronicSaleFlag:
+      enum:
+        - 'Y'
+        - 'N'
+      type: string
+      description: 'Y: Yes<br />N: No'
     FibreDiameterHistogram:
       type: object
       properties:
@@ -2194,7 +2209,6 @@ components:
     LotHeader:
       required:
         - bales
-        - catalogueSymbols
         - gross
         - lotIdentity
         - lotType
@@ -2202,6 +2216,7 @@ components:
         - packMaterial
         - tare
         - updateType
+        - woolDescription
       type: object
       properties:
         lotIdentity:
@@ -2240,8 +2255,6 @@ components:
           $ref: '#/components/schemas/SourceCode'
         updateType:
           $ref: '#/components/schemas/UpdateType'
-        catalogueSymbols:
-          $ref: '#/components/schemas/CatalogueSymbol'
         packMaterial:
           $ref: '#/components/schemas/PackMaterial'
         lotType:
@@ -2293,46 +2306,6 @@ components:
           nullable: true
         packCondition:
           $ref: '#/components/schemas/PackCondition'
-      additionalProperties: false
-    LotHeaderAwexData:
-      type: object
-      properties:
-        awexId:
-          maxLength: 20
-          minLength: 0
-          type: string
-          description: AWEX-ID must conform to the current AWEX-ID code standard.
-          nullable: true
-        appraiserId:
-          maxLength: 6
-          minLength: 0
-          type: string
-          description: Contains the AWEX accredited appraiser ID for this lot.
-          nullable: true
-        classersRegisteredNumber:
-          maxLength: 6
-          minLength: 0
-          type: string
-          description: The AWEX stencil number of the classer or classing house responsible for the final classification of the wool before sale.
-          nullable: true
-        awexIdComment:
-          maxLength: 14
-          minLength: 0
-          type: string
-          description: This field provides for additional comments relating to the information contained in the `awexId` field.
-          nullable: true
-        awexIdAuditCode:
-          maxLength: 10
-          minLength: 0
-          type: string
-          description: Audit code used for verifying if `awexId` was issued by AWEX
-          nullable: true
-      additionalProperties: false
-    LotHeaderExtension:
-      required:
-        - woolDescription
-      type: object
-      properties:
         coreTestSamplingDate:
           maxLength: 10
           minLength: 0
@@ -2389,6 +2362,40 @@ components:
           type: integer
           description: This is the total number of bales with a Reweigh Gross Kg over 204kg.
           format: int32
+          nullable: true
+      additionalProperties: false
+    LotHeaderAwexData:
+      type: object
+      properties:
+        awexId:
+          maxLength: 20
+          minLength: 0
+          type: string
+          description: AWEX-ID must conform to the current AWEX-ID code standard.
+          nullable: true
+        appraiserId:
+          maxLength: 6
+          minLength: 0
+          type: string
+          description: Contains the AWEX accredited appraiser ID for this lot.
+          nullable: true
+        classersRegisteredNumber:
+          maxLength: 6
+          minLength: 0
+          type: string
+          description: The AWEX stencil number of the classer or classing house responsible for the final classification of the wool before sale.
+          nullable: true
+        awexIdComment:
+          maxLength: 14
+          minLength: 0
+          type: string
+          description: This field provides for additional comments relating to the information contained in the `awexId` field.
+          nullable: true
+        awexIdAuditCode:
+          maxLength: 10
+          minLength: 0
+          type: string
+          description: Audit code used for verifying if `awexId` was issued by AWEX
           nullable: true
       additionalProperties: false
     LotHeaderPricingData:
@@ -2857,83 +2864,6 @@ components:
           description: Used to transmit (other) information relevant to the Scheme that is required by the buyer(e.g.Month/Year shorn).
           nullable: true
       additionalProperties: false
-    RecordTypesToBeExcluded:
-      enum:
-        - '00'
-        - '08'
-        - 08A
-        - '09'
-        - '10'
-        - '12'
-        - '13'
-        - '14'
-        - '20'
-        - 21A
-        - 21B
-        - 21C
-        - 22A
-        - 22B
-        - 23A
-        - 23B
-        - 24A
-        - 24B
-        - 25A
-        - '30'
-        - '31'
-        - 32A
-        - '36'
-        - 40A
-        - 40B
-        - 40C
-        - '42'
-        - 44A
-        - 44B
-        - 44C
-        - '45'
-        - '50'
-        - 51C
-        - 51D
-        - 51E
-        - 51F
-        - 51I
-        - 51J
-        - 51K
-        - 51L
-        - 51M
-        - 51N
-        - 51P
-        - 51R
-        - 51U
-        - 51V
-        - 51W
-        - 51Y
-        - 51X
-        - 51Z
-        - '52'
-        - '53'
-        - 54A
-        - '55'
-        - '56'
-        - '57'
-        - '58'
-        - '60'
-        - 64D
-        - 64H
-        - 65D
-        - 65H
-        - 65T
-        - '66'
-        - '67'
-        - '68'
-        - 79A
-        - 79B
-        - '80'
-        - '85'
-        - '81'
-        - '84'
-        - '90'
-      type: string
-      description: '00: Transmission Header<br />08: Inclusion List<br />08A: Exclusion List<br />09: Final Receiver List<br />10:Wool Sale Header – Lots<br />12: Wool Sale Header – Groups<br />13: Lot Price and Buyer Details<br />14: Sale Status<br />20: Lot Header - Appraisal data<br />21A: Lot Header – Extension<br />21B: Lot Header – Pricing Data<br />21C: Lot Header - AWEX Data<br />22A: Group Header<br />22B: Group Header-Extension<br />23A,: Lot Invoice Header<br />23B: Lot Invoice – Extension<br />24A: Lot Header<br />24B: Lot Details<br />25A: Lot Header – Vendor Declaration<br />30: Lot Payment Detail<br />31: Fibre Diameter Histogram Header<br />32A: Fibre Diameter Histogram Detail<br />36: Address<br />40A: Consignment Header<br />40B: Consignment Extension (1)<br />40C: Consignment Extension (2)<br />42: Countermark/Headmark<br />44A: Delivery Order Detail<br />44B: Delivery Order Detail Extension (1)<br />44C: Delivery Order Detail Extension (2)<br />45: Comment<br />50: Test Data Header<br />51C: Colour Details<br />51D: Dichloromethane Test Details<br />51E: Scoured Yield Extension<br />51F: Premium TestDetails<br />51I: Subjective Interlot Details<br />51J: Combination Details<br />51K: Length and Strength Combination Details<br />51L: Length and Strength Details<br />51M: OML Certificate Details<br />51N: OMI Details<br />51P: Core Test Details<br />51R: Guidance Report Details<br />51U: Length After Carding Test Details<br />51V: Conditioning Test Details<br />51W: Scoured Test Details<br />51Y: Post sale Core Test Details<br />51X: Colour Combination Details<br />51Z: Adjustment Note Details<br />52: Test Status Detail<br />53: Request for Data<br />54A: Contract Limit Requirements<br />55: Core Test Request Verification<br />56: Dark and Medullated Fibre Risk Details<br />57: Request Post-Sale Printing of Pre-Sale Certificate<br />58: Certificate Request<br />59: Test Certificate Update Detail<br />60: Payment Detail<br />64H: Payment Header<br />65D: Statement Detail<br />65H: Statement Header<br />65T: Statement Trailer<br />66: Miscellaneous Charge<br />67: Payment Summary<br />68: Other Details<br />79A:  Catalogue Lot Desc.<br />79B: Interlot Component Bale Header<br />80: Bale Header<br />85: Property Identification Codes<br />81: Bale Detail<br />84: Bale Identification<br />90: Transmission Response'
     ReissueChargeFlag:
       enum:
         - 0
@@ -2989,6 +2919,7 @@ components:
           maxLength: 5
           minLength: 0
           type: boolean
+          description: "Boolean value to indicate wethear to use Network Datetime\r\nTrue for use Network Datetime, False for not use"
           nullable: true
         woolTypeGroup:
           $ref: '#/components/schemas/WoolTypeGroup'
@@ -2997,7 +2928,7 @@ components:
           minLength: 0
           type: array
           items:
-            $ref: '#/components/schemas/ExcludedType'
+            $ref: '#/components/schemas/CatalogueExcludedType'
           description: Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header.
           nullable: true
         season:
@@ -3226,12 +3157,7 @@ components:
       properties:
         transferType:
           $ref: '#/components/schemas/TransferType'
-        inclusionList:
-          type: array
-          items:
-            $ref: '#/components/schemas/Organisation'
-          nullable: true
-        exclusionList:
+        finalReceiverList:
           type: array
           items:
             $ref: '#/components/schemas/Organisation'
@@ -3239,10 +3165,11 @@ components:
       additionalProperties: false
     TransferType:
       enum:
-        - Broadcast
-        - PrivateSend
+        - Unrestrict
+        - Restrict
+        - Exclude
       type: string
-      description: 'Broadcast: Send document to all members<br />PrivateSend: Send document to appointed members'
+      description: 'Unrestrict: Send document to all members<br />Restrict: Send document to appointed members<br />Exclude: Send to all members excluding the appointed members'
     TransmissionHeader:
       required:
         - abn
@@ -3384,17 +3311,6 @@ components:
           description: Total 4 digits with 2 digits after the decimal point. e.g. 23.76
           format: double
           nullable: true
-        chargePerLot:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          description: "Any charge made for a lot which is not covered by the Post Sale Charge or the Freight charge per Bale fields.\r\nTotal 5 digits with 2 digits after the decimal point. e.g. 123.76"
-          format: double
-          nullable: true
-        invoiceNumber:
-          maxLength: 8
-          minLength: 0
-          type: string
-          nullable: true
         catalogueSection:
           $ref: '#/components/schemas/CatalogueSection'
         invoicingOrganisation:
@@ -3419,10 +3335,7 @@ components:
         alternateDelivery:
           $ref: '#/components/schemas/Centre'
         storageOrganisation:
-          maxLength: 5
-          minLength: 0
-          type: string
-          description: "This is the organisation store that is storing the wool. \r\nNote: If there is more than one organisation in a centre, then separate AWEX codes are required for each store.\r\nIt is not necessarily the same as the Releasing Organisation."
+          $ref: '#/components/schemas/Organisation'
         storageDescription:
           maxLength: 15
           minLength: 0
@@ -3505,10 +3418,7 @@ components:
         saleType:
           $ref: '#/components/schemas/SaleType'
         electronicSaleFlag:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          nullable: true
+          $ref: '#/components/schemas/ElectronicSaleFlag'
         reservePriceDisplayFlag:
           maxLength: 5
           minLength: 0

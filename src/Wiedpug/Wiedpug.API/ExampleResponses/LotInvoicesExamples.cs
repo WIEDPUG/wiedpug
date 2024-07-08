@@ -50,7 +50,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = Centre.AU_AR,
+                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AR },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
@@ -74,12 +74,15 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationId = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = Centre.AU_G,
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D
                                 },
                                 WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension
                                 {
-                                    StorageOrganisation = "ABCD",
+                                    StorageOrganisation = new Organisation
+                                    {
+                                        OrganisationId = "ABCD"
+                                    },
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",
                                     DiscountRate = 1.51,
@@ -245,7 +248,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = Centre.AU_AR,
+                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AR },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
@@ -269,12 +272,15 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationId = "ABCD"
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = Centre.AU_G,
+                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D
                                 },
                                 WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension
                                 {
-                                    StorageOrganisation = "ABCD",
+                                    StorageOrganisation = new Organisation
+                                    {
+                                        OrganisationId = "ABCD"
+                                    },
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",
                                     DiscountRate = 1.51,

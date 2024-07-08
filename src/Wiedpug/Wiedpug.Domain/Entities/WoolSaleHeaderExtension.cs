@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -12,7 +13,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [StringLength(5)]
-        public required string StorageOrganisation { get; set; } // FIELD NUMBER 3 - Storage Organisation - Start: 3, Size: 5, Data Type: AN, Justification: L, Requirement Designator: R, Value: '11'
+        public required Organisation StorageOrganisation { get; set; } // FIELD NUMBER 3 - Storage Organisation - Start: 3, Size: 5, Data Type: AN, Justification: L, Requirement Designator: R, Value: '11'
 
         /// <summary>
         /// Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.

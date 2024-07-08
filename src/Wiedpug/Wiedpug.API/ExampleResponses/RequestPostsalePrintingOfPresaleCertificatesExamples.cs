@@ -66,7 +66,9 @@ namespace Wiedpug.API.ExampleResponses
                             SellingCentreType = SellingCentreType.AU_AU,
                             SaleNumber = 23
                         },
-                        CentreStorage = Centre.AU_AR,
+                        CentreStorage = new Centre{
+                           CentreAustralia =  CentreAustralia.AR
+                        },
                         CertificateDeliveryIndicator = CertificateDeliveryIndicator.ToBrokerOrBuyerAddress
                     }
                 }
@@ -156,7 +158,9 @@ namespace Wiedpug.API.ExampleResponses
                             SellingCentreType = SellingCentreType.AU_AU,
                             SaleNumber = 23
                         },
-                        CentreStorage = Centre.AU_AR,
+                        CentreStorage = new Centre{
+                           CentreAustralia =  CentreAustralia.AR
+                        },
                         CertificateDeliveryIndicator = CertificateDeliveryIndicator.ToBrokerOrBuyerAddress
                     }
                 }

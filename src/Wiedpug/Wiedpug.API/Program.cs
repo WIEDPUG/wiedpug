@@ -62,40 +62,40 @@ var apiVersionSet = app.NewApiVersionSet()
 var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(apiVersionSet);
 
 
-versionedGroup.MapTestCertificatesEndpoints();
+//versionedGroup.MapTestCertificatesEndpoints();
 
 versionedGroup.MapCatalogueEndpoints();
 
-versionedGroup.MapRequestForStatusEndpoints();
+//versionedGroup.MapRequestForStatusEndpoints();
 
-versionedGroup.MapOrganisationDetailsEndpoints();
+//versionedGroup.MapOrganisationDetailsEndpoints();
 
 //versionedGroup.MapCatalogueEndpointsV2();
-versionedGroup.MapTestStatusEndpoints();
+//versionedGroup.MapTestStatusEndpoints();
 
-versionedGroup.MapTestCertificateUpdateEndpoints();
+//versionedGroup.MapTestCertificateUpdateEndpoints();
 
-versionedGroup.MapTestCertificateRequestsEndpoints();
+//versionedGroup.MapTestCertificateRequestsEndpoints();
 
-versionedGroup.MapTestRequestsVerificationEndpoints();
+//versionedGroup.MapTestRequestsVerificationEndpoints();
 
-versionedGroup.MapLotInvoicesEndpoints();
+//versionedGroup.MapLotInvoicesEndpoints();
 
-versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
+//versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
 
-versionedGroup.MapPaymentAdvicesEndpoints();
+//versionedGroup.MapPaymentAdvicesEndpoints();
 
-versionedGroup.MapPaymentConfirmationEndpoints();
+//versionedGroup.MapPaymentConfirmationEndpoints();
 
-versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
+//versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
 
-versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
+//versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
 
-versionedGroup.MapStatementsEndpoints();
+//versionedGroup.MapStatementsEndpoints();
 
-versionedGroup.MapTextsEndpoints();
+//versionedGroup.MapTextsEndpoints();
 
-versionedGroup.MapLotPriceAndBuyersEndpoints();
+//versionedGroup.MapLotPriceAndBuyersEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

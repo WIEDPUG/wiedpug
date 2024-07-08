@@ -54,7 +54,9 @@ namespace Wiedpug.API.ExampleResponses
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.ObjectivelyMatchedInterlot,
-                            CentreAuction = Centre.AU_A,
+                            CentreAuction = new Centre{
+                           CentreAustralia =  CentreAustralia.A
+                        },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
@@ -172,7 +174,9 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.SubjectivelyMatchedInterlot,
-                            CentreAuction = Centre.AU_A,
+                            CentreAuction = new Centre{
+                           CentreAustralia =  CentreAustralia.A
+                        },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.U,
                             ScouredType = ScouredType.NotScoured,
@@ -364,7 +368,9 @@ namespace Wiedpug.API.ExampleResponses
                             RegrabSampleWeight=1,
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
-                            CentreAuction = Centre.AU_A,
+                            CentreAuction = new Centre{
+                           CentreAustralia =  CentreAustralia.A
+                        },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
@@ -482,7 +488,9 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
-                            CentreAuction = Centre.AU_A,
+                            CentreAuction = new Centre{
+                           CentreAustralia =  CentreAustralia.A
+                        },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.C,
                             ScouredType = ScouredType.NotScoured,

@@ -43,12 +43,9 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     ABN = "72001967184"
                 },
-                FinalReceiverList = new List<Organisation>
-                {
-                    new Organisation
-                    {
-                        OrganisationId = "AWTS"
-                    },
+                TransferConfig = new TransferConfig
+                 {
+                     TransferType = TransferType.Unrestrict
                 },
                 Consignments = new List<Consignment>
                 {
@@ -109,7 +106,10 @@ namespace Wiedpug.API.ExampleResponses
                                                 SellingCentreType = SellingCentreType.AU_N,
                                                 SaleNumber = 23
                                             },
-                                            CentreStorage = Centre.AU_A,
+                                            CentreStorage =new Centre
+                                            {
+                                                CentreAustralia = CentreAustralia.A
+                                            },
                                             StorageOrganisation = new Organisation
                                             {
                                                 OrganisationId="MBCC"
@@ -227,13 +227,6 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         ABN = "72001967184"
                     },
-                    FinalReceiverList = new List<Organisation>
-                {
-                    new Organisation
-                    {
-                        OrganisationId = "AWTS"
-                    },
-                },
                     Consignments = new List<Consignment>
                 {
                     new Consignment
@@ -293,7 +286,9 @@ namespace Wiedpug.API.ExampleResponses
                                                 SellingCentreType = SellingCentreType.AU_N,
                                                 SaleNumber = 23
                                             },
-                                            CentreStorage = Centre.AU_A,
+                                            CentreStorage = new Centre { 
+                                                CentreAustralia = CentreAustralia.C
+                                            },
                                             StorageOrganisation = new Organisation
                                             {
                                                 OrganisationId="MBCC"

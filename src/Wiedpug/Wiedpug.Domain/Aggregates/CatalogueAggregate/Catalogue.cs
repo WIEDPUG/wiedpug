@@ -17,7 +17,7 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public required CatalogueType CatalogueType { get; set; }
 
         /// <summary>
-        /// Used to define document transfer type: broadcast or private-sent
+        /// Used to define document transfer type: unrestricted, restricted or exclusion
         /// Should only be required for document upload/create/update
         /// Should be excluded when returning document to members
         /// </summary>
