@@ -86,7 +86,7 @@
                                                 "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                                 "dateLastUpdated": "2020-04-28",
                                                 "industryGroupId": "E",
-                                                "transmitterFlag": "Y",
+                                                "transmitterFlag": true,
                                                 "phoneNumber": {
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
@@ -133,7 +133,7 @@
                                                 "nameOfOrganisation": "DEMO BUYER 1",
                                                 "dateLastUpdated": "2020-04-28",
                                                 "industryGroupId": "E",
-                                                "transmitterFlag": "N"
+                                                "transmitterFlag": false
                                             },
                                             {
                                                 "id": "3",
@@ -143,7 +143,7 @@
                                                 "nameOfOrganisation": "AUSTRALIAN WOOL TESTING AUTH LTD",
                                                 "dateLastUpdated": "2020-04-28",
                                                 "industryGroupId": "A",
-                                                "transmitterFlag": "Y",
+                                                "transmitterFlag": true,
                                                 "phoneNumber": {
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
@@ -328,7 +328,7 @@
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
                                             "industryGroupId": "T",
-                                            "transmitterFlag": "Y",
+                                            "transmitterFlag": true,
                                             "phoneNumber": {
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
@@ -480,7 +480,7 @@
                                         "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                         "dateLastUpdated": "2020-04-28",
                                         "industryGroupId": "E",
-                                        "transmitterFlag": "Y",
+                                        "transmitterFlag": true,
                                         "phoneNumber": {
                                             "standardPhoneNumber": {
                                                 "countryCode": "61",
@@ -555,7 +555,7 @@
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
                                             "industryGroupId": "T",
-                                            "transmitterFlag": "Y",
+                                            "transmitterFlag": true,
                                             "phoneNumber": {
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
@@ -1414,9 +1414,10 @@
                         "$ref": "#/components/schemas/IndustryGroupId"
                     },
                     "transmitterFlag": {
-                        "maxLength": 1,
+                        "maxLength": 5,
                         "minLength": 0,
-                        "type": "string"
+                        "type": "boolean",
+                        "description": "A boolean value to determine wether the organisation transmits or receives data electronically.\r\nTrue for transmits or receives data electronically. False for not."
                     },
                     "phoneNumber": {
                         "$ref": "#/components/schemas/PhoneNumber"

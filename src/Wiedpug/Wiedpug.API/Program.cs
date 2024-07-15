@@ -68,7 +68,7 @@ var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(api
 
 //versionedGroup.MapRequestForStatusEndpoints();
 
-//versionedGroup.MapOrganisationDetailsEndpoints();
+versionedGroup.MapOrganisationDetailsEndpoints();
 
 //versionedGroup.MapCatalogueEndpointsV2();
 //versionedGroup.MapTestStatusEndpoints();

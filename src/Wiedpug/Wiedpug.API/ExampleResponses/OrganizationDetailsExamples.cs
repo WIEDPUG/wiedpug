@@ -40,7 +40,7 @@ namespace Wiedpug.API.ExampleResponses
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId= IndustryGroupId.T,
-                        TransmitterFlag="Y",
+                        TransmitterFlag=true,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
@@ -92,7 +92,7 @@ namespace Wiedpug.API.ExampleResponses
                         NameOfOrganisation = "DEMO BUYER 1",
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId= IndustryGroupId.E,
-                        TransmitterFlag= "N"
+                        TransmitterFlag= false
                     }
                 }
             };
@@ -132,7 +132,7 @@ namespace Wiedpug.API.ExampleResponses
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId=IndustryGroupId.T,
-                        TransmitterFlag="Y",
+                        TransmitterFlag=true,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
@@ -212,7 +212,7 @@ namespace Wiedpug.API.ExampleResponses
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
                         IndustryGroupId= IndustryGroupId.E,
-                        TransmitterFlag="Y",
+                        TransmitterFlag=true,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
                             CountryCode="61",
@@ -329,7 +329,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId= IndustryGroupId.E,
-                            TransmitterFlag="Y",
+                            TransmitterFlag=true,
                             PhoneNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
                                 CountryCode="61",
@@ -382,7 +382,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId= IndustryGroupId.E,
-                            TransmitterFlag= "N"
+                            TransmitterFlag= false
                         },
                         new OrganisationDetail
                         {
@@ -394,7 +394,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId= IndustryGroupId.A,
-                            TransmitterFlag= "Y",
+                            TransmitterFlag= true,
                             PhoneNumber= new PhoneNumber
                             {
                                 StandardPhoneNumber = new StandardPhoneNumber{
@@ -490,7 +490,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId=IndustryGroupId.E,
-                            TransmitterFlag="Y",
+                            TransmitterFlag=true,
                             ABN = null,
                             PhoneNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
@@ -545,7 +545,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId= IndustryGroupId.E,
-                            TransmitterFlag= "N"
+                            TransmitterFlag= false
                         },
                         new OrganisationDetail
                         {
@@ -557,7 +557,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId= IndustryGroupId.A,
-                            TransmitterFlag= "Y",
+                            TransmitterFlag= true,
                             PhoneNumber= new PhoneNumber
                             {
                                 StandardPhoneNumber = new StandardPhoneNumber{
@@ -653,7 +653,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId=IndustryGroupId.T,
-                            TransmitterFlag="Y",
+                            TransmitterFlag=true,
                             PhoneNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
                                 CountryCode="61",
@@ -706,7 +706,7 @@ namespace Wiedpug.API.ExampleResponses
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId= IndustryGroupId.E,
-                            TransmitterFlag= "N"
+                            TransmitterFlag= false
                         }
                 }
                 }
