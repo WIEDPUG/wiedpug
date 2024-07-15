@@ -23,11 +23,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                                                OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -113,11 +113,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "ABCD"
+                                                    OrganisationCode = "ABC",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                                                    OrganisationCode = "ATW",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier

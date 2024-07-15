@@ -74,7 +74,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         /// 
         [Range(0, 99)]
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? Team3Hauteur { get; set; }
 
         [Required]

@@ -9,16 +9,11 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    /// <summary>
-    /// 
-    /// 
-    /// 
-    /// </summary>    
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     [Description("This is Centres for New Zealand. " +
         "A centre is a town where any activity connected with the wool industry takes place. " +
         "The codes used in transmissions are those defined in the Australian Wool Selling Regulation.")]
-    [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum CentreNewZealand
+    public enum CentreCodeNewZealand
     {
         //New Zealand
         [Description("A: New Zealand - Auckland")]
@@ -144,6 +139,8 @@ namespace Wiedpug.Domain.Enums
         [Description("YP: New Zealand - Waipukurau")]
         YP,
         [Description("Z: New Zealand - Taupo")]
-        Z
+        Z,
+        [Description("ZY: New Zealand - Ashburton")]
+        ZY
     }
 }

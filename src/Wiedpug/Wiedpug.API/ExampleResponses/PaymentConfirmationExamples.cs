@@ -23,11 +23,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                        OrganisationCode = "ATW",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                        OrganisationCode = "ATW",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -44,7 +44,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ClientCode= new Organisation
                             {
-                                OrganisationId = "AWCED"
+                        OrganisationCode = "ATC",
                             },
                             StatementDate="2024-05-11",
                             StatementPaymentDate="2024-06-01",
@@ -106,11 +106,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "AWTA"
+                            OrganisationCode = "ATW",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "BCCA"
+                            OrganisationCode = "ATC",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -127,7 +127,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ClientCode= new Organisation
                             {
-                                OrganisationId = "AWCED"
+                                OrganisationCode = "ATC",
                             },
                             StatementDate="2024-05-11",
                             StatementPaymentDate="2024-06-01",

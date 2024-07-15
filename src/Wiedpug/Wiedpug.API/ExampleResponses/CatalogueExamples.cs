@@ -24,11 +24,11 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator =new Organisation
                             {
-                                OrganisationId ="AWTA"
+                                OrganisationCode = "AAT"
                             },
                             CurrentReceiver = new Organisation
                             {
-                                OrganisationId = "ATWA"
+                               OrganisationCode = "ATW"
                             },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
@@ -46,10 +46,10 @@ namespace Wiedpug.API.ExampleResponses
                             FinalReceiverList = new List<Organisation>
                             {
                                 new Organisation{
-                                   OrganisationId = "AMSC"
+                                    OrganisationCode = "AMS"
                                 },
                                 new Organisation{
-                                   OrganisationId = "FIBC"
+                                    OrganisationCode = "FIB"
                                 }
                             },
                         },
@@ -57,7 +57,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new CatalogueWoolSaleHeader
                             {
-                                WoolSaleHeaderLots = new WoolSaleHeaderLots //10
+                                WoolSaleHeaderLots = new WoolSaleHeaderLots
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -65,7 +65,8 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_F,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AU },
+                                    CentreStorage = new Centre { 
+                                        Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -79,25 +80,28 @@ namespace Wiedpug.API.ExampleResponses
                                     IsFinalCatalogue = true,
                                     InvoicingOrganisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
+
                             },
                                     ReleasingOrganisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
+
                             },
                                     SellingOrganisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
+
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
+                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D,
                                     StorageOrganisation = new Organisation
                                     {
-                                        OrganisationId = "ABCD"
+                                                                OrganisationCode = "ABC",
+
                                     },
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = "2017-01-27",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
@@ -118,6 +122,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CataloguePageNumber = 65,
                                             UpdateType = UpdateType.A,
                                             PackMaterial = PackMaterial.N,
+                                            CatalogueSymbols = "A",
                                             LotType = LotType.SubjectivelyMatchedInterlot,
                                             LightestIndividualBaleWeight = 149,
                                             ReportingFlag = ReportingFlag.R,
@@ -275,11 +280,11 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
                                                 CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
@@ -298,7 +303,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 new Organisation
                                 {
-                                    OrganisationId="AWXLC"
+                            OrganisationCode = "AWL",
                                 }
                             }
                         },
@@ -314,7 +319,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AU },
+                                    CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AU },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState._1,
                                     PackType = PackType._6,
@@ -326,21 +331,24 @@ namespace Wiedpug.API.ExampleResponses
                                     FreightRebate = 3.25,
                                     CatalogueSection = CatalogueSection.FLC,
                                     IsFinalCatalogue = true,
-                                    InvoicingOrganisation = new Organisation { OrganisationId = "ABCD" },
+                                    InvoicingOrganisation = new Organisation { 
+                                        OrganisationCode = "ABC",
+                                    },
                                     ReleasingOrganisation =  new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
+                                    {
+                                        OrganisationCode = "ABC",
+                                    },
                                     SellingOrganisation = new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
+                                    {
+                                        OrganisationCode = "ABC",
+                                    },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
+                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D,
-                                    StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
+                                    StorageOrganisation = new Organisation {  
+                                        OrganisationCode = "ABC", 
+                                    },
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = "2017-01-27",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
@@ -361,6 +369,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CataloguePageNumber = 65,
                                             UpdateType = UpdateType.A,
                                             PackMaterial = PackMaterial.N,
+                                            CatalogueSymbols = "A",
                                             LotType = LotType.ClassedGrowerLot,
                                             LightestIndividualBaleWeight = 149,
                                             ReportingFlag = ReportingFlag.R,
@@ -504,11 +513,13 @@ namespace Wiedpug.API.ExampleResponses
                         DateFormatLastRevised = "2020-07-15",
                         DateTransmissionFileCreated = "2016-01-17",
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                        DocumentOriginator = new Organisation { OrganisationId = "ABCD" },
+                        DocumentOriginator = new Organisation {                         OrganisationCode = "ABC",
+},
                         VersionNumber = 31,
                                             CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
+
                     },
                         SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
                         {
@@ -524,8 +535,10 @@ namespace Wiedpug.API.ExampleResponses
                             TransferType = TransferType.Exclude,
                             FinalReceiverList = new List<Organisation>
                             {
-                                new Organisation { OrganisationId = "AWMS" },
-                                new Organisation { OrganisationId = "FCBB" }
+                                new Organisation {                         OrganisationCode = "AWM",
+},
+                                new Organisation {                         OrganisationCode = "FCB",
+ }
                             }
                     },
                     WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
@@ -540,7 +553,7 @@ namespace Wiedpug.API.ExampleResponses
                                     SellingCentreType = SellingCentreType.AU_M,
                                     SaleNumber = 29
                                 },
-                                CentreStorage = new Centre { CentreAustralia = CentreAustralia.A },
+                                CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SaleDate = "2017-01-19",
                                 WoolState = WoolState.A,
                                 PackType = PackType.F,
@@ -553,23 +566,26 @@ namespace Wiedpug.API.ExampleResponses
                                 CatalogueSection = CatalogueSection.FLC,
                                 IsFinalCatalogue = true,
                                 InvoicingOrganisation = new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
+                                {
+                                    OrganisationCode = "ABC",
+                                },
                                 ReleasingOrganisation = new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
+                                {
+                                    OrganisationCode = "ABC",
+                                },
                                 SellingOrganisation = new Organisation
-                            {
-                                OrganisationId = "ABCD"
-                            },
+                                {
+                                    OrganisationCode = "ABC",
+                                },
                                 WoolTypeGroup = WoolTypeGroup.MFLC,
-                                CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
+                                CentreCatalogue = new Centre { 
+                                    Country = CountryCode.AU,
+                                    CentreCode = CentreCodeAustralia.G },
                                 DeliveryBasis = DeliveryBasis.D,
-                                StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
+                                StorageOrganisation = new Organisation {  
+                                    OrganisationCode = "ABC",
+                                },
                                 StorageDescription = "45 MAIN ST",
-                                PaymentDueDate = "2017-01-27",
                                 DiscountRate = 1.50,
                                 MaximumDaysDiscount = 0,
                                 DateStorageChargeCommences = "2017-01-24",
@@ -591,6 +607,7 @@ namespace Wiedpug.API.ExampleResponses
                                         CataloguePageNumber = 65,
                                         UpdateType = UpdateType.A,
                                         PackMaterial = PackMaterial.N,
+                                        CatalogueSymbols = "A",
                                         LotType = LotType.ObjectivelyMatchedLot,
                                         LightestIndividualBaleWeight = 149,
                                         ReportingFlag = ReportingFlag.R,
@@ -742,7 +759,7 @@ namespace Wiedpug.API.ExampleResponses
                             SellingCentreType = SellingCentreType.AU_F,
                             SaleNumber = 18
                         },
-                        OrganisationRequested = new Organisation { OrganisationId = "AWNF" },
+                        OrganisationRequested = new Organisation {                         OrganisationCode = "ANF",},
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
@@ -769,7 +786,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         OrganisationRequested = new Organisation
                         {
-                            OrganisationId = "AWNF"
+                                                    OrganisationCode = "ANF",
                         },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
@@ -803,7 +820,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         OrganisationRequested = new Organisation
                         {
-                            OrganisationId = "AWNF"
+                                                    OrganisationCode = "ANF",
                         },
                         SaleDateRequested = "2023-10-31",
                         UseNetworkDateTime = false,
@@ -844,11 +861,11 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
                                                 CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                             VersionNumber = 31,
                             SoftwareIdentifier = new Domain.ValueObject.SoftwareIdentifier
@@ -872,7 +889,7 @@ namespace Wiedpug.API.ExampleResponses
                                             SellingCentreType = SellingCentreType.AU_M,
                                             SaleNumber = 29
                                         },
-                                        CentreStorage = new Centre { CentreAustralia = CentreAustralia.AD },
+                                        CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AD },
                                         SaleDate = "2017-01-19",
                                         WoolState = WoolState._1,
                                         PackType = PackType._9,
@@ -886,22 +903,23 @@ namespace Wiedpug.API.ExampleResponses
                                         IsFinalCatalogue = true,
                                         InvoicingOrganisation = new Organisation
                                         {
-                                            OrganisationId = "ABCD"
+                                           OrganisationCode = "ABC",
                                         },
                                          ReleasingOrganisation = new Organisation
                                         {
-                                            OrganisationId = "ABCD"
+                                           OrganisationCode = "ABC",
                                         },
                                          SellingOrganisation = new Organisation
                                         {
-                                            OrganisationId = "ABCD"
+                                           OrganisationCode = "ABC",
                                         },
                                         WoolTypeGroup = WoolTypeGroup.MFLC,
-                                        CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
+                                        CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
                                         DeliveryBasis = DeliveryBasis.D,
-                                        StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
+                                        StorageOrganisation = new Organisation {
+                                            OrganisationCode = "ABC", 
+                                        },
                                         StorageDescription = "45 MAIN ST",
-                                        PaymentDueDate = "2017-01-27",
                                         DiscountRate = 1.50,
                                         MaximumDaysDiscount = 0,
                                         DateStorageChargeCommences = "2017-01-24",
@@ -922,6 +940,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 CataloguePageNumber = 65,
                                                 UpdateType = UpdateType.A,
                                                 PackMaterial = PackMaterial.N,
+                                                CatalogueSymbols = "A",
                                                 LotType = LotType.OtherBulkClassLot,
                                                 LightestIndividualBaleWeight = 149,
                                                 ReportingFlag = ReportingFlag.R,
@@ -966,7 +985,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 PositionOfBreakPercentageBase = 0,
                                                 Team3Hauteur = 72,
                                                 LsCertType = LsCertType.LengthAndStrengthTested,
-                                                isLsSampleSecured = true,
+                                                isLsSampleSecured = true,     
                                                 ExpectedBarbe = 111,
                                                 Team3HauteurCvPercentage = 36.9,
                                                 Team3RomainePercentage = 11.2,

@@ -1,4 +1,16 @@
 {
     "version-0.0-od": "OrganisationDetails: Ready for review",
-    "version-0.0-ac": "Catalogues: Ready for review"
+    "version-0.0-ac": "Catalogues: Ready for review",
+    "0.0-tc-tcu-tcr": "TestCetificates, TestCertificatesUpdate, TestCertificatesRrequests: Ready for review",
+    "0.0-trv": "TestRequestVerification: Ready for review",
+    "0.0-li": "LotInvoices: Ready for review",
+    "0.0-ts": "TestStatus: Ready for review",
+    "0.0-drv": "DarkAndMedullatedFibreRiskVerification: Ready for review",
+    "0.0-pa": "PaymentAdvices: Ready for review",
+    "0.0-pcf": "PaymentConfirmation: Ready for review",
+    "0.0-do": "DeliveryOrder/ShippingInstructions: Ready for review",
+    "0.0-st": "Statements: Ready for review",
+    "0.0-rpp": "RequestPostsalePrintingOfPresaleCertificates: Ready for review",
+    "0.0-txt": "Texts: Ready for review",
+    "0.0-lpb": "LotPriceAndBuyers: Ready for review"
   }

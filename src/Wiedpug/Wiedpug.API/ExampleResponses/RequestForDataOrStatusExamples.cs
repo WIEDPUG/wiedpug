@@ -1,6 +1,7 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.AggregatesModel.RequestForDataOrStatusAggregate;
+using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.ValueObject;
 
@@ -21,13 +22,13 @@ namespace Wiedpug.API.ExampleResponses
                             DateFormatLastRevised = "2022-07-25",
                             DateTransmissionFileCreated = "2024-03-21",
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                                                CurrentReceiver = new Organisation
-                    {
-                        OrganisationId = "ATWA"
-                    },
+                            CurrentReceiver = new Organisation
+                            {
+                                OrganisationCode = "ATC",
+                            },
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationId = "AWTX"
+                                OrganisationCode = "ATW",
                             },VersionNumber = 36,
                             ABN = "00000000000"
                         },

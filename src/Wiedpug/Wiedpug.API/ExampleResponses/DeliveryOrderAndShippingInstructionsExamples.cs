@@ -28,11 +28,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                                                OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -56,7 +56,7 @@ namespace Wiedpug.API.ExampleResponses
                             ConsignmentReference = "1256745909",
                             Shipper = new Organisation
                             {
-                                OrganisationId = "BTTA"
+                                                        OrganisationCode = "BTA",
                             }
                         },
                         CountermarkHeadmarks = new List<CountermarkHeadmark>
@@ -76,11 +76,11 @@ namespace Wiedpug.API.ExampleResponses
                                     DeliveryOrderNumber="4567891209",
                                     ReleasingOrganisation = new Organisation
                                     {
-                                        OrganisationId = "AWTS"
+                                                                OrganisationCode = "AWS",
                                     },
                                     Carrier = new Organisation
                                     {
-                                        OrganisationId = "BTWA"
+                                                                OrganisationCode = "BTW",
                                     },
                                     ApplyRenumbers = false,
                                     ApplyGrossWeights = false,
@@ -94,11 +94,11 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             InvoicingOrganisation = new Organisation
                                             {
-                                                OrganisationId="AWTW"
+                                                OrganisationCode = "AWT",
                                             },
                                             SellingOrganisation = new Organisation
                                             {
-                                                OrganisationId = "TTMA"
+                                                                        OrganisationCode = "TTM",
                                             },
                                             Season = 23,
                                             SaleIdentity = new SaleIdentity
@@ -108,11 +108,12 @@ namespace Wiedpug.API.ExampleResponses
                                             },
                                             CentreStorage =new Centre
                                             {
-                                                CentreAustralia = CentreAustralia.A
+                                                Country = CountryCode.AU,
+                                                CentreCode = CentreCodeAustralia.A
                                             },
                                             StorageOrganisation = new Organisation
                                             {
-                                                OrganisationId="MBCC"
+                                                OrganisationCode = "ABT",
                                             },
                                             LotIdentityOrGroupName = new LotIdentityOrGroupName
                                             {
@@ -212,11 +213,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "ABCD"
+                                                    OrganisationCode = "ABC",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                                                    OrganisationCode = "ATW",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -236,7 +237,7 @@ namespace Wiedpug.API.ExampleResponses
                             ConsignmentReference = "1256745909",
                             Shipper = new Organisation
                             {
-                                OrganisationId = "BTTA"
+                                                        OrganisationCode = "BTA",
                             }
                         },
                         CountermarkHeadmarks = new List<CountermarkHeadmark>
@@ -256,11 +257,11 @@ namespace Wiedpug.API.ExampleResponses
                                     DeliveryOrderNumber="4567891209",
                                     ReleasingOrganisation = new Organisation
                                     {
-                                        OrganisationId = "AWTS"
+                                                                OrganisationCode = "AWS",
                                     },
                                     Carrier = new Organisation
                                     {
-                                        OrganisationId = "BTWA"
+                                                                OrganisationCode = "BTW",
                                     },
                                     ApplyRenumbers = false,
                                     ApplyGrossWeights = false,
@@ -274,11 +275,11 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             InvoicingOrganisation = new Organisation
                                             {
-                                                OrganisationId="AWTW"
+                                                OrganisationCode = "ATX",
                                             },
                                             SellingOrganisation = new Organisation
                                             {
-                                                OrganisationId = "TTMA"
+                                                                        OrganisationCode = "TTM",
                                             },
                                             Season = 23,
                                             SaleIdentity = new SaleIdentity
@@ -286,12 +287,13 @@ namespace Wiedpug.API.ExampleResponses
                                                 SellingCentreType = SellingCentreType.AU_N,
                                                 SaleNumber = 23
                                             },
-                                            CentreStorage = new Centre { 
-                                                CentreAustralia = CentreAustralia.C
+                                            CentreStorage = new Centre {
+                                                Country = CountryCode.AU,
+                                                CentreCode = CentreCodeAustralia.A
                                             },
                                             StorageOrganisation = new Organisation
                                             {
-                                                OrganisationId="MBCC"
+                                                 OrganisationCode = "MBC",
                                             },
                                             LotIdentityOrGroupName = new LotIdentityOrGroupName
                                             {

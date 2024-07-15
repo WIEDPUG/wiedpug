@@ -2,10 +2,10 @@
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Wiedpug.API.SchemaFilter;
 
-namespace Wiedpug.API.SwaggerOptions
+namespace Wiedpug.API.SchemaFilter.SwaggerOptions
 {
     public class ConfigureSwaggerSchemaFilters : IConfigureNamedOptions<SwaggerGenOptions>
-    {    
+    {
         public void Configure(string? name, SwaggerGenOptions options)
         {
             Configure(options);

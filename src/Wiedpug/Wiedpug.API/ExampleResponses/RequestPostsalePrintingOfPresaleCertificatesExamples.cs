@@ -23,11 +23,13 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
+
                     },
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                                                OrganisationCode = "ABC",
+
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -56,7 +58,8 @@ namespace Wiedpug.API.ExampleResponses
                         LotIdentity = "45567L",
                         BuyingOrganisation = new Organisation
                         {
-                            OrganisationId="ATWM"
+                            OrganisationCode = "AWT",
+
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
                         Bales = 23,
@@ -67,7 +70,8 @@ namespace Wiedpug.API.ExampleResponses
                             SaleNumber = 23
                         },
                         CentreStorage = new Centre{
-                           CentreAustralia =  CentreAustralia.AR
+                                Country = CountryCode.AU,
+                                CentreCode =  CentreCodeAustralia.A
                         },
                         CertificateDeliveryIndicator = CertificateDeliveryIndicator.ToBrokerOrBuyerAddress
                     }
@@ -115,11 +119,13 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                                                    OrganisationCode = "ATW",
+
                         },
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "AWTA"
+                            OrganisationCode = "AWT",
+
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -148,7 +154,7 @@ namespace Wiedpug.API.ExampleResponses
                         LotIdentity = "45567L",
                         BuyingOrganisation = new Organisation
                         {
-                            OrganisationId="ATWM"
+                            OrganisationCode = "AWT",
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
                         Bales = 23,
@@ -159,7 +165,8 @@ namespace Wiedpug.API.ExampleResponses
                             SaleNumber = 23
                         },
                         CentreStorage = new Centre{
-                           CentreAustralia =  CentreAustralia.AR
+                                Country = CountryCode.AU,
+                                CentreCode =  CentreCodeAustralia.AR
                         },
                         CertificateDeliveryIndicator = CertificateDeliveryIndicator.ToBrokerOrBuyerAddress
                     }

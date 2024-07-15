@@ -1,0 +1,56 @@
+{
+    "Centre": {
+        "required": [
+            "centreCode",
+            "country"
+        ],
+        "type": "object",
+        "properties": {
+            "country": {
+                "$ref": "#/components/schemas/CountryCode"
+            },
+            "centreCode": {
+                "oneOf": [
+                    {
+                        "$ref": "#/components/schemas/CentreCodeAustralia"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeBelgium"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeChina"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeFrance"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeGermany"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeItaly"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeNetherlands"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeNewZealand"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeSouthAfrica"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeTaiwan"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeUnitedKingdomOfGreatBritain"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CentreCodeUnitedStatesOfAmerica"
+                    }
+                ]
+            }
+        },
+        "additionalProperties": false,
+        "description": "Centre has country and centreCode.\r\nThe centreCode is one of these below based on the value of country. \r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nFR: CentreFrance\r\n\r\nZA: CentreSouthAfrica\r\n\r\nBE: CentreBelgium\r\n\r\nGB: CentreUnitedKingdomofGreatBritain\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nNL: CentreNetherlands\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nUS: CentreUSA"
+    }
+}

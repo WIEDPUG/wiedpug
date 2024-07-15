@@ -4,16 +4,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
 
 namespace Wiedpug.Domain.ValueObject
 {
     public class Organisation
     {
-        [StringLength(8)]
-        public OrganisationCodeAndCentre? OrganisationCodeAndCentre { get; set; }
+        [Required]
+        [StringLength(3)]
+        public required string OrganisationCode { get; set; }
 
         [StringLength(5)]
-        public string? OrganisationId { get; set; }
+        public Centre? Centre { get; set; }
     }
 }

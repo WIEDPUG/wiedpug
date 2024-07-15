@@ -19,10 +19,11 @@ namespace Wiedpug.API.ExampleResponses
                     DateFormatLastRevised = "2022-07-25",
                     DateTransmissionFileCreated = "2024-03-21",
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = new Organisation { OrganisationId = "AWTX" },
+                    DocumentOriginator = new Organisation { 
+                                                OrganisationCode = "AWX", },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                     VersionNumber = 36,
                     ABN = "72001967184"
@@ -65,11 +66,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                                                    OrganisationCode = "ATW",
                         },
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "AWTX"
+                                                    OrganisationCode = "AWX",
                         },
                         VersionNumber = 36,
                         ABN = "72001967184"

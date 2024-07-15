@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Wiedpug.API.SwaggerOptions
+namespace Wiedpug.API.SchemaFilter.SwaggerOptions
 {
     public class ConfigureSwaggerSecurity : IConfigureNamedOptions<SwaggerGenOptions>
     {
@@ -29,14 +29,14 @@ namespace Wiedpug.API.SwaggerOptions
                 Type = SecuritySchemeType.OAuth2,
                 Description = "Authentication for client applications by providing Client ID and Client Secret for an JWT Access Token.",
                 Flows = new OpenApiOAuthFlows
-                {                                                   
+                {
                     ClientCredentials = new OpenApiOAuthFlow
-                    {                           
-                        TokenUrl = new Uri("/auth-server/oauth/token", UriKind.Relative)                        
+                    {
+                        TokenUrl = new Uri("/auth-server/oauth/token", UriKind.Relative)
                     }
                 }
             });
-            
+
             //This is the default global security requirement. This means that all endpoints require a Bearer token.
             options.AddSecurityRequirement(new OpenApiSecurityRequirement
             {

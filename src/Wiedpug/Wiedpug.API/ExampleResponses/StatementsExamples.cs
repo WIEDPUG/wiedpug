@@ -23,11 +23,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                        OrganisationCode = "ATC",
                     },
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                        OrganisationCode = "ABC",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -46,7 +46,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationId = "ATTA"
+                                OrganisationCode = "ADC",
                             },
                             ClientCode = 345678,
                             StatementDate = "2024-03-21",
@@ -133,11 +133,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "AWTA"
+                            OrganisationCode = "ATC",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                            OrganisationCode = "ATT",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -156,7 +156,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationId = "ATTA"
+                                OrganisationCode = "ATT",
                             },
                             ClientCode = 345678,
                             StatementDate = "2024-03-21",

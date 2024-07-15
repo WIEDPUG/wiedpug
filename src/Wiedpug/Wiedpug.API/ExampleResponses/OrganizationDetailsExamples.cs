@@ -21,11 +21,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "AWTM"
+                                                OrganisationCode = "AWS",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                     ABN = "43006014106"
                 },
@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         Organisation = new Organisation
                             {
-                                OrganisationId = "AWTS"
+                                                        OrganisationCode = "AWS",
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
@@ -56,10 +56,17 @@ namespace Wiedpug.API.ExampleResponses
                         Addresses= new List<Address> {
                             new Address
                             {
-                                Street="28 GREAT SOUTH ROAD",
-                                Suburb="KENSINGTON",
+                                Name = new Name
+                                {
+                                    OrganisationName = "AWTS"
+                                },
+                                Premise = "Suite 210",
+                                StreetAddressLine1="28 GREAT SOUTH ROAD",
+                                StreetAddressLine2="KENSINGTON",
+                                AdministrativeArea = "NSW",
+                                Locality = "Sydney",
                                 PostCode="3031",
-                                Country="AU"
+                                Country=CountryCode.AU
                             }
                         },
                         Contacts= new List<Contact> {
@@ -80,7 +87,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         Organisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
                         NameOfOrganisation = "DEMO BUYER 1",
                         DateLastUpdated="2020-04-28",
@@ -105,11 +112,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                                                OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                     ABN = "43006014106"
                 },
@@ -120,7 +127,7 @@ namespace Wiedpug.API.ExampleResponses
                         Id = "1",
                         Organisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
@@ -141,10 +148,17 @@ namespace Wiedpug.API.ExampleResponses
                         Addresses= new List<Address> {
                             new Address
                             {
-                                Street="28 GREAT SOUTH ROAD",
-                                Suburb="KENSINGTON",
+                                Name = new Name
+                                {
+                                    OrganisationName = "AWTM"
+                                },
+                                Premise = "3402A",
+                                StreetAddressLine1="28 GREAT SOUTH ROAD",
+                                StreetAddressLine2="KENSINGTON",
+                                AdministrativeArea = "NSW",
+                                Locality = "Sydney",
                                 PostCode="3031",
-                                Country="AU"
+                                Country=CountryCode.AU
                             }
                         },
                         Contacts= new List<Contact> {
@@ -179,11 +193,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                                                OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                     ABN = "43006014106"
                 },
@@ -193,7 +207,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         Organisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                         DateLastUpdated="2020-04-28",
@@ -214,10 +228,17 @@ namespace Wiedpug.API.ExampleResponses
                         Addresses= new List<Address> {
                             new Address
                             {
-                                Street="28 GREAT SOUTH ROAD",
-                                Suburb="KENSINGTON",
+                                Name = new Name
+                                {
+                                    OrganisationName = "AWTS"
+                                },
+                                Premise = "Room L104",
+                                StreetAddressLine1="28 GREAT SOUTH ROAD",
+                                StreetAddressLine2="KENSINGTON",
+                                AdministrativeArea = "NSW",
+                                Locality = "Sydney",
                                 PostCode="3031",
-                                Country="AU"
+                                Country=CountryCode.AU
                             }
                         },
                         Contacts= new List<Contact> {
@@ -248,7 +269,7 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                                                OrganisationCode = "ABC",
                     },
                 SoftwareIdentifier = new SoftwareIdentifier
                     {
@@ -281,11 +302,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "ABCD"
+                                                    OrganisationCode = "ABC",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                                                    OrganisationCode = "ATW",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -303,7 +324,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "1",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "AWTS"
+                                                        OrganisationCode = "AWS",
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
@@ -324,10 +345,17 @@ namespace Wiedpug.API.ExampleResponses
                             Addresses= new List<Address> {
                                 new Address
                                 {
-                                    Street="88 HARBOR ROAD",
-                                    Suburb="KENSINGTON",
-                                    PostCode="3031",
-                                    Country="AU"
+                                Name = new Name
+                                {
+                                    OrganisationName = "AWTS"
+                                },
+                                Premise = "Suite 130",
+                                StreetAddressLine1="88 Harbor ROAD",
+                                StreetAddressLine2="KENSINGTON",
+                                AdministrativeArea = "NSW",
+                                Locality = "Sydney",
+                                PostCode="3031",
+                                Country=CountryCode.AU
                                 }
                             },
                             Contacts= new List<Contact> {
@@ -349,7 +377,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "2",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
@@ -361,7 +389,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "3",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "AWTN"
+                                                        OrganisationCode = "AWS",
                             },
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
@@ -378,10 +406,17 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 new Address
                                 {
-                                    Street="367 NEW HAMMER STREET",
-                                    Suburb="NEWCASTLE",
+                                    Name = new Name
+                                    {
+                                        OrganisationName = "AWTS"
+                                    },
+                                    Premise = "Box 201",
+                                    StreetAddressLine1="367 NEW HAMMER STREET",
+                                    StreetAddressLine2="NEWCASTLE",
+                                    AdministrativeArea = "NSW",
+                                    Locality = "Sydney",
                                     PostCode="2031",
-                                    Country="AU"
+                                    Country=CountryCode.AU
                                 }
                             },
                             Contacts= new List<Contact> {
@@ -428,11 +463,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "ABCD"
+                                                    OrganisationCode = "ABC",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                                                    OrganisationCode = "ATW",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -450,7 +485,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "1",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "AWTA"
+                                                        OrganisationCode = "AWT",
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
@@ -472,10 +507,18 @@ namespace Wiedpug.API.ExampleResponses
                             Addresses= new List<Address> {
                                 new Address
                                 {
-                                    Street="88 HARBOR ROAD",
-                                    Suburb="KENSINGTON",
+                                    Name = new Name
+                                    {
+                                        OrganisationName = "AWTS"
+                                    },
+                                    Premise = "Box 201",
+                                    StreetAddressLine1="367 NEW HAMMER STREET",
+                                    StreetAddressLine2="NEWCASTLE",
+                                    AdministrativeArea = "NSW",
+                                    Locality = "Sydney",
                                     PostCode="3031",
-                                    Country="AU"
+                                    Country=CountryCode.AU
+
                                 }
                             },
                             Contacts= new List<Contact> {
@@ -497,7 +540,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "2",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "BUY1"
+                                                        OrganisationCode = "BY1",
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",
@@ -509,7 +552,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "3",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "AWTN"
+                                                        OrganisationCode = "AWS",
                             },
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
                             DateLastUpdated="2020-04-28",
@@ -526,11 +569,17 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 new Address
                                 {
-
-                                    Street="367 NEW HAMMER STREET",
-                                    Suburb="NEWCASTLE",
+                                    Name = new Name
+                                    {
+                                        OrganisationName = "AWTS"
+                                    },
+                                    Premise = "Box 201",
+                                    StreetAddressLine1="367 NEW HAMMER STREET",
+                                    StreetAddressLine2="NEWCASTLE",
+                                    AdministrativeArea = "NSW",
+                                    Locality = "Sydney",
                                     PostCode="2031",
-                                    Country="AU"
+                                    Country=CountryCode.AU
                                 }
                             },
                             Contacts= new List<Contact> {
@@ -577,11 +626,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "ABCD"
+                                                    OrganisationCode = "ABC",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                                                    OrganisationCode = "ATW",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -599,7 +648,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "1",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "AWTA"
+                                                        OrganisationCode = "AWT",
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                             DateLastUpdated="2020-04-28",
@@ -620,11 +669,17 @@ namespace Wiedpug.API.ExampleResponses
                             Addresses= new List<Address> {
                                 new Address
                                 {
-
-                                    Street="88 HARBOR ROAD",
-                                    Suburb="KENSINGTON",
+                                    Name = new Name
+                                    {
+                                        OrganisationName = "AWTS"
+                                    },
+                                    Premise = "Suite 210",
+                                    StreetAddressLine1="28 GREAT SOUTH ROAD",
+                                    StreetAddressLine2="KENSINGTON",
+                                    AdministrativeArea = "NSW",
+                                    Locality = "Sydney",
                                     PostCode="3031",
-                                    Country="AU"
+                                    Country=CountryCode.AU
                                 }
                             },
                             Contacts= new List<Contact> {
@@ -646,7 +701,7 @@ namespace Wiedpug.API.ExampleResponses
                             Id = "2",
                             Organisation = new Organisation
                             {
-                                OrganisationId = "BUY1"
+                                                        OrganisationCode = "BY1",
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
                             DateLastUpdated="2020-04-28",

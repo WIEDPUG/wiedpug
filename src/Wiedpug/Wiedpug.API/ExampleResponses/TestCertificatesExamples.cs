@@ -20,11 +20,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                        OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                        OrganisationCode = "ATW",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -42,7 +42,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationId = "AWTA"
+                                OrganisationCode = "ATW",
                             },
                             Bales = 1,
                             Gross = 1,
@@ -55,8 +55,9 @@ namespace Wiedpug.API.ExampleResponses
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.ObjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
-                           CentreAustralia =  CentreAustralia.A
-                        },
+                                Country = CountryCode.AU,
+                                CentreCode =  CentreCodeAustralia.A
+                            },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
@@ -162,7 +163,8 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationId = "AWTA"
+                                OrganisationCode = "ATC",
+
                             },
                             Bales = 1,
                             Gross = 1,
@@ -175,7 +177,8 @@ namespace Wiedpug.API.ExampleResponses
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.SubjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
-                           CentreAustralia =  CentreAustralia.A
+                                Country = CountryCode.AU,
+                                CentreCode =  CentreCodeAustralia.A
                         },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.U,
@@ -333,11 +336,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "AWTA"
+                            OrganisationCode = "ATW",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "ATWA"
+                            OrganisationCode = "ATW",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -356,7 +359,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationId = "AWTA"
+                                OrganisationCode = "ATW",
                             },
                             LotIdentityOrGroupName = new LotIdentityOrGroupName
                             {
@@ -369,7 +372,8 @@ namespace Wiedpug.API.ExampleResponses
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
-                           CentreAustralia =  CentreAustralia.A
+                                Country = CountryCode.AU,
+                                CentreCode =  CentreCodeAustralia.A
                         },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.R,
@@ -476,7 +480,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             Client = new Organisation
                             {
-                                OrganisationId = "AWTA"
+                                OrganisationCode = "ATW",
                             },
                             Bales = 1,
                             Gross = 1,
@@ -489,7 +493,8 @@ namespace Wiedpug.API.ExampleResponses
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
-                           CentreAustralia =  CentreAustralia.A
+                                Country = CountryCode.AU,
+                                CentreCode =  CentreCodeAustralia.A
                         },
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.C,

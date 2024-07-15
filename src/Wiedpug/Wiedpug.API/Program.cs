@@ -5,7 +5,7 @@ using Asp.Versioning.ApiExplorer;
 using Wiedpug.API.Controllers.V0;
 //using Wiedpug.API.Controllers.V1;
 using Wiedpug.API.Controllers.V2;
-using Wiedpug.API.SwaggerOptions;
+using Wiedpug.API.SchemaFilter.SwaggerOptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,7 +64,7 @@ var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(api
 
 //versionedGroup.MapTestCertificatesEndpoints();
 
-versionedGroup.MapCatalogueEndpoints();
+//versionedGroup.MapCatalogueEndpoints();
 
 //versionedGroup.MapRequestForStatusEndpoints();
 

@@ -19,11 +19,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                        OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                        OrganisationCode = "ATW",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -43,7 +43,9 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDCD = 6
                                 },
                         ReissueType = ReissueType._06,
-                        Client = new Organisation { OrganisationId = "AABBC" },
+                        Client = new Organisation {
+                            OrganisationCode = "ABC",
+                        },
                         Bales = 2,
                         BaleDescription = "AAA M",
                         WoolBase = 60.43,
@@ -58,7 +60,9 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDCD = 5
                                 },
                         ReissueType = ReissueType._05,
-                        Client = new Organisation { OrganisationId = "ACAC" },
+                        Client = new Organisation {
+                            OrganisationCode = "ABC",
+                        },
                         Bales = 7,
                         BaleDescription = "AAA M",
                         WoolBase = 65.12,
@@ -73,7 +77,9 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDCD = 6
                                 },
                         ReissueType = ReissueType._02,
-                        Client = new Organisation { OrganisationId = "AAAAA" },
+                        Client = new Organisation {
+                            OrganisationCode = "ABC",
+                        },
                         Bales = 8,
                         BaleDescription = "PCA M",
                         WoolBase = 50.31,

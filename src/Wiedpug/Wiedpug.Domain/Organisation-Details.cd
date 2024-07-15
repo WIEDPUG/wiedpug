@@ -27,9 +27,15 @@
   </Class>
   <Class Name="Wiedpug.Domain.Entities.OrganisationDetail" Collapsed="true">
     <Position X="3" Y="4.25" Width="2.75" />
+    <AssociationLine Name="PhoneNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber" FixedFromPoint="true">
+      <Path>
+        <Point X="5.25" Y="4.812" />
+        <Point X="5.25" Y="6.75" />
+      </Path>
+    </AssociationLine>
     <AssociationLine Name="FaxNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.073" Y="0.113" />
+        <Position X="-2.247" Y="0.078" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -48,7 +54,7 @@
   <Class Name="Wiedpug.Domain.ValueObject.Address" Collapsed="true">
     <Position X="7.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAUAACAAAAAgIAAAAAAAAAAIAAAAAAAIAgAAAEAg=</HashCode>
+      <HashCode>AAAAAAAACAQAAAAAAAAAAAQAgAIAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>ValueObject\Address.cs</FileName>
     </TypeIdentifier>
   </Class>

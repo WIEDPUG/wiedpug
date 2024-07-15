@@ -1,8 +1,12 @@
 ﻿using Newtonsoft.Json.Linq;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Principal;
+using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
+using Wiedpug.Domain.Aggregates.LotPriceAndBuyersAggregate;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using static System.Net.WebRequestMethods;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Wiedpug.Domain.Entities
@@ -45,6 +49,20 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [StringLength(1)]
         public required UpdateType UpdateType { get; set; } // FIELD NUMBER 10 - Update Type - Start: 30, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
+
+        /// <summary>
+        /// These are the symbols defined in the AWEX Wool Selling Rules, to be 
+        /// printed in a sale catalogue against any appropriate lot.In a transmitted
+        /// catalogue they are left justified with no space or punctuation marks
+        /// between symbols where more than one symbol is used.If this field
+        /// contains spaces it will indicate that there are no catalogue symbols for 
+        /// that lot.
+        /// To obtain the current code list of values that may be used in this field
+        /// please go to this URL: http://www.awex.com.au/standards/catalogue/.
+        /// </summary>
+        [Required]
+        [StringLength(6)]
+        public required string CatalogueSymbols { get; set; }
 
         [Required]
         [StringLength(2)]

@@ -32,7 +32,7 @@
                             "example": {
                                 "countryOfOrigin": "AU",
                                 "documentOriginator": {
-                                    "organisationId": "ABCD"
+                                    "organisationCode": "ABC"
                                 },
                                 "softwareIdentifier": {
                                     "softwareCompany": 1,
@@ -64,10 +64,10 @@
                                             "dateTransmissionFileCreated": "2016-01-17",
                                             "countryOfOrigin": "AU",
                                             "documentOriginator": {
-                                                "organisationId": "ABCD"
+                                                "organisationCode": "ABC"
                                             },
                                             "currentReceiver": {
-                                                "organisationId": "ATWA"
+                                                "organisationCode": "ATW"
                                             },
                                             "versionNumber": 31,
                                             "softwareIdentifier": {
@@ -81,7 +81,7 @@
                                             {
                                                 "id": "1",
                                                 "organisation": {
-                                                    "organisationId": "AWTS"
+                                                    "organisationCode": "AWS"
                                                 },
                                                 "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                                 "dateLastUpdated": "2020-04-28",
@@ -101,8 +101,14 @@
                                                 },
                                                 "addresses": [
                                                     {
-                                                        "street": "88 HARBOR ROAD",
-                                                        "suburb": "KENSINGTON",
+                                                        "name": {
+                                                            "organisationName": "AWTS"
+                                                        },
+                                                        "premise": "Suite 130",
+                                                        "streetAddressLine1": "88 Harbor ROAD",
+                                                        "streetAddressLine2": "KENSINGTON",
+                                                        "locality": "Sydney",
+                                                        "administrativeArea": "NSW",
                                                         "postCode": "3031",
                                                         "country": "AU"
                                                     }
@@ -122,7 +128,7 @@
                                             {
                                                 "id": "2",
                                                 "organisation": {
-                                                    "organisationId": "ABCD"
+                                                    "organisationCode": "ABC"
                                                 },
                                                 "nameOfOrganisation": "DEMO BUYER 1",
                                                 "dateLastUpdated": "2020-04-28",
@@ -132,7 +138,7 @@
                                             {
                                                 "id": "3",
                                                 "organisation": {
-                                                    "organisationId": "AWTN"
+                                                    "organisationCode": "AWS"
                                                 },
                                                 "nameOfOrganisation": "AUSTRALIAN WOOL TESTING AUTH LTD",
                                                 "dateLastUpdated": "2020-04-28",
@@ -146,8 +152,14 @@
                                                 },
                                                 "addresses": [
                                                     {
-                                                        "street": "367 NEW HAMMER STREET",
-                                                        "suburb": "NEWCASTLE",
+                                                        "name": {
+                                                            "organisationName": "AWTS"
+                                                        },
+                                                        "premise": "Box 201",
+                                                        "streetAddressLine1": "367 NEW HAMMER STREET",
+                                                        "streetAddressLine2": "NEWCASTLE",
+                                                        "locality": "Sydney",
+                                                        "administrativeArea": "NSW",
                                                         "postCode": "2031",
                                                         "country": "AU"
                                                     }
@@ -300,10 +312,10 @@
                                         "dateTransmissionFileCreated": "2016-01-17",
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
-                                            "organisationId": "ABCD"
+                                            "organisationCode": "ABC"
                                         },
                                         "currentReceiver": {
-                                            "organisationId": "ATWA"
+                                            "organisationCode": "ATW"
                                         },
                                         "abn": "43006014106"
                                     },
@@ -311,7 +323,7 @@
                                         {
                                             "id": "1",
                                             "organisation": {
-                                                "organisationId": "ABCD"
+                                                "organisationCode": "ABC"
                                             },
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
@@ -331,8 +343,14 @@
                                             },
                                             "addresses": [
                                                 {
-                                                    "street": "28 GREAT SOUTH ROAD",
-                                                    "suburb": "KENSINGTON",
+                                                    "name": {
+                                                        "organisationName": "AWTM"
+                                                    },
+                                                    "premise": "3402A",
+                                                    "streetAddressLine1": "28 GREAT SOUTH ROAD",
+                                                    "streetAddressLine2": "KENSINGTON",
+                                                    "locality": "Sydney",
+                                                    "administrativeArea": "NSW",
                                                     "postCode": "3031",
                                                     "country": "AU"
                                                 }
@@ -447,17 +465,17 @@
                                     "dateTransmissionFileCreated": "2016-01-17",
                                     "countryOfOrigin": "AU",
                                     "documentOriginator": {
-                                        "organisationId": "ABCD"
+                                        "organisationCode": "ABC"
                                     },
                                     "currentReceiver": {
-                                        "organisationId": "ATWA"
+                                        "organisationCode": "ATW"
                                     },
                                     "abn": "43006014106"
                                 },
                                 "organisationDetailCollection": [
                                     {
                                         "organisation": {
-                                            "organisationId": "ABCD"
+                                            "organisationCode": "ABC"
                                         },
                                         "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                         "dateLastUpdated": "2020-04-28",
@@ -477,8 +495,14 @@
                                         },
                                         "addresses": [
                                             {
-                                                "street": "28 GREAT SOUTH ROAD",
-                                                "suburb": "KENSINGTON",
+                                                "name": {
+                                                    "organisationName": "AWTS"
+                                                },
+                                                "premise": "Room L104",
+                                                "streetAddressLine1": "28 GREAT SOUTH ROAD",
+                                                "streetAddressLine2": "KENSINGTON",
+                                                "locality": "Sydney",
+                                                "administrativeArea": "NSW",
                                                 "postCode": "3031",
                                                 "country": "AU"
                                             }
@@ -515,10 +539,10 @@
                                         "dateTransmissionFileCreated": "2016-01-17",
                                         "countryOfOrigin": "AU",
                                         "documentOriginator": {
-                                            "organisationId": "ABCD"
+                                            "organisationCode": "ABC"
                                         },
                                         "currentReceiver": {
-                                            "organisationId": "ATWA"
+                                            "organisationCode": "ATW"
                                         },
                                         "abn": "43006014106"
                                     },
@@ -526,7 +550,7 @@
                                         {
                                             "id": "1",
                                             "organisation": {
-                                                "organisationId": "ABCD"
+                                                "organisationCode": "ABC"
                                             },
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
@@ -546,8 +570,14 @@
                                             },
                                             "addresses": [
                                                 {
-                                                    "street": "28 GREAT SOUTH ROAD",
-                                                    "suburb": "KENSINGTON",
+                                                    "name": {
+                                                        "organisationName": "AWTM"
+                                                    },
+                                                    "premise": "3402A",
+                                                    "streetAddressLine1": "28 GREAT SOUTH ROAD",
+                                                    "streetAddressLine2": "KENSINGTON",
+                                                    "locality": "Sydney",
+                                                    "administrativeArea": "NSW",
                                                     "postCode": "3031",
                                                     "country": "AU"
                                                 }
@@ -759,54 +789,48 @@
     "components": {
         "schemas": {
             "Address": {
+                "required": [
+                    "country",
+                    "locality",
+                    "name",
+                    "premise",
+                    "streetAddressLine1",
+                    "streetAddressLine2"
+                ],
                 "type": "object",
                 "properties": {
-                    "firstName": {
-                        "maxLength": 80,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
-                    },
-                    "lastName": {
-                        "maxLength": 80,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
-                    },
-                    "organisationName": {
-                        "maxLength": 80,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
+                    "name": {
+                        "$ref": "#/components/schemas/Name"
                     },
                     "premise": {
                         "maxLength": 80,
                         "minLength": 0,
                         "type": "string",
-                        "nullable": true
+                        "description": "Apartment, stuie, box number, P.O. Box number, etc"
                     },
-                    "street": {
+                    "streetAddressLine1": {
                         "maxLength": 80,
                         "minLength": 0,
                         "type": "string",
-                        "nullable": true
+                        "description": "Street number, street name, etc"
                     },
-                    "suburb": {
+                    "streetAddressLine2": {
                         "maxLength": 80,
                         "minLength": 0,
                         "type": "string",
-                        "nullable": true
+                        "description": "Landmark, suburb, etc"
                     },
-                    "city": {
+                    "locality": {
                         "maxLength": 80,
                         "minLength": 0,
                         "type": "string",
-                        "nullable": true
+                        "description": "Town or City"
                     },
-                    "regionOrState": {
+                    "administrativeArea": {
                         "maxLength": 80,
                         "minLength": 0,
                         "type": "string",
+                        "description": "State, province, region. Use ISO region codes: https://en.wikipedia.org/wiki/ISO_3166-2",
                         "nullable": true
                     },
                     "postCode": {
@@ -816,10 +840,7 @@
                         "nullable": true
                     },
                     "country": {
-                        "maxLength": 80,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CountryCode"
                     }
                 },
                 "additionalProperties": false
@@ -848,200 +869,311 @@
                 "description": "A standard API response object used for all successful API responses"
             },
             "Centre": {
+                "required": [
+                    "centreCode",
+                    "country"
+                ],
+                "type": "object",
+                "properties": {
+                    "country": {
+                        "$ref": "#/components/schemas/CountryCode"
+                    },
+                    "centreCode": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/components/schemas/CentreCodeAustralia"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeBelgium"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeChina"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeFrance"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeGermany"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeItaly"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeNetherlands"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeNewZealand"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeSouthAfrica"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeTaiwan"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeUnitedKingdomOfGreatBritain"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CentreCodeUnitedStatesOfAmerica"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": false,
+                "description": "Centre has country and centreCode.\r\nThe centreCode is one of these below based on the value of country. \r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nFR: CentreFrance\r\n\r\nZA: CentreSouthAfrica\r\n\r\nBE: CentreBelgium\r\n\r\nGB: CentreUnitedKingdomofGreatBritain\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nNL: CentreNetherlands\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nUS: CentreUSA"
+            },
+            "CentreCodeAustralia": {
                 "enum": [
-                    "AU_A",
-                    "AU_AD",
-                    "AU_AR",
-                    "AU_AU",
-                    "AU_B",
-                    "AU_BA",
-                    "AU_BK",
-                    "AU_BL",
-                    "AU_BM",
-                    "AU_BO",
-                    "AU_BR",
-                    "AU_BT",
-                    "AU_C",
-                    "AU_CA",
-                    "AU_CB",
-                    "AU_CC",
-                    "AU_CL",
-                    "AU_CN",
-                    "AU_CO",
-                    "AU_CR",
-                    "AU_CU",
-                    "AU_CW",
-                    "AU_D",
-                    "AU_DE",
-                    "AU_DO",
-                    "AU_DR",
-                    "AU_E",
-                    "AU_ER",
-                    "AU_ES",
-                    "AU_F",
-                    "AU_G",
-                    "AU_GF",
-                    "AU_GI",
-                    "AU_GN",
-                    "AU_GR",
-                    "AU_GU",
-                    "AU_H",
-                    "AU_HA",
-                    "AU_HB",
-                    "AU_HM",
-                    "AU_HO",
-                    "AU_HY",
-                    "AU_I",
-                    "AU_J",
-                    "AU_JA",
-                    "AU_K",
-                    "AU_KE",
-                    "AU_KH",
-                    "AU_KI",
-                    "AU_KN",
-                    "AU_KT",
-                    "AU_KW",
-                    "AU_KY",
-                    "AU_L",
-                    "AU_LC",
-                    "AU_M",
-                    "AU_MA",
-                    "AU_MB",
-                    "AU_MC",
-                    "AU_ME",
-                    "AU_MG",
-                    "AU_MI",
-                    "AU_MO",
-                    "AU_MR",
-                    "AU_MU",
-                    "AU_N",
-                    "AU_NA",
-                    "AU_ND",
-                    "AU_NO",
-                    "AU_NR",
-                    "AU_OB",
-                    "AU_OR",
-                    "AU_P",
-                    "AU_PA",
-                    "AU_PL",
-                    "AU_Q",
-                    "AU_QU",
-                    "AU_R",
-                    "AU_S",
-                    "AU_SG",
-                    "AU_SH",
-                    "AU_SK",
-                    "AU_SW",
-                    "AU_SY",
-                    "AU_T",
-                    "AU_TE",
-                    "AU_U",
-                    "AU_UR",
-                    "AU_V",
-                    "AU_W",
-                    "AU_WA",
-                    "AU_WG",
-                    "AU_WL",
-                    "AU_WN",
-                    "AU_WR",
-                    "AU_WW",
-                    "AU_X",
-                    "AU_Y",
-                    "AU_YA",
-                    "AU_YM",
-                    "AU_YO",
-                    "AU_Z",
-                    "OS_ZA",
-                    "OS_ZB",
-                    "OS_ZC",
-                    "OS_ZD",
-                    "OS_ZE",
-                    "OS_ZF",
-                    "OS_ZG",
-                    "OS_ZH",
-                    "OS_ZI",
-                    "OS_ZJ",
-                    "OS_ZK",
-                    "OS_ZL",
-                    "OS_ZM",
-                    "OS_ZN",
-                    "OS_ZO",
-                    "OS_ZP",
-                    "OS_ZQ",
-                    "OS_ZR",
-                    "OS_ZS",
-                    "OS_ZT",
-                    "OS_ZU",
-                    "OS_ZV",
-                    "OS_ZW",
-                    "OS_ZX",
-                    "OS_ZY",
-                    "OS_ZZ",
-                    "NZ_A",
-                    "NZ_AW",
-                    "NZ_B",
-                    "NZ_BL",
-                    "NZ_BT",
-                    "NZ_C",
-                    "NZ_CV",
-                    "NZ_D",
-                    "NZ_F",
-                    "NZ_FA",
-                    "NZ_G",
-                    "NZ_GD",
-                    "NZ_GO",
-                    "NZ_HA",
-                    "NZ_HS",
-                    "NZ_I",
-                    "NZ_J",
-                    "NZ_K",
-                    "NZ_KA",
-                    "NZ_KP",
-                    "NZ_L",
-                    "NZ_LO",
-                    "NZ_LU",
-                    "NZ_M",
-                    "NZ_MA",
-                    "NZ_MK",
-                    "NZ_MT",
-                    "NZ_MU",
-                    "NZ_N",
-                    "NZ_NE",
-                    "NZ_O",
-                    "NZ_OH",
-                    "NZ_OI",
-                    "NZ_OM",
-                    "NZ_OT",
-                    "NZ_P",
-                    "NZ_PT",
-                    "NZ_PU",
-                    "NZ_R",
-                    "NZ_RG",
-                    "NZ_RI",
-                    "NZ_S",
-                    "NZ_SA",
-                    "NZ_SH",
-                    "NZ_SY",
-                    "NZ_T",
-                    "NZ_TA",
-                    "NZ_TE",
-                    "NZ_TH",
-                    "NZ_TP",
-                    "NZ_U",
-                    "NZ_V",
-                    "NZ_W",
-                    "NZ_WH",
-                    "NZ_WI",
-                    "NZ_WR",
-                    "NZ_WT",
-                    "NZ_WU",
-                    "NZ_X",
-                    "NZ_Y",
-                    "NZ_YP",
-                    "NZ_Z"
+                    "A",
+                    "AD",
+                    "AR",
+                    "AU",
+                    "B",
+                    "BA",
+                    "BK",
+                    "BL",
+                    "BM",
+                    "BO",
+                    "BR",
+                    "BT",
+                    "C",
+                    "CA",
+                    "CB",
+                    "CC",
+                    "CL",
+                    "CN",
+                    "CO",
+                    "CR",
+                    "CU",
+                    "CW",
+                    "D",
+                    "DE",
+                    "DO",
+                    "DR",
+                    "E",
+                    "ER",
+                    "ES",
+                    "F",
+                    "G",
+                    "GF",
+                    "GI",
+                    "GN",
+                    "GR",
+                    "GU",
+                    "H",
+                    "HA",
+                    "HB",
+                    "HM",
+                    "HO",
+                    "HY",
+                    "I",
+                    "J",
+                    "JA",
+                    "K",
+                    "KE",
+                    "KH",
+                    "KI",
+                    "KN",
+                    "KT",
+                    "KW",
+                    "KY",
+                    "L",
+                    "LC",
+                    "M",
+                    "MA",
+                    "MB",
+                    "MC",
+                    "ME",
+                    "MG",
+                    "MI",
+                    "MO",
+                    "MR",
+                    "MU",
+                    "N",
+                    "NA",
+                    "ND",
+                    "NO",
+                    "NR",
+                    "OB",
+                    "OR",
+                    "P",
+                    "PA",
+                    "PL",
+                    "Q",
+                    "QU",
+                    "R",
+                    "S",
+                    "SG",
+                    "SH",
+                    "SK",
+                    "SW",
+                    "SY",
+                    "T",
+                    "TE",
+                    "U",
+                    "UR",
+                    "V",
+                    "W",
+                    "WA",
+                    "WG",
+                    "WL",
+                    "WN",
+                    "WR",
+                    "WW",
+                    "X",
+                    "Y",
+                    "YA",
+                    "YM",
+                    "YO",
+                    "Z"
                 ],
                 "type": "string",
-                "description": ""
+                "description": "This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany"
+            },
+            "CentreCodeBelgium": {
+                "enum": [
+                    "ZB"
+                ],
+                "type": "string",
+                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium"
+            },
+            "CentreCodeChina": {
+                "enum": [
+                    "ZM",
+                    "ZP",
+                    "ZQ",
+                    "ZR"
+                ],
+                "type": "string",
+                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China"
+            },
+            "CentreCodeFrance": {
+                "enum": [
+                    "ZF"
+                ],
+                "type": "string",
+                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France"
+            },
+            "CentreCodeGermany": {
+                "enum": [
+                    "ZG",
+                    "ZH"
+                ],
+                "type": "string",
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany"
+            },
+            "CentreCodeItaly": {
+                "enum": [
+                    "ZI",
+                    "ZJ",
+                    "ZK"
+                ],
+                "type": "string",
+                "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
+            },
+            "CentreCodeNetherlands": {
+                "enum": [
+                    "ZN"
+                ],
+                "type": "string",
+                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands"
+            },
+            "CentreCodeNewZealand": {
+                "enum": [
+                    "A",
+                    "AW",
+                    "B",
+                    "BL",
+                    "BT",
+                    "C",
+                    "CV",
+                    "D",
+                    "F",
+                    "FA",
+                    "G",
+                    "GD",
+                    "GO",
+                    "HA",
+                    "HS",
+                    "I",
+                    "J",
+                    "K",
+                    "KA",
+                    "KP",
+                    "L",
+                    "LO",
+                    "LU",
+                    "M",
+                    "MA",
+                    "MK",
+                    "MT",
+                    "MU",
+                    "N",
+                    "NE",
+                    "O",
+                    "OH",
+                    "OI",
+                    "OM",
+                    "OT",
+                    "P",
+                    "PT",
+                    "PU",
+                    "R",
+                    "RG",
+                    "RI",
+                    "S",
+                    "SA",
+                    "SH",
+                    "SY",
+                    "T",
+                    "TA",
+                    "TE",
+                    "TH",
+                    "TP",
+                    "U",
+                    "V",
+                    "W",
+                    "WH",
+                    "WI",
+                    "WR",
+                    "WT",
+                    "WU",
+                    "X",
+                    "Y",
+                    "YP",
+                    "Z",
+                    "ZY"
+                ],
+                "type": "string",
+                "description": "This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo<br />ZY: New Zealand - Ashburton"
+            },
+            "CentreCodeSouthAfrica": {
+                "enum": [
+                    "ZS"
+                ],
+                "type": "string",
+                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa"
+            },
+            "CentreCodeTaiwan": {
+                "enum": [
+                    "ZO"
+                ],
+                "type": "string",
+                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan"
+            },
+            "CentreCodeUnitedKingdomOfGreatBritain": {
+                "enum": [
+                    "ZE"
+                ],
+                "type": "string",
+                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain"
+            },
+            "CentreCodeUnitedStatesOfAmerica": {
+                "enum": [
+                    "ZU"
+                ],
+                "type": "string",
+                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA"
             },
             "Contact": {
                 "type": "object",
@@ -1085,10 +1217,18 @@
                     "AU",
                     "NZ",
                     "FR",
-                    "ZA"
+                    "ZA",
+                    "BE",
+                    "GB",
+                    "DE",
+                    "IT",
+                    "NL",
+                    "CN",
+                    "TW",
+                    "US"
                 ],
                 "type": "string",
-                "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa"
+                "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa<br />BE: Belgium<br />GB: United Kingdom of Great Britain<br />DE: Germany<br />IT: Italy<br />NL: Netherlands<br />CN: China<br />TW: Taiwan<br />US: USA"
             },
             "CustomProblemDetails": {
                 "required": [
@@ -1178,6 +1318,7 @@
                         "maxLength": 5,
                         "minLength": 0,
                         "type": "boolean",
+                        "description": "Indicate whether is using network datetime or not. true = use network datetime, false = Not use network datetime.",
                         "nullable": true
                     }
                 },
@@ -1198,14 +1339,23 @@
                 "type": "string",
                 "description": "A: Agent / Broker<br />C: Carrier<br />E: Exporter / Buyer<br />D: Dump<br />M: Miscellaneous<br />P: Port<br />S: Shipping<br />T: Test House<br />V: Vessel"
             },
-            "Organisation": {
+            "Name": {
                 "type": "object",
                 "properties": {
-                    "organisationCodeAndCentre": {
-                        "$ref": "#/components/schemas/OrganisationCodeAndCentre"
+                    "firstName": {
+                        "maxLength": 80,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
                     },
-                    "organisationId": {
-                        "maxLength": 5,
+                    "lastName": {
+                        "maxLength": 80,
+                        "minLength": 0,
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "organisationName": {
+                        "maxLength": 80,
                         "minLength": 0,
                         "type": "string",
                         "nullable": true
@@ -1213,9 +1363,8 @@
                 },
                 "additionalProperties": false
             },
-            "OrganisationCodeAndCentre": {
+            "Organisation": {
                 "required": [
-                    "centre",
                     "organisationCode"
                 ],
                 "type": "object",

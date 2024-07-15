@@ -26,11 +26,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                        OrganisationId = "ABCD"
+                                                OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -57,22 +57,22 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AR },
+                                    CentreStorage = new Centre {Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A},
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     InvoicingOrganisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
 
                                     SellingOrganisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
 
-                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
-                                    StorageOrganisation = new Organisation { OrganisationId = "ABCD" },
+                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                    StorageOrganisation = new Organisation {                         OrganisationCode = "ABC", },
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
@@ -154,11 +154,11 @@ namespace Wiedpug.API.ExampleResponses
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
-                            OrganisationId = "AWTA"
+                                                    OrganisationCode = "AWT",
                         },
                         CurrentReceiver = new Organisation
                         {
-                            OrganisationId = "MNCL"
+                                                    OrganisationCode = "MNC",
                         },
                         VersionNumber = 31,
                         SoftwareIdentifier = new SoftwareIdentifier
@@ -181,24 +181,27 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = SellingCentreType.AU_M,
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = new Centre { CentreAustralia = CentreAustralia.AR },
+                                    CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     InvoicingOrganisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
 
                                     SellingOrganisation = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
                             },
 
-                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G },
+                                    CentreCatalogue = new Centre {
+                                        Country = CountryCode.AU,
+                                        CentreCode =  CentreCodeAustralia.A
+                                    },
                                     StorageOrganisation = new Organisation
                                     {
-                                        OrganisationId = "ABCD"
+                                                                OrganisationCode = "ABC",
                                     },
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,

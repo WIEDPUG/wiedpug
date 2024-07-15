@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Wiedpug.API.SwaggerOptions
+namespace Wiedpug.API.SchemaFilter.SwaggerOptions
 {
     /// <summary>
     /// Contains the configuration required to generate JSON documentation for all versions of API. 
@@ -31,7 +31,7 @@ namespace Wiedpug.API.SwaggerOptions
             {
                 options.SwaggerDoc(
                     description.GroupName,
-                    CreateVersionInfo(description));                
+                    CreateVersionInfo(description));
             }
         }
 

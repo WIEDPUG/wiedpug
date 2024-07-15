@@ -30,11 +30,13 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
+
                             },
                                                 CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
+
                     },
                             VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
@@ -53,11 +55,13 @@ namespace Wiedpug.API.ExampleResponses
                                  {
                                      ReleasingOrganisation = new Organisation
                                      {
-                                         OrganisationId="WTTA"
+                                            OrganisationCode = "AWC",
+
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
                                      CentreStorage = new Centre {
-                                        CentreAustralia = CentreAustralia.AU
+                                        Country = CountryCode.AU,
+                                        CentreCode =  CentreCodeAustralia.A
                                      },
                                      SaleDate = "2017-01-19",
                                      WoolState = WoolState._1,
@@ -74,13 +78,15 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     InvoicingOrganisation = new Organisation
                                     {
-                                        OrganisationId = "ABCD"
+                                                                OrganisationCode = "ABC",
+
                                     },
                                     SellingOrganisation = new Organisation
                                     {
-                                        OrganisationId = "ABCD"
+                                                                OrganisationCode = "ABC",
+
                                     },
-                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G }
+                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A }
                                  },
                                  LotPriceAndBuyerDetails = new List<LotPriceAndBuyerDetail>
                                  {
@@ -90,7 +96,8 @@ namespace Wiedpug.API.ExampleResponses
                                          CostPerWeightUnit = 110,
                                          BuyingOrganisation = new Organisation
                                          {
-                                             OrganisationId = "WWTA"
+                                                                     OrganisationCode = "WWT",
+
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
                                          AuctionSaleTime = "2024-05-22T19:25:04Z"
@@ -101,7 +108,8 @@ namespace Wiedpug.API.ExampleResponses
                                          CostPerWeightUnit = 150,
                                          BuyingOrganisation = new Organisation
                                          {
-                                             OrganisationId = "AATA"
+                                                                     OrganisationCode = "AAT",
+
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
                                          AuctionSaleTime = "2024-05-22T19:30:00Z"
@@ -166,11 +174,13 @@ namespace Wiedpug.API.ExampleResponses
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
-                                OrganisationId = "ABCD"
+                                                        OrganisationCode = "ABC",
+
                             },
                                                 CurrentReceiver = new Organisation
                     {
-                        OrganisationId = "ATWA"
+                                                OrganisationCode = "ATW",
+
                     },
                             VersionNumber = 31,
                             SoftwareIdentifier = new SoftwareIdentifier
@@ -189,10 +199,10 @@ namespace Wiedpug.API.ExampleResponses
                                  {
                                      ReleasingOrganisation = new Organisation
                                      {
-                                         OrganisationId="WTTA"
+                                        OrganisationCode = "ATS",
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
-                                     CentreStorage = new Centre { CentreAustralia = CentreAustralia.AD },
+                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                      SaleDate = "2017-01-19",
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
@@ -208,13 +218,13 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     InvoicingOrganisation = new Organisation
                                     {
-                                        OrganisationId = "ABCD"
+                                                                OrganisationCode = "ABC",
                                     },
                                     SellingOrganisation = new Organisation
                                     {
-                                        OrganisationId = "ABCD"
+                                                                OrganisationCode = "ABC",
                                     },
-                                    CentreCatalogue = new Centre { CentreAustralia = CentreAustralia.G }
+                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A }
                                  },
                                  LotPriceAndBuyerDetails = new List<LotPriceAndBuyerDetail>
                                  {
@@ -224,7 +234,7 @@ namespace Wiedpug.API.ExampleResponses
                                          CostPerWeightUnit = 110,
                                          BuyingOrganisation = new Organisation
                                          {
-                                             OrganisationId = "WWTA"
+                                                                     OrganisationCode = "WWT",
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
                                          AuctionSaleTime = "2024-05-22T19:25:04Z"
@@ -235,7 +245,7 @@ namespace Wiedpug.API.ExampleResponses
                                          CostPerWeightUnit = 150,
                                          BuyingOrganisation = new Organisation
                                          {
-                                             OrganisationId = "AATA"
+                                                                     OrganisationCode = "AAT",
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
                                          AuctionSaleTime = "2024-05-22T19:30:00Z"

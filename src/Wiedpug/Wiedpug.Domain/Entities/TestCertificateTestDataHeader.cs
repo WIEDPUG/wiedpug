@@ -65,13 +65,13 @@ namespace Wiedpug.Domain.Entities
         public int? DeclaredTare { get; set; }
 
         [StringLength(1)]
-        public LotType LotType { get; set; }
+        public LotType? LotType { get; set; }
 
         [StringLength(5)]
-        public Centre CentreAuction { get; set; }
+        public Centre? CentreAuction { get; set; }
 
         [StringLength(1)]
-        public SourceCode SourceCode { get; set; }
+        public SourceCode? SourceCode { get; set; }
 
         [Required]
         [StringLength(1)]

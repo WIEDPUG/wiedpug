@@ -9,16 +9,11 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    /// <summary>
-    /// 
-    /// 
-    /// 
-    /// </summary>    
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     [Description("This is Centres for Australia. " +
         "A centre is a town where any activity connected with the wool industry takes place. " +
         "The codes used in transmissions are those defined in the Australian Wool Selling Regulation.")]
-    [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum CentreAustralia
+    public enum CentreCodeAustralia
     {
         //Australia
         [Description("A: Australia - ADELAIDE")]

@@ -17,6 +17,30 @@ namespace Wiedpug.Domain.Enums
         FR,
 
         [Description("ZA: South Africa")]
-        ZA
+        ZA,
+
+        [Description("BE: Belgium")]
+        BE,
+
+        [Description("GB: United Kingdom of Great Britain")]
+        GB,
+
+        [Description("DE: Germany")]
+        DE,
+
+        [Description("IT: Italy")]
+        IT,
+
+        [Description("NL: Netherlands")]
+        NL,
+
+        [Description("CN: China")]
+        CN,
+
+        [Description("TW: Taiwan")]
+        TW,
+
+        [Description("US: USA")]
+        US,
     }
 }

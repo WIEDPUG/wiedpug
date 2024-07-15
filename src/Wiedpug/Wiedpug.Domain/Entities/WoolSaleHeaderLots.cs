@@ -163,10 +163,10 @@ namespace Wiedpug.Domain.Entities
         /// The date on which payment is due. Also known as Prompt Date.
         /// Date value in ISO 8601 standard UTC format. e.g. 2024-03-21
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
-        public string? PaymentDueDate { get; set; } // FIELD NUMBER 5 - Payment Due Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
+        ///[DataType(DataType.Date)]
+        ///[RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        ///[StringLength(10)]
+        ///public string? PaymentDueDate { get; set; } // FIELD NUMBER 5 - Payment Due Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
         /// <summary>
         /// Total 4 digits with 2 digits after the decimal point. e.g. 23.76
@@ -254,7 +254,7 @@ namespace Wiedpug.Domain.Entities
         public SaleType? SaleType { get; set; } // FIELD NUMBER 9 - Sale Type - Start: 34, Size: 2, Data Type: ID, Justification: L, Requirement Designator: O
 
         [StringLength(1)]
-        public ElectronicSaleFlag? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
+        public string? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
 
         /// <summary>
         /// `true` = Available to Buyers, `false` = Not available to buyers.

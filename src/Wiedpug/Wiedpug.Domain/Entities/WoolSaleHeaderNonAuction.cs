@@ -38,8 +38,8 @@ namespace Wiedpug.Domain.Entities
         [StringLength(2)]
         public SaleType? SaleType { get; set; } // FIELD NUMBER 9 - Sale Type - Start: 34, Size: 2, Data Type: ID, Justification: L, Requirement Designator: O
 
-        [StringLength(5)]
-        public bool? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
+        [StringLength(1)]
+        public string? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
 
         /// <summary>
         /// `true` = Available to Buyers, `false` = Not available to buyers.
