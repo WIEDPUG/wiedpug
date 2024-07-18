@@ -11,7 +11,8 @@ namespace Wiedpug.Domain.Entities
         /// Required alphanumeric field for lot identity.
         /// </summary>
         [Required]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public required string LotIdentity { get; set; }
 
         /// <summary>
@@ -19,21 +20,24 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public required int CostPerWeightUnit { get; set; }
 
         /// <summary>
         /// Required generic string field for buying organisation.
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation BuyingOrganisation { get; set; }
 
         /// <summary>
         /// Required enum type for sale outcome.
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required SaleOutcome SaleOutcome { get; set; }
 
         /// <summary>
@@ -42,7 +46,8 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public required string AuctionSaleTime { get; set; }
     }
 }

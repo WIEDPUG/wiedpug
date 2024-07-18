@@ -15,7 +15,7 @@ namespace Wiedpug.API.Model
         /// <summary>
         /// Contains information about the response if applicable.
         /// </summary>
-        public string? Message { get; set; }
+        public ApiMessage? Message { get; set; }
         /// <summary>
         /// Contains response data. e.g. Auction Catalogue
         /// </summary>
@@ -35,7 +35,7 @@ namespace Wiedpug.API.Model
         /// <summary>
         /// Contains information about the response if applicable.
         /// </summary>
-        public string? Message { get; set; }
+        public ApiMessage? Message { get; set; }
         /// <summary>
         /// Contains response data. e.g. Auction Catalogue
         /// </summary>

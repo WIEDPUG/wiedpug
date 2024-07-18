@@ -87,7 +87,8 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_12_6)]
         public double? FactorAirflowMean { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CombinationFlag? CombinationFlag { get; set; }
     }
 }

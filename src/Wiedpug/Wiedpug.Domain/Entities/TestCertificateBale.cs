@@ -21,7 +21,8 @@ namespace Wiedpug.Domain.Entities
         /// For TRV only
         /// </summary>
         /// 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public List<string>? PropertyIdentificationCodes { get; set; }
     }
 }

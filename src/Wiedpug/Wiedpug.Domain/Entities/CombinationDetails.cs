@@ -10,36 +10,36 @@ namespace Wiedpug.Domain.Entities
         /// Clean weight = Net Weight X Yield
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required int CleanWeight1 { get; set; }
+        [RegularExpression(RegexPattern.DECIMAL_8_2)]
+        public required double CleanWeight1 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? CleanWeight2 { get; set; }
+        [RegularExpression(RegexPattern.DECIMAL_8_2)]
+        public double? CleanWeight2 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? CleanWeight3 { get; set; }
+        [RegularExpression(RegexPattern.DECIMAL_8_2)]
+        public double? CleanWeight3 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? CleanWeight4 { get; set; }
+        [RegularExpression(RegexPattern.DECIMAL_8_2)]
+        public double? CleanWeight4 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? CleanWeight5 { get; set; }
+        [RegularExpression(RegexPattern.DECIMAL_8_2)]
+        public double? CleanWeight5 { get; set; }
 
         /// <summary>
         /// VMB - Minimum value.
@@ -78,7 +78,8 @@ namespace Wiedpug.Domain.Entities
         public double? FactorAirflowMean { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CombinationFlag? CombinationFlag { get; set; }
     }
 }

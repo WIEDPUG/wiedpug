@@ -11,13 +11,15 @@ namespace Wiedpug.Domain.ValueObject
     public class StandardPhoneNumber
     {
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         [RegularExpression(RegexPattern.NUMBERS)]
         public required string CountryCode { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBERS)]
-        [StringLength(15)]
+        [MinLength(1)]
+        [MaxLength(15)]
         public required string Number { get; set; }
     }
 }

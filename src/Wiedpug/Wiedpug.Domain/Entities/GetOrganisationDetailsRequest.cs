@@ -8,11 +8,13 @@ namespace Wiedpug.Domain.Entities
     public class GetOrganisationDetailsRequest
     {
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required CountryCode CountryOfOrigin { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation DocumentOriginator { get; set; }
 
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
@@ -21,7 +23,8 @@ namespace Wiedpug.Domain.Entities
         /// Australian Business Number
         /// </summary>
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required string ABN { get; set; }
 
         /// <summary>
@@ -29,7 +32,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? StartDateTimeStatusRequest { get; set; }
 
         /// <summary>
@@ -37,13 +41,15 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? EndDateTimeStatusRequest { get; set; }
 
         /// <summary>
         /// Indicate whether is using network datetime or not. true = use network datetime, false = Not use network datetime.
         /// </summary>
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public bool? UseNetworkDateTime { get; set; }
     }
 }

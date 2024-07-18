@@ -6,7 +6,7 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {    
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum CatalogueRecordTypesToBeExcluded
+    public enum ClassToBeExcluded
     {
         LotHeaderPricing,
 

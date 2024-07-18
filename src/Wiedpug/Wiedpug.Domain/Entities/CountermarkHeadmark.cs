@@ -10,10 +10,12 @@ namespace Wiedpug.Domain.Entities
 {
     public class CountermarkHeadmark
     {
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public string? CountermarkHeadmarkLine1 { get; set; }
        
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public string? CountermarkHeadmarkLine2 { get; set; }
     }
 

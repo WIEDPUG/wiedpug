@@ -12,11 +12,13 @@ namespace Wiedpug.Domain.Entities
     public class CentreNewZealand
     {
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required CountryCode Country { get; set; } = CountryCode.NZ;
 
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required CentreCodeNewZealand CentreCode { get; set; }
     }
 }

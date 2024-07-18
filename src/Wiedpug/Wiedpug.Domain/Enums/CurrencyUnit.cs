@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum CurrencyCode
+    public enum CurrencyUnit
     {
         [Description("AUD: Australian Dollars")]
         AUD,

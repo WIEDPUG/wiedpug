@@ -8,7 +8,8 @@ namespace Wiedpug.Domain.Entities
     public class AdjustmentNoteDetails
     {
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation Client { get; set; }
 
         [Required]
@@ -18,7 +19,8 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateOfCreditNote { get; set; }
 
         [Required]
@@ -26,7 +28,8 @@ namespace Wiedpug.Domain.Entities
         public required double CreditNoteAmount { get; set; }
 
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool IsGSTApplicable { get; set; }
 
         [Required]
@@ -38,17 +41,20 @@ namespace Wiedpug.Domain.Entities
         public required int ReasonCode { get; set; }
 
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required CertificateIdentity CertificateIdentityOriginal { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateOfOriginalInvoice { get; set; }
 
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required CertificateIdentity NewCertificateIdentity { get; set; }
     }
 }

@@ -13,7 +13,8 @@ namespace Wiedpug.Domain.Entities
         public required int Season { get; set; }
 
         [Required]
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
@@ -21,32 +22,38 @@ namespace Wiedpug.Domain.Entities
         /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required Centre CentreStorage { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string SaleDate { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required WoolState WoolState { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required PackType PackType { get; set; }
 
         /// <summary>
         /// The Code for the currency in which the sale was made. To obtain the current code list please use the Commonwealth Bank Currency Codes on their website
         /// </summary>
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required string Currency { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required WeightUnit WeightUnit { get; set; }
 
         /// <summary>
@@ -59,7 +66,8 @@ namespace Wiedpug.Domain.Entities
         public required double PostSaleCharge { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required CalculationBasis CalculationBasis { get; set; }
 
         /// <summary>
@@ -88,43 +96,51 @@ namespace Wiedpug.Domain.Entities
         /// The code for the broker who will raise the invoice for the wool
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation InvoicingOrganisation { get; set; }
 
         /// <summary>
         /// The broker that is responsible for releasing the wool out of the store
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation ReleasingOrganisation { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation SellingOrganisation { get; set; }
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public WoolTypeGroup? WoolTypeGroup { get; set; }
         
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required Centre CentreCatalogue { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required DeliveryBasis DeliveryBasis { get; set; }
 
         /// <summary>
         /// Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.
         /// </summary>
         /// 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public Centre? CentreDelivery { get; set; }
 
         /// <summary>
         /// This field is to be used when the PSC includes optional delivery to a second area.
         /// </summary>
         /// 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public Centre? AlternateDelivery { get; set; }
     }
 }

@@ -7,7 +7,8 @@ namespace Wiedpug.Domain.Entities
     public class TestCertificateOMIDetails
     {
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
@@ -15,7 +16,8 @@ namespace Wiedpug.Domain.Entities
         public required double Charge { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
@@ -49,21 +51,25 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? Yield4 { get; set; }
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public YieldType? YieldType1 { get; set; }
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public YieldType? YieldType2 { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required RetestFlag RetestFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? Yield5 { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]

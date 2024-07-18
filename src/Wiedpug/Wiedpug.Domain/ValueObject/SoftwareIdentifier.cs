@@ -7,7 +7,8 @@ namespace Wiedpug.Domain.ValueObject
 {
     public class SoftwareIdentifier
     {
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public SoftwareCompany SoftwareCompany { get; set; }
 
         /// <summary>
@@ -17,7 +18,8 @@ namespace Wiedpug.Domain.ValueObject
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public int? Version { get; set; }
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public string? ProgramName { get; set; }
     }
 }

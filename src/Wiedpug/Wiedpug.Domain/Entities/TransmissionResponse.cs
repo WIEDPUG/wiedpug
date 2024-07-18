@@ -8,11 +8,13 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public int? RecordNumber { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public string? ErrorCode { get; set; }
 
         [Required]
-        [StringLength(69)]
+        [MinLength(1)]
+        [MaxLength(69)]
         public required string Text { get; set; }
 
     }

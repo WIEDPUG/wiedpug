@@ -12,19 +12,23 @@ namespace Wiedpug.Domain.Entities
     public class CertificateIdentity
     {
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required CertificateIDPrefix CertificateIDPrefix { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required CertificateIDSuffix CertificateIDSuffix { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required string CertificateIDNumber { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required int CertificateIDCD { get; set; }
     }
 }

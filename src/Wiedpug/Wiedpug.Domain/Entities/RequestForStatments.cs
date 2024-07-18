@@ -7,10 +7,12 @@ namespace Wiedpug.Domain.Entities
     public class RequestForStatements
     {
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public SaleIdentity? SaleIdentity { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public string? OrganisationRequested { get; set; }
 
         /// <summary>
@@ -18,7 +20,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? SaleDateRequested { get; set; }
 
         /// <summary>
@@ -26,7 +29,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? StartDateTimeStatusRequest { get; set; }
 
         /// <summary>
@@ -34,24 +38,29 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? EndDateTimeStatusRequest { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public bool? UseNetworkDateTime { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required RequestTypeForData RequestType { get; set; }
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public WoolTypeGroup? WoolTypeGroup { get; set; }
 
         /// <summary>
         /// Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header
         /// </summary>
         /// 
-        [StringLength(80)]
+        [MinLength(1)]
+        [MaxLength(80)]
         public List<String>? RecordTypesToBeExcluded { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]

@@ -12,10 +12,12 @@ namespace Wiedpug.Domain.Entities
     public class ExcludedType
     {
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required RecordTypesToBeExcluded RecordTypesToBeExcluded { get; set; }
 
-        [StringLength(1)]
-        public SubTypeToBeExcluded? SubTypesToBeExcluded { get; set; }
+        [MinLength(1)]
+        [MaxLength(1)]
+        public SubClassToBeExcluded? SubTypesToBeExcluded { get; set; }
     }
 }

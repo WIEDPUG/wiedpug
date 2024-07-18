@@ -81,12 +81,20 @@
                                                         "saleDate": "2017-01-19",
                                                         "woolState": "A",
                                                         "packType": "2",
-                                                        "currency": "AUD",
                                                         "weightUnit": 0,
-                                                        "postSaleCharge": 25.96,
+                                                        "postSaleCharge": {
+                                                            "value": 25.96,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "calculationBasis": "B",
-                                                        "freightCharge": 0,
-                                                        "freightRebate": 3.25,
+                                                        "freightCharge": {
+                                                            "value": 0,
+                                                            "currencyUnit": "AUD"
+                                                        },
+                                                        "freightRebate": {
+                                                            "value": 3.25,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "catalogueSection": "FLC",
                                                         "invoicingOrganisation": {
                                                             "organisationCode": "ABC"
@@ -111,7 +119,10 @@
                                                         "discountRate": 1.5,
                                                         "maximumDaysDiscount": 0,
                                                         "dateStorageChargeCommences": "2017-01-24",
-                                                        "storageChargePerBalePerDay": 0.245,
+                                                        "storageChargePerBalePerDay": {
+                                                            "value": 0.245,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "penaltyInterestRate": 11.35
                                                     },
                                                     "lots": [
@@ -128,7 +139,10 @@
                                                                 "lotType": 4,
                                                                 "lightestIndividualBaleWeight": 149,
                                                                 "reportingFlag": "R",
-                                                                "costPerWeightUnit": 0,
+                                                                "costPerWeightUnit": {
+                                                                    "value": 0,
+                                                                    "currencyUnit": "AUD"
+                                                                },
                                                                 "cleanWeight": 0,
                                                                 "packCondition": "N",
                                                                 "coreTestSamplingDate": "2019-01-17",
@@ -136,10 +150,13 @@
                                                                 "gstTaxInvoiceFlag": true,
                                                                 "numberOfOverweightBales": 0
                                                             },
-                                                            "lotHeaderAwexData": {
-                                                                "awexId": "MF6S",
-                                                                "appraiserId": "99192",
-                                                                "classersRegisteredNumber": "998921"
+                                                            "encryptedLotHeaderAwexData": {
+                                                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
+                                                                "lotHeaderAwexData": {
+                                                                    "awexId": "MF6S",
+                                                                    "appraiserId": "99192",
+                                                                    "classersRegisteredNumber": "998921"
+                                                                }
                                                             },
                                                             "lotHeaderVendorDeclarations": [
                                                                 {
@@ -153,7 +170,10 @@
                                                                     "certificateIDNumber": "00000664",
                                                                     "certificateIDCD": 6
                                                                 },
-                                                                "charge": 188.5,
+                                                                "charge": {
+                                                                    "value": 188.5,
+                                                                    "currencyUnit": "AUD"
+                                                                },
                                                                 "laboratory": 1,
                                                                 "regrabSampleWeight": 0,
                                                                 "stapleLength": 73,
@@ -295,12 +315,20 @@
                                                         "saleDate": "2017-01-19",
                                                         "woolState": "1",
                                                         "packType": "6",
-                                                        "currency": "AUD",
                                                         "weightUnit": 0,
-                                                        "postSaleCharge": 25.96,
+                                                        "postSaleCharge": {
+                                                            "value": 25.96,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "calculationBasis": "B",
-                                                        "freightCharge": 0,
-                                                        "freightRebate": 3.25,
+                                                        "freightCharge": {
+                                                            "value": 0,
+                                                            "currencyUnit": "AUD"
+                                                        },
+                                                        "freightRebate": {
+                                                            "value": 3.25,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "catalogueSection": "FLC",
                                                         "invoicingOrganisation": {
                                                             "organisationCode": "ABC"
@@ -325,7 +353,10 @@
                                                         "discountRate": 1.5,
                                                         "maximumDaysDiscount": 0,
                                                         "dateStorageChargeCommences": "2017-01-24",
-                                                        "storageChargePerBalePerDay": 0.245,
+                                                        "storageChargePerBalePerDay": {
+                                                            "value": 0.245,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "penaltyInterestRate": 11.35
                                                     },
                                                     "lots": [
@@ -342,7 +373,10 @@
                                                                 "lotType": 1,
                                                                 "lightestIndividualBaleWeight": 149,
                                                                 "reportingFlag": "R",
-                                                                "costPerWeightUnit": 0,
+                                                                "costPerWeightUnit": {
+                                                                    "value": 0,
+                                                                    "currencyUnit": "AUD"
+                                                                },
                                                                 "cleanWeight": 0,
                                                                 "packCondition": "N",
                                                                 "coreTestSamplingDate": "2019-01-17",
@@ -350,10 +384,13 @@
                                                                 "gstTaxInvoiceFlag": true,
                                                                 "numberOfOverweightBales": 0
                                                             },
-                                                            "lotHeaderAwexData": {
-                                                                "awexId": "MF6S",
-                                                                "appraiserId": "99192",
-                                                                "classersRegisteredNumber": "998921"
+                                                            "encryptedLotHeaderAwexData": {
+                                                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
+                                                                "lotHeaderAwexData": {
+                                                                    "awexId": "MF6S",
+                                                                    "appraiserId": "99192",
+                                                                    "classersRegisteredNumber": "998921"
+                                                                }
                                                             },
                                                             "lotHeaderVendorDeclarations": [
                                                                 {
@@ -367,7 +404,10 @@
                                                                     "certificateIDNumber": "00000664",
                                                                     "certificateIDCD": 6
                                                                 },
-                                                                "charge": 256.23,
+                                                                "charge": {
+                                                                    "value": 256.23,
+                                                                    "currencyUnit": "AUD"
+                                                                },
                                                                 "laboratory": 1,
                                                                 "regrabSampleWeight": 0,
                                                                 "stapleLength": 73,
@@ -484,13 +524,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -610,12 +652,20 @@
                                                 "saleDate": "2017-01-19",
                                                 "woolState": "A",
                                                 "packType": "F",
-                                                "currency": "AUD",
                                                 "weightUnit": 0,
-                                                "postSaleCharge": 25.96,
+                                                "postSaleCharge": {
+                                                    "value": 25.96,
+                                                    "currencyUnit": "AUD"
+                                                },
                                                 "calculationBasis": "B",
-                                                "freightCharge": 0,
-                                                "freightRebate": 3.25,
+                                                "freightCharge": {
+                                                    "value": 0,
+                                                    "currencyUnit": "AUD"
+                                                },
+                                                "freightRebate": {
+                                                    "value": 3.25,
+                                                    "currencyUnit": "AUD"
+                                                },
                                                 "catalogueSection": "FLC",
                                                 "invoicingOrganisation": {
                                                     "organisationCode": "ABC"
@@ -640,7 +690,10 @@
                                                 "discountRate": 1.5,
                                                 "maximumDaysDiscount": 0,
                                                 "dateStorageChargeCommences": "2017-01-24",
-                                                "storageChargePerBalePerDay": 0.245,
+                                                "storageChargePerBalePerDay": {
+                                                    "value": 0.245,
+                                                    "currencyUnit": "AUD"
+                                                },
                                                 "penaltyInterestRate": 11.35
                                             },
                                             "lots": [
@@ -657,7 +710,10 @@
                                                         "lotType": 2,
                                                         "lightestIndividualBaleWeight": 149,
                                                         "reportingFlag": "R",
-                                                        "costPerWeightUnit": 0,
+                                                        "costPerWeightUnit": {
+                                                            "value": 0,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "cleanWeight": 0,
                                                         "packCondition": "N",
                                                         "coreTestSamplingDate": "2019-01-17",
@@ -665,10 +721,13 @@
                                                         "gstTaxInvoiceFlag": true,
                                                         "numberOfOverweightBales": 0
                                                     },
-                                                    "lotHeaderAwexData": {
-                                                        "awexId": "MF6S",
-                                                        "appraiserId": "99192",
-                                                        "classersRegisteredNumber": "998921"
+                                                    "encryptedLotHeaderAwexData": {
+                                                        "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
+                                                        "lotHeaderAwexData": {
+                                                            "awexId": "MF6S",
+                                                            "appraiserId": "99192",
+                                                            "classersRegisteredNumber": "998921"
+                                                        }
                                                     },
                                                     "lotHeaderVendorDeclarations": [
                                                         {
@@ -682,7 +741,10 @@
                                                             "certificateIDNumber": "00000664",
                                                             "certificateIDCD": 6
                                                         },
-                                                        "charge": 230.23,
+                                                        "charge": {
+                                                            "value": 230.23,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "laboratory": 1,
                                                         "regrabSampleWeight": 0,
                                                         "stapleLength": 73,
@@ -797,13 +859,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -873,14 +937,14 @@
                             "schema": {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/components/schemas/RequestForDataForCatalogue"
+                                    "$ref": "#/components/schemas/RequestForData"
                                 }
                             },
                             "examples": {
                                 "Request for Auction Catalogue Data and Updates": {
                                     "value": [
                                         {
-                                            "transmissionTypeRequested": 2,
+                                            "catalogueTransmissionType": 2,
                                             "saleIdentity": {
                                                 "sellingCentreType": "AU_F",
                                                 "saleNumber": 18
@@ -891,18 +955,18 @@
                                             "saleDateRequested": "2023-10-31",
                                             "useNetworkDateTime": false,
                                             "woolTypeGroup": "MFLC",
-                                            "excludedTypes": [
+                                            "excludedClasses": [
                                                 {
-                                                    "recordTypesToBeExcluded": "InterlotComponentBaleHeader"
+                                                    "classToBeExcluded": "InterlotComponentBaleHeader"
                                                 },
                                                 {
-                                                    "recordTypesToBeExcluded": "BaleIdentification"
+                                                    "classToBeExcluded": "BaleIdentification"
                                                 }
                                             ],
                                             "season": 23
                                         },
                                         {
-                                            "transmissionTypeRequested": 5,
+                                            "catalogueTransmissionType": 5,
                                             "saleIdentity": {
                                                 "sellingCentreType": "AU_F",
                                                 "saleNumber": 18
@@ -913,12 +977,12 @@
                                             "saleDateRequested": "2023-10-31",
                                             "useNetworkDateTime": false,
                                             "woolTypeGroup": "MFLC",
-                                            "excludedTypes": [
+                                            "excludedClasses": [
                                                 {
-                                                    "recordTypesToBeExcluded": "InterlotComponentBaleHeader"
+                                                    "classToBeExcluded": "InterlotComponentBaleHeader"
                                                 },
                                                 {
-                                                    "recordTypesToBeExcluded": "FibreDiameterHistogramHeader"
+                                                    "classToBeExcluded": "FibreDiameterHistogramHeader"
                                                 }
                                             ],
                                             "season": 23
@@ -928,7 +992,7 @@
                                 "Request for Private Catalogue Data": {
                                     "value": [
                                         {
-                                            "transmissionTypeRequested": 3,
+                                            "catalogueTransmissionType": 3,
                                             "saleIdentity": {
                                                 "sellingCentreType": "AU_F",
                                                 "saleNumber": 18
@@ -939,12 +1003,12 @@
                                             "saleDateRequested": "2023-10-31",
                                             "useNetworkDateTime": false,
                                             "woolTypeGroup": "MFLC",
-                                            "excludedTypes": [
+                                            "excludedClasses": [
                                                 {
-                                                    "recordTypesToBeExcluded": "InterlotComponentBaleHeader"
+                                                    "classToBeExcluded": "InterlotComponentBaleHeader"
                                                 },
                                                 {
-                                                    "recordTypesToBeExcluded": "FibreDiameterHistogramDetails"
+                                                    "classToBeExcluded": "FibreDiameterHistogramDetails"
                                                 }
                                             ],
                                             "season": 23
@@ -1002,12 +1066,20 @@
                                                         "saleDate": "2017-01-19",
                                                         "woolState": "1",
                                                         "packType": "9",
-                                                        "currency": "AUD",
                                                         "weightUnit": 0,
-                                                        "postSaleCharge": 25.96,
+                                                        "postSaleCharge": {
+                                                            "value": 25.96,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "calculationBasis": "B",
-                                                        "freightCharge": 0,
-                                                        "freightRebate": 3.25,
+                                                        "freightCharge": {
+                                                            "value": 0,
+                                                            "currencyUnit": "AUD"
+                                                        },
+                                                        "freightRebate": {
+                                                            "value": 3.25,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "catalogueSection": "FLC",
                                                         "invoicingOrganisation": {
                                                             "organisationCode": "ABC"
@@ -1032,7 +1104,10 @@
                                                         "discountRate": 1.5,
                                                         "maximumDaysDiscount": 0,
                                                         "dateStorageChargeCommences": "2017-01-24",
-                                                        "storageChargePerBalePerDay": 0.245,
+                                                        "storageChargePerBalePerDay": {
+                                                            "value": 0.245,
+                                                            "currencyUnit": "AUD"
+                                                        },
                                                         "penaltyInterestRate": 11.35
                                                     },
                                                     "lots": [
@@ -1049,17 +1124,23 @@
                                                                 "lotType": 5,
                                                                 "lightestIndividualBaleWeight": 149,
                                                                 "reportingFlag": "R",
-                                                                "costPerWeightUnit": 0,
+                                                                "costPerWeightUnit": {
+                                                                    "value": 0,
+                                                                    "currencyUnit": "AUD"
+                                                                },
                                                                 "cleanWeight": 0,
                                                                 "packCondition": "N",
                                                                 "coreTestSamplingDate": "2019-01-17",
                                                                 "woolDescription": "MF6S",
                                                                 "numberOfOverweightBales": 0
                                                             },
-                                                            "lotHeaderAwexData": {
-                                                                "awexId": "MF6S",
-                                                                "appraiserId": "99192",
-                                                                "classersRegisteredNumber": "998921"
+                                                            "encryptedLotHeaderAwexData": {
+                                                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
+                                                                "lotHeaderAwexData": {
+                                                                    "awexId": "MF6S",
+                                                                    "appraiserId": "99192",
+                                                                    "classersRegisteredNumber": "998921"
+                                                                }
                                                             },
                                                             "lotHeaderVendorDeclarations": [
                                                                 {
@@ -1073,7 +1154,10 @@
                                                                     "certificateIDNumber": "00000664",
                                                                     "certificateIDCD": 6
                                                                 },
-                                                                "charge": 174.3,
+                                                                "charge": {
+                                                                    "value": 174.3,
+                                                                    "currencyUnit": "AUD"
+                                                                },
                                                                 "laboratory": 1,
                                                                 "regrabSampleWeight": 0,
                                                                 "stapleLength": 73,
@@ -1162,13 +1246,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -1228,6 +1314,23 @@
     },
     "components": {
         "schemas": {
+            "ApiMessage": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "warningCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/WarningCode"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
             "ApiResult": {
                 "required": [
                     "isSuccessful"
@@ -1239,9 +1342,7 @@
                         "description": "Indicator if the request has been successfully processed."
                     },
                     "message": {
-                        "type": "string",
-                        "description": "Contains information about the response if applicable.",
-                        "nullable": true
+                        "$ref": "#/components/schemas/ApiMessage"
                     },
                     "data": {
                         "description": "Contains response data. e.g. Auction Catalogue",
@@ -1256,13 +1357,13 @@
                 "properties": {
                     "baleNumber": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "eBaleId": {
                         "maxLength": 30,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -1312,21 +1413,6 @@
                 },
                 "additionalProperties": false
             },
-            "CatalogueExcludedType": {
-                "required": [
-                    "recordTypesToBeExcluded"
-                ],
-                "type": "object",
-                "properties": {
-                    "recordTypesToBeExcluded": {
-                        "$ref": "#/components/schemas/CatalogueRecordTypesToBeExcluded"
-                    },
-                    "subTypesToBeExcluded": {
-                        "$ref": "#/components/schemas/SubTypeToBeExcluded"
-                    }
-                },
-                "additionalProperties": false
-            },
             "CatalogueListApiResult": {
                 "required": [
                     "isSuccessful"
@@ -1338,9 +1424,7 @@
                         "description": "Indicator if the request has been successfully processed."
                     },
                     "message": {
-                        "type": "string",
-                        "description": "Contains information about the response if applicable.",
-                        "nullable": true
+                        "$ref": "#/components/schemas/ApiMessage"
                     },
                     "data": {
                         "type": "array",
@@ -1364,23 +1448,23 @@
                 "properties": {
                     "brand": {
                         "maxLength": 30,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "baleDescription": {
                         "maxLength": 15,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "areaOfOrigin": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "locationWithinStore": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -1391,25 +1475,12 @@
                     },
                     "postcode": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
                 },
                 "additionalProperties": false
-            },
-            "CatalogueRecordTypesToBeExcluded": {
-                "enum": [
-                    "LotHeaderPricing",
-                    "LotHeaderAwexData",
-                    "LotHeaderVendorDeclaration",
-                    "ColourDetails",
-                    "InterlotComponentBaleHeader",
-                    "BaleIdentification",
-                    "FibreDiameterHistogramHeader",
-                    "FibreDiameterHistogramDetails"
-                ],
-                "type": "string"
             },
             "CatalogueSection": {
                 "enum": [
@@ -1425,6 +1496,16 @@
                 ],
                 "type": "string",
                 "description": "These are the codes allocated by the local wool authorities to sectionalise the sale catalogues.<br />BLK: ODDS - Black<br />DEAD: ODDS - Dead<br />FLC: MFLC - Merino Fleece<br />FMG: ODDS - Fellmongered<br />ODD: ODDS - Oddments<br />SKIN: ODDS - Skin Wool<br />SKT: MSKT - Skirting<br />TRAD: MFLC / MSKT / XBFS / ODDS - Traditionally Shown<br />XBD: C XBFS - Crossbred (Flc & Skt)"
+            },
+            "CatalogueTransmissionType": {
+                "enum": [
+                    2,
+                    3,
+                    5
+                ],
+                "type": "integer",
+                "description": " Used to define the types of Catalogue<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
+                "format": "int32"
             },
             "CatalogueType": {
                 "enum": [
@@ -1469,8 +1550,8 @@
                         },
                         "nullable": true
                     },
-                    "lotHeaderAwexData": {
-                        "$ref": "#/components/schemas/LotHeaderAwexData"
+                    "encryptedLotHeaderAwexData": {
+                        "$ref": "#/components/schemas/EncryptedLotHeaderAwexData"
                     },
                     "lotHeaderVendorDeclarations": {
                         "type": "array",
@@ -1910,17 +1991,30 @@
                     },
                     "certificateIDNumber": {
                         "maxLength": 8,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "certificateIDCD": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "integer",
                         "format": "int32"
                     }
                 },
                 "additionalProperties": false
+            },
+            "ClassToBeExcluded": {
+                "enum": [
+                    "LotHeaderPricing",
+                    "LotHeaderAwexData",
+                    "LotHeaderVendorDeclaration",
+                    "ColourDetails",
+                    "InterlotComponentBaleHeader",
+                    "BaleIdentification",
+                    "FibreDiameterHistogramHeader",
+                    "FibreDiameterHistogramDetails"
+                ],
+                "type": "string"
             },
             "ColourCombinationDetails": {
                 "required": [
@@ -1939,9 +2033,9 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "colourX": {
@@ -2018,7 +2112,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -2053,9 +2147,9 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32"
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
                     },
                     "colourX": {
                         "pattern": "^-?\\d{1,2}\\.\\d{1}$",
@@ -2080,7 +2174,7 @@
                     },
                     "coreBulkValue": {
                         "maxLength": 2,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -2116,7 +2210,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -2133,37 +2227,37 @@
                 "type": "object",
                 "properties": {
                     "cleanWeight1": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "cleanWeight2": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "cleanWeight3": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "cleanWeight4": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "cleanWeight5": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Clean weight = Net Weight X Yield",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "vmbMinimum": {
@@ -2254,9 +2348,9 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "woolBase": {
@@ -2363,6 +2457,68 @@
                 "type": "string",
                 "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa<br />BE: Belgium<br />GB: United Kingdom of Great Britain<br />DE: Germany<br />IT: Italy<br />NL: Netherlands<br />CN: China<br />TW: Taiwan<br />US: USA"
             },
+            "Currency": {
+                "required": [
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "pattern": "^-?\\d{1,10}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Total up to 12 digits with 2 digits after the decimal point.",
+                        "format": "double"
+                    },
+                    "currencyUnit": {
+                        "$ref": "#/components/schemas/CurrencyUnit"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CurrencyUnit": {
+                "enum": [
+                    "AUD",
+                    "BEF",
+                    "NZD",
+                    "BGP",
+                    "FRF",
+                    "DEM",
+                    "ITL",
+                    "CNY",
+                    "ANG",
+                    "TWD",
+                    "ZAR",
+                    "USD",
+                    "EUR"
+                ],
+                "type": "string",
+                "description": "AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR: Euro"
+            },
+            "CustomErrors": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "nullable": true
+                        },
+                        "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
+                        "nullable": true
+                    },
+                    "errorCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorCode"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
             "CustomProblemDetails": {
                 "required": [
                     "status",
@@ -2387,20 +2543,11 @@
                     },
                     "detail": {
                         "type": "string",
-                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
                         "nullable": true
                     },
                     "errors": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            },
-                            "nullable": true
-                        },
-                        "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
-                        "nullable": true
+                        "$ref": "#/components/schemas/CustomErrors"
                     }
                 },
                 "additionalProperties": false,
@@ -2428,6 +2575,53 @@
                 ],
                 "type": "string",
                 "description": "D: Delivery Nominated Destination<br />L: Loaded on Transport"
+            },
+            "EncryptedLotHeaderAwexData": {
+                "required": [
+                    "encryptionKeyIdentifier",
+                    "lotHeaderAwexData"
+                ],
+                "type": "object",
+                "properties": {
+                    "encryptionKeyIdentifier": {
+                        "maxLength": 80,
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "lotHeaderAwexData": {
+                        "$ref": "#/components/schemas/LotHeaderAwexData"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ErrorCode": {
+                "enum": [
+                    "DOXCT",
+                    "INVTC",
+                    "INVFR",
+                    "INVAC",
+                    "INVCR",
+                    "INVDO",
+                    "INVSO",
+                    "INVEX"
+                ],
+                "type": "string",
+                "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
+            },
+            "ExcludedClass": {
+                "required": [
+                    "classToBeExcluded"
+                ],
+                "type": "object",
+                "properties": {
+                    "classToBeExcluded": {
+                        "$ref": "#/components/schemas/ClassToBeExcluded"
+                    },
+                    "subClassToBeExcluded": {
+                        "$ref": "#/components/schemas/SubClassToBeExcluded"
+                    }
+                },
+                "additionalProperties": false
             },
             "FibreDiameterHistogram": {
                 "type": "object",
@@ -2468,10 +2662,10 @@
                 "type": "object",
                 "properties": {
                     "fibreDiameter": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Fibre Diameter for the measurement.",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "fibresMeasuredPercentage": {
                         "pattern": "^-?\\d{1,2}\\.\\d{4}$",
@@ -2557,7 +2751,7 @@
                     },
                     "coreTestSamplingDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "For records 31 and 55 this is the date core test was sampled or date combination/OML was requested.\r\nFor the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.        \r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21.",
@@ -2566,20 +2760,20 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC format. e.g. 2024-03-21.",
                         "format": "date"
                     },
                     "factorLaserscanNumerator": {
-                        "pattern": "^-?\\d{1,15}\\.\\d{6}$",
+                        "pattern": "^-?\\d{1,10}\\.\\d{6}$",
                         "type": "number",
                         "format": "double",
                         "nullable": true
                     },
                     "factorLaserscanDenominator": {
-                        "pattern": "^-?\\d{1,14}\\.\\d{6}$",
+                        "pattern": "^-?\\d{1,9}\\.\\d{6}$",
                         "type": "number",
                         "format": "double",
                         "nullable": true
@@ -2607,22 +2801,22 @@
                 "properties": {
                     "brand": {
                         "maxLength": 30,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "baleDescription": {
                         "maxLength": 15,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "areaOfOrigin": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "locationWithinStore": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -2632,8 +2826,8 @@
                         "format": "int32"
                     },
                     "postcode": {
-                        "maxLength": 4,
-                        "minLength": 0,
+                        "maxLength": 20,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -2678,17 +2872,17 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "stapleLength": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "stapleLengthCvPercentage": {
                         "pattern": "-?\\d{1,2}",
@@ -2697,34 +2891,34 @@
                         "format": "int32"
                     },
                     "stapleStrength": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "stapleLengthMinimum": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. \r\nMinimum - the lowest value in a range of staple length values.",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "stapleLengthMaximum": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. \r\nMaximum - the highest value in a range of staple length values.",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "stapleStrengthMinimum": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex\r\nMinimum - The lowest value in a range of staple strength values",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "stapleStrengthMaximum": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex\r\nMaximum - The highest value in a range of staple strength value",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "positionOfBreakPercentageTip": {
                         "pattern": "-?\\d{1,3}",
@@ -2745,10 +2939,10 @@
                         "format": "int32"
                     },
                     "team3Hauteur": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "lsCertType": {
@@ -2756,15 +2950,15 @@
                     },
                     "isLsSampleSecured": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "boolean",
                         "description": "Specifies whether the L/S sample is secured or not. <br />\r\n`true` for a secured L/S sample <br />\r\n`false` for a unsecured L/S sample <br />"
                     },
                     "expectedBarbe": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Expected Barbe length in the Top. Used for NZ Crossbred wool certificates based on the 2016 calculation. \r\nAny Length and Strength certificate for NZ Crossbred wool will include a calculated Barbe value based on the 2016 calculation.",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "team3HauteurCvPercentage": {
@@ -2783,7 +2977,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
@@ -2820,24 +3014,22 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "stapleLength": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "stapleLengthCvPercentage": {
                         "pattern": "-?\\d{1,2}",
@@ -2846,10 +3038,10 @@
                         "format": "int32"
                     },
                     "stapleStrength": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The force required to break a staple of given thickness. \r\nThe average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "positionOfBreakPercentageTip": {
                         "pattern": "-?\\d{1,3}",
@@ -2870,12 +3062,10 @@
                         "format": "int32"
                     },
                     "team3Hauteur": {
-                        "maximum": 99,
-                        "minimum": 0,
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "lsCertType": {
@@ -2883,15 +3073,15 @@
                     },
                     "isLsSampleSecured": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "boolean",
                         "description": "Specifies whether the L/S sample is secured or not. <br />\r\ntrue: for a secured L/S sample <br />\r\nflase: for a unsecured L/S sample <br />"
                     },
                     "expectedBarbe": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Expected Barbe length in the Top. Used for NZ Crossbred wool certificates based on the 2016 calculation. \r\nAny Length and Strength certificate for NZ Crossbred wool will include a calculated Barbe value based on the 2016 calculation.",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "team3HauteurCvPercentage": {
@@ -2910,7 +3100,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -2943,7 +3133,7 @@
                 "properties": {
                     "lotIdentity": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "bales": {
@@ -2962,9 +3152,9 @@
                         "format": "int32"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "cataloguePageNumber": {
@@ -2975,7 +3165,7 @@
                     },
                     "isNoLot": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "boolean",
                         "description": "A flag used to indicate whether or not the lot is included for sale in the auction.\r\nIt is used in New Zealand only.\r\n`true` = Normal Lot, `false` = No Lot",
                         "nullable": true
@@ -2988,7 +3178,7 @@
                     },
                     "catalogueSymbols": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "These are the symbols defined in the AWEX Wool Selling Rules, to be \r\nprinted in a sale catalogue against any appropriate lot.In a transmitted\r\ncatalogue they are left justified with no space or punctuation marks\r\nbetween symbols where more than one symbol is used.If this field\r\ncontains spaces it will indicate that there are no catalogue symbols for \r\nthat lot.\r\nTo obtain the current code list of values that may be used in this field\r\nplease go to this URL: http://www.awex.com.au/standards/catalogue/."
                     },
@@ -2999,10 +3189,10 @@
                         "$ref": "#/components/schemas/LotType"
                     },
                     "lightestIndividualBaleWeight": {
-                        "pattern": "-?\\d{1,3}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
                         "description": "This is the Reweigh Gross Kg of the lightest bale in the lot.",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "reportingFlag": {
@@ -3015,28 +3205,22 @@
                         "nullable": true
                     },
                     "firstOfferSaleIdentity": {
-                        "maxLength": 4,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
+                        "$ref": "#/components/schemas/SaleIdentity"
                     },
                     "firstOfferLotIdentity": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "This is a compound name for lot number and lot suffix, where the lot number is 5 number characters and the lot suffix is 1 alphanumeric character.\r\nThe suffix is used when a lot is broken up but the original lot number is retained; for example, if 2 bales of a 10-bale lot got wet and the 8 bales the 2 bales are offered separately, one could have a suffix A and the other a suffix B. \r\nWhere a suffix is not used, the lot number occupies the whole of the Lot Identity field.",
                         "nullable": true
                     },
                     "costPerWeightUnit": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/PriceCurrency"
                     },
                     "cleanWeight": {
-                        "pattern": "-?\\d{1,5}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "yieldType": {
@@ -3050,7 +3234,7 @@
                     },
                     "clientCrossReference": {
                         "maxLength": 8,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -3059,7 +3243,7 @@
                     },
                     "coreTestSamplingDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21.\r\nFor records 31 and 55 this is the date core test was sampled or date combination/OML was requested. \r\nFor the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.",
@@ -3068,51 +3252,39 @@
                     },
                     "woolDescriptionComment": {
                         "maxLength": 14,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "This field provides for additional comments relating to the information contained in the Wool Description field.",
                         "nullable": true
                     },
                     "woolDescription": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\nAlternative valid appraisal descriptions include AWC type, Exporter type. \r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\nThis field is to be always transmitted in upper case."
                     },
                     "gstTaxInvoiceFlag": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "boolean",
                         "description": "`true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.",
                         "nullable": true
                     },
                     "brokerReservePrice": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/PriceCurrency"
                     },
                     "growerReservePrice": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/PriceCurrency"
                     },
                     "openingPrice": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/PriceCurrency"
                     },
                     "valuationPrice": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/PriceCurrency"
                     },
                     "woolDescriptionAuditCode": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Audit code used for verifying if AWEX-ID was issued by AWEX.",
                         "nullable": true
@@ -3132,35 +3304,35 @@
                 "properties": {
                     "awexId": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "AWEX-ID must conform to the current AWEX-ID code standard.",
                         "nullable": true
                     },
                     "appraiserId": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Contains the AWEX accredited appraiser ID for this lot.",
                         "nullable": true
                     },
                     "classersRegisteredNumber": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "The AWEX stencil number of the classer or classing house responsible for the final classification of the wool before sale.",
                         "nullable": true
                     },
                     "awexIdComment": {
                         "maxLength": 14,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "This field provides for additional comments relating to the information contained in the `awexId` field.",
                         "nullable": true
                     },
                     "awexIdAuditCode": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Audit code used for verifying if `awexId` was issued by AWEX",
                         "nullable": true
@@ -3176,13 +3348,13 @@
                     },
                     "yieldBasis": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "offers": {
-                        "maxLength": 16,
-                        "minLength": 0,
+                        "maxItems": 16,
+                        "minItems": 1,
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/LotHeaderPricingDataOffer"
@@ -3200,13 +3372,11 @@
                 "type": "object",
                 "properties": {
                     "offerPrice": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/PriceCurrency"
                     },
                     "offerDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -3289,9 +3459,9 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "woolBase": {
@@ -3394,18 +3564,15 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "woolBase": {
@@ -3508,7 +3675,7 @@
                 "properties": {
                     "organisationCode": {
                         "maxLength": 3,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "centre": {
@@ -3574,17 +3741,15 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double",
                         "nullable": true
                     },
                     "woolBase": {
@@ -3686,6 +3851,24 @@
                 "type": "string",
                 "description": "G: Greasy<br />C: CLCOF (ACOF or NZCOF)<br />I: CIF<br />F: FOB"
             },
+            "PriceCurrency": {
+                "required": [
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "pattern": "-?\\d{1,6}",
+                        "type": "integer",
+                        "description": "Total up to 12 digits with 2 digits after the decimal point.",
+                        "format": "int32"
+                    },
+                    "currencyUnit": {
+                        "$ref": "#/components/schemas/CurrencyUnit"
+                    }
+                },
+                "additionalProperties": false
+            },
             "QualityScheme": {
                 "enum": [
                     "ASWG",
@@ -3720,14 +3903,14 @@
                     },
                     "qualitySchemeRegistrationId": {
                         "maxLength": 8,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Registered Identification issued by the relevant Accreditation or Membership organisation.",
                         "nullable": true
                     },
                     "qualitySchemeOtherDetail": {
                         "maxLength": 13,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Used to transmit (other) information relevant to the Scheme that is required by the buyer(e.g.Month/Year shorn).",
                         "nullable": true
@@ -3755,14 +3938,11 @@
                 "type": "string",
                 "description": "R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results"
             },
-            "RequestForDataForCatalogue": {
-                "required": [
-                    "transmissionTypeRequested"
-                ],
+            "RequestForData": {
                 "type": "object",
                 "properties": {
-                    "transmissionTypeRequested": {
-                        "$ref": "#/components/schemas/TransmissionTypeForCatalogue"
+                    "catalogueTransmissionType": {
+                        "$ref": "#/components/schemas/CatalogueTransmissionType"
                     },
                     "saleIdentity": {
                         "$ref": "#/components/schemas/SaleIdentity"
@@ -3772,7 +3952,7 @@
                     },
                     "saleDateRequested": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -3781,7 +3961,7 @@
                     },
                     "startDateTimeStatusRequest": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time value in ISO 8601 standard UTC datetime. e.g. 2024-03-21T19:25:04Z",
@@ -3790,7 +3970,7 @@
                     },
                     "endDateTimeStatusRequest": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00",
@@ -3799,7 +3979,7 @@
                     },
                     "useNetworkDateTime": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "boolean",
                         "description": "Boolean value to indicate wethear to use Network Datetime\r\nTrue for use Network Datetime, False for not use",
                         "nullable": true
@@ -3807,14 +3987,14 @@
                     "woolTypeGroup": {
                         "$ref": "#/components/schemas/WoolTypeGroup"
                     },
-                    "excludedTypes": {
-                        "maxLength": 80,
-                        "minLength": 0,
+                    "excludedClasses": {
+                        "maxItems": 80,
+                        "minItems": 1,
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/CatalogueExcludedType"
+                            "$ref": "#/components/schemas/ExcludedClass"
                         },
-                        "description": "Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header.",
+                        "description": "Cataglouge classes and sub-classes to be excluded in the request. e.g. 20 - Lot Header, 22A - Group Header.\r\nOnly applicable to Catalogue.",
                         "nullable": true
                     },
                     "season": {
@@ -3848,7 +4028,7 @@
                     },
                     "saleNumber": {
                         "maxLength": 2,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "-?\\d{1,2}",
                         "type": "integer",
                         "format": "int32"
@@ -3917,7 +4097,7 @@
                     },
                     "programName": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -3934,15 +4114,24 @@
                 "description": "Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br />3: BulkClass",
                 "format": "int32"
             },
-            "SubSamplingMethod": {
-                "enum": [
-                    1
+            "StorageChargeCurrency": {
+                "required": [
+                    "value"
                 ],
-                "type": "integer",
-                "description": "1: Minicore",
-                "format": "int32"
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "pattern": "^-?\\d{1}\\.\\d{3}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "currencyUnit": {
+                        "$ref": "#/components/schemas/CurrencyUnit"
+                    }
+                },
+                "additionalProperties": false
             },
-            "SubTypeToBeExcluded": {
+            "SubClassToBeExcluded": {
                 "enum": [
                     "A",
                     "B",
@@ -3970,6 +4159,14 @@
                 "type": "string",
                 "description": "A: First record of one type<br />B: Second record of that type<br />C: Colour Certificate record<br />D: Detail record<br />E: Scoured Yield Extension<br />F: Premium Certificate record<br />H: Header record<br />I: Subjective Interlot Certificate record<br />J: Combination Certificate record<br />K: Length and Strength Combination Certificate record<br />L: Length and Strength Certificate Record<br />M: Objectively Matched Lot Certificate Record<br />N: Objectively Matched Interlot Certificate Record<br />P: Core Test Certificate Record<br />R: Guidance Report Details<br />T: Trailer record<br />U: Length After Carding Test Details<br />V:Conditioning Test Details<br />W: Scoured Test Details<br />X: Colour Combination Certificate Record<br />Y: Post sale Core Test Detail<br />Z: Adjustment Note Details"
             },
+            "SubSamplingMethod": {
+                "enum": [
+                    1
+                ],
+                "type": "integer",
+                "description": "1: Minicore",
+                "format": "int32"
+            },
             "SubjectiveInterlotDetails": {
                 "required": [
                     "certificateIdentity",
@@ -3990,10 +4187,10 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
                         "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.",
-                        "format": "int32",
+                        "format": "double",
                         "nullable": true
                     },
                     "woolBase": {
@@ -4079,7 +4276,7 @@
                     },
                     "darkAndMedullatedFibreRisk": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -4127,7 +4324,7 @@
                 "properties": {
                     "dateFormatLastRevised": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -4135,7 +4332,7 @@
                     },
                     "dateTransmissionFileCreated": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -4162,23 +4359,13 @@
                     },
                     "abn": {
                         "maxLength": 11,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^[0-9]+$",
                         "type": "string",
                         "description": "Australian Business Number, 11 digits string"
                     }
                 },
                 "additionalProperties": false
-            },
-            "TransmissionTypeForCatalogue": {
-                "enum": [
-                    2,
-                    3,
-                    5
-                ],
-                "type": "integer",
-                "description": "<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
-                "format": "int32"
             },
             "UpdateType": {
                 "enum": [
@@ -4188,6 +4375,20 @@
                 ],
                 "type": "string",
                 "description": "A flag to indicate what type of change has been made to an item.<br />A: The entry is to be added<br />C: The entry is to be changed<br />D: The entry is to be deleted"
+            },
+            "WarningCode": {
+                "enum": [
+                    "11",
+                    "12",
+                    "13",
+                    "18",
+                    "19",
+                    "20",
+                    "24",
+                    "DRVnn"
+                ],
+                "type": "string",
+                "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
             },
             "WeightUnit": {
                 "enum": [
@@ -4204,7 +4405,6 @@
                     "catalogueSection",
                     "centreCatalogue",
                     "centreStorage",
-                    "currency",
                     "dateStorageChargeCommences",
                     "deliveryBasis",
                     "discountRate",
@@ -4241,7 +4441,7 @@
                     },
                     "saleDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -4253,37 +4453,20 @@
                     "packType": {
                         "$ref": "#/components/schemas/PackType"
                     },
-                    "currency": {
-                        "maxLength": 3,
-                        "minLength": 0,
-                        "type": "string",
-                        "description": "The Code for the currency in which the sale was made. To obtain the current code list please use the Commonwealth Bank Currency Codes on their website"
-                    },
                     "weightUnit": {
                         "$ref": "#/components/schemas/WeightUnit"
                     },
                     "postSaleCharge": {
-                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "This is the published rate for the charge levied by the broker to the buyer for each bale purchased and is included in the last cost of the wool.\r\nIt will not include freight if freight is listed separately in the Freight Charge field, if freight is not listed in the Freight Charge field it will include freight. \r\nIn Australia it will always include freight as the Freight Charge field is not used.\r\nTotal 5 digits with 2 digits after the decimal point. e.g. 123.76",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "calculationBasis": {
                         "$ref": "#/components/schemas/CalculationBasis"
                     },
                     "freightCharge": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "If specified, this is not part of the last cost of the wool. \r\nIf a freight charge is not included in the post Sale Charge, then the freight charge is the charge levied by the broker should the buyer request that the broker transport the wool to the nearest designated area (usually a shipping port). \r\nFreight Charge is not used in Australia.\r\nTotal 4 digits with 2 digits after the decimal point. e.g. 23.76",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "freightRebate": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "Total 4 digits with 2 digits after the decimal point. e.g. 23.76",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "catalogueSection": {
                         "$ref": "#/components/schemas/CatalogueSection"
@@ -4293,7 +4476,7 @@
                     },
                     "isFinalCatalogue": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "boolean",
                         "description": "Indicates whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section. \r\n`true` = Final Catalogue. `false` = Not Final Catalogue"
                     },
@@ -4323,12 +4506,13 @@
                     },
                     "storageDescription": {
                         "maxLength": 15,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.",
                         "nullable": true
                     },
                     "discountRate": {
+                        "maxLength": 10,
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
                         "type": "number",
                         "description": "The date on which payment is due. Also known as Prompt Date.\r\nDate value in ISO 8601 standard UTC format. e.g. 2024-03-21",
@@ -4342,17 +4526,14 @@
                     },
                     "dateStorageChargeCommences": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
                         "format": "date"
                     },
                     "storageChargePerBalePerDay": {
-                        "pattern": "^-?\\d{1}\\.\\d{3}$",
-                        "type": "number",
-                        "description": "Total 4 digits with 3 digits after the decimal point. e.g. 23.76",
-                        "format": "double"
+                        "$ref": "#/components/schemas/StorageChargeCurrency"
                     },
                     "penaltyInterestRate": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -4362,7 +4543,7 @@
                     },
                     "lotAvailableDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "The first date on which the wool is available for purchase.\r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21.",
@@ -4370,15 +4551,11 @@
                         "nullable": true
                     },
                     "postSaleChargeRebate": {
-                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "The total (extended) amount of Post Sale Charge Rebate for the Lot. \r\nThis value is provided where a value in the Post Sale Charge Rebate field exists (11A)\r\nTotal 5 digits with 2 digits after the decimal point. e.g. 123.76",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "catalogueAvailabilityDateTime": {
                         "maxLength": 24,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time value in ISO 8601 standard. e.g. 2024-03-21T19:25:04.000Z",
@@ -4387,7 +4564,7 @@
                     },
                     "saleStartDateTime": {
                         "maxLength": 24,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
@@ -4396,7 +4573,7 @@
                     },
                     "saleEndDateTime": {
                         "maxLength": 24,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
@@ -4408,20 +4585,20 @@
                     },
                     "electronicSaleFlag": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "reservePriceDisplayFlag": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "boolean",
                         "description": "`true` = Available to Buyers, `false` = Not available to buyers.",
                         "nullable": true
                     },
                     "tenderSaleReplyDateTime": {
                         "maxLength": 24,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04.000Z",

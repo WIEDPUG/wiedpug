@@ -12,12 +12,14 @@ namespace Wiedpug.Domain.ValueObject
     public class WeightNote
     {
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required string Prefix{ get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_7_DIGITS)]
-        [StringLength(7)]
+        [MinLength(1)]
+        [MaxLength(7)]
         public required string Suffix { get; set; }
     }
 }

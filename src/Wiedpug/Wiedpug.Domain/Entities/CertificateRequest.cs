@@ -12,19 +12,24 @@ namespace Wiedpug.Domain.Entities
 {
     public class CertificateRequest
     {
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public PrintRequirements? PrintRequirements { get; set; }
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public YieldType? YieldType1 { get; set; }
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public YieldType? YieldType2 { get; set; }
 
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public string? CertificateReference { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public string? ClientsCrossReference { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
@@ -43,28 +48,36 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Season { get; set; }
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public SaleIdentity? SaleIdentity { get; set; }
 
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public string? LotIdentity { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public PrintFlag? PrintFlag { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CombinationRequest? CombinationRequest { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public AutoAdditionalMeasurementRequired? AutoAdditionalMeasurementRequired { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public AdditionalPrintRequirements? AdditionalPrintRequirements { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public bool? TEAM3HauteurPrint { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public string? CommitType { get; set; }
 
         public List<CertificateRequestDetail>? CertificateRequestDetails { get; set; }

@@ -7,7 +7,8 @@ namespace Wiedpug.Domain.Entities
     public class TestCertificateLengthAndStrengthDetails
     {
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
@@ -15,7 +16,8 @@ namespace Wiedpug.Domain.Entities
         public required double Charge { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
@@ -73,16 +75,17 @@ namespace Wiedpug.Domain.Entities
         /// A check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.
         /// </summary>
         /// 
-        [Range(0, 99)]
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? Team3Hauteur { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required LsCertType LsCertType { get; set; }
 
         /// <summary>
@@ -91,7 +94,8 @@ namespace Wiedpug.Domain.Entities
         /// flase: for a unsecured L/S sample <br />
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool isLsSampleSecured { get; set; }
 
         /// <summary>
@@ -120,7 +124,8 @@ namespace Wiedpug.Domain.Entities
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
         [Required]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateIssued { get; set; }
 
         /// <summary>

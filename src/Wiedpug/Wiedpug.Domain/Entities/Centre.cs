@@ -44,11 +44,13 @@ namespace Wiedpug.Domain.Entities
     public class Centre
     {
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required CountryCode Country { get; set; }
 
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required object CentreCode { get; set; }
 
         public CentreCodeAustralia? CentreAustralia { get; set; }

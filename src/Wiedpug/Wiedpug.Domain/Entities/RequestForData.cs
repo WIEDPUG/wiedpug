@@ -1,65 +1,83 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
     public class RequestForData
     {
-        [Required]
-        [StringLength(2)]
-        public required TransmissionType TransmissionTypeRequested { get; set; }
+        /// <summary>
+        /// Used to define the types of Catalogue
+        /// Only required for request for Catalogue. Not applicable for other documents
+        /// </summary>
+        /// 
+        [MinLength(1)]
+        [MaxLength(23)]
+        public CatalogueTransmissionType? CatalogueTransmissionType { get; set; }
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public SaleIdentity? SaleIdentity { get; set; }
 
-        [StringLength(5)]
-        public string? OrganisationRequested { get; set; }
+        [MinLength(1)]
+        [MaxLength(8)]
+        public Organisation? OrganisationRequested { get; set; }
 
         /// <summary>
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
         /// </summary>
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
-        [StringLength(10)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? SaleDateRequested { get; set; }
 
         /// <summary>
-        /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04.000Z
+        /// Date and Time value in ISO 8601 standard UTC datetime. e.g. 2024-03-21T19:25:04Z
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(24)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? StartDateTimeStatusRequest { get; set; }
 
         /// <summary>
-        /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04.000Z
+        /// Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(24)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? EndDateTimeStatusRequest { get; set; }
 
-        [StringLength(5)]
-        public bool? UserNetworkDateTime { get; set; }
+        /// <summary>
+        /// Boolean value to indicate wethear to use Network Datetime
+        /// True for use Network Datetime, False for not use
+        /// </summary>
+        [MinLength(1)]
+        [MaxLength(5)]
+        public bool? UseNetworkDateTime { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public required RequestType RequestType { get; set; }
-
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public WoolTypeGroup? WoolTypeGroup { get; set; }
 
         /// <summary>
-        /// Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header
+        /// Cataglouge classes and sub-classes to be excluded in the request. e.g. 20 - Lot Header, 22A - Group Header.
+        /// Only applicable to Catalogue.
         /// </summary>
-        public List<string>? RecordTypesToBeExcluded { get; set; }
+        /// 
+        [MinLength(1)]
+        [MaxLength(80)]
+        public List<ExcludedClass>? ExcludedClasses { get; set; }
 
-        /// <summary>
-        /// Two digits number
-        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Season { get; set; }
-
     }
 }

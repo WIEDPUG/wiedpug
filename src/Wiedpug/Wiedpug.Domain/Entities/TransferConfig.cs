@@ -17,7 +17,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         ///
         [Required]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required TransferType TransferType { get; set; }
 
         public List<Organisation>? FinalReceiverList { get; set; }

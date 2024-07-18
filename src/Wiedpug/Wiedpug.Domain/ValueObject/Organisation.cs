@@ -12,10 +12,12 @@ namespace Wiedpug.Domain.ValueObject
     public class Organisation
     {
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required string OrganisationCode { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public Centre? Centre { get; set; }
     }
 }

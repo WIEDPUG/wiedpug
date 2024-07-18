@@ -9,11 +9,13 @@ namespace Wiedpug.Domain.Entities
     {
         [Required]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string StatementDate { get; set; }
 
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required string AccountReference { get; set; }
 
         [Required]
@@ -21,10 +23,12 @@ namespace Wiedpug.Domain.Entities
         public required double Amount { get; set; }
         
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required PaymentType PaymentType { get; set;}
 
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public string? Reason { get; set; }
     }
 

@@ -17,47 +17,56 @@ namespace Wiedpug.Domain.Entities
         /// Enum type for declared breed.
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required DeclaredBreed DeclaredBreed { get; set; }
 
         /// <summary>
         /// Enum type for declared wool sub-category.
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required DeclaredWoolSubCategory DeclaredWoolSubCategory { get; set; }
 
         /// <summary>
         /// Enum type for declared wool category.
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required DeclaredWoolCategory DeclaredWoolCategory { get; set; }
 
         /// <summary>
         /// Optional enum type for qualifier code.
         /// </summary>
         /// 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public DeclaredQualifierCode? DeclaredQualifierCode1 { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public DeclaredQualifierCode? DeclaredQualifierCode2 { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public DeclaredQualifierCode? DeclaredQualifierCode3 { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public DeclaredQualifierCode? DeclaredQualifierCode4 { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public DeclaredQualifierCode? DeclaredQualifierCode5 { get; set; }
 
         /// <summary>
         /// Optional enum type for qualifier scale.
         /// </summary>
         /// 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public DeclaredQualifierScale? DeclaredQualifierScale { get; set; }
 
         /// <summary>
@@ -65,7 +74,8 @@ namespace Wiedpug.Domain.Entities
         /// True for contact with exotic breeds. False for not contact with exotic breeds.
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool ContactWithExoticBreeds { get; set; }
 
         /// <summary>
@@ -73,21 +83,24 @@ namespace Wiedpug.Domain.Entities
         /// True for crutched, False for not crutched.
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool Crutched { get; set; }
 
         /// <summary>
         /// Boolean type for crutching within 3 months of shearing.
         /// </summary>
         /// 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public bool? CrutchedWithin3MonthsOfShearing { get; set; }
 
         /// <summary>
         /// Enum type for sex.
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required Sex Sex { get; set; }
 
         /// <summary>
@@ -108,7 +121,8 @@ namespace Wiedpug.Domain.Entities
         /// Optional enum for dark and medullated fibre risk broker.
         /// </summary>
         /// 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public DarkAndMedullatedFibreRiskBroker? DarkAndMedullatedFibreRiskBroker { get; set; }
     }
 

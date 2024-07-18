@@ -9,13 +9,15 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class CatalogueExcludedType
+    public class ExcludedClass
     {
         [Required]
-        [StringLength(30)]
-        public required CatalogueRecordTypesToBeExcluded RecordTypesToBeExcluded { get; set; }
+        [MinLength(1)]
+        [MaxLength(30)]
+        public required ClassToBeExcluded ClassToBeExcluded { get; set; }
 
-        [StringLength(1)]
-        public SubTypeToBeExcluded? SubTypesToBeExcluded { get; set; }
+        [MinLength(1)]
+        [MaxLength(1)]
+        public SubClassToBeExcluded? SubClassToBeExcluded { get; set; }
     }
 }

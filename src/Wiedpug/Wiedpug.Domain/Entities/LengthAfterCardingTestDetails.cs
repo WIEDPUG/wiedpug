@@ -12,11 +12,13 @@ namespace Wiedpug.Domain.Entities
     public class LengthAfterCardingTestDetails
     {
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required string Laboratory { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]

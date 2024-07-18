@@ -13,7 +13,8 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         /// Used to define the type of catalogue: 1 - Action Catalogue, 2 - Private Catalogue
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required CatalogueType CatalogueType { get; set; }
 
         /// <summary>

@@ -12,37 +12,47 @@ namespace Wiedpug.Domain.Entities
     public class DeliveryOrderDetail
     {
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required DeliveryOrderType DeliveryOrderType { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DeliveryOrderNumber { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation ReleasingOrganisation { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public Organisation? MarkingOrganisation { get; set; }
 
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? PreviousDeliveryOrderNumber { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required Organisation Carrier { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CountermarkColour? CountermarkColour { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CountermarkMarking? CountermarkMarking { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CountermarkSize? CountermarkSize { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CountermarkHeadmarkFlag? CountermarkHeadmarkFlag { get; set; }
 
         /// <summary>
@@ -50,7 +60,8 @@ namespace Wiedpug.Domain.Entities
         /// True for apply renumbers, False for not apply renumbers
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool ApplyRenumbers { get; set; }
 
         /// <summary>
@@ -58,7 +69,8 @@ namespace Wiedpug.Domain.Entities
         /// True for apply renumbers, False for not apply renumbers
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool ApplyGrossWeights { get; set; }
 
         /// <summary>
@@ -66,19 +78,24 @@ namespace Wiedpug.Domain.Entities
         /// True for apply renumbers, False for not apply renumbers
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool ApplyNetWeights { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public Organisation? InterimHandlingDestinationCode { get; set; }
 
-        [StringLength(80)]
+        [MinLength(1)]
+        [MaxLength(80)]
         public string? InterimHandlerDescriptionLine { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public Organisation? FinalDestinationCode { get; set; }
 
-        [StringLength(80)]
+        [MinLength(1)]
+        [MaxLength(80)]
         public string? FinalDestinationDescriptionLine { get; set; }
 
 

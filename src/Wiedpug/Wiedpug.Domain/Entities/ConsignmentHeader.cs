@@ -13,57 +13,74 @@ namespace Wiedpug.Domain.Entities
     {
         [Required]
         [RegularExpression(RegexPattern.NUMBER_10_DIGITS)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string ConsignmentReference { get; set; }
 
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? SubConsignmentReference { get; set; }
 
-        [StringLength(14)]
+        [MinLength(1)]
+        [MaxLength(14)]
         public string? EcnCrn { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public Organisation? ShippingAgent { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public Organisation? ShoreServiceProvider { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public Organisation? DumpingOrganisation { get; set; }
 
-        [StringLength(7)]
+        [MinLength(1)]
+        [MaxLength(7)]
         public string? VesselCode { get; set; }
 
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public string? VoyageCode { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public string? PortOfDischargeCode { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public string? LoadPortCode { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation Shipper { get; set; }
 
 
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public string? VesselDescription { get; set; }
 
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? LoadPortDescription { get; set; }
 
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? PortOfDischargeDescription { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public string? AlternatePortOfDischargeCode { get; set; }
 
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public string? AlternatePortOfDischargeDescription { get; set; }
 
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public string? BookingReference { get; set; }
 
 

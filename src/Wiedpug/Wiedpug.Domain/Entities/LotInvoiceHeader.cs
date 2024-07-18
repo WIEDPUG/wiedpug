@@ -16,7 +16,8 @@ namespace Wiedpug.Domain.Entities
         /// Required alphanumeric field for lot identity.
         /// </summary>
         [Required]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public required string LotIdentity { get; set; }
 
         /// <summary>
@@ -72,28 +73,32 @@ namespace Wiedpug.Domain.Entities
         /// Optional enum type for yield type.
         /// </summary>
         /// 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public YieldType? YieldType { get; set; }
 
         /// <summary>
         /// Optional alphanumeric field for client's cross reference.
         /// </summary>
         /// 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public string? ClientsCrossReference { get; set; }
 
         /// <summary>
         /// Optional alphanumeric field for wool description.
         /// </summary>
         /// 
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? WoolDescription { get; set; }
 
         /// <summary>
         /// Required enum type for pack material.
         /// </summary>
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required PackMaterial PackMaterial { get; set; }
 
     }

@@ -16,21 +16,24 @@ namespace Wiedpug.Domain.Entities
         /// Generic string field.
         /// </summary>
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         /// <summary>
         /// Enum type for reissue.
         /// </summary>
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required ReissueType ReissueType { get; set; }
 
         /// <summary>
         /// Generic string field.
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation Client { get; set; }
 
         /// <summary>
@@ -44,7 +47,8 @@ namespace Wiedpug.Domain.Entities
         /// Generic alphanumeric field.
         /// </summary>
         [Required]
-        [StringLength(15)]
+        [MinLength(1)]
+        [MaxLength(15)]
         public required string BaleDescription { get; set; }
 
         /// <summary>
@@ -58,56 +62,64 @@ namespace Wiedpug.Domain.Entities
         /// Enum for wool preparation category, optional.
         /// </summary>
         /// 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public WoolPreparationCategory? WoolPreparationCategoryFrom { get; set; }
 
         /// <summary>
         /// Enum for wool preparation category, optional.
         /// </summary>
         /// 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public WoolPreparationCategory? WoolPreparationCategoryTo { get; set; }
 
         /// <summary>
         /// Enum for mulesing status, optional.
         /// </summary>
         /// 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public MulesingStatus? MulesingStatusFrom { get; set; }
 
         /// <summary>
         /// Enum for mulesing status, optional.
         /// </summary>
         /// 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public MulesingStatus? MulesingStatusTo { get; set; }
 
         /// <summary>
         /// Generic string field, optional.
         /// </summary>
         /// 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public SaleIdentity? SaleIdentityFrom { get; set; }
 
         /// <summary>
         /// Generic string field, optional.
         /// </summary>
         /// 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public SaleIdentity? SaleIdentityTo { get; set; }
 
         /// <summary>
         /// Generic alphanumeric field, optional.
         /// </summary>
         /// 
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public string? LotIdentityFrom { get; set; }
 
         /// <summary>
         /// Generic alphanumeric field, optional.
         /// </summary>
         /// 
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public string? LotIdentityTo { get; set; }
     }
 }

@@ -14,7 +14,8 @@ namespace Wiedpug.Domain.Entities
     public class LotHeader
     {
         [Required]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public required string LotIdentity { get; set; } // FIELD NUMBER 2 - Lot Identity - Start: 3, Size: 6, Data Type: AN, Justification: R, Requirement Designator: M
 
         [Required]
@@ -29,8 +30,8 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public required int Tare { get; set; } // FIELD NUMBER 5 - Tare - Start: 19, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 23, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
+        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        public double? RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 23, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? CataloguePageNumber { get; set; } // FIELD NUMBER 7 - Catalogue Page Number - Start: 25, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
@@ -40,14 +41,17 @@ namespace Wiedpug.Domain.Entities
         /// It is used in New Zealand only.
         /// `true` = Normal Lot, `false` = No Lot
         /// </summary>
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public bool? IsNoLot { get; set; } // FIELD NUMBER 8 - No Lot Flag - Start: 28, Size: 1, Data Type: ID, Justification: F, Requirement Designator: C
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public SourceCode? SourceCode { get; set; } // FIELD NUMBER 9 - Source Code - Start: 29, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required UpdateType UpdateType { get; set; } // FIELD NUMBER 10 - Update Type - Start: 30, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         /// <summary>
@@ -61,31 +65,36 @@ namespace Wiedpug.Domain.Entities
         /// please go to this URL: http://www.awex.com.au/standards/catalogue/.
         /// </summary>
         [Required]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public required string CatalogueSymbols { get; set; }
 
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required PackMaterial PackMaterial { get; set; } // FIELD NUMBER 12 - Pack Material - Start: 37, Size: 2, Data Type: ID, Justification: L, Requirement Designator: M
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required LotType LotType { get; set; } // FIELD NUMBER 13 - Lot Type - Start: 39, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         /// <summary>
         /// This is the Reweigh Gross Kg of the lightest bale in the lot.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public int? LightestIndividualBaleWeight { get; set; } // FIELD NUMBER 14 - Lightest Individual Bale Weight - Start: 40, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
+        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        public double? LightestIndividualBaleWeight { get; set; } // FIELD NUMBER 14 - Lightest Individual Bale Weight - Start: 40, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public ReportingFlag? ReportingFlag { get; set; } // FIELD NUMBER 15 - Reporting Flag - Start: 43, Size: 1, Data Type: ID, Justification: F, Requirement Designator: C
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? FirstOfferSeason { get; set; } // FIELD NUMBER 16 - First Offer Season - Start: 44, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
-        [StringLength(4)]
-        public string? FirstOfferSaleIdentity { get; set; } // FIELD NUMBER 17 - First Offer Sale Identity - Start: 46, Size: 4, Data Type: GR, Justification: -, Requirement Designator: C
+        [MinLength(1)]
+        [MaxLength(4)]
+        public SaleIdentity? FirstOfferSaleIdentity { get; set; } // FIELD NUMBER 17 - First Offer Sale Identity - Start: 46, Size: 4, Data Type: GR, Justification: -, Requirement Designator: C
 
         /// <summary>
         /// This is a compound name for lot number and lot suffix, where the lot number is 5 number characters and the lot suffix is 1 alphanumeric character.
@@ -93,29 +102,34 @@ namespace Wiedpug.Domain.Entities
         /// Where a suffix is not used, the lot number occupies the whole of the Lot Identity field.
         /// </summary>
         /// 
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public string? FirstOfferLotIdentity { get; set; } // FIELD NUMBER 18 - First Offer Lot Identity - Start: 50, Size: 6, Data Type: AN, Justification: R, Requirement Designator: C
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? CostPerWeightUnit { get; set; } // FIELD NUMBER 19 - Cost per Weight Unit - Start: 56, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public PriceCurrency? CostPerWeightUnit { get; set; } // FIELD NUMBER 19 - Cost per Weight Unit - Start: 56, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
-        public int? CleanWeight { get; set; } // FIELD NUMBER 20 - Clean Weight - Start: 62, Size: 5, Data Type: N, Justification: R, Requirement Designator: O
+        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        public double? CleanWeight { get; set; } // FIELD NUMBER 20 - Clean Weight - Start: 62, Size: 5, Data Type: N, Justification: R, Requirement Designator: O
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public YieldType? YieldType { get; set; } // FIELD NUMBER 21 - Yield Type - Start: 67, Size: 2, Data Type: ID, Justification: R, Requirement Designator: O
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public WeightUnit? WeightUnit { get; set; } // FIELD NUMBER 22 - Weight Unit - Start: 69, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public OfferType? OfferType { get; set; } // FIELD NUMBER 23 - Offer Type - Start: 70, Size: 2, Data Type: ID, Justification: R, Requirement Designator: O
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public string? ClientCrossReference { get; set; } // FIELD NUMBER 24 - Client Cross Reference - Start: 72, Size: 8, Data Type: AN, Justification: L, Requirement Designator: O
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required PackCondition PackCondition { get; set; } // FIELD NUMBER 25 - Pack Condition - Start: 80, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
 
@@ -129,13 +143,15 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? CoreTestSamplingDate { get; set; } // FIELD NUMBER 3 - Core Test Sampling Date - Start: 4, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
 
         /// <summary>
         /// This field provides for additional comments relating to the information contained in the Wool Description field.
         /// </summary>
-        [StringLength(14)]
+        [MinLength(1)]
+        [MaxLength(14)]
         public string? WoolDescriptionComment { get; set; } // FIELD NUMBER 4 - Wool Description Comment - Start: 10, Size: 14, Data Type: AN, Justification: L, Requirement Designator: O
 
         /// <summary>
@@ -146,33 +162,32 @@ namespace Wiedpug.Domain.Entities
         /// This field is to be always transmitted in upper case.
         /// </summary>
         [Required]
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public required string WoolDescription { get; set; } // FIELD NUMBER 5 - Wool Description - Start: 24, Size: 20, Data Type: AN, Justification: L, Requirement Designator: M
 
         /// <summary>
         /// `true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.
         /// </summary>
         /// 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public bool? GstTaxInvoiceFlag { get; set; } // FIELD NUMBER 6 - GST Tax Invoice Flag - Start: 44, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public PriceCurrency? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public PriceCurrency? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public PriceCurrency? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public PriceCurrency? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         /// <summary>
         /// Audit code used for verifying if AWEX-ID was issued by AWEX.
         /// </summary>
         /// 
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? WoolDescriptionAuditCode { get; set; } // FIELD NUMBER 11 - Wool Description Audit Code - Start: 69, Size: 10, Data Type: AN, Justification: L, Requirement Designator: O
 
         /// <summary>

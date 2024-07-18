@@ -12,11 +12,13 @@ namespace Wiedpug.Domain.Entities
     public class CentreChina
     {
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required CountryCode Country { get; set; } = CountryCode.CN;
 
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required CentreCodeChina CentreCode { get; set; }
     }
 }

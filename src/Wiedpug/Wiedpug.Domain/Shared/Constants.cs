@@ -50,16 +50,16 @@ namespace Wiedpug.Domain.Shared.Constants
         /// Total 3 digits, 1 digits after the decimal point
         /// </summary>
         public const string DECIMAL_3_1 = @"^-?\d{1,2}\.\d{1}$";
-        public const string DECIMAL_3_2 = @"^-?\d{1,2}\.\d{2}$";
-        public const string DECIMAL_12_2 = @"^-?\d{1,12}\.\d{2}$";
+        public const string DECIMAL_3_2 = @"^-?\d{1}\.\d{2}$";
+        public const string DECIMAL_12_2 = @"^-?\d{1,10}\.\d{2}$";
         /// <summary>
         /// Total 16 digits, 6 digits after the decimal point
         /// </summary>
-        public const string DECIMAL_16_6 = @"^-?\d{1,15}\.\d{6}$";
+        public const string DECIMAL_16_6 = @"^-?\d{1,10}\.\d{6}$";
         /// <summary>
         /// Total 15 digits, 6 digits after the decimal point
         /// </summary>
-        public const string DECIMAL_15_6 = @"^-?\d{1,14}\.\d{6}$";
+        public const string DECIMAL_15_6 = @"^-?\d{1,9}\.\d{6}$";
         /// <summary>
         /// Total 6 digits, 4 digits after the decimal point
         /// </summary>
@@ -81,5 +81,10 @@ namespace Wiedpug.Domain.Shared.Constants
         /// Total 12 digits, 2 digits after the decimal point
         /// </summary>
         public const string DECIMAL_12_6 = @"^-?\d{1,6}\.\d{6}$";
+
+        /// <summary>
+        /// Total 8 digits, 2 digits after the decimal point
+        /// </summary>
+        public const string DECIMAL_8_2 = @"^-?\d{1,6}\.\d{2}$";
     }
 }

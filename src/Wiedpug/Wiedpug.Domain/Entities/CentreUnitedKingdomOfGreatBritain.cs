@@ -12,11 +12,13 @@ namespace Wiedpug.Domain.Entities
     public class CentreUnitedKingdomOfGreatBritain
     {
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required CountryCode Country { get; set; } = CountryCode.GB;
 
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required CentreCodeUnitedKingdomOfGreatBritain CentreCode { get; set; }
     }
 }

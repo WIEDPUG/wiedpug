@@ -10,11 +10,13 @@ namespace Wiedpug.Domain.Entities
         public string? Id { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation Organisation { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [MinLength(1)]
+        [MaxLength(50)]
         public required string NameOfOrganisation { get; set; }
 
         /// <summary>
@@ -23,11 +25,13 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateLastUpdated { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required IndustryGroupId IndustryGroupId { get; set; }
 
         /// <summary>
@@ -35,7 +39,8 @@ namespace Wiedpug.Domain.Entities
         /// True for transmits or receives data electronically. False for not.
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool TransmitterFlag { get; set; }
 
         public PhoneNumber? PhoneNumber { get; set; }
@@ -43,7 +48,8 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Australian Business Number
         /// </summary>
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         [RegularExpression(RegexPattern.NUMBERS)]
         public string? ABN { get; set; }
 

@@ -13,7 +13,8 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateFormatLastRevised { get; set; }
 
         /// <summary>
@@ -22,19 +23,23 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateTransmissionFileCreated { get; set; }
 
         [Required]
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public required CountryCode CountryOfOrigin { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation DocumentOriginator { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation CurrentReceiver { get; set; }
 
         /// <summary>
@@ -43,14 +48,16 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? VersionNumber { get; set; }
 
-        [StringLength(9)]
+        [MinLength(1)]
+        [MaxLength(9)]
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
         /// <summary>
         /// Australian Business Number, 11 digits string
         /// </summary>
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         [RegularExpression(RegexPattern.NUMBERS)]
         public required string ABN { get; set; }
 

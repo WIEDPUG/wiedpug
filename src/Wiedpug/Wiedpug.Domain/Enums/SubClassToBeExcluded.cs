@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]    
-    public enum SubTypeToBeExcluded
+    public enum SubClassToBeExcluded
     {
         [Description("A: First record of one type")]
         A,

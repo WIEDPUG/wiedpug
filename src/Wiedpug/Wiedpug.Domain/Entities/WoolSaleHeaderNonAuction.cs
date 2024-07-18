@@ -16,7 +16,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(24)]
+        [MinLength(1)]
+        [MaxLength(24)]
         public string? CatalogueAvailabilityDateTime { get; set; } // FIELD NUMBER 4 - Catalogue Availability Time - Start: 10, Size: 4, Data Type: Time, Justification: L, Requirement Designator: O
 
         /// <summary>
@@ -24,7 +25,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(24)]
+        [MinLength(1)]
+        [MaxLength(24)]
         public string? SaleStartDateTime { get; set; } // FIELD NUMBER 5 - Sale Start Date - Start: 14, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
         /// <summary>
@@ -32,13 +34,16 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(24)]
+        [MinLength(1)]
+        [MaxLength(24)]
         public string? SaleEndDateTime { get; set; } // FIELD NUMBER 7 - Sale End Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public SaleType? SaleType { get; set; } // FIELD NUMBER 9 - Sale Type - Start: 34, Size: 2, Data Type: ID, Justification: L, Requirement Designator: O
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public string? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
 
         /// <summary>
@@ -52,7 +57,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [StringLength(24)]
+        [MinLength(1)]
+        [MaxLength(24)]
         public string? TenderSaleReplyDateTime { get; set; } // FIELD NUMBER 12 - Tender Sale Reply Date - Start: 38, Size: 6, Data Type: Date, Justification: F, Requirement Designator: O
     }
 

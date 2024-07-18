@@ -13,28 +13,35 @@ namespace Wiedpug.Domain.Entities
     public class TestDataHeader
     {
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation Client { get; set; }
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public int? Season { get; set; }
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public SaleIdentity? SaleIdentity { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public Centre? CentreStorage { get; set; }
 
         [Required]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
 
         public required string LotIdentity { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required WeightNote WeightNote { get; set; }
 
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public string? ClientsCrossReference { get; set; }
 
         [Required]
@@ -50,31 +57,39 @@ namespace Wiedpug.Domain.Entities
         public required int Tare { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required WeightUnit WeightUnit { get; set; }
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public MulesingStatus? MulesingStatus { get; set; }
 
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public int? DeclaredGross { get; set; }
 
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public int? DeclaredTare { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public LotType LotType { get; set; }
 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public Centre CentreAuction { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public SourceCode SourceCode { get; set; }
 
         /// <summary>
         /// A Flag to determine if Compnay ABN apply to invoice
         /// </summary>
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public bool? IsCompanyABNApplicable { get; set; }
     }
 }

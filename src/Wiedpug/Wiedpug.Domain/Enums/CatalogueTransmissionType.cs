@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    [Description("")]
-    public enum TransmissionTypeForCatalogue
+    [Description(" Used to define the types of Catalogue")]
+    public enum CatalogueTransmissionType
     {
         [Description("2: Auction Catalogues")]
         AuctionCatalogues = 2,

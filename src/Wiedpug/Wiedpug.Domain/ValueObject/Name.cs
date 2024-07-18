@@ -9,13 +9,16 @@ namespace Wiedpug.Domain.ValueObject
 {
     public class Name
     {
-        [StringLength(80)]
+        [MinLength(1)]
+        [MaxLength(80)]
         public string? FirstName { get; set; }
 
-        [StringLength(80)]
+        [MinLength(1)]
+        [MaxLength(80)]
         public string? LastName { get; set; }
 
-        [StringLength(80)]
+        [MinLength(1)]
+        [MaxLength(80)]
         public string? OrganisationName { get; set; }
     }
 }

@@ -11,14 +11,16 @@ namespace Wiedpug.Domain.Entities
         /// Enum type for Certificate ID prefix.
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required CertificateIDPrefix CertificateIDPrefix { get; set; }
 
         /// <summary>
         /// Required generic string field for weight note.
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required WeightNote WeightNote { get; set; }
 
         /// <summary>
@@ -39,7 +41,8 @@ namespace Wiedpug.Domain.Entities
         /// Optional generic string field for L/S Sample ID.
         /// </summary>
         /// 
-        [StringLength(7)]
+        [MinLength(1)]
+        [MaxLength(7)]
         public string? LSSampleID { get; set; }
 
         /// <summary>
@@ -47,7 +50,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? CoreSampleReceived { get; set; }
 
         /// <summary>
@@ -55,7 +59,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? LSSampleReceived { get; set; }
 
         /// <summary>
@@ -63,7 +68,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? TRVMatched { get; set; }
 
         /// <summary>
@@ -71,14 +77,16 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? CoreSampleCheckTest { get; set; }
 
         /// <summary>
         /// Optional enum for L/S retuft required.
         /// </summary>
         /// 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public LsRetuftRequired? LsRetuftRequired { get; set; }
 
         /// <summary>
@@ -86,14 +94,16 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? LsRetuftReceived { get; set; }
 
         /// <summary>
         /// Optional enum for core test recore required.
         /// </summary>
         /// 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public CoreTestRecoreRequired? CoreTestRecoreRequired { get; set; }
 
         /// <summary>
@@ -101,7 +111,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? CoreTestRecoreReceived { get; set; }
     }
 

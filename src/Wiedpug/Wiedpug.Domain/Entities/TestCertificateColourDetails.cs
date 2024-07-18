@@ -10,7 +10,8 @@ namespace Wiedpug.Domain.Entities
         /// The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit check number.It is printed at the top of the certificate.
         /// </summary>
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; } // FIELD NUMBER 3 - Certificate Identity - Start: 4, Size: 11, Data Type: GR, Justification: F, Requirement Designator: M
 
         [Required]
@@ -18,7 +19,8 @@ namespace Wiedpug.Domain.Entities
         public required double Charge { get; set; } // FIELD NUMBER 4 - Charge - Start: 15, Size: 6, Data Type: D2, Justification: R, Requirement Designator: N/A, Value: spaces
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required Laboratory Laboratory { get; set; } // FIELD NUMBER 5 - Laboratory - Start: 21, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
@@ -39,11 +41,13 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_4_1)]
         public double? ColourYZ { get; set; } // FIELD NUMBER 10 - Colour – Y – Z - Start: 33, Size: 4, Data Type: D1, Justification: R, Requirement Designator: C
 
-        [StringLength(2)]
+        [MinLength(1)]
+        [MaxLength(2)]
         public string? CoreBulkValue { get; set; } // FIELD NUMBER 11 - Core Bulk Value - Start: 37, Size: 2, Data Type: AN, Justification: F, Requirement Designator: C
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; } // FIELD NUMBER 12 - Re-issue Charge Flag - Start: 39, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
@@ -59,7 +63,8 @@ namespace Wiedpug.Domain.Entities
         public double? ColourYZAsIs { get; set; } // FIELD NUMBER 17 - Colour – Y – Z (As–is) - Start: 57, Size: 4, Data Type: D1, Justification: R, Requirement Designator: C
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required CalibrationFlag CalibrationFlag { get; set; } // FIELD NUMBER 18 - Calibration Flag - Start: 61, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         /// <summary>
@@ -68,7 +73,8 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateIssued { get; set; } // FIELD NUMBER 19 - Date Issued - Start: 62, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
     }
 }

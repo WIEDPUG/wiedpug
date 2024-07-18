@@ -15,13 +15,15 @@ namespace Wiedpug.Domain.ValueObject
         /// https://en.wikipedia.org/wiki/E.164
         /// </summary>
         [Required]
-        [StringLength(15)]
+        [MinLength(1)]
+        [MaxLength(15)]
         public required StandardPhoneNumber StandardPhoneNumber { get; set; }
 
         /// <summary>
         /// Used for landline or fax extentions
         /// </summary>
-        [StringLength(15)]
+        [MinLength(1)]
+        [MaxLength(15)]
         public string? Extension { get; set; }
 
     }

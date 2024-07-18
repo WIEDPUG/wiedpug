@@ -11,18 +11,22 @@ namespace Wiedpug.Domain.ValueObject
     public class TestCertificateBaleHeader
     {
         [Required]
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public required string Brand { get; set; }
 
         [Required]
-        [StringLength(15)]
+        [MinLength(1)]
+        [MaxLength(15)]
         public required string BaleDescription { get; set; }
 
         [Required]
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public required string AreaOfOrigin { get; set; }
 
-        [StringLength(20)]
+        [MinLength(1)]
+        [MaxLength(20)]
         public string? LocationWithinStore { get; set; }
     }
 }

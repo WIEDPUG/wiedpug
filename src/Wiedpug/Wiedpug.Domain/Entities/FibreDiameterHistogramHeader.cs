@@ -21,15 +21,18 @@ namespace Wiedpug.Domain.Entities
         public int? FibresMeasured { get; set; } // FIELD NUMBER 5 - Fibres Measured - Start: 9, Size: 6, Data Type: N, Justification: R, Requirement Designator: C
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required ReportingFlag ReportingFlag { get; set; } // FIELD NUMBER 6 - Reporting Flag - Start: 15, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required Instrument Instrument { get; set; } // FIELD NUMBER 7 - Instrument - Start: 16, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required SubSamplingMethod SubSamplingMethod { get; set; } // FIELD NUMBER 8 - Sub-sampling Method - Start: 17, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
         [Required]
@@ -60,7 +63,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? CoreTestSamplingDate { get; set; } // FIELD NUMBER 16 - Core Test Sampling Date - Start: 38, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
 
         /// <summary>
@@ -69,7 +73,8 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateIssued { get; set; } // FIELD NUMBER 17 - Date Issued - Start: 44, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
 
         [RegularExpression(RegexPattern.DECIMAL_16_6)]

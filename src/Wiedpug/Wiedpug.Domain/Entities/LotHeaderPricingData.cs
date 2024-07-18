@@ -12,13 +12,16 @@ namespace Wiedpug.Domain.Entities
 {
     public class LotHeaderPricingData
     {
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public PriceBasis? PriceBasis { get; set; } // FIELD NUMBER 3 - Price Basis - Start: 4, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public string? YieldBasis { get; set; } // FIELD NUMBER 4 - Yield Basis - Start: 5, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
-        [StringLength(16)]
+        [MinLength(1)]
+        [MaxLength(16)]
         public List<LotHeaderPricingDataOffer>? Offers { get; set; }
     }
 }

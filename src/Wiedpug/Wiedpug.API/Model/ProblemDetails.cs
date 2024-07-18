@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
+using Wiedpug.Domain.Errors;
 
 namespace Wiedpug.API.Model
 {
@@ -28,12 +29,12 @@ namespace Wiedpug.API.Model
         [Required]
         public required int Status { get; set; }
         /// <summary>
-        /// A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.
+        /// A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.
         /// </summary>
         public string? Detail { get; set; }
         /// <summary>
-        /// Dictionary of errors in &lt;PropertyName, ErrorDetails[]&gt; format. e.g. errors: { "name": ["Product name is required"], "category": ["Category name cannot be longer than 20 characters."]  }
+        /// A collection of the erros
         /// </summary>
-        public Dictionary<string, string[]>? Errors { get; set; }
+        public CustomErrors? Errors { get; set; }
     }
 }

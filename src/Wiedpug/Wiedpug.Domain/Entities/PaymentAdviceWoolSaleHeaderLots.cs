@@ -16,7 +16,8 @@ namespace Wiedpug.Domain.Entities
         public required int Season { get; set; }
 
         [Required]
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
@@ -24,7 +25,8 @@ namespace Wiedpug.Domain.Entities
         /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required Centre CentreStorage { get; set; }
 
         /// <summary>
@@ -33,15 +35,18 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string SaleDate { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required WoolState WoolState { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required PackType PackType { get; set; }
 
 
@@ -49,16 +54,19 @@ namespace Wiedpug.Domain.Entities
         /// The code for the broker who will raise the invoice for the wool
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation InvoicingOrganisation { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation SellingOrganisation { get; set; }
 
         
         [Required]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public required Centre CentreCatalogue { get; set; }
 
         // Previous WoolSaleHeader - Extension
@@ -70,13 +78,15 @@ namespace Wiedpug.Domain.Entities
         /// It is not necessarily the same as the Releasing Organisation.
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required Organisation StorageOrganisation { get; set; } // FIELD NUMBER 3 - Storage Organisation - Start: 3, Size: 5, Data Type: AN, Justification: L, Requirement Designator: R, Value: '11'
 
         /// <summary>
         /// Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.
         /// </summary>
-        [StringLength(15)]
+        [MinLength(1)]
+        [MaxLength(15)]
         public string? StorageDescription { get; set; } // FIELD NUMBER 4 - Storage Description - Start: 8, Size: 15, Data Type: AN, Justification: L, Requirement Designator: O
 
         /// <summary>
@@ -99,7 +109,8 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string DateStorageChargeCommences { get; set; } // FIELD NUMBER 8 - Date Storage Charge Commences - Start: 36, Size: 6, Data Type: Date, Justification: F, Requirement Designator: M
 
         /// <summary>
@@ -122,7 +133,8 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? LotAvailableDate { get; set; } // FIELD NUMBER 11 - Lot Available Date - Start: 50, Size: 6, Data Type: Date, Justification: F, Requirement Designator: O
 
         /// <summary>

@@ -16,7 +16,8 @@ namespace Wiedpug.Domain.Entities
         public required int Season { get; set; }
 
         [Required]
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
@@ -24,7 +25,8 @@ namespace Wiedpug.Domain.Entities
         /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required Centre CentreStorage { get; set; }
 
         /// <summary>
@@ -33,37 +35,44 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public required string SaleDate { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required WoolState WoolState { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required PackType PackType { get; set; }
 
         /// <summary>
         /// The Code for the currency in which the sale was made. To obtain the current code list please use the Commonwealth Bank Currency Codes on their website
         /// </summary>
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required string Currency { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required WeightUnit WeightUnit { get; set; }
         
         [Required]
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public required CatalogueSection CatalogueSection { get; set; }
 
         /// <summary>
         /// The code for the broker who will raise the invoice for the wool
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation InvoicingOrganisation { get; set; }
 
         /// <summary>
@@ -71,7 +80,8 @@ namespace Wiedpug.Domain.Entities
         /// `true` = Final Catalogue. `false` = Not Final Catalogue
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool IsFinalCatalogue { get; set; }
 
 
@@ -79,19 +89,23 @@ namespace Wiedpug.Domain.Entities
         /// The broker that is responsible for releasing the wool out of the store
         /// </summary>
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation ReleasingOrganisation { get; set; }
 
         [Required]
-        [StringLength(8)]
+        [MinLength(1)]
+        [MaxLength(8)]
         public required Organisation SellingOrganisation { get; set; }
 
         [Required]
-        [StringLength(4)]
+        [MinLength(1)]
+        [MaxLength(4)]
         public required WoolTypeGroup WoolTypeGroup { get; set; }
         
         [Required]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public required Centre CentreCatalogue { get; set; }
 
     }

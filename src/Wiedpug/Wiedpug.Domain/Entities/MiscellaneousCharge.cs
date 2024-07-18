@@ -10,21 +10,24 @@ namespace Wiedpug.Domain.Entities
         /// Optional enum type for charge type.
         /// </summary>
         /// 
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public ChargeType? ChargeType { get; set; }
 
         /// <summary>
         /// Optional alphanumeric field for charge description.
         /// </summary>
         /// 
-        [StringLength(40)]
+        [MinLength(1)]
+        [MaxLength(40)]
         public string? ChargeDescription { get; set; }
 
         /// <summary>
         /// Required enum type for currency.
         /// </summary>
         [Required]
-        [StringLength(3)]
+        [MinLength(1)]
+        [MaxLength(3)]
         public required Currency Currency { get; set; }
 
         /// <summary>
@@ -38,7 +41,8 @@ namespace Wiedpug.Domain.Entities
         /// Required enum type for indicating debit or credit.
         /// </summary>
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required DebitCreditFlag DebitCreditFlag { get; set; }
     }
 

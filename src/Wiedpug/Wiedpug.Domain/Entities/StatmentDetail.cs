@@ -8,28 +8,34 @@ namespace Wiedpug.Domain.Entities
     public class StatementDetail
     {
         [Required]
-        [StringLength(30)]
+        [MinLength(1)]
+        [MaxLength(30)]
         public required string ClientsReference { get; set; }
 
         [Required]
-        [StringLength(11)]
+        [MinLength(1)]
+        [MaxLength(11)]
         public required string AccountReference { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [StringLength(9)]
+        [MinLength(1)]
+        [MaxLength(9)]
         public required double Amount { get; set; }
 
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public AmountType? AmountType { get; set; }
 
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [StringLength(10)]
+        [MinLength(1)]
+        [MaxLength(10)]
         public string? ItemDate { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        [StringLength(6)]
+        [MinLength(1)]
+        [MaxLength(6)]
         public double? GstAmount { get; set; }
 
         /// <summary>
@@ -37,7 +43,8 @@ namespace Wiedpug.Domain.Entities
         /// True for applicable, False for not applicable
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool GstTaxInvoiceApplicable { get; set; }
 
         /// <summary>
@@ -45,7 +52,8 @@ namespace Wiedpug.Domain.Entities
         /// True for applicable, False for not applicable
         /// </summary>
         [Required]
-        [StringLength(5)]
+        [MinLength(1)]
+        [MaxLength(5)]
         public required bool CompanyABNApplicable { get; set; }
     }
 

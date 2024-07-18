@@ -39,10 +39,13 @@ namespace Wiedpug.API.ExampleResponses
                 Title = "One or more validation errors occurred",
                 Status = StatusCodes.Status400BadRequest,
                 Detail = string.Empty,
-                Errors = new Dictionary<string, string[]>
+                Errors = new CustomErrors
                 {
-                    { "Requests[0].TransmissionHeader.DateFormatLastRevised", ["The field DateFormatLastRevised is required", "The field DateFormatLastRevised must match regulart expression pattern..."] },
-                    { "Requests[0].TransmissionHeader.CountryOfOrigin", ["The field CountryOfOrigin is required"] }
+                    Errors = new Dictionary<string, string[]>
+                    {
+                        { "Requests[0].TransmissionHeader.DateFormatLastRevised", ["The field DateFormatLastRevised is required", "The field DateFormatLastRevised must match regulart expression pattern..."] },
+                        { "Requests[0].TransmissionHeader.CountryOfOrigin", ["The field CountryOfOrigin is required"] }
+                    }
                 }
             };
         }
@@ -58,10 +61,13 @@ namespace Wiedpug.API.ExampleResponses
                 Title = "One or more validation errors occurred",
                 Status = StatusCodes.Status400BadRequest,
                 Detail = string.Empty,
-                Errors = new Dictionary<string, string[]>
+                Errors = new CustomErrors
                 {
-                    { "TransmissionHeader.DateFormatLastRevised", ["The field DateFormatLastRevised is required", "The field DateFormatLastRevised must match regulart expression pattern..."] },
-                    { "TransmissionHeader.CountryOfOrigin", ["The field CountryOfOrigin is required"] }
+                    Errors = new Dictionary<string, string[]>
+                    {
+                        { "Requests[0].TransmissionHeader.DateFormatLastRevised", ["The field DateFormatLastRevised is required", "The field DateFormatLastRevised must match regulart expression pattern..."] },
+                        { "Requests[0].TransmissionHeader.CountryOfOrigin", ["The field CountryOfOrigin is required"] }
+                    }
                 }
             };
         }

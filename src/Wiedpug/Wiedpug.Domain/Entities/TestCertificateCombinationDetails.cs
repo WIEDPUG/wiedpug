@@ -88,7 +88,8 @@ namespace Wiedpug.Domain.Entities
         public double? FactorAirflowMean { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [MinLength(1)]
+        [MaxLength(1)]
         public required CombinationFlag CombinationFlag { get; set; }
     }
 }
