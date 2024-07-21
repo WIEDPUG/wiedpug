@@ -688,7 +688,7 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/components/schemas/RequestForData'
+                $ref: '#/components/schemas/RequestForDataForCatalogue'
             examples:
               Request for Auction Catalogue Data and Updates:
                 value:
@@ -1097,7 +1097,7 @@ components:
         - 3
         - 5
       type: integer
-      description: ' Used to define the types of Catalogue<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates'
+      description: ' Used to define the types of Catalogue. Only required for requesting Catalouge. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates'
       format: int32
     CatalogueType:
       enum:
@@ -3046,7 +3046,7 @@ components:
         - U
       type: string
       description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
-    RequestForData:
+    RequestForDataForCatalogue:
       type: object
       properties:
         catalogueTransmissionType:
@@ -3093,7 +3093,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ExcludedClass'
-          description: "Cataglouge classes and sub-classes to be excluded in the request. e.g. 20 - Lot Header, 22A - Group Header.\r\nOnly applicable to Catalogue."
+          description: "Cataglouge classes and sub-classes to be excluded in the request. e.g. 20 - Lot Header, 22A - Group Header.\r\nOnly required for request for Catalogue. Not applicable for other documents."
           nullable: true
         season:
           pattern: '-?\d{1,2}'

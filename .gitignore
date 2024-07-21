@@ -5,3 +5,4 @@ node_modules/
 /src/Wiedpug/Wiedpug.API/obj
 /src/Wiedpug/Wiedpug.Domain/bin/Debug/net8.0
 /src/Wiedpug/Wiedpug.Domain/obj
+out/

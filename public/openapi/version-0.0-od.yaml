@@ -1245,13 +1245,13 @@ components:
       additionalProperties: false
     WarningCode:
       enum:
-        - _11
-        - _12
-        - _13
-        - _18
-        - _19
-        - _20
-        - _24
+        - '11'
+        - '12'
+        - '13'
+        - '18'
+        - '19'
+        - '20'
+        - '24'
         - DRVnn
       type: string
       description: 'A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error.'
