@@ -191,18 +191,18 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForLotInovicesExample : IExamplesProvider<RequestForLotInvoices>
+    public class RequestForLotInovicesExample : IExamplesProvider<RequestForData>
     {
-        public RequestForLotInvoices GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForLotInvoices()
+            return new RequestForData()
             {
                 SaleIdentity = new Domain.Entities.SaleIdentity
                 {
                     SellingCentreType = SellingCentreType.AU_F,
                     SaleNumber = 18
                 },
-                OrganisationRequested = "AWNF",
+                OrganisationRequested = new Organisation { OrganisationCode = "ANF" },
                 SaleDateRequested = "2023-10-31",
                 UseNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,

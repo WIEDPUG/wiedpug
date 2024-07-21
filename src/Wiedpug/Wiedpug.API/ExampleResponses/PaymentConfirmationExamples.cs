@@ -68,18 +68,18 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForPaymentConfirmationRequestExample : IExamplesProvider<RequestForPaymentConfirmation>
+    public class RequestForPaymentConfirmationRequestExample : IExamplesProvider<RequestForData>
     {
-        public RequestForPaymentConfirmation GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForPaymentConfirmation()
+            return new RequestForData()
             {
                 SaleIdentity = new Domain.Entities.SaleIdentity
                 {
                     SellingCentreType =SellingCentreType.AU_F,
                     SaleNumber = 18
                 },
-                OrganisationRequested = "AWNF",
+                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 UseNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,

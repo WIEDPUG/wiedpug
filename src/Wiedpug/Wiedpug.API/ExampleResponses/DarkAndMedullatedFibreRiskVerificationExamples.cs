@@ -77,18 +77,18 @@ namespace Wiedpug.API.ExampleResponses
             };
         }
 
-        public class RequestForDarkAndMedullatedFibreRiskVerificationExample : IExamplesProvider<RequestForDarkAndMedullatedFibreRiskVerification>
+        public class RequestForDarkAndMedullatedFibreRiskVerificationExample : IExamplesProvider<RequestForData>
         {
-            public RequestForDarkAndMedullatedFibreRiskVerification GetExamples()
+            public RequestForData GetExamples()
             {
-                return new RequestForDarkAndMedullatedFibreRiskVerification()
+                return new RequestForData()
                 {
                     SaleIdentity = new Domain.Entities.SaleIdentity
                     {
                         SellingCentreType = SellingCentreType.AU_M,
                         SaleNumber = 18
                     },
-                    OrganisationRequested = "AWNF",
+                    OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                     SaleDateRequested = "2023-10-31",
                     UseNetworkDateTime = false,
                     RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,

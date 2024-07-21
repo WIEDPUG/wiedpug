@@ -66,13 +66,13 @@ public static class CatalogueEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-            //[SwaggerRequestExample(typeof(List<RequestForDataForAuctionCatalogue>), typeof(RequestForDataAuctionCatalogueRequestExamples))]            
+         //   [SwaggerRequestExample(typeof(List<RequestForDataForCatalogue>), typeof(RequestForDataForCatalogueRequestExamples))]            
             [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataCatalogue200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] List<RequestForData> model) =>
+        ([FromBody] List<RequestForDataForCatalogue> model) =>
         {
             //return TypedResults.Created($"/api/Catalogues/{model.ID}", model);
         })        

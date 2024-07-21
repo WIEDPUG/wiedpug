@@ -212,18 +212,18 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForTestRequestsVerificationExample : IExamplesProvider<RequestForTestRequestsVerification>
+    public class RequestForTestRequestsVerificationExample : IExamplesProvider<RequestForData>
     {
-        public RequestForTestRequestsVerification GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForTestRequestsVerification()
+            return new RequestForData()
             {
                 SaleIdentity = new Domain.Entities.SaleIdentity
                 {
                     SellingCentreType = SellingCentreType.AU_M,
                     SaleNumber = 18
                 },
-                OrganisationRequested = "AWNF",
+                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 UseNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,

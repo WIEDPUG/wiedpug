@@ -75,18 +75,18 @@ namespace Wiedpug.API.ExampleResponses
 
     }
 
-    public class RequestForTestStatusExample : IExamplesProvider<RequestForTestStatus>
+    public class RequestForTestStatusExample : IExamplesProvider<RequestForData>
     {
-        public RequestForTestStatus GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForTestStatus()
+            return new RequestForData()
             {
                 SaleIdentity = new Domain.Entities.SaleIdentity
                 {
                     SellingCentreType = SellingCentreType.AU_M,
                     SaleNumber = 18
                 },
-                OrganisationRequested = "AWNF",
+                OrganisationRequested = new Organisation { OrganisationCode = "ANF" },
                 SaleDateRequested = "2023-10-31",
                 UseNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,

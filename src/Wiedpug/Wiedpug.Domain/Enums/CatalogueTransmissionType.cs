@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
-    [Description(" Used to define the types of Catalogue")]
+    [Description(" Used to define the types of Catalogue. Only required for requesting Catalouge. Not Applicable for other documents.")]
     public enum CatalogueTransmissionType
     {
         [Description("2: Auction Catalogues")]

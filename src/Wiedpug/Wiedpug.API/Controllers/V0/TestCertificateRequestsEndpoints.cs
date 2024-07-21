@@ -3,6 +3,8 @@ using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates;
+using Wiedpug.Domain.Aggregates.TestCertificateAggregate;
+using Wiedpug.Domain.Entities;
 namespace Wiedpug.API.Controllers.V0;
 
 public static class TestCertificateRequestsEndpoints
@@ -31,6 +33,31 @@ public static class TestCertificateRequestsEndpoints
         .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+
+
+        group.MapPost("/data",
+            [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForDataForTestCertificatesRequestsExample))]
+            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataForTestCertificatesRequests200Example))]
+            [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
+            [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
+            [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
+            [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
+            [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
+            ([FromBody] RequestForData model) =>
+        {
+            //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
+        })
+        .WithName("GetTestCertificatesRequests")
+        .WithOpenApi(o => new(o)
+        {
+            Summary = "Retrieves the test certificates request"
+        })
+        .Produces<ApiResult<TestCertificateRequests>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        .Produces<CustomProblemDetails>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
         .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
     }
 }

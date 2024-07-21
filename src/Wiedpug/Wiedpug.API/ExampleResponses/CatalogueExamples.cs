@@ -785,13 +785,13 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDataCatalogueRequestExamples : IMultipleExamplesProvider<List<RequestForData>>
+    public class RequestForDataForCatalogueRequestExamples : IMultipleExamplesProvider<List<RequestForDataForCatalogue>>
     {        
-        IEnumerable<SwaggerExample<List<RequestForData>>> IMultipleExamplesProvider<List<RequestForData>>.GetExamples()
+        IEnumerable<SwaggerExample<List<RequestForDataForCatalogue>>> IMultipleExamplesProvider<List<RequestForDataForCatalogue>>.GetExamples()
         {
             yield return SwaggerExample.Create(
                 "Request for Auction Catalogue Data and Updates",
-                new List<RequestForData>
+                new List<RequestForDataForCatalogue>
                 {
                     new()
                     {
@@ -850,7 +850,7 @@ namespace Wiedpug.API.ExampleResponses
 
             yield return SwaggerExample.Create(
                 "Request for Private Catalogue Data",
-                new List<RequestForData>
+                new List<RequestForDataForCatalogue>
                 {
                     new()
                     {

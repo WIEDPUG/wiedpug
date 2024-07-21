@@ -298,18 +298,18 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class GetTestCertificatesRequestExample : IExamplesProvider<GetTestCertificatesRequest>
+    public class GetTestCertificatesRequestExample : IExamplesProvider<RequestForData>
     {
-        public GetTestCertificatesRequest GetExamples()
+        public RequestForData GetExamples()
         {
-            return new GetTestCertificatesRequest()
+            return new RequestForData()
             {
                 SaleIdentity = new Domain.Entities.SaleIdentity
                 {
                     SellingCentreType = SellingCentreType.AU_F,
                     SaleNumber = 18
                 },
-                OrganisationRequested = "AWNF",
+                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 UseNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,

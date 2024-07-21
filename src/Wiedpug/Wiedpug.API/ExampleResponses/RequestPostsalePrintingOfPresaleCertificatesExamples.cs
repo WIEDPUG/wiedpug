@@ -81,18 +81,18 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<RequestForRequestPostsalePrintingOfPresaleCertificates>
+    public class RequestForRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<RequestForData>
     {
-        public RequestForRequestPostsalePrintingOfPresaleCertificates GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForRequestPostsalePrintingOfPresaleCertificates()
+            return new RequestForData()
             {
                 SaleIdentity = new Domain.Entities.SaleIdentity
                 {
                     SellingCentreType = SellingCentreType.AU_M,
                     SaleNumber = 18
                 },
-                OrganisationRequested = "AWNF",
+                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 UseNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
