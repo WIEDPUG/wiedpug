@@ -114,11 +114,11 @@ namespace Wiedpug.API.ExampleResponses
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.P,
-                            ContactWithExoticBreeds = true,
-                            Crutched = false,
+                            IsContactWithExoticBreeds = true,
+                            IsCrutched = false,
                             Sex = Sex.R,
                             AgeFrom = 2,
-                            CrutchedWithin3MonthsOfShearing = true,
+                            IsCrutchedWithin3MonthsOfShearing = true,
                             AgeTo = 5
 
                         }
@@ -196,11 +196,11 @@ namespace Wiedpug.API.ExampleResponses
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.B,
-                            ContactWithExoticBreeds = false,
-                            Crutched = false,
+                            IsContactWithExoticBreeds = false,
+                            IsCrutched = false,
                             Sex = Sex.E,
                             AgeFrom = 1,
-                            CrutchedWithin3MonthsOfShearing = true,
+                            IsCrutchedWithin3MonthsOfShearing = true,
                             AgeTo = 4
 
                         }
@@ -339,11 +339,11 @@ namespace Wiedpug.API.ExampleResponses
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                                 DeclaredWoolCategory = DeclaredWoolCategory.P,
-                                ContactWithExoticBreeds = true,
-                                Crutched = false,
+                                IsContactWithExoticBreeds = true,
+                                IsCrutched = false,
                                 Sex = Sex.R,
                                 AgeFrom = 2,
-                                CrutchedWithin3MonthsOfShearing = true,
+                                IsCrutchedWithin3MonthsOfShearing = true,
                                 AgeTo = 5
 
                             }
@@ -421,11 +421,11 @@ namespace Wiedpug.API.ExampleResponses
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                                 DeclaredWoolCategory = DeclaredWoolCategory.B,
-                                ContactWithExoticBreeds = false,
-                                Crutched = false,
+                                IsContactWithExoticBreeds = false,
+                                IsCrutched = false,
                                 Sex = Sex.E,
                                 AgeFrom = 1,
-                                CrutchedWithin3MonthsOfShearing = true,
+                                IsCrutchedWithin3MonthsOfShearing = true,
                                 AgeTo = 4
 
                             }

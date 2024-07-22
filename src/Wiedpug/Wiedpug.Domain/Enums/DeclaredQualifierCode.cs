@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
+    [Description("Optional enum type for qualifier code.")]
     public enum DeclaredQualifierCode
     {
 

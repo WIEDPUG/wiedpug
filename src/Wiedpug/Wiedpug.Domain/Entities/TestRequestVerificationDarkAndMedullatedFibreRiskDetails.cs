@@ -37,29 +37,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required DeclaredWoolCategory DeclaredWoolCategory { get; set; }
 
-        /// <summary>
-        /// Optional enum type for qualifier code.
-        /// </summary>
-        /// 
-        [MinLength(1)]
-        [MaxLength(1)]
-        public DeclaredQualifierCode? DeclaredQualifierCode1 { get; set; }
-
-        [MinLength(1)]
-        [MaxLength(1)]
-        public DeclaredQualifierCode? DeclaredQualifierCode2 { get; set; }
-
-        [MinLength(1)]
-        [MaxLength(1)]
-        public DeclaredQualifierCode? DeclaredQualifierCode3 { get; set; }
-
-        [MinLength(1)]
-        [MaxLength(1)]
-        public DeclaredQualifierCode? DeclaredQualifierCode4 { get; set; }
-
-        [MinLength(1)]
-        [MaxLength(1)]
-        public DeclaredQualifierCode? DeclaredQualifierCode5 { get; set; }
+        public List<DeclaredQualifierCode>? DeclaredQualifierCodes { get; set;}
 
         /// <summary>
         /// Optional enum type for qualifier scale.
@@ -76,7 +54,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(5)]
-        public required bool ContactWithExoticBreeds { get; set; }
+        public required bool IsContactWithExoticBreeds { get; set; }
 
         /// <summary>
         /// Boolean type for crutched status. 
@@ -85,7 +63,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(5)]
-        public required bool Crutched { get; set; }
+        public required bool IsCrutched { get; set; }
 
         /// <summary>
         /// Boolean type for crutching within 3 months of shearing.
@@ -93,7 +71,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         [MinLength(1)]
         [MaxLength(5)]
-        public bool? CrutchedWithin3MonthsOfShearing { get; set; }
+        public bool? IsCrutchedWithin3MonthsOfShearing { get; set; }
 
         /// <summary>
         /// Enum type for sex.

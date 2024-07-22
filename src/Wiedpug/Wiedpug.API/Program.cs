@@ -64,17 +64,17 @@ var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(api
 
 //versionedGroup.MapTestCertificatesEndpoints();
 
-//versionedGroup.MapCatalogueEndpoints();
-
-versionedGroup.MapOrganisationDetailsEndpoints();
-
-//versionedGroup.MapTestStatusEndpoints();
-
 //versionedGroup.MapTestCertificateUpdateEndpoints();
 
 //versionedGroup.MapTestCertificateRequestsEndpoints();
 
-//versionedGroup.MapTestRequestsVerificationEndpoints();
+//versionedGroup.MapCatalogueEndpoints();
+
+//versionedGroup.MapOrganisationDetailsEndpoints();
+
+//versionedGroup.MapTestStatusEndpoints();
+
+versionedGroup.MapTestRequestsVerificationEndpoints();
 
 //versionedGroup.MapLotInvoicesEndpoints();
 
