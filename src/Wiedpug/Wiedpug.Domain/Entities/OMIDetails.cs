@@ -16,8 +16,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]

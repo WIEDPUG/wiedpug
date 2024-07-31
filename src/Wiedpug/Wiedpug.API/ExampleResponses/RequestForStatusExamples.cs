@@ -40,7 +40,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "2023-10-31",
-                        UseNetworkDateTime = false,
+                        IsUsingNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         Season = 23
                     }
@@ -55,7 +55,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult<StatusReply>()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new StatusReply
                 {

@@ -10,57 +10,52 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag1 { get; set; }
+        public required DebitCreditFlag DebitOrCreditFlagCurrent { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double ClosingBalanceCurrent { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag2 { get; set; }
-
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double ClosingBalance30 { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency ClosingBalanceCurrent { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag3 { get; set; }
+        public required DebitCreditFlag DebitOrCreditFlag30 { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double ClosingBalance60 { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag4 { get; set; }
-
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double ClosingBalance90 { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency ClosingBalance30 { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag5 { get; set; }
+        public required DebitCreditFlag DebitOrCreditFlag60 { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency ClosingBalance60 { get; set; }
+
+        [Required]
         [MinLength(1)]
-        [MaxLength(9)]
-        public required double ClosingBalance90Plus { get; set; }
+        [MaxLength(1)]
+        public required DebitCreditFlag DebitOrCreditFlag90 { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency ClosingBalance90 { get; set; }
+
+        [Required]
+        [MinLength(1)]
+        [MaxLength(1)]
+        public required DebitCreditFlag DebitOrCreditFlag90Plus { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency ClosingBalance90Plus { get; set; }
     }
 
 }

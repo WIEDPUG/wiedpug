@@ -78,10 +78,9 @@
       <Property Name="SaleIdentity" Hidden="true" />
       <Property Name="SampleWeightRemoved" Hidden="true" />
       <Property Name="Season" Hidden="true" />
-      <Property Name="TEAM3HauteurPrint" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAEQAAAQACAAAAEAAJAAgAAgEACAIYBACEAAAIAAg=</HashCode>
+      <HashCode>AAAAEQAAAQCCAAAAEAAJAAgAAAEACAIYBACEAAAIAAg=</HashCode>
       <FileName>Entities\CertificateRequest.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -90,10 +89,6 @@
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.CertificateRequestDetail" Collapsed="true">
     <Position X="8" Y="5" Width="2" />
-    <Members>
-      <Property Name="CertificateIdentity" Hidden="true" />
-      <Property Name="Woolbase" Hidden="true" />
-    </Members>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
       <FileName>ValueObject\CertificateRequestDetail.cs</FileName>

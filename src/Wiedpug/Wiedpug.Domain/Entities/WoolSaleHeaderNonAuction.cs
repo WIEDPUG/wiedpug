@@ -47,10 +47,13 @@ namespace Wiedpug.Domain.Entities
         public string? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
 
         /// <summary>
-        /// `true` = Available to Buyers, `false` = Not available to buyers.
+        /// A boolean value to indicates whether to display reserve price to buyers.
+        /// true: display.
+        /// false: not display.
         /// </summary>
-        [StringLength (5)]
-        public bool? ReservePriceDisplayFlag { get; set; } // FIELD NUMBER 11 - Reserve Price Display Flag - Start: 37, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
+        [MinLength(4)]
+        [MaxLength(5)]
+        public bool? IsReservePriceDisplayed { get; set; }// FIELD NUMBER 11 - Reserve Price Display Flag - Start: 37, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
         /// <summary>
         /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04.000Z

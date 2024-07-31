@@ -14,9 +14,7 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(6)]
-        public required int ClientCode { get; set; }
+        public required string ClientCode { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -27,56 +25,52 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag1 { get; set; }
+        public required DebitCreditFlag DebitOrCreditFlagCurrent { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [StringLength (9)]
-        public required double OpeningBalanceCurrent { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag2 { get; set; }
-
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double OpeningBalance30 { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency OpeningBalanceCurrent { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag3 { get; set; }
+        public required DebitCreditFlag DebitOrCreditFlag30 { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double OpeningBalance60 { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag4 { get; set; }
-
-        [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double OpeningBalance90 { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency OpeningBalance30 { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag5 { get; set; }
+        public required DebitCreditFlag DebitOrCreditFlag60 { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency OpeningBalance60 { get; set; }
+
+        [Required]
         [MinLength(1)]
-        [MaxLength(9)]
-        public required double OpeningBalance90Plus { get; set; }
+        [MaxLength(1)]
+        public required DebitCreditFlag DebitOrCreditFlag90 { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency OpeningBalance90 { get; set; }
+
+        [Required]
+        [MinLength(1)]
+        [MaxLength(1)]
+        public required DebitCreditFlag DebitOrCreditFlag90Plus { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency OpeningBalance90Plus { get; set; }
     }
 
 }

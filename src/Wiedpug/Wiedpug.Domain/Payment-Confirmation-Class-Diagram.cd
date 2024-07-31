@@ -2,19 +2,35 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.PaymentConfirmation" Collapsed="true">
     <Position X="1.5" Y="1.75" Width="2" />
+    <AssociationLine Name="Confirmations" Type="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.Confirmation" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.312" Y="2.312" />
+        <Point X="2.312" Y="2.687" />
+        <Point X="2.625" Y="2.687" />
+        <Point X="2.625" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TransferConfig" Type="Wiedpug.Domain.Entities.TransferConfig" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="2.312" />
+        <Point X="3.25" Y="2.781" />
+        <Point X="5.5" Y="2.781" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\PaymentConfirmationAggregate\PaymentConfirmation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Confirmations" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.Confirmation" Collapsed="true">
-    <Position X="2.5" Y="3.5" Width="2" />
+    <Position X="1.25" Y="3.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Aggregates\PaymentConfirmationAggregate\Confirmation.cs</FileName>
@@ -45,6 +61,13 @@
     <TypeIdentifier>
       <HashCode>AABAgAggAAAAAAAAAIAAAAAACAAABCAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PaymentHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

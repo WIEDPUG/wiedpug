@@ -120,7 +120,7 @@ namespace Wiedpug.API.ExampleResponses
                                      FileCreationDateTime = "2024-05-22T20:30:00Z",
                                      TotalLotsOffered = 2,
                                      PercentageSold = 100,
-                                     IsTransferCompleted = true
+                                     AreTransfersCompleted = true
                                  }
                             }
                         }
@@ -145,7 +145,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -159,7 +159,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new LotPriceAndBuyers
                 {
@@ -256,7 +256,7 @@ namespace Wiedpug.API.ExampleResponses
                                      FileCreationDateTime = "2024-05-22T20:30:00Z",
                                      TotalLotsOffered = 2,
                                      PercentageSold = 100,
-                                     IsTransferCompleted = true
+                                     AreTransfersCompleted = true
                                  }
                             }
                         }

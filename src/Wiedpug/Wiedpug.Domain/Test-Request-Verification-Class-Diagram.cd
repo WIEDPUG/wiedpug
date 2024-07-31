@@ -3,7 +3,7 @@
   <Class Name="Wiedpug.Domain.Aggregates.TestRequestsVerificationAggregate.TestRequestsVerification" Collapsed="true">
     <Position X="2.25" Y="1.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAAEA=</HashCode>
       <FileName>Aggregates\TestRequestsVerificationAggregate\TestRequestsVerification.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -85,7 +85,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.ContractLimitRequirements" Collapsed="true">
-    <Position X="14.25" Y="2.5" Width="1.5" />
+    <Position X="14.25" Y="2.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>BECBAAQIBAABAAAAAAVQQAEAAAAAAAgAAgEgFAEAACA=</HashCode>
       <FileName>Entities\ContractLimitRequirements.cs</FileName>
@@ -94,14 +94,14 @@
   <Class Name="Wiedpug.Domain.Entities.TestRequestVerificationDarkAndMedullatedFibreRiskDetails" Collapsed="true">
     <Position X="9" Y="5" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAoAQBACAgAAAACAAAAABwAsAABAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAQAAoAQBACAAAACAAEQAAABAAAAABABAAAAAAA=</HashCode>
       <FileName>Entities\TestRequestVerificationDarkAndMedullatedFibreRiskDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TestRequestVerification" Collapsed="true">
     <Position X="13.25" Y="4" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>EAABAAAAAAAAIwACQAAABIAAABQAAAAQAAQVIQAAAAA=</HashCode>
+      <HashCode>EAABAAAAAAAAIwACQABABIAAABQAAAAQAAQFIQAAAAA=</HashCode>
       <FileName>Entities\TestRequestVerification.cs</FileName>
     </TypeIdentifier>
   </Class>

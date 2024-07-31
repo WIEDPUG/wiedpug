@@ -130,33 +130,41 @@
                                                             "lotHeader": {
                                                                 "lotIdentity": "671",
                                                                 "bales": 8,
-                                                                "gross": 1316,
-                                                                "tare": 16,
+                                                                "gross": {
+                                                                    "value": 1316,
+                                                                    "unit": 0
+                                                                },
+                                                                "tare": {
+                                                                    "value": 16,
+                                                                    "unit": 0
+                                                                },
                                                                 "cataloguePageNumber": 65,
                                                                 "updateType": "A",
                                                                 "catalogueSymbols": "A",
                                                                 "packMaterial": "N",
                                                                 "lotType": 4,
-                                                                "lightestIndividualBaleWeight": 149,
+                                                                "lightestIndividualBaleWeight": {
+                                                                    "value": 149,
+                                                                    "unit": 0
+                                                                },
                                                                 "reportingFlag": "R",
                                                                 "costPerWeightUnit": {
                                                                     "value": 0,
                                                                     "currencyUnit": "AUD"
                                                                 },
-                                                                "cleanWeight": 0,
+                                                                "cleanWeight": {
+                                                                    "value": 0,
+                                                                    "unit": 0
+                                                                },
                                                                 "packCondition": "N",
                                                                 "coreTestSamplingDate": "2019-01-17",
                                                                 "woolDescription": "MF6S",
-                                                                "gstTaxInvoiceFlag": true,
+                                                                "isGstTaxInvoiceApplicable": true,
                                                                 "numberOfOverweightBales": 0
                                                             },
                                                             "encryptedLotHeaderAwexData": {
                                                                 "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
-                                                                "lotHeaderAwexData": {
-                                                                    "awexId": "MF6S",
-                                                                    "appraiserId": "99192",
-                                                                    "classersRegisteredNumber": "998921"
-                                                                }
+                                                                "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                                                             },
                                                             "lotHeaderVendorDeclarations": [
                                                                 {
@@ -175,7 +183,10 @@
                                                                     "currencyUnit": "AUD"
                                                                 },
                                                                 "laboratory": 1,
-                                                                "regrabSampleWeight": 0,
+                                                                "regrabSampleWeight": {
+                                                                    "value": 0,
+                                                                    "unit": 0
+                                                                },
                                                                 "stapleLength": 73,
                                                                 "stapleLengthCvPercentage": 16,
                                                                 "stapleStrength": 35,
@@ -364,33 +375,41 @@
                                                             "lotHeader": {
                                                                 "lotIdentity": "671",
                                                                 "bales": 8,
-                                                                "gross": 1316,
-                                                                "tare": 16,
+                                                                "gross": {
+                                                                    "value": 1316,
+                                                                    "unit": 0
+                                                                },
+                                                                "tare": {
+                                                                    "value": 16,
+                                                                    "unit": 0
+                                                                },
                                                                 "cataloguePageNumber": 65,
                                                                 "updateType": "A",
                                                                 "catalogueSymbols": "A",
                                                                 "packMaterial": "N",
                                                                 "lotType": 1,
-                                                                "lightestIndividualBaleWeight": 149,
+                                                                "lightestIndividualBaleWeight": {
+                                                                    "value": 149,
+                                                                    "unit": 0
+                                                                },
                                                                 "reportingFlag": "R",
                                                                 "costPerWeightUnit": {
                                                                     "value": 0,
                                                                     "currencyUnit": "AUD"
                                                                 },
-                                                                "cleanWeight": 0,
+                                                                "cleanWeight": {
+                                                                    "value": 0,
+                                                                    "unit": 0
+                                                                },
                                                                 "packCondition": "N",
                                                                 "coreTestSamplingDate": "2019-01-17",
                                                                 "woolDescription": "MF6S",
-                                                                "gstTaxInvoiceFlag": true,
+                                                                "isGstTaxInvoiceApplicable": true,
                                                                 "numberOfOverweightBales": 0
                                                             },
                                                             "encryptedLotHeaderAwexData": {
                                                                 "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
-                                                                "lotHeaderAwexData": {
-                                                                    "awexId": "MF6S",
-                                                                    "appraiserId": "99192",
-                                                                    "classersRegisteredNumber": "998921"
-                                                                }
+                                                                "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                                                             },
                                                             "lotHeaderVendorDeclarations": [
                                                                 {
@@ -409,7 +428,10 @@
                                                                     "currencyUnit": "AUD"
                                                                 },
                                                                 "laboratory": 1,
-                                                                "regrabSampleWeight": 0,
+                                                                "regrabSampleWeight": {
+                                                                    "value": 0,
+                                                                    "unit": 0
+                                                                },
                                                                 "stapleLength": 73,
                                                                 "stapleLengthCvPercentage": 16,
                                                                 "stapleStrength": 35,
@@ -505,9 +527,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -516,7 +536,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -543,7 +563,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -559,7 +579,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -575,7 +595,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -701,33 +721,41 @@
                                                     "lotHeader": {
                                                         "lotIdentity": "671",
                                                         "bales": 8,
-                                                        "gross": 1316,
-                                                        "tare": 16,
+                                                        "gross": {
+                                                            "value": 1316,
+                                                            "unit": 0
+                                                        },
+                                                        "tare": {
+                                                            "value": 16,
+                                                            "unit": 0
+                                                        },
                                                         "cataloguePageNumber": 65,
                                                         "updateType": "A",
                                                         "catalogueSymbols": "A",
                                                         "packMaterial": "N",
                                                         "lotType": 2,
-                                                        "lightestIndividualBaleWeight": 149,
+                                                        "lightestIndividualBaleWeight": {
+                                                            "value": 149,
+                                                            "unit": 0
+                                                        },
                                                         "reportingFlag": "R",
                                                         "costPerWeightUnit": {
                                                             "value": 0,
                                                             "currencyUnit": "AUD"
                                                         },
-                                                        "cleanWeight": 0,
+                                                        "cleanWeight": {
+                                                            "value": 0,
+                                                            "unit": 0
+                                                        },
                                                         "packCondition": "N",
                                                         "coreTestSamplingDate": "2019-01-17",
                                                         "woolDescription": "MF6S",
-                                                        "gstTaxInvoiceFlag": true,
+                                                        "isGstTaxInvoiceApplicable": true,
                                                         "numberOfOverweightBales": 0
                                                     },
                                                     "encryptedLotHeaderAwexData": {
                                                         "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
-                                                        "lotHeaderAwexData": {
-                                                            "awexId": "MF6S",
-                                                            "appraiserId": "99192",
-                                                            "classersRegisteredNumber": "998921"
-                                                        }
+                                                        "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                                                     },
                                                     "lotHeaderVendorDeclarations": [
                                                         {
@@ -746,7 +774,10 @@
                                                             "currencyUnit": "AUD"
                                                         },
                                                         "laboratory": 1,
-                                                        "regrabSampleWeight": 0,
+                                                        "regrabSampleWeight": {
+                                                            "value": 0,
+                                                            "unit": 0
+                                                        },
                                                         "stapleLength": 73,
                                                         "stapleLengthCvPercentage": 16,
                                                         "stapleStrength": 35,
@@ -840,9 +871,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -851,7 +880,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -878,7 +907,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -894,7 +923,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -910,7 +939,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -953,7 +982,7 @@
                                                 "organisationCode": "ANF"
                                             },
                                             "saleDateRequested": "2023-10-31",
-                                            "useNetworkDateTime": false,
+                                            "isUsingNetworkDateTime": false,
                                             "woolTypeGroup": "MFLC",
                                             "excludedClasses": [
                                                 {
@@ -975,7 +1004,7 @@
                                                 "organisationCode": "ANF"
                                             },
                                             "saleDateRequested": "2023-10-31",
-                                            "useNetworkDateTime": false,
+                                            "isUsingNetworkDateTime": false,
                                             "woolTypeGroup": "MFLC",
                                             "excludedClasses": [
                                                 {
@@ -1001,7 +1030,7 @@
                                                 "organisationCode": "ANF"
                                             },
                                             "saleDateRequested": "2023-10-31",
-                                            "useNetworkDateTime": false,
+                                            "isUsingNetworkDateTime": false,
                                             "woolTypeGroup": "MFLC",
                                             "excludedClasses": [
                                                 {
@@ -1029,7 +1058,6 @@
                                     "$ref": "#/components/schemas/CatalogueListApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
                                     "data": [
                                         {
                                             "transmissionHeader": {
@@ -1115,20 +1143,32 @@
                                                             "lotHeader": {
                                                                 "lotIdentity": "671",
                                                                 "bales": 8,
-                                                                "gross": 1316,
-                                                                "tare": 16,
+                                                                "gross": {
+                                                                    "value": 1316,
+                                                                    "unit": 0
+                                                                },
+                                                                "tare": {
+                                                                    "value": 16,
+                                                                    "unit": 0
+                                                                },
                                                                 "cataloguePageNumber": 65,
                                                                 "updateType": "A",
                                                                 "catalogueSymbols": "A",
                                                                 "packMaterial": "N",
                                                                 "lotType": 5,
-                                                                "lightestIndividualBaleWeight": 149,
+                                                                "lightestIndividualBaleWeight": {
+                                                                    "value": 149,
+                                                                    "unit": 0
+                                                                },
                                                                 "reportingFlag": "R",
                                                                 "costPerWeightUnit": {
                                                                     "value": 0,
                                                                     "currencyUnit": "AUD"
                                                                 },
-                                                                "cleanWeight": 0,
+                                                                "cleanWeight": {
+                                                                    "value": 0,
+                                                                    "unit": 0
+                                                                },
                                                                 "packCondition": "N",
                                                                 "coreTestSamplingDate": "2019-01-17",
                                                                 "woolDescription": "MF6S",
@@ -1136,11 +1176,7 @@
                                                             },
                                                             "encryptedLotHeaderAwexData": {
                                                                 "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
-                                                                "lotHeaderAwexData": {
-                                                                    "awexId": "MF6S",
-                                                                    "appraiserId": "99192",
-                                                                    "classersRegisteredNumber": "998921"
-                                                                }
+                                                                "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                                                             },
                                                             "lotHeaderVendorDeclarations": [
                                                                 {
@@ -1159,7 +1195,10 @@
                                                                     "currencyUnit": "AUD"
                                                                 },
                                                                 "laboratory": 1,
-                                                                "regrabSampleWeight": 0,
+                                                                "regrabSampleWeight": {
+                                                                    "value": 0,
+                                                                    "unit": 0
+                                                                },
                                                                 "stapleLength": 73,
                                                                 "stapleLengthCvPercentage": 16,
                                                                 "stapleStrength": 35,
@@ -1238,7 +1277,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -1265,7 +1304,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -1281,7 +1320,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -1297,7 +1336,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -1314,6 +1353,40 @@
     },
     "components": {
         "schemas": {
+            "ApiErrorResult": {
+                "required": [
+                    "status",
+                    "title"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "nullable": true
+                    },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+                        "format": "int32"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+                        "nullable": true
+                    },
+                    "errors": {
+                        "$ref": "#/components/schemas/CustomErrors"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+            },
             "ApiMessage": {
                 "type": "object",
                 "properties": {
@@ -1327,20 +1400,20 @@
                             "$ref": "#/components/schemas/WarningCode"
                         },
                         "nullable": true
+                    },
+                    "informationCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InformationCode"
+                        },
+                        "nullable": true
                     }
                 },
                 "additionalProperties": false
             },
             "ApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -1414,15 +1487,8 @@
                 "additionalProperties": false
             },
             "CatalogueListApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -1801,51 +1867,51 @@
             },
             "CentreCodeBelgium": {
                 "enum": [
-                    "ZB"
+                    "BR"
                 ],
                 "type": "string",
-                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium"
+                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium"
             },
             "CentreCodeChina": {
                 "enum": [
-                    "ZM",
-                    "ZP",
-                    "ZQ",
-                    "ZR"
-                ],
-                "type": "string",
-                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China"
-            },
-            "CentreCodeFrance": {
-                "enum": [
-                    "ZF"
-                ],
-                "type": "string",
-                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France"
-            },
-            "CentreCodeGermany": {
-                "enum": [
-                    "ZG",
+                    "NA",
+                    "SH",
+                    "QI",
                     "ZH"
                 ],
                 "type": "string",
-                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany"
+                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China"
+            },
+            "CentreCodeFrance": {
+                "enum": [
+                    "PA"
+                ],
+                "type": "string",
+                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France"
+            },
+            "CentreCodeGermany": {
+                "enum": [
+                    "BE",
+                    "BL"
+                ],
+                "type": "string",
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany"
             },
             "CentreCodeItaly": {
                 "enum": [
-                    "ZI",
-                    "ZJ",
-                    "ZK"
+                    "RO",
+                    "BI",
+                    "GR"
                 ],
                 "type": "string",
                 "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
             },
             "CentreCodeNetherlands": {
                 "enum": [
-                    "ZN"
+                    "AM"
                 ],
                 "type": "string",
-                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands"
+                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands"
             },
             "CentreCodeNewZealand": {
                 "enum": [
@@ -1918,31 +1984,31 @@
             },
             "CentreCodeSouthAfrica": {
                 "enum": [
-                    "ZS"
+                    "CA"
                 ],
                 "type": "string",
-                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa"
+                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa"
             },
             "CentreCodeTaiwan": {
                 "enum": [
-                    "ZO"
+                    "KE"
                 ],
                 "type": "string",
-                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan"
+                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
             },
             "CentreCodeUnitedKingdomOfGreatBritain": {
                 "enum": [
-                    "ZE"
+                    "LO"
                 ],
                 "type": "string",
-                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain"
+                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain"
             },
             "CentreCodeUnitedStatesOfAmerica": {
                 "enum": [
-                    "ZU"
+                    "WA"
                 ],
                 "type": "string",
-                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA"
+                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA"
             },
             "CertificateIDPrefix": {
                 "enum": [
@@ -2033,10 +2099,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "colourX": {
                         "pattern": "^-?\\d{1,2}\\.\\d{1}$",
@@ -2147,9 +2210,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "colourX": {
                         "pattern": "^-?\\d{1,2}\\.\\d{1}$",
@@ -2348,10 +2409,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -2519,40 +2577,6 @@
                 },
                 "additionalProperties": false
             },
-            "CustomProblemDetails": {
-                "required": [
-                    "status",
-                    "title"
-                ],
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
-                        "nullable": true
-                    },
-                    "title": {
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-                    },
-                    "status": {
-                        "type": "integer",
-                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
-                        "format": "int32"
-                    },
-                    "detail": {
-                        "type": "string",
-                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
-                        "nullable": true
-                    },
-                    "errors": {
-                        "$ref": "#/components/schemas/CustomErrors"
-                    }
-                },
-                "additionalProperties": false,
-                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
-            },
             "DarkAndMedullatedFibreRisk": {
                 "enum": [
                     "E",
@@ -2578,8 +2602,8 @@
             },
             "EncryptedLotHeaderAwexData": {
                 "required": [
-                    "encryptionKeyIdentifier",
-                    "lotHeaderAwexData"
+                    "encryptedLotHeaderAwexDataString",
+                    "encryptionKeyIdentifier"
                 ],
                 "type": "object",
                 "properties": {
@@ -2588,8 +2612,10 @@
                         "minLength": 1,
                         "type": "string"
                     },
-                    "lotHeaderAwexData": {
-                        "$ref": "#/components/schemas/LotHeaderAwexData"
+                    "encryptedLotHeaderAwexDataString": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "The encrypted LotHeaderAwexData in string format based on base64 encoding."
                     }
                 },
                 "additionalProperties": false
@@ -2781,6 +2807,13 @@
                 },
                 "additionalProperties": false
             },
+            "InformationCode": {
+                "enum": [
+                    "OK"
+                ],
+                "type": "string",
+                "description": "A code to indicate the information.<br />OK: All data received OK. "
+            },
             "Instrument": {
                 "enum": [
                     1,
@@ -2872,11 +2905,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "stapleLength": {
                         "pattern": "^-?\\d{1,3}\\.\\d{2}$",
@@ -2950,9 +2979,9 @@
                     },
                     "isLsSampleSecured": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Specifies whether the L/S sample is secured or not. <br />\r\n`true` for a secured L/S sample <br />\r\n`false` for a unsecured L/S sample <br />"
+                        "description": "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
                     },
                     "expectedBarbe": {
                         "pattern": "^-?\\d{1,3}\\.\\d{2}$",
@@ -3020,10 +3049,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "stapleLength": {
                         "pattern": "^-?\\d{1,3}\\.\\d{2}$",
@@ -3073,9 +3099,9 @@
                     },
                     "isLsSampleSecured": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Specifies whether the L/S sample is secured or not. <br />\r\ntrue: for a secured L/S sample <br />\r\nflase: for a unsecured L/S sample <br />"
+                        "description": "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
                     },
                     "expectedBarbe": {
                         "pattern": "^-?\\d{1,3}\\.\\d{2}$",
@@ -3142,20 +3168,13 @@
                         "format": "int32"
                     },
                     "gross": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "tare": {
-                        "pattern": "-?\\d{1,4}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "cataloguePageNumber": {
                         "pattern": "-?\\d{1,3}",
@@ -3165,9 +3184,9 @@
                     },
                     "isNoLot": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "A flag used to indicate whether or not the lot is included for sale in the auction.\r\nIt is used in New Zealand only.\r\n`true` = Normal Lot, `false` = No Lot",
+                        "description": "A boolean value to indicate whether the lot is included for sale in the auction.\r\nIt is used in New Zealand only.\r\ntrue: normal Lot\r\nfalse: not a normal Lot",
                         "nullable": true
                     },
                     "sourceCode": {
@@ -3189,11 +3208,7 @@
                         "$ref": "#/components/schemas/LotType"
                     },
                     "lightestIndividualBaleWeight": {
-                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "This is the Reweigh Gross Kg of the lightest bale in the lot.",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "reportingFlag": {
                         "$ref": "#/components/schemas/ReportingFlag"
@@ -3218,10 +3233,7 @@
                         "$ref": "#/components/schemas/PriceCurrency"
                     },
                     "cleanWeight": {
-                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "yieldType": {
                         "$ref": "#/components/schemas/YieldType"
@@ -3263,11 +3275,11 @@
                         "type": "string",
                         "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\nAlternative valid appraisal descriptions include AWC type, Exporter type. \r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\nThis field is to be always transmitted in upper case."
                     },
-                    "gstTaxInvoiceFlag": {
+                    "isGstTaxInvoiceApplicable": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "`true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.",
+                        "description": "A boolean value to indicate whether the GST amount is applicable to invoice. \r\ntrue: applicable.\r\nfalse: not applicable.",
                         "nullable": true
                     },
                     "brokerReservePrice": {
@@ -3294,47 +3306,6 @@
                         "type": "integer",
                         "description": "This is the total number of bales with a Reweigh Gross Kg over 204kg.",
                         "format": "int32",
-                        "nullable": true
-                    }
-                },
-                "additionalProperties": false
-            },
-            "LotHeaderAwexData": {
-                "type": "object",
-                "properties": {
-                    "awexId": {
-                        "maxLength": 20,
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "AWEX-ID must conform to the current AWEX-ID code standard.",
-                        "nullable": true
-                    },
-                    "appraiserId": {
-                        "maxLength": 6,
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "Contains the AWEX accredited appraiser ID for this lot.",
-                        "nullable": true
-                    },
-                    "classersRegisteredNumber": {
-                        "maxLength": 6,
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "The AWEX stencil number of the classer or classing house responsible for the final classification of the wool before sale.",
-                        "nullable": true
-                    },
-                    "awexIdComment": {
-                        "maxLength": 14,
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "This field provides for additional comments relating to the information contained in the `awexId` field.",
-                        "nullable": true
-                    },
-                    "awexIdAuditCode": {
-                        "maxLength": 10,
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "Audit code used for verifying if `awexId` was issued by AWEX",
                         "nullable": true
                     }
                 },
@@ -3459,10 +3430,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -3570,10 +3538,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -3747,10 +3712,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -3860,7 +3822,7 @@
                     "value": {
                         "pattern": "-?\\d{1,6}",
                         "type": "integer",
-                        "description": "Total up to 12 digits with 2 digits after the decimal point.",
+                        "description": "Total up to 12 digits with 2 digits after the decimal point of per unit cost. It is in cent.",
                         "format": "int32"
                     },
                     "currencyUnit": {
@@ -3977,11 +3939,11 @@
                         "format": "date-time",
                         "nullable": true
                     },
-                    "useNetworkDateTime": {
+                    "isUsingNetworkDateTime": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean value to indicate wethear to use Network Datetime\r\nTrue for use Network Datetime, False for not use",
+                        "description": "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use.",
                         "nullable": true
                     },
                     "woolTypeGroup": {
@@ -4187,11 +4149,7 @@
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -4300,7 +4258,8 @@
                         "nullable": true
                     }
                 },
-                "additionalProperties": false
+                "additionalProperties": false,
+                "description": "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
             },
             "TransferType": {
                 "enum": [
@@ -4390,13 +4349,32 @@
                 "type": "string",
                 "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
             },
+            "Weight": {
+                "required": [
+                    "unit",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "unit": {
+                        "$ref": "#/components/schemas/WeightUnit"
+                    }
+                },
+                "additionalProperties": false
+            },
             "WeightUnit": {
                 "enum": [
                     0,
-                    1
+                    1,
+                    2
                 ],
                 "type": "integer",
-                "description": "0: Kilograms<br />1: Pounds",
+                "description": "0: Kilograms<br />1: Pounds<br />2: Grams",
                 "format": "int32"
             },
             "WoolSaleHeaderLots": {
@@ -4476,9 +4454,9 @@
                     },
                     "isFinalCatalogue": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Indicates whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section. \r\n`true` = Final Catalogue. `false` = Not Final Catalogue"
+                        "description": "A boolean value to indicate whethear the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.\r\ntrue: is a final catalogue\r\nfalse: is not a final catalogue"
                     },
                     "releasingOrganisation": {
                         "$ref": "#/components/schemas/Organisation"
@@ -4512,7 +4490,6 @@
                         "nullable": true
                     },
                     "discountRate": {
-                        "maxLength": 10,
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
                         "type": "number",
                         "description": "The date on which payment is due. Also known as Prompt Date.\r\nDate value in ISO 8601 standard UTC format. e.g. 2024-03-21",
@@ -4589,11 +4566,11 @@
                         "type": "string",
                         "nullable": true
                     },
-                    "reservePriceDisplayFlag": {
+                    "isReservePriceDisplayed": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "`true` = Available to Buyers, `false` = Not available to buyers.",
+                        "description": "A boolean value to indicates whether to display reserve price to buyers.\r\ntrue: display.\r\nfalse: not display.",
                         "nullable": true
                     },
                     "tenderSaleReplyDateTime": {

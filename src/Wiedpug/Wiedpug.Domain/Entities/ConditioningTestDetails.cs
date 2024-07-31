@@ -12,16 +12,18 @@ namespace Wiedpug.Domain.Entities
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double Charge { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Charge { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
         public required string Laboratory { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -33,15 +35,24 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_6_1)]
-        public double? MassOfGlobalSample { get; set; }
+        /// <summary>
+        /// Unit in Grams.
+        /// </summary>
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? MassOfGlobalSample { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public double? SumOfODMasses { get; set; }
+        /// <summary>
+        /// Unit in Grams.
+        /// </summary>
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? SumOfODMasses { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required int GainLossOfInvoiceMass { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight GainLossOfInvoiceMass { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
@@ -51,17 +62,25 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double Regain { get; set; }
 
+        /// <summary>
+        /// Unit in KG.
+        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required int NetWeightODOfConsignment { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight NetWeightODOfConsignment { get; set; }
 
         [Required]
         [StringLength (2)]
         public required YieldType YieldType { get; set; }
 
+        /// <summary>
+        /// Unit in KG.
+        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required int OfficialRegain { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight OfficialRegain { get; set; }
 
         [Required]
         [StringLength (1)]

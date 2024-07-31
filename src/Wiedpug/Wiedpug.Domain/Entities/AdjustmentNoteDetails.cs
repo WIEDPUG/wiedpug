@@ -24,17 +24,24 @@ namespace Wiedpug.Domain.Entities
         public required string DateOfCreditNote { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double CreditNoteAmount { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency CreditNoteAmount { get; set; }
 
+        /// <summary>
+        /// A boolean value to indicate whether the GST is aplicable. 
+        /// true: applicable.
+        /// false: not applicable.
+        /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsGSTApplicable { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double GSTAmount { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency GSTAmount { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]

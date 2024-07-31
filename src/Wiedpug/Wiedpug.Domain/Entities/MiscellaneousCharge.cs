@@ -34,8 +34,9 @@ namespace Wiedpug.Domain.Entities
         /// Required decimal field for charge amount with two digits precision.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_12_2)]
-        public required double ChargeAmount { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency ChargeAmount { get; set; }
 
         /// <summary>
         /// Required enum type for indicating debit or credit.

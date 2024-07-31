@@ -60,8 +60,14 @@
                                                 "suffix": "1234567"
                                             },
                                             "bales": 1,
-                                            "gross": 1,
-                                            "tare": 1,
+                                            "gross": {
+                                                "value": 1,
+                                                "unit": 0
+                                            },
+                                            "tare": {
+                                                "value": 1,
+                                                "unit": 0
+                                            },
                                             "weightUnit": 0,
                                             "lotType": 3,
                                             "centreAuction": {
@@ -75,11 +81,14 @@
                                             "laboratory": 1,
                                             "growerCode": "G123",
                                             "growerName": "John Doe",
-                                            "coreSampleWeight": 20,
+                                            "coreSampleWeight": {
+                                                "value": 100,
+                                                "unit": 0
+                                            },
                                             "coreTestSamplingDate": "2024-04-15",
                                             "coresPerBale": 5,
                                             "grabsPerBale": 10,
-                                            "updatePreviousData": true,
+                                            "isPreviousDataToBeUpdated": true,
                                             "hashTotal": 123456,
                                             "isYieldAndMicronTestRequired": true,
                                             "isLengthAndStrengthTestRequired": false,
@@ -102,8 +111,14 @@
                                             "woolBaseMax": 65,
                                             "dichloromethaneDryBasisMin": 0.05,
                                             "dichloromethaneDryBasisMax": 0.15,
-                                            "conditioningMassMin": 500,
-                                            "conditioningMassMax": 1500,
+                                            "conditioningMassMin": {
+                                                "value": 500,
+                                                "unit": 0
+                                            },
+                                            "conditioningMassMax": {
+                                                "value": 1500,
+                                                "unit": 0
+                                            },
                                             "lacBarbeMin": 10,
                                             "lacBarbeMax": 30,
                                             "lacHauteurMin": 15,
@@ -119,7 +134,7 @@
                                             "declaredBreed": "A",
                                             "declaredWoolSubCategory": "N",
                                             "declaredWoolCategory": "P",
-                                            "isContactWithExoticBreeds": true,
+                                            "isContactingWithExoticBreeds": true,
                                             "isCrutched": false,
                                             "isCrutchedWithin3MonthsOfShearing": true,
                                             "sex": "R",
@@ -138,8 +153,14 @@
                                                 "suffix": "1234567"
                                             },
                                             "bales": 1,
-                                            "gross": 1,
-                                            "tare": 1,
+                                            "gross": {
+                                                "value": 1,
+                                                "unit": 0
+                                            },
+                                            "tare": {
+                                                "value": 1,
+                                                "unit": 0
+                                            },
                                             "weightUnit": 0,
                                             "lotType": 3,
                                             "centreAuction": {
@@ -153,11 +174,14 @@
                                             "laboratory": 1,
                                             "growerCode": "G4643",
                                             "growerName": "Alice Stonewood",
-                                            "coreSampleWeight": 164,
+                                            "coreSampleWeight": {
+                                                "value": 100,
+                                                "unit": 0
+                                            },
                                             "coreTestSamplingDate": "2024-04-25",
                                             "coresPerBale": 4,
                                             "grabsPerBale": 20,
-                                            "updatePreviousData": true,
+                                            "isPreviousDataToBeUpdated": true,
                                             "hashTotal": 125534,
                                             "isYieldAndMicronTestRequired": true,
                                             "isLengthAndStrengthTestRequired": false,
@@ -180,8 +204,14 @@
                                             "woolBaseMax": 55,
                                             "dichloromethaneDryBasisMin": 0.06,
                                             "dichloromethaneDryBasisMax": 0.12,
-                                            "conditioningMassMin": 260,
-                                            "conditioningMassMax": 1200,
+                                            "conditioningMassMin": {
+                                                "value": 260,
+                                                "unit": 0
+                                            },
+                                            "conditioningMassMax": {
+                                                "value": 1200,
+                                                "unit": 0
+                                            },
                                             "lacBarbeMin": 17,
                                             "lacBarbeMax": 56,
                                             "lacHauteurMin": 12,
@@ -197,7 +227,7 @@
                                             "declaredBreed": "A",
                                             "declaredWoolSubCategory": "N",
                                             "declaredWoolCategory": "B",
-                                            "isContactWithExoticBreeds": false,
+                                            "isContactingWithExoticBreeds": false,
                                             "isCrutched": false,
                                             "isCrutchedWithin3MonthsOfShearing": true,
                                             "sex": "E",
@@ -219,9 +249,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -230,7 +258,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -257,7 +285,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -273,7 +301,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -289,7 +317,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -325,7 +353,7 @@
                                     "organisationCode": "ANF"
                                 },
                                 "saleDateRequested": "2023-10-31",
-                                "useNetworkDateTime": false,
+                                "isUsingNetworkDateTime": false,
                                 "requestType": 4,
                                 "woolTypeGroup": "MFLC",
                                 "season": 23
@@ -343,7 +371,6 @@
                                     "$ref": "#/components/schemas/TestRequestsVerificationApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
                                     "data": {
                                         "transmissionHeader": {
                                             "dateFormatLastRevised": "2020-07-15",
@@ -375,8 +402,14 @@
                                                         "suffix": "1234567"
                                                     },
                                                     "bales": 1,
-                                                    "gross": 1,
-                                                    "tare": 1,
+                                                    "gross": {
+                                                        "value": 1,
+                                                        "unit": 0
+                                                    },
+                                                    "tare": {
+                                                        "value": 1,
+                                                        "unit": 0
+                                                    },
                                                     "weightUnit": 0,
                                                     "lotType": 3,
                                                     "centreAuction": {
@@ -390,11 +423,14 @@
                                                     "laboratory": 1,
                                                     "growerCode": "G123",
                                                     "growerName": "John Doe",
-                                                    "coreSampleWeight": 20,
+                                                    "coreSampleWeight": {
+                                                        "value": 20,
+                                                        "unit": 0
+                                                    },
                                                     "coreTestSamplingDate": "2024-04-15",
                                                     "coresPerBale": 5,
                                                     "grabsPerBale": 10,
-                                                    "updatePreviousData": true,
+                                                    "isPreviousDataToBeUpdated": true,
                                                     "hashTotal": 123456,
                                                     "isYieldAndMicronTestRequired": true,
                                                     "isLengthAndStrengthTestRequired": false,
@@ -417,8 +453,14 @@
                                                     "woolBaseMax": 65,
                                                     "dichloromethaneDryBasisMin": 0.05,
                                                     "dichloromethaneDryBasisMax": 0.15,
-                                                    "conditioningMassMin": 500,
-                                                    "conditioningMassMax": 1500,
+                                                    "conditioningMassMin": {
+                                                        "value": 500,
+                                                        "unit": 0
+                                                    },
+                                                    "conditioningMassMax": {
+                                                        "value": 1500,
+                                                        "unit": 0
+                                                    },
                                                     "lacBarbeMin": 10,
                                                     "lacBarbeMax": 30,
                                                     "lacHauteurMin": 15,
@@ -434,7 +476,7 @@
                                                     "declaredBreed": "A",
                                                     "declaredWoolSubCategory": "N",
                                                     "declaredWoolCategory": "P",
-                                                    "isContactWithExoticBreeds": true,
+                                                    "isContactingWithExoticBreeds": true,
                                                     "isCrutched": false,
                                                     "isCrutchedWithin3MonthsOfShearing": true,
                                                     "sex": "R",
@@ -453,8 +495,14 @@
                                                         "suffix": "1234567"
                                                     },
                                                     "bales": 1,
-                                                    "gross": 1,
-                                                    "tare": 1,
+                                                    "gross": {
+                                                        "value": 1,
+                                                        "unit": 0
+                                                    },
+                                                    "tare": {
+                                                        "value": 1,
+                                                        "unit": 0
+                                                    },
                                                     "weightUnit": 0,
                                                     "lotType": 3,
                                                     "centreAuction": {
@@ -468,11 +516,14 @@
                                                     "laboratory": 1,
                                                     "growerCode": "G4643",
                                                     "growerName": "Alice Stonewood",
-                                                    "coreSampleWeight": 164,
+                                                    "coreSampleWeight": {
+                                                        "value": 164,
+                                                        "unit": 0
+                                                    },
                                                     "coreTestSamplingDate": "2024-04-25",
                                                     "coresPerBale": 4,
                                                     "grabsPerBale": 20,
-                                                    "updatePreviousData": true,
+                                                    "isPreviousDataToBeUpdated": true,
                                                     "hashTotal": 125534,
                                                     "isYieldAndMicronTestRequired": true,
                                                     "isLengthAndStrengthTestRequired": false,
@@ -495,8 +546,14 @@
                                                     "woolBaseMax": 55,
                                                     "dichloromethaneDryBasisMin": 0.06,
                                                     "dichloromethaneDryBasisMax": 0.12,
-                                                    "conditioningMassMin": 260,
-                                                    "conditioningMassMax": 1200,
+                                                    "conditioningMassMin": {
+                                                        "value": 126,
+                                                        "unit": 0
+                                                    },
+                                                    "conditioningMassMax": {
+                                                        "value": 1200,
+                                                        "unit": 0
+                                                    },
                                                     "lacBarbeMin": 17,
                                                     "lacBarbeMax": 56,
                                                     "lacHauteurMin": 12,
@@ -512,7 +569,7 @@
                                                     "declaredBreed": "A",
                                                     "declaredWoolSubCategory": "N",
                                                     "declaredWoolCategory": "B",
-                                                    "isContactWithExoticBreeds": false,
+                                                    "isContactingWithExoticBreeds": false,
                                                     "isCrutched": false,
                                                     "isCrutchedWithin3MonthsOfShearing": true,
                                                     "sex": "E",
@@ -531,7 +588,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -558,7 +615,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -574,7 +631,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -590,7 +647,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -605,7 +662,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -622,6 +679,40 @@
     },
     "components": {
         "schemas": {
+            "ApiErrorResult": {
+                "required": [
+                    "status",
+                    "title"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "nullable": true
+                    },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+                        "format": "int32"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+                        "nullable": true
+                    },
+                    "errors": {
+                        "$ref": "#/components/schemas/CustomErrors"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+            },
             "ApiMessage": {
                 "type": "object",
                 "properties": {
@@ -635,20 +726,20 @@
                             "$ref": "#/components/schemas/WarningCode"
                         },
                         "nullable": true
+                    },
+                    "informationCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InformationCode"
+                        },
+                        "nullable": true
                     }
                 },
                 "additionalProperties": false
             },
             "ApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -726,16 +817,10 @@
                         "nullable": true
                     },
                     "gross": {
-                        "pattern": "-?\\d{1,4}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "tare": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "baleIdentifications": {
                         "type": "array",
@@ -978,51 +1063,51 @@
             },
             "CentreCodeBelgium": {
                 "enum": [
-                    "ZB"
+                    "BR"
                 ],
                 "type": "string",
-                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium"
+                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium"
             },
             "CentreCodeChina": {
                 "enum": [
-                    "ZM",
-                    "ZP",
-                    "ZQ",
-                    "ZR"
-                ],
-                "type": "string",
-                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China"
-            },
-            "CentreCodeFrance": {
-                "enum": [
-                    "ZF"
-                ],
-                "type": "string",
-                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France"
-            },
-            "CentreCodeGermany": {
-                "enum": [
-                    "ZG",
+                    "NA",
+                    "SH",
+                    "QI",
                     "ZH"
                 ],
                 "type": "string",
-                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany"
+                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China"
+            },
+            "CentreCodeFrance": {
+                "enum": [
+                    "PA"
+                ],
+                "type": "string",
+                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France"
+            },
+            "CentreCodeGermany": {
+                "enum": [
+                    "BE",
+                    "BL"
+                ],
+                "type": "string",
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany"
             },
             "CentreCodeItaly": {
                 "enum": [
-                    "ZI",
-                    "ZJ",
-                    "ZK"
+                    "RO",
+                    "BI",
+                    "GR"
                 ],
                 "type": "string",
                 "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
             },
             "CentreCodeNetherlands": {
                 "enum": [
-                    "ZN"
+                    "AM"
                 ],
                 "type": "string",
-                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands"
+                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands"
             },
             "CentreCodeNewZealand": {
                 "enum": [
@@ -1095,31 +1180,31 @@
             },
             "CentreCodeSouthAfrica": {
                 "enum": [
-                    "ZS"
+                    "CA"
                 ],
                 "type": "string",
-                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa"
+                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa"
             },
             "CentreCodeTaiwan": {
                 "enum": [
-                    "ZO"
+                    "KE"
                 ],
                 "type": "string",
-                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan"
+                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
             },
             "CentreCodeUnitedKingdomOfGreatBritain": {
                 "enum": [
-                    "ZE"
+                    "LO"
                 ],
                 "type": "string",
-                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain"
+                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain"
             },
             "CentreCodeUnitedStatesOfAmerica": {
                 "enum": [
-                    "ZU"
+                    "WA"
                 ],
                 "type": "string",
-                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA"
+                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA"
             },
             "ContractLimitRequirements": {
                 "type": "object",
@@ -1195,18 +1280,10 @@
                         "nullable": true
                     },
                     "conditioningMassMin": {
-                        "pattern": "-?\\d{1,5}",
-                        "type": "integer",
-                        "description": "Minimum conditioning mass, optional numeric field.",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "conditioningMassMax": {
-                        "pattern": "-?\\d{1,5}",
-                        "type": "integer",
-                        "description": "Maximum conditioning mass, optional numeric field.",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "lacBarbeMin": {
                         "pattern": "-?\\d{1,3}",
@@ -1324,40 +1401,6 @@
                 },
                 "additionalProperties": false
             },
-            "CustomProblemDetails": {
-                "required": [
-                    "status",
-                    "title"
-                ],
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
-                        "nullable": true
-                    },
-                    "title": {
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-                    },
-                    "status": {
-                        "type": "integer",
-                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
-                        "format": "int32"
-                    },
-                    "detail": {
-                        "type": "string",
-                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
-                        "nullable": true
-                    },
-                    "errors": {
-                        "$ref": "#/components/schemas/CustomErrors"
-                    }
-                },
-                "additionalProperties": false,
-                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
-            },
             "DarkAndMedullatedFibreRiskBroker": {
                 "enum": [
                     1,
@@ -1458,6 +1501,13 @@
                 "type": "string",
                 "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
             },
+            "InformationCode": {
+                "enum": [
+                    "OK"
+                ],
+                "type": "string",
+                "description": "A code to indicate the information.<br />OK: All data received OK. "
+            },
             "Laboratory": {
                 "enum": [
                     1,
@@ -1553,11 +1603,11 @@
                         "format": "date-time",
                         "nullable": true
                     },
-                    "useNetworkDateTime": {
+                    "isUsingNetworkDateTime": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean value to indicate wethear to use Network Datetime\r\nTrue for use Network Datetime, False for not use",
+                        "description": "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use.",
                         "nullable": true
                     },
                     "requestType": {
@@ -1730,14 +1780,10 @@
                         "format": "int32"
                     },
                     "gross": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "tare": {
-                        "pattern": "-?\\d{1,4}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "weightUnit": {
                         "$ref": "#/components/schemas/WeightUnit"
@@ -1746,18 +1792,10 @@
                         "$ref": "#/components/schemas/MulesingStatus"
                     },
                     "declaredGross": {
-                        "maxLength": 6,
-                        "minLength": 1,
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "declaredTare": {
-                        "maxLength": 4,
-                        "minLength": 1,
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "lotType": {
                         "$ref": "#/components/schemas/LotType"
@@ -1770,9 +1808,9 @@
                     },
                     "isCompanyABNApplicable": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "A Flag to determine if Compnay ABN apply to invoice",
+                        "description": "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\ntrue: applicable.\r\nfalse: not applicable.",
                         "nullable": true
                     }
                 },
@@ -1781,8 +1819,8 @@
             "TestRequestVerification": {
                 "required": [
                     "hashTotal",
-                    "laboratory",
-                    "updatePreviousData"
+                    "isPreviousDataToBeUpdated",
+                    "laboratory"
                 ],
                 "type": "object",
                 "properties": {
@@ -1804,11 +1842,7 @@
                         "nullable": true
                     },
                     "coreSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "description": "Optional numeric field for core sample weight.",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "coreTestSamplingDate": {
                         "maxLength": 10,
@@ -1833,11 +1867,11 @@
                         "format": "int32",
                         "nullable": true
                     },
-                    "updatePreviousData": {
+                    "isPreviousDataToBeUpdated": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether data sent on a previous transmission is to be updated by data in the current transmission.\r\nTrue: Update previous data.\r\nFalse: Do not update previous data."
+                        "description": "A boolean value to indicate whether data sent on a previous transmission is to be updated by data in the current transmission.\r\ntrue: Update previous data.\r\nfalse: Do not update previous data."
                     },
                     "hashTotal": {
                         "pattern": "-?\\d{1,8}",
@@ -1847,65 +1881,65 @@
                     },
                     "isYieldAndMicronTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Yield and Airflow Test is required until 30/06/2000.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Yield and Airflow Test is required until 30/06/2000.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isLengthAndStrengthTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Length And Strength Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Length And Strength Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isLengthOnlyTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Length Only Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Length Only Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isColourTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Colour Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Colour Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isLaserscanTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Laserscan Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Laserscan Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isAirflowTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Airflow Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Airflow Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isOFDATestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether OFDA Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether OFDA Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isDarkAndMedullatedFibreTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Dark And Medullated Fibre Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Dark And Medullated Fibre Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     },
                     "isPesticideResidueTestRequired": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "This field indicates whether Pesticide Residue Test is required.\r\nTrue: required.\r\nFalse: not required.",
+                        "description": "A boolean value to indicates whether Pesticide Residue Test is required.\r\ntrue: required.\r\nfalse: not required.",
                         "nullable": true
                     }
                 },
@@ -1917,7 +1951,7 @@
                     "declaredBreed",
                     "declaredWoolCategory",
                     "declaredWoolSubCategory",
-                    "isContactWithExoticBreeds",
+                    "isContactingWithExoticBreeds",
                     "isCrutched",
                     "sex"
                 ],
@@ -1942,23 +1976,23 @@
                     "declaredQualifierScale": {
                         "$ref": "#/components/schemas/DeclaredQualifierScale"
                     },
-                    "isContactWithExoticBreeds": {
+                    "isContactingWithExoticBreeds": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean type for contact with exotic breeds.\r\nTrue for contact with exotic breeds. False for not contact with exotic breeds."
+                        "description": "A boolean value to indicate whether it contact with exotic breeds. \r\ntrue: contact with exofic breeds.\r\nfalse: not contact with exofic breeds."
                     },
                     "isCrutched": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean type for crutched status. \r\nTrue for crutched, False for not crutched."
+                        "description": "A boolean value to indicate whether it is crutched. \r\ntrue: crutched.\r\nfalse: not crutched."
                     },
                     "isCrutchedWithin3MonthsOfShearing": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean type for crutching within 3 months of shearing.",
+                        "description": "A boolean value to indicate whether crutching within 3 months of shearing.\r\ntrue: crrutched.\r\nfalse: not crutched.",
                         "nullable": true
                     },
                     "sex": {
@@ -2006,15 +2040,8 @@
                 "additionalProperties": false
             },
             "TestRequestsVerificationApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -2071,7 +2098,8 @@
                         "nullable": true
                     }
                 },
-                "additionalProperties": false
+                "additionalProperties": false,
+                "description": "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
             },
             "TransferType": {
                 "enum": [
@@ -2152,6 +2180,24 @@
                 "type": "string",
                 "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
             },
+            "Weight": {
+                "required": [
+                    "unit",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "unit": {
+                        "$ref": "#/components/schemas/WeightUnit"
+                    }
+                },
+                "additionalProperties": false
+            },
             "WeightNote": {
                 "required": [
                     "prefix",
@@ -2176,10 +2222,11 @@
             "WeightUnit": {
                 "enum": [
                     0,
-                    1
+                    1,
+                    2
                 ],
                 "type": "integer",
-                "description": "0: Kilograms<br />1: Pounds",
+                "description": "0: Kilograms<br />1: Pounds<br />2: Grams",
                 "format": "int32"
             },
             "WoolTypeGroup": {

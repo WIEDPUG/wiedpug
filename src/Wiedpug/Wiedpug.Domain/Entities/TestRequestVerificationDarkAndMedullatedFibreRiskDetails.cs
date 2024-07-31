@@ -48,28 +48,31 @@ namespace Wiedpug.Domain.Entities
         public DeclaredQualifierScale? DeclaredQualifierScale { get; set; }
 
         /// <summary>
-        /// Boolean type for contact with exotic breeds.
-        /// True for contact with exotic breeds. False for not contact with exotic breeds.
+        /// A boolean value to indicate whether it contact with exotic breeds. 
+        /// true: contact with exofic breeds.
+        /// false: not contact with exofic breeds.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool IsContactWithExoticBreeds { get; set; }
+        public required bool IsContactingWithExoticBreeds { get; set; }
 
         /// <summary>
-        /// Boolean type for crutched status. 
-        /// True for crutched, False for not crutched.
+        /// A boolean value to indicate whether it is crutched. 
+        /// true: crutched.
+        /// false: not crutched.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsCrutched { get; set; }
 
         /// <summary>
-        /// Boolean type for crutching within 3 months of shearing.
+        /// A boolean value to indicate whether crutching within 3 months of shearing.
+        /// true: crrutched.
+        /// false: not crutched.
         /// </summary>
-        /// 
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public bool? IsCrutchedWithin3MonthsOfShearing { get; set; }
 

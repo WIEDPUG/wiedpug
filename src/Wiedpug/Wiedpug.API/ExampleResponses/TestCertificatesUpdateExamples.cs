@@ -106,7 +106,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -120,7 +120,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new TestCertificateUpdate()
                 {

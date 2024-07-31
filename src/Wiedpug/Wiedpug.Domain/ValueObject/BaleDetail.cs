@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 
@@ -47,11 +48,13 @@ namespace Wiedpug.Domain.ValueObject
         [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
         public int? UnitNumber { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public int? Gross { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? Gross { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? Tare { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? Tare { get; set; }
 
         public List<BaleIdentification>? BaleIdentifications { get; set; }
     }

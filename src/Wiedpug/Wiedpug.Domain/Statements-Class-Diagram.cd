@@ -3,18 +3,19 @@
   <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statements" Collapsed="true">
     <Position X="2" Y="2" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAACAAAAAAA=</HashCode>
       <FileName>Aggregates\StatementsAggregate\Statements.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="StatementCollection" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statement" Collapsed="true">
-    <Position X="6" Y="2" Width="2.75" />
+    <Position X="6.75" Y="2" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Aggregates\StatementsAggregate\Statement.cs</FileName>
@@ -37,7 +38,7 @@
   <Class Name="Wiedpug.Domain.Entities.StatementDetail" Collapsed="true">
     <Position X="10.5" Y="3" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>ACAAAAAQAAAACAAAIAAAAACAAIAAAAAIgAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQEABACAAAIAAAAACAAIAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Entities\StatmentDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -53,6 +54,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAhAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\StatmentTrailer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="2" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

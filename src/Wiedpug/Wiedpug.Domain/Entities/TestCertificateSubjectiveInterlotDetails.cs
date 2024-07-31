@@ -12,8 +12,9 @@ namespace Wiedpug.Domain.Entities
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double Charge { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Charge { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -24,8 +25,9 @@ namespace Wiedpug.Domain.Entities
         /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         /// <summary>
         /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample. 

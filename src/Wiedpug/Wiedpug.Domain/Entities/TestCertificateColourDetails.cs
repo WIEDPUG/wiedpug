@@ -15,16 +15,18 @@ namespace Wiedpug.Domain.Entities
         public required CertificateIdentity CertificateIdentity { get; set; } // FIELD NUMBER 3 - Certificate Identity - Start: 4, Size: 11, Data Type: GR, Justification: F, Requirement Designator: M
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public required double Charge { get; set; } // FIELD NUMBER 4 - Charge - Start: 15, Size: 6, Data Type: D2, Justification: R, Requirement Designator: N/A, Value: spaces
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Charge { get; set; } // FIELD NUMBER 4 - Charge - Start: 15, Size: 6, Data Type: D2, Justification: R, Requirement Designator: N/A, Value: spaces
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; } // FIELD NUMBER 5 - Laboratory - Start: 21, Size: 1, Data Type: ID, Justification: F, Requirement Designator: M
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 22, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 22, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]

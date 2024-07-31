@@ -30,10 +30,10 @@ public static class RequestPostsalePrintingOfPresaleCertificatesEndpoints
             Description = "Used to provide request postsale printing of presale certificates"
         })
         .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+        .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
+        .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
+        .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
         [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForRequestPostsalePrintingOfPresaleCertificatesExample))]
@@ -53,10 +53,10 @@ public static class RequestPostsalePrintingOfPresaleCertificatesEndpoints
             Summary = "Retrieves the request postsale printing of presale certificates"
         })
         .Produces<ApiResult<RequestPostsalePrintingOfPresaleCertificates>>(StatusCodes.Status200OK, contentType: "application/json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
-        .Produces<CustomProblemDetails>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+        .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
+        .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
+        .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        .Produces<ApiErrorResult>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
+        .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
     }
 }

@@ -9,7 +9,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = null
             };
@@ -22,18 +22,18 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = null
             };
         }
     }
 
-    public class CommonResponse400ArrayRequestPayloadExample : IExamplesProvider<CustomProblemDetails>
+    public class CommonResponse400ArrayRequestPayloadExample : IExamplesProvider<ApiErrorResult>
     {
-        public CustomProblemDetails GetExamples()
+        public ApiErrorResult GetExamples()
         {
-            return new CustomProblemDetails()
+            return new ApiErrorResult()
             {
                 Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
                 Title = "One or more validation errors occurred",
@@ -51,11 +51,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class CommonResponse400SingleObjectRequestPayloadExample : IExamplesProvider<CustomProblemDetails>
+    public class CommonResponse400SingleObjectRequestPayloadExample : IExamplesProvider<ApiErrorResult>
     {
-        public CustomProblemDetails GetExamples()
+        public ApiErrorResult GetExamples()
         {
-            return new CustomProblemDetails()
+            return new ApiErrorResult()
             {
                 Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
                 Title = "One or more validation errors occurred",
@@ -73,11 +73,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class CommonResponse401Example : IExamplesProvider<CustomProblemDetails>
+    public class CommonResponse401Example : IExamplesProvider<ApiErrorResult>
     {
-        public CustomProblemDetails GetExamples()
+        public ApiErrorResult GetExamples()
         {
-            return new CustomProblemDetails()
+            return new ApiErrorResult()
             {
                 Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
                 Title = "Unauthorized",
@@ -88,11 +88,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class CommonResponse403NoReadPermissionExample : IExamplesProvider<CustomProblemDetails>
+    public class CommonResponse403NoReadPermissionExample : IExamplesProvider<ApiErrorResult>
     {
-        public CustomProblemDetails GetExamples()
+        public ApiErrorResult GetExamples()
         {
-            return new CustomProblemDetails()
+            return new ApiErrorResult()
             {
                 Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                 Title = "You don't have permission to access this resource",
@@ -103,11 +103,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class CommonResponse403NoWritePermissionExample : IExamplesProvider<CustomProblemDetails>
+    public class CommonResponse403NoWritePermissionExample : IExamplesProvider<ApiErrorResult>
     {
-        public CustomProblemDetails GetExamples()
+        public ApiErrorResult GetExamples()
         {
-            return new CustomProblemDetails()
+            return new ApiErrorResult()
             {
                 Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                 Title = "You don't have permission to access this resource",
@@ -118,11 +118,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class CommonResponse404NotFoundExample : IExamplesProvider<CustomProblemDetails>
+    public class CommonResponse404NotFoundExample : IExamplesProvider<ApiErrorResult>
     {
-        public CustomProblemDetails GetExamples()
+        public ApiErrorResult GetExamples()
         {
-            return new CustomProblemDetails()
+            return new ApiErrorResult()
             {
                 Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
                 Title = "Resource not found",
@@ -133,11 +133,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class CommonResponse500Example : IExamplesProvider<CustomProblemDetails>
+    public class CommonResponse500Example : IExamplesProvider<ApiErrorResult>
     {
-        public CustomProblemDetails GetExamples()
+        public ApiErrorResult GetExamples()
         {
-            return new CustomProblemDetails()
+            return new ApiErrorResult()
             {
                 Type = "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
                 Title = "An error occurred while processing your required",

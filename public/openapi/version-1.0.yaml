@@ -431,7 +431,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -448,7 +448,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -460,7 +460,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -472,7 +472,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -693,7 +693,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -710,7 +710,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -722,7 +722,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -734,7 +734,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -1003,7 +1003,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -1020,7 +1020,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -1032,7 +1032,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -1044,7 +1044,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -1219,7 +1219,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -1236,7 +1236,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -1248,7 +1248,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -1260,7 +1260,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -1417,7 +1417,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -1434,7 +1434,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -1446,7 +1446,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -1458,7 +1458,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -1470,7 +1470,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -1614,7 +1614,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -1631,7 +1631,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -1643,7 +1643,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -1655,7 +1655,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
@@ -1667,7 +1667,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -1747,7 +1747,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -1759,7 +1759,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -1771,7 +1771,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
@@ -1783,7 +1783,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -1917,7 +1917,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -1934,7 +1934,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -1946,7 +1946,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -1958,7 +1958,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
@@ -1970,7 +1970,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -2004,7 +2004,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -2016,7 +2016,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -2028,7 +2028,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
@@ -2040,7 +2040,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -2108,7 +2108,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -2125,7 +2125,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -2137,7 +2137,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -2149,7 +2149,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -2233,7 +2233,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -2250,7 +2250,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -2262,7 +2262,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -2274,7 +2274,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -2390,7 +2390,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -2407,7 +2407,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -2419,7 +2419,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -2431,7 +2431,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -2527,7 +2527,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -2544,7 +2544,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -2556,7 +2556,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -2568,7 +2568,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -2841,7 +2841,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -2858,7 +2858,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -2870,7 +2870,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -2882,7 +2882,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -3165,7 +3165,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -3182,7 +3182,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -3194,7 +3194,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -3206,7 +3206,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
@@ -3218,7 +3218,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -3448,7 +3448,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -3465,7 +3465,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -3477,7 +3477,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -3489,7 +3489,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -3569,7 +3569,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -3586,7 +3586,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -3598,7 +3598,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -3610,7 +3610,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -5011,7 +5011,7 @@ components:
         - ZA
       type: string
       description: 'A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa'
-    CustomProblemDetails:
+    ApiErrorResult:
       required:
         - status
         - title

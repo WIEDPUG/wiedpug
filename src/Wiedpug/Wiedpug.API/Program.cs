@@ -74,7 +74,7 @@ var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(api
 
 //versionedGroup.MapTestStatusEndpoints();
 
-versionedGroup.MapTestRequestsVerificationEndpoints();
+//versionedGroup.MapTestRequestsVerificationEndpoints();
 
 //versionedGroup.MapLotInvoicesEndpoints();
 
@@ -92,7 +92,7 @@ versionedGroup.MapTestRequestsVerificationEndpoints();
 
 //versionedGroup.MapTextsEndpoints();
 
-//versionedGroup.MapLotPriceAndBuyersEndpoints();
+versionedGroup.MapLotPriceAndBuyersEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

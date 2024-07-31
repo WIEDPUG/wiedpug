@@ -56,21 +56,18 @@ namespace Wiedpug.Domain.Entities
         public required int Bales { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(6)]
-        public required int Gross { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Gross { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(4)]
-        public required int Tare { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Tare { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(2)]
-        public int? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]

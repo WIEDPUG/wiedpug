@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| delivery-order-shipping-instructions:write  | ✓                   | ✓                |
+| delivery-order-shipping-instructions:write  | ✓                   |                 |
 | delivery-order-shipping-instructions:read   | ✓                   | ✓                |
 | delivery-order-shipping-instructions:limited-write  |                    | ✓                |
 

@@ -56,31 +56,34 @@ namespace Wiedpug.Domain.Entities
         public CountermarkHeadmarkFlag? CountermarkHeadmarkFlag { get; set; }
 
         /// <summary>
-        /// Boolean value to indicate wethear to apply renumbers on bales
-        /// True for apply renumbers, False for not apply renumbers
+        /// A boolean value to indicate whether to apply renumbers on bales. 
+        /// true: apply renumbers.
+        /// false: not apply renumbers.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool ApplyRenumbers { get; set; }
+        public required bool AreRenumbersApplied { get; set; }
 
         /// <summary>
-        /// Boolean value to indicate wethear to apply renumbers on bales
-        /// True for apply renumbers, False for not apply renumbers
+        /// A boolean value to indicate whethear to apply Gross Weights on bales
+        /// true: apply
+        /// false: not apply
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool ApplyGrossWeights { get; set; }
+        public required bool AreGrossWeightsApplied { get; set; }
 
         /// <summary>
-        /// Boolean value to indicate wethear to apply renumbers on bales
-        /// True for apply renumbers, False for not apply renumbers
+        /// A boolean value to indicate whethear to apply Net Weights on bales
+        /// true: apply
+        /// false: not apply
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool ApplyNetWeights { get; set; }
+        public required bool AreNetWeightsApplied { get; set; }
 
         [MinLength(1)]
         [MaxLength(8)]

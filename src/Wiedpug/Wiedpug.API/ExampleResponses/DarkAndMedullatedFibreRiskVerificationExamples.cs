@@ -54,7 +54,7 @@ namespace Wiedpug.API.ExampleResponses
                             DeclaredQualifierCode.T,
                         },
                         DeclaredQualifierScale =DeclaredQualifierScale.LightOrOdd,
-                        IsContactWithExoticBreeds = true,
+                        IsContactingWithExoticBreeds = true,
                         IsCrutched = true,
                         IsCrutchedWithin3MonthsOfShearing = false,
                         Sex = Sex.E,
@@ -70,10 +70,13 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDCD = 7
                                             },
                         WoolBase = 32.14,
-                        DMFRErrorField1 = 12,
-                        DMFRErrorField2 = 18,
-                        DMFRErrorField3 = 9,
-                        DMFRErrorField4 = 2
+                        DMFRErrorFields = new List<string>
+                        {
+                            "12",
+                            "18",
+                            "9",
+                            "2"
+                        }
                     }
                     
 
@@ -94,7 +97,7 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                     SaleDateRequested = "2023-10-31",
-                    UseNetworkDateTime = false,
+                    IsUsingNetworkDateTime = false,
                     RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                     WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                     Season = 23
@@ -108,7 +111,7 @@ namespace Wiedpug.API.ExampleResponses
             {
                 return new ApiResult()
                 {
-                    IsSuccessful = true,
+                    
                     Message = null,
                     Data =  new DarkAndMedullatedFibreRiskVerification()
                     {
@@ -151,7 +154,7 @@ namespace Wiedpug.API.ExampleResponses
                             DeclaredQualifierCode.T,
                         },
                         DeclaredQualifierScale =DeclaredQualifierScale.LightOrOdd,
-                        IsContactWithExoticBreeds = true,
+                        IsContactingWithExoticBreeds = true,
                         IsCrutched = true,
                         IsCrutchedWithin3MonthsOfShearing = false,
                         Sex = Sex.E,
@@ -167,10 +170,13 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDCD = 7
                                             },
                         WoolBase = 32.14,
-                        DMFRErrorField1 = 12,
-                        DMFRErrorField2 = 18,
-                        DMFRErrorField3 = 9,
-                        DMFRErrorField4 = 2
+                        DMFRErrorFields = new List<string>
+                        {
+                            "12",
+                            "18",
+                            "9",
+                            "2"
+                        }
                     }
 
 

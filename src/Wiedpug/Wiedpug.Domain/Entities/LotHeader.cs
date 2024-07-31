@@ -23,27 +23,31 @@ namespace Wiedpug.Domain.Entities
         public required int Bales { get; set; } // FIELD NUMBER 3 - Bales - Start: 9, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required int Gross { get; set; } // FIELD NUMBER 4 - Gross - Start: 13, Size: 6, Data Type: N, Justification: R, Requirement Designator: M
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Gross { get; set; } // FIELD NUMBER 4 - Gross - Start: 13, Size: 6, Data Type: N, Justification: R, Requirement Designator: M
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int Tare { get; set; } // FIELD NUMBER 5 - Tare - Start: 19, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Tare { get; set; } // FIELD NUMBER 5 - Tare - Start: 19, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 23, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 23, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? CataloguePageNumber { get; set; } // FIELD NUMBER 7 - Catalogue Page Number - Start: 25, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
 
         /// <summary>
-        /// A flag used to indicate whether or not the lot is included for sale in the auction.
+        /// A boolean value to indicate whether the lot is included for sale in the auction.
         /// It is used in New Zealand only.
-        /// `true` = Normal Lot, `false` = No Lot
+        /// true: normal Lot
+        /// false: not a normal Lot
         /// </summary>
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public bool? IsNoLot { get; set; } // FIELD NUMBER 8 - No Lot Flag - Start: 28, Size: 1, Data Type: ID, Justification: F, Requirement Designator: C
+        public bool? IsNoLot { get; set; }
 
         [MinLength(1)]
         [MaxLength(1)]
@@ -82,8 +86,9 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// This is the Reweigh Gross Kg of the lightest bale in the lot.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? LightestIndividualBaleWeight { get; set; } // FIELD NUMBER 14 - Lightest Individual Bale Weight - Start: 40, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? LightestIndividualBaleWeight { get; set; } // FIELD NUMBER 14 - Lightest Individual Bale Weight - Start: 40, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
 
         [MinLength(1)]
         [MaxLength(4)]
@@ -108,8 +113,9 @@ namespace Wiedpug.Domain.Entities
 
         public PriceCurrency? CostPerWeightUnit { get; set; } // FIELD NUMBER 19 - Cost per Weight Unit - Start: 56, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? CleanWeight { get; set; } // FIELD NUMBER 20 - Clean Weight - Start: 62, Size: 5, Data Type: N, Justification: R, Requirement Designator: O
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? CleanWeight { get; set; } // FIELD NUMBER 20 - Clean Weight - Start: 62, Size: 5, Data Type: N, Justification: R, Requirement Designator: O
 
         [MinLength(1)]
         [MaxLength(2)]
@@ -167,19 +173,28 @@ namespace Wiedpug.Domain.Entities
         public required string WoolDescription { get; set; } // FIELD NUMBER 5 - Wool Description - Start: 24, Size: 20, Data Type: AN, Justification: L, Requirement Designator: M
 
         /// <summary>
-        /// `true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.
+        /// A boolean value to indicate whether the GST amount is applicable to invoice. 
+        /// true: applicable.
+        /// false: not applicable.
         /// </summary>
-        /// 
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public bool? GstTaxInvoiceFlag { get; set; } // FIELD NUMBER 6 - GST Tax Invoice Flag - Start: 44, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
+        public bool? IsGstTaxInvoiceApplicable { get; set; }
 
+        [MinLength(3)]
+        [MaxLength(6)]
         public PriceCurrency? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
+        [MinLength(3)]
+        [MaxLength(6)]
         public PriceCurrency? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
+        [MinLength(3)]
+        [MaxLength(6)]
         public PriceCurrency? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
+        [MinLength(3)]
+        [MaxLength(6)]
         public PriceCurrency? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         /// <summary>

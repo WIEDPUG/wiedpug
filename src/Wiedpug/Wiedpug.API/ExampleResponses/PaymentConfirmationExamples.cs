@@ -1,9 +1,6 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
-using Wiedpug.Domain.Aggregates.PaymentAdviceAggregate;
-using Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate;
 using Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate;
-using Wiedpug.Domain.Aggregates.TestCertificateAggregate;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.ValueObject;
@@ -42,22 +39,32 @@ namespace Wiedpug.API.ExampleResponses
                     new Confirmation {
                         PaymentHeader = new PaymentHeader
                         {
-                            ClientCode= new Organisation
-                            {
-                        OrganisationCode = "ATC",
-                            },
+                            ClientCode= "ATC",
                             StatementDate="2024-05-11",
                             StatementPaymentDate="2024-06-01",
                             BankAccountNumber="456735",
                             BankBSBNumber="335567",
-                            AmountWithheldPreviousStatements=672.23,
-                            AmountWithheldThisStatement=690.45
+                            AmountRemitted = new Currency{
+                                                Value = 262.00,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                            AmountWithheldPreviousStatements= new Currency{
+                                                Value = 672.23,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                            AmountWithheldThisStatement=new Currency{
+                                                Value = 690.45,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
                         },
                         PaymentDetails = new List<PaymentDetail> { 
                             new PaymentDetail
                             {
                                 StatementDate="2024-05-12",
-                                Amount=723.23,
+                                Amount=new Currency{
+                                                Value = 723.23,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
                                 AccountReference="12345678901",
                                 PaymentType=PaymentType.Paid
                             }
@@ -81,7 +88,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -95,7 +102,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new PaymentConfirmation
                 {
@@ -125,22 +132,23 @@ namespace Wiedpug.API.ExampleResponses
                     new Confirmation {
                         PaymentHeader = new PaymentHeader
                         {
-                            ClientCode= new Organisation
-                            {
-                                OrganisationCode = "ATC",
-                            },
+                            ClientCode= "ATC",
                             StatementDate="2024-05-11",
                             StatementPaymentDate="2024-06-01",
                             BankAccountNumber="456735",
                             BankBSBNumber="335567",
-                            AmountWithheldPreviousStatements=672.23,
-                            AmountWithheldThisStatement=690.45
+                            AmountRemitted = new Currency{
+                                                Value = 262.00,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                            AmountWithheldPreviousStatements=new Currency { Value = 672.23, CurrencyUnit = CurrencyUnit.AUD },
+                            AmountWithheldThisStatement=new Currency { Value = 690.45, CurrencyUnit = CurrencyUnit.AUD }
                         },
                         PaymentDetails = new List<PaymentDetail> {
                             new PaymentDetail
                             {
                                 StatementDate="2024-05-12",
-                                Amount=723.23,
+                                Amount=new Currency { Value = 693.00, CurrencyUnit = CurrencyUnit.AUD },
                                 AccountReference="12345678901",
                                 PaymentType=PaymentType.Paid
                             }

@@ -13,11 +13,12 @@
   <Class Name="Wiedpug.Domain.Aggregates.LotPriceAndBuyerAggregate.LotPriceAndBuyer" Collapsed="true">
     <Position X="8.25" Y="1.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\LotPriceAndBuyersAggregate\LotPriceAndBuyer.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Lots" />
@@ -41,15 +42,15 @@
       <FileName>Aggregates\LotPriceAndBuyersAggregate\Lot.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="RecordSaleStatus" />
       <Property Name="WoolSaleHeaderLots" />
+      <Property Name="RecordSaleStatus" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="LotPriceAndBuyerDetails" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="12.25" Y="1.5" Width="1.5" />
+    <Position X="12.25" Y="1.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
@@ -65,7 +66,7 @@
   <Class Name="Wiedpug.Domain.Entities.RecordSaleStatus" Collapsed="true">
     <Position X="13" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAIA=</HashCode>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAQABAAAAAA=</HashCode>
       <FileName>Entities\RecordSaleStatus.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -74,6 +75,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAQAQAAAAEAAQIAAIAACAAAAAAAQAAEAQUAhAA=</HashCode>
       <FileName>Entities\LotPriceAndBuyerWoolSaleHeaderLots.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

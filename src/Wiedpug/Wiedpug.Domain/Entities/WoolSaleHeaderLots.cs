@@ -61,6 +61,8 @@ namespace Wiedpug.Domain.Entities
         /// Total up to 12 digits with 2 digits after the decimal point. e.g. 123.76
         /// </summary>
         [Required]
+        [MinLength(6)]
+        [MaxLength(15)]
         public required Currency PostSaleCharge { get; set; }
 
         [Required]
@@ -73,11 +75,15 @@ namespace Wiedpug.Domain.Entities
         /// Freight Charge is not used in Australia.
         /// Total up to 12 digits with 2 digits after the decimal point. e.g. 23.76
         /// </summary>
+        [MinLength(6)]
+        [MaxLength(15)]
         public Currency? FreightCharge { get; set; }
 
         /// <summary>
         /// Total up to 12 digits with 2 digits after the decimal point. e.g. 23.76
         /// </summary>
+        [MinLength(6)]
+        [MaxLength(15)]
         public Currency? FreightRebate { get; set; }
         
         [Required]
@@ -94,11 +100,12 @@ namespace Wiedpug.Domain.Entities
         public required Organisation InvoicingOrganisation { get; set; }
 
         /// <summary>
-        /// Indicates whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section. 
-        /// `true` = Final Catalogue. `false` = Not Final Catalogue
+        /// A boolean value to indicate whethear the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.
+        /// true: is a final catalogue
+        /// false: is not a final catalogue
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsFinalCatalogue { get; set; }
 
@@ -174,7 +181,7 @@ namespace Wiedpug.Domain.Entities
         ///[DataType(DataType.Date)]
         ///[RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         ///[MinLength(1)]
-        [MaxLength(10)]
+        ///[MaxLength(10)]
         ///public string? PaymentDueDate { get; set; } // FIELD NUMBER 5 - Payment Due Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
         /// <summary>
@@ -203,6 +210,8 @@ namespace Wiedpug.Domain.Entities
 
 
         [Required]
+        [MinLength(7)]
+        [MaxLength(7)]
         public required StorageChargeCurrency StorageChargePerBalePerDay { get; set; } // FIELD NUMBER 9 - Storage Charge Per Bale/Day - Start: 42, Size: 4, Data Type: D3, Justification: R, Requirement Designator: M
 
         /// <summary>
@@ -226,6 +235,8 @@ namespace Wiedpug.Domain.Entities
         /// The total (extended) amount of Post Sale Charge Rebate for the Lot. 
         /// This value is provided where a value in the Post Sale Charge Rebate field exists (11A)
         /// </summary>
+        [MinLength(6)]
+        [MaxLength(15)]
         public Currency? PostSaleChargeRebate { get; set; }
 
 
@@ -268,11 +279,13 @@ namespace Wiedpug.Domain.Entities
         public string? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
 
         /// <summary>
-        /// `true` = Available to Buyers, `false` = Not available to buyers.
+        /// A boolean value to indicates whether to display reserve price to buyers.
+        /// true: display.
+        /// false: not display.
         /// </summary>
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public bool? ReservePriceDisplayFlag { get; set; } // FIELD NUMBER 11 - Reserve Price Display Flag - Start: 37, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
+        public bool? IsReservePriceDisplayed { get; set; } // FIELD NUMBER 11 - Reserve Price Display Flag - Start: 37, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
         /// <summary>
         /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04.000Z

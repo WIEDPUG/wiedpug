@@ -17,8 +17,8 @@ namespace Wiedpug.Domain.Enums
     {
 
 
-        [Description("ZN: Amsterdam - Netherlands")]
-        ZN,
+        [Description("AM: Amsterdam - Netherlands")]
+        AM,
 
     }
 }

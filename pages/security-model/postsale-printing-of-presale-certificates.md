@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| postsale-printing-of-presale-certificates:write  | ✓                   | ✓                |
+| postsale-printing-of-presale-certificates:write  | ✓                   |                 |
 | postsale-printing-of-presale-certificates:read   | ✓                   | ✓                |
 | postsale-printing-of-presale-certificates:limited-write  |                    | ✓                |
 

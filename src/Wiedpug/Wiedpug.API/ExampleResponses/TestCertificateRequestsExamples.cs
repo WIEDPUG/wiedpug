@@ -53,7 +53,7 @@ namespace Wiedpug.API.ExampleResponses
                             CombinationRequest = CombinationRequest.N,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
-                            TEAM3HauteurPrint = false,
+                            IsPrintingTEAM3Hauteur = false,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -106,7 +106,7 @@ namespace Wiedpug.API.ExampleResponses
                             CombinationRequest = CombinationRequest.C,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
-                            TEAM3HauteurPrint = true,
+                            IsPrintingTEAM3Hauteur = true,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -147,7 +147,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -161,7 +161,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new TestCertificateRequests()
                 {
@@ -203,7 +203,7 @@ namespace Wiedpug.API.ExampleResponses
                             CombinationRequest = CombinationRequest.N,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
-                            TEAM3HauteurPrint = false,
+                            IsPrintingTEAM3Hauteur = false,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -256,7 +256,7 @@ namespace Wiedpug.API.ExampleResponses
                             CombinationRequest = CombinationRequest.C,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
-                            TEAM3HauteurPrint = true,
+                            IsPrintingTEAM3Hauteur = true,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {

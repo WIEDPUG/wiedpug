@@ -35,13 +35,14 @@ namespace Wiedpug.Domain.Entities
         public required IndustryGroupId IndustryGroupId { get; set; }
 
         /// <summary>
-        /// A boolean value to determine wether the organisation transmits or receives data electronically.
-        /// True for transmits or receives data electronically. False for not.
+        /// A boolean value to indicate whether the organisation transmits or receives data electronically.
+        /// true: The organisation transmits or receives data electronically. 
+        /// false: The organisation neither transmits nor receives data electronically.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool TransmitterFlag { get; set; }
+        public required bool IsTransmitter { get; set; }
 
         public PhoneNumber? PhoneNumber { get; set; }
 

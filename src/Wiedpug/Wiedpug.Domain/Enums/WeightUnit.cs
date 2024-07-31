@@ -14,6 +14,9 @@ namespace Wiedpug.Domain.Enums
         Kilograms = 0,
 
         [Description("1: Pounds")]
-        Pounds = 1
+        Pounds = 1,
+
+        [Description("2: Grams")]
+        Grams = 2
     }
 }

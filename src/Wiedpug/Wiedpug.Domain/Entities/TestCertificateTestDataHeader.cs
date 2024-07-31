@@ -48,15 +48,18 @@ namespace Wiedpug.Domain.Entities
         public required int Bales { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required int Gross { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Gross { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int Tare { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Tare { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -67,13 +70,13 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public MulesingStatus? MulesingStatus { get; set; }
 
-        [MinLength(1)]
-        [MaxLength(6)]
-        public int? DeclaredGross { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? DeclaredGross { get; set; }
 
-        [MinLength(1)]
-        [MaxLength(4)]
-        public int? DeclaredTare { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? DeclaredTare { get; set; }
 
         [MinLength(1)]
         [MaxLength(1)]
@@ -98,20 +101,27 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// A GST Amount with 2 digits after the decimal point
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public double? GSTAmount { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? GSTAmount { get; set; }
+
         /// <summary>
-        /// A Flag to determine if GST apply to invoice
+        /// A boolean value to indicate whether the GST is aplicable. 
+        /// true: applicable.
+        /// false: not applicable.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsGSTApplicable { get; set; }
+
         /// <summary>
-        /// A Flag to determine if Compnay ABN apply to invoice
+        /// A boolean value to indicate whether the Company ABN is applicable to invoice. 
+        /// true: applicable.
+        /// false: not applicable.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsCompanyABNApplicable { get; set; }
     }

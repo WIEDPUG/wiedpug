@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Wiedpug.Domain.Entities
     public class PriceCurrency
     {
         /// <summary>
-        /// Total up to 12 digits with 2 digits after the decimal point.
+        /// Total up to 12 digits with 2 digits after the decimal point of per unit cost. It is in cent.
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]

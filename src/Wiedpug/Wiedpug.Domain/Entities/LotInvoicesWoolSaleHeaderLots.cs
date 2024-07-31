@@ -51,19 +51,15 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(3)]
         public required string Currency { get; set; }
 
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required WeightUnit WeightUnit { get; set; }
-
         /// <summary>
         /// This is the published rate for the charge levied by the broker to the buyer for each bale purchased and is included in the last cost of the wool.
         /// It will not include freight if freight is listed separately in the Freight Charge field, if freight is not listed in the Freight Charge field it will include freight. 
         /// In Australia it will always include freight as the Freight Charge field is not used.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public required double PostSaleCharge { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency PostSaleCharge { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -76,18 +72,21 @@ namespace Wiedpug.Domain.Entities
         /// Freight Charge is not used in Australia.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? FreightCharge { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? FreightCharge { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? FreightRebate { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? FreightRebate { get; set; }
 
         /// <summary>
         /// Any charge made for a lot which is not covered by the Post Sale Charge or the Freight charge per Bale fields.
         /// </summary>
-        /// 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? ChargePerLot { get; set; }
+        ///
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? ChargePerLot { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
         public string? InvoiceNumber { get; set; }

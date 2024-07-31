@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| lot-invoices:write  | ✓                   | ✓                |
+| lot-invoices:write  | ✓                   |                 |
 | lot-invoices:read   | ✓                   | ✓                |
 | lot-invoices:limited-write  |                    | ✓                |
 

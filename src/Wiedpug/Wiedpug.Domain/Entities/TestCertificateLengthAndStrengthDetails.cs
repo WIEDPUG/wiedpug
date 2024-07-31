@@ -12,16 +12,18 @@ namespace Wiedpug.Domain.Entities
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double Charge { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Charge { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         /// <summary>
         /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.
@@ -89,12 +91,12 @@ namespace Wiedpug.Domain.Entities
         public required LsCertType LsCertType { get; set; }
 
         /// <summary>
-        /// Specifies whether the L/S sample is secured or not. <br />
-        /// true: for a secured L/S sample <br />
-        /// flase: for a unsecured L/S sample <br />
+        /// A boolean value to indicate whethear the LS-sample is secured.
+        /// true: secured
+        /// false: not secured
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool isLsSampleSecured { get; set; }
 

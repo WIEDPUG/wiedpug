@@ -16,8 +16,9 @@ namespace Wiedpug.Domain.Entities
         /// Required decimal field for the last cost of the first lot with two digits precision.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_12_2)]
-        public required double LotLastCost { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency LotLastCost { get; set; }
     }
 
 }

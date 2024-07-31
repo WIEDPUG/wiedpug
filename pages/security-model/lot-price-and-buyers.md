@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| lot-price-and-buyers:write  | ✓                   | ✓                |
+| lot-price-and-buyers:write  | ✓                   |                 |
 | lot-price-and-buyers:read   | ✓                   | ✓                |
 | lot-price-and-buyers:limited-write  |                    | ✓                |
 

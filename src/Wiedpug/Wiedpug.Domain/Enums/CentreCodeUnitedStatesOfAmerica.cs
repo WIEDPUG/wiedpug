@@ -15,7 +15,7 @@ namespace Wiedpug.Domain.Enums
         "The codes used in transmissions are those defined in the Australian Wool Selling Regulation.")]
     public enum CentreCodeUnitedStatesOfAmerica
     {
-        [Description("ZU: Washington - USA")]
-        ZU,
+        [Description("WA: Washington - USA")]
+        WA,
     }
 }

@@ -48,28 +48,31 @@ namespace Wiedpug.Domain.Entities
         public DeclaredQualifierScale? DeclaredQualifierScale { get; set; }
 
         /// <summary>
-        /// Boolean type for contact with exotic breeds.
-        /// True for contact with exotic breeds. False for not contact with exotic breeds.
+        /// A boolean value to indicate whether it contact with exotic breeds. 
+        /// true: contact with exofic breeds.
+        /// false: not contact with exofic breeds.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool IsContactWithExoticBreeds { get; set; }
+        public required bool IsContactingWithExoticBreeds { get; set; }
 
         /// <summary>
-        /// Boolean type for crutched status. 
-        /// True for crutched, False for not crutched.
+        /// A boolean value to indicate whether it is crutched. 
+        /// true: crutched.
+        /// false: not crutched.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsCrutched { get; set; }
 
         /// <summary>
-        /// Boolean type for crutching within 3 months of shearing.
+        /// A boolean value to indicate whethear crutching within 3 months of shearing.
+        /// true: yes.
+        /// false: no.
         /// </summary>
-        /// 
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public bool? IsCrutchedWithin3MonthsOfShearing { get; set; }
 
@@ -116,18 +119,10 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double WoolBase { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? DMFRErrorField1 { get; set; }
-
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? DMFRErrorField2 { get; set; }
-
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? DMFRErrorField3 { get; set; }
-
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? DMFRErrorField4 { get; set; }
-
+        /// <summary>
+        /// A list of DMFR Error Field, each field should be a numeric string with up to two digits.
+        /// </summary>
+        public List<string>? DMFRErrorFields { get; set; }
     }
 
 

@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| test-status:write  |                    | ✓                |
+| test-status:write  |                    |                 |
 | test-status:read   | ✓                   | ✓                |
 | test-status:limited-write  |                    | ✓                |
 

@@ -82,9 +82,9 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                                                 OrganisationCode = "BTW",
                                     },
-                                    ApplyRenumbers = false,
-                                    ApplyGrossWeights = false,
-                                    ApplyNetWeights = false
+                                    AreRenumbersApplied = false,
+                                    AreGrossWeightsApplied = false,
+                                    AreNetWeightsApplied = false
                                 },
                                 DeliveryOrderLots = new List<DeliveryOrderLot>
                                 {
@@ -120,8 +120,14 @@ namespace Wiedpug.API.ExampleResponses
                                                 LotIdentity = "552467"
                                             },
                                             Bales = 30,
-                                            Gross = 1520,
-                                            Tare = 30,
+                                            Gross = new Weight{
+                                                Value = 1530.00,
+                                                Unit = WeightUnit.Kilograms
+                                            },
+                                            Tare = new Weight{
+                                                Value = 30.00,
+                                                Unit = WeightUnit.Kilograms
+                                            },
                                             TotalBalesInLot = 30,
                                             PackTypeOriginal = PackType._1,
                                             PackTypePreferred = PackType._2,
@@ -153,8 +159,8 @@ namespace Wiedpug.API.ExampleResponses
                                                     {
                                                         BaleDetailType=BaleDetailType.Renumbers,
                                                         BaleNumber = "12345",
-                                                        Gross=1233,
-                                                        Tare=23
+                                                        Gross=new Weight { Value = 1233.00, Unit = WeightUnit.Kilograms },
+                                                        Tare=new Weight { Value = 23.00, Unit = WeightUnit.Kilograms }
                                                     }
                                                 }
                                             }
@@ -184,7 +190,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -198,7 +204,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new DeliveryOrdersAndShippingInstructions()
                 {
@@ -263,9 +269,9 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                                                 OrganisationCode = "BTW",
                                     },
-                                    ApplyRenumbers = false,
-                                    ApplyGrossWeights = false,
-                                    ApplyNetWeights = false
+                                    AreRenumbersApplied = false,
+                                    AreGrossWeightsApplied = false,
+                                    AreNetWeightsApplied = false
                                 },
                                 DeliveryOrderLots = new List<DeliveryOrderLot>
                                 {
@@ -300,8 +306,14 @@ namespace Wiedpug.API.ExampleResponses
                                                 LotIdentity = "552467"
                                             },
                                             Bales = 30,
-                                            Gross = 1520,
-                                            Tare = 30,
+                                            Gross = new Weight{
+                                                Value = 1520.00,
+                                                Unit = WeightUnit.Kilograms
+                                            },
+                                            Tare = new Weight{
+                                                Value = 30.00,
+                                                Unit = WeightUnit.Kilograms
+                                            },
                                             TotalBalesInLot = 30,
                                             PackTypeOriginal = PackType._1,
                                             PackTypePreferred = PackType._2,
@@ -333,8 +345,11 @@ namespace Wiedpug.API.ExampleResponses
                                                     {
                                                         BaleDetailType=BaleDetailType.Renumbers,
                                                         BaleNumber = "12345",
-                                                        Gross=1233,
-                                                        Tare=23
+                                                        Gross=new Weight{
+                                                Value = 1233.00,
+                                                Unit = WeightUnit.Kilograms
+                                            },
+                                                        Tare=new Weight { Value = 23.00, Unit = WeightUnit.Kilograms }
                                                     }
                                                 }
                                             }

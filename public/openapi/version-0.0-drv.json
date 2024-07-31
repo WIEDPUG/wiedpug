@@ -62,7 +62,7 @@
                                             "T"
                                         ],
                                         "declaredQualifierScale": 1,
-                                        "isContactWithExoticBreeds": true,
+                                        "isContactingWithExoticBreeds": true,
                                         "isCrutched": true,
                                         "isCrutchedWithin3MonthsOfShearing": false,
                                         "sex": "E",
@@ -77,10 +77,12 @@
                                             "certificateIDCD": 7
                                         },
                                         "woolBase": 32.14,
-                                        "dmfrErrorField1": 12,
-                                        "dmfrErrorField2": 18,
-                                        "dmfrErrorField3": 9,
-                                        "dmfrErrorField4": 2
+                                        "dmfrErrorFields": [
+                                            "12",
+                                            "18",
+                                            "9",
+                                            "2"
+                                        ]
                                     }
                                 ]
                             }
@@ -96,9 +98,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -107,7 +107,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -134,7 +134,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -150,7 +150,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -166,7 +166,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -202,7 +202,7 @@
                                     "organisationCode": "ANF"
                                 },
                                 "saleDateRequested": "2023-10-31",
-                                "useNetworkDateTime": false,
+                                "isUsingNetworkDateTime": false,
                                 "requestType": 4,
                                 "woolTypeGroup": "MFLC",
                                 "season": 23
@@ -220,7 +220,6 @@
                                     "$ref": "#/components/schemas/DarkAndMedullatedFibreRiskVerificationApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
                                     "data": {
                                         "transmissionHeader": {
                                             "dateFormatLastRevised": "2020-07-15",
@@ -254,7 +253,7 @@
                                                     "T"
                                                 ],
                                                 "declaredQualifierScale": 1,
-                                                "isContactWithExoticBreeds": true,
+                                                "isContactingWithExoticBreeds": true,
                                                 "isCrutched": true,
                                                 "isCrutchedWithin3MonthsOfShearing": false,
                                                 "sex": "E",
@@ -269,10 +268,12 @@
                                                     "certificateIDCD": 7
                                                 },
                                                 "woolBase": 32.14,
-                                                "dmfrErrorField1": 12,
-                                                "dmfrErrorField2": 18,
-                                                "dmfrErrorField3": 9,
-                                                "dmfrErrorField4": 2
+                                                "dmfrErrorFields": [
+                                                    "12",
+                                                    "18",
+                                                    "9",
+                                                    "2"
+                                                ]
                                             }
                                         ]
                                     }
@@ -285,7 +286,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -312,7 +313,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -328,7 +329,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -344,7 +345,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -359,7 +360,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -376,6 +377,40 @@
     },
     "components": {
         "schemas": {
+            "ApiErrorResult": {
+                "required": [
+                    "status",
+                    "title"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "nullable": true
+                    },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+                        "format": "int32"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+                        "nullable": true
+                    },
+                    "errors": {
+                        "$ref": "#/components/schemas/CustomErrors"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+            },
             "ApiMessage": {
                 "type": "object",
                 "properties": {
@@ -389,20 +424,20 @@
                             "$ref": "#/components/schemas/WarningCode"
                         },
                         "nullable": true
+                    },
+                    "informationCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InformationCode"
+                        },
+                        "nullable": true
                     }
                 },
                 "additionalProperties": false
             },
             "ApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -578,51 +613,51 @@
             },
             "CentreCodeBelgium": {
                 "enum": [
-                    "ZB"
+                    "BR"
                 ],
                 "type": "string",
-                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium"
+                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium"
             },
             "CentreCodeChina": {
                 "enum": [
-                    "ZM",
-                    "ZP",
-                    "ZQ",
-                    "ZR"
-                ],
-                "type": "string",
-                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China"
-            },
-            "CentreCodeFrance": {
-                "enum": [
-                    "ZF"
-                ],
-                "type": "string",
-                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France"
-            },
-            "CentreCodeGermany": {
-                "enum": [
-                    "ZG",
+                    "NA",
+                    "SH",
+                    "QI",
                     "ZH"
                 ],
                 "type": "string",
-                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany"
+                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China"
+            },
+            "CentreCodeFrance": {
+                "enum": [
+                    "PA"
+                ],
+                "type": "string",
+                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France"
+            },
+            "CentreCodeGermany": {
+                "enum": [
+                    "BE",
+                    "BL"
+                ],
+                "type": "string",
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany"
             },
             "CentreCodeItaly": {
                 "enum": [
-                    "ZI",
-                    "ZJ",
-                    "ZK"
+                    "RO",
+                    "BI",
+                    "GR"
                 ],
                 "type": "string",
                 "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
             },
             "CentreCodeNetherlands": {
                 "enum": [
-                    "ZN"
+                    "AM"
                 ],
                 "type": "string",
-                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands"
+                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands"
             },
             "CentreCodeNewZealand": {
                 "enum": [
@@ -695,31 +730,31 @@
             },
             "CentreCodeSouthAfrica": {
                 "enum": [
-                    "ZS"
+                    "CA"
                 ],
                 "type": "string",
-                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa"
+                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa"
             },
             "CentreCodeTaiwan": {
                 "enum": [
-                    "ZO"
+                    "KE"
                 ],
                 "type": "string",
-                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan"
+                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
             },
             "CentreCodeUnitedKingdomOfGreatBritain": {
                 "enum": [
-                    "ZE"
+                    "LO"
                 ],
                 "type": "string",
-                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain"
+                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain"
             },
             "CentreCodeUnitedStatesOfAmerica": {
                 "enum": [
-                    "ZU"
+                    "WA"
                 ],
                 "type": "string",
-                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA"
+                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA"
             },
             "CertificateIDPrefix": {
                 "enum": [
@@ -823,40 +858,6 @@
                 },
                 "additionalProperties": false
             },
-            "CustomProblemDetails": {
-                "required": [
-                    "status",
-                    "title"
-                ],
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
-                        "nullable": true
-                    },
-                    "title": {
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-                    },
-                    "status": {
-                        "type": "integer",
-                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
-                        "format": "int32"
-                    },
-                    "detail": {
-                        "type": "string",
-                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
-                        "nullable": true
-                    },
-                    "errors": {
-                        "$ref": "#/components/schemas/CustomErrors"
-                    }
-                },
-                "additionalProperties": false,
-                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
-            },
             "DarkAndMedullatedFibreRisk": {
                 "enum": [
                     "E",
@@ -892,7 +893,7 @@
                     "declaredBreed",
                     "declaredWoolCategory",
                     "declaredWoolSubCategory",
-                    "isContactWithExoticBreeds",
+                    "isContactingWithExoticBreeds",
                     "isCrutched",
                     "sex",
                     "woolBase"
@@ -918,23 +919,23 @@
                     "declaredQualifierScale": {
                         "$ref": "#/components/schemas/DeclaredQualifierScale"
                     },
-                    "isContactWithExoticBreeds": {
+                    "isContactingWithExoticBreeds": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean type for contact with exotic breeds.\r\nTrue for contact with exotic breeds. False for not contact with exotic breeds."
+                        "description": "A boolean value to indicate whether it contact with exotic breeds. \r\ntrue: contact with exofic breeds.\r\nfalse: not contact with exofic breeds."
                     },
                     "isCrutched": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean type for crutched status. \r\nTrue for crutched, False for not crutched."
+                        "description": "A boolean value to indicate whether it is crutched. \r\ntrue: crutched.\r\nfalse: not crutched."
                     },
                     "isCrutchedWithin3MonthsOfShearing": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean type for crutching within 3 months of shearing.",
+                        "description": "A boolean value to indicate whethear crutching within 3 months of shearing.\r\ntrue: yes.\r\nfalse: no.",
                         "nullable": true
                     },
                     "sex": {
@@ -967,28 +968,12 @@
                         "type": "number",
                         "format": "double"
                     },
-                    "dmfrErrorField1": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
-                    },
-                    "dmfrErrorField2": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
-                    },
-                    "dmfrErrorField3": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
-                    },
-                    "dmfrErrorField4": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
+                    "dmfrErrorFields": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of DMFR Error Field, each field should be a numeric string with up to two digits.",
                         "nullable": true
                     }
                 },
@@ -1017,15 +1002,8 @@
                 "additionalProperties": false
             },
             "DarkAndMedullatedFibreRiskVerificationApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -1123,6 +1101,13 @@
                 "type": "string",
                 "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
             },
+            "InformationCode": {
+                "enum": [
+                    "OK"
+                ],
+                "type": "string",
+                "description": "A code to indicate the information.<br />OK: All data received OK. "
+            },
             "Organisation": {
                 "required": [
                     "organisationCode"
@@ -1179,11 +1164,11 @@
                         "format": "date-time",
                         "nullable": true
                     },
-                    "useNetworkDateTime": {
+                    "isUsingNetworkDateTime": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Boolean value to indicate wethear to use Network Datetime\r\nTrue for use Network Datetime, False for not use",
+                        "description": "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use.",
                         "nullable": true
                     },
                     "requestType": {
@@ -1315,7 +1300,8 @@
                         "nullable": true
                     }
                 },
-                "additionalProperties": false
+                "additionalProperties": false,
+                "description": "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
             },
             "TransferType": {
                 "enum": [

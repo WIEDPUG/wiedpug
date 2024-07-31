@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| test-certificates:write  | ✓                   | ✓                |
+| test-certificates:write  | ✓                   |                 |
 | test-certificates:read   | ✓                   | ✓                |
 | test-certificates:limited-write  |                    | ✓                |
 

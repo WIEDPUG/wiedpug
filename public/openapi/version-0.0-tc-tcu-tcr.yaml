@@ -50,7 +50,7 @@ paths:
                     combinationRequest: 'N'
                     autoAdditionalMeasurementRequired: 'N'
                     additionalPrintRequirements: 0
-                    teaM3HauteurPrint: false
+                    isPrintingTEAM3Hauteur: false
                     certificateRequestDetails:
                       - certificateIdentity:
                           certificateIDPrefix: 3
@@ -84,7 +84,7 @@ paths:
                     combinationRequest: C
                     autoAdditionalMeasurementRequired: 'N'
                     additionalPrintRequirements: 3
-                    teaM3HauteurPrint: true
+                    isPrintingTEAM3Hauteur: true
                     certificateRequestDetails:
                       - certificateIdentity:
                           certificateIDPrefix: 3
@@ -115,33 +115,31 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example:
-                isSuccessful: true
+              example: {}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
                 status: 400
                 detail: ''
                 errors:
-                  TransmissionHeader.DateFormatLastRevised:
-                    - The field DateFormatLastRevised is required
-                    - >-
-                      The field DateFormatLastRevised must match regulart
-                      expression pattern...
-                  TransmissionHeader.CountryOfOrigin:
-                    - The field CountryOfOrigin is required
+                  errors:
+                    Requests[0].TransmissionHeader.DateFormatLastRevised:
+                      - The field DateFormatLastRevised is required
+                      - The field DateFormatLastRevised must match regulart expression pattern...
+                    Requests[0].TransmissionHeader.CountryOfOrigin:
+                      - The field CountryOfOrigin is required
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -152,7 +150,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -163,10 +161,185 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
-                type: >-
-                  https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
+  /v0/test-certificate-requests/data:
+    post:
+      tags:
+        - Test Certificate Requests
+      summary: Retrieves the test certificates request
+      operationId: GetTestCertificatesRequests
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestForData'
+            example:
+              saleIdentity:
+                sellingCentreType: AU_F
+                saleNumber: 18
+              organisationRequested:
+                organisationCode: ANF
+              saleDateRequested: '2023-10-31'
+              isUsingNetworkDateTime: false
+              requestType: 4
+              woolTypeGroup: MFLC
+              season: 23
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestCertificateRequestsApiResult'
+              example:
+                data:
+                  transmissionHeader:
+                    dateFormatLastRevised: '2020-07-15'
+                    dateTransmissionFileCreated: '2016-01-17'
+                    countryOfOrigin: AU
+                    documentOriginator:
+                      organisationCode: ATC
+                    currentReceiver:
+                      organisationCode: ATT
+                    versionNumber: 31
+                    softwareIdentifier:
+                      softwareCompany: 1
+                      version: 1082
+                      programName: NETR
+                    abn: '72001967184'
+                  testCertificateRequestCollection:
+                    - certificateRequest:
+                        printRequirements: 0
+                        yieldType1: 2
+                        yieldType2: 4
+                        certificateReference: XXY1255
+                        clientsCrossReference: XXY1255
+                        bales: 96
+                        season: 21
+                        combinationRequest: 'N'
+                        autoAdditionalMeasurementRequired: 'N'
+                        additionalPrintRequirements: 0
+                        isPrintingTEAM3Hauteur: false
+                        certificateRequestDetails:
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDSuffix: P
+                              certificateIDNumber: '15969534'
+                              certificateIDCD: 9
+                            woolbase: 63.16
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDSuffix: P
+                              certificateIDNumber: '00000499'
+                              certificateIDCD: 7
+                            woolbase: 61.52
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDSuffix: P
+                              certificateIDNumber: '00000499'
+                              certificateIDCD: 7
+                            woolbase: 61.44
+                            laboratory: 1
+                    - certificateRequest:
+                        printRequirements: 0
+                        yieldType1: 1
+                        yieldType2: 13
+                        certificateReference: XXY1205
+                        clientsCrossReference: XXZ1635
+                        bales: 96
+                        season: 21
+                        combinationRequest: C
+                        autoAdditionalMeasurementRequired: 'N'
+                        additionalPrintRequirements: 3
+                        isPrintingTEAM3Hauteur: true
+                        certificateRequestDetails:
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDSuffix: P
+                              certificateIDNumber: '00000499'
+                              certificateIDCD: 7
+                            woolbase: 53.74
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDSuffix: P
+                              certificateIDNumber: '00000499'
+                              certificateIDCD: 7
+                            woolbase: 52.01
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDSuffix: P
+                              certificateIDNumber: '00000499'
+                              certificateIDCD: 7
+                            woolbase: 54.26
+                            laboratory: 1
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ''
+                errors:
+                  errors:
+                    Requests[0].TransmissionHeader.DateFormatLastRevised:
+                      - The field DateFormatLastRevised is required
+                      - The field DateFormatLastRevised must match regulart expression pattern...
+                    Requests[0].TransmissionHeader.CountryOfOrigin:
+                      - The field CountryOfOrigin is required
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
+        '404':
+          description: Not Found
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
@@ -175,9 +348,7 @@ paths:
       tags:
         - Test Certificate Update
       summary: Test Certificate Update
-      description: >-
-        Sent to a test house to advise changes to an existing Certificate. A new
-        Certificate will be reissued with the updated data.
+      description: Sent to a test house to advise changes to an existing Certificate. A new Certificate will be reissued with the updated data.
       requestBody:
         content:
           application/json:
@@ -246,33 +417,31 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example:
-                isSuccessful: true
+              example: {}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
                 status: 400
                 detail: ''
                 errors:
-                  TransmissionHeader.DateFormatLastRevised:
-                    - The field DateFormatLastRevised is required
-                    - >-
-                      The field DateFormatLastRevised must match regulart
-                      expression pattern...
-                  TransmissionHeader.CountryOfOrigin:
-                    - The field CountryOfOrigin is required
+                  errors:
+                    Requests[0].TransmissionHeader.DateFormatLastRevised:
+                      - The field DateFormatLastRevised is required
+                      - The field DateFormatLastRevised must match regulart expression pattern...
+                    Requests[0].TransmissionHeader.CountryOfOrigin:
+                      - The field CountryOfOrigin is required
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -283,7 +452,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -294,10 +463,156 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
-                type: >-
-                  https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
+  /v0/test-certificate-update/data:
+    post:
+      tags:
+        - Test Certificate Update
+      summary: Retrieves the test certificate update
+      operationId: GetTestCertificateUpdate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestForData'
+            example:
+              saleIdentity:
+                sellingCentreType: AU_F
+                saleNumber: 18
+              organisationRequested:
+                organisationCode: ANF
+              saleDateRequested: '2023-10-31'
+              isUsingNetworkDateTime: false
+              requestType: 4
+              woolTypeGroup: MFLC
+              season: 23
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestCertificateUpdateApiResult'
+              example:
+                data:
+                  transmissionHeader:
+                    dateFormatLastRevised: '2020-07-15'
+                    dateTransmissionFileCreated: '2016-01-17'
+                    countryOfOrigin: AU
+                    documentOriginator:
+                      organisationCode: ABC
+                    currentReceiver:
+                      organisationCode: ATW
+                    versionNumber: 31
+                    softwareIdentifier:
+                      softwareCompany: 1
+                      version: 1082
+                      programName: NETR
+                    abn: '72001967184'
+                  testCertificateUpdateDetails:
+                    - certificateIdentity:
+                        certificateIDPrefix: 6
+                        certificateIDSuffix: L
+                        certificateIDNumber: '16101382'
+                        certificateIDCD: 6
+                      reissueType: '06'
+                      client:
+                        organisationCode: ABC
+                      bales: 2
+                      baleDescription: AAA M
+                      woolBase: 60.43
+                      mulesingStatusFrom: ND
+                      mulesingStatusTo: M
+                    - certificateIdentity:
+                        certificateIDPrefix: 6
+                        certificateIDSuffix: M
+                        certificateIDNumber: '16101382'
+                        certificateIDCD: 5
+                      reissueType: '05'
+                      client:
+                        organisationCode: ABC
+                      bales: 7
+                      baleDescription: AAA M
+                      woolBase: 65.12
+                      mulesingStatusFrom: AA
+                      mulesingStatusTo: M
+                    - certificateIdentity:
+                        certificateIDPrefix: 6
+                        certificateIDSuffix: B
+                        certificateIDNumber: '15701332'
+                        certificateIDCD: 6
+                      reissueType: '02'
+                      client:
+                        organisationCode: ABC
+                      bales: 8
+                      baleDescription: PCA M
+                      woolBase: 50.31
+                      mulesingStatusFrom: NM
+                      mulesingStatusTo: M
+        '400':
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ''
+                errors:
+                  errors:
+                    Requests[0].TransmissionHeader.DateFormatLastRevised:
+                      - The field DateFormatLastRevised is required
+                      - The field DateFormatLastRevised must match regulart expression pattern...
+                    Requests[0].TransmissionHeader.CountryOfOrigin:
+                      - The field CountryOfOrigin is required
+        '401':
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
+        '403':
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
+        '404':
+          description: Not Found
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
+        '500':
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResult'
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
@@ -334,9 +649,15 @@ paths:
                     lotIdentityOrGroupName:
                       lotIdentity: '234234'
                     bales: 1
-                    gross: 1
-                    tare: 1
-                    regrabSampleWeight: 1
+                    gross:
+                      value: 1
+                      unit: 0
+                    tare:
+                      value: 10
+                      unit: 0
+                    regrabSampleWeight:
+                      value: 1
+                      unit: 0
                     weightUnit: 0
                     lotType: 7
                     centreAuction:
@@ -353,7 +674,9 @@ paths:
                       certificateIDSuffix: D
                       certificateIDNumber: '23456787'
                       certificateIDCD: 7
-                    charge: 100
+                    charge:
+                      value: 100
+                      currencyUnit: AUD
                     laboratory: 1
                     woolBase: 20
                     vmb: 10
@@ -399,9 +722,15 @@ paths:
                     lotIdentityOrGroupName:
                       lotIdentity: '123456'
                     bales: 1
-                    gross: 1
-                    tare: 1
-                    regrabSampleWeight: 1
+                    gross:
+                      value: 40
+                      unit: 0
+                    tare:
+                      value: 10
+                      unit: 0
+                    regrabSampleWeight:
+                      value: 1
+                      unit: 0
                     weightUnit: 0
                     lotType: 4
                     centreAuction:
@@ -418,7 +747,9 @@ paths:
                       certificateIDSuffix: D
                       certificateIDNumber: '23456787'
                       certificateIDCD: 7
-                    charge: 123.25
+                    charge:
+                      value: 123.25
+                      currencyUnit: AUD
                     laboratory: 2
                     stapleLength: 13
                     stapleLengthCvPercentage: 25
@@ -477,33 +808,31 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example:
-                isSuccessful: true
+              example: {}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
                 status: 400
                 detail: ''
                 errors:
-                  Requests[0].TransmissionHeader.DateFormatLastRevised:
-                    - The field DateFormatLastRevised is required
-                    - >-
-                      The field DateFormatLastRevised must match regulart
-                      expression pattern...
-                  Requests[0].TransmissionHeader.CountryOfOrigin:
-                    - The field CountryOfOrigin is required
+                  errors:
+                    Requests[0].TransmissionHeader.DateFormatLastRevised:
+                      - The field DateFormatLastRevised is required
+                      - The field DateFormatLastRevised must match regulart expression pattern...
+                    Requests[0].TransmissionHeader.CountryOfOrigin:
+                      - The field CountryOfOrigin is required
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -514,7 +843,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -525,10 +854,9 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
-                type: >-
-                  https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
@@ -542,14 +870,15 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/GetTestCertificatesRequest'
+              $ref: '#/components/schemas/RequestForData'
             example:
               saleIdentity:
                 sellingCentreType: AU_F
                 saleNumber: 18
-              organisationRequested: AWNF
+              organisationRequested:
+                organisationCode: ANF
               saleDateRequested: '2023-10-31'
-              useNetworkDateTime: false
+              isUsingNetworkDateTime: false
               requestType: 4
               woolTypeGroup: MFLC
               season: 23
@@ -562,7 +891,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/TestCertificatesApiResult'
               example:
-                isSuccessful: true
                 data:
                   transmissionHeader:
                     dateFormatLastRevised: '2020-07-15'
@@ -585,9 +913,15 @@ paths:
                         lotIdentityOrGroupName:
                           lotIdentity: '123456'
                         bales: 1
-                        gross: 1
-                        tare: 1
-                        regrabSampleWeight: 1
+                        gross:
+                          value: 40
+                          unit: 0
+                        tare:
+                          value: 10
+                          unit: 0
+                        regrabSampleWeight:
+                          value: 1
+                          unit: 0
                         weightUnit: 0
                         lotType: 3
                         centreAuction:
@@ -604,7 +938,9 @@ paths:
                           certificateIDSuffix: D
                           certificateIDNumber: '23456787'
                           certificateIDCD: 7
-                        charge: 100
+                        charge:
+                          value: 100
+                          currencyUnit: AUD
                         laboratory: 1
                         woolBase: 20
                         vmb: 10
@@ -650,9 +986,15 @@ paths:
                         lotIdentityOrGroupName:
                           lotIdentity: '123456'
                         bales: 1
-                        gross: 1
-                        tare: 1
-                        regrabSampleWeight: 1
+                        gross:
+                          value: 40
+                          unit: 0
+                        tare:
+                          value: 10
+                          unit: 0
+                        regrabSampleWeight:
+                          value: 1
+                          unit: 0
                         weightUnit: 0
                         lotType: 3
                         centreAuction:
@@ -669,7 +1011,9 @@ paths:
                           certificateIDSuffix: D
                           certificateIDNumber: '23456787'
                           certificateIDCD: 7
-                        charge: 156.34
+                        charge:
+                          value: 156.34
+                          currencyUnit: AUD
                         laboratory: 2
                         stapleLength: 13
                         stapleLengthCvPercentage: 25
@@ -725,26 +1069,25 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
                 status: 400
                 detail: ''
                 errors:
-                  Requests[0].TransmissionHeader.DateFormatLastRevised:
-                    - The field DateFormatLastRevised is required
-                    - >-
-                      The field DateFormatLastRevised must match regulart
-                      expression pattern...
-                  Requests[0].TransmissionHeader.CountryOfOrigin:
-                    - The field CountryOfOrigin is required
+                  errors:
+                    Requests[0].TransmissionHeader.DateFormatLastRevised:
+                      - The field DateFormatLastRevised is required
+                      - The field DateFormatLastRevised must match regulart expression pattern...
+                    Requests[0].TransmissionHeader.CountryOfOrigin:
+                      - The field CountryOfOrigin is required
         '401':
           description: Unauthorized
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -755,7 +1098,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -766,7 +1109,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: Resource not found
@@ -776,10 +1119,9 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
-                type: >-
-                  https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
@@ -796,12 +1138,7 @@ components:
         - 6
         - 7
       type: integer
-      description: >-
-        0: No additional print requirements<br />1: Print VM Breakdown only<br
-        />2: Print VM Breakdown and Curvature<br />3: Print VM Breakdown and
-        Comfort Factor<br />4: Print VM Breakdown, Curvature and Comfort
-        Factor<br />5: Print Curvature only<br />6: Print Comfort Factor Only<br
-        />7: Print Curvature and Comfort Factor
+      description: '0: No additional print requirements<br />1: Print VM Breakdown only<br />2: Print VM Breakdown and Curvature<br />3: Print VM Breakdown and Comfort Factor<br />4: Print VM Breakdown, Curvature and Comfort Factor<br />5: Print Curvature only<br />6: Print Comfort Factor Only<br />7: Print Curvature and Comfort Factor'
       format: int32
     AdjustmentNoteDetails:
       required:
@@ -825,23 +1162,19 @@ components:
           format: int32
         dateOfCreditNote:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
         creditNoteAmount:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         isGSTApplicable:
           maxLength: 5
-          minLength: 0
+          minLength: 4
           type: boolean
+          description: "A boolean value to indicate whether the GST is aplicable. \r\ntrue: applicable.\r\nfalse: not applicable."
         gstAmount:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         reasonCode:
           pattern: '-?\d{1,2}'
           type: integer
@@ -850,26 +1183,61 @@ components:
           $ref: '#/components/schemas/CertificateIdentity'
         dateOfOriginalInvoice:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
         newCertificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
       additionalProperties: false
-    ApiResult:
+    ApiErrorResult:
       required:
-        - isSuccessful
+        - status
+        - title
       type: object
       properties:
-        isSuccessful:
-          type: boolean
-          description: Indicator if the request has been successfully processed.
+        type:
+          type: string
+          description: "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
+          nullable: true
+        title:
+          minLength: 1
+          type: string
+          description: "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+        status:
+          type: integer
+          description: The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.
+          format: int32
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.
+          nullable: true
+        errors:
+          $ref: '#/components/schemas/CustomErrors'
+      additionalProperties: false
+      description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
+    ApiMessage:
+      type: object
+      properties:
         message:
           type: string
-          description: Contains information about the response if applicable.
           nullable: true
+        warningCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/WarningCode'
+          nullable: true
+        informationCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/InformationCode'
+          nullable: true
+      additionalProperties: false
+    ApiResult:
+      type: object
+      properties:
+        message:
+          $ref: '#/components/schemas/ApiMessage'
         data:
           description: Contains response data. e.g. Auction Catalogue
           nullable: true
@@ -882,10 +1250,7 @@ components:
         - C
         - B
       type: string
-      description: >-
-        N: Automatic combinations not required<br />L: Automatic Length &
-        Strength Combination required<br />C: Automatic Colour Combination is
-        required<br />B: Both Length & Strength and Colour combinations required
+      description: 'N: Automatic combinations not required<br />L: Automatic Length & Strength Combination required<br />C: Automatic Colour Combination is required<br />B: Both Length & Strength and Colour combinations required'
     BaleDetail:
       required:
         - baleDetailType
@@ -894,44 +1259,32 @@ components:
       properties:
         baleNumber:
           maxLength: 5
-          minLength: 0
+          minLength: 1
           type: string
         baleDetailType:
           $ref: '#/components/schemas/BaleDetailType'
         showBaleIndicator:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
-          description: >-
-            Property for Greasy/Processed bale detail, not necessary for other
-            types of bale details.
+          description: Property for Greasy/Processed bale detail, not necessary for other types of bale details.
           nullable: true
         baleRenumber:
           maxLength: 5
-          minLength: 0
+          minLength: 1
           type: string
-          description: >-
-            Property for Renumber BaleDetail, not necessary for other types of
-            bale details.
+          description: Property for Renumber BaleDetail, not necessary for other types of bale details.
           nullable: true
         unitNumber:
           pattern: '-?\d{1,5}'
           type: integer
-          description: >-
-            Property for Tripacks BaleDetail, not necessary for other types of
-            bale details.
+          description: Property for Tripacks BaleDetail, not necessary for other types of bale details.
           format: int32
           nullable: true
         gross:
-          pattern: '-?\d{1,4}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         tare:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         baleIdentifications:
           type: array
           items:
@@ -944,9 +1297,7 @@ components:
         - GreasyOrProcessed
         - Tripacks
       type: string
-      description: >-
-        Renumbers: Bale Details - Renumbers<br />GreasyOrProcessed: Bale Details
-        - GreasyOrProcessed<br />Tripacks: Bale Details - Tripacks
+      description: 'Renumbers: Bale Details - Renumbers<br />GreasyOrProcessed: Bale Details - GreasyOrProcessed<br />Tripacks: Bale Details - Tripacks'
     BaleHeader:
       required:
         - areaOfOrigin
@@ -956,26 +1307,26 @@ components:
       properties:
         brand:
           maxLength: 30
-          minLength: 0
+          minLength: 1
           type: string
         baleDescription:
           maxLength: 15
-          minLength: 0
+          minLength: 1
           type: string
         areaOfOrigin:
           maxLength: 4
-          minLength: 0
+          minLength: 1
           type: string
         bales:
           maxLength: 4
-          minLength: 0
+          minLength: 1
           pattern: '-?\d{1,4}'
           type: integer
           format: int32
           nullable: true
         locationWithinStore:
           maxLength: 20
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
       additionalProperties: false
@@ -984,12 +1335,12 @@ components:
       properties:
         baleNumber:
           maxLength: 5
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         eBaleId:
           maxLength: 30
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
       additionalProperties: false
@@ -998,13 +1349,7 @@ components:
         - O
         - 'N'
       type: string
-      description: >-
-        O: The values for Colour X, Y, Z and Y-Z have been measured by an
-        instrument calibrated to reference wool, based on illuminant C and 2º
-        observer angle. Old calibration has been deactivated as at 1st January
-        2001.<br />N: The values for Colour X, Y, Z and Y-Z have been measured
-        by an instrument calibrated to certified tiles, based on illuminant D65
-        and 10º observer angle, and corrected for any glass effects
+      description: 'O: The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to reference wool, based on illuminant C and 2º observer angle. Old calibration has been deactivated as at 1st January 2001.<br />N: The values for Colour X, Y, Z and Y-Z have been measured by an instrument calibrated to certified tiles, based on illuminant D65 and 10º observer angle, and corrected for any glass effects'
     Centre:
       required:
         - centreCode
@@ -1134,118 +1479,43 @@ components:
         - YO
         - Z
       type: string
-      description: >-
-        This is Centres for Australia. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia -
-        Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia -
-        AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA:
-        Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia -
-        Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br
-        />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C:
-        Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia -
-        Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia -
-        Coleraine<br />CN: Australia - Condoblin<br />CO: Australia -
-        Cootamundra<br />CR: Australia - Corowa<br />CU: Australia -
-        Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br
-        />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR:
-        Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia -
-        Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br
-        />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI:
-        Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia
-        - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br
-        />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM:
-        Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia -
-        Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA:
-        Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE:
-        Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia -
-        Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia -
-        Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia -
-        Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove
-        (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia -
-        Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia -
-        Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount
-        Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR:
-        Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia -
-        NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia -
-        Goondiwindi<br />NO: Australia - Northam<br />NR: Australia -
-        Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br
-        />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia
-        - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia -
-        Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br
-        />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK:
-        Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia -
-        Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U:
-        Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia -
-        Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG:
-        Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia -
-        Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West
-        Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA:
-        Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia -
-        Young<br />Z: Australia - Albany
+      description: 'This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany'
     CentreCodeBelgium:
       enum:
-        - ZB
+        - BR
       type: string
-      description: >-
-        This is Centres for Belgium. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZB: Brussels - Belgium
+      description: 'This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium'
     CentreCodeChina:
       enum:
-        - ZM
-        - ZP
-        - ZQ
-        - ZR
-      type: string
-      description: >-
-        This is Centres for China. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ:
-        Qingdao - China<br />ZR: Zhangjiagang - China
-    CentreCodeFrance:
-      enum:
-        - ZF
-      type: string
-      description: >-
-        This is Centres for France. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZF: Paris - France
-    CentreCodeGermany:
-      enum:
-        - ZG
+        - NA
+        - SH
+        - QI
         - ZH
       type: string
-      description: >-
-        This is Centres for Germany. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany
+      description: 'This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China'
+    CentreCodeFrance:
+      enum:
+        - PA
+      type: string
+      description: 'This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France'
+    CentreCodeGermany:
+      enum:
+        - BE
+        - BL
+      type: string
+      description: 'This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany'
     CentreCodeItaly:
       enum:
-        - ZI
-        - ZJ
-        - ZK
+        - RO
+        - BI
+        - GR
       type: string
-      description: >-
-        This is Centres for Italy. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK:
-        Grisignano - Italy
+      description: 'This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy'
     CentreCodeNetherlands:
       enum:
-        - ZN
+        - AM
       type: string
-      description: >-
-        This is Centres for Netherlands. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZN: Amsterdam - Netherlands
+      description: 'This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands'
     CentreCodeNewZealand:
       enum:
         - A
@@ -1312,84 +1582,34 @@ components:
         - Z
         - ZY
       type: string
-      description: >-
-        This is Centres for New Zealand. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand -
-        Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand -
-        Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand -
-        Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand -
-        Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br
-        />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO:
-        New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand -
-        Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand -
-        Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand -
-        Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br
-        />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New
-        Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New
-        Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand -
-        Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br
-        />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New
-        Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand -
-        Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand -
-        Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand -
-        Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br
-        />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br
-        />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New
-        Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand -
-        TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br
-        />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W:
-        New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New
-        Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT:
-        New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand
-        - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand -
-        Waipukurau<br />Z: New Zealand - Taupo<br />ZY: New Zealand - Ashburton
+      description: 'This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo<br />ZY: New Zealand - Ashburton'
     CentreCodeSouthAfrica:
       enum:
-        - ZS
+        - CA
       type: string
-      description: >-
-        This is Centres for SouthAfrica. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZS: Cape Town - South Africa
+      description: 'This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa'
     CentreCodeTaiwan:
       enum:
-        - ZO
+        - KE
       type: string
-      description: >-
-        This is Centres for Taiwan. A centre is a town where any activity
-        connected with the wool industry takes place. The codes used in
-        transmissions are those defined in the Australian Wool Selling
-        Regulation.<br />ZO: Keelung - Taiwan
+      description: 'This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan'
     CentreCodeUnitedKingdomOfGreatBritain:
       enum:
-        - ZE
+        - LO
       type: string
-      description: >-
-        This is Centres for United Kingdom of Great Britain. A centre is a town
-        where any activity connected with the wool industry takes place. The
-        codes used in transmissions are those defined in the Australian Wool
-        Selling Regulation.<br />ZE: London - United Kingdom of Great Britain
+      description: 'This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain'
     CentreCodeUnitedStatesOfAmerica:
       enum:
-        - ZU
+        - WA
       type: string
-      description: >-
-        This is Centres for USA. A centre is a town where any activity connected
-        with the wool industry takes place. The codes used in transmissions are
-        those defined in the Australian Wool Selling Regulation.<br />ZU:
-        Washington - USA
+      description: 'This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA'
     CertificateIDPrefix:
       enum:
         - 2
         - 3
         - 6
       type: integer
-      description: >-
-        2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle
-        Laboratory
+      description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
       format: int32
     CertificateIDSuffix:
       enum:
@@ -1408,14 +1628,7 @@ components:
         - W
         - 'Y'
       type: string
-      description: >-
-        B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test Certificate –
-        Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised
-        Interlot<br />J: Combination - Yield & Micron, Length & Strength,
-        Colour<br />L: Length & Strength<br />M: Objectively Matched Lot<br />N:
-        Objectively matched Interlot<br />Q: Bulk Class – Quality Managed<br
-        />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />R:
-        Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core Test
+      description: 'B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test Certificate – Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br />J: Combination - Yield & Micron, Length & Strength, Colour<br />L: Length & Strength<br />M: Objectively Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class – Quality Managed<br />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />R: Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core Test'
     CertificateIdentity:
       required:
         - certificateIDCD
@@ -1430,11 +1643,11 @@ components:
           $ref: '#/components/schemas/CertificateIDSuffix'
         certificateIDNumber:
           maxLength: 8
-          minLength: 0
+          minLength: 1
           type: string
         certificateIDCD:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: integer
           format: int32
       additionalProperties: false
@@ -1451,29 +1664,20 @@ components:
           $ref: '#/components/schemas/YieldType'
         certificateReference:
           maxLength: 30
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         clientsCrossReference:
           maxLength: 8
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         declaredGross:
-          pattern: '-?\d{1,6}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         declaredTare:
-          pattern: '-?\d{1,4}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         sampleWeightRemoved:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         bales:
           pattern: '-?\d{1,4}'
           type: integer
@@ -1484,10 +1688,14 @@ components:
           format: int32
           nullable: true
         saleIdentity:
-          $ref: '#/components/schemas/SaleIdentity'
+          maxLength: 6
+          minLength: 1
+          type: string
+          description: "A group field of SellingCentre/Type and Sale Number\r\nFrom: The current value that the Sale Identity is to be changed from.\r\nTo: The new value that the Sale Identity is to be changed to.\r\nSellingCentre/Type can be one of the following code:\r\nNZ_C: Christchurch; NZ_N: Napier; AU_A: Adelaide; AU: Australia; AU_B: Brisbane; AU_F: Fremantle; AU_G: Geelong;\r\nAU_L: Launceston; AU_M: Melbourne; AU_N: Newcastle; AU_R: Goulburn; AU_S: Sydney; PS: Private Sales; T: Auctions Plus Sales."
+          nullable: true
         lotIdentity:
           maxLength: 6
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         printFlag:
@@ -1498,14 +1706,15 @@ components:
           $ref: '#/components/schemas/AutoAdditionalMeasurementRequired'
         additionalPrintRequirements:
           $ref: '#/components/schemas/AdditionalPrintRequirements'
-        teaM3HauteurPrint:
+        isPrintingTEAM3Hauteur:
           maxLength: 5
-          minLength: 0
+          minLength: 4
           type: boolean
+          description: "A boolean value to indicate whethear to print Team3-Hauteur\r\ntrue: print\r\nfalse: not print"
           nullable: true
         commitType:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         certificateRequestDetails:
@@ -1546,19 +1755,7 @@ components:
         - E
         - F
       type: string
-      description: >-
-        This field indicates the following: If an Australian Securities Exchange
-        combination was requested and the combination satisfies the contract
-        parameters of ASX the appropriate flag will be transmitted.<br />N.
-        Normal Combination<br />S. ASX24 Combination (formerly SFE)<br />4.
-        ASX19.5 54W Combination<br />5. ASX21.0 55W Combination<br />6. ASX22.6
-        56W Combination<br />7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W
-        Combination<br />8. ASX19.5 54W and ASX21.0 55W Combination<br />9:
-        ASX21.0 55W and ASX22.6 56W Combination<br />A. ICAP Wool Contract -
-        China Type 54P<br />B. ICAP Wool Contract - China Type 54<br />C. ICAP
-        Wool Contract - China Type 55<br />D. ICAP Wool Contract - China Type
-        56<br />E. ICAP Wool Contract - China Type 424<br />F. ICAP Wool
-        Contract - China Type Standard
+      description: 'This field indicates the following: If an Australian Securities Exchange combination was requested and the combination satisfies the contract parameters of ASX the appropriate flag will be transmitted.<br />N. Normal Combination<br />S. ASX24 Combination (formerly SFE)<br />4. ASX19.5 54W Combination<br />5. ASX21.0 55W Combination<br />6. ASX22.6 56W Combination<br />7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W Combination<br />8. ASX19.5 54W and ASX21.0 55W Combination<br />9: ASX21.0 55W and ASX22.6 56W Combination<br />A. ICAP Wool Contract - China Type 54P<br />B. ICAP Wool Contract - China Type 54<br />C. ICAP Wool Contract - China Type 55<br />D. ICAP Wool Contract - China Type 56<br />E. ICAP Wool Contract - China Type 424<br />F. ICAP Wool Contract - China Type Standard'
     CombinationRequest:
       enum:
         - 'N'
@@ -1569,12 +1766,7 @@ components:
         - '6'
         - C
       type: string
-      description: >-
-        N: Normal Combination Reuqest<br />S: ASX24 Combination Request
-        (formerly SFE)<br />X: ASX19.5 54W, ASX21.0 55W or ASX22.6 56W
-        Combination Request<br />4: ASX19.5 54W Combination Request<br />5:
-        ASX21.0 55W Combination Request<br />6: ASX22.6 56W Combination
-        Request<br />C: China Contract Combination Request
+      description: 'N: Normal Combination Reuqest<br />S: ASX24 Combination Request (formerly SFE)<br />X: ASX19.5 54W, ASX21.0 55W or ASX22.6 56W Combination Request<br />4: ASX19.5 54W Combination Request<br />5: ASX21.0 55W Combination Request<br />6: ASX22.6 56W Combination Request<br />C: China Contract Combination Request'
     ConditioningTestDetails:
       required:
         - certificateIdentity
@@ -1595,36 +1787,23 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         retestFlag:
           $ref: '#/components/schemas/RetestFlag'
         reissueChargeFlag:
           $ref: '#/components/schemas/ReissueChargeFlag'
         massOfGlobalSample:
-          pattern: ^-?\d{1,5}\.\d{1}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         sumOfODMasses:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         gainLossOfInvoiceMass:
-          pattern: '-?\d{1,6}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         moistureContent:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -1634,22 +1813,17 @@ components:
           type: number
           format: double
         netWeightODOfConsignment:
-          pattern: '-?\d{1,6}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         yieldType:
           $ref: '#/components/schemas/YieldType'
         officialRegain:
-          pattern: '-?\d{1,6}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         invoiceMassFlag:
           $ref: '#/components/schemas/InvoiceMassFlag'
         dateIssued:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
       additionalProperties: false
@@ -1668,38 +1842,40 @@ components:
         - TW
         - US
       type: string
-      description: >-
-        A code for the country in which the transmission was created. Country
-        Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New
-        Zealand<br />FR: France<br />ZA: South Africa<br />BE: Belgium<br />GB:
-        United Kingdom of Great Britain<br />DE: Germany<br />IT: Italy<br />NL:
-        Netherlands<br />CN: China<br />TW: Taiwan<br />US: USA
-    CustomProblemDetails:
+      description: 'A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa<br />BE: Belgium<br />GB: United Kingdom of Great Britain<br />DE: Germany<br />IT: Italy<br />NL: Netherlands<br />CN: China<br />TW: Taiwan<br />US: USA'
+    Currency:
       required:
-        - status
-        - title
+        - value
       type: object
       properties:
-        type:
-          type: string
-          description: "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
-          nullable: true
-        title:
-          minLength: 1
-          type: string
-          description: "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-        status:
-          type: integer
-          description: >-
-            The HTTP status code ([RFC7231], Section 6) generated by the origin
-            server for this occurrence of the problem.
-          format: int32
-        detail:
-          type: string
-          description: >-
-            A human-readable explanation specific to this occurrence of the
-            problem. e.g. 400, 403, etc.
-          nullable: true
+        value:
+          pattern: ^-?\d{1,10}\.\d{2}$
+          type: number
+          description: Total up to 12 digits with 2 digits after the decimal point.
+          format: double
+        currencyUnit:
+          $ref: '#/components/schemas/CurrencyUnit'
+      additionalProperties: false
+    CurrencyUnit:
+      enum:
+        - AUD
+        - BEF
+        - NZD
+        - BGP
+        - FRF
+        - DEM
+        - ITL
+        - CNY
+        - ANG
+        - TWD
+        - ZAR
+        - USD
+        - EUR
+      type: string
+      description: 'AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR: Euro'
+    CustomErrors:
+      type: object
+      properties:
         errors:
           type: object
           additionalProperties:
@@ -1707,15 +1883,14 @@ components:
             items:
               type: string
             nullable: true
-          description: >-
-            Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g.
-            errors: { "name": ["Product name is required"], "category":
-            ["Category name cannot be longer than 20 characters."]  }
+          description: 'Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { "name": ["Product name is required"], "category": ["Category name cannot be longer than 20 characters."]  }'
+          nullable: true
+        errorCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorCode'
           nullable: true
       additionalProperties: false
-      description: >-
-        A machine-readable format for specifying errors in HTTP API responses
-        based on https://tools.ietf.org/html/rfc7807.
     DarkAndMedullatedFibreRisk:
       enum:
         - E
@@ -1728,10 +1903,7 @@ components:
         - '5'
         - '6'
       type: string
-      description: >-
-        E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br
-        />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br
-        />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6
+      description: 'E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6'
     DichloromethaneTestDetails:
       required:
         - certificateIdentity
@@ -1746,18 +1918,13 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         retestFlag:
           $ref: '#/components/schemas/RetestFlag'
         reissueChargeFlag:
@@ -1768,12 +1935,23 @@ components:
           format: double
         dateIssued:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           format: date
       additionalProperties: false
+    ErrorCode:
+      enum:
+        - DOXCT
+        - INVTC
+        - INVFR
+        - INVAC
+        - INVCR
+        - INVDO
+        - INVSO
+        - INVEX
+      type: string
+      description: 'A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record.'
     FibreDiameterHistogram:
       type: object
       properties:
@@ -1802,10 +1980,10 @@ components:
       type: object
       properties:
         fibreDiameter:
-          pattern: '-?\d{1,2}'
-          type: integer
+          pattern: ^-?\d{1,2}\.\d{2}$
+          type: number
           description: Fibre Diameter for the measurement.
-          format: int32
+          format: double
         fibresMeasuredPercentage:
           pattern: ^-?\d{1,2}\.\d{4}$
           type: number
@@ -1874,98 +2052,28 @@ components:
           nullable: true
         coreTestSamplingDate:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           description: "For records 31 and 55 this is the date core test was sampled or date combination/OML was requested.\r\nFor the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.        \r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21."
           format: date
           nullable: true
         dateIssued:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           description: Date value in ISO 8601 standard UTC format. e.g. 2024-03-21.
           format: date
         factorLaserscanNumerator:
-          pattern: ^-?\d{1,15}\.\d{6}$
+          pattern: ^-?\d{1,10}\.\d{6}$
           type: number
           format: double
           nullable: true
         factorLaserscanDenominator:
-          pattern: ^-?\d{1,14}\.\d{6}$
+          pattern: ^-?\d{1,9}\.\d{6}$
           type: number
           format: double
-          nullable: true
-      additionalProperties: false
-    GetTestCertificatesRequest:
-      required:
-        - requestType
-      type: object
-      properties:
-        saleIdentity:
-          $ref: '#/components/schemas/SaleIdentity'
-        organisationRequested:
-          maxLength: 5
-          minLength: 0
-          type: string
-          nullable: true
-        saleDateRequested:
-          maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
-          type: string
-          description: Date value in ISO 8601 standard. e.g. 2024-03-21
-          format: date
-          nullable: true
-        startDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 0
-          pattern: >-
-            ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: >-
-            Date and Time value in ISO 8601 standard UTC format. e.g.
-            2024-03-21T19:25:04Z
-          format: date-time
-          nullable: true
-        endDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 0
-          pattern: >-
-            ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: >-
-            Date and Time with offset value in ISO 8601 standard UTC format.
-            e.g. 2024-03-21T19:25:04Z
-          format: date-time
-          nullable: true
-        useNetworkDateTime:
-          maxLength: 5
-          minLength: 0
-          type: boolean
-          nullable: true
-        requestType:
-          $ref: '#/components/schemas/RequestTypeForData'
-        woolTypeGroup:
-          $ref: '#/components/schemas/WoolTypeGroup'
-        recordTypesToBeExcluded:
-          maxLength: 80
-          minLength: 0
-          type: array
-          items:
-            type: string
-          description: >-
-            Record types and record sub-types to be excluded. e.g. 20 - Lot
-            Header, 22A - Group Header
-          nullable: true
-        season:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
           nullable: true
       additionalProperties: false
     GuidanceReportDetails:
@@ -1980,18 +2088,13 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -2054,6 +2157,11 @@ components:
           format: double
           nullable: true
       additionalProperties: false
+    InformationCode:
+      enum:
+        - OK
+      type: string
+      description: 'A code to indicate the information.<br />OK: All data received OK. '
     Instrument:
       enum:
         - 1
@@ -2074,10 +2182,7 @@ components:
         - 3
         - 4
       type: integer
-      description: >-
-        The code for a Test House.<br />1: Australian Wool Testing Authority<br
-        />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br
-        />4: South African Wool Testing Authority
+      description: 'The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority'
       format: int32
     LengthAfterCardingTestDetails:
       required:
@@ -2090,7 +2195,7 @@ components:
           $ref: '#/components/schemas/CertificateIdentity'
         laboratory:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
         lacBarbe:
           pattern: '-?\d{1,3}'
@@ -2118,21 +2223,19 @@ components:
           format: double
           nullable: true
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
       additionalProperties: false
     LotIdentityOrGroupName:
       type: object
       properties:
         lotIdentity:
           maxLength: 6
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         groupName:
           maxLength: 6
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
       additionalProperties: false
@@ -2148,16 +2251,7 @@ components:
         - 8
         - 9
       type: integer
-      description: >-
-        A code used to describe wool lot preparation. It is not wool type. `*`
-        wool meets clip preparation guidelines.`#` wool does not necessarily
-        meet clip preparation guidelines<br />1: (Suffix - P) Classed Grower Lot
-        *<br />2: (Suffix - M) Objectively Matched Lot<br />3: (Suffix - J)
-        Combined Certificate<br />4: (Suffix - I) Subjectively Matched
-        Interlot<br />5: (Suffix - B) Other Bulk Class Lot #<br />6: Not Used<br
-        />7: (Suffix - N) Objectively Matched Interlot<br />8: (Suffix - Q)
-        Classed Bulk Class Lot – Quality Managed *<br />9: (Suffix - D) Other
-        Grower Lot #
+      description: 'A code used to describe wool lot preparation. It is not wool type. `*` wool meets clip preparation guidelines.`#` wool does not necessarily meet clip preparation guidelines<br />1: (Suffix - P) Classed Grower Lot *<br />2: (Suffix - M) Objectively Matched Lot<br />3: (Suffix - J) Combined Certificate<br />4: (Suffix - I) Subjectively Matched Interlot<br />5: (Suffix - B) Other Bulk Class Lot #<br />6: Not Used<br />7: (Suffix - N) Objectively Matched Interlot<br />8: (Suffix - Q) Classed Bulk Class Lot – Quality Managed *<br />9: (Suffix - D) Other Grower Lot #'
       format: int32
     LsCertType:
       enum:
@@ -2165,9 +2259,7 @@ components:
         - 1
         - 2
       type: integer
-      description: >-
-        0: Length & Strength tested<br />1: Length only test requested<br />2:
-        Insufficient staples
+      description: '0: Length & Strength tested<br />1: Length only test requested<br />2: Insufficient staples'
       format: int32
     MulesingStatus:
       enum:
@@ -2178,10 +2270,7 @@ components:
         - M
         - ND
       type: string
-      description: >-
-        NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br
-        />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND:
-        Not Declared
+      description: 'NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared'
     Organisation:
       required:
         - organisationCode
@@ -2189,7 +2278,7 @@ components:
       properties:
         organisationCode:
           maxLength: 3
-          minLength: 0
+          minLength: 1
           type: string
         centre:
           $ref: '#/components/schemas/Centre'
@@ -2208,18 +2297,13 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -2290,14 +2374,7 @@ components:
         - M
         - 'N'
       type: string
-      description: >-
-        P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf Combination/OML
-        Certificate and associated sub-lots<br />S: Pdf associated sub-lots
-        excluding the Combination/OML Certificate<br />C: Pdf Combination
-        Certificate in Chinese and English<br />E: Pdf Combination Certificate
-        in Chinese and English & associated sublots in English)<br />M: Pdf
-        Combination Certificate in English & Mulesing Status report<br />N: Pdf
-        Mulesing Status report only
+      description: 'P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf Combination/OML Certificate and associated sub-lots<br />S: Pdf associated sub-lots excluding the Combination/OML Certificate<br />C: Pdf Combination Certificate in Chinese and English<br />E: Pdf Combination Certificate in Chinese and English & associated sublots in English)<br />M: Pdf Combination Certificate in English & Mulesing Status report<br />N: Pdf Mulesing Status report only'
     PrintRequirements:
       enum:
         - 0
@@ -2305,12 +2382,7 @@ components:
         - 2
         - 3
       type: integer
-      description: >-
-        0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two
-        certificates are (to be) issued, one with yield and one with
-        Laserscan<br />2: Yield only is (to be) shown, the actual yields being
-        those indicated by the values in the Yield Type fields<br />3: Laserscan
-        only is (to be) shown)
+      description: '0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)'
       format: int32
     ReissueChargeFlag:
       enum:
@@ -2319,10 +2391,7 @@ components:
         - 2
         - 3
       type: integer
-      description: >-
-        0: Original certificate charge<br />1: Re-issued no charge<br />2:
-        Re-issued with additional Charge<br />3: Re-issued with replacement
-        charge (credit issued against original certificate)
+      description: '0: Original certificate charge<br />1: Re-issued no charge<br />2: Re-issued with additional Charge<br />3: Re-issued with replacement charge (credit issued against original certificate)'
       format: int32
     ReissueType:
       enum:
@@ -2334,30 +2403,70 @@ components:
         - '06'
         - '07'
       type: string
-      description: >-
-        01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS)
-        Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC
-        and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and
-        Sale/Lot Change
+      description: '01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change'
     ReportingFlag:
       enum:
         - R
         - C
         - U
       type: string
-      description: >-
-        R: Report, results for this test are supplied for information only<br
-        />C: Certificate results for this test are certified<br />U: This lot is
-        untested and there are no certificate results
+      description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
+    RequestForData:
+      required:
+        - requestType
+      type: object
+      properties:
+        saleIdentity:
+          $ref: '#/components/schemas/SaleIdentity'
+        organisationRequested:
+          $ref: '#/components/schemas/Organisation'
+        saleDateRequested:
+          maxLength: 10
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Date value in ISO 8601 standard. e.g. 2024-03-21
+          format: date
+          nullable: true
+        startDateTimeStatusRequest:
+          maxLength: 20
+          minLength: 1
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          type: string
+          description: Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
+          format: date-time
+          nullable: true
+        endDateTimeStatusRequest:
+          maxLength: 20
+          minLength: 1
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          type: string
+          description: Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
+          format: date-time
+          nullable: true
+        isUsingNetworkDateTime:
+          maxLength: 5
+          minLength: 4
+          type: boolean
+          description: "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use."
+          nullable: true
+        requestType:
+          $ref: '#/components/schemas/RequestTypeForData'
+        woolTypeGroup:
+          $ref: '#/components/schemas/WoolTypeGroup'
+        season:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+          nullable: true
+      additionalProperties: false
     RequestTypeForData:
       enum:
         - 1
         - 3
         - 4
       type: integer
-      description: >-
-        1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data
-        Request
+      description: '1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
       format: int32
     RetestFlag:
       enum:
@@ -2377,7 +2486,7 @@ components:
           $ref: '#/components/schemas/SellingCentreType'
         saleNumber:
           maxLength: 2
-          minLength: 0
+          minLength: 1
           pattern: '-?\d{1,2}'
           type: integer
           format: int32
@@ -2399,18 +2508,13 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -2490,9 +2594,7 @@ components:
         - 5
         - 6
       type: integer
-      description: >-
-        0: Not Scoured<br />1: Scoured Aqueous<br />2: Scoured Dual Solvent<br
-        />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe
+      description: '0: Not Scoured<br />1: Scoured Aqueous<br />2: Scoured Dual Solvent<br />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe'
       format: int32
     SellingCentreType:
       enum:
@@ -2511,12 +2613,7 @@ components:
         - PS
         - T
       type: string
-      description: >-
-        NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU:
-        Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br
-        />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R:
-        Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus
-        Sales
+      description: 'NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales'
     SoftwareCompany:
       enum:
         - 1
@@ -2528,9 +2625,7 @@ components:
         - 7
         - 8
       type: integer
-      description: >-
-        1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br
-        />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA
+      description: '1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA'
       format: int32
     SoftwareIdentifier:
       type: object
@@ -2545,7 +2640,7 @@ components:
           nullable: true
         programName:
           maxLength: 4
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
       additionalProperties: false
@@ -2555,9 +2650,7 @@ components:
         - 2
         - 3
       type: integer
-      description: >-
-        Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br
-        />3: BulkClass
+      description: 'Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br />3: BulkClass'
       format: int32
     SubSamplingMethod:
       enum:
@@ -2634,8 +2727,8 @@ components:
             $ref: '#/components/schemas/BaleDetail'
           nullable: true
         propertyIdentificationCodes:
-          maxLength: 8
-          minLength: 0
+          maxItems: 8
+          minItems: 1
           type: array
           items:
             type: string
@@ -2651,19 +2744,19 @@ components:
       properties:
         brand:
           maxLength: 30
-          minLength: 0
+          minLength: 1
           type: string
         baleDescription:
           maxLength: 15
-          minLength: 0
+          minLength: 1
           type: string
         areaOfOrigin:
           maxLength: 4
-          minLength: 0
+          minLength: 1
           type: string
         locationWithinStore:
           maxLength: 20
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
       additionalProperties: false
@@ -2680,16 +2773,11 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         colourX:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
@@ -2752,9 +2840,8 @@ components:
           nullable: true
         dateIssued:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
           format: date
@@ -2779,15 +2866,11 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         colourX:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
@@ -2807,7 +2890,7 @@ components:
           nullable: true
         coreBulkValue:
           maxLength: 2
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         reissueChargeFlag:
@@ -2836,9 +2919,8 @@ components:
           $ref: '#/components/schemas/CalibrationFlag'
         dateIssued:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
           format: date
@@ -2934,16 +3016,11 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -3035,33 +3112,20 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          description: >-
-            The weight of a regrab sample, a grab sample taken after the wool
-            has been initially sampled and tested, is shown on the new
-            certificate
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         stapleLength:
           pattern: '-?\d{1,3}'
           type: integer
-          description: >-
-            The mean length of a staple from tip to base. At least 60 staples
-            are measured for each test lot.
+          description: The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.
           format: int32
         stapleLengthCvPercentage:
           pattern: '-?\d{1,2}'
           type: integer
-          description: >-
-            Staple length coefficient of variation. This is a measurement of the
-            staple length variability and is reported as a percentage.
+          description: Staple length coefficient of variation. This is a measurement of the staple length variability and is reported as a percentage.
           format: int32
         stapleStrength:
           pattern: '-?\d{1,3}'
@@ -3115,9 +3179,9 @@ components:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
           maxLength: 5
-          minLength: 0
+          minLength: 4
           type: boolean
-          description: "Specifies whether the L/S sample is secured or not. <br />\r\n`true` for a secured L/S sample <br />\r\n`false` for a unsecured L/S sample <br />"
+          description: "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
         expectedBarbe:
           pattern: '-?\d{1,3}'
           type: integer
@@ -3127,9 +3191,7 @@ components:
         team3HauteurCvPercentage:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
-          description: >-
-            Coefficient of Variation of Hauteur. NOTE: Refer to note in
-            `Team3Hauteur`.
+          description: 'Coefficient of Variation of Hauteur. NOTE: Refer to note in `Team3Hauteur`.'
           format: double
           nullable: true
         team3RomainePercentage:
@@ -3140,18 +3202,15 @@ components:
           nullable: true
         dateIssued:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           description: Date value in ISO 8601 standard. e.g. 2024-03-21
           format: date
         stapleStrengthLowest25Percent:
           pattern: '-?\d{1,2}'
           type: integer
-          description: >-
-            Average Staple Strength of the lowest 25% of staples measured for
-            Strength.
+          description: Average Staple Strength of the lowest 25% of staples measured for Strength.
           format: int32
           nullable: true
       additionalProperties: false
@@ -3175,29 +3234,20 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         stapleLength:
           pattern: '-?\d{1,3}'
           type: integer
-          description: >-
-            The mean length of a staple from tip to base. At least 60 staples
-            are measured for each test lot.
+          description: The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.
           format: int32
         stapleLengthCvPercentage:
           pattern: '-?\d{1,2}'
           type: integer
-          description: >-
-            Staple length coefficient of variation. This is a measurement of the
-            staple length variability and is reported as a percentage.
+          description: Staple length coefficient of variation. This is a measurement of the staple length variability and is reported as a percentage.
           format: int32
         stapleStrength:
           pattern: '-?\d{1,3}'
@@ -3220,8 +3270,6 @@ components:
           description: "The position of break indicates the location of the weakest part of the staple. \r\nBase - Percentage of wool staples with a base section position of break."
           format: int32
         team3Hauteur:
-          maximum: 99
-          minimum: 0
           pattern: '-?\d{1,3}'
           type: integer
           description: "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used."
@@ -3233,9 +3281,9 @@ components:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
           maxLength: 5
-          minLength: 0
+          minLength: 4
           type: boolean
-          description: "Specifies whether the L/S sample is secured or not. <br />\r\ntrue: for a secured L/S sample <br />\r\nflase: for a unsecured L/S sample <br />"
+          description: "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
         expectedBarbe:
           pattern: '-?\d{1,3}'
           type: integer
@@ -3245,9 +3293,7 @@ components:
         team3HauteurCvPercentage:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
-          description: >-
-            Coefficient of Variation of Hauteur. NOTE: Refer to note in
-            `Team3Hauteur`.
+          description: 'Coefficient of Variation of Hauteur. NOTE: Refer to note in `Team3Hauteur`.'
           format: double
           nullable: true
         team3RomainePercentage:
@@ -3258,18 +3304,15 @@ components:
           nullable: true
         dateIssued:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
           description: Date in ISO 8601 standard UTC date format. e.g. 2024-03-21
           format: date
         stapleStrengthLowest25Percent:
           pattern: '-?\d{1,2}'
           type: integer
-          description: >-
-            Average Staple Strength of the lowest 25% of staples measured for
-            Strength.
+          description: Average Staple Strength of the lowest 25% of staples measured for Strength.
           format: int32
           nullable: true
       additionalProperties: false
@@ -3289,16 +3332,11 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -3379,16 +3417,11 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -3467,16 +3500,11 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -3570,6 +3598,15 @@ components:
             $ref: '#/components/schemas/TestCertificateRequest'
           nullable: true
       additionalProperties: false
+    TestCertificateRequestsApiResult:
+      type: object
+      properties:
+        message:
+          $ref: '#/components/schemas/ApiMessage'
+        data:
+          $ref: '#/components/schemas/TestCertificateRequests'
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
     TestCertificateSubjectiveInterlotDetails:
       required:
         - certificateIdentity
@@ -3586,20 +3623,11 @@ components:
         certificateIdentity:
           $ref: '#/components/schemas/CertificateIdentity'
         charge:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Currency'
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          description: >-
-            The weight of a regrab sample, a grab sample taken after the wool
-            has been initially sampled and tested, is shown on the new
-            certificate.
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -3667,7 +3695,7 @@ components:
           nullable: true
         darkAndMedullatedFibreRisk:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
       additionalProperties: false
@@ -3688,7 +3716,7 @@ components:
           $ref: '#/components/schemas/Organisation'
         season:
           maxLength: 2
-          minLength: 0
+          minLength: 1
           type: integer
           format: int32
           nullable: true
@@ -3702,7 +3730,7 @@ components:
           $ref: '#/components/schemas/WeightNote'
         clientsCrossReference:
           maxLength: 8
-          minLength: 0
+          minLength: 1
           type: string
           nullable: true
         bales:
@@ -3710,34 +3738,19 @@ components:
           type: integer
           format: int32
         gross:
-          pattern: '-?\d{1,6}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         tare:
-          pattern: '-?\d{1,4}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         regrabSampleWeight:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         weightUnit:
           $ref: '#/components/schemas/WeightUnit'
         mulesingStatus:
           $ref: '#/components/schemas/MulesingStatus'
         declaredGross:
-          maxLength: 6
-          minLength: 0
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         declaredTare:
-          maxLength: 4
-          minLength: 0
-          type: integer
-          format: int32
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         lotType:
           $ref: '#/components/schemas/LotType'
         centreAuction:
@@ -3749,21 +3762,17 @@ components:
         scouredType:
           $ref: '#/components/schemas/ScouredType'
         gstAmount:
-          pattern: ^-?\d{1,4}\.\d{2}$
-          type: number
-          description: A GST Amount with 2 digits after the decimal point
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Currency'
         isGSTApplicable:
           maxLength: 5
-          minLength: 0
+          minLength: 4
           type: boolean
-          description: A Flag to determine if GST apply to invoice
+          description: "A boolean value to indicate whether the GST is aplicable. \r\ntrue: applicable.\r\nfalse: not applicable."
         isCompanyABNApplicable:
           maxLength: 5
-          minLength: 0
+          minLength: 4
           type: boolean
-          description: A Flag to determine if Compnay ABN apply to invoice
+          description: "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\ntrue: applicable.\r\nfalse: not applicable."
       additionalProperties: false
     TestCertificateUpdate:
       required:
@@ -3778,6 +3787,15 @@ components:
             $ref: '#/components/schemas/TestCertificateUpdateDetail'
           nullable: true
       additionalProperties: false
+    TestCertificateUpdateApiResult:
+      type: object
+      properties:
+        message:
+          $ref: '#/components/schemas/ApiMessage'
+        data:
+          $ref: '#/components/schemas/TestCertificateUpdate'
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
     TestCertificateUpdateDetail:
       required:
         - baleDescription
@@ -3801,7 +3819,7 @@ components:
           format: int32
         baleDescription:
           maxLength: 15
-          minLength: 0
+          minLength: 1
           type: string
           description: Generic alphanumeric field.
         woolBase:
@@ -3823,13 +3841,13 @@ components:
           $ref: '#/components/schemas/SaleIdentity'
         lotIdentityFrom:
           maxLength: 6
-          minLength: 0
+          minLength: 1
           type: string
           description: Generic alphanumeric field, optional.
           nullable: true
         lotIdentityTo:
           maxLength: 6
-          minLength: 0
+          minLength: 1
           type: string
           description: Generic alphanumeric field, optional.
           nullable: true
@@ -3850,17 +3868,10 @@ components:
             $ref: '#/components/schemas/TestCertificate'
       additionalProperties: false
     TestCertificatesApiResult:
-      required:
-        - isSuccessful
       type: object
       properties:
-        isSuccessful:
-          type: boolean
-          description: Indicator if the request has been successfully processed.
         message:
-          type: string
-          description: Contains information about the response if applicable.
-          nullable: true
+          $ref: '#/components/schemas/ApiMessage'
         data:
           $ref: '#/components/schemas/TestCertificates'
       additionalProperties: false
@@ -3878,16 +3889,14 @@ components:
             $ref: '#/components/schemas/Organisation'
           nullable: true
       additionalProperties: false
+      description: "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
     TransferType:
       enum:
         - Unrestrict
         - Restrict
         - Exclude
       type: string
-      description: >-
-        Unrestrict: Send document to all members<br />Restrict: Send document to
-        appointed members<br />Exclude: Send to all members excluding the
-        appointed members
+      description: 'Unrestrict: Send document to all members<br />Restrict: Send document to appointed members<br />Exclude: Send to all members excluding the appointed members'
     TransmissionHeader:
       required:
         - abn
@@ -3900,23 +3909,17 @@ components:
       properties:
         dateFormatLastRevised:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: >-
-            Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD)
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
           format: date
         dateTransmissionFileCreated:
           maxLength: 10
-          minLength: 0
-          pattern: >-
-            /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: >-
-            Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD)
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
           format: date
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
@@ -3934,10 +3937,35 @@ components:
           $ref: '#/components/schemas/SoftwareIdentifier'
         abn:
           maxLength: 11
-          minLength: 0
+          minLength: 1
           pattern: ^[0-9]+$
           type: string
           description: Australian Business Number, 11 digits string
+      additionalProperties: false
+    WarningCode:
+      enum:
+        - '11'
+        - '12'
+        - '13'
+        - '18'
+        - '19'
+        - '20'
+        - '24'
+        - DRVnn
+      type: string
+      description: 'A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error.'
+    Weight:
+      required:
+        - unit
+        - value
+      type: object
+      properties:
+        value:
+          pattern: ^-?\d{1,6}\.\d{2}$
+          type: number
+          format: double
+        unit:
+          $ref: '#/components/schemas/WeightUnit'
       additionalProperties: false
     WeightNote:
       required:
@@ -3947,11 +3975,11 @@ components:
       properties:
         prefix:
           maxLength: 1
-          minLength: 0
+          minLength: 1
           type: string
         suffix:
           maxLength: 7
-          minLength: 0
+          minLength: 1
           pattern: '-?\d{1,7}'
           type: string
       additionalProperties: false
@@ -3959,8 +3987,9 @@ components:
       enum:
         - 0
         - 1
+        - 2
       type: integer
-      description: '0: Kilograms<br />1: Pounds'
+      description: '0: Kilograms<br />1: Pounds<br />2: Grams'
       format: int32
     WoolPreparationCategory:
       enum:
@@ -3971,11 +4000,7 @@ components:
         - P
         - Q
       type: string
-      description: >-
-        B: Bulk Class<br />D: PTC (Pre-Sale Test Certificate Other Grower
-        Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br
-        />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />Q: Bulk
-        Class Quality Managed
+      description: 'B: Bulk Class<br />D: PTC (Pre-Sale Test Certificate Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />Q: Bulk Class Quality Managed'
     WoolTypeGroup:
       enum:
         - MFLC
@@ -3983,10 +4008,7 @@ components:
         - XBFS
         - ODDS
       type: string
-      description: >-
-        A code to indicate which section of the sale that lot belongs.<br
-        />MFLC: Merino fleece types<br />MSKT: Merino fleece types<br />XBFS:
-        Merino fleece types<br />ODDS: Merino fleece types
+      description: 'A code to indicate which section of the sale that lot belongs.<br />MFLC: Merino fleece types<br />MSKT: Merino fleece types<br />XBFS: Merino fleece types<br />ODDS: Merino fleece types'
     YieldType:
       enum:
         - 1
@@ -4024,41 +4046,17 @@ components:
         - 42
         - 43
       type: integer
-      description: >-
-        Yield Type indicates either the type of yield transmitted in another
-        field or record, or the type of yield used to arrive at the value in
-        another field.<br />1. RESERVED<br />2. RESERVED<br />3. Estimated.<br
-        />4. Schlumberger Combed Dry (1% TFM)<br />5. Schlumberger Combed Dry
-        (2% TFM)<br />7. Noble Combed in Oil<br />8. IWTO Scoured Yield at 16%
-        Regain<br />9. IWTO Scoured Yield at 17% Regain<br />10. Japanese Clean
-        Scoured<br />11. Australian Carbonising<br />12. IWTO Clean Wool
-        Content, 17% Regain<br />13. United States Custom Clean<br />14. Card
-        Sliver<br />15. ASTM Clean Wool Fibre Present<br />16. Noble Dry
-        Combed<br />17. Schlumberger Combed in Oil (4.6% TFM)<br />18. Noble
-        Combed Dry<br />19. Theoretical Card Sliver<br />20. ASTM Laboratory
-        Scoured Yield<br />21. Conditioned at 12.00%<br />22. Conditioned at
-        13.00%<br />23. Conditioned at 13.50%<br />24: Conditioned at 13.64%<br
-        />25. Conditioned at 14.00%<br />26. Conditioned at 14.40%<br />27.
-        Conditioned at 15.00%<br />28. Conditioned at 16.00%<br />29.
-        Conditioned at 17.00%<br />30. Conditioned at 18.00%<br />31.
-        Conditioned at 18.25%<br />32. Japanese Clean Scoured at 17%<br />33.
-        New Zealand Process Yield<br />42. IWT0 Schlumberger Oil T&N (2.0% &
-        T.FM.)<br />43. IWTO Clean Wool Content, 16% Regain
+      description: 'Yield Type indicates either the type of yield transmitted in another field or record, or the type of yield used to arrive at the value in another field.<br />1. RESERVED<br />2. RESERVED<br />3. Estimated.<br />4. Schlumberger Combed Dry (1% TFM)<br />5. Schlumberger Combed Dry (2% TFM)<br />7. Noble Combed in Oil<br />8. IWTO Scoured Yield at 16% Regain<br />9. IWTO Scoured Yield at 17% Regain<br />10. Japanese Clean Scoured<br />11. Australian Carbonising<br />12. IWTO Clean Wool Content, 17% Regain<br />13. United States Custom Clean<br />14. Card Sliver<br />15. ASTM Clean Wool Fibre Present<br />16. Noble Dry Combed<br />17. Schlumberger Combed in Oil (4.6% TFM)<br />18. Noble Combed Dry<br />19. Theoretical Card Sliver<br />20. ASTM Laboratory Scoured Yield<br />21. Conditioned at 12.00%<br />22. Conditioned at 13.00%<br />23. Conditioned at 13.50%<br />24: Conditioned at 13.64%<br />25. Conditioned at 14.00%<br />26. Conditioned at 14.40%<br />27. Conditioned at 15.00%<br />28. Conditioned at 16.00%<br />29. Conditioned at 17.00%<br />30. Conditioned at 18.00%<br />31. Conditioned at 18.25%<br />32. Japanese Clean Scoured at 17%<br />33. New Zealand Process Yield<br />42. IWT0 Schlumberger Oil T&N (2.0% & T.FM.)<br />43. IWTO Clean Wool Content, 16% Regain'
       format: int32
   securitySchemes:
     Bearer:
       type: apiKey
-      description: >-
-        JWT Access Token that is added in the Authorization header of the HTTP
-        request. Example: "Authorization: Bearer {token}". The JWT serves as a
-        credential that proves the identity of the client to the server.
+      description: 'JWT Access Token that is added in the Authorization header of the HTTP request. Example: "Authorization: Bearer {token}". The JWT serves as a credential that proves the identity of the client to the server.'
       name: Authorization
       in: header
     oauth2:
       type: oauth2
-      description: >-
-        Authentication for client applications by providing Client ID and Client
-        Secret for an JWT Access Token.
+      description: Authentication for client applications by providing Client ID and Client Secret for an JWT Access Token.
       flows:
         clientCredentials:
           tokenUrl: /auth-server/oauth/token

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,10 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
+    /// <summary>
+    /// Used to identify document transfer type: Restrict, Unrestric, and Exlcude.
+    /// Only used for data retrieval. Do not include it in the response.
+    /// </summary>
     public class TransferConfig
     {
         /// <summary>

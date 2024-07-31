@@ -60,12 +60,24 @@ namespace Wiedpug.API.ExampleResponses
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
                                     Currency = "AUD",
-                                    WeightUnit = WeightUnit.Kilograms,
-                                    PostSaleCharge = 25.96,
+                                    PostSaleCharge = new Currency{
+                                                Value = 25.96,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
                                     CalculationBasis = CalculationBasis.B,
-                                    FreightCharge = 0.00,
-                                    FreightRebate = 3.25,
-                                    ChargePerLot = 0.00,
+                                    FreightCharge = new Currency{
+                                                Value = 0.00,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                                    FreightRebate = new Currency{
+                                                Value = 3.25,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                                    ChargePerLot = new Currency
+                                    {
+                                        Value = 0.00,
+                                        CurrencyUnit = CurrencyUnit.AUD
+                                    },
                                     InvoicingOrganisation = new Organisation
                             {
                                                         OrganisationCode = "ABC",
@@ -99,7 +111,11 @@ namespace Wiedpug.API.ExampleResponses
                                     DiscountRate = 1.51,
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
-                                    StorageChargePerBalePerDay = 0.245,
+                                    StorageChargePerBalePerDay = new StorageChargeCurrency
+                                    {
+                                        Value = 0.245,
+                                        CurrencyUnit = CurrencyUnit.AUD
+                                    },
                                     PenaltyInterestRate = 11.35
                                 },
                                  LotInvoiceDetails = new List<LotInvoiceDetail>
@@ -110,17 +126,34 @@ namespace Wiedpug.API.ExampleResponses
                                          {
                                              LotIdentity = "39",
                                              Bales = 34,
-                                             Gross = 23,
-                                             Tare = 12,
+                                             Gross = new Weight
+                                            {
+                                                Value = 23.00,
+                                                Unit = WeightUnit.Kilograms
+                                            },
+                                             Tare = new Weight
+                                            {
+                                                Value = 12.00,
+                                                Unit = WeightUnit.Kilograms
+                                            },
                                              CostPerWeightUnit = 25,
-                                             FirstCost = 12.24,
+                                             FirstCost = new Currency{
+                                                Value = 12.24,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
                                              PackMaterial = PackMaterial.K
                                          },
                                          LotInvoiceExtension = new LotInvoiceExtension
                                          {
-                                             GSTFirstCost =141.11,
-                                             GSTTotalPostSaleCharge = 51.80,
-                                             TotalPostSaleCharge = 0.00
+                                             GSTFirstCost =new Currency{
+                                                Value = 14.11,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                                             GSTTotalPostSaleCharge = new Currency{
+                                                Value = 51.80,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                                             TotalPostSaleCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD }
                                          },
                                          LotHeaderVendorDeclarations = new List<LotHeaderVendorDeclaration>
                                          {
@@ -147,36 +180,76 @@ namespace Wiedpug.API.ExampleResponses
                                                           BaleNumber = "116",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
                                                           BaleRenumber = "181",
-                                                          Gross = 181,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 18.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "117",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 201,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 201.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "117",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 201,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = .02010,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "126",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 179,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 178.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "129",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 167,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 168.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       }
                                                   }
                                              }
@@ -204,7 +277,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF" },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -218,7 +291,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult<LotInvoices>()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new LotInvoices
                 {
@@ -266,12 +339,14 @@ namespace Wiedpug.API.ExampleResponses
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
                                     Currency = "AUD",
-                                    WeightUnit = WeightUnit.Kilograms,
-                                    PostSaleCharge = 25.96,
+                                    PostSaleCharge = new Currency { Value = 25.96, CurrencyUnit = CurrencyUnit.AUD },
                                     CalculationBasis = CalculationBasis.B,
-                                    FreightCharge = 0.00,
-                                    FreightRebate = 3.25,
-                                    ChargePerLot = 0.00,
+                                    FreightCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD },
+                                    FreightRebate = new Currency { Value = 3.25, CurrencyUnit = CurrencyUnit.AUD },
+                                    ChargePerLot = new Currency{ 
+                                        Value = 0.0,
+                                        CurrencyUnit = CurrencyUnit.AUD
+                                    },
                                     InvoicingOrganisation = new Organisation
                             {
                                                         OrganisationCode = "ABC",
@@ -303,7 +378,11 @@ namespace Wiedpug.API.ExampleResponses
                                     DiscountRate = 1.51,
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
-                                    StorageChargePerBalePerDay = 0.245,
+                                    StorageChargePerBalePerDay = new StorageChargeCurrency
+                                    {
+                                        Value =0.245,
+                                        CurrencyUnit = CurrencyUnit.AUD
+                                    },
                                     PenaltyInterestRate = 11.35
                                 },
                                  LotInvoiceDetails = new List<LotInvoiceDetail>
@@ -314,17 +393,25 @@ namespace Wiedpug.API.ExampleResponses
                                          {
                                              LotIdentity = "39",
                                              Bales = 34,
-                                             Gross = 23,
-                                             Tare = 12,
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 23.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 12.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
                                              CostPerWeightUnit = 25,
-                                             FirstCost = 12.24,
+                                             FirstCost = new Currency { Value = 12.24, CurrencyUnit = CurrencyUnit.AUD },
                                              PackMaterial = PackMaterial.K
                                          },
                                          LotInvoiceExtension = new LotInvoiceExtension
                                          {
-                                             GSTFirstCost =141.11,
-                                             GSTTotalPostSaleCharge = 51.80,
-                                             TotalPostSaleCharge = 0.00
+                                             GSTFirstCost =new Currency { Value = 141.11, CurrencyUnit = CurrencyUnit.AUD },
+                                             GSTTotalPostSaleCharge = new Currency { Value = 51.80, CurrencyUnit = CurrencyUnit.AUD },
+                                             TotalPostSaleCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD }
                                          },
                                          LotHeaderVendorDeclarations = new List<LotHeaderVendorDeclaration>
                                          {
@@ -351,36 +438,76 @@ namespace Wiedpug.API.ExampleResponses
                                                           BaleNumber = "116",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
                                                           BaleRenumber = "181",
-                                                          Gross = 181,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 181.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 12.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "117",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 201,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 201.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "117",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 201,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 18.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "126",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 179,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 178.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       },
                                                        new BaleDetail
                                                       {
                                                           BaleNumber = "129",
                                                           BaleDetailType = BaleDetailType.GreasyOrProcessed,
-                                                          Gross = 167,
-                                                          Tare = 2
+                                                          Gross = new Weight
+                                                            {
+                                                                Value = 168.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            },
+                                                          Tare = new Weight
+                                                            {
+                                                                Value = 2.00,
+                                                                Unit = WeightUnit.Kilograms
+                                                            }
                                                       }
                                                   }
                                              }

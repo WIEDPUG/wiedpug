@@ -17,8 +17,8 @@ namespace Wiedpug.Domain.Enums
     public enum CentreCodeBelgium
     {
 
-        [Description("ZB: Brussels - Belgium")]
-        ZB,
+        [Description("BR: Brussels - Belgium")]
+        BR,
 
     }
 }

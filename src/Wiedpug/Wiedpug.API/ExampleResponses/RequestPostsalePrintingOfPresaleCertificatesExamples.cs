@@ -63,7 +63,10 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
                         Bales = 23,
-                        Gross = 2340,
+                        Gross = new Weight{ 
+                            Value=2340.00,
+                            Unit = WeightUnit.Kilograms
+                        },
                         SaleIdentity = new SaleIdentity
                         {
                             SellingCentreType = SellingCentreType.AU_AU,
@@ -94,7 +97,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -108,7 +111,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new RequestPostsalePrintingOfPresaleCertificates
                 {
@@ -158,7 +161,11 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
                         Bales = 23,
-                        Gross = 2340,
+                        Gross = new Weight
+                        {
+                            Value =2340.00,
+                            Unit = WeightUnit.Kilograms
+                        },
                         SaleIdentity = new SaleIdentity
                         {
                             SellingCentreType = SellingCentreType.AU_AU,

@@ -17,10 +17,10 @@ namespace Wiedpug.Domain.Enums
     {
 
         [Description("ZI: Rome - Italy")]
-        ZI,
+        RO,
         [Description("ZJ: Biella - Italy")]
-        ZJ,
+        BI,
         [Description("ZK: Grisignano - Italy")]
-        ZK
+        GR
     }
 }

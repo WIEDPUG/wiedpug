@@ -14,7 +14,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(80)]
         public required string EncryptionKeyIdentifier { get; set; }
 
+        /// <summary>
+        /// The encrypted LotHeaderAwexData in string format based on base64 encoding.
+        /// </summary>
         [Required]
-        public required LotHeaderAwexData LotHeaderAwexData { get; set; }
+        public required string EncryptedLotHeaderAwexDataString { get; set; }
     }
 }

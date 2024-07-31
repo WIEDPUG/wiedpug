@@ -15,8 +15,8 @@ namespace Wiedpug.Domain.Enums
         "The codes used in transmissions are those defined in the Australian Wool Selling Regulation.")]
     public enum CentreCodeTaiwan
     {
-        [Description("ZO: Keelung - Taiwan")]
-        ZO,
+        [Description("KE: Keelung - Taiwan")]
+        KE,
 
     }
 }

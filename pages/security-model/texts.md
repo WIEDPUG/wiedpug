@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| texts:write  | ✓                   | ✓                |
+| texts:write  | ✓                   |                 |
 | texts:read   | ✓                   | ✓                |
 | texts:limited-write  |                    | ✓                |
 

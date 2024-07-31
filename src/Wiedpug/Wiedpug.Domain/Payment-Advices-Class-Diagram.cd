@@ -12,19 +12,13 @@
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvice" Collapsed="true">
     <Position X="11" Y="3" Width="2.5" />
-    <AssociationLine Name="PaymentAdviceDetailList" Type="Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate.PaymentAdviceDetail" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="12.5" Y="3.562" />
-        <Point X="12.5" Y="5.719" />
-        <Point X="14.75" Y="5.719" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAACQAAAAAAAAAAIAA=</HashCode>
       <FileName>Aggregates\PaymentAdvicesAggregate\PaymentAdvice.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="PaymentAdviceDetailList" />
@@ -43,13 +37,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Entities\Comment.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.ValueObject.Organisation" Collapsed="true">
-    <Position X="16" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>ValueObject\Organisation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate.PaymentAdviceDetail" Collapsed="true">
@@ -93,6 +80,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAQCQAAAAAAAQIBEKAAAIAAAAAAQAAEBAEAgAA=</HashCode>
       <FileName>Entities\PaymentAdviceWoolSaleHeaderLots.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

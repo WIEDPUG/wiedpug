@@ -11,6 +11,8 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [MinLength(6)]
+        [MaxLength(15)]
         public Currency? Charge { get; set; }
 
         [Required]
@@ -18,8 +20,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? RegrabSampleWeight { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]

@@ -75,16 +75,18 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Minimum conditioning mass, optional numeric field.
         /// </summary>
-        /// 
-        [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
-        public int? ConditioningMassMin { get; set; }
+        ///
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? ConditioningMassMin { get; set; }
 
         /// <summary>
         /// Maximum conditioning mass, optional numeric field.
         /// </summary>
-        /// 
-        [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
-        public int? ConditioningMassMax { get; set; }
+        ///
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? ConditioningMassMax { get; set; }
 
         /// <summary>
         /// Minimum LAC Barbe, optional numeric field.

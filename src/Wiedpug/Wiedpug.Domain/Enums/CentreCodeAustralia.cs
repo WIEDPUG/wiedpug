@@ -219,6 +219,39 @@ namespace Wiedpug.Domain.Enums
         [Description("YO: Australia - Young")]
         YO,
         [Description("Z: Australia - Albany")]
-        Z
+        Z,
+        //[Description("ZC:Christchurch - New Zealand")]
+        //ZC,
+        //[Description("ZD: Dunedin - New Zealand")]
+        //ZD,
+        //[Description("ZH: Blumenthal - Germany")]
+        //ZH,
+        //[Description("ZJ: Biella - Italy")]
+        //ZJ,
+        //[Description("ZK: Grisignano - Italy")]
+        //ZK,
+        //[Description("ZL: Mosgiel - New Zealand")]
+        //ZL,
+        //[Description("ZM: Nanjing - China")]
+        //ZM,
+        //[Description("ZO: Keelung - Taiwan")]
+        //ZO,
+        //[Description("ZP: Shanghai - China")]
+        //ZP,
+        //[Description("ZQ: Qingdao - China")]
+        //ZQ,
+        //[Description("ZR: Zhangjiagang - China")]
+        //ZR,
+        //[Description("Z: Timaru - New Zealand")]
+        //ZT,
+        //[Description("Z: Invercargill - New Zealand")]
+        //ZV,
+        //[Description("Z:Wellington - New Zealand")]
+        //ZW,
+        //[Description("Z: Napier – New Zealand")]
+        //ZX,
+        //[Description("Z: Ashburton – New Zealand")]
+        //ZY,
+
     }
 }

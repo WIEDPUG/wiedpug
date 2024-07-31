@@ -37,24 +37,29 @@ namespace Wiedpug.Domain.Entities
         public required string WoolDescription { get; set; } // FIELD NUMBER 5 - Wool Description - Start: 24, Size: 20, Data Type: AN, Justification: L, Requirement Designator: M
 
         /// <summary>
-        /// `true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.
+        /// A boolean value to indicate whether the GST amount is applicable to invoice. 
+        /// true: applicable.
+        /// false: not applicable.
         /// </summary>
-        /// 
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public bool? GstTaxInvoiceFlag { get; set; } // FIELD NUMBER 6 - GST Tax Invoice Flag - Start: 44, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
+        public bool? IsGstTaxInvoiceApplicable { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        [MinLength(3)]
+        [MaxLength(6)]
+        public PriceCurrency? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        [MinLength(3)]
+        [MaxLength(6)]
+        public PriceCurrency? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        [MinLength(3)]
+        [MaxLength(6)]
+        public PriceCurrency? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public int? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        [MinLength(3)]
+        [MaxLength(6)]
+        public PriceCurrency? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         /// <summary>
         /// Audit code used for verifying if AWEX-ID was issued by AWEX.

@@ -63,8 +63,9 @@ namespace Wiedpug.Domain.Entities
         /// Total 4 digits with 3 digits after the decimal point. e.g. 23.76
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_3)]
-        public required double StorageChargePerBalePerDay { get; set; } // FIELD NUMBER 9 - Storage Charge Per Bale/Day - Start: 42, Size: 4, Data Type: D3, Justification: R, Requirement Designator: M
+        [MinLength(7)]
+        [MaxLength(7)]
+        public required StorageChargeCurrency StorageChargePerBalePerDay { get; set; } // FIELD NUMBER 9 - Storage Charge Per Bale/Day - Start: 42, Size: 4, Data Type: D3, Justification: R, Requirement Designator: M
 
         /// <summary>
         /// Total 4 digits with 2 digits after the decimal point. e.g. 23.76
@@ -88,7 +89,8 @@ namespace Wiedpug.Domain.Entities
         /// This value is provided where a value in the Post Sale Charge Rebate field exists (11A)
         /// Total 5 digits with 2 digits after the decimal point. e.g. 123.76
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? PostSaleChargeRebate { get; set; } // FIELD NUMBER 12 - Post Sale Charge Rebate - Start: 56, Size: 5, Data Type: D2, Justification: R, Requirement Designator: O
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? PostSaleChargeRebate { get; set; } // FIELD NUMBER 12 - Post Sale Charge Rebate - Start: 56, Size: 5, Data Type: D2, Justification: R, Requirement Designator: O
     }
 }

@@ -16,13 +16,13 @@ namespace Wiedpug.Domain.Enums
     public enum CentreCodeChina
     {
 
-        [Description("ZM: Nanjing - China")]
-        ZM,
-        [Description("ZP: Shanghai - China")]
-        ZP,
-        [Description("ZQ: Qingdao - China")]
-        ZQ,
-        [Description("ZR: Zhangjiagang - China")]
-        ZR
+        [Description("NJ: Nanjing - China")]
+        NA,
+        [Description("SH: Shanghai - China")]
+        SH,
+        [Description("QD: Qingdao - China")]
+        QI,
+        [Description("ZJ: Zhangjiagang - China")]
+        ZH
     }
 }

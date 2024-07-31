@@ -12,6 +12,8 @@ namespace Wiedpug.Domain.ValueObject
     public class LotHeaderPricingDataOffer
     {
         [Required]
+        [MinLength(3)]
+        [MaxLength(6)]
         public required PriceCurrency? OfferPrice { get; set; } // FIELD NUMBER 5 - Offer Price (1) - Start: 6, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         /// <summary>

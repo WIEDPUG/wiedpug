@@ -98,30 +98,35 @@ paths:
                           - lotHeader:
                               lotIdentity: '671'
                               bales: 8
-                              gross: 1316
-                              tare: 16
+                              gross:
+                                value: 1316
+                                unit: 0
+                              tare:
+                                value: 16
+                                unit: 0
                               cataloguePageNumber: 65
                               updateType: A
                               catalogueSymbols: A
                               packMaterial: 'N'
                               lotType: 4
-                              lightestIndividualBaleWeight: 149
+                              lightestIndividualBaleWeight:
+                                value: 149
+                                unit: 0
                               reportingFlag: R
                               costPerWeightUnit:
                                 value: 0
                                 currencyUnit: AUD
-                              cleanWeight: 0
+                              cleanWeight:
+                                value: 0
+                                unit: 0
                               packCondition: 'N'
                               coreTestSamplingDate: '2019-01-17'
                               woolDescription: MF6S
-                              gstTaxInvoiceFlag: true
+                              isGstTaxInvoiceApplicable: true
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
                               encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
-                              lotHeaderAwexData:
-                                awexId: MF6S
-                                appraiserId: '99192'
-                                classersRegisteredNumber: '998921'
+                              encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: NM
                             lengthAndStrengthDetails:
@@ -134,7 +139,9 @@ paths:
                                 value: 188.5
                                 currencyUnit: AUD
                               laboratory: 1
-                              regrabSampleWeight: 0
+                              regrabSampleWeight:
+                                value: 0
+                                unit: 0
                               stapleLength: 73
                               stapleLengthCvPercentage: 16
                               stapleStrength: 35
@@ -275,30 +282,35 @@ paths:
                           - lotHeader:
                               lotIdentity: '671'
                               bales: 8
-                              gross: 1316
-                              tare: 16
+                              gross:
+                                value: 1316
+                                unit: 0
+                              tare:
+                                value: 16
+                                unit: 0
                               cataloguePageNumber: 65
                               updateType: A
                               catalogueSymbols: A
                               packMaterial: 'N'
                               lotType: 1
-                              lightestIndividualBaleWeight: 149
+                              lightestIndividualBaleWeight:
+                                value: 149
+                                unit: 0
                               reportingFlag: R
                               costPerWeightUnit:
                                 value: 0
                                 currencyUnit: AUD
-                              cleanWeight: 0
+                              cleanWeight:
+                                value: 0
+                                unit: 0
                               packCondition: 'N'
                               coreTestSamplingDate: '2019-01-17'
                               woolDescription: MF6S
-                              gstTaxInvoiceFlag: true
+                              isGstTaxInvoiceApplicable: true
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
                               encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
-                              lotHeaderAwexData:
-                                awexId: MF6S
-                                appraiserId: '99192'
-                                classersRegisteredNumber: '998921'
+                              encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: AA
                             lengthAndStrengthDetails:
@@ -311,7 +323,9 @@ paths:
                                 value: 256.23
                                 currencyUnit: AUD
                               laboratory: 1
-                              regrabSampleWeight: 0
+                              regrabSampleWeight:
+                                value: 0
+                                unit: 0
                               stapleLength: 73
                               stapleLengthCvPercentage: 16
                               stapleStrength: 35
@@ -383,14 +397,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example:
-                isSuccessful: true
+              example: {}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -408,7 +421,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -419,7 +432,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -430,7 +443,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -520,30 +533,35 @@ paths:
                       - lotHeader:
                           lotIdentity: '671'
                           bales: 8
-                          gross: 1316
-                          tare: 16
+                          gross:
+                            value: 1316
+                            unit: 0
+                          tare:
+                            value: 16
+                            unit: 0
                           cataloguePageNumber: 65
                           updateType: A
                           catalogueSymbols: A
                           packMaterial: 'N'
                           lotType: 2
-                          lightestIndividualBaleWeight: 149
+                          lightestIndividualBaleWeight:
+                            value: 149
+                            unit: 0
                           reportingFlag: R
                           costPerWeightUnit:
                             value: 0
                             currencyUnit: AUD
-                          cleanWeight: 0
+                          cleanWeight:
+                            value: 0
+                            unit: 0
                           packCondition: 'N'
                           coreTestSamplingDate: '2019-01-17'
                           woolDescription: MF6S
-                          gstTaxInvoiceFlag: true
+                          isGstTaxInvoiceApplicable: true
                           numberOfOverweightBales: 0
                         encryptedLotHeaderAwexData:
                           encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
-                          lotHeaderAwexData:
-                            awexId: MF6S
-                            appraiserId: '99192'
-                            classersRegisteredNumber: '998921'
+                          encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                         lotHeaderVendorDeclarations:
                           - mulesingStatus: AA
                         lengthAndStrengthDetails:
@@ -556,7 +574,9 @@ paths:
                             value: 230.23
                             currencyUnit: AUD
                           laboratory: 1
-                          regrabSampleWeight: 0
+                          regrabSampleWeight:
+                            value: 0
+                            unit: 0
                           stapleLength: 73
                           stapleLengthCvPercentage: 16
                           stapleStrength: 35
@@ -623,14 +643,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResult'
-              example:
-                isSuccessful: true
+              example: {}
         '400':
           description: Bad Request
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -648,7 +667,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -659,7 +678,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -670,7 +689,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -699,7 +718,7 @@ paths:
                     organisationRequested:
                       organisationCode: ANF
                     saleDateRequested: '2023-10-31'
-                    useNetworkDateTime: false
+                    isUsingNetworkDateTime: false
                     woolTypeGroup: MFLC
                     excludedClasses:
                       - classToBeExcluded: InterlotComponentBaleHeader
@@ -712,7 +731,7 @@ paths:
                     organisationRequested:
                       organisationCode: ANF
                     saleDateRequested: '2023-10-31'
-                    useNetworkDateTime: false
+                    isUsingNetworkDateTime: false
                     woolTypeGroup: MFLC
                     excludedClasses:
                       - classToBeExcluded: InterlotComponentBaleHeader
@@ -727,7 +746,7 @@ paths:
                     organisationRequested:
                       organisationCode: ANF
                     saleDateRequested: '2023-10-31'
-                    useNetworkDateTime: false
+                    isUsingNetworkDateTime: false
                     woolTypeGroup: MFLC
                     excludedClasses:
                       - classToBeExcluded: InterlotComponentBaleHeader
@@ -742,7 +761,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/CatalogueListApiResult'
               example:
-                isSuccessful: true
                 data:
                   - transmissionHeader:
                       dateFormatLastRevised: 2020007-15
@@ -809,29 +827,34 @@ paths:
                           - lotHeader:
                               lotIdentity: '671'
                               bales: 8
-                              gross: 1316
-                              tare: 16
+                              gross:
+                                value: 1316
+                                unit: 0
+                              tare:
+                                value: 16
+                                unit: 0
                               cataloguePageNumber: 65
                               updateType: A
                               catalogueSymbols: A
                               packMaterial: 'N'
                               lotType: 5
-                              lightestIndividualBaleWeight: 149
+                              lightestIndividualBaleWeight:
+                                value: 149
+                                unit: 0
                               reportingFlag: R
                               costPerWeightUnit:
                                 value: 0
                                 currencyUnit: AUD
-                              cleanWeight: 0
+                              cleanWeight:
+                                value: 0
+                                unit: 0
                               packCondition: 'N'
                               coreTestSamplingDate: '2019-01-17'
                               woolDescription: MF6S
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
                               encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
-                              lotHeaderAwexData:
-                                awexId: MF6S
-                                appraiserId: '99192'
-                                classersRegisteredNumber: '998921'
+                              encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: M
                             lengthAndStrengthDetails:
@@ -844,7 +867,9 @@ paths:
                                 value: 174.3
                                 currencyUnit: AUD
                               laboratory: 1
-                              regrabSampleWeight: 0
+                              regrabSampleWeight:
+                                value: 0
+                                unit: 0
                               stapleLength: 73
                               stapleLengthCvPercentage: 16
                               stapleStrength: 35
@@ -905,7 +930,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: One or more validation errors occurred
@@ -923,7 +948,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
                 title: Unauthorized
@@ -934,7 +959,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
                 title: You don't have permission to access this resource
@@ -945,7 +970,7 @@ paths:
           content:
             application/problem+json:
               schema:
-                $ref: '#/components/schemas/CustomProblemDetails'
+                $ref: '#/components/schemas/ApiErrorResult'
               example:
                 type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
                 title: An error occurred while processing your required
@@ -953,6 +978,32 @@ paths:
                 detail: Error details..
 components:
   schemas:
+    ApiErrorResult:
+      required:
+        - status
+        - title
+      type: object
+      properties:
+        type:
+          type: string
+          description: "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
+          nullable: true
+        title:
+          minLength: 1
+          type: string
+          description: "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+        status:
+          type: integer
+          description: The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.
+          format: int32
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.
+          nullable: true
+        errors:
+          $ref: '#/components/schemas/CustomErrors'
+      additionalProperties: false
+      description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
     ApiMessage:
       type: object
       properties:
@@ -964,15 +1015,15 @@ components:
           items:
             $ref: '#/components/schemas/WarningCode'
           nullable: true
+        informationCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/InformationCode'
+          nullable: true
       additionalProperties: false
     ApiResult:
-      required:
-        - isSuccessful
       type: object
       properties:
-        isSuccessful:
-          type: boolean
-          description: Indicator if the request has been successfully processed.
         message:
           $ref: '#/components/schemas/ApiMessage'
         data:
@@ -1026,13 +1077,8 @@ components:
             $ref: '#/components/schemas/CatalogueWoolSaleHeader'
       additionalProperties: false
     CatalogueListApiResult:
-      required:
-        - isSuccessful
       type: object
       properties:
-        isSuccessful:
-          type: boolean
-          description: Indicator if the request has been successfully processed.
         message:
           $ref: '#/components/schemas/ApiMessage'
         data:
@@ -1321,40 +1367,40 @@ components:
       description: 'This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany'
     CentreCodeBelgium:
       enum:
-        - ZB
+        - BR
       type: string
-      description: 'This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium'
+      description: 'This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium'
     CentreCodeChina:
       enum:
-        - ZM
-        - ZP
-        - ZQ
-        - ZR
-      type: string
-      description: 'This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China'
-    CentreCodeFrance:
-      enum:
-        - ZF
-      type: string
-      description: 'This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France'
-    CentreCodeGermany:
-      enum:
-        - ZG
+        - NA
+        - SH
+        - QI
         - ZH
       type: string
-      description: 'This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany'
+      description: 'This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China'
+    CentreCodeFrance:
+      enum:
+        - PA
+      type: string
+      description: 'This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France'
+    CentreCodeGermany:
+      enum:
+        - BE
+        - BL
+      type: string
+      description: 'This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany'
     CentreCodeItaly:
       enum:
-        - ZI
-        - ZJ
-        - ZK
+        - RO
+        - BI
+        - GR
       type: string
       description: 'This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy'
     CentreCodeNetherlands:
       enum:
-        - ZN
+        - AM
       type: string
-      description: 'This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands'
+      description: 'This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands'
     CentreCodeNewZealand:
       enum:
         - A
@@ -1424,24 +1470,24 @@ components:
       description: 'This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo<br />ZY: New Zealand - Ashburton'
     CentreCodeSouthAfrica:
       enum:
-        - ZS
+        - CA
       type: string
-      description: 'This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa'
+      description: 'This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa'
     CentreCodeTaiwan:
       enum:
-        - ZO
+        - KE
       type: string
-      description: 'This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan'
+      description: 'This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan'
     CentreCodeUnitedKingdomOfGreatBritain:
       enum:
-        - ZE
+        - LO
       type: string
-      description: 'This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain'
+      description: 'This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain'
     CentreCodeUnitedStatesOfAmerica:
       enum:
-        - ZU
+        - WA
       type: string
-      description: 'This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA'
+      description: 'This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA'
     CertificateIDPrefix:
       enum:
         - 2
@@ -1515,10 +1561,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         colourX:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
@@ -1608,9 +1651,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
+          $ref: '#/components/schemas/Weight'
         colourX:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
@@ -1774,10 +1815,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -1909,32 +1947,6 @@ components:
             $ref: '#/components/schemas/ErrorCode'
           nullable: true
       additionalProperties: false
-    CustomProblemDetails:
-      required:
-        - status
-        - title
-      type: object
-      properties:
-        type:
-          type: string
-          description: "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
-          nullable: true
-        title:
-          minLength: 1
-          type: string
-          description: "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-        status:
-          type: integer
-          description: The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.
-          format: int32
-        detail:
-          type: string
-          description: A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.
-          nullable: true
-        errors:
-          $ref: '#/components/schemas/CustomErrors'
-      additionalProperties: false
-      description: A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807.
     DarkAndMedullatedFibreRisk:
       enum:
         - E
@@ -1956,16 +1968,18 @@ components:
       description: 'D: Delivery Nominated Destination<br />L: Loaded on Transport'
     EncryptedLotHeaderAwexData:
       required:
+        - encryptedLotHeaderAwexDataString
         - encryptionKeyIdentifier
-        - lotHeaderAwexData
       type: object
       properties:
         encryptionKeyIdentifier:
           maxLength: 80
           minLength: 1
           type: string
-        lotHeaderAwexData:
-          $ref: '#/components/schemas/LotHeaderAwexData'
+        encryptedLotHeaderAwexDataString:
+          minLength: 1
+          type: string
+          description: The encrypted LotHeaderAwexData in string format based on base64 encoding.
       additionalProperties: false
     ErrorCode:
       enum:
@@ -2113,6 +2127,11 @@ components:
           format: double
           nullable: true
       additionalProperties: false
+    InformationCode:
+      enum:
+        - OK
+      type: string
+      description: 'A code to indicate the information.<br />OK: All data received OK. '
     Instrument:
       enum:
         - 1
@@ -2188,11 +2207,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          description: The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         stapleLength:
           pattern: ^-?\d{1,3}\.\d{2}$
           type: number
@@ -2253,9 +2268,9 @@ components:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
           maxLength: 5
-          minLength: 1
+          minLength: 4
           type: boolean
-          description: "Specifies whether the L/S sample is secured or not. <br />\r\n`true` for a secured L/S sample <br />\r\n`false` for a unsecured L/S sample <br />"
+          description: "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
         expectedBarbe:
           pattern: ^-?\d{1,3}\.\d{2}$
           type: number
@@ -2311,10 +2326,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         stapleLength:
           pattern: ^-?\d{1,3}\.\d{2}$
           type: number
@@ -2355,9 +2367,9 @@ components:
           $ref: '#/components/schemas/LsCertType'
         isLsSampleSecured:
           maxLength: 5
-          minLength: 1
+          minLength: 4
           type: boolean
-          description: "Specifies whether the L/S sample is secured or not. <br />\r\ntrue: for a secured L/S sample <br />\r\nflase: for a unsecured L/S sample <br />"
+          description: "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
         expectedBarbe:
           pattern: ^-?\d{1,3}\.\d{2}$
           type: number
@@ -2413,18 +2425,11 @@ components:
           type: integer
           format: int32
         gross:
-          pattern: '-?\d{1,6}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         tare:
-          pattern: '-?\d{1,4}'
-          type: integer
-          format: int32
+          $ref: '#/components/schemas/Weight'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         cataloguePageNumber:
           pattern: '-?\d{1,3}'
           type: integer
@@ -2432,9 +2437,9 @@ components:
           nullable: true
         isNoLot:
           maxLength: 5
-          minLength: 1
+          minLength: 4
           type: boolean
-          description: "A flag used to indicate whether or not the lot is included for sale in the auction.\r\nIt is used in New Zealand only.\r\n`true` = Normal Lot, `false` = No Lot"
+          description: "A boolean value to indicate whether the lot is included for sale in the auction.\r\nIt is used in New Zealand only.\r\ntrue: normal Lot\r\nfalse: not a normal Lot"
           nullable: true
         sourceCode:
           $ref: '#/components/schemas/SourceCode'
@@ -2450,11 +2455,7 @@ components:
         lotType:
           $ref: '#/components/schemas/LotType'
         lightestIndividualBaleWeight:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          description: This is the Reweigh Gross Kg of the lightest bale in the lot.
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         reportingFlag:
           $ref: '#/components/schemas/ReportingFlag'
         firstOfferSeason:
@@ -2473,10 +2474,7 @@ components:
         costPerWeightUnit:
           $ref: '#/components/schemas/PriceCurrency'
         cleanWeight:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         yieldType:
           $ref: '#/components/schemas/YieldType'
         weightUnit:
@@ -2509,11 +2507,11 @@ components:
           minLength: 1
           type: string
           description: "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\nAlternative valid appraisal descriptions include AWC type, Exporter type. \r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\nThis field is to be always transmitted in upper case."
-        gstTaxInvoiceFlag:
+        isGstTaxInvoiceApplicable:
           maxLength: 5
-          minLength: 1
+          minLength: 4
           type: boolean
-          description: '`true` = GST amount is applicable to invoice. `false` = GST amount is not applicable to invoice.'
+          description: "A boolean value to indicate whether the GST amount is applicable to invoice. \r\ntrue: applicable.\r\nfalse: not applicable."
           nullable: true
         brokerReservePrice:
           $ref: '#/components/schemas/PriceCurrency'
@@ -2534,40 +2532,6 @@ components:
           type: integer
           description: This is the total number of bales with a Reweigh Gross Kg over 204kg.
           format: int32
-          nullable: true
-      additionalProperties: false
-    LotHeaderAwexData:
-      type: object
-      properties:
-        awexId:
-          maxLength: 20
-          minLength: 1
-          type: string
-          description: AWEX-ID must conform to the current AWEX-ID code standard.
-          nullable: true
-        appraiserId:
-          maxLength: 6
-          minLength: 1
-          type: string
-          description: Contains the AWEX accredited appraiser ID for this lot.
-          nullable: true
-        classersRegisteredNumber:
-          maxLength: 6
-          minLength: 1
-          type: string
-          description: The AWEX stencil number of the classer or classing house responsible for the final classification of the wool before sale.
-          nullable: true
-        awexIdComment:
-          maxLength: 14
-          minLength: 1
-          type: string
-          description: This field provides for additional comments relating to the information contained in the `awexId` field.
-          nullable: true
-        awexIdAuditCode:
-          maxLength: 10
-          minLength: 1
-          type: string
-          description: Audit code used for verifying if `awexId` was issued by AWEX
           nullable: true
       additionalProperties: false
     LotHeaderPricingData:
@@ -2664,10 +2628,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -2752,10 +2713,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -2893,10 +2851,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -2983,7 +2938,7 @@ components:
         value:
           pattern: '-?\d{1,6}'
           type: integer
-          description: Total up to 12 digits with 2 digits after the decimal point.
+          description: Total up to 12 digits with 2 digits after the decimal point of per unit cost. It is in cent.
           format: int32
         currencyUnit:
           $ref: '#/components/schemas/CurrencyUnit'
@@ -3079,11 +3034,11 @@ components:
           description: Date and Time with offset value in ISO 8601 standard. e.g. 2024-03-21T19:25:04+00:00
           format: date-time
           nullable: true
-        useNetworkDateTime:
+        isUsingNetworkDateTime:
           maxLength: 5
-          minLength: 1
+          minLength: 4
           type: boolean
-          description: "Boolean value to indicate wethear to use Network Datetime\r\nTrue for use Network Datetime, False for not use"
+          description: "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use."
           nullable: true
         woolTypeGroup:
           $ref: '#/components/schemas/WoolTypeGroup'
@@ -3250,11 +3205,7 @@ components:
         laboratory:
           $ref: '#/components/schemas/Laboratory'
         regrabSampleWeight:
-          pattern: ^-?\d{1,2}\.\d{2}$
-          type: number
-          description: The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
-          format: double
-          nullable: true
+          $ref: '#/components/schemas/Weight'
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
@@ -3339,6 +3290,7 @@ components:
             $ref: '#/components/schemas/Organisation'
           nullable: true
       additionalProperties: false
+      description: "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
     TransferType:
       enum:
         - Unrestrict
@@ -3410,12 +3362,26 @@ components:
         - DRVnn
       type: string
       description: 'A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error.'
+    Weight:
+      required:
+        - unit
+        - value
+      type: object
+      properties:
+        value:
+          pattern: ^-?\d{1,6}\.\d{2}$
+          type: number
+          format: double
+        unit:
+          $ref: '#/components/schemas/WeightUnit'
+      additionalProperties: false
     WeightUnit:
       enum:
         - 0
         - 1
+        - 2
       type: integer
-      description: '0: Kilograms<br />1: Pounds'
+      description: '0: Kilograms<br />1: Pounds<br />2: Grams'
       format: int32
     WoolSaleHeaderLots:
       required:
@@ -3480,9 +3446,9 @@ components:
           $ref: '#/components/schemas/Organisation'
         isFinalCatalogue:
           maxLength: 5
-          minLength: 1
+          minLength: 4
           type: boolean
-          description: "Indicates whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section. \r\n`true` = Final Catalogue. `false` = Not Final Catalogue"
+          description: "A boolean value to indicate whethear the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.\r\ntrue: is a final catalogue\r\nfalse: is not a final catalogue"
         releasingOrganisation:
           $ref: '#/components/schemas/Organisation'
         sellingOrganisation:
@@ -3506,7 +3472,6 @@ components:
           description: Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.
           nullable: true
         discountRate:
-          maxLength: 10
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
           description: "The date on which payment is due. Also known as Prompt Date.\r\nDate value in ISO 8601 standard UTC format. e.g. 2024-03-21"
@@ -3571,11 +3536,11 @@ components:
           minLength: 1
           type: string
           nullable: true
-        reservePriceDisplayFlag:
+        isReservePriceDisplayed:
           maxLength: 5
-          minLength: 1
+          minLength: 4
           type: boolean
-          description: '`true` = Available to Buyers, `false` = Not available to buyers.'
+          description: "A boolean value to indicates whether to display reserve price to buyers.\r\ntrue: display.\r\nfalse: not display."
           nullable: true
         tenderSaleReplyDateTime:
           maxLength: 24

@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| dark-and-medullated-fibre-risk-verification:write  | ✓                   | ✓                |
+| dark-and-medullated-fibre-risk-verification:write  | ✓                   |                 |
 | dark-and-medullated-fibre-risk-verification:read   | ✓                   | ✓                |
 | dark-and-medullated-fibre-risk-verification:limited-write  |                    | ✓                |
 

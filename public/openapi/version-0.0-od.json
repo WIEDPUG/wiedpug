@@ -42,7 +42,7 @@
                                 "abn": "72001967184",
                                 "startDateTimeStatusRequest": "2024-02-01T19:25:04Z",
                                 "endDateTimeStatusRequest": "2024-03-21T19:25:04Z",
-                                "useNetworkDateTime": true
+                                "isUsingNetworkDateTime": true
                             }
                         }
                     },
@@ -57,7 +57,6 @@
                                     "$ref": "#/components/schemas/OrganisationDetailsApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
                                     "data": {
                                         "transmissionHeader": {
                                             "dateFormatLastRevised": "2020-07-15",
@@ -86,7 +85,7 @@
                                                 "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                                 "dateLastUpdated": "2020-04-28",
                                                 "industryGroupId": "E",
-                                                "transmitterFlag": true,
+                                                "isTransmitter": true,
                                                 "phoneNumber": {
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
@@ -133,7 +132,7 @@
                                                 "nameOfOrganisation": "DEMO BUYER 1",
                                                 "dateLastUpdated": "2020-04-28",
                                                 "industryGroupId": "E",
-                                                "transmitterFlag": false
+                                                "isTransmitter": false
                                             },
                                             {
                                                 "id": "3",
@@ -143,7 +142,7 @@
                                                 "nameOfOrganisation": "AUSTRALIAN WOOL TESTING AUTH LTD",
                                                 "dateLastUpdated": "2020-04-28",
                                                 "industryGroupId": "A",
-                                                "transmitterFlag": true,
+                                                "isTransmitter": true,
                                                 "phoneNumber": {
                                                     "standardPhoneNumber": {
                                                         "countryCode": "61",
@@ -195,7 +194,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -222,7 +221,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -238,7 +237,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -254,7 +253,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -269,7 +268,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -330,7 +329,7 @@
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
                                             "industryGroupId": "T",
-                                            "transmitterFlag": true,
+                                            "isTransmitter": true,
                                             "phoneNumber": {
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
@@ -379,7 +378,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -395,7 +394,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -411,7 +410,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -426,7 +425,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -482,7 +481,7 @@
                                         "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                         "dateLastUpdated": "2020-04-28",
                                         "industryGroupId": "E",
-                                        "transmitterFlag": true,
+                                        "isTransmitter": true,
                                         "phoneNumber": {
                                             "standardPhoneNumber": {
                                                 "countryCode": "61",
@@ -557,7 +556,7 @@
                                             "nameOfOrganisation": "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
                                             "dateLastUpdated": "2020-04-28",
                                             "industryGroupId": "T",
-                                            "transmitterFlag": true,
+                                            "isTransmitter": true,
                                             "phoneNumber": {
                                                 "standardPhoneNumber": {
                                                     "countryCode": "61",
@@ -606,7 +605,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -633,7 +632,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -649,7 +648,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -665,7 +664,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -680,7 +679,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -717,9 +716,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -728,7 +725,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -744,7 +741,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -760,7 +757,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -775,7 +772,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -849,6 +846,40 @@
                 },
                 "additionalProperties": false
             },
+            "ApiErrorResult": {
+                "required": [
+                    "status",
+                    "title"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "nullable": true
+                    },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+                        "format": "int32"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+                        "nullable": true
+                    },
+                    "errors": {
+                        "$ref": "#/components/schemas/CustomErrors"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+            },
             "ApiMessage": {
                 "type": "object",
                 "properties": {
@@ -862,20 +893,20 @@
                             "$ref": "#/components/schemas/WarningCode"
                         },
                         "nullable": true
+                    },
+                    "informationCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InformationCode"
+                        },
+                        "nullable": true
                     }
                 },
                 "additionalProperties": false
             },
             "ApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -1051,51 +1082,51 @@
             },
             "CentreCodeBelgium": {
                 "enum": [
-                    "ZB"
+                    "BR"
                 ],
                 "type": "string",
-                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium"
+                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium"
             },
             "CentreCodeChina": {
                 "enum": [
-                    "ZM",
-                    "ZP",
-                    "ZQ",
-                    "ZR"
-                ],
-                "type": "string",
-                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China"
-            },
-            "CentreCodeFrance": {
-                "enum": [
-                    "ZF"
-                ],
-                "type": "string",
-                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France"
-            },
-            "CentreCodeGermany": {
-                "enum": [
-                    "ZG",
+                    "NA",
+                    "SH",
+                    "QI",
                     "ZH"
                 ],
                 "type": "string",
-                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany"
+                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China"
+            },
+            "CentreCodeFrance": {
+                "enum": [
+                    "PA"
+                ],
+                "type": "string",
+                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France"
+            },
+            "CentreCodeGermany": {
+                "enum": [
+                    "BE",
+                    "BL"
+                ],
+                "type": "string",
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany"
             },
             "CentreCodeItaly": {
                 "enum": [
-                    "ZI",
-                    "ZJ",
-                    "ZK"
+                    "RO",
+                    "BI",
+                    "GR"
                 ],
                 "type": "string",
                 "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
             },
             "CentreCodeNetherlands": {
                 "enum": [
-                    "ZN"
+                    "AM"
                 ],
                 "type": "string",
-                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands"
+                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands"
             },
             "CentreCodeNewZealand": {
                 "enum": [
@@ -1168,31 +1199,31 @@
             },
             "CentreCodeSouthAfrica": {
                 "enum": [
-                    "ZS"
+                    "CA"
                 ],
                 "type": "string",
-                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa"
+                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa"
             },
             "CentreCodeTaiwan": {
                 "enum": [
-                    "ZO"
+                    "KE"
                 ],
                 "type": "string",
-                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan"
+                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
             },
             "CentreCodeUnitedKingdomOfGreatBritain": {
                 "enum": [
-                    "ZE"
+                    "LO"
                 ],
                 "type": "string",
-                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain"
+                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain"
             },
             "CentreCodeUnitedStatesOfAmerica": {
                 "enum": [
-                    "ZU"
+                    "WA"
                 ],
                 "type": "string",
-                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA"
+                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA"
             },
             "Contact": {
                 "type": "object",
@@ -1274,40 +1305,6 @@
                 },
                 "additionalProperties": false
             },
-            "CustomProblemDetails": {
-                "required": [
-                    "status",
-                    "title"
-                ],
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
-                        "nullable": true
-                    },
-                    "title": {
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-                    },
-                    "status": {
-                        "type": "integer",
-                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
-                        "format": "int32"
-                    },
-                    "detail": {
-                        "type": "string",
-                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
-                        "nullable": true
-                    },
-                    "errors": {
-                        "$ref": "#/components/schemas/CustomErrors"
-                    }
-                },
-                "additionalProperties": false,
-                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
-            },
             "ErrorCode": {
                 "enum": [
                     "DOXCT",
@@ -1363,11 +1360,11 @@
                         "format": "date-time",
                         "nullable": true
                     },
-                    "useNetworkDateTime": {
+                    "isUsingNetworkDateTime": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Indicate whether is using network datetime or not. true = use network datetime, false = Not use network datetime.",
+                        "description": "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use.",
                         "nullable": true
                     }
                 },
@@ -1387,6 +1384,13 @@
                 ],
                 "type": "string",
                 "description": "A: Agent / Broker<br />C: Carrier<br />E: Exporter / Buyer<br />D: Dump<br />M: Miscellaneous<br />P: Port<br />S: Shipping<br />T: Test House<br />V: Vessel"
+            },
+            "InformationCode": {
+                "enum": [
+                    "OK"
+                ],
+                "type": "string",
+                "description": "A code to indicate the information.<br />OK: All data received OK. "
             },
             "Name": {
                 "type": "object",
@@ -1433,9 +1437,9 @@
                 "required": [
                     "dateLastUpdated",
                     "industryGroupId",
+                    "isTransmitter",
                     "nameOfOrganisation",
-                    "organisation",
-                    "transmitterFlag"
+                    "organisation"
                 ],
                 "type": "object",
                 "properties": {
@@ -1462,11 +1466,11 @@
                     "industryGroupId": {
                         "$ref": "#/components/schemas/IndustryGroupId"
                     },
-                    "transmitterFlag": {
+                    "isTransmitter": {
                         "maxLength": 5,
-                        "minLength": 1,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "A boolean value to determine wether the organisation transmits or receives data electronically.\r\nTrue for transmits or receives data electronically. False for not."
+                        "description": "A boolean value to indicate whether the organisation transmits or receives data electronically.\r\ntrue: The organisation transmits or receives data electronically. \r\nfalse: The organisation neither transmits nor receives data electronically."
                     },
                     "phoneNumber": {
                         "$ref": "#/components/schemas/PhoneNumber"
@@ -1500,15 +1504,8 @@
                 "additionalProperties": false
             },
             "OrganisationDetailApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },
@@ -1539,15 +1536,8 @@
                 "additionalProperties": false
             },
             "OrganisationDetailsApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
                         "$ref": "#/components/schemas/ApiMessage"
                     },

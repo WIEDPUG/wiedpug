@@ -48,18 +48,18 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ADC",
                             },
-                            ClientCode = 345678,
+                            ClientCode = "345678",
                             StatementDate = "2024-03-21",
-                            DebitOrCreditFlag1 = DebitCreditFlag.Debit,
-                            OpeningBalanceCurrent = 234.54,
-                            DebitOrCreditFlag2 = DebitCreditFlag.Debit,
-                            OpeningBalance30 = 365.50,
-                            DebitOrCreditFlag3 = DebitCreditFlag.Debit,
-                            OpeningBalance60 = 566.78,
-                            DebitOrCreditFlag4 = DebitCreditFlag.Debit,
-                            OpeningBalance90 = 234.34,
-                            DebitOrCreditFlag5 = DebitCreditFlag.Debit,
-                            OpeningBalance90Plus = 500.34
+                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
+                            OpeningBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
+                            OpeningBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
+                            OpeningBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
+                            OpeningBalance90 = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
+                            OpeningBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
                         },
                         StatementDetails = new List<StatementDetail>
                         {
@@ -67,26 +67,26 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ClientsReference = "1234567890",
                                 AccountReference = "AWTA LED REFERENCE",
-                                Amount = 866.30,
+                                Amount = new Currency { Value = 866.30, CurrencyUnit = CurrencyUnit.AUD },
                                 AmountType = AmountType.Invoice,
                                 ItemDate = "2024-04-23",
-                                GstAmount = 134.30,
-                                GstTaxInvoiceApplicable = true,
-                                CompanyABNApplicable = true
+                                GstAmount = new Currency { Value = 134.30, CurrencyUnit = CurrencyUnit.AUD },
+                                IsGstTaxInvoiceApplicable = true,
+                                IsCompanyABNApplicable = true
                             }
                         },
                         StatementTrailer = new StatementTrailer
                         {
-                            DebitOrCreditFlag1 = DebitCreditFlag.Debit,
-                            ClosingBalanceCurrent = 234.54,
-                            DebitOrCreditFlag2 = DebitCreditFlag.Debit,
-                            ClosingBalance30 = 365.50,
-                            DebitOrCreditFlag3 = DebitCreditFlag.Debit,
-                            ClosingBalance60 = 566.78,
-                            DebitOrCreditFlag4 = DebitCreditFlag.Debit,
-                            ClosingBalance90 = 234.34,
-                            DebitOrCreditFlag5 = DebitCreditFlag.Debit,
-                            ClosingBalance90Plus = 500.34
+                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
+                            ClosingBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
+                            ClosingBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
+                            ClosingBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
+                            ClosingBalance90 = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
+                            ClosingBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
                         }
                     }
                 }
@@ -108,7 +108,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -122,7 +122,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new Statements
                 {
@@ -158,18 +158,18 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ATT",
                             },
-                            ClientCode = 345678,
+                            ClientCode = "345678",
                             StatementDate = "2024-03-21",
-                            DebitOrCreditFlag1 = DebitCreditFlag.Debit,
-                            OpeningBalanceCurrent = 234.54,
-                            DebitOrCreditFlag2 = DebitCreditFlag.Debit,
-                            OpeningBalance30 = 365.50,
-                            DebitOrCreditFlag3 = DebitCreditFlag.Debit,
-                            OpeningBalance60 = 566.78,
-                            DebitOrCreditFlag4 = DebitCreditFlag.Debit,
-                            OpeningBalance90 = 234.34,
-                            DebitOrCreditFlag5 = DebitCreditFlag.Debit,
-                            OpeningBalance90Plus = 500.34
+                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
+                            OpeningBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
+                            OpeningBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
+                            OpeningBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
+                            OpeningBalance90 = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
+                            OpeningBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
                         },
                         StatementDetails = new List<StatementDetail>
                         {
@@ -177,26 +177,26 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ClientsReference = "1234567890",
                                 AccountReference = "AWTA LED REFERENCE",
-                                Amount = 866.30,
+                                Amount = new Currency { Value = 866.30, CurrencyUnit = CurrencyUnit.AUD },
                                 AmountType = AmountType.Invoice,
                                 ItemDate = "2024-04-23",
-                                GstAmount = 134.30,
-                                GstTaxInvoiceApplicable = true,
-                                CompanyABNApplicable = true
+                                GstAmount = new Currency { Value = 134.30, CurrencyUnit = CurrencyUnit.AUD },
+                                IsGstTaxInvoiceApplicable = true,
+                                IsCompanyABNApplicable = true
                             }
                         },
                         StatementTrailer = new StatementTrailer
                         {
-                            DebitOrCreditFlag1 = DebitCreditFlag.Debit,
-                            ClosingBalanceCurrent = 234.54,
-                            DebitOrCreditFlag2 = DebitCreditFlag.Debit,
-                            ClosingBalance30 = 365.50,
-                            DebitOrCreditFlag3 = DebitCreditFlag.Debit,
-                            ClosingBalance60 = 566.78,
-                            DebitOrCreditFlag4 = DebitCreditFlag.Debit,
-                            ClosingBalance90 = 234.34,
-                            DebitOrCreditFlag5 = DebitCreditFlag.Debit,
-                            ClosingBalance90Plus = 500.34
+                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
+                            ClosingBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
+                            ClosingBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
+                            ClosingBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
+                            ClosingBalance90 = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
+                            ClosingBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
                         }
                     }
                 }

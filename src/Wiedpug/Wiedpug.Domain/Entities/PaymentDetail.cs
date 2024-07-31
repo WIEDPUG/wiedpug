@@ -19,8 +19,9 @@ namespace Wiedpug.Domain.Entities
         public required string AccountReference { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        public required double Amount { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Amount { get; set; }
         
         [Required]
         [MinLength(1)]

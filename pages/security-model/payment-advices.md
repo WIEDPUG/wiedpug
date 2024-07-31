@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| payment-advices:write  | ✓                   | ✓                |
+| payment-advices:write  | ✓                   |                 |
 | payment-advices:read   | ✓                   | ✓                |
 | payment-adivces:limited-write  |                    | ✓                |
 

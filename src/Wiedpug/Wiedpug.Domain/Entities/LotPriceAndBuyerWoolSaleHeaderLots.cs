@@ -76,11 +76,12 @@ namespace Wiedpug.Domain.Entities
         public required Organisation InvoicingOrganisation { get; set; }
 
         /// <summary>
-        /// Indicates whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section. 
-        /// `true` = Final Catalogue. `false` = Not Final Catalogue
+        /// A boolean value to indicate whethear the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.
+        /// true: is a final catalogue
+        /// false: is not a final catalogue
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsFinalCatalogue { get; set; }
 

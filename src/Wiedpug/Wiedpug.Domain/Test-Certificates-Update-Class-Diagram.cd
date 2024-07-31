@@ -39,13 +39,6 @@
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="4.25" Y="5" Width="3.5" />
-    <Members>
-      <Property Name="CurrentReceiver" Hidden="true" />
-      <Property Name="DateFormatLastRevised" Hidden="true" />
-      <Property Name="DateTransmissionFileCreated" Hidden="true" />
-      <Property Name="DocumentOriginator" Hidden="true" />
-      <Property Name="VersionNumber" Hidden="true" />
-    </Members>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>

@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| payment-confirmation:write  | ✓                   | ✓                |
+| payment-confirmation:write  | ✓                   |                 |
 | payment-confirmation:read   | ✓                   | ✓                |
 | payment-confirmation:limited-write  |                    | ✓                |
 

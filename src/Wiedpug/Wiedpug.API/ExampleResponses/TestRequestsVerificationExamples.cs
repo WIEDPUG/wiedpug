@@ -47,8 +47,16 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWT",
                             },
                             Bales = 1,
-                            Gross = 1,
-                            Tare = 1,
+                            Gross = new Weight
+                            {
+                                Value = 1.00,
+                                Unit = WeightUnit.Kilograms
+                            },
+                            Tare = new Weight
+                            {
+                                Value = 1.00,
+                                Unit = WeightUnit.Kilograms
+                            },
                             LotIdentity = "567545",
                             WeightUnit = WeightUnit.Kilograms,
                         WeightNote = new WeightNote{
@@ -66,11 +74,15 @@ namespace Wiedpug.API.ExampleResponses
                         TestRequestVerification = new TestRequestVerification
                         {
                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                            UpdatePreviousData = true,
+                            IsPreviousDataToBeUpdated = true,
                             HashTotal = 123456,
                             GrowerCode = "G123",
                             GrowerName = "John Doe",
-                            CoreSampleWeight = 20,
+                            CoreSampleWeight = new Weight
+                            {
+                                Value =100,
+                                Unit = WeightUnit.Kilograms
+                            },
                             CoreTestSamplingDate = "2024-04-15",
                             CoresPerBale = 5,
                             GrabsPerBale = 10,
@@ -96,8 +108,12 @@ namespace Wiedpug.API.ExampleResponses
                             WoolBaseMax = 65.00,
                             DichloromethaneDryBasisMin = 0.05,
                             DichloromethaneDryBasisMax = 0.15,
-                            ConditioningMassMin = 500,
-                            ConditioningMassMax = 1500,
+                            ConditioningMassMin = new Weight
+                            {
+                                Value = 500.00,
+                                Unit = WeightUnit.Kilograms
+                            },
+                            ConditioningMassMax = new Weight { Value = 1500.00, Unit = WeightUnit.Kilograms },
                             LACBarbeMin = 10,
                             LACBarbeMax = 30,
                             LACHauteurMin = 15,
@@ -114,7 +130,7 @@ namespace Wiedpug.API.ExampleResponses
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.P,
-                            IsContactWithExoticBreeds = true,
+                            IsContactingWithExoticBreeds = true,
                             IsCrutched = false,
                             Sex = Sex.R,
                             AgeFrom = 2,
@@ -132,8 +148,8 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWT",
                             },
                             Bales = 1,
-                            Gross = 1,
-                            Tare = 1,
+                            Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                            Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                             LotIdentity = "567545",
                         WeightNote = new WeightNote{
                             Prefix = "L",
@@ -148,11 +164,15 @@ namespace Wiedpug.API.ExampleResponses
                         TestRequestVerification = new TestRequestVerification
                         {
                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                            UpdatePreviousData = true,
+                            IsPreviousDataToBeUpdated = true,
                             HashTotal = 125534,
                             GrowerCode = "G4643",
                             GrowerName = "Alice Stonewood",
-                            CoreSampleWeight = 164,
+                            CoreSampleWeight = new Weight
+                            {
+                                Value=100.00,
+                                Unit = WeightUnit.Kilograms
+                            },
                             CoreTestSamplingDate = "2024-04-25",
                             CoresPerBale = 4,
                             GrabsPerBale = 20,
@@ -178,8 +198,16 @@ namespace Wiedpug.API.ExampleResponses
                             WoolBaseMax = 55.00,
                             DichloromethaneDryBasisMin = 0.06,
                             DichloromethaneDryBasisMax = 0.12,
-                            ConditioningMassMin = 260,
-                            ConditioningMassMax = 1200,
+                            ConditioningMassMin = new Weight
+                            {
+                                Value = 260.00,
+                                Unit = WeightUnit.Kilograms
+                            },
+                            ConditioningMassMax = new Weight
+                            {
+                                Value = 1200.00,
+                                Unit = WeightUnit.Kilograms
+                            },
                             LACBarbeMin = 17,
                             LACBarbeMax = 56,
                             LACHauteurMin = 12,
@@ -196,7 +224,7 @@ namespace Wiedpug.API.ExampleResponses
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                             DeclaredWoolCategory = DeclaredWoolCategory.B,
-                            IsContactWithExoticBreeds = false,
+                            IsContactingWithExoticBreeds = false,
                             IsCrutched = false,
                             Sex = Sex.E,
                             AgeFrom = 1,
@@ -225,7 +253,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -239,7 +267,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new TestRequestsVerification()
                 {
@@ -275,8 +303,8 @@ namespace Wiedpug.API.ExampleResponses
                                                             OrganisationCode = "AWT",
                                 },
                                 Bales = 1,
-                                Gross = 1,
-                                Tare = 1,
+                                Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                                Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                                 LotIdentity = "567545",
                                 WeightUnit = WeightUnit.Kilograms,
                                 WeightNote = new WeightNote {
@@ -291,11 +319,11 @@ namespace Wiedpug.API.ExampleResponses
                             TestRequestVerification = new TestRequestVerification
                             {
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                UpdatePreviousData = true,
+                                IsPreviousDataToBeUpdated = true,
                                 HashTotal = 123456,
                                 GrowerCode = "G123",
                                 GrowerName = "John Doe",
-                                CoreSampleWeight = 20,
+                                CoreSampleWeight = new Weight { Value = 20.00, Unit = WeightUnit.Kilograms },
                                 CoreTestSamplingDate = "2024-04-15",
                                 CoresPerBale = 5,
                                 GrabsPerBale = 10,
@@ -321,8 +349,8 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolBaseMax = 65.00,
                                 DichloromethaneDryBasisMin = 0.05,
                                 DichloromethaneDryBasisMax = 0.15,
-                                ConditioningMassMin = 500,
-                                ConditioningMassMax = 1500,
+                                ConditioningMassMin = new Weight { Value = 500.00, Unit = WeightUnit.Kilograms },
+                                ConditioningMassMax = new Weight { Value = 1500.00, Unit = WeightUnit.Kilograms },
                                 LACBarbeMin = 10,
                                 LACBarbeMax = 30,
                                 LACHauteurMin = 15,
@@ -339,7 +367,7 @@ namespace Wiedpug.API.ExampleResponses
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                                 DeclaredWoolCategory = DeclaredWoolCategory.P,
-                                IsContactWithExoticBreeds = true,
+                                IsContactingWithExoticBreeds = true,
                                 IsCrutched = false,
                                 Sex = Sex.R,
                                 AgeFrom = 2,
@@ -357,8 +385,12 @@ namespace Wiedpug.API.ExampleResponses
                                                             OrganisationCode = "AWT",
                                 },
                                 Bales = 1,
-                                Gross = 1,
-                                Tare = 1,
+                                Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                                Tare = new Weight
+                                {
+                                    Value = 1.00,
+                                    Unit = WeightUnit.Kilograms
+                                },
                                 LotIdentity = "567545",
                                 WeightNote = new WeightNote {
                                     Prefix = "L",
@@ -373,11 +405,11 @@ namespace Wiedpug.API.ExampleResponses
                             TestRequestVerification = new TestRequestVerification
                             {
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                UpdatePreviousData = true,
+                                IsPreviousDataToBeUpdated = true,
                                 HashTotal = 125534,
                                 GrowerCode = "G4643",
                                 GrowerName = "Alice Stonewood",
-                                CoreSampleWeight = 164,
+                                CoreSampleWeight = new Weight { Value = 164.00, Unit = WeightUnit.Kilograms },
                                 CoreTestSamplingDate = "2024-04-25",
                                 CoresPerBale = 4,
                                 GrabsPerBale = 20,
@@ -403,8 +435,16 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolBaseMax = 55.00,
                                 DichloromethaneDryBasisMin = 0.06,
                                 DichloromethaneDryBasisMax = 0.12,
-                                ConditioningMassMin = 260,
-                                ConditioningMassMax = 1200,
+                                ConditioningMassMin = new Weight
+                            {
+                                Value = 126.00,
+                                Unit = WeightUnit.Kilograms
+                            },
+                                ConditioningMassMax = new Weight
+                            {
+                                Value = 1200.00,
+                                Unit = WeightUnit.Kilograms
+                            },
                                 LACBarbeMin = 17,
                                 LACBarbeMax = 56,
                                 LACHauteurMin = 12,
@@ -421,7 +461,7 @@ namespace Wiedpug.API.ExampleResponses
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
                                 DeclaredWoolCategory = DeclaredWoolCategory.B,
-                                IsContactWithExoticBreeds = false,
+                                IsContactingWithExoticBreeds = false,
                                 IsCrutched = false,
                                 Sex = Sex.E,
                                 AgeFrom = 1,

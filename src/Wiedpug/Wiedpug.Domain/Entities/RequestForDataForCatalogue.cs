@@ -57,12 +57,13 @@ namespace Wiedpug.Domain.Entities
         public string? EndDateTimeStatusRequest { get; set; }
 
         /// <summary>
-        /// Boolean value to indicate wethear to use Network Datetime
-        /// True for use Network Datetime, False for not use
+        /// A boolean value to indicate whethear to use network datetime.
+        /// true: use network datetime.
+        /// false: not use.
         /// </summary>
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public bool? UseNetworkDateTime { get; set; }
+        public bool? IsUsingNetworkDateTime { get; set; }
 
         [MinLength(1)]
         [MaxLength(4)]

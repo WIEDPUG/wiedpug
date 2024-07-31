@@ -8,7 +8,6 @@ namespace Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate
         [Required]
         public required PaymentHeader PaymentHeader { get; set; }
 
-        [Required]
-        public required List<PaymentDetail> PaymentDetails { get; set; }
+        public List<PaymentDetail>? PaymentDetails { get; set; }
     }
 }

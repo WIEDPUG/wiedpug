@@ -77,7 +77,10 @@ namespace Wiedpug.API.ExampleResponses
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
-                                    StorageChargePerBalePerDay = 0.245,
+                                    StorageChargePerBalePerDay = new StorageChargeCurrency{ 
+                                        Value = 0.245,
+                                        CurrencyUnit = CurrencyUnit.AUD
+                                    },
                                     PenaltyInterestRate = 11.35,
                                 },
                             LotPaymentDetails = new List<LotPaymentDetail>
@@ -85,15 +88,18 @@ namespace Wiedpug.API.ExampleResponses
                                 new LotPaymentDetail
                                 {
                                     LotIdentity = "123256",
-                                    LotLastCost = 23.45
+                                    LotLastCost = new Currency{ 
+                                        Value = 23.45,
+                                        CurrencyUnit = CurrencyUnit.AUD
+                                    },
 
                                 }
                             },
                             PaymentSummary = new PaymentSummary
                             {
-                                LastCostPaid =67,
-                                DiscountAmount=23,
-                                NetAmountPaid=77,
+                                LastCostPaid =new Currency { Value = 67.00, CurrencyUnit = CurrencyUnit.AUD },
+                                DiscountAmount=new Currency { Value = 23.00, CurrencyUnit = CurrencyUnit.AUD },
+                                NetAmountPaid=new Currency { Value = 77.00, CurrencyUnit = CurrencyUnit.AUD },
                                 DatePaymentMade="2024-05-24"
                             }
 
@@ -125,7 +131,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -139,7 +145,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new PaymentAdvices
                 {
@@ -207,7 +213,11 @@ namespace Wiedpug.API.ExampleResponses
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
                                     DateStorageChargeCommences = "2017-01-24",
-                                    StorageChargePerBalePerDay = 0.245,
+                                    StorageChargePerBalePerDay = new StorageChargeCurrency
+                                    {
+                                        Value = 0.245,
+                                        CurrencyUnit = CurrencyUnit.USD,
+                                    },
                                     PenaltyInterestRate = 11.35,
                                 },
                             LotPaymentDetails = new List<LotPaymentDetail>
@@ -215,15 +225,21 @@ namespace Wiedpug.API.ExampleResponses
                                 new LotPaymentDetail
                                 {
                                     LotIdentity = "123256",
-                                    LotLastCost = 23.45
+                                    LotLastCost = new Currency { Value = 23.45, CurrencyUnit = CurrencyUnit.AUD }
 
                                 }
                             },
                             PaymentSummary = new PaymentSummary
                             {
-                                LastCostPaid =67,
-                                DiscountAmount=23,
-                                NetAmountPaid=77,
+                                LastCostPaid =new Currency{
+                                                Value = 67.00,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                                DiscountAmount=new Currency{
+                                                Value = 23.00,
+                                                CurrencyUnit =CurrencyUnit.AUD
+                                            },
+                                NetAmountPaid=new Currency { Value = 77.00, CurrencyUnit = CurrencyUnit.AUD },
                                 DatePaymentMade="2024-05-24"
                             }
 

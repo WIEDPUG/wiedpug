@@ -45,13 +45,25 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ATW",
                             },
                             Bales = 1,
-                            Gross = 1,
-                            Tare = 1,
+                            Gross =new Weight
+                        {
+                            Value =1.00,
+                            Unit = WeightUnit.Kilograms
+                        },
+                            Tare = new Weight
+                        {
+                            Value =10.00,
+                            Unit = WeightUnit.Kilograms
+                        },
                             LotIdentityOrGroupName = new LotIdentityOrGroupName
                             {
                                 LotIdentity = "234234"
                             },
-                            RegrabSampleWeight=1,
+                            RegrabSampleWeight = new Weight
+                            {
+                                Value = 1.00,
+                                Unit = WeightUnit.Kilograms
+                            },
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.ObjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
@@ -72,7 +84,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
-                                Charge = 100.00,
+                                Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                 WoolBase = 20.00,
                                 Vmb = 10.0,
@@ -167,9 +179,17 @@ namespace Wiedpug.API.ExampleResponses
 
                             },
                             Bales = 1,
-                            Gross = 1,
-                            Tare = 1,
-                            RegrabSampleWeight=1,
+                            Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
+                            Tare = new Weight
+                            {
+                                Value =10.00,
+                                Unit = WeightUnit.Kilograms
+                            },
+                            RegrabSampleWeight= new Weight
+                            {
+                                Value = 1.00,
+                                Unit = WeightUnit.Kilograms
+                            },
                             LotIdentityOrGroupName = new LotIdentityOrGroupName
                             {
                                 LotIdentity = "123456"
@@ -194,7 +214,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
-                            Charge = 123.25,
+                            Charge = new Currency { Value = 123.25, CurrencyUnit = CurrencyUnit.AUD },
                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
@@ -311,7 +331,7 @@ namespace Wiedpug.API.ExampleResponses
                 },
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
-                UseNetworkDateTime = false,
+                IsUsingNetworkDateTime = false,
                 RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
                 WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                 Season = 23
@@ -325,7 +345,7 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new ApiResult()
             {
-                IsSuccessful = true,
+                
                 Message = null,
                 Data = new TestCertificates 
                 {
@@ -366,9 +386,13 @@ namespace Wiedpug.API.ExampleResponses
                                 LotIdentity = "123456"
                             },
                             Bales = 1,
-                            Gross = 1,
-                            Tare = 1,
-                            RegrabSampleWeight=1,
+                            Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
+                            Tare = new Weight
+                            {
+                                Value =10.00,
+                                Unit = WeightUnit.Kilograms
+                            },
+                            RegrabSampleWeight=new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                             WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
@@ -389,7 +413,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                            },
-                            Charge = 100.00,
+                            Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                             WoolBase = 20.00,
                             Vmb = 10.0,
@@ -483,9 +507,13 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ATW",
                             },
                             Bales = 1,
-                            Gross = 1,
-                            Tare = 1,
-                            RegrabSampleWeight=1,
+                            Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
+                            Tare = new Weight
+                            {
+                                Value =10.00,
+                                Unit = WeightUnit.Kilograms
+                            },
+                            RegrabSampleWeight=new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                             LotIdentityOrGroupName = new LotIdentityOrGroupName
                             {
                                 LotIdentity = "123456"
@@ -512,7 +540,7 @@ namespace Wiedpug.API.ExampleResponses
                              },
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
-                            Charge = 156.34,
+                            Charge = new Currency { Value = 156.34, CurrencyUnit = CurrencyUnit.AUD },
                             ReissueChargeFlag = ReissueChargeFlag.ReissuedWithAdditionalCharge,
                             StapleLengthCvPercentage = 25,
                             StapleStrength = 14,

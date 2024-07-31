@@ -19,9 +19,10 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
         /// </summary>
-        /// 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? RegrabSampleWeight { get; set; }
+        ///
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         /// <summary>
         /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample. 

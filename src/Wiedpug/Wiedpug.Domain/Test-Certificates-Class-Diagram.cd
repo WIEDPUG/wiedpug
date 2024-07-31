@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateAggregate.TestCertificates">
+  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateAggregate.TestCertificates" Collapsed="true">
     <Position X="20.5" Y="13.25" Width="1.5" />
     <AssociationLine Name="TestCertificateCollection" Type="Wiedpug.Domain.Entities.TestCertificate">
       <MemberNameLabel ManuallyPlaced="true">
@@ -8,11 +8,12 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\TestCertificateAggregate\TestCertificates.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="TestCertificateCollection" />
@@ -35,29 +36,28 @@
       <FileName>Entities\TestCertificate.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="ColorCombinationDetails" />
+      <Property Name="TestDataHeader" />
       <Property Name="ColorDetails" />
+      <Property Name="PremiumTestDetails" />
+      <Property Name="SubjectiveInterlotDetails" />
       <Property Name="CombinationDetails" />
-      <Property Name="ConditioningTestDetails" />
-      <Property Name="CoreTestDetails" />
-      <Property Name="DichloromethaneTestDetails" />
-      <Property Name="GuidanceReporttDetails" />
-      <Property Name="LengthAdjustmentNoteDetails" />
-      <Property Name="LengthAfterCardingTestDetails" />
       <Property Name="LengthAndStrengthCombDetails" />
       <Property Name="LengthAndStrengthDetails" />
-      <Property Name="OMIDetials" />
       <Property Name="OMLDetails" />
+      <Property Name="CoreTestDetails" />
+      <Property Name="ColorCombinationDetails" />
+      <Property Name="OMIDetials" />
       <Property Name="PostSaleCoreTestDetails" />
-      <Property Name="PremiumTestDetails" />
+      <Property Name="GuidanceReporttDetails" />
       <Property Name="ScouredTestDetails" />
-      <Property Name="SubjectiveInterlotDetails" />
-      <Property Name="TestDataHeader" />
+      <Property Name="DichloromethaneTestDetails" />
+      <Property Name="ConditioningTestDetails" />
+      <Property Name="LengthAfterCardingTestDetails" />
+      <Property Name="LengthAdjustmentNoteDetails" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="Bales" />
-      <Property Name="FibreDiameterHistograms" />
       <Property Name="SublotCertificateNumbers" />
+      <Property Name="FibreDiameterHistograms" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
@@ -65,13 +65,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.Bale" Collapsed="true">
-    <Position X="17.75" Y="11.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
-      <FileName>Entities\Bale.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TestCertificateColourCombinationDetails" Collapsed="true">
@@ -212,6 +205,13 @@
     <TypeIdentifier>
       <HashCode>AAIAAAEAAQhBAAAIEAABAIAIAAAACAMYAgEEAAAIBIQ=</HashCode>
       <FileName>Entities\TestCertificateTestDataHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="16.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

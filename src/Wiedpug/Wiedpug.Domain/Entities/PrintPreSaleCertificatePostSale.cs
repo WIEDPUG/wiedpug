@@ -62,10 +62,9 @@ namespace Wiedpug.Domain.Entities
         /// Required numeric field for gross weight.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(5)]
-        public required int Gross { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Gross { get; set; }
 
         /// <summary>
         /// Required generic string field for sale identity.
@@ -109,14 +108,13 @@ namespace Wiedpug.Domain.Entities
         public PrintFlag? PrintFlag { get; set; }
 
         /// <summary>
-        /// Bool value for TEAM-3 Hauteur - Print.
-        /// True: Print TEAM-3 Hauteur on Certificate
-        /// False: Not print TEAM-3 Hauteur on Certificate
+        /// A boolean value to indicate whethear to print Team3-Hauteur
+        /// true: print
+        /// false: not print
         /// </summary>
-        /// 
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public bool? PrintTEAM3HauteurOnCertificate { get; set; }
+        public bool? IsPrintingPrintTEAM3Hauteur { get; set; }
 
         /// <summary>
         /// Optional enum type for WOOLINK sale system.

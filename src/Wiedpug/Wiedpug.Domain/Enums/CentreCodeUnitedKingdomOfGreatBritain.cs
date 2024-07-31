@@ -16,8 +16,8 @@ namespace Wiedpug.Domain.Enums
     public enum CentreCodeUnitedKingdomOfGreatBritain
     {
 
-        [Description("ZE: London - United Kingdom of Great Britain")]
-        ZE,
+        [Description("LO: London - United Kingdom of Great Britain")]
+        LO,
 
     }
 }

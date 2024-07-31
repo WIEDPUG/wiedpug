@@ -17,9 +17,9 @@ namespace Wiedpug.Domain.Enums
     {
 
 
-        [Description("ZG: Berlin - Germany")]
-        ZG,
-        [Description("ZH: Blumenthal - Germany")]
-        ZH,
+        [Description("BE: Berlin - Germany")]
+        BE,
+        [Description("BL: Blumenthal - Germany")]
+        BL,
     }
 }

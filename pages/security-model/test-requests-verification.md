@@ -17,7 +17,7 @@
 
 |      Action                      | Administrator       | Member            |
 |----------------------------------|---------------------|-------------------|
-| test-requests-verification:write  | ✓                   | ✓                |
+| test-requests-verification:write  | ✓                   |                |
 | test-requests-verification:read   | ✓                   | ✓                |
 | test-requests-verification:limited-write  |                    | ✓                |
 

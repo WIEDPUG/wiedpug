@@ -9,9 +9,8 @@ namespace Wiedpug.Domain.Entities
     public class PaymentHeader
     {
         [Required]
-        [MinLength(1)]
-        [MaxLength(8)]
-        public required Organisation ClientCode { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        public required string ClientCode { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -20,10 +19,9 @@ namespace Wiedpug.Domain.Entities
         public required string StatementDate { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public double AmountEmitted { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency AmountRemitted { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -43,16 +41,13 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(9)]
         public required string BankAccountNumber { get; set; }
         
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? AmountWithheldThisStatement { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public double? AmountWithheldThisStatement { get; set; }
-
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public double? AmountWithheldPreviousStatements { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? AmountWithheldPreviousStatements { get; set; }
     }
 
 }

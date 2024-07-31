@@ -61,7 +61,7 @@
                                             "combinationRequest": "N",
                                             "autoAdditionalMeasurementRequired": "N",
                                             "additionalPrintRequirements": 0,
-                                            "teaM3HauteurPrint": false,
+                                            "isPrintingTEAM3Hauteur": false,
                                             "certificateRequestDetails": [
                                                 {
                                                     "certificateIdentity": {
@@ -108,7 +108,7 @@
                                             "combinationRequest": "C",
                                             "autoAdditionalMeasurementRequired": "N",
                                             "additionalPrintRequirements": 3,
-                                            "teaM3HauteurPrint": true,
+                                            "isPrintingTEAM3Hauteur": true,
                                             "certificateRequestDetails": [
                                                 {
                                                     "certificateIdentity": {
@@ -157,9 +157,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -168,7 +166,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -176,13 +174,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -193,7 +193,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -209,7 +209,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -225,7 +225,260 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                                    "title": "An error occurred while processing your required",
+                                    "status": 500,
+                                    "detail": "Error details.."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v0/test-certificate-requests/data": {
+            "post": {
+                "tags": [
+                    "Test Certificate Requests"
+                ],
+                "summary": "Retrieves the test certificates request",
+                "operationId": "GetTestCertificatesRequests",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RequestForData"
+                            },
+                            "example": {
+                                "saleIdentity": {
+                                    "sellingCentreType": "AU_F",
+                                    "saleNumber": 18
+                                },
+                                "organisationRequested": {
+                                    "organisationCode": "ANF"
+                                },
+                                "saleDateRequested": "2023-10-31",
+                                "isUsingNetworkDateTime": false,
+                                "requestType": 4,
+                                "woolTypeGroup": "MFLC",
+                                "season": 23
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TestCertificateRequestsApiResult"
+                                },
+                                "example": {
+                                    "data": {
+                                        "transmissionHeader": {
+                                            "dateFormatLastRevised": "2020-07-15",
+                                            "dateTransmissionFileCreated": "2016-01-17",
+                                            "countryOfOrigin": "AU",
+                                            "documentOriginator": {
+                                                "organisationCode": "ATC"
+                                            },
+                                            "currentReceiver": {
+                                                "organisationCode": "ATT"
+                                            },
+                                            "versionNumber": 31,
+                                            "softwareIdentifier": {
+                                                "softwareCompany": 1,
+                                                "version": 1082,
+                                                "programName": "NETR"
+                                            },
+                                            "abn": "72001967184"
+                                        },
+                                        "testCertificateRequestCollection": [
+                                            {
+                                                "certificateRequest": {
+                                                    "printRequirements": 0,
+                                                    "yieldType1": 2,
+                                                    "yieldType2": 4,
+                                                    "certificateReference": "XXY1255",
+                                                    "clientsCrossReference": "XXY1255",
+                                                    "bales": 96,
+                                                    "season": 21,
+                                                    "combinationRequest": "N",
+                                                    "autoAdditionalMeasurementRequired": "N",
+                                                    "additionalPrintRequirements": 0,
+                                                    "isPrintingTEAM3Hauteur": false,
+                                                    "certificateRequestDetails": [
+                                                        {
+                                                            "certificateIdentity": {
+                                                                "certificateIDPrefix": 3,
+                                                                "certificateIDSuffix": "P",
+                                                                "certificateIDNumber": "15969534",
+                                                                "certificateIDCD": 9
+                                                            },
+                                                            "woolbase": 63.16,
+                                                            "laboratory": 1
+                                                        },
+                                                        {
+                                                            "certificateIdentity": {
+                                                                "certificateIDPrefix": 3,
+                                                                "certificateIDSuffix": "P",
+                                                                "certificateIDNumber": "00000499",
+                                                                "certificateIDCD": 7
+                                                            },
+                                                            "woolbase": 61.52,
+                                                            "laboratory": 1
+                                                        },
+                                                        {
+                                                            "certificateIdentity": {
+                                                                "certificateIDPrefix": 3,
+                                                                "certificateIDSuffix": "P",
+                                                                "certificateIDNumber": "00000499",
+                                                                "certificateIDCD": 7
+                                                            },
+                                                            "woolbase": 61.44,
+                                                            "laboratory": 1
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "certificateRequest": {
+                                                    "printRequirements": 0,
+                                                    "yieldType1": 1,
+                                                    "yieldType2": 13,
+                                                    "certificateReference": "XXY1205",
+                                                    "clientsCrossReference": "XXZ1635",
+                                                    "bales": 96,
+                                                    "season": 21,
+                                                    "combinationRequest": "C",
+                                                    "autoAdditionalMeasurementRequired": "N",
+                                                    "additionalPrintRequirements": 3,
+                                                    "isPrintingTEAM3Hauteur": true,
+                                                    "certificateRequestDetails": [
+                                                        {
+                                                            "certificateIdentity": {
+                                                                "certificateIDPrefix": 3,
+                                                                "certificateIDSuffix": "P",
+                                                                "certificateIDNumber": "00000499",
+                                                                "certificateIDCD": 7
+                                                            },
+                                                            "woolbase": 53.74,
+                                                            "laboratory": 1
+                                                        },
+                                                        {
+                                                            "certificateIdentity": {
+                                                                "certificateIDPrefix": 3,
+                                                                "certificateIDSuffix": "P",
+                                                                "certificateIDNumber": "00000499",
+                                                                "certificateIDCD": 7
+                                                            },
+                                                            "woolbase": 52.01,
+                                                            "laboratory": 1
+                                                        },
+                                                        {
+                                                            "certificateIdentity": {
+                                                                "certificateIDPrefix": 3,
+                                                                "certificateIDSuffix": "P",
+                                                                "certificateIDNumber": "00000499",
+                                                                "certificateIDCD": 7
+                                                            },
+                                                            "woolbase": 54.26,
+                                                            "laboratory": 1
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                                    "title": "One or more validation errors occurred",
+                                    "status": 400,
+                                    "detail": "",
+                                    "errors": {
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                                    "title": "Unauthorized",
+                                    "status": 401,
+                                    "detail": "Missing authentication credentials"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                                    "title": "You don't have permission to access this resource",
+                                    "status": 403,
+                                    "detail": "You don't have a 'read' access to access this resource"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                                    "title": "Resource not found",
+                                    "status": 404
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -337,9 +590,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -348,7 +599,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -356,13 +607,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -373,7 +626,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -389,7 +642,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -405,7 +658,217 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                                    "title": "An error occurred while processing your required",
+                                    "status": 500,
+                                    "detail": "Error details.."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v0/test-certificate-update/data": {
+            "post": {
+                "tags": [
+                    "Test Certificate Update"
+                ],
+                "summary": "Retrieves the test certificate update",
+                "operationId": "GetTestCertificateUpdate",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RequestForData"
+                            },
+                            "example": {
+                                "saleIdentity": {
+                                    "sellingCentreType": "AU_F",
+                                    "saleNumber": 18
+                                },
+                                "organisationRequested": {
+                                    "organisationCode": "ANF"
+                                },
+                                "saleDateRequested": "2023-10-31",
+                                "isUsingNetworkDateTime": false,
+                                "requestType": 4,
+                                "woolTypeGroup": "MFLC",
+                                "season": 23
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TestCertificateUpdateApiResult"
+                                },
+                                "example": {
+                                    "data": {
+                                        "transmissionHeader": {
+                                            "dateFormatLastRevised": "2020-07-15",
+                                            "dateTransmissionFileCreated": "2016-01-17",
+                                            "countryOfOrigin": "AU",
+                                            "documentOriginator": {
+                                                "organisationCode": "ABC"
+                                            },
+                                            "currentReceiver": {
+                                                "organisationCode": "ATW"
+                                            },
+                                            "versionNumber": 31,
+                                            "softwareIdentifier": {
+                                                "softwareCompany": 1,
+                                                "version": 1082,
+                                                "programName": "NETR"
+                                            },
+                                            "abn": "72001967184"
+                                        },
+                                        "testCertificateUpdateDetails": [
+                                            {
+                                                "certificateIdentity": {
+                                                    "certificateIDPrefix": 6,
+                                                    "certificateIDSuffix": "L",
+                                                    "certificateIDNumber": "16101382",
+                                                    "certificateIDCD": 6
+                                                },
+                                                "reissueType": "06",
+                                                "client": {
+                                                    "organisationCode": "ABC"
+                                                },
+                                                "bales": 2,
+                                                "baleDescription": "AAA M",
+                                                "woolBase": 60.43,
+                                                "mulesingStatusFrom": "ND",
+                                                "mulesingStatusTo": "M"
+                                            },
+                                            {
+                                                "certificateIdentity": {
+                                                    "certificateIDPrefix": 6,
+                                                    "certificateIDSuffix": "M",
+                                                    "certificateIDNumber": "16101382",
+                                                    "certificateIDCD": 5
+                                                },
+                                                "reissueType": "05",
+                                                "client": {
+                                                    "organisationCode": "ABC"
+                                                },
+                                                "bales": 7,
+                                                "baleDescription": "AAA M",
+                                                "woolBase": 65.12,
+                                                "mulesingStatusFrom": "AA",
+                                                "mulesingStatusTo": "M"
+                                            },
+                                            {
+                                                "certificateIdentity": {
+                                                    "certificateIDPrefix": 6,
+                                                    "certificateIDSuffix": "B",
+                                                    "certificateIDNumber": "15701332",
+                                                    "certificateIDCD": 6
+                                                },
+                                                "reissueType": "02",
+                                                "client": {
+                                                    "organisationCode": "ABC"
+                                                },
+                                                "bales": 8,
+                                                "baleDescription": "PCA M",
+                                                "woolBase": 50.31,
+                                                "mulesingStatusFrom": "NM",
+                                                "mulesingStatusTo": "M"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                                    "title": "One or more validation errors occurred",
+                                    "status": 400,
+                                    "detail": "",
+                                    "errors": {
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                                    "title": "Unauthorized",
+                                    "status": 401,
+                                    "detail": "Missing authentication credentials"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                                    "title": "You don't have permission to access this resource",
+                                    "status": 403,
+                                    "detail": "You don't have a 'read' access to access this resource"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
+                                },
+                                "example": {
+                                    "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                                    "title": "Resource not found",
+                                    "status": 404
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/problem+json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -461,9 +924,18 @@
                                                 "lotIdentity": "234234"
                                             },
                                             "bales": 1,
-                                            "gross": 1,
-                                            "tare": 1,
-                                            "regrabSampleWeight": 1,
+                                            "gross": {
+                                                "value": 1,
+                                                "unit": 0
+                                            },
+                                            "tare": {
+                                                "value": 10,
+                                                "unit": 0
+                                            },
+                                            "regrabSampleWeight": {
+                                                "value": 1,
+                                                "unit": 0
+                                            },
                                             "weightUnit": 0,
                                             "lotType": 7,
                                             "centreAuction": {
@@ -483,7 +955,10 @@
                                                 "certificateIDNumber": "23456787",
                                                 "certificateIDCD": 7
                                             },
-                                            "charge": 100,
+                                            "charge": {
+                                                "value": 100,
+                                                "currencyUnit": "AUD"
+                                            },
                                             "laboratory": 1,
                                             "woolBase": 20,
                                             "vmb": 10,
@@ -560,9 +1035,18 @@
                                                 "lotIdentity": "123456"
                                             },
                                             "bales": 1,
-                                            "gross": 1,
-                                            "tare": 1,
-                                            "regrabSampleWeight": 1,
+                                            "gross": {
+                                                "value": 40,
+                                                "unit": 0
+                                            },
+                                            "tare": {
+                                                "value": 10,
+                                                "unit": 0
+                                            },
+                                            "regrabSampleWeight": {
+                                                "value": 1,
+                                                "unit": 0
+                                            },
                                             "weightUnit": 0,
                                             "lotType": 4,
                                             "centreAuction": {
@@ -582,7 +1066,10 @@
                                                 "certificateIDNumber": "23456787",
                                                 "certificateIDCD": 7
                                             },
-                                            "charge": 123.25,
+                                            "charge": {
+                                                "value": 123.25,
+                                                "currencyUnit": "AUD"
+                                            },
                                             "laboratory": 2,
                                             "stapleLength": 13,
                                             "stapleLengthCvPercentage": 25,
@@ -678,9 +1165,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -689,7 +1174,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -697,13 +1182,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -714,7 +1201,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -730,7 +1217,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -746,7 +1233,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -771,16 +1258,18 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/GetTestCertificatesRequest"
+                                "$ref": "#/components/schemas/RequestForData"
                             },
                             "example": {
                                 "saleIdentity": {
                                     "sellingCentreType": "AU_F",
                                     "saleNumber": 18
                                 },
-                                "organisationRequested": "AWNF",
+                                "organisationRequested": {
+                                    "organisationCode": "ANF"
+                                },
                                 "saleDateRequested": "2023-10-31",
-                                "useNetworkDateTime": false,
+                                "isUsingNetworkDateTime": false,
                                 "requestType": 4,
                                 "woolTypeGroup": "MFLC",
                                 "season": 23
@@ -798,7 +1287,6 @@
                                     "$ref": "#/components/schemas/TestCertificatesApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
                                     "data": {
                                         "transmissionHeader": {
                                             "dateFormatLastRevised": "2020-07-15",
@@ -828,9 +1316,18 @@
                                                         "lotIdentity": "123456"
                                                     },
                                                     "bales": 1,
-                                                    "gross": 1,
-                                                    "tare": 1,
-                                                    "regrabSampleWeight": 1,
+                                                    "gross": {
+                                                        "value": 40,
+                                                        "unit": 0
+                                                    },
+                                                    "tare": {
+                                                        "value": 10,
+                                                        "unit": 0
+                                                    },
+                                                    "regrabSampleWeight": {
+                                                        "value": 1,
+                                                        "unit": 0
+                                                    },
                                                     "weightUnit": 0,
                                                     "lotType": 3,
                                                     "centreAuction": {
@@ -850,7 +1347,10 @@
                                                         "certificateIDNumber": "23456787",
                                                         "certificateIDCD": 7
                                                     },
-                                                    "charge": 100,
+                                                    "charge": {
+                                                        "value": 100,
+                                                        "currencyUnit": "AUD"
+                                                    },
                                                     "laboratory": 1,
                                                     "woolBase": 20,
                                                     "vmb": 10,
@@ -927,9 +1427,18 @@
                                                         "lotIdentity": "123456"
                                                     },
                                                     "bales": 1,
-                                                    "gross": 1,
-                                                    "tare": 1,
-                                                    "regrabSampleWeight": 1,
+                                                    "gross": {
+                                                        "value": 40,
+                                                        "unit": 0
+                                                    },
+                                                    "tare": {
+                                                        "value": 10,
+                                                        "unit": 0
+                                                    },
+                                                    "regrabSampleWeight": {
+                                                        "value": 1,
+                                                        "unit": 0
+                                                    },
                                                     "weightUnit": 0,
                                                     "lotType": 3,
                                                     "centreAuction": {
@@ -949,7 +1458,10 @@
                                                         "certificateIDNumber": "23456787",
                                                         "certificateIDCD": 7
                                                     },
-                                                    "charge": 156.34,
+                                                    "charge": {
+                                                        "value": 156.34,
+                                                        "currencyUnit": "AUD"
+                                                    },
                                                     "laboratory": 2,
                                                     "stapleLength": 13,
                                                     "stapleLengthCvPercentage": 25,
@@ -1042,7 +1554,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -1050,13 +1562,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -1067,7 +1581,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -1083,7 +1597,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -1099,7 +1613,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -1114,7 +1628,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -1171,25 +1685,22 @@
                     },
                     "dateOfCreditNote": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "format": "date"
                     },
                     "creditNoteAmount": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "isGSTApplicable": {
                         "maxLength": 5,
-                        "minLength": 0,
-                        "type": "boolean"
+                        "minLength": 4,
+                        "type": "boolean",
+                        "description": "A boolean value to indicate whether the GST is aplicable. \r\ntrue: applicable.\r\nfalse: not applicable."
                     },
                     "gstAmount": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "reasonCode": {
                         "pattern": "-?\\d{1,2}",
@@ -1201,7 +1712,7 @@
                     },
                     "dateOfOriginalInvoice": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "format": "date"
@@ -1212,20 +1723,69 @@
                 },
                 "additionalProperties": false
             },
-            "ApiResult": {
+            "ApiErrorResult": {
                 "required": [
-                    "isSuccessful"
+                    "status",
+                    "title"
                 ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
+                    "type": {
+                        "type": "string",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "nullable": true
                     },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+                        "format": "int32"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+                        "nullable": true
+                    },
+                    "errors": {
+                        "$ref": "#/components/schemas/CustomErrors"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+            },
+            "ApiMessage": {
+                "type": "object",
+                "properties": {
                     "message": {
                         "type": "string",
-                        "description": "Contains information about the response if applicable.",
                         "nullable": true
+                    },
+                    "warningCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/WarningCode"
+                        },
+                        "nullable": true
+                    },
+                    "informationCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InformationCode"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ApiResult": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "$ref": "#/components/schemas/ApiMessage"
                     },
                     "data": {
                         "description": "Contains response data. e.g. Auction Catalogue",
@@ -1254,7 +1814,7 @@
                 "properties": {
                     "baleNumber": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "baleDetailType": {
@@ -1262,14 +1822,14 @@
                     },
                     "showBaleIndicator": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Property for Greasy/Processed bale detail, not necessary for other types of bale details.",
                         "nullable": true
                     },
                     "baleRenumber": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Property for Renumber BaleDetail, not necessary for other types of bale details.",
                         "nullable": true
@@ -1282,16 +1842,10 @@
                         "nullable": true
                     },
                     "gross": {
-                        "pattern": "-?\\d{1,4}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "tare": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "baleIdentifications": {
                         "type": "array",
@@ -1322,22 +1876,22 @@
                 "properties": {
                     "brand": {
                         "maxLength": 30,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "baleDescription": {
                         "maxLength": 15,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "areaOfOrigin": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "bales": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "-?\\d{1,4}",
                         "type": "integer",
                         "format": "int32",
@@ -1345,7 +1899,7 @@
                     },
                     "locationWithinStore": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -1357,13 +1911,13 @@
                 "properties": {
                     "baleNumber": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "eBaleId": {
                         "maxLength": 30,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -1542,51 +2096,51 @@
             },
             "CentreCodeBelgium": {
                 "enum": [
-                    "ZB"
+                    "BR"
                 ],
                 "type": "string",
-                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium"
+                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium"
             },
             "CentreCodeChina": {
                 "enum": [
-                    "ZM",
-                    "ZP",
-                    "ZQ",
-                    "ZR"
-                ],
-                "type": "string",
-                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China"
-            },
-            "CentreCodeFrance": {
-                "enum": [
-                    "ZF"
-                ],
-                "type": "string",
-                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France"
-            },
-            "CentreCodeGermany": {
-                "enum": [
-                    "ZG",
+                    "NA",
+                    "SH",
+                    "QI",
                     "ZH"
                 ],
                 "type": "string",
-                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany"
+                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China"
+            },
+            "CentreCodeFrance": {
+                "enum": [
+                    "PA"
+                ],
+                "type": "string",
+                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France"
+            },
+            "CentreCodeGermany": {
+                "enum": [
+                    "BE",
+                    "BL"
+                ],
+                "type": "string",
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany"
             },
             "CentreCodeItaly": {
                 "enum": [
-                    "ZI",
-                    "ZJ",
-                    "ZK"
+                    "RO",
+                    "BI",
+                    "GR"
                 ],
                 "type": "string",
                 "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
             },
             "CentreCodeNetherlands": {
                 "enum": [
-                    "ZN"
+                    "AM"
                 ],
                 "type": "string",
-                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands"
+                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands"
             },
             "CentreCodeNewZealand": {
                 "enum": [
@@ -1659,31 +2213,31 @@
             },
             "CentreCodeSouthAfrica": {
                 "enum": [
-                    "ZS"
+                    "CA"
                 ],
                 "type": "string",
-                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa"
+                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa"
             },
             "CentreCodeTaiwan": {
                 "enum": [
-                    "ZO"
+                    "KE"
                 ],
                 "type": "string",
-                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan"
+                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
             },
             "CentreCodeUnitedKingdomOfGreatBritain": {
                 "enum": [
-                    "ZE"
+                    "LO"
                 ],
                 "type": "string",
-                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain"
+                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain"
             },
             "CentreCodeUnitedStatesOfAmerica": {
                 "enum": [
-                    "ZU"
+                    "WA"
                 ],
                 "type": "string",
-                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA"
+                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA"
             },
             "CertificateIDPrefix": {
                 "enum": [
@@ -1732,12 +2286,12 @@
                     },
                     "certificateIDNumber": {
                         "maxLength": 8,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "certificateIDCD": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "integer",
                         "format": "int32"
                     }
@@ -1761,33 +2315,24 @@
                     },
                     "certificateReference": {
                         "maxLength": 30,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "clientsCrossReference": {
                         "maxLength": 8,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "declaredGross": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "declaredTare": {
-                        "pattern": "-?\\d{1,4}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "sampleWeightRemoved": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "bales": {
                         "pattern": "-?\\d{1,4}",
@@ -1801,11 +2346,15 @@
                         "nullable": true
                     },
                     "saleIdentity": {
-                        "$ref": "#/components/schemas/SaleIdentity"
+                        "maxLength": 6,
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A group field of SellingCentre/Type and Sale Number\r\nFrom: The current value that the Sale Identity is to be changed from.\r\nTo: The new value that the Sale Identity is to be changed to.\r\nSellingCentre/Type can be one of the following code:\r\nNZ_C: Christchurch; NZ_N: Napier; AU_A: Adelaide; AU: Australia; AU_B: Brisbane; AU_F: Fremantle; AU_G: Geelong;\r\nAU_L: Launceston; AU_M: Melbourne; AU_N: Newcastle; AU_R: Goulburn; AU_S: Sydney; PS: Private Sales; T: Auctions Plus Sales.",
+                        "nullable": true
                     },
                     "lotIdentity": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -1821,15 +2370,16 @@
                     "additionalPrintRequirements": {
                         "$ref": "#/components/schemas/AdditionalPrintRequirements"
                     },
-                    "teaM3HauteurPrint": {
+                    "isPrintingTEAM3Hauteur": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 4,
                         "type": "boolean",
+                        "description": "A boolean value to indicate whethear to print Team3-Hauteur\r\ntrue: print\r\nfalse: not print",
                         "nullable": true
                     },
                     "commitType": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -1919,20 +2469,15 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "retestFlag": {
                         "$ref": "#/components/schemas/RetestFlag"
@@ -1941,21 +2486,13 @@
                         "$ref": "#/components/schemas/ReissueChargeFlag"
                     },
                     "massOfGlobalSample": {
-                        "pattern": "^-?\\d{1,5}\\.\\d{1}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "sumOfODMasses": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "gainLossOfInvoiceMass": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "moistureContent": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -1968,24 +2505,20 @@
                         "format": "double"
                     },
                     "netWeightODOfConsignment": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "yieldType": {
                         "$ref": "#/components/schemas/YieldType"
                     },
                     "officialRegain": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "invoiceMassFlag": {
                         "$ref": "#/components/schemas/InvoiceMassFlag"
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "format": "date"
@@ -2011,33 +2544,46 @@
                 "type": "string",
                 "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa<br />BE: Belgium<br />GB: United Kingdom of Great Britain<br />DE: Germany<br />IT: Italy<br />NL: Netherlands<br />CN: China<br />TW: Taiwan<br />US: USA"
             },
-            "CustomProblemDetails": {
+            "Currency": {
                 "required": [
-                    "status",
-                    "title"
+                    "value"
                 ],
                 "type": "object",
                 "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
-                        "nullable": true
+                    "value": {
+                        "pattern": "^-?\\d{1,10}\\.\\d{2}$",
+                        "type": "number",
+                        "description": "Total up to 12 digits with 2 digits after the decimal point.",
+                        "format": "double"
                     },
-                    "title": {
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-                    },
-                    "status": {
-                        "type": "integer",
-                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
-                        "format": "int32"
-                    },
-                    "detail": {
-                        "type": "string",
-                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.",
-                        "nullable": true
-                    },
+                    "currencyUnit": {
+                        "$ref": "#/components/schemas/CurrencyUnit"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CurrencyUnit": {
+                "enum": [
+                    "AUD",
+                    "BEF",
+                    "NZD",
+                    "BGP",
+                    "FRF",
+                    "DEM",
+                    "ITL",
+                    "CNY",
+                    "ANG",
+                    "TWD",
+                    "ZAR",
+                    "USD",
+                    "EUR"
+                ],
+                "type": "string",
+                "description": "AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR: Euro"
+            },
+            "CustomErrors": {
+                "type": "object",
+                "properties": {
                     "errors": {
                         "type": "object",
                         "additionalProperties": {
@@ -2049,10 +2595,16 @@
                         },
                         "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
                         "nullable": true
+                    },
+                    "errorCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorCode"
+                        },
+                        "nullable": true
                     }
                 },
-                "additionalProperties": false,
-                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+                "additionalProperties": false
             },
             "DarkAndMedullatedFibreRisk": {
                 "enum": [
@@ -2085,20 +2637,15 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "retestFlag": {
                         "$ref": "#/components/schemas/RetestFlag"
@@ -2113,13 +2660,27 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "format": "date"
                     }
                 },
                 "additionalProperties": false
+            },
+            "ErrorCode": {
+                "enum": [
+                    "DOXCT",
+                    "INVTC",
+                    "INVFR",
+                    "INVAC",
+                    "INVCR",
+                    "INVDO",
+                    "INVSO",
+                    "INVEX"
+                ],
+                "type": "string",
+                "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
             },
             "FibreDiameterHistogram": {
                 "type": "object",
@@ -2160,10 +2721,10 @@
                 "type": "object",
                 "properties": {
                     "fibreDiameter": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
+                        "pattern": "^-?\\d{1,2}\\.\\d{2}$",
+                        "type": "number",
                         "description": "Fibre Diameter for the measurement.",
-                        "format": "int32"
+                        "format": "double"
                     },
                     "fibresMeasuredPercentage": {
                         "pattern": "^-?\\d{1,2}\\.\\d{4}$",
@@ -2249,7 +2810,7 @@
                     },
                     "coreTestSamplingDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "For records 31 and 55 this is the date core test was sampled or date combination/OML was requested.\r\nFor the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.        \r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21.",
@@ -2258,95 +2819,22 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC format. e.g. 2024-03-21.",
                         "format": "date"
                     },
                     "factorLaserscanNumerator": {
-                        "pattern": "^-?\\d{1,15}\\.\\d{6}$",
+                        "pattern": "^-?\\d{1,10}\\.\\d{6}$",
                         "type": "number",
                         "format": "double",
                         "nullable": true
                     },
                     "factorLaserscanDenominator": {
-                        "pattern": "^-?\\d{1,14}\\.\\d{6}$",
+                        "pattern": "^-?\\d{1,9}\\.\\d{6}$",
                         "type": "number",
                         "format": "double",
-                        "nullable": true
-                    }
-                },
-                "additionalProperties": false
-            },
-            "GetTestCertificatesRequest": {
-                "required": [
-                    "requestType"
-                ],
-                "type": "object",
-                "properties": {
-                    "saleIdentity": {
-                        "$ref": "#/components/schemas/SaleIdentity"
-                    },
-                    "organisationRequested": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
-                    },
-                    "saleDateRequested": {
-                        "maxLength": 10,
-                        "minLength": 0,
-                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
-                        "type": "string",
-                        "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
-                        "format": "date",
-                        "nullable": true
-                    },
-                    "startDateTimeStatusRequest": {
-                        "maxLength": 20,
-                        "minLength": 0,
-                        "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-                        "type": "string",
-                        "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-                        "format": "date-time",
-                        "nullable": true
-                    },
-                    "endDateTimeStatusRequest": {
-                        "maxLength": 20,
-                        "minLength": 0,
-                        "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-                        "type": "string",
-                        "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-                        "format": "date-time",
-                        "nullable": true
-                    },
-                    "useNetworkDateTime": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "boolean",
-                        "nullable": true
-                    },
-                    "requestType": {
-                        "$ref": "#/components/schemas/RequestTypeForData"
-                    },
-                    "woolTypeGroup": {
-                        "$ref": "#/components/schemas/WoolTypeGroup"
-                    },
-                    "recordTypesToBeExcluded": {
-                        "maxLength": 80,
-                        "minLength": 0,
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "description": "Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header",
-                        "nullable": true
-                    },
-                    "season": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
                         "nullable": true
                     }
                 },
@@ -2366,20 +2854,15 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -2460,6 +2943,13 @@
                 },
                 "additionalProperties": false
             },
+            "InformationCode": {
+                "enum": [
+                    "OK"
+                ],
+                "type": "string",
+                "description": "A code to indicate the information.<br />OK: All data received OK. "
+            },
             "Instrument": {
                 "enum": [
                     1,
@@ -2501,7 +2991,7 @@
                     },
                     "laboratory": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "lacBarbe": {
@@ -2535,9 +3025,7 @@
                         "nullable": true
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     }
                 },
                 "additionalProperties": false
@@ -2547,13 +3035,13 @@
                 "properties": {
                     "lotIdentity": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
                     "groupName": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -2606,7 +3094,7 @@
                 "properties": {
                     "organisationCode": {
                         "maxLength": 3,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "centre": {
@@ -2631,20 +3119,15 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -2780,6 +3263,67 @@
                 "type": "string",
                 "description": "R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results"
             },
+            "RequestForData": {
+                "required": [
+                    "requestType"
+                ],
+                "type": "object",
+                "properties": {
+                    "saleIdentity": {
+                        "$ref": "#/components/schemas/SaleIdentity"
+                    },
+                    "organisationRequested": {
+                        "$ref": "#/components/schemas/Organisation"
+                    },
+                    "saleDateRequested": {
+                        "maxLength": 10,
+                        "minLength": 1,
+                        "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+                        "type": "string",
+                        "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
+                        "format": "date",
+                        "nullable": true
+                    },
+                    "startDateTimeStatusRequest": {
+                        "maxLength": 20,
+                        "minLength": 1,
+                        "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+                        "type": "string",
+                        "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "endDateTimeStatusRequest": {
+                        "maxLength": 20,
+                        "minLength": 1,
+                        "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+                        "type": "string",
+                        "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "isUsingNetworkDateTime": {
+                        "maxLength": 5,
+                        "minLength": 4,
+                        "type": "boolean",
+                        "description": "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use.",
+                        "nullable": true
+                    },
+                    "requestType": {
+                        "$ref": "#/components/schemas/RequestTypeForData"
+                    },
+                    "woolTypeGroup": {
+                        "$ref": "#/components/schemas/WoolTypeGroup"
+                    },
+                    "season": {
+                        "pattern": "-?\\d{1,2}",
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
             "RequestTypeForData": {
                 "enum": [
                     1,
@@ -2812,7 +3356,7 @@
                     },
                     "saleNumber": {
                         "maxLength": 2,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "-?\\d{1,2}",
                         "type": "integer",
                         "format": "int32"
@@ -2839,20 +3383,15 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -3006,7 +3545,7 @@
                     },
                     "programName": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -3130,8 +3669,8 @@
                         "nullable": true
                     },
                     "propertyIdentificationCodes": {
-                        "maxLength": 8,
-                        "minLength": 0,
+                        "maxItems": 8,
+                        "minItems": 1,
                         "type": "array",
                         "items": {
                             "type": "string"
@@ -3152,22 +3691,22 @@
                 "properties": {
                     "brand": {
                         "maxLength": 30,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "baleDescription": {
                         "maxLength": 15,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "areaOfOrigin": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "locationWithinStore": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -3189,18 +3728,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "colourX": {
                         "pattern": "^-?\\d{1,2}\\.\\d{1}$",
@@ -3276,7 +3810,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -3309,17 +3843,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "colourX": {
                         "pattern": "^-?\\d{1,2}\\.\\d{1}$",
@@ -3344,7 +3874,7 @@
                     },
                     "coreBulkValue": {
                         "maxLength": 2,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -3380,7 +3910,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -3497,18 +4027,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -3622,19 +4147,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "stapleLength": {
                         "pattern": "-?\\d{1,3}",
@@ -3711,9 +4230,9 @@
                     },
                     "isLsSampleSecured": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Specifies whether the L/S sample is secured or not. <br />\r\n`true` for a secured L/S sample <br />\r\n`false` for a unsecured L/S sample <br />"
+                        "description": "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
                     },
                     "expectedBarbe": {
                         "pattern": "-?\\d{1,3}",
@@ -3738,7 +4257,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
@@ -3776,18 +4295,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "stapleLength": {
                         "pattern": "-?\\d{1,3}",
@@ -3826,8 +4340,6 @@
                         "format": "int32"
                     },
                     "team3Hauteur": {
-                        "maximum": 99,
-                        "minimum": 0,
                         "pattern": "-?\\d{1,3}",
                         "type": "integer",
                         "description": "Predicted Fibre Length in the Top. NOTE: Any certificate issued (or reissued with a new Certificate ID Number) from 1st July, 2006 will be based on the TEAM-3 calculations. \r\nAnything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.\r\nA check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.",
@@ -3842,9 +4354,9 @@
                     },
                     "isLsSampleSecured": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "Specifies whether the L/S sample is secured or not. <br />\r\ntrue: for a secured L/S sample <br />\r\nflase: for a unsecured L/S sample <br />"
+                        "description": "A boolean value to indicate whethear the LS-sample is secured.\r\ntrue: secured\r\nfalse: not secured"
                     },
                     "expectedBarbe": {
                         "pattern": "-?\\d{1,3}",
@@ -3869,7 +4381,7 @@
                     },
                     "dateIssued": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date in ISO 8601 standard UTC date format. e.g. 2024-03-21",
@@ -3903,18 +4415,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -4016,18 +4523,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -4127,18 +4629,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -4263,6 +4760,19 @@
                 },
                 "additionalProperties": false
             },
+            "TestCertificateRequestsApiResult": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "$ref": "#/components/schemas/ApiMessage"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/TestCertificateRequests"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A standard API response object used for all successful API responses"
+            },
             "TestCertificateSubjectiveInterlotDetails": {
                 "required": [
                     "certificateIdentity",
@@ -4281,19 +4791,13 @@
                         "$ref": "#/components/schemas/CertificateIdentity"
                     },
                     "charge": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "laboratory": {
                         "$ref": "#/components/schemas/Laboratory"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "description": "The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -4378,7 +4882,7 @@
                     },
                     "darkAndMedullatedFibreRisk": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     }
@@ -4404,7 +4908,7 @@
                     },
                     "season": {
                         "maxLength": 2,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "integer",
                         "format": "int32",
                         "nullable": true
@@ -4423,7 +4927,7 @@
                     },
                     "clientsCrossReference": {
                         "maxLength": 8,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
                     },
@@ -4433,20 +4937,13 @@
                         "format": "int32"
                     },
                     "gross": {
-                        "pattern": "-?\\d{1,6}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "tare": {
-                        "pattern": "-?\\d{1,4}",
-                        "type": "integer",
-                        "format": "int32"
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "regrabSampleWeight": {
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "weightUnit": {
                         "$ref": "#/components/schemas/WeightUnit"
@@ -4455,18 +4952,10 @@
                         "$ref": "#/components/schemas/MulesingStatus"
                     },
                     "declaredGross": {
-                        "maxLength": 6,
-                        "minLength": 0,
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "declaredTare": {
-                        "maxLength": 4,
-                        "minLength": 0,
-                        "type": "integer",
-                        "format": "int32",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Weight"
                     },
                     "lotType": {
                         "$ref": "#/components/schemas/LotType"
@@ -4484,23 +4973,19 @@
                         "$ref": "#/components/schemas/ScouredType"
                     },
                     "gstAmount": {
-                        "pattern": "^-?\\d{1,4}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "A GST Amount with 2 digits after the decimal point",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "isGSTApplicable": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "A Flag to determine if GST apply to invoice"
+                        "description": "A boolean value to indicate whether the GST is aplicable. \r\ntrue: applicable.\r\nfalse: not applicable."
                     },
                     "isCompanyABNApplicable": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 4,
                         "type": "boolean",
-                        "description": "A Flag to determine if Compnay ABN apply to invoice"
+                        "description": "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\ntrue: applicable.\r\nfalse: not applicable."
                     }
                 },
                 "additionalProperties": false
@@ -4523,6 +5008,19 @@
                     }
                 },
                 "additionalProperties": false
+            },
+            "TestCertificateUpdateApiResult": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "$ref": "#/components/schemas/ApiMessage"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/TestCertificateUpdate"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A standard API response object used for all successful API responses"
             },
             "TestCertificateUpdateDetail": {
                 "required": [
@@ -4552,7 +5050,7 @@
                     },
                     "baleDescription": {
                         "maxLength": 15,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Generic alphanumeric field."
                     },
@@ -4582,14 +5080,14 @@
                     },
                     "lotIdentityFrom": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Generic alphanumeric field, optional.",
                         "nullable": true
                     },
                     "lotIdentityTo": {
                         "maxLength": 6,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Generic alphanumeric field, optional.",
                         "nullable": true
@@ -4620,19 +5118,10 @@
                 "additionalProperties": false
             },
             "TestCertificatesApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
-                        "type": "string",
-                        "description": "Contains information about the response if applicable.",
-                        "nullable": true
+                        "$ref": "#/components/schemas/ApiMessage"
                     },
                     "data": {
                         "$ref": "#/components/schemas/TestCertificates"
@@ -4658,7 +5147,8 @@
                         "nullable": true
                     }
                 },
-                "additionalProperties": false
+                "additionalProperties": false,
+                "description": "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
             },
             "TransferType": {
                 "enum": [
@@ -4682,7 +5172,7 @@
                 "properties": {
                     "dateFormatLastRevised": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -4690,7 +5180,7 @@
                     },
                     "dateTransmissionFileCreated": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -4717,10 +5207,42 @@
                     },
                     "abn": {
                         "maxLength": 11,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^[0-9]+$",
                         "type": "string",
                         "description": "Australian Business Number, 11 digits string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "WarningCode": {
+                "enum": [
+                    "11",
+                    "12",
+                    "13",
+                    "18",
+                    "19",
+                    "20",
+                    "24",
+                    "DRVnn"
+                ],
+                "type": "string",
+                "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
+            },
+            "Weight": {
+                "required": [
+                    "unit",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "pattern": "^-?\\d{1,6}\\.\\d{2}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "unit": {
+                        "$ref": "#/components/schemas/WeightUnit"
                     }
                 },
                 "additionalProperties": false
@@ -4734,12 +5256,12 @@
                 "properties": {
                     "prefix": {
                         "maxLength": 1,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "suffix": {
                         "maxLength": 7,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "-?\\d{1,7}",
                         "type": "string"
                     }
@@ -4749,10 +5271,11 @@
             "WeightUnit": {
                 "enum": [
                     0,
-                    1
+                    1,
+                    2
                 ],
                 "type": "integer",
-                "description": "0: Kilograms<br />1: Pounds",
+                "description": "0: Kilograms<br />1: Pounds<br />2: Grams",
                 "format": "int32"
             },
             "WoolPreparationCategory": {

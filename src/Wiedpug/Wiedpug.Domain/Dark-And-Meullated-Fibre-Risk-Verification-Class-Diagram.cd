@@ -4,17 +4,21 @@
     <Position X="10.25" Y="1" Width="3.25" />
     <AssociationLine Name="DarkAndMedullatedFibreRiskDetailsCollection" Type="Wiedpug.Domain.Entities.DarkAndMedullatedFibreRiskDetails" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.312" Y="1.562" />
-        <Point X="13.312" Y="2.781" />
+        <Point X="13" Y="1.562" />
+        <Point X="13" Y="2.781" />
         <Point X="17" Y="2.781" />
       </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.311" Y="0.345" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACACAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\DarkAndMedullatedFibreRiskVerificationAggregate\DarkAndMedullatedFibreRiskVerification.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="DarkAndMedullatedFibreRiskDetailsCollection" />
@@ -23,7 +27,7 @@
   <Class Name="Wiedpug.Domain.Entities.DarkAndMedullatedFibreRiskDetails" Collapsed="true">
     <Position X="17" Y="2.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQEAoAQBACAgAAAACAAAAABwAsAABgEAAAAAIA=</HashCode>
+      <HashCode>AAAAAAQEAoAQBACAAAACAAEQAAABAAAAABgFAAAAAAA=</HashCode>
       <FileName>Entities\DarkAndMedullatedFibreRiskDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -32,6 +36,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="15.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

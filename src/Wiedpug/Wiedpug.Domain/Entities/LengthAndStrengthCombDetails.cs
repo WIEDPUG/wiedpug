@@ -21,8 +21,9 @@ namespace Wiedpug.Domain.Entities
         /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         /// <summary>
         /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.
@@ -119,12 +120,12 @@ namespace Wiedpug.Domain.Entities
         public required LsCertType LsCertType { get; set; }
 
         /// <summary>
-        /// Specifies whether the L/S sample is secured or not. <br />
-        /// `true` for a secured L/S sample <br />
-        /// `false` for a unsecured L/S sample <br />
+        /// A boolean value to indicate whethear the LS-sample is secured.
+        /// true: secured
+        /// false: not secured
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
         public required bool IsLsSampleSecured { get; set; }
 

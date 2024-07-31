@@ -16,7 +16,7 @@ namespace Wiedpug.Domain.Enums
     public enum CentreCodeSouthAfrica
     {
 
-        [Description("ZS: Cape Town - South Africa")]
-        ZS,
+        [Description("CA: Cape Town - South Africa")]
+        CA,
     }
 }

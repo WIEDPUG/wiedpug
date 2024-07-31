@@ -16,7 +16,7 @@ namespace Wiedpug.Domain.Enums
     public enum CentreCodeFrance
     {
 
-        [Description("ZF: Paris - France")]
-        ZF,
+        [Description("PA: Paris - France")]
+        PA,
     }
 }

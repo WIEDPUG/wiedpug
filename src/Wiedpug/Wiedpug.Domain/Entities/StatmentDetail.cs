@@ -18,10 +18,9 @@ namespace Wiedpug.Domain.Entities
         public required string AccountReference { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required double Amount { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Amount { get; set; }
 
         [MinLength(1)]
         [MaxLength(1)]
@@ -33,28 +32,29 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(10)]
         public string? ItemDate { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        [MinLength(1)]
-        [MaxLength(6)]
-        public double? GstAmount { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? GstAmount { get; set; }
 
         /// <summary>
-        /// Boolean value of wethear GST amount is applicable to invoice
-        /// True for applicable, False for not applicable
+        /// A boolean value to indicate whether the GST amount is applicable to invoice. 
+        /// true: applicable.
+        /// false: not applicable.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool GstTaxInvoiceApplicable { get; set; }
+        public required bool IsGstTaxInvoiceApplicable { get; set; }
 
         /// <summary>
-        /// Boolean value of wethear Company ABN apply to invoice
-        /// True for applicable, False for not applicable
+        /// A boolean value to indicate whether the Company ABN is applicable to invoice. 
+        /// true: applicable.
+        /// false: not applicable.
         /// </summary>
         [Required]
-        [MinLength(1)]
+        [MinLength(4)]
         [MaxLength(5)]
-        public required bool CompanyABNApplicable { get; set; }
+        public required bool IsCompanyABNApplicable { get; set; }
     }
 
 }

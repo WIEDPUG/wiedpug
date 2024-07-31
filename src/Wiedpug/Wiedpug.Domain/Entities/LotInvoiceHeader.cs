@@ -31,22 +31,25 @@ namespace Wiedpug.Domain.Entities
         /// Required numeric field for gross weight.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required int Gross { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Gross { get; set; }
 
         /// <summary>
         /// Required numeric field for tare weight.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int Tare { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public required Weight Tare { get; set; }
 
         /// <summary>
         /// Optional numeric field for regrab sample weight.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         /// <summary>
         /// Required numeric field for cost per weight unit.
@@ -59,15 +62,17 @@ namespace Wiedpug.Domain.Entities
         /// Required decimal field for first cost with two digits precision.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_12_2)]
-        public required double FirstCost { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency FirstCost { get; set; }
 
         /// <summary>
         /// Optional numeric field for clean weight.
         /// </summary>
-        /// 
-        [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
-        public int? CleanWeight { get; set; }
+        ///
+        [MinLength(4)]
+        [MaxLength(9)] 
+        public Weight? CleanWeight { get; set; }
 
         /// <summary>
         /// Optional enum type for yield type.

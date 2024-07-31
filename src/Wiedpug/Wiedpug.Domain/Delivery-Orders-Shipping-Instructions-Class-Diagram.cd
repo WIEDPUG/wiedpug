@@ -23,6 +23,7 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Consignments" />
@@ -48,13 +49,6 @@
       <Property Name="CountermarkHeadmarks" />
       <Property Name="DeliveryOrders" />
     </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Wiedpug.Domain.ValueObject.Organisation" Collapsed="true">
-    <Position X="9.5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>ValueObject\Organisation.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="9" Y="4" Width="1.5" />
@@ -106,7 +100,7 @@
   <Class Name="Wiedpug.Domain.Entities.DeliveryOrderDetail" Collapsed="true">
     <Position X="5.75" Y="9.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ACEAAgAAYgCAAAEAAQQQAAAAEACCAAAAAAAAIgAAAAA=</HashCode>
+      <HashCode>ACEAAgAAYAAAAAEAAQQQAAAAAACCQAAAAAAAIgAgQAA=</HashCode>
       <FileName>Entities\DeliveryOrderDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -168,6 +162,13 @@
     <Position X="11.5" Y="13.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="9" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

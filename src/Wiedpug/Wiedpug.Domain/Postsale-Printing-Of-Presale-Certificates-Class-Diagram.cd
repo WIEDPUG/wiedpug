@@ -8,11 +8,12 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\RequestPostsalePrintingOfPresaleCertificatesAggregate\RequestPostsalePrintingOfPresaleCertificates.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="PrintPreSaleCertificatePostSales" />
@@ -21,7 +22,7 @@
   <Class Name="Wiedpug.Domain.Entities.PrintPreSaleCertificatePostSale" Collapsed="true">
     <Position X="3" Y="4.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACCAAIEBgQAIAQAAAADAAAAAiEAAAAAIA=</HashCode>
+      <HashCode>AAACAAAAAAACCAAIEBgQAIAAAAAADAAAAAiEAAAAAIA=</HashCode>
       <FileName>Entities\PrintPreSaleCertificatePostSale.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -30,6 +31,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

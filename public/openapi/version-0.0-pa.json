@@ -86,19 +86,34 @@
                                                     "discountRate": 1.5,
                                                     "maximumDaysDiscount": 0,
                                                     "dateStorageChargeCommences": "2017-01-24",
-                                                    "storageChargePerBalePerDay": 0.245,
+                                                    "storageChargePerBalePerDay": {
+                                                        "value": 0.245,
+                                                        "currencyUnit": "AUD"
+                                                    },
                                                     "penaltyInterestRate": 11.35
                                                 },
                                                 "lotPaymentDetails": [
                                                     {
                                                         "lotIdentity": "123256",
-                                                        "lotLastCost": 23.45
+                                                        "lotLastCost": {
+                                                            "value": 23.45,
+                                                            "currencyUnit": "AUD"
+                                                        }
                                                     }
                                                 ],
                                                 "paymentSummary": {
-                                                    "lastCostPaid": 67,
-                                                    "discountAmount": 23,
-                                                    "netAmountPaid": 77,
+                                                    "lastCostPaid": {
+                                                        "value": 67,
+                                                        "currencyUnit": "AUD"
+                                                    },
+                                                    "discountAmount": {
+                                                        "value": 23,
+                                                        "currencyUnit": "AUD"
+                                                    },
+                                                    "netAmountPaid": {
+                                                        "value": 77,
+                                                        "currencyUnit": "AUD"
+                                                    },
                                                     "datePaymentMade": "2024-05-24"
                                                 }
                                             }
@@ -123,9 +138,7 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResult"
                                 },
-                                "example": {
-                                    "isSuccessful": true
-                                }
+                                "example": {}
                             }
                         }
                     },
@@ -134,7 +147,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -142,13 +155,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -159,7 +174,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -175,7 +190,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -191,7 +206,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -216,16 +231,18 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/RequestForPaymentAdvice"
+                                "$ref": "#/components/schemas/RequestForData"
                             },
                             "example": {
                                 "saleIdentity": {
                                     "sellingCentreType": "AU_M",
                                     "saleNumber": 18
                                 },
-                                "organisationRequested": "AWNF",
+                                "organisationRequested": {
+                                    "organisationCode": "ANF"
+                                },
                                 "saleDateRequested": "2023-10-31",
-                                "useNetworkDateTime": false,
+                                "isUsingNetworkDateTime": false,
                                 "requestType": 4,
                                 "woolTypeGroup": "MFLC",
                                 "season": 23
@@ -243,7 +260,6 @@
                                     "$ref": "#/components/schemas/PaymentAdvicesApiResult"
                                 },
                                 "example": {
-                                    "isSuccessful": true,
                                     "data": {
                                         "paymentAdviceCollection": [
                                             {
@@ -297,19 +313,34 @@
                                                             "discountRate": 1.5,
                                                             "maximumDaysDiscount": 0,
                                                             "dateStorageChargeCommences": "2017-01-24",
-                                                            "storageChargePerBalePerDay": 0.245,
+                                                            "storageChargePerBalePerDay": {
+                                                                "value": 0.245,
+                                                                "currencyUnit": "USD"
+                                                            },
                                                             "penaltyInterestRate": 11.35
                                                         },
                                                         "lotPaymentDetails": [
                                                             {
                                                                 "lotIdentity": "123256",
-                                                                "lotLastCost": 23.45
+                                                                "lotLastCost": {
+                                                                    "value": 23.45,
+                                                                    "currencyUnit": "AUD"
+                                                                }
                                                             }
                                                         ],
                                                         "paymentSummary": {
-                                                            "lastCostPaid": 67,
-                                                            "discountAmount": 23,
-                                                            "netAmountPaid": 77,
+                                                            "lastCostPaid": {
+                                                                "value": 67,
+                                                                "currencyUnit": "AUD"
+                                                            },
+                                                            "discountAmount": {
+                                                                "value": 23,
+                                                                "currencyUnit": "AUD"
+                                                            },
+                                                            "netAmountPaid": {
+                                                                "value": 77,
+                                                                "currencyUnit": "AUD"
+                                                            },
                                                             "datePaymentMade": "2024-05-24"
                                                         }
                                                     }
@@ -331,7 +362,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
@@ -339,13 +370,15 @@
                                     "status": 400,
                                     "detail": "",
                                     "errors": {
-                                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                                            "The field DateFormatLastRevised is required",
-                                            "The field DateFormatLastRevised must match regulart expression pattern..."
-                                        ],
-                                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                                            "The field CountryOfOrigin is required"
-                                        ]
+                                        "errors": {
+                                            "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                                                "The field DateFormatLastRevised is required",
+                                                "The field DateFormatLastRevised must match regulart expression pattern..."
+                                            ],
+                                            "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                                                "The field CountryOfOrigin is required"
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -356,7 +389,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
@@ -372,7 +405,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -388,7 +421,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
@@ -403,7 +436,7 @@
                         "content": {
                             "application/problem+json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CustomProblemDetails"
+                                    "$ref": "#/components/schemas/ApiErrorResult"
                                 },
                                 "example": {
                                     "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
@@ -420,20 +453,69 @@
     },
     "components": {
         "schemas": {
-            "ApiResult": {
+            "ApiErrorResult": {
                 "required": [
-                    "isSuccessful"
+                    "status",
+                    "title"
                 ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
+                    "type": {
+                        "type": "string",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "nullable": true
                     },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                    },
+                    "status": {
+                        "type": "integer",
+                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+                        "format": "int32"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+                        "nullable": true
+                    },
+                    "errors": {
+                        "$ref": "#/components/schemas/CustomErrors"
+                    }
+                },
+                "additionalProperties": false,
+                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+            },
+            "ApiMessage": {
+                "type": "object",
+                "properties": {
                     "message": {
                         "type": "string",
-                        "description": "Contains information about the response if applicable.",
                         "nullable": true
+                    },
+                    "warningCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/WarningCode"
+                        },
+                        "nullable": true
+                    },
+                    "informationCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InformationCode"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ApiResult": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "$ref": "#/components/schemas/ApiMessage"
                     },
                     "data": {
                         "description": "Contains response data. e.g. Auction Catalogue",
@@ -607,51 +689,51 @@
             },
             "CentreCodeBelgium": {
                 "enum": [
-                    "ZB"
+                    "BR"
                 ],
                 "type": "string",
-                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZB: Brussels - Belgium"
+                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium"
             },
             "CentreCodeChina": {
                 "enum": [
-                    "ZM",
-                    "ZP",
-                    "ZQ",
-                    "ZR"
-                ],
-                "type": "string",
-                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZM: Nanjing - China<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China"
-            },
-            "CentreCodeFrance": {
-                "enum": [
-                    "ZF"
-                ],
-                "type": "string",
-                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZF: Paris - France"
-            },
-            "CentreCodeGermany": {
-                "enum": [
-                    "ZG",
+                    "NA",
+                    "SH",
+                    "QI",
                     "ZH"
                 ],
                 "type": "string",
-                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZG: Berlin - Germany<br />ZH: Blumenthal - Germany"
+                "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China"
+            },
+            "CentreCodeFrance": {
+                "enum": [
+                    "PA"
+                ],
+                "type": "string",
+                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France"
+            },
+            "CentreCodeGermany": {
+                "enum": [
+                    "BE",
+                    "BL"
+                ],
+                "type": "string",
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany"
             },
             "CentreCodeItaly": {
                 "enum": [
-                    "ZI",
-                    "ZJ",
-                    "ZK"
+                    "RO",
+                    "BI",
+                    "GR"
                 ],
                 "type": "string",
                 "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
             },
             "CentreCodeNetherlands": {
                 "enum": [
-                    "ZN"
+                    "AM"
                 ],
                 "type": "string",
-                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZN: Amsterdam - Netherlands"
+                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands"
             },
             "CentreCodeNewZealand": {
                 "enum": [
@@ -724,31 +806,31 @@
             },
             "CentreCodeSouthAfrica": {
                 "enum": [
-                    "ZS"
+                    "CA"
                 ],
                 "type": "string",
-                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZS: Cape Town - South Africa"
+                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa"
             },
             "CentreCodeTaiwan": {
                 "enum": [
-                    "ZO"
+                    "KE"
                 ],
                 "type": "string",
-                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZO: Keelung - Taiwan"
+                "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
             },
             "CentreCodeUnitedKingdomOfGreatBritain": {
                 "enum": [
-                    "ZE"
+                    "LO"
                 ],
                 "type": "string",
-                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZE: London - United Kingdom of Great Britain"
+                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain"
             },
             "CentreCodeUnitedStatesOfAmerica": {
                 "enum": [
-                    "ZU"
+                    "WA"
                 ],
                 "type": "string",
-                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZU: Washington - USA"
+                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA"
             },
             "ChargeType": {
                 "enum": [
@@ -765,7 +847,7 @@
                 "properties": {
                     "text": {
                         "maxLength": 80,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     }
                 },
@@ -796,16 +878,18 @@
                 "type": "object",
                 "properties": {
                     "value": {
+                        "pattern": "^-?\\d{1,10}\\.\\d{2}$",
                         "type": "number",
+                        "description": "Total up to 12 digits with 2 digits after the decimal point.",
                         "format": "double"
                     },
-                    "currencyCode": {
-                        "$ref": "#/components/schemas/CurrencyCode"
+                    "currencyUnit": {
+                        "$ref": "#/components/schemas/CurrencyUnit"
                     }
                 },
                 "additionalProperties": false
             },
-            "CurrencyCode": {
+            "CurrencyUnit": {
                 "enum": [
                     "AUD",
                     "BEF",
@@ -824,33 +908,9 @@
                 "type": "string",
                 "description": "AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR: Euro"
             },
-            "CustomProblemDetails": {
-                "required": [
-                    "status",
-                    "title"
-                ],
+            "CustomErrors": {
                 "type": "object",
                 "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
-                        "nullable": true
-                    },
-                    "title": {
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
-                    },
-                    "status": {
-                        "type": "integer",
-                        "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
-                        "format": "int32"
-                    },
-                    "detail": {
-                        "type": "string",
-                        "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, etc.",
-                        "nullable": true
-                    },
                     "errors": {
                         "type": "object",
                         "additionalProperties": {
@@ -862,10 +922,16 @@
                         },
                         "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
                         "nullable": true
+                    },
+                    "errorCodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorCode"
+                        },
+                        "nullable": true
                     }
                 },
-                "additionalProperties": false,
-                "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+                "additionalProperties": false
             },
             "DebitCreditFlag": {
                 "enum": [
@@ -875,6 +941,27 @@
                 "type": "integer",
                 "description": "1: Debit<br />2: Credit",
                 "format": "int32"
+            },
+            "ErrorCode": {
+                "enum": [
+                    "DOXCT",
+                    "INVTC",
+                    "INVFR",
+                    "INVAC",
+                    "INVCR",
+                    "INVDO",
+                    "INVSO",
+                    "INVEX"
+                ],
+                "type": "string",
+                "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
+            },
+            "InformationCode": {
+                "enum": [
+                    "OK"
+                ],
+                "type": "string",
+                "description": "A code to indicate the information.<br />OK: All data received OK. "
             },
             "LotPaymentDetail": {
                 "required": [
@@ -890,10 +977,7 @@
                         "description": "Required alphanumeric field for the first lot identity."
                     },
                     "lotLastCost": {
-                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "Required decimal field for the last cost of the first lot with two digits precision.",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     }
                 },
                 "additionalProperties": false
@@ -911,7 +995,7 @@
                     },
                     "chargeDescription": {
                         "maxLength": 40,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Optional alphanumeric field for charge description.",
                         "nullable": true
@@ -920,10 +1004,7 @@
                         "$ref": "#/components/schemas/Currency"
                     },
                     "chargeAmount": {
-                        "pattern": "^-?\\d{1,12}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "Required decimal field for charge amount with two digits precision.",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "debitCreditFlag": {
                         "$ref": "#/components/schemas/DebitCreditFlag"
@@ -939,7 +1020,7 @@
                 "properties": {
                     "organisationCode": {
                         "maxLength": 3,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string"
                     },
                     "centre": {
@@ -1064,7 +1145,7 @@
                     },
                     "saleDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -1090,7 +1171,7 @@
                     },
                     "storageDescription": {
                         "maxLength": 15,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "description": "Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.",
                         "nullable": true
@@ -1109,17 +1190,14 @@
                     },
                     "dateStorageChargeCommences": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21",
                         "format": "date"
                     },
                     "storageChargePerBalePerDay": {
-                        "pattern": "^-?\\d{1}\\.\\d{3}$",
-                        "type": "number",
-                        "description": "Total 4 digits with 3 digits after the decimal point. e.g. 23.76",
-                        "format": "double"
+                        "$ref": "#/components/schemas/StorageChargeCurrency"
                     },
                     "penaltyInterestRate": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
@@ -1129,7 +1207,7 @@
                     },
                     "lotAvailableDate": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "The first date on which the wool is available for purchase.\r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21.",
@@ -1137,11 +1215,7 @@
                         "nullable": true
                     },
                     "postSaleChargeRebate": {
-                        "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-                        "type": "number",
-                        "description": "The total (extended) amount of Post Sale Charge Rebate for the Lot. \r\nThis value is provided where a value in the Post Sale Charge Rebate field exists (11A)\r\nTotal 5 digits with 2 digits after the decimal point. e.g. 123.76",
-                        "format": "double",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Currency"
                     }
                 },
                 "additionalProperties": false
@@ -1162,19 +1236,10 @@
                 "additionalProperties": false
             },
             "PaymentAdvicesApiResult": {
-                "required": [
-                    "isSuccessful"
-                ],
                 "type": "object",
                 "properties": {
-                    "isSuccessful": {
-                        "type": "boolean",
-                        "description": "Indicator if the request has been successfully processed."
-                    },
                     "message": {
-                        "type": "string",
-                        "description": "Contains information about the response if applicable.",
-                        "nullable": true
+                        "$ref": "#/components/schemas/ApiMessage"
                     },
                     "data": {
                         "$ref": "#/components/schemas/PaymentAdvices"
@@ -1193,22 +1258,13 @@
                 "type": "object",
                 "properties": {
                     "lastCostPaid": {
-                        "pattern": "/^\\d+(\\.\\d{2})?$/",
-                        "type": "number",
-                        "description": "Required decimal field for the last cost paid with two digits precision.",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "discountAmount": {
-                        "pattern": "/^\\d+(\\.\\d{2})?$/",
-                        "type": "number",
-                        "description": "Required decimal field for discount amount with two digits precision.",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "netAmountPaid": {
-                        "pattern": "/^\\d+(\\.\\d{2})?$/",
-                        "type": "number",
-                        "description": "Required decimal field for net amount paid with two digits precision.",
-                        "format": "double"
+                        "$ref": "#/components/schemas/Currency"
                     },
                     "datePaymentMade": {
                         "minLength": 1,
@@ -1220,7 +1276,7 @@
                 },
                 "additionalProperties": false
             },
-            "RequestForPaymentAdvice": {
+            "RequestForData": {
                 "required": [
                     "requestType"
                 ],
@@ -1230,14 +1286,11 @@
                         "$ref": "#/components/schemas/SaleIdentity"
                     },
                     "organisationRequested": {
-                        "maxLength": 5,
-                        "minLength": 0,
-                        "type": "string",
-                        "nullable": true
+                        "$ref": "#/components/schemas/Organisation"
                     },
                     "saleDateRequested": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
@@ -1246,7 +1299,7 @@
                     },
                     "startDateTimeStatusRequest": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
@@ -1255,17 +1308,18 @@
                     },
                     "endDateTimeStatusRequest": {
                         "maxLength": 20,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
                         "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                         "format": "date-time",
                         "nullable": true
                     },
-                    "useNetworkDateTime": {
+                    "isUsingNetworkDateTime": {
                         "maxLength": 5,
-                        "minLength": 0,
+                        "minLength": 4,
                         "type": "boolean",
+                        "description": "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use.",
                         "nullable": true
                     },
                     "requestType": {
@@ -1273,16 +1327,6 @@
                     },
                     "woolTypeGroup": {
                         "$ref": "#/components/schemas/WoolTypeGroup"
-                    },
-                    "recordTypesToBeExcluded": {
-                        "maxLength": 80,
-                        "minLength": 0,
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "description": "Record types and record sub-types to be excluded. e.g. 20 - Lot Header, 22A - Group Header",
-                        "nullable": true
                     },
                     "season": {
                         "pattern": "-?\\d{1,2}",
@@ -1315,7 +1359,7 @@
                     },
                     "saleNumber": {
                         "maxLength": 2,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "-?\\d{1,2}",
                         "type": "integer",
                         "format": "int32"
@@ -1373,9 +1417,26 @@
                     },
                     "programName": {
                         "maxLength": 4,
-                        "minLength": 0,
+                        "minLength": 1,
                         "type": "string",
                         "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "StorageChargeCurrency": {
+                "required": [
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "pattern": "^-?\\d{1}\\.\\d{3}$",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "currencyUnit": {
+                        "$ref": "#/components/schemas/CurrencyUnit"
                     }
                 },
                 "additionalProperties": false
@@ -1397,7 +1458,8 @@
                         "nullable": true
                     }
                 },
-                "additionalProperties": false
+                "additionalProperties": false,
+                "description": "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
             },
             "TransferType": {
                 "enum": [
@@ -1421,7 +1483,7 @@
                 "properties": {
                     "dateFormatLastRevised": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -1429,7 +1491,7 @@
                     },
                     "dateTransmissionFileCreated": {
                         "maxLength": 10,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
                         "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
@@ -1456,13 +1518,27 @@
                     },
                     "abn": {
                         "maxLength": 11,
-                        "minLength": 0,
+                        "minLength": 1,
                         "pattern": "^[0-9]+$",
                         "type": "string",
                         "description": "Australian Business Number, 11 digits string"
                     }
                 },
                 "additionalProperties": false
+            },
+            "WarningCode": {
+                "enum": [
+                    "11",
+                    "12",
+                    "13",
+                    "18",
+                    "19",
+                    "20",
+                    "24",
+                    "DRVnn"
+                ],
+                "type": "string",
+                "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
             },
             "WoolState": {
                 "enum": [

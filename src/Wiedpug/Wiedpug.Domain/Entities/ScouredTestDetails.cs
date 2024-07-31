@@ -12,16 +12,18 @@ namespace Wiedpug.Domain.Entities
         public required CertificateIdentity CertificateIdentity { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double Charge { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Charge { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
         public required string Laboratory { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? RegrabSampleWeight { get; set; }
+        [MinLength(4)]
+        [MaxLength(9)]
+        public Weight? RegrabSampleWeight { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? WoolBase { get; set; }

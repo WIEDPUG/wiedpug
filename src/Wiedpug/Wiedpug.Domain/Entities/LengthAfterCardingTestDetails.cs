@@ -37,7 +37,8 @@ namespace Wiedpug.Domain.Entities
         public double? LACCardWaste { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_6_2)]
-        public required double Charge { get; set; }
+        [MinLength(6)]
+        [MaxLength(15)]
+        public required Currency Charge { get; set; }
     }
 }
