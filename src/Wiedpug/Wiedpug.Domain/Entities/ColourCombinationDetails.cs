@@ -11,6 +11,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? Charge { get; set; }
+
         [Required]
         [MinLength(1)]
         [MaxLength(1)]

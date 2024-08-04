@@ -11,10 +11,7 @@ namespace Wiedpug.Domain.Aggregates.LotInvoicesAggregate
     public class WoolSale
     {
         [Required]
-        public required LotInvoicesWoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
-
-        [Required]
-        public required WoolSaleHeaderExtension WoolSaleHeaderExtension { get; set; }
+        public required WoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
 
         [Required]
         public required List<LotInvoiceDetail> LotInvoiceDetails { get; set; }

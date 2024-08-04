@@ -110,14 +110,12 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public DarkAndMedullatedFibreRisk? DarkandMedullatedFibreRisk { get; set; }
 
-        [Required]
         [MinLength(1)]
         [MaxLength(11)]
-        public required CertificateIdentity CertificateIdentity { get; set; }
+        public CertificateIdentity? CertificateIdentity { get; set; }
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double WoolBase { get; set; }
+        public double? WoolBase { get; set; }
 
         /// <summary>
         /// A list of DMFR Error Field, each field should be a numeric string with up to two digits.

@@ -14,6 +14,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; } // FIELD NUMBER 3 - Certificate Identity - Start: 4, Size: 11, Data Type: GR, Justification: F, Requirement Designator: M
 
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? Charge { get; set; }
+
         [Required]
         [MinLength(1)]
         [MaxLength(1)]

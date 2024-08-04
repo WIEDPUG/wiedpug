@@ -62,35 +62,35 @@ var apiVersionSet = app.NewApiVersionSet()
 var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(apiVersionSet);
 
 
-//versionedGroup.MapTestCertificatesEndpoints();
+versionedGroup.MapTestCertificatesEndpoints();
 
-//versionedGroup.MapTestCertificateUpdateEndpoints();
+versionedGroup.MapTestCertificateUpdateEndpoints();
 
-//versionedGroup.MapTestCertificateRequestsEndpoints();
+versionedGroup.MapTestCertificateRequestsEndpoints();
 
-//versionedGroup.MapCatalogueEndpoints();
+versionedGroup.MapCatalogueEndpoints();
 
-//versionedGroup.MapOrganisationDetailsEndpoints();
+versionedGroup.MapOrganisationDetailsEndpoints();
 
-//versionedGroup.MapTestStatusEndpoints();
+versionedGroup.MapTestStatusEndpoints();
 
-//versionedGroup.MapTestRequestsVerificationEndpoints();
+versionedGroup.MapTestRequestsVerificationEndpoints();
 
-//versionedGroup.MapLotInvoicesEndpoints();
+versionedGroup.MapLotInvoicesEndpoints();
 
-//versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
+versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
 
-//versionedGroup.MapPaymentAdvicesEndpoints();
+versionedGroup.MapPaymentAdvicesEndpoints();
 
-//versionedGroup.MapPaymentConfirmationEndpoints();
+versionedGroup.MapPaymentConfirmationEndpoints();
 
-//versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
+versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
 
-//versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
+versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
 
-//versionedGroup.MapStatementsEndpoints();
+versionedGroup.MapStatementsEndpoints();
 
-//versionedGroup.MapTextsEndpoints();
+versionedGroup.MapTextsEndpoints();
 
 versionedGroup.MapLotPriceAndBuyersEndpoints();
 

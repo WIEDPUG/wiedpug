@@ -49,7 +49,7 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     new PaymentAdviceDetail
                     {
-                            WoolSaleHeaderLots = new PaymentAdviceWoolSaleHeaderLots
+                            WoolSaleHeaderLots = new WoolSaleHeaderLots
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -179,7 +179,7 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     new PaymentAdviceDetail
                     {
-                                WoolSaleHeaderLots = new PaymentAdviceWoolSaleHeaderLots
+                                WoolSaleHeaderLots = new WoolSaleHeaderLots
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity

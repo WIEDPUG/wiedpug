@@ -7,7 +7,7 @@ namespace Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate
     public class PaymentAdviceDetail
     {
         [Required]
-        public required PaymentAdviceWoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
+        public required WoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
 
         [Required]
         public required List<LotPaymentDetail> LotPaymentDetails { get; set; }

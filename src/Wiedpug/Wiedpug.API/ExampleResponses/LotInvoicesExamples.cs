@@ -44,7 +44,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                              new WoolSale
                              {
-                                WoolSaleHeaderLots = new Domain.Entities.LotInvoicesWoolSaleHeaderLots
+                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -59,7 +59,6 @@ namespace Wiedpug.API.ExampleResponses
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
-                                    Currency = "AUD",
                                     PostSaleCharge = new Currency{
                                                 Value = 25.96,
                                                 CurrencyUnit =CurrencyUnit.AUD
@@ -98,10 +97,7 @@ namespace Wiedpug.API.ExampleResponses
                                         Country = CountryCode.AU, 
                                         CentreCode = CentreCodeAustralia.G 
                                     },
-                                    DeliveryBasis = DeliveryBasis.D
-                                },
-                                WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension
-                                {
+                                    DeliveryBasis = DeliveryBasis.D,
                                     StorageOrganisation = new Organisation
                                     {
                                                                 OrganisationCode = "ABC",
@@ -326,7 +322,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                              new WoolSale
                              {
-                                WoolSaleHeaderLots = new Domain.Entities.LotInvoicesWoolSaleHeaderLots
+                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
                                 {
                                     Season = 16,
                                     SaleIdentity = new Domain.Entities.SaleIdentity
@@ -338,7 +334,6 @@ namespace Wiedpug.API.ExampleResponses
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
-                                    Currency = "AUD",
                                     PostSaleCharge = new Currency { Value = 25.96, CurrencyUnit = CurrencyUnit.AUD },
                                     CalculationBasis = CalculationBasis.B,
                                     FreightCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD },
@@ -364,14 +359,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
-                                    DeliveryBasis = DeliveryBasis.D
-                                },
-                                WoolSaleHeaderExtension = new Domain.Entities.WoolSaleHeaderExtension
-                                {
-                                    StorageOrganisation = new Organisation
+                                    DeliveryBasis = DeliveryBasis.D,
+                                     StorageOrganisation = new Organisation
                                     {
-                                                                OrganisationCode = "ABC",
-
+                                         OrganisationCode = "ABC",
                                     },
                                     StorageDescription = "45 MAIN ST",
                                     PaymentDueDate = "2017-01-27",

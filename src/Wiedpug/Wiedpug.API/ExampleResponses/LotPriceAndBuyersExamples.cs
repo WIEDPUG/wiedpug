@@ -51,7 +51,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new Lot
                             {
-                                 WoolSaleHeaderLots = new LotPriceAndBuyerWoolSaleHeaderLots
+                                 WoolSaleHeaderLots = new WoolSaleHeaderLots
                                  {
                                      ReleasingOrganisation = new Organisation
                                      {
@@ -66,8 +66,6 @@ namespace Wiedpug.API.ExampleResponses
                                      SaleDate = "2017-01-19",
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
-                                     Currency = "AUD",
-                                     WeightUnit = WeightUnit.Kilograms,
                                      CatalogueSection = CatalogueSection.FLC,
                                      IsFinalCatalogue = true,
                                     Season = 16,
@@ -195,7 +193,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new Lot
                             {
-                                 WoolSaleHeaderLots = new LotPriceAndBuyerWoolSaleHeaderLots
+                                 WoolSaleHeaderLots = new WoolSaleHeaderLots
                                  {
                                      ReleasingOrganisation = new Organisation
                                      {
@@ -206,8 +204,6 @@ namespace Wiedpug.API.ExampleResponses
                                      SaleDate = "2017-01-19",
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
-                                     Currency = "AUD",
-                                     WeightUnit = WeightUnit.Kilograms,
                                      CatalogueSection = CatalogueSection.FLC,
                                      IsFinalCatalogue = true,
                                     Season = 16,

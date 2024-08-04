@@ -70,7 +70,6 @@ namespace Wiedpug.API.ExampleResponses
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
-                                    WeightUnit = WeightUnit.Kilograms,
                                     PostSaleCharge = new Currency{
                                         Value = 25.96,
                                         CurrencyUnit = CurrencyUnit.AUD
@@ -190,7 +189,7 @@ namespace Wiedpug.API.ExampleResponses
                                             PositionOfBreakPercentageTip = 77,
                                             PositionOfBreakPercentageMiddle = 23,
                                             PositionOfBreakPercentageBase = 0,
-                                            Team3Hauteur = 72.00,
+                                            Team3Hauteur = 72,
                                             LsCertType = LsCertType.LengthAndStrengthTested,
                                             ExpectedBarbe = 111.00,
                                             Team3HauteurCvPercentage = 36.9,
@@ -347,7 +346,6 @@ namespace Wiedpug.API.ExampleResponses
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState._1,
                                     PackType = PackType._6,
-                                    WeightUnit = WeightUnit.Kilograms,
                                     PostSaleCharge = new Currency{ 
                                         Value=25.96,
                                         CurrencyUnit = CurrencyUnit.AUD
@@ -593,7 +591,6 @@ namespace Wiedpug.API.ExampleResponses
                                 SaleDate = "2017-01-19",
                                 WoolState = WoolState.A,
                                 PackType = PackType.F,
-                                WeightUnit = WeightUnit.Kilograms,
                                 PostSaleCharge = new Currency { Value = 25.96, CurrencyUnit = CurrencyUnit.AUD },
                                 CalculationBasis = CalculationBasis.B,
                                 FreightCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD },
@@ -703,7 +700,7 @@ namespace Wiedpug.API.ExampleResponses
                                         PositionOfBreakPercentageTip = 77,
                                         PositionOfBreakPercentageMiddle = 23,
                                         PositionOfBreakPercentageBase = 0,
-                                        Team3Hauteur = 72.00,
+                                        Team3Hauteur = 72,
                                         LsCertType = LsCertType.LengthAndStrengthTested,
                                         isLsSampleSecured = true,
                                         ExpectedBarbe = 111.00,
@@ -944,7 +941,6 @@ namespace Wiedpug.API.ExampleResponses
                                         SaleDate = "2017-01-19",
                                         WoolState = WoolState._1,
                                         PackType = PackType._9,
-                                        WeightUnit = WeightUnit.Kilograms,
                                         PostSaleCharge = new Currency { Value = 25.96, CurrencyUnit = CurrencyUnit.AUD },
                                         CalculationBasis = CalculationBasis.B,
                                         FreightCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD },
@@ -1046,7 +1042,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 PositionOfBreakPercentageTip = 77,
                                                 PositionOfBreakPercentageMiddle = 23,
                                                 PositionOfBreakPercentageBase = 0,
-                                                Team3Hauteur = 72.00,
+                                                Team3Hauteur = 72,
                                                 LsCertType = LsCertType.LengthAndStrengthTested,
                                                 isLsSampleSecured = true,     
                                                 ExpectedBarbe = 111.00,

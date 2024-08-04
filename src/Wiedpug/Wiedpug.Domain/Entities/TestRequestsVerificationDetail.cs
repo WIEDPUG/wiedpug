@@ -15,7 +15,7 @@ namespace Wiedpug.Domain.Entities
 
         public ContractLimitRequirements?   ContractLimitRequirements { get; set; }
 
-        public TestRequestVerificationDarkAndMedullatedFibreRiskDetails? DarkAndMedullatedFibreRiskDetails { get; set; }
+        public DarkAndMedullatedFibreRiskDetails? DarkAndMedullatedFibreRiskDetails { get; set; }
 
         public List<Bale>? Bales { get; set; }
     }

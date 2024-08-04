@@ -57,8 +57,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Value = 1.00,
                                 Unit = WeightUnit.Kilograms
                             },
-                            LotIdentity = "567545",
-                            WeightUnit = WeightUnit.Kilograms,
+                            LotIdentityOrGroupName = "567545",
                         WeightNote = new WeightNote{
                             Prefix = "L",
                             Suffix = "1234567",
@@ -125,7 +124,7 @@ namespace Wiedpug.API.ExampleResponses
                             LACHauteurCVPercentMin = 10,
                             LACHauteurCVPercentMax = 20
                         },
-                        DarkAndMedullatedFibreRiskDetails = new TestRequestVerificationDarkAndMedullatedFibreRiskDetails
+                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                         {
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
@@ -150,12 +149,11 @@ namespace Wiedpug.API.ExampleResponses
                             Bales = 1,
                             Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                            LotIdentity = "567545",
+                            LotIdentityOrGroupName = "567545",
                         WeightNote = new WeightNote{
                             Prefix = "L",
                             Suffix = "1234567",
                         },
-                            WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.BA },
                             SourceCode = SourceCode.Dealer,
@@ -219,7 +217,7 @@ namespace Wiedpug.API.ExampleResponses
                             LACHauteurCVPercentMin = 13,
                             LACHauteurCVPercentMax = 27
                         },
-                        DarkAndMedullatedFibreRiskDetails = new TestRequestVerificationDarkAndMedullatedFibreRiskDetails
+                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                         {
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
@@ -305,8 +303,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Bales = 1,
                                 Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                                 Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                                LotIdentity = "567545",
-                                WeightUnit = WeightUnit.Kilograms,
+                                LotIdentityOrGroupName = "567545",
                                 WeightNote = new WeightNote {
                                     Prefix = "L",
                                     Suffix = "1234567",
@@ -362,7 +359,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LACHauteurCVPercentMin = 10,
                                 LACHauteurCVPercentMax = 20
                             },
-                            DarkAndMedullatedFibreRiskDetails = new TestRequestVerificationDarkAndMedullatedFibreRiskDetails
+                            DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                             {
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
@@ -391,12 +388,11 @@ namespace Wiedpug.API.ExampleResponses
                                     Value = 1.00,
                                     Unit = WeightUnit.Kilograms
                                 },
-                                LotIdentity = "567545",
+                                LotIdentityOrGroupName = "567545",
                                 WeightNote = new WeightNote {
                                     Prefix = "L",
                                     Suffix = "1234567",
                                 },
-                                WeightUnit = WeightUnit.Kilograms,
                                 LotType = LotType.CombinedCertificate,
                                 CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SourceCode = SourceCode.Dealer,
@@ -456,7 +452,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LACHauteurCVPercentMin = 13,
                                 LACHauteurCVPercentMax = 27
                             },
-                            DarkAndMedullatedFibreRiskDetails = new TestRequestVerificationDarkAndMedullatedFibreRiskDetails
+                            DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
                             {
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,

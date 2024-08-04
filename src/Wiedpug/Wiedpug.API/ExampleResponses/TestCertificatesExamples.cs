@@ -38,7 +38,7 @@ namespace Wiedpug.API.ExampleResponses
                 TestCertificateCollection = new List<TestCertificate>
                 {
                     new TestCertificate {
-                        TestDataHeader = new TestCertificateTestDataHeader
+                        TestDataHeader = new TestDataHeader
                         {
                             Client = new Organisation
                             {
@@ -55,16 +55,12 @@ namespace Wiedpug.API.ExampleResponses
                             Value =10.00,
                             Unit = WeightUnit.Kilograms
                         },
-                            LotIdentityOrGroupName = new LotIdentityOrGroupName
-                            {
-                                LotIdentity = "234234"
-                            },
+                            LotIdentityOrGroupName = "234234",
                             RegrabSampleWeight = new Weight
                             {
                                 Value = 1.00,
                                 Unit = WeightUnit.Kilograms
                             },
-                            WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.ObjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
                                 Country = CountryCode.AU,
@@ -76,7 +72,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        OMLDetails = new TestCertificateOMLDetails
+                        OMLDetails = new OMLDetails
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -171,7 +167,7 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificate
                     {
-                        TestDataHeader = new TestCertificateTestDataHeader
+                        TestDataHeader = new TestDataHeader
                         {
                             Client = new Organisation
                             {
@@ -190,11 +186,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Value = 1.00,
                                 Unit = WeightUnit.Kilograms
                             },
-                            LotIdentityOrGroupName = new LotIdentityOrGroupName
-                            {
-                                LotIdentity = "123456"
-                            },
-                            WeightUnit = WeightUnit.Kilograms,
+                            LotIdentityOrGroupName = "123456",
                             LotType = LotType.SubjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
                                 Country = CountryCode.AU,
@@ -206,7 +198,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        LengthAndStrengthCombDetails = new TestCertificateLengthAndStrengthCombDetails
+                        LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
                         {
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -375,16 +367,13 @@ namespace Wiedpug.API.ExampleResponses
                     {
                     new TestCertificate 
                     {
-                        TestDataHeader = new TestCertificateTestDataHeader
+                        TestDataHeader = new TestDataHeader
                         {
                             Client = new Organisation
                             {
                                 OrganisationCode = "ATW",
                             },
-                            LotIdentityOrGroupName = new LotIdentityOrGroupName
-                            {
-                                LotIdentity = "123456"
-                            },
+                            LotIdentityOrGroupName = "123456",
                             Bales = 1,
                             Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight
@@ -393,7 +382,6 @@ namespace Wiedpug.API.ExampleResponses
                                 Unit = WeightUnit.Kilograms
                             },
                             RegrabSampleWeight=new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                            WeightUnit = WeightUnit.Kilograms,
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
                                 Country = CountryCode.AU,
@@ -405,7 +393,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        OMLDetails = new TestCertificateOMLDetails
+                        OMLDetails = new OMLDetails
                         {
                            CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -500,7 +488,7 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificate
                     {
-                        TestDataHeader = new TestCertificateTestDataHeader
+                        TestDataHeader = new TestDataHeader
                         {
                             Client = new Organisation
                             {
@@ -514,11 +502,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Unit = WeightUnit.Kilograms
                             },
                             RegrabSampleWeight=new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                            LotIdentityOrGroupName = new LotIdentityOrGroupName
-                            {
-                                LotIdentity = "123456"
-                            },
-                            WeightUnit = WeightUnit.Kilograms,
+                            LotIdentityOrGroupName = "123456",
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
                                 Country = CountryCode.AU,
@@ -530,7 +514,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        LengthAndStrengthCombDetails = new TestCertificateLengthAndStrengthCombDetails
+                        LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
                         {
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,

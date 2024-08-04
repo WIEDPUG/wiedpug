@@ -11,6 +11,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [MinLength(6)]
+        [MaxLength(15)]
+        public Currency? Charge { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -111,8 +114,13 @@ namespace Wiedpug.Domain.Entities
         /// A check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? Team3Hauteur { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? Team3Hauteur { get; set; }
+
+        [MinLength(1)]
+        [MaxLength(1)]
+        [Required]
+        public ReissueChargeFlag? ReissueChargeFlag { get; set; }
 
         [Required]
         [MinLength(1)]

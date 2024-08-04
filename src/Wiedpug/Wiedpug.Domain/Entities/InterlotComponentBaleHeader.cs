@@ -15,10 +15,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(15)]
         public required string BaleDescription { get; set; } // FIELD NUMBER 4 - Bale Description - Start: 34, Size: 15, Data Type: AN, Justification: L, Requirement Designator: M
 
-        [Required]
         [MinLength(1)]
         [MaxLength(4)]
-        public required string AreaOfOrigin { get; set; } // FIELD NUMBER 5 - Area of Origin - Start: 49, Size: 4, Data Type: AN, Justification: L, Requirement Designator: C
+        public string? AreaOfOrigin { get; set; } // FIELD NUMBER 5 - Area of Origin - Start: 49, Size: 4, Data Type: AN, Justification: L, Requirement Designator: C
 
         [MinLength(1)]
         [MaxLength(20)]

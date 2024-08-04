@@ -60,10 +60,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public YieldType? YieldType2 { get; set; }
 
-        [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required RetestFlag RetestFlag { get; set; }
+        public RetestFlag? RetestFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? Yield5 { get; set; }

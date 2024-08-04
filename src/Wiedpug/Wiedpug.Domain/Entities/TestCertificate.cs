@@ -2,27 +2,27 @@
 {
     public class TestCertificate
     {
-        public required TestCertificateTestDataHeader  TestDataHeader { get; set; }
+        public required TestDataHeader  TestDataHeader { get; set; }
 
-        public TestCertificateColourDetails? ColorDetails { get; set; }
+        public ColourDetails? ColorDetails { get; set; }
 
-        public TestCertificatePremiumTestDetails? PremiumTestDetails { get; set; }
+        public PremiumTestDetails? PremiumTestDetails { get; set; }
 
-        public TestCertificateSubjectiveInterlotDetails? SubjectiveInterlotDetails { get; set;}
+        public SubjectiveInterlotDetails? SubjectiveInterlotDetails { get; set;}
 
-        public TestCertificateCombinationDetails? CombinationDetails {  get; set; }
+        public CombinationDetails? CombinationDetails {  get; set; }
         
-        public TestCertificateLengthAndStrengthCombDetails? LengthAndStrengthCombDetails { get; set;}
+        public LengthAndStrengthCombDetails? LengthAndStrengthCombDetails { get; set;}
 
-        public TestCertificateLengthAndStrengthDetails? LengthAndStrengthDetails { get; set; }  
+        public LengthAndStrengthDetails? LengthAndStrengthDetails { get; set; }  
 
-        public TestCertificateOMLDetails? OMLDetails { get; set; }
+        public OMLDetails? OMLDetails { get; set; }
 
-        public TestCertificateCoreTestDetails? CoreTestDetails { get; set; }
+        public CoreTestDetails? CoreTestDetails { get; set; }
 
-        public TestCertificateColourCombinationDetails? ColorCombinationDetails { get; set; }
+        public ColourCombinationDetails? ColorCombinationDetails { get; set; }
 
-        public TestCertificateOMIDetails? OMIDetials {  get; set; }
+        public OMIDetails? OMIDetials {  get; set; }
 
         public PostSaleCoreTestDetails? PostSaleCoreTestDetails { get;set; }
 
@@ -45,6 +45,6 @@
 
         public List<FibreDiameterHistogram>? FibreDiameterHistograms { get; set; }
 
-        public List<TestCertificateBale>? Bales { get; set; }
+        public List<Bale>? Bales { get; set; }
     }
 }
