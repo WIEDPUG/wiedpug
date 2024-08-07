@@ -4,8 +4,13 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class ColourDetails
+    public class ColourTestDetails
     {
+        [Required]
+        [MinLength(1)]
+        [MaxLength(1)]
+        public required ColourTestDetailsType ColourTestDetailsType { get; set; }
+
         /// <summary>
         /// The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit check number.It is printed at the top of the certificate.
         /// </summary>
@@ -27,20 +32,41 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 22, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public required double ColourX { get; set; } // FIELD NUMBER 7 - Colour – X - Start: 24, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
+        public double? ColourX { get; set; } // FIELD NUMBER 7 - Colour – X - Start: 24, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public required double ColourY { get; set; } // FIELD NUMBER 8 - Colour – Y - Start: 27, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
+        public double? ColourY { get; set; } // FIELD NUMBER 8 - Colour – Y - Start: 27, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
         
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public required double ColourZ { get; set; } // FIELD NUMBER 9 - Colour – Z - Start: 30, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
+        public double? ColourZ { get; set; } // FIELD NUMBER 9 - Colour – Z - Start: 30, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
         [RegularExpression(RegexPattern.DECIMAL_4_1)]
         public double? ColourYZ { get; set; } // FIELD NUMBER 10 - Colour – Y – Z - Start: 33, Size: 4, Data Type: D1, Justification: R, Requirement Designator: C
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourXMinimum { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourXMaximum { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourYMinimum { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourYMaximum { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourZMinimum { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourZMaximum { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourYZMinimum { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        public double? ColourYZMaximum { get; set; }
 
         [MinLength(1)]
         [MaxLength(2)]

@@ -72,7 +72,9 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        OMLDetails = new OMLDetails
+                        TestDetailsCollection = new List<TestDetails>
+                        {
+                            new TestDetails
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -80,6 +82,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
+                                TestDetailsType = TestDetailsType.P,
                                 Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                 WoolBase = 20.00,
@@ -90,7 +93,7 @@ namespace Wiedpug.API.ExampleResponses
                                 RetestFlag = RetestFlag.NormalTest,
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
-
+                            }
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> {
                             new FibreDiameterHistogram
@@ -198,30 +201,33 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
+                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
                         {
-                            CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "23456787",
-                                    CertificateIDSuffix = CertificateIDSuffix.D,
-                                    CertificateIDCD = 7
-                                },
-                            Charge = new Currency { Value = 123.25, CurrencyUnit = CurrencyUnit.AUD },
-                            ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
-                            Laboratory = Laboratory.NZWoolTestingAuthority,
-                            StapleLength = 13,
-                            StapleLengthCvPercentage = 25,
-                            StapleStrength = 14,
-                            StapleLengthMinimum = 13,
-                            StapleLengthMaximum = 14,
-                            StapleStrengthMinimum = 234,
-                            StapleStrengthMaximum = 230,
-                            PositionOfBreakPercentageTip = 26,
-                            PositionOfBreakPercentageMiddle = 34,
-                            PositionOfBreakPercentageBase = 27,
-                            LsCertType = LsCertType.LengthAndStrengthTested,
-                            IsLsSampleSecured = false,
-                            DateIssued = "2024-01-22"
+                            new LengthAndStrengthTestDetails{
+                                CertificateIdentity =  new CertificateIdentity{
+                                        CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                                        CertificateIDNumber = "23456787",
+                                        CertificateIDSuffix = CertificateIDSuffix.D,
+                                        CertificateIDCD = 7
+                                    },
+                                lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.K,
+                                Charge = new Currency { Value = 123.25, CurrencyUnit = CurrencyUnit.AUD },
+                                ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
+                                Laboratory = Laboratory.NZWoolTestingAuthority,
+                                StapleLength = 13,
+                                StapleLengthCvPercentage = 25,
+                                StapleStrength = 14,
+                                StapleLengthMinimum = 13,
+                                StapleLengthMaximum = 14,
+                                StapleStrengthMinimum = 234,
+                                StapleStrengthMaximum = 230,
+                                PositionOfBreakPercentageTip = 26,
+                                PositionOfBreakPercentageMiddle = 34,
+                                PositionOfBreakPercentageBase = 27,
+                                LsCertType = LsCertType.LengthAndStrengthTested,
+                                IsLsSampleSecured = false,
+                                DateIssued = "2024-01-22"
+                            }
                         },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
@@ -310,17 +316,35 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class GetTestCertificatesRequestExample : IExamplesProvider<RequestForData>
+    public class GetTestCertificatesRequestExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_F,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "F18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -393,24 +417,28 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        OMLDetails = new OMLDetails
+                        TestDetailsCollection = new List<TestDetails>
                         {
-                           CertificateIdentity =  new CertificateIdentity{
+                            new TestDetails
+                            {
+                                CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                                     CertificateIDNumber = "23456787",
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
-                           },
-                            Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
-                            Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                            WoolBase = 20.00,
-                            Vmb = 10.0,
-                            HardHeadsBase =3.5,
-                            Yield1 = 1.20,
-                            YieldType1 = YieldType.Reserved,
-                            RetestFlag = RetestFlag.NormalTest,
-                            ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
-                            Vm1 = 20.0
+                                },
+                                TestDetailsType = TestDetailsType.P,
+                                Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
+                                Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                                WoolBase = 20.00,
+                                Vmb = 10.0,
+                                HardHeadsBase =3.5,
+                                Yield1 = 1.20,
+                                YieldType1 = YieldType.Reserved,
+                                RetestFlag = RetestFlag.NormalTest,
+                                ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
+                                Vm1 = 20.0
+                            }
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> 
                         {
@@ -514,14 +542,16 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyABNApplicable = false
                         },
-                        LengthAndStrengthCombDetails = new LengthAndStrengthCombDetails
+                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
                         {
+                            new LengthAndStrengthTestDetails{
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                                     CertificateIDNumber = "23456787",
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                              },
+                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.K,
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
                             Charge = new Currency { Value = 156.34, CurrencyUnit = CurrencyUnit.AUD },
@@ -538,6 +568,7 @@ namespace Wiedpug.API.ExampleResponses
                             LsCertType = LsCertType.LengthAndStrengthTested,
                             IsLsSampleSecured = false,
                             DateIssued = "2024-01-22"
+                            }
                         },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {

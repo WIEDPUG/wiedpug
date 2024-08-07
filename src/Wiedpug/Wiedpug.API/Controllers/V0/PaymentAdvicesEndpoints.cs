@@ -13,13 +13,13 @@ public static class PaymentAdvicesEndpoints
         var group = routes.MapGroup("payment-advice").WithTags("Payment Advice");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(PaymentAdvices), typeof(CreatePaymentAdvicesRequestExample))]
+        [SwaggerRequestExample(typeof(List<PaymentAdvice>), typeof(CreatePaymentAdvicesRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] PaymentAdvices model) =>
+        ([FromBody] List<PaymentAdvice> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
@@ -36,14 +36,14 @@ public static class PaymentAdvicesEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForPaymentAdvicesRequestExample))]
+        [SwaggerRequestExample(typeof(RequestForDataRework), typeof(RequestForPaymentAdvicesRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForPaymentAdvices200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] RequestForDataRework model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -52,7 +52,7 @@ public static class PaymentAdvicesEndpoints
         {
             Summary = "Retrieves the payment advices"
         })
-        .Produces<ApiResult<PaymentAdvices>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<List<PaymentAdvice>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

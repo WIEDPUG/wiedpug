@@ -56,6 +56,8 @@ namespace Wiedpug.Domain.ValueObject
         [MaxLength(9)]
         public Weight? Tare { get; set; }
 
-        public List<BaleIdentification>? BaleIdentifications { get; set; }
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string? EBaleId { get; set; }
     }
 }

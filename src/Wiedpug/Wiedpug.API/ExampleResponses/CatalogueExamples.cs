@@ -60,11 +60,7 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_F,
-                                        SaleNumber = 29
-                                    },
+                                    SaleIdentity = "F29",
                                     CentreStorage = new Centre { 
                                         Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     SaleDate = "2017-01-19",
@@ -165,8 +161,9 @@ namespace Wiedpug.API.ExampleResponses
                                                 MulesingStatus = MulesingStatus.NM
                                             }
                                         },
-                                        LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
+                                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
                                         {
+                                            new LengthAndStrengthTestDetails {
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
@@ -174,13 +171,14 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDSuffix = CertificateIDSuffix.L,
                                                 CertificateIDCD = 6
                                             },
+                                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = new Weight{
                                                 Value = 0.00,
                                                 Unit = WeightUnit.Kilograms
                                             },
                                             StapleLength = 73.00,
-                                            Charge = new Currency{ 
+                                            Charge = new Currency{
                                                 Value= 188.50,
                                                 CurrencyUnit = CurrencyUnit.AUD
                                             },
@@ -196,9 +194,11 @@ namespace Wiedpug.API.ExampleResponses
                                             Team3RomainePercentage = 11.2,
                                             DateIssued = "2017-01-10",
                                             StapleStrengthLowest25Percent = 24,
-                                            isLsSampleSecured = true
+                                            IsLsSampleSecured = true
+                                            },
                                         },
-                                        CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
+                                        TestDetailsCollection = new List<TestDetails> {
+                                            new TestDetails //51P
                                         {
                                             CertificateIdentity = new CertificateIdentity
                                             {
@@ -207,6 +207,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
+                                            TestDetailsType = TestDetailsType.P,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             WoolBase = 64.29,
                                             AirflowMean = 0.0,
@@ -223,6 +224,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Vm2 = 0.9,
                                             Vm3 = 0.0,
                                             DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
+                                        },
                                         },
                                         Histograms = new List<FibreDiameterHistogram>
                                         {
@@ -337,11 +339,7 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                                 {
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_M,
-                                        SaleNumber = 29
-                                    },
+                                    SaleIdentity = "M29",
                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AU },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState._1,
@@ -428,58 +426,65 @@ namespace Wiedpug.API.ExampleResponses
                                                 MulesingStatus = MulesingStatus.AA
                                             }
                                         },
-                                        LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
+                                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
                                         {
-                                            CertificateIdentity = new CertificateIdentity
+                                            new LengthAndStrengthTestDetails
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000664",
-                                                CertificateIDSuffix = CertificateIDSuffix.L,
-                                                CertificateIDCD = 6
-                                            },
-                                            Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                            RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
-                                            Charge = new Currency { Value = 256.23, CurrencyUnit = CurrencyUnit.AUD },
-                                            StapleLength = 73.00,
-                                            StapleLengthCvPercentage = 16,
-                                            StapleStrength = 35.00,
-                                            PositionOfBreakPercentageTip = 77,
-                                            PositionOfBreakPercentageMiddle = 23,
-                                            PositionOfBreakPercentageBase = 0,
-                                            Team3Hauteur = 72,
-                                            LsCertType = LsCertType.LengthAndStrengthTested,
-                                            isLsSampleSecured = true,
-                                            ExpectedBarbe = 111.00,
-                                            Team3HauteurCvPercentage = 36.9,
-                                            Team3RomainePercentage = 11.2,
-                                            DateIssued = "2017-01-10",
-                                            StapleStrengthLowest25Percent = 24
+                                                CertificateIdentity = new CertificateIdentity
+                                                {
+                                                    CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                    CertificateIDNumber = "00000664",
+                                                    CertificateIDSuffix = CertificateIDSuffix.L,
+                                                    CertificateIDCD = 6
+                                                },
+                                                lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
+                                                Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                                                RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
+                                                Charge = new Currency { Value = 256.23, CurrencyUnit = CurrencyUnit.AUD },
+                                                StapleLength = 73.00,
+                                                StapleLengthCvPercentage = 16,
+                                                StapleStrength = 35.00,
+                                                PositionOfBreakPercentageTip = 77,
+                                                PositionOfBreakPercentageMiddle = 23,
+                                                PositionOfBreakPercentageBase = 0,
+                                                Team3Hauteur = 72,
+                                                LsCertType = LsCertType.LengthAndStrengthTested,
+                                                IsLsSampleSecured = true,
+                                                ExpectedBarbe = 111.00,
+                                                Team3HauteurCvPercentage = 36.9,
+                                                Team3RomainePercentage = 11.2,
+                                                DateIssued = "2017-01-10",
+                                                StapleStrengthLowest25Percent = 24
+                                            }
                                         },
-                                        CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
-                                        {
-                                           CertificateIdentity = new CertificateIdentity
+                                        TestDetailsCollection = new List<TestDetails> {
+                                            new TestDetails //51P
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
-                                                CertificateIDSuffix = CertificateIDSuffix.P,
-                                                CertificateIDCD = 7
-                                            },
-                                            Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                            WoolBase = 64.29,
-                                            AirflowMean = 0.0,
-                                            Vmb = 1.3,
-                                            HardHeadsBase = 0.0,
-                                            Yield1 = 74.40,
-                                            Yield2 = 78.50,
-                                            Yield3 = 75.70,
-                                            Yield4 = 72.10,
-                                            RetestFlag = RetestFlag.NormalTest,
-                                            Yield5 = 77.80,
-                                            ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
-                                            Vm1 = 0.0,
-                                            Vm2 = 0.9,
-                                            Vm3 = 0.0,
-                                            DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
+                                               CertificateIdentity = new CertificateIdentity
+                                                {
+                                                    CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                    CertificateIDNumber = "00000499",
+                                                    CertificateIDSuffix = CertificateIDSuffix.P,
+                                                    CertificateIDCD = 7
+                                                },
+                                               TestDetailsType = TestDetailsType.P,
+                                                Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                                                WoolBase = 64.29,
+                                                AirflowMean = 0.0,
+                                                Vmb = 1.3,
+                                                HardHeadsBase = 0.0,
+                                                Yield1 = 74.40,
+                                                Yield2 = 78.50,
+                                                Yield3 = 75.70,
+                                                Yield4 = 72.10,
+                                                RetestFlag = RetestFlag.NormalTest,
+                                                Yield5 = 77.80,
+                                                ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
+                                                Vm1 = 0.0,
+                                                Vm2 = 0.9,
+                                                Vm3 = 0.0,
+                                                DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
+                                            }
                                         },
                                         Histograms = new List<FibreDiameterHistogram>
                                         {
@@ -582,11 +587,7 @@ namespace Wiedpug.API.ExampleResponses
                             WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                             {
                                 Season = 16,
-                                SaleIdentity = new Domain.Entities.SaleIdentity
-                                {
-                                    SellingCentreType = SellingCentreType.AU_M,
-                                    SaleNumber = 29
-                                },
+                                SaleIdentity = "M29",
                                 CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SaleDate = "2017-01-19",
                                 WoolState = WoolState.A,
@@ -682,60 +683,67 @@ namespace Wiedpug.API.ExampleResponses
                                             MulesingStatus = MulesingStatus.AA
                                         }
                                     },
-                                    LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
+                                    LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails> //51L
                                     {
-                                        CertificateIdentity = new CertificateIdentity
-                                        {
-                                            CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                            CertificateIDSuffix = CertificateIDSuffix.C,
-                                            CertificateIDNumber = "00000664",
-                                            CertificateIDCD = 6
+                                        new LengthAndStrengthTestDetails
+                                            {
+                                            CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDSuffix = CertificateIDSuffix.C,
+                                                CertificateIDNumber = "00000664",
+                                                CertificateIDCD = 6
+                                            },
+                                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
+                                            Charge = new Currency { Value = 230.23, CurrencyUnit = CurrencyUnit.AUD },
+                                            Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                                            RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
+                                            StapleLength = 73.00,
+                                            StapleLengthCvPercentage = 16,
+                                            StapleStrength = 35.00,
+                                            PositionOfBreakPercentageTip = 77,
+                                            PositionOfBreakPercentageMiddle = 23,
+                                            PositionOfBreakPercentageBase = 0,
+                                            Team3Hauteur = 72,
+                                            LsCertType = LsCertType.LengthAndStrengthTested,
+                                            IsLsSampleSecured = true,
+                                            ExpectedBarbe = 111.00,
+                                            Team3HauteurCvPercentage = 36.9,
+                                            Team3RomainePercentage = 11.2,
+                                            DateIssued = "2017-01-10",
+                                            StapleStrengthLowest25Percent = 24
+                                            }
                                         },
-                                        Charge = new Currency { Value = 230.23, CurrencyUnit = CurrencyUnit.AUD },
-                                        Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                        RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
-                                        StapleLength = 73.00,
-                                        StapleLengthCvPercentage = 16,
-                                        StapleStrength = 35.00,
-                                        PositionOfBreakPercentageTip = 77,
-                                        PositionOfBreakPercentageMiddle = 23,
-                                        PositionOfBreakPercentageBase = 0,
-                                        Team3Hauteur = 72,
-                                        LsCertType = LsCertType.LengthAndStrengthTested,
-                                        isLsSampleSecured = true,
-                                        ExpectedBarbe = 111.00,
-                                        Team3HauteurCvPercentage = 36.9,
-                                        Team3RomainePercentage = 11.2,
-                                        DateIssued = "2017-01-10",
-                                        StapleStrengthLowest25Percent = 24
-                                    },
-                                    CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
-                                    {
-                                        CertificateIdentity = new CertificateIdentity
+                                    TestDetailsCollection = new List<TestDetails> {
+                                        new TestDetails //51P
                                         {
-                                            CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                            CertificateIDSuffix = CertificateIDSuffix.M,
-                                            CertificateIDNumber = "00000499",
-                                            CertificateIDCD = 5
+                                            CertificateIdentity = new CertificateIdentity
+                                            {
+                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                CertificateIDSuffix = CertificateIDSuffix.M,
+                                                CertificateIDNumber = "00000499",
+                                                CertificateIDCD = 5
 
-                                        },
-                                        Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                        RegrabSampleWeight = null,
-                                        WoolBase = 64.29,
-                                        AirflowMean = 0.0,
-                                        Vmb = 1.3,
-                                        HardHeadsBase = 0.0,
-                                        Yield1 = 74.40,
-                                        Yield2 = 78.50,
-                                        Yield3 = 75.70,
-                                        Yield4 = 72.10,
-                                        RetestFlag = RetestFlag.NormalTest,
-                                        Yield5 = 77.80,
-                                        ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
-                                        Vm1 = 0.0,
-                                        Vm2 = 0.9,
-                                        Vm3 = 0.0,
-                                        DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D
+                                            },
+                                            TestDetailsType = TestDetailsType.P,
+                                            Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                                            RegrabSampleWeight = null,
+                                            WoolBase = 64.29,
+                                            AirflowMean = 0.0,
+                                            Vmb = 1.3,
+                                            HardHeadsBase = 0.0,
+                                            Yield1 = 74.40,
+                                            Yield2 = 78.50,
+                                            Yield3 = 75.70,
+                                            Yield4 = 72.10,
+                                            RetestFlag = RetestFlag.NormalTest,
+                                            Yield5 = 77.80,
+                                            ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
+                                            Vm1 = 0.0,
+                                            Vm2 = 0.9,
+                                            Vm3 = 0.0,
+                                            DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D
+                                        }
                                     },
                                     Histograms = new List<FibreDiameterHistogram>
                                     {
@@ -799,14 +807,32 @@ namespace Wiedpug.API.ExampleResponses
                 "Request for Auction Catalogue Data and Updates",
                 new List<RequestForDataForCatalogue>
                 {
-                    new()
+                    new RequestForDataForCatalogue
                     {
-                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogues,
-                        SaleIdentity = new Domain.Entities.SaleIdentity
+                        TransmissionHeader = new TransmissionHeader
                         {
-                            SellingCentreType = SellingCentreType.AU_F,
-                            SaleNumber = 18
+                            DateFormatLastRevised = "2020-07-15",
+                            DateTransmissionFileCreated = "2016-01-17",
+                            CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganisationCode = "ABC",
+                            },
+                            CurrentReceiver = new Organisation
+                            {
+                                OrganisationCode = "ATW",
+                            },
+                            VersionNumber = 31,
+                            SoftwareIdentifier = new SoftwareIdentifier
+                            {
+                                ProgramName = "NETR",
+                                SoftwareCompany = SoftwareCompany.AWTA,
+                                Version = 1082
+                            },
+                            ABN = "72001967184"
                         },
+                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogues,
+                        SaleIdentity = "F18",
                         OrganisationRequested = new Organisation {                         OrganisationCode = "ANF",},
                         SaleDateRequested = "2023-10-31",
                         IsUsingNetworkDateTime = false,
@@ -824,14 +850,32 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Season = 23
                     },
-                    new()
+                    new RequestForDataForCatalogue
                     {
-                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogueUpdates,
-                        SaleIdentity = new Domain.Entities.SaleIdentity
+                        TransmissionHeader = new TransmissionHeader
                         {
-                            SellingCentreType = SellingCentreType.AU_F,
-                            SaleNumber = 18
+                            DateFormatLastRevised = "2020-07-15",
+                            DateTransmissionFileCreated = "2016-01-17",
+                            CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganisationCode = "ABC",
+                            },
+                            CurrentReceiver = new Organisation
+                            {
+                                OrganisationCode = "ATW",
+                            },
+                            VersionNumber = 31,
+                            SoftwareIdentifier = new SoftwareIdentifier
+                            {
+                                ProgramName = "NETR",
+                                SoftwareCompany = SoftwareCompany.AWTA,
+                                Version = 1082
+                            },
+                            ABN = "72001967184"
                         },
+                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogueUpdates,
+                        SaleIdentity = "F18",
                         OrganisationRequested = new Organisation
                         {
                                                     OrganisationCode = "ANF",
@@ -858,14 +902,32 @@ namespace Wiedpug.API.ExampleResponses
                 "Request for Private Catalogue Data",
                 new List<RequestForDataForCatalogue>
                 {
-                    new()
+                    new RequestForDataForCatalogue
                     {
-                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.PrivateCatalogues,
-                        SaleIdentity = new Domain.Entities.SaleIdentity
+                        TransmissionHeader = new TransmissionHeader
                         {
-                            SellingCentreType = SellingCentreType.AU_F,
-                            SaleNumber = 18
+                            DateFormatLastRevised = "2020-07-15",
+                            DateTransmissionFileCreated = "2016-01-17",
+                            CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                            DocumentOriginator = new Organisation
+                            {
+                                OrganisationCode = "ABC",
+                            },
+                            CurrentReceiver = new Organisation
+                            {
+                                OrganisationCode = "ATW",
+                            },
+                            VersionNumber = 31,
+                            SoftwareIdentifier = new SoftwareIdentifier
+                            {
+                                ProgramName = "NETR",
+                                SoftwareCompany = SoftwareCompany.AWTA,
+                                Version = 1082
+                            },
+                            ABN = "72001967184"
                         },
+                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.PrivateCatalogues,
+                        SaleIdentity = "F18",
                         OrganisationRequested = new Organisation
                         {
                                                     OrganisationCode = "ANF",
@@ -932,11 +994,7 @@ namespace Wiedpug.API.ExampleResponses
                                     WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                                     {
                                         Season = 16,
-                                        SaleIdentity = new Domain.Entities.SaleIdentity
-                                        {
-                                            SellingCentreType = SellingCentreType.AU_M,
-                                            SaleNumber = 29
-                                        },
+                                        SaleIdentity = "M29",
                                         CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AD },
                                         SaleDate = "2017-01-19",
                                         WoolState = WoolState._1,
@@ -1024,58 +1082,67 @@ namespace Wiedpug.API.ExampleResponses
                                                     MulesingStatus = MulesingStatus.M
                                                 }
                                             },
-                                            LengthAndStrengthDetails = new Domain.Entities.LengthAndStrengthDetails //51L
+                                            LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails> //51L
                                             {
-                                              CertificateIdentity = new CertificateIdentity
-                                            {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000664",
-                                                CertificateIDSuffix = CertificateIDSuffix.L,
-                                                CertificateIDCD = 6
+                                                new LengthAndStrengthTestDetails
+                                                    { 
+                                                      CertificateIdentity = new CertificateIdentity
+                                                        {
+                                                            CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                            CertificateIDNumber = "00000664",
+                                                            CertificateIDSuffix = CertificateIDSuffix.L,
+                                                            CertificateIDCD = 6
+                                                        },
+                                                      lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
+                                                        Charge = new Currency { Value = 174.30, CurrencyUnit = CurrencyUnit.AUD },
+                                                        Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                                                        RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
+                                                        StapleLength = 73.00,
+                                                        StapleLengthCvPercentage = 16,
+                                                        StapleStrength = 35.00,
+                                                        PositionOfBreakPercentageTip = 77,
+                                                        PositionOfBreakPercentageMiddle = 23,
+                                                        PositionOfBreakPercentageBase = 0,
+                                                        Team3Hauteur = 72,
+                                                        LsCertType = LsCertType.LengthAndStrengthTested,
+                                                        IsLsSampleSecured = true,
+                                                        ExpectedBarbe = 111.00,
+                                                        Team3HauteurCvPercentage = 36.9,
+                                                        Team3RomainePercentage = 11.2,
+                                                        DateIssued = "2017-01-10",
+                                                        StapleStrengthLowest25Percent = 24
+                                                 }
                                             },
-                                                Charge = new Currency { Value = 174.30, CurrencyUnit = CurrencyUnit.AUD },
-                                                Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                                RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
-                                                StapleLength = 73.00,
-                                                StapleLengthCvPercentage = 16,
-                                                StapleStrength = 35.00,
-                                                PositionOfBreakPercentageTip = 77,
-                                                PositionOfBreakPercentageMiddle = 23,
-                                                PositionOfBreakPercentageBase = 0,
-                                                Team3Hauteur = 72,
-                                                LsCertType = LsCertType.LengthAndStrengthTested,
-                                                isLsSampleSecured = true,     
-                                                ExpectedBarbe = 111.00,
-                                                Team3HauteurCvPercentage = 36.9,
-                                                Team3RomainePercentage = 11.2,
-                                                DateIssued = "2017-01-10",
-                                                StapleStrengthLowest25Percent = 24
-                                            },
-                                            CoreTestDetails = new Domain.Entities.CoreTestDetails //51P
+                                            TestDetailsCollection = new List<TestDetails> 
                                             {
-                                              CertificateIdentity = new CertificateIdentity
-                                            {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
-                                                CertificateIDSuffix = CertificateIDSuffix.P,
-                                                CertificateIDCD = 7
-                                            },
-                                                Laboratory = Laboratory.AustralianWoolTestingAuthority,
-                                                WoolBase = 64.29,
-                                                AirflowMean = 0.0,
-                                                Vmb = 1.3,
-                                                HardHeadsBase = 0.0,
-                                                Yield1 = 74.40,
-                                                Yield2 = 78.50,
-                                                Yield3 = 75.70,
-                                                Yield4 = 72.10,
-                                                RetestFlag = RetestFlag.NormalTest,
-                                                Yield5 = 77.80,
-                                                ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
-                                                Vm1 = 0.0,
-                                                Vm2 = 0.9,
-                                                Vm3 = 0.0,
-                                                DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
+                                                new TestDetails
+                                                {
+                                                      CertificateIdentity = new CertificateIdentity
+                                                    {
+                                                        CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
+                                                        CertificateIDNumber = "00000499",
+                                                        CertificateIDSuffix = CertificateIDSuffix.P,
+                                                        CertificateIDCD = 7
+                                                    },
+                                                      TestDetailsType = TestDetailsType.P,
+                                                        Laboratory = Laboratory.AustralianWoolTestingAuthority,
+                                                        WoolBase = 64.29,
+                                                        AirflowMean = 0.0,
+                                                        Vmb = 1.3,
+                                                        HardHeadsBase = 0.0,
+                                                        Yield1 = 74.40,
+                                                        Yield2 = 78.50,
+                                                        Yield3 = 75.70,
+                                                        Yield4 = 72.10,
+                                                        RetestFlag = RetestFlag.NormalTest,
+                                                        Yield5 = 77.80,
+                                                        ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
+                                                        Vm1 = 0.0,
+                                                        Vm2 = 0.9,
+                                                        Vm3 = 0.0,
+                                                        DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
+                                             
+                                                }
                                             },
                                             Histograms = new List<FibreDiameterHistogram>
                                             {

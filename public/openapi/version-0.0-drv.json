@@ -191,13 +191,28 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/RequestForData"
+                                "$ref": "#/components/schemas/RequestForDataRework"
                             },
                             "example": {
-                                "saleIdentity": {
-                                    "sellingCentreType": "AU_M",
-                                    "saleNumber": 18
+                                "transmissionHeader": {
+                                    "dateFormatLastRevised": "2020-07-15",
+                                    "dateTransmissionFileCreated": "2016-01-17",
+                                    "countryOfOrigin": "AU",
+                                    "documentOriginator": {
+                                        "organisationCode": "ABC"
+                                    },
+                                    "currentReceiver": {
+                                        "organisationCode": "ATW"
+                                    },
+                                    "versionNumber": 31,
+                                    "softwareIdentifier": {
+                                        "softwareCompany": 8,
+                                        "version": 1082,
+                                        "programName": "NETR"
+                                    },
+                                    "abn": "72001967184"
                                 },
+                                "saleIdentity": "AU18",
                                 "organisationRequested": {
                                     "organisationCode": "ANF"
                                 },
@@ -386,13 +401,13 @@
                 "properties": {
                     "type": {
                         "type": "string",
-                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+                        "description": "A URI reference [RFC3986] that identifies the problem type.\r\n\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\n            \r\nWhen this member is not present, its value is assumed to be \"about:blank\".\r\n\r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
                         "nullable": true
                     },
                     "title": {
                         "minLength": 1,
                         "type": "string",
-                        "description": "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+                        "description": "A short, human-readable summary of the problem type.\r\n\r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\n\r\ne.g. \"One or more validation errors occurred.\""
                     },
                     "status": {
                         "type": "integer",
@@ -465,13 +480,7 @@
                                 "$ref": "#/components/schemas/CentreCodeAustralia"
                             },
                             {
-                                "$ref": "#/components/schemas/CentreCodeBelgium"
-                            },
-                            {
                                 "$ref": "#/components/schemas/CentreCodeChina"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeFrance"
                             },
                             {
                                 "$ref": "#/components/schemas/CentreCodeGermany"
@@ -480,28 +489,16 @@
                                 "$ref": "#/components/schemas/CentreCodeItaly"
                             },
                             {
-                                "$ref": "#/components/schemas/CentreCodeNetherlands"
-                            },
-                            {
                                 "$ref": "#/components/schemas/CentreCodeNewZealand"
                             },
                             {
-                                "$ref": "#/components/schemas/CentreCodeSouthAfrica"
-                            },
-                            {
                                 "$ref": "#/components/schemas/CentreCodeTaiwan"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeUnitedKingdomOfGreatBritain"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeUnitedStatesOfAmerica"
                             }
                         ]
                     }
                 },
                 "additionalProperties": false,
-                "description": "Centre has country and centreCode.\r\nThe centreCode is one of these below based on the value of country. \r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nFR: CentreFrance\r\n\r\nZA: CentreSouthAfrica\r\n\r\nBE: CentreBelgium\r\n\r\nGB: CentreUnitedKingdomofGreatBritain\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nNL: CentreNetherlands\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nUS: CentreUSA"
+                "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country. \r\n\r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan"
             },
             "CentreCodeAustralia": {
                 "enum": [
@@ -606,17 +603,26 @@
                     "YA",
                     "YM",
                     "YO",
-                    "Z"
+                    "Z",
+                    "ZC",
+                    "ZD",
+                    "ZH",
+                    "ZJ",
+                    "ZK",
+                    "ZL",
+                    "ZM",
+                    "ZO",
+                    "ZP",
+                    "ZQ",
+                    "ZR",
+                    "ZT",
+                    "ZV",
+                    "ZW",
+                    "ZX",
+                    "ZY"
                 ],
                 "type": "string",
-                "description": "This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany"
-            },
-            "CentreCodeBelgium": {
-                "enum": [
-                    "BR"
-                ],
-                "type": "string",
-                "description": "This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium"
+                "description": "This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany<br />ZC:Christchurch - New Zealand<br />ZD: Dunedin - New Zealand<br />ZH: Blumenthal - Germany<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy<br />ZL: Mosgiel - New Zealand<br />ZM: Nanjing - China<br />ZO: Keelung - Taiwan<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China<br />ZT: Timaru - New Zealand<br />ZV: Invercargill - New Zealand<br />ZW:Wellington - New Zealand<br />ZX: Napier – New Zealand<br />ZY: Ashburton – New Zealand"
             },
             "CentreCodeChina": {
                 "enum": [
@@ -628,36 +634,20 @@
                 "type": "string",
                 "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China"
             },
-            "CentreCodeFrance": {
-                "enum": [
-                    "PA"
-                ],
-                "type": "string",
-                "description": "This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France"
-            },
             "CentreCodeGermany": {
                 "enum": [
-                    "BE",
                     "BL"
                 ],
                 "type": "string",
-                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany"
+                "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BL: Blumenthal - Germany"
             },
             "CentreCodeItaly": {
                 "enum": [
-                    "RO",
                     "BI",
                     "GR"
                 ],
                 "type": "string",
-                "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
-            },
-            "CentreCodeNetherlands": {
-                "enum": [
-                    "AM"
-                ],
-                "type": "string",
-                "description": "This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands"
+                "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy"
             },
             "CentreCodeNewZealand": {
                 "enum": [
@@ -722,18 +712,10 @@
                     "X",
                     "Y",
                     "YP",
-                    "Z",
-                    "ZY"
+                    "Z"
                 ],
                 "type": "string",
-                "description": "This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo<br />ZY: New Zealand - Ashburton"
-            },
-            "CentreCodeSouthAfrica": {
-                "enum": [
-                    "CA"
-                ],
-                "type": "string",
-                "description": "This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa"
+                "description": "This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo"
             },
             "CentreCodeTaiwan": {
                 "enum": [
@@ -741,20 +723,6 @@
                 ],
                 "type": "string",
                 "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
-            },
-            "CentreCodeUnitedKingdomOfGreatBritain": {
-                "enum": [
-                    "LO"
-                ],
-                "type": "string",
-                "description": "This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain"
-            },
-            "CentreCodeUnitedStatesOfAmerica": {
-                "enum": [
-                    "WA"
-                ],
-                "type": "string",
-                "description": "This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA"
             },
             "CertificateIDPrefix": {
                 "enum": [
@@ -819,19 +787,13 @@
                 "enum": [
                     "AU",
                     "NZ",
-                    "FR",
-                    "ZA",
-                    "BE",
-                    "GB",
                     "DE",
                     "IT",
-                    "NL",
                     "CN",
-                    "TW",
-                    "US"
+                    "TW"
                 ],
                 "type": "string",
-                "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa<br />BE: Belgium<br />GB: United Kingdom of Great Britain<br />DE: Germany<br />IT: Italy<br />NL: Netherlands<br />CN: China<br />TW: Taiwan<br />US: USA"
+                "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />DE: Germany<br />IT: Italy<br />CN: China<br />TW: Taiwan"
             },
             "CustomErrors": {
                 "type": "object",
@@ -889,14 +851,12 @@
             "DarkAndMedullatedFibreRiskDetails": {
                 "required": [
                     "ageFrom",
-                    "certificateIdentity",
                     "declaredBreed",
                     "declaredWoolCategory",
                     "declaredWoolSubCategory",
                     "isContactingWithExoticBreeds",
                     "isCrutched",
-                    "sex",
-                    "woolBase"
+                    "sex"
                 ],
                 "type": "object",
                 "properties": {
@@ -923,19 +883,19 @@
                         "maxLength": 5,
                         "minLength": 4,
                         "type": "boolean",
-                        "description": "A boolean value to indicate whether it contact with exotic breeds. \r\ntrue: contact with exofic breeds.\r\nfalse: not contact with exofic breeds."
+                        "description": "A boolean value to indicate whether it contact with exotic breeds.\r\n            \r\ntrue: contact with exofic breeds.\r\n            \r\nfalse: not contact with exofic breeds."
                     },
                     "isCrutched": {
                         "maxLength": 5,
                         "minLength": 4,
                         "type": "boolean",
-                        "description": "A boolean value to indicate whether it is crutched. \r\ntrue: crutched.\r\nfalse: not crutched."
+                        "description": "A boolean value to indicate whether it is crutched.\r\n\r\ntrue: crutched.\r\n            \r\nfalse: not crutched."
                     },
                     "isCrutchedWithin3MonthsOfShearing": {
                         "maxLength": 5,
                         "minLength": 4,
                         "type": "boolean",
-                        "description": "A boolean value to indicate whethear crutching within 3 months of shearing.\r\ntrue: yes.\r\nfalse: no.",
+                        "description": "A boolean value to indicate whether crutching within 3 months of shearing.\r\n            \r\ntrue: yes.\r\n            \r\nfalse: no.",
                         "nullable": true
                     },
                     "sex": {
@@ -966,7 +926,8 @@
                     "woolBase": {
                         "pattern": "^-?\\d{1,2}\\.\\d{2}$",
                         "type": "number",
-                        "format": "double"
+                        "format": "double",
+                        "nullable": true
                     },
                     "dmfrErrorFields": {
                         "type": "array",
@@ -1106,7 +1067,7 @@
                     "OK"
                 ],
                 "type": "string",
-                "description": "A code to indicate the information.<br />OK: All data received OK. "
+                "description": "A code to indicate the information.\r\n\r\nFor AC, PC LI and GI transmissions, one record will be sent for each Wool Sale Header Lots received.\r\n\r\nOK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn\r\n\r\nWhere aann/nn = sale number/season\r\n    \r\ndd/mm/yy = sale date\r\n    \r\nooooo = selling organisation\r\n    \r\nnnnnn = number of lots\r\n    \r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None.\r\n\r\nOR\r\n\r\nFor all other types of transmissions, one record will be sent for each transmission file received.\r\n\r\nOK - ALL aaaaa DATA RECEIVED OK\r\n\r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None."
             },
             "Organisation": {
                 "required": [
@@ -1125,14 +1086,22 @@
                 },
                 "additionalProperties": false
             },
-            "RequestForData": {
+            "RequestForDataRework": {
                 "required": [
-                    "requestType"
+                    "requestType",
+                    "transmissionHeader"
                 ],
                 "type": "object",
                 "properties": {
+                    "transmissionHeader": {
+                        "$ref": "#/components/schemas/TransmissionHeader"
+                    },
                     "saleIdentity": {
-                        "$ref": "#/components/schemas/SaleIdentity"
+                        "maxLength": 4,
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "A group field of SellingCentre/Type and Sale Number\r\n            \r\nFrom: The current value that the Sale Identity is to be changed from.\r\n            \r\nTo: The new value that the Sale Identity is to be changed to.\r\n            \r\nSellingCentre/Type can be one of the following code:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; N: Napier.\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.",
+                        "nullable": true
                     },
                     "organisationRequested": {
                         "$ref": "#/components/schemas/Organisation"
@@ -1142,7 +1111,7 @@
                         "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
-                        "description": "Date value in ISO 8601 standard. e.g. 2024-03-21",
+                        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
                         "format": "date",
                         "nullable": true
                     },
@@ -1160,7 +1129,7 @@
                         "minLength": 1,
                         "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                         "type": "string",
-                        "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                        "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                         "format": "date-time",
                         "nullable": true
                     },
@@ -1168,7 +1137,7 @@
                         "maxLength": 5,
                         "minLength": 4,
                         "type": "boolean",
-                        "description": "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use.",
+                        "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use.",
                         "nullable": true
                     },
                     "requestType": {
@@ -1195,46 +1164,6 @@
                 "type": "integer",
                 "description": "1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request",
                 "format": "int32"
-            },
-            "SaleIdentity": {
-                "required": [
-                    "saleNumber",
-                    "sellingCentreType"
-                ],
-                "type": "object",
-                "properties": {
-                    "sellingCentreType": {
-                        "$ref": "#/components/schemas/SellingCentreType"
-                    },
-                    "saleNumber": {
-                        "maxLength": 2,
-                        "minLength": 1,
-                        "pattern": "-?\\d{1,2}",
-                        "type": "integer",
-                        "format": "int32"
-                    }
-                },
-                "additionalProperties": false
-            },
-            "SellingCentreType": {
-                "enum": [
-                    "NZ_C",
-                    "NZ_N",
-                    "AU_A",
-                    "AU_AU",
-                    "AU_B",
-                    "AU_F",
-                    "AU_G",
-                    "AU_L",
-                    "AU_M",
-                    "AU_N",
-                    "AU_R",
-                    "AU_S",
-                    "PS",
-                    "T"
-                ],
-                "type": "string",
-                "description": "NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales"
             },
             "Sex": {
                 "enum": [
@@ -1301,7 +1230,7 @@
                     }
                 },
                 "additionalProperties": false,
-                "description": "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
+                "description": "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
             },
             "TransferType": {
                 "enum": [
@@ -1328,7 +1257,7 @@
                         "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
-                        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+                        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
                         "format": "date"
                     },
                     "dateTransmissionFileCreated": {
@@ -1336,7 +1265,7 @@
                         "minLength": 1,
                         "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                         "type": "string",
-                        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+                        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
                         "format": "date"
                     },
                     "countryOfOrigin": {

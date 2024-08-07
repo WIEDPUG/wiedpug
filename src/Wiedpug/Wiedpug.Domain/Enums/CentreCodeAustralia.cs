@@ -220,38 +220,38 @@ namespace Wiedpug.Domain.Enums
         YO,
         [Description("Z: Australia - Albany")]
         Z,
-        //[Description("ZC:Christchurch - New Zealand")]
-        //ZC,
-        //[Description("ZD: Dunedin - New Zealand")]
-        //ZD,
-        //[Description("ZH: Blumenthal - Germany")]
-        //ZH,
-        //[Description("ZJ: Biella - Italy")]
-        //ZJ,
-        //[Description("ZK: Grisignano - Italy")]
-        //ZK,
-        //[Description("ZL: Mosgiel - New Zealand")]
-        //ZL,
-        //[Description("ZM: Nanjing - China")]
-        //ZM,
-        //[Description("ZO: Keelung - Taiwan")]
-        //ZO,
-        //[Description("ZP: Shanghai - China")]
-        //ZP,
-        //[Description("ZQ: Qingdao - China")]
-        //ZQ,
-        //[Description("ZR: Zhangjiagang - China")]
-        //ZR,
-        //[Description("Z: Timaru - New Zealand")]
-        //ZT,
-        //[Description("Z: Invercargill - New Zealand")]
-        //ZV,
-        //[Description("Z:Wellington - New Zealand")]
-        //ZW,
-        //[Description("Z: Napier – New Zealand")]
-        //ZX,
-        //[Description("Z: Ashburton – New Zealand")]
-        //ZY,
+        [Description("ZC:Christchurch - New Zealand")]
+        ZC,
+        [Description("ZD: Dunedin - New Zealand")]
+        ZD,
+        [Description("ZH: Blumenthal - Germany")]
+        ZH,
+        [Description("ZJ: Biella - Italy")]
+        ZJ,
+        [Description("ZK: Grisignano - Italy")]
+        ZK,
+        [Description("ZL: Mosgiel - New Zealand")]
+        ZL,
+        [Description("ZM: Nanjing - China")]
+        ZM,
+        [Description("ZO: Keelung - Taiwan")]
+        ZO,
+        [Description("ZP: Shanghai - China")]
+        ZP,
+        [Description("ZQ: Qingdao - China")]
+        ZQ,
+        [Description("ZR: Zhangjiagang - China")]
+        ZR,
+        [Description("ZT: Timaru - New Zealand")]
+        ZT,
+        [Description("ZV: Invercargill - New Zealand")]
+        ZV,
+        [Description("ZW:Wellington - New Zealand")]
+        ZW,
+        [Description("ZX: Napier – New Zealand")]
+        ZX,
+        [Description("ZY: Ashburton – New Zealand")]
+        ZY,
 
     }
 }

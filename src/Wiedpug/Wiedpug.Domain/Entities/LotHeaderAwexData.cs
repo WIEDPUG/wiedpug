@@ -15,7 +15,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         [MinLength(1)]
         [MaxLength(20)]
-        public string? AwexId { get; set; } // FIELD NUMBER 3 - AWEX-ID - Start: 4, Size: 20, Data Type: AN, Justification: L, Requirement Designator: O
+        public string? AwexId { get; set; } 
 
         /// <summary>
         /// Contains the AWEX accredited appraiser ID for this lot.
@@ -23,7 +23,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         [MinLength(1)]
         [MaxLength(6)]
-        public string? AppraiserId { get; set; } // FIELD NUMBER 4 - Appraiser ID - Start: 24, Size: 6, Data Type: AN, Justification: L, Requirement Designator: O
+        public string? AppraiserId { get; set; }
 
         /// <summary>
         /// The AWEX stencil number of the classer or classing house responsible for the final classification of the wool before sale.
@@ -31,23 +31,22 @@ namespace Wiedpug.Domain.Entities
         /// 
         [MinLength(1)]
         [MaxLength(6)]
-        public string? ClassersRegisteredNumber { get; set; } // FIELD NUMBER 5 - Classer’s Registered Number - Start: 30, Size: 6, Data Type: AN, Justification: F, Requirement Designator: C
+        public string? ClassersRegisteredNumber { get; set; } 
 
         /// <summary>
-        /// This field provides for additional comments relating to the information contained in the `awexId` field.
+        /// This field provides for additional comments relating to the information contained in the awexId field.
         /// </summary>
         /// 
         [MinLength(1)]
         [MaxLength(14)]
-        public string? AwexIdComment { get; set; } // FIELD NUMBER 6 - AWEX-ID Comment - Start: 36, Size: 14, Data Type: AN, Justification: L, Requirement Designator: O
-
+        public string? AwexIdComment { get; set; } 
         /// <summary>
-        /// Audit code used for verifying if `awexId` was issued by AWEX
+        /// Audit code used for verifying if awexId was issued by AWEX
         /// </summary>
         /// 
         [MinLength(1)]
         [MaxLength(10)]
-        public string? AwexIdAuditCode { get; set; } // FIELD NUMBER 7 - AWEX-ID Audit Code - Start: 50, Size: 10, Data Type: AN, Justification: L, Requirement Designator: O
+        public string? AwexIdAuditCode { get; set; }
 
     }
 }

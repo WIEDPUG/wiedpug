@@ -42,10 +42,10 @@ paths:
                 - testDataHeader:
                     client:
                       organisationCode: AWT
-                    lotIdentity: '567545'
+                    lotIdentityOrGroupName: '567545'
                     weightNote:
                       prefix: L
-                      suffix: '1234567'
+                      suffix: 1234567
                     bales: 1
                     gross:
                       value: 1
@@ -53,7 +53,6 @@ paths:
                     tare:
                       value: 1
                       unit: 0
-                    weightUnit: 0
                     lotType: 3
                     centreAuction:
                       country: AU
@@ -121,10 +120,10 @@ paths:
                 - testDataHeader:
                     client:
                       organisationCode: AWT
-                    lotIdentity: '567545'
+                    lotIdentityOrGroupName: '567545'
                     weightNote:
                       prefix: L
-                      suffix: '1234567'
+                      suffix: 1234567
                     bales: 1
                     gross:
                       value: 1
@@ -132,7 +131,6 @@ paths:
                     tare:
                       value: 1
                       unit: 0
-                    weightUnit: 0
                     lotType: 3
                     centreAuction:
                       country: AU
@@ -267,11 +265,23 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RequestForData'
+              $ref: '#/components/schemas/RequestForDataRework'
             example:
-              saleIdentity:
-                sellingCentreType: AU_M
-                saleNumber: 18
+              transmissionHeader:
+                dateFormatLastRevised: '2020-07-15'
+                dateTransmissionFileCreated: '2016-01-17'
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ABC
+                currentReceiver:
+                  organisationCode: ATW
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 8
+                  version: 1082
+                  programName: NETR
+                abn: '72001967184'
+              saleIdentity: M18
               organisationRequested:
                 organisationCode: ANF
               saleDateRequested: '2023-10-31'
@@ -307,10 +317,10 @@ paths:
                     - testDataHeader:
                         client:
                           organisationCode: AWT
-                        lotIdentity: '567545'
+                        lotIdentityOrGroupName: '567545'
                         weightNote:
                           prefix: L
-                          suffix: '1234567'
+                          suffix: 1234567
                         bales: 1
                         gross:
                           value: 1
@@ -318,7 +328,6 @@ paths:
                         tare:
                           value: 1
                           unit: 0
-                        weightUnit: 0
                         lotType: 3
                         centreAuction:
                           country: AU
@@ -386,10 +395,10 @@ paths:
                     - testDataHeader:
                         client:
                           organisationCode: AWT
-                        lotIdentity: '567545'
+                        lotIdentityOrGroupName: '567545'
                         weightNote:
                           prefix: L
-                          suffix: '1234567'
+                          suffix: 1234567
                         bales: 1
                         gross:
                           value: 1
@@ -397,7 +406,6 @@ paths:
                         tare:
                           value: 1
                           unit: 0
-                        weightUnit: 0
                         lotType: 3
                         centreAuction:
                           country: AU
@@ -533,12 +541,12 @@ components:
       properties:
         type:
           type: string
-          description: "A URI reference [RFC3986] that identifies the problem type.\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\nWhen this member is not present, its value is assumed to be \"about:blank\".      \r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
+          description: "A URI reference [RFC3986] that identifies the problem type.\r\n\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\n            \r\nWhen this member is not present, its value is assumed to be \"about:blank\".\r\n\r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
           nullable: true
         title:
           minLength: 1
           type: string
-          description: "A short, human-readable summary of the problem type. \r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\ne.g. \"One or more validation errors occurred.\""
+          description: "A short, human-readable summary of the problem type.\r\n\r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\n\r\ne.g. \"One or more validation errors occurred.\""
         status:
           type: integer
           description: The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.
@@ -596,7 +604,7 @@ components:
           type: array
           items:
             type: string
-          description: "Property Identification Code - the property code to identify the source of the wool.\r\nThis field is not used in New Zealand transmission.\r\nFor TRV only"
+          description: "Property Identification Code - the property code to identify the source of the wool.\r\n\r\nThis field is not used in New Zealand transmission.\r\n\r\nFor TRV only."
           nullable: true
       additionalProperties: false
     BaleDetail:
@@ -633,10 +641,10 @@ components:
           $ref: '#/components/schemas/Weight'
         tare:
           $ref: '#/components/schemas/Weight'
-        baleIdentifications:
-          type: array
-          items:
-            $ref: '#/components/schemas/BaleIdentification'
+        eBaleId:
+          maxLength: 30
+          minLength: 1
+          type: string
           nullable: true
       additionalProperties: false
     BaleDetailType:
@@ -678,20 +686,6 @@ components:
           type: string
           nullable: true
       additionalProperties: false
-    BaleIdentification:
-      type: object
-      properties:
-        baleNumber:
-          maxLength: 5
-          minLength: 1
-          type: string
-          nullable: true
-        eBaleId:
-          maxLength: 30
-          minLength: 1
-          type: string
-          nullable: true
-      additionalProperties: false
     Centre:
       required:
         - centreCode
@@ -703,19 +697,13 @@ components:
         centreCode:
           oneOf:
             - $ref: '#/components/schemas/CentreCodeAustralia'
-            - $ref: '#/components/schemas/CentreCodeBelgium'
             - $ref: '#/components/schemas/CentreCodeChina'
-            - $ref: '#/components/schemas/CentreCodeFrance'
             - $ref: '#/components/schemas/CentreCodeGermany'
             - $ref: '#/components/schemas/CentreCodeItaly'
-            - $ref: '#/components/schemas/CentreCodeNetherlands'
             - $ref: '#/components/schemas/CentreCodeNewZealand'
-            - $ref: '#/components/schemas/CentreCodeSouthAfrica'
             - $ref: '#/components/schemas/CentreCodeTaiwan'
-            - $ref: '#/components/schemas/CentreCodeUnitedKingdomOfGreatBritain'
-            - $ref: '#/components/schemas/CentreCodeUnitedStatesOfAmerica'
       additionalProperties: false
-      description: "Centre has country and centreCode.\r\nThe centreCode is one of these below based on the value of country. \r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nFR: CentreFrance\r\n\r\nZA: CentreSouthAfrica\r\n\r\nBE: CentreBelgium\r\n\r\nGB: CentreUnitedKingdomofGreatBritain\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nNL: CentreNetherlands\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nUS: CentreUSA"
+      description: "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country. \r\n\r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan"
     CentreCodeAustralia:
       enum:
         - A
@@ -820,13 +808,24 @@ components:
         - YM
         - YO
         - Z
+        - ZC
+        - ZD
+        - ZH
+        - ZJ
+        - ZK
+        - ZL
+        - ZM
+        - ZO
+        - ZP
+        - ZQ
+        - ZR
+        - ZT
+        - ZV
+        - ZW
+        - ZX
+        - ZY
       type: string
-      description: 'This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany'
-    CentreCodeBelgium:
-      enum:
-        - BR
-      type: string
-      description: 'This is Centres for Belgium. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BR: Brussels - Belgium'
+      description: 'This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany<br />ZC:Christchurch - New Zealand<br />ZD: Dunedin - New Zealand<br />ZH: Blumenthal - Germany<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy<br />ZL: Mosgiel - New Zealand<br />ZM: Nanjing - China<br />ZO: Keelung - Taiwan<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China<br />ZT: Timaru - New Zealand<br />ZV: Invercargill - New Zealand<br />ZW:Wellington - New Zealand<br />ZX: Napier – New Zealand<br />ZY: Ashburton – New Zealand'
     CentreCodeChina:
       enum:
         - NA
@@ -835,29 +834,17 @@ components:
         - ZH
       type: string
       description: 'This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China'
-    CentreCodeFrance:
-      enum:
-        - PA
-      type: string
-      description: 'This is Centres for France. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />PA: Paris - France'
     CentreCodeGermany:
       enum:
-        - BE
         - BL
       type: string
-      description: 'This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BE: Berlin - Germany<br />BL: Blumenthal - Germany'
+      description: 'This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BL: Blumenthal - Germany'
     CentreCodeItaly:
       enum:
-        - RO
         - BI
         - GR
       type: string
-      description: 'This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZI: Rome - Italy<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy'
-    CentreCodeNetherlands:
-      enum:
-        - AM
-      type: string
-      description: 'This is Centres for Netherlands. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />AM: Amsterdam - Netherlands'
+      description: 'This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy'
     CentreCodeNewZealand:
       enum:
         - A
@@ -922,29 +909,61 @@ components:
         - 'Y'
         - YP
         - Z
-        - ZY
       type: string
-      description: 'This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo<br />ZY: New Zealand - Ashburton'
-    CentreCodeSouthAfrica:
-      enum:
-        - CA
-      type: string
-      description: 'This is Centres for SouthAfrica. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />CA: Cape Town - South Africa'
+      description: 'This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo'
     CentreCodeTaiwan:
       enum:
         - KE
       type: string
       description: 'This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan'
-    CentreCodeUnitedKingdomOfGreatBritain:
+    CertificateIDPrefix:
       enum:
-        - LO
-      type: string
-      description: 'This is Centres for United Kingdom of Great Britain. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />LO: London - United Kingdom of Great Britain'
-    CentreCodeUnitedStatesOfAmerica:
+        - 2
+        - 3
+        - 6
+      type: integer
+      description: '2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory'
+      format: int32
+    CertificateIDSuffix:
       enum:
-        - WA
+        - B
+        - C
+        - D
+        - F
+        - I
+        - J
+        - L
+        - M
+        - 'N'
+        - Q
+        - P
+        - R
+        - W
+        - 'Y'
       type: string
-      description: 'This is Centres for USA. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />WA: Washington - USA'
+      description: 'B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test Certificate – Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br />J: Combination - Yield & Micron, Length & Strength, Colour<br />L: Length & Strength<br />M: Objectively Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class – Quality Managed<br />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />R: Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core Test'
+    CertificateIdentity:
+      required:
+        - certificateIDCD
+        - certificateIDNumber
+        - certificateIDPrefix
+        - certificateIDSuffix
+      type: object
+      properties:
+        certificateIDPrefix:
+          $ref: '#/components/schemas/CertificateIDPrefix'
+        certificateIDSuffix:
+          $ref: '#/components/schemas/CertificateIDSuffix'
+        certificateIDNumber:
+          maxLength: 8
+          minLength: 1
+          type: string
+        certificateIDCD:
+          maxLength: 1
+          minLength: 1
+          type: integer
+          format: int32
+      additionalProperties: false
     ContractLimitRequirements:
       type: object
       properties:
@@ -1077,18 +1096,42 @@ components:
       enum:
         - AU
         - NZ
-        - FR
-        - ZA
-        - BE
-        - GB
         - DE
         - IT
-        - NL
         - CN
         - TW
-        - US
       type: string
-      description: 'A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />FR: France<br />ZA: South Africa<br />BE: Belgium<br />GB: United Kingdom of Great Britain<br />DE: Germany<br />IT: Italy<br />NL: Netherlands<br />CN: China<br />TW: Taiwan<br />US: USA'
+      description: 'A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />DE: Germany<br />IT: Italy<br />CN: China<br />TW: Taiwan'
+    Currency:
+      required:
+        - value
+      type: object
+      properties:
+        value:
+          pattern: ^-?\d{1,10}\.\d{2}$
+          type: number
+          description: Total up to 12 digits with 2 digits after the decimal point.
+          format: double
+        currencyUnit:
+          $ref: '#/components/schemas/CurrencyUnit'
+      additionalProperties: false
+    CurrencyUnit:
+      enum:
+        - AUD
+        - BEF
+        - NZD
+        - BGP
+        - FRF
+        - DEM
+        - ITL
+        - CNY
+        - ANG
+        - TWD
+        - ZAR
+        - USD
+        - EUR
+      type: string
+      description: 'AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR: Euro'
     CustomErrors:
       type: object
       properties:
@@ -1107,6 +1150,19 @@ components:
             $ref: '#/components/schemas/ErrorCode'
           nullable: true
       additionalProperties: false
+    DarkAndMedullatedFibreRisk:
+      enum:
+        - E
+        - 'N'
+        - D
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+      type: string
+      description: 'E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6'
     DarkAndMedullatedFibreRiskBroker:
       enum:
         - 1
@@ -1118,6 +1174,77 @@ components:
       type: integer
       description: '1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6'
       format: int32
+    DarkAndMedullatedFibreRiskDetails:
+      required:
+        - ageFrom
+        - declaredBreed
+        - declaredWoolCategory
+        - declaredWoolSubCategory
+        - isContactingWithExoticBreeds
+        - isCrutched
+        - sex
+      type: object
+      properties:
+        declaredBreed:
+          $ref: '#/components/schemas/DeclaredBreed'
+        declaredWoolSubCategory:
+          $ref: '#/components/schemas/DeclaredWoolSubCategory'
+        declaredWoolCategory:
+          $ref: '#/components/schemas/DeclaredWoolCategory'
+        declaredQualifierCodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeclaredQualifierCode'
+          nullable: true
+        declaredQualifierScale:
+          $ref: '#/components/schemas/DeclaredQualifierScale'
+        isContactingWithExoticBreeds:
+          maxLength: 5
+          minLength: 4
+          type: boolean
+          description: "A boolean value to indicate whether it contact with exotic breeds.\r\n            \r\ntrue: contact with exofic breeds.\r\n            \r\nfalse: not contact with exofic breeds."
+        isCrutched:
+          maxLength: 5
+          minLength: 4
+          type: boolean
+          description: "A boolean value to indicate whether it is crutched.\r\n\r\ntrue: crutched.\r\n            \r\nfalse: not crutched."
+        isCrutchedWithin3MonthsOfShearing:
+          maxLength: 5
+          minLength: 4
+          type: boolean
+          description: "A boolean value to indicate whether crutching within 3 months of shearing.\r\n            \r\ntrue: yes.\r\n            \r\nfalse: no."
+          nullable: true
+        sex:
+          $ref: '#/components/schemas/Sex'
+        ageFrom:
+          pattern: '-?\d{1,2}'
+          type: integer
+          description: Required numeric field for minimum age.
+          format: int32
+        ageTo:
+          pattern: '-?\d{1,2}'
+          type: integer
+          description: Optional numeric field for maximum age.
+          format: int32
+          nullable: true
+        darkAndMedullatedFibreRiskBroker:
+          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskBroker'
+        darkandMedullatedFibreRisk:
+          $ref: '#/components/schemas/DarkAndMedullatedFibreRisk'
+        certificateIdentity:
+          $ref: '#/components/schemas/CertificateIdentity'
+        woolBase:
+          pattern: ^-?\d{1,2}\.\d{2}$
+          type: number
+          format: double
+          nullable: true
+        dmfrErrorFields:
+          type: array
+          items:
+            type: string
+          description: A list of DMFR Error Field, each field should be a numeric string with up to two digits.
+          nullable: true
+      additionalProperties: false
     DeclaredBreed:
       enum:
         - A
@@ -1197,7 +1324,7 @@ components:
       enum:
         - OK
       type: string
-      description: 'A code to indicate the information.<br />OK: All data received OK. '
+      description: "A code to indicate the information.\r\n\r\nFor AC, PC LI and GI transmissions, one record will be sent for each Wool Sale Header Lots received.\r\n\r\nOK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn\r\n\r\nWhere aann/nn = sale number/season\r\n    \r\ndd/mm/yy = sale date\r\n    \r\nooooo = selling organisation\r\n    \r\nnnnnn = number of lots\r\n    \r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None.\r\n\r\nOR\r\n\r\nFor all other types of transmissions, one record will be sent for each transmission file received.\r\n\r\nOK - ALL aaaaa DATA RECEIVED OK\r\n\r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None."
     Laboratory:
       enum:
         - 1
@@ -1243,13 +1370,27 @@ components:
         centre:
           $ref: '#/components/schemas/Centre'
       additionalProperties: false
-    RequestForData:
+    ReportingFlag:
+      enum:
+        - R
+        - C
+        - U
+      type: string
+      description: 'R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results'
+    RequestForDataRework:
       required:
         - requestType
+        - transmissionHeader
       type: object
       properties:
+        transmissionHeader:
+          $ref: '#/components/schemas/TransmissionHeader'
         saleIdentity:
-          $ref: '#/components/schemas/SaleIdentity'
+          maxLength: 4
+          minLength: 1
+          type: string
+          description: "A group field of SellingCentre/Type and Sale Number\r\n            \r\nFrom: The current value that the Sale Identity is to be changed from.\r\n            \r\nTo: The new value that the Sale Identity is to be changed to.\r\n            \r\nSellingCentre/Type can be one of the following code:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; N: Napier.\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales."
+          nullable: true
         organisationRequested:
           $ref: '#/components/schemas/Organisation'
         saleDateRequested:
@@ -1257,7 +1398,7 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO 8601 standard. e.g. 2024-03-21
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
           format: date
           nullable: true
         startDateTimeStatusRequest:
@@ -1273,14 +1414,14 @@ components:
           minLength: 1
           pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
-          description: Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
+          description: Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
           format: date-time
           nullable: true
         isUsingNetworkDateTime:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicate whethear to use network datetime.\r\ntrue: use network datetime.\r\nfalse: not use."
+          description: "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
           nullable: true
         requestType:
           $ref: '#/components/schemas/RequestTypeForData'
@@ -1300,39 +1441,18 @@ components:
       type: integer
       description: '1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
       format: int32
-    SaleIdentity:
-      required:
-        - saleNumber
-        - sellingCentreType
-      type: object
-      properties:
-        sellingCentreType:
-          $ref: '#/components/schemas/SellingCentreType'
-        saleNumber:
-          maxLength: 2
-          minLength: 1
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-      additionalProperties: false
-    SellingCentreType:
+    ScouredType:
       enum:
-        - NZ_C
-        - NZ_N
-        - AU_A
-        - AU_AU
-        - AU_B
-        - AU_F
-        - AU_G
-        - AU_L
-        - AU_M
-        - AU_N
-        - AU_R
-        - AU_S
-        - PS
-        - T
-      type: string
-      description: 'NZ_C: Christchurch<br />NZ_N: Napier<br />AU_A: Adelaide<br />AU_AU: Australia<br />AU_B: Brisbane<br />AU_F: Fremantle<br />AU_G: Geelong<br />AU_L: Launceston<br />AU_M: Melbourne<br />AU_N: Newcastle<br />AU_R: Goulburn<br />AU_S: Sydney<br />PS: Private Sales<br />T: Auctions Plus Sales'
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+      type: integer
+      description: '0: Not Scoured<br />1: Scoured Aqueous<br />2: Scoured Dual Solvent<br />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe'
+      format: int32
     Sex:
       enum:
         - E
@@ -1384,10 +1504,8 @@ components:
         - bales
         - client
         - gross
-        - lotIdentity
+        - lotIdentityOrGroupName
         - tare
-        - weightNote
-        - weightUnit
       type: object
       properties:
         client:
@@ -1399,10 +1517,14 @@ components:
           format: int32
           nullable: true
         saleIdentity:
-          $ref: '#/components/schemas/SaleIdentity'
+          maxLength: 4
+          minLength: 1
+          type: string
+          description: "A group field of SellingCentre/Type and Sale Number\r\n            \r\nFrom: The current value that the Sale Identity is to be changed from.\r\n            \r\nTo: The new value that the Sale Identity is to be changed to.\r\n            \r\nSellingCentre/Type can be one of the following code:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; N: Napier.\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales."
+          nullable: true
         centreStorage:
           $ref: '#/components/schemas/Centre'
-        lotIdentity:
+        lotIdentityOrGroupName:
           maxLength: 6
           minLength: 1
           type: string
@@ -1421,8 +1543,8 @@ components:
           $ref: '#/components/schemas/Weight'
         tare:
           $ref: '#/components/schemas/Weight'
-        weightUnit:
-          $ref: '#/components/schemas/WeightUnit'
+        regrabSampleWeight:
+          $ref: '#/components/schemas/Weight'
         mulesingStatus:
           $ref: '#/components/schemas/MulesingStatus'
         declaredGross:
@@ -1435,11 +1557,23 @@ components:
           $ref: '#/components/schemas/Centre'
         sourceCode:
           $ref: '#/components/schemas/SourceCode'
+        reportingFlag:
+          $ref: '#/components/schemas/ReportingFlag'
+        scouredType:
+          $ref: '#/components/schemas/ScouredType'
+        gstAmount:
+          $ref: '#/components/schemas/Currency'
+        isGSTApplicable:
+          maxLength: 5
+          minLength: 4
+          type: boolean
+          description: "A boolean value to indicate whether the GST is aplicable.\r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable."
+          nullable: true
         isCompanyABNApplicable:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\ntrue: applicable.\r\nfalse: not applicable."
+          description: "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable."
           nullable: true
       additionalProperties: false
     TestRequestVerification:
@@ -1470,7 +1604,7 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Optional date field for core test sampling.
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
           format: date
           nullable: true
         coresPerBale:
@@ -1489,7 +1623,7 @@ components:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicate whether data sent on a previous transmission is to be updated by data in the current transmission.\r\ntrue: Update previous data.\r\nfalse: Do not update previous data."
+          description: "A boolean value to indicate whether data sent on a previous transmission is to be updated by data in the current transmission.\r\n\r\ntrue: Update previous data.\r\n\r\nfalse: Do not update previous data."
         hashTotal:
           pattern: '-?\d{1,8}'
           type: integer
@@ -1499,112 +1633,56 @@ components:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Yield and Airflow Test is required until 30/06/2000.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Yield And Airflow Test is required.\r\n\r\ntrue: Yield And Laserscan Test is required.\r\n\r\nfalse: Yield And Laserscan Test is not required."
           nullable: true
         isLengthAndStrengthTestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Length And Strength Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Length And Strength Test is required.\r\n\r\ntrue: Length And Strength Test is required.\r\n\r\nfalse: Length And Strength Test is not required."
           nullable: true
         isLengthOnlyTestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Length Only Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Length Only Test is required.\r\n\r\ntrue: Length Only Test is required.\r\n\r\nfalse: Length Only Test is not required."
           nullable: true
         isColourTestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Colour Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Colour Test is required.\r\n\r\ntrue: Colour Test is required.\r\n\r\nfalse: Colour Test is not required."
           nullable: true
         isLaserscanTestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Laserscan Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Laserscan Test is required.\r\n\r\ntrue: Laserscan Test is required.\r\n\r\nfalse: Laserscan Test is not required."
           nullable: true
         isAirflowTestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Airflow Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Airflow Test is required.\r\n\r\ntrue: Airflow Test is required.\r\n\r\nfalse: Airflow Test is not required."
           nullable: true
         isOFDATestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether OFDA Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether OFDA Test is required.\r\n\r\ntrue: OFDA Test is required.\r\n\r\nfalse: OFDA Test is not required."
           nullable: true
         isDarkAndMedullatedFibreTestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Dark And Medullated Fibre Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Dark And Medullated Fibre Test is required.\r\n\r\ntrue: Dark And Medullated Fibre Test is required.\r\n\r\nfalse: Dark And Medullated Fibre Test is not required."
           nullable: true
         isPesticideResidueTestRequired:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicates whether Pesticide Residue Test is required.\r\ntrue: required.\r\nfalse: not required."
+          description: "A boolean value to indicate whether Pesticide Residue Test is required.\r\n\r\ntrue: Pesticide Residue Test is required.\r\n\r\nfalse: Pesticide Residue Test is not required."
           nullable: true
-      additionalProperties: false
-    TestRequestVerificationDarkAndMedullatedFibreRiskDetails:
-      required:
-        - ageFrom
-        - declaredBreed
-        - declaredWoolCategory
-        - declaredWoolSubCategory
-        - isContactingWithExoticBreeds
-        - isCrutched
-        - sex
-      type: object
-      properties:
-        declaredBreed:
-          $ref: '#/components/schemas/DeclaredBreed'
-        declaredWoolSubCategory:
-          $ref: '#/components/schemas/DeclaredWoolSubCategory'
-        declaredWoolCategory:
-          $ref: '#/components/schemas/DeclaredWoolCategory'
-        declaredQualifierCodes:
-          type: array
-          items:
-            $ref: '#/components/schemas/DeclaredQualifierCode'
-          nullable: true
-        declaredQualifierScale:
-          $ref: '#/components/schemas/DeclaredQualifierScale'
-        isContactingWithExoticBreeds:
-          maxLength: 5
-          minLength: 4
-          type: boolean
-          description: "A boolean value to indicate whether it contact with exotic breeds. \r\ntrue: contact with exofic breeds.\r\nfalse: not contact with exofic breeds."
-        isCrutched:
-          maxLength: 5
-          minLength: 4
-          type: boolean
-          description: "A boolean value to indicate whether it is crutched. \r\ntrue: crutched.\r\nfalse: not crutched."
-        isCrutchedWithin3MonthsOfShearing:
-          maxLength: 5
-          minLength: 4
-          type: boolean
-          description: "A boolean value to indicate whether crutching within 3 months of shearing.\r\ntrue: crrutched.\r\nfalse: not crutched."
-          nullable: true
-        sex:
-          $ref: '#/components/schemas/Sex'
-        ageFrom:
-          pattern: '-?\d{1,2}'
-          type: integer
-          description: Required numeric field for minimum age.
-          format: int32
-        ageTo:
-          pattern: '-?\d{1,2}'
-          type: integer
-          description: Optional numeric field for maximum age.
-          format: int32
-          nullable: true
-        darkAndMedullatedFibreRiskBroker:
-          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskBroker'
       additionalProperties: false
     TestRequestsVerification:
       required:
@@ -1643,7 +1721,7 @@ components:
         contractLimitRequirements:
           $ref: '#/components/schemas/ContractLimitRequirements'
         darkAndMedullatedFibreRiskDetails:
-          $ref: '#/components/schemas/TestRequestVerificationDarkAndMedullatedFibreRiskDetails'
+          $ref: '#/components/schemas/DarkAndMedullatedFibreRiskDetails'
         bales:
           type: array
           items:
@@ -1663,7 +1741,7 @@ components:
             $ref: '#/components/schemas/Organisation'
           nullable: true
       additionalProperties: false
-      description: "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\nOnly used for data retrieval. Do not include it in the response."
+      description: "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
     TransferType:
       enum:
         - Unrestrict
@@ -1686,14 +1764,14 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
           format: date
         dateTransmissionFileCreated:
           maxLength: 10
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
           format: date
         countryOfOrigin:
           $ref: '#/components/schemas/CountryCode'
@@ -1755,7 +1833,8 @@ components:
           maxLength: 7
           minLength: 1
           pattern: '-?\d{1,7}'
-          type: string
+          type: integer
+          format: int32
       additionalProperties: false
     WeightUnit:
       enum:

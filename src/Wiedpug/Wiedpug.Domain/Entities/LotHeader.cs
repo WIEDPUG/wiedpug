@@ -41,9 +41,13 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether the lot is included for sale in the auction.
+        /// 
         /// It is used in New Zealand only.
-        /// true: normal Lot
-        /// false: not a normal Lot
+        /// 
+        /// true: normal Lot.
+        /// 
+        /// false: not a normal Lot.
+        /// 
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
@@ -65,6 +69,7 @@ namespace Wiedpug.Domain.Entities
         /// between symbols where more than one symbol is used.If this field
         /// contains spaces it will indicate that there are no catalogue symbols for 
         /// that lot.
+        /// 
         /// To obtain the current code list of values that may be used in this field
         /// please go to this URL: http://www.awex.com.au/standards/catalogue/.
         /// </summary>
@@ -97,13 +102,32 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? FirstOfferSeason { get; set; } // FIELD NUMBER 16 - First Offer Season - Start: 44, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
+        /// <summary>
+        /// A group field of SellingCentre/Type and Sale Number
+        ///
+        /// From: The current value that the Sale Identity is to be changed from.
+        ///
+        /// To: The new value that the Sale Identity is to be changed to.
+        ///
+        /// SellingCentre/Type can be one of the following code:
+        ///
+        /// SellingCentre/Type (New Zealand):
+        ///
+        /// C: Christchurch; N: Napier.
+        ///
+        /// SellingCentre/Type (Australia):
+        ///
+        /// A: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(4)]
-        public SaleIdentity? FirstOfferSaleIdentity { get; set; } // FIELD NUMBER 17 - First Offer Sale Identity - Start: 46, Size: 4, Data Type: GR, Justification: -, Requirement Designator: C
+        public string? FirstOfferSaleIdentity { get; set; } // FIELD NUMBER 17 - First Offer Sale Identity - Start: 46, Size: 4, Data Type: GR, Justification: -, Requirement Designator: C
 
         /// <summary>
         /// This is a compound name for lot number and lot suffix, where the lot number is 5 number characters and the lot suffix is 1 alphanumeric character.
-        /// The suffix is used when a lot is broken up but the original lot number is retained; for example, if 2 bales of a 10-bale lot got wet and the 8 bales the 2 bales are offered separately, one could have a suffix A and the other a suffix B. 
+        /// 
+        /// The suffix is used when a lot is broken up but the original lot number is retained; for example, if 2 bales of a 10-bale lot got wet and the 8 bales the 2 bales are offered separately, one could have a suffix A and the other a suffix B.
+        /// 
         /// Where a suffix is not used, the lot number occupies the whole of the Lot Identity field.
         /// </summary>
         /// 
@@ -120,10 +144,6 @@ namespace Wiedpug.Domain.Entities
         [MinLength(1)]
         [MaxLength(2)]
         public YieldType? YieldType { get; set; } // FIELD NUMBER 21 - Yield Type - Start: 67, Size: 2, Data Type: ID, Justification: R, Requirement Designator: O
-
-        [MinLength(1)]
-        [MaxLength(1)]
-        public WeightUnit? WeightUnit { get; set; } // FIELD NUMBER 22 - Weight Unit - Start: 69, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
         [MinLength(1)]
         [MaxLength(2)]
@@ -144,8 +164,10 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21.
-        /// For records 31 and 55 this is the date core test was sampled or date combination/OML was requested. 
-        /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+        /// 
+        /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
+        /// 
+        /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_ISO8601)]
@@ -162,9 +184,13 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// This field contains a description that is either an AWEX-ID description or another appraisal description.
-        /// Alternative valid appraisal descriptions include AWC type, Exporter type. 
+        /// 
+        /// Alternative valid appraisal descriptions include AWC type, Exporter type.
+        /// 
         /// The AWEX-ID description must conform to the current AWEX-ID code standard.
+        /// 
         /// If sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). 
+        /// 
         /// This field is to be always transmitted in upper case.
         /// </summary>
         [Required]
@@ -174,7 +200,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether the GST amount is applicable to invoice. 
+        /// 
         /// true: applicable.
+        /// 
         /// false: not applicable.
         /// </summary>
         [MinLength(4)]

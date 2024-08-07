@@ -72,7 +72,7 @@ public static class AuctionCatalogueEndpoints
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] List<RequestForData> model) =>
+        ([FromBody] List<RequestForDataRework> model) =>
         {
             //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
         })        

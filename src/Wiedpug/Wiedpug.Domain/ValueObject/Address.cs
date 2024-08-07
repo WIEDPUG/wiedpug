@@ -59,6 +59,7 @@ namespace Wiedpug.Domain.ValueObject
 
         /// <summary>
         /// Use ISO 3166-1 country code: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
+        /// 
         /// For example: AU: Australia, NZ: New Zealand, FR: France, ZA: South Africa.
         /// </summary>
         [Required]

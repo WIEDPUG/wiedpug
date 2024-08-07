@@ -12,13 +12,15 @@ namespace Wiedpug.Domain.Entities
 {
     /// <summary>
     /// Used to identify document transfer type: Restrict, Unrestric, and Exlcude.
+    /// 
     /// Only used for data retrieval. Do not include it in the response.
     /// </summary>
     public class TransferConfig
     {
         /// <summary>
-        /// Used to identify document transfer type: broadcast or private-sent
-        /// Only used for document upload/create/update
+        /// Used to identify document transfer type: broadcast or private-sent.
+        /// 
+        /// Only used for document upload/create/update.
         /// </summary>
         ///
         [Required]

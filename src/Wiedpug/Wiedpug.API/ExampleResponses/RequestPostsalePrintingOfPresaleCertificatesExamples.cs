@@ -53,7 +53,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         WeightNote = new WeightNote{
                             Prefix = "L",
-                            Suffix = "1234567",
+                            Suffix = 1234567,
                         },
                         LotIdentity = "45567L",
                         BuyingOrganisation = new Organisation
@@ -67,11 +67,7 @@ namespace Wiedpug.API.ExampleResponses
                             Value=2340.00,
                             Unit = WeightUnit.Kilograms
                         },
-                        SaleIdentity = new SaleIdentity
-                        {
-                            SellingCentreType = SellingCentreType.AU_AU,
-                            SaleNumber = 23
-                        },
+                        SaleIdentity = "AU23",
                         CentreStorage = new Centre{
                                 Country = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.A
@@ -84,17 +80,35 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<RequestForData>
+    public class RequestForRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_M,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "M18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -152,7 +166,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         WeightNote = new WeightNote{
                             Prefix = "L",
-                            Suffix = "1234567",
+                            Suffix = 1234567,
                         },
                         LotIdentity = "45567L",
                         BuyingOrganisation = new Organisation
@@ -166,11 +180,7 @@ namespace Wiedpug.API.ExampleResponses
                             Value =2340.00,
                             Unit = WeightUnit.Kilograms
                         },
-                        SaleIdentity = new SaleIdentity
-                        {
-                            SellingCentreType = SellingCentreType.AU_AU,
-                            SaleNumber = 23
-                        },
+                        SaleIdentity = "AU23",
                         CentreStorage = new Centre{
                                 Country = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.AR

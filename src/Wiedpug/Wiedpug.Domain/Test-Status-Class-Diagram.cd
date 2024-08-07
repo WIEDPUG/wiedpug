@@ -17,7 +17,7 @@
   <Class Name="Wiedpug.Domain.Entities.TestStatusDetail" Collapsed="true">
     <Position X="6.5" Y="1.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACsAAAAAAAAAAAACAAAAAQACFAgACAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAACoAAAAAAAAAAAACAAAAAQADFAgACAAAAAAAIA=</HashCode>
       <FileName>Entities\TestStatusDetail.cs</FileName>
     </TypeIdentifier>
   </Class>

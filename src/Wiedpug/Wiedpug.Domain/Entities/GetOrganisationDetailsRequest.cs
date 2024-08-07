@@ -46,8 +46,10 @@ namespace Wiedpug.Domain.Entities
         public string? EndDateTimeStatusRequest { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear to use network datetime.
+        /// A boolean value to indicate whether to use network datetime.
+        ///
         /// true: use network datetime.
+        ///
         /// false: not use.
         /// </summary>
         [MinLength(4)]

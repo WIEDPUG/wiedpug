@@ -4,32 +4,14 @@
     {
         public required TestDataHeader  TestDataHeader { get; set; }
 
-        public ColourDetails? ColorDetails { get; set; }
+        public List<TestDetails>? TestDetailsCollection { get; set; }
 
-        public PremiumTestDetails? PremiumTestDetails { get; set; }
+        public List<ColourTestDetails>? ColourTestDetailsCollection { get; set; }
 
-        public SubjectiveInterlotDetails? SubjectiveInterlotDetails { get; set;}
+        public List<LengthAndStrengthTestDetails>? LengthAndStrengthTestDetailsCollection { get; set; }
 
         public CombinationDetails? CombinationDetails {  get; set; }
         
-        public LengthAndStrengthCombDetails? LengthAndStrengthCombDetails { get; set;}
-
-        public LengthAndStrengthDetails? LengthAndStrengthDetails { get; set; }  
-
-        public OMLDetails? OMLDetails { get; set; }
-
-        public CoreTestDetails? CoreTestDetails { get; set; }
-
-        public ColourCombinationDetails? ColorCombinationDetails { get; set; }
-
-        public OMIDetails? OMIDetials {  get; set; }
-
-        public PostSaleCoreTestDetails? PostSaleCoreTestDetails { get;set; }
-
-        public GuidanceReportDetails? GuidanceReporttDetails { get; set; }
-
-        public ScouredTestDetails? ScouredTestDetails { get; set; }
-
         public DichloromethaneTestDetails? DichloromethaneTestDetails { get; set; }
 
         public ConditioningTestDetails? ConditioningTestDetails { get; set;}

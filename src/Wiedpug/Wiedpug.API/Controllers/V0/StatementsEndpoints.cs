@@ -36,14 +36,14 @@ public static class StatementsEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForStatementsRequestExample))]
+        [SwaggerRequestExample(typeof(RequestForDataRework), typeof(RequestForStatementsRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForStatements200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] RequestForDataRework model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })

@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvices" Collapsed="true">
-    <Position X="5" Y="3" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Aggregates\PaymentAdvicesAggregate\PaymentAdvices.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="PaymentAdviceCollection" />
-    </ShowAsCollectionAssociation>
-  </Class>
   <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvice" Collapsed="true">
     <Position X="11" Y="3" Width="2.5" />
     <TypeIdentifier>
@@ -33,7 +23,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.Comment" Collapsed="true">
-    <Position X="8.5" Y="5" Width="1.5" />
+    <Position X="8.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Entities\Comment.cs</FileName>
@@ -46,8 +36,8 @@
       <FileName>Aggregates\PaymentAdvicesAggregate\PaymentAdviceDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="WoolSaleHeaderLots" />
       <Property Name="PaymentSummary" />
+      <Property Name="WoolSaleHeaderLots" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="LotPaymentDetails" />
@@ -64,22 +54,15 @@
   <Class Name="Wiedpug.Domain.Entities.MiscellaneousCharge" Collapsed="true">
     <Position X="10.25" Y="6.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEACACAAAIAAAAAAIAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEACAAAAAIAAAAAAIAAAAAAA=</HashCode>
       <FileName>Entities\MiscellaneousCharge.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PaymentSummary" Collapsed="true">
-    <Position X="21" Y="5" Width="1.5" />
+    <Position X="21" Y="5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAgAAAAAAAACAAAAAAAAACAAAA=</HashCode>
       <FileName>Entities\PaymentSummary.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.PaymentAdviceWoolSaleHeaderLots" Collapsed="true">
-    <Position X="19" Y="6.75" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAQCQAAAAAAAQIBEKAAAIAAAAAAQAAEBAEAgAA=</HashCode>
-      <FileName>Entities\PaymentAdviceWoolSaleHeaderLots.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
@@ -87,6 +70,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.WoolSaleHeaderLots" Collapsed="true">
+    <Position X="19.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAQCSQEAAEBAxITEKCAAIACAQAAQAAExaUAggA=</HashCode>
+      <FileName>Entities\WoolSaleHeaderLots.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

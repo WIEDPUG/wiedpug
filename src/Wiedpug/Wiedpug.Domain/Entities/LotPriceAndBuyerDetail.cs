@@ -41,7 +41,7 @@ namespace Wiedpug.Domain.Entities
         public required SaleOutcome SaleOutcome { get; set; }
 
         /// <summary>
-        /// Required Time field for auction sale time.
+        /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
         /// </summary>
         [Required]
         [DataType(DataType.DateTime)]

@@ -48,7 +48,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ADC",
                             },
-                            ClientCode = "345678",
+                            ClientCode = 345678,
                             StatementDate = "2024-03-21",
                             DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
                             OpeningBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
@@ -95,17 +95,35 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForStatementsRequestExample : IExamplesProvider<RequestForData>
+    public class RequestForStatementsRequestExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_M,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "M18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -158,7 +176,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ATT",
                             },
-                            ClientCode = "345678",
+                            ClientCode = 345678,
                             StatementDate = "2024-03-21",
                             DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
                             OpeningBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },

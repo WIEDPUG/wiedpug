@@ -23,14 +23,6 @@ namespace Wiedpug.Domain.Entities
         public string? ChargeDescription { get; set; }
 
         /// <summary>
-        /// Required enum type for currency.
-        /// </summary>
-        [Required]
-        [MinLength(1)]
-        [MaxLength(3)]
-        public required Currency Currency { get; set; }
-
-        /// <summary>
         /// Required decimal field for charge amount with two digits precision.
         /// </summary>
         [Required]

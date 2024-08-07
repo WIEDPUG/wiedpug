@@ -16,6 +16,9 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
         public required int CreditNoteInvoiceNumber { get; set; }
 
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -29,8 +32,10 @@ namespace Wiedpug.Domain.Entities
         public required Currency CreditNoteAmount { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whether the GST is aplicable. 
+        /// A boolean value to indicate whether the GST is aplicable.
+        /// 
         /// true: applicable.
+        ///
         /// false: not applicable.
         /// </summary>
         [Required]
@@ -52,6 +57,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         public required CertificateIdentity CertificateIdentityOriginal { get; set; }
 
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]

@@ -92,7 +92,7 @@ versionedGroup.MapStatementsEndpoints();
 
 versionedGroup.MapTextsEndpoints();
 
-versionedGroup.MapLotPriceAndBuyersEndpoints();
+versionedGroup.MapLotPriceAndBuyerEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

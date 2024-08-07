@@ -17,7 +17,7 @@ namespace Wiedpug.Domain.Entities
         public string? StartDateTimeStatusRequest { get; set; }
 
         /// <summary>
-        /// Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
+        /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
@@ -26,7 +26,7 @@ namespace Wiedpug.Domain.Entities
         public string? EndDateTimeStatusRequest { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear to use network datetime.
+        /// A boolean value to indicate whether to use network datetime.
         /// true: use network datetime.
         /// false: not use.
         /// </summary>

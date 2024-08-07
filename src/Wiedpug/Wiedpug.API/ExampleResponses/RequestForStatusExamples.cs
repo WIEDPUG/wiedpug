@@ -33,11 +33,7 @@ namespace Wiedpug.API.ExampleResponses
                     new RequestForStatusFilter
                     {
                         TransmissionTypeRequested = Domain.Enums.TransmissionType.AuctionCatalogues,
-                        SaleIdentity = new Domain.Entities.SaleIdentity
-                        {
-                            SellingCentreType = SellingCentreType.AU_F,
-                            SaleNumber = 18
-                        },
+                        SaleIdentity = "F18",
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "2023-10-31",
                         IsUsingNetworkDateTime = false,

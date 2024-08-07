@@ -13,13 +13,13 @@ public static class DeliveryOrderAndShippingInstructionsEndpoints
         var group = routes.MapGroup("delivery-order-shipping-instructions").WithTags("Delivery Order And Shipping Instructions");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(DeliveryOrdersAndShippingInstructions), typeof(CreateDeliveryOrderAndShippingInstructionsExample))]
+        [SwaggerRequestExample(typeof(List<DeliveryOrdersAndShippingInstruction>), typeof(CreateDeliveryOrderAndShippingInstructionsExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] DeliveryOrdersAndShippingInstructions model) =>
+        ([FromBody] List<DeliveryOrdersAndShippingInstruction> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
@@ -36,14 +36,14 @@ public static class DeliveryOrderAndShippingInstructionsEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForDeliveryOrdersAndShippingInstructionsExample))]
+        [SwaggerRequestExample(typeof(RequestForDataRework), typeof(RequestForDeliveryOrdersAndShippingInstructionsExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDeliveryOrdersAndShippingInstructions200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] RequestForDataRework model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -52,7 +52,7 @@ public static class DeliveryOrderAndShippingInstructionsEndpoints
         {
             Summary = "Retrieves the delivery order/shipping instructions"
         })
-        .Produces<ApiResult<DeliveryOrdersAndShippingInstructions>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<List<DeliveryOrdersAndShippingInstruction>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

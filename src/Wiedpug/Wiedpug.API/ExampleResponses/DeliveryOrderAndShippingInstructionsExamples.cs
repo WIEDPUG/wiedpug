@@ -11,14 +11,12 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class CreateDeliveryOrderAndShippingInstructionsExample : IExamplesProvider<DeliveryOrdersAndShippingInstructions>
+    public class CreateDeliveryOrderAndShippingInstructionsExample : IExamplesProvider<List<DeliveryOrdersAndShippingInstruction>>
     {
-        public DeliveryOrdersAndShippingInstructions GetExamples()
+        public List<DeliveryOrdersAndShippingInstruction> GetExamples()
         {
-            return new DeliveryOrdersAndShippingInstructions()
+            return new List<DeliveryOrdersAndShippingInstruction>
             {
-                DeliveryOrdersAndShippingInstructionCollection = new List<DeliveryOrdersAndShippingInstruction>
-                {
                     new DeliveryOrdersAndShippingInstruction
                     {
                                         TransmissionHeader = new TransmissionHeader
@@ -101,11 +99,7 @@ namespace Wiedpug.API.ExampleResponses
                                                                         OrganisationCode = "TTM",
                                             },
                                             Season = 23,
-                                            SaleIdentity = new SaleIdentity
-                                            {
-                                                SellingCentreType = SellingCentreType.AU_N,
-                                                SaleNumber = 23
-                                            },
+                                            SaleIdentity = "N23",
                                             CentreStorage =new Centre
                                             {
                                                 Country = CountryCode.AU,
@@ -171,23 +165,40 @@ namespace Wiedpug.API.ExampleResponses
                         }
                     }
                 }
-                    }
                 }
             };
         }
     }
 
-    public class RequestForDeliveryOrdersAndShippingInstructionsExample : IExamplesProvider<RequestForData>
+    public class RequestForDeliveryOrdersAndShippingInstructionsExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_F,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "F18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -206,10 +217,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 
                 Message = null,
-                Data = new DeliveryOrdersAndShippingInstructions()
+                Data = new List<DeliveryOrdersAndShippingInstruction>
                 {
-                    DeliveryOrdersAndShippingInstructionCollection = new List<DeliveryOrdersAndShippingInstruction>
-                    {
                         new DeliveryOrdersAndShippingInstruction
                         {
                                                 TransmissionHeader = new TransmissionHeader
@@ -288,11 +297,7 @@ namespace Wiedpug.API.ExampleResponses
                                                                         OrganisationCode = "TTM",
                                             },
                                             Season = 23,
-                                            SaleIdentity = new SaleIdentity
-                                            {
-                                                SellingCentreType = SellingCentreType.AU_N,
-                                                SaleNumber = 23
-                                            },
+                                            SaleIdentity = "N23",
                                             CentreStorage = new Centre {
                                                 Country = CountryCode.AU,
                                                 CentreCode = CentreCodeAustralia.A
@@ -360,7 +365,6 @@ namespace Wiedpug.API.ExampleResponses
                         }
                     }
                 }
-                        }
                     }
                 }
             };

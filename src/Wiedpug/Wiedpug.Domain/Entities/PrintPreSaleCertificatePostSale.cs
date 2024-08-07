@@ -67,12 +67,26 @@ namespace Wiedpug.Domain.Entities
         public required Weight Gross { get; set; }
 
         /// <summary>
-        /// Required generic string field for sale identity.
+        /// A group field of SellingCentre/Type and Sale Number
+        ///
+        /// From: The current value that the Sale Identity is to be changed from.
+        ///
+        /// To: The new value that the Sale Identity is to be changed to.
+        ///
+        /// SellingCentre/Type can be one of the following code:
+        ///
+        /// SellingCentre/Type (New Zealand):
+        ///
+        /// C: Christchurch; N: Napier.
+        ///
+        /// SellingCentre/Type (Australia):
+        ///
+        /// A: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
         /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(4)]
-        public required SaleIdentity SaleIdentity { get; set; }
+        public required string SaleIdentity { get; set; }
 
         /// <summary>
         /// Required enum type for centre-storage.
@@ -108,9 +122,11 @@ namespace Wiedpug.Domain.Entities
         public PrintFlag? PrintFlag { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear to print Team3-Hauteur
-        /// true: print
-        /// false: not print
+        /// A boolean value to indicate whether to print Team3-Hauteur.
+        /// 
+        /// true: print.
+        /// 
+        /// false: not print.
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]

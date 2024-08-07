@@ -57,7 +57,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether to apply renumbers on bales. 
+        ///
         /// true: apply renumbers.
+        ///
         /// false: not apply renumbers.
         /// </summary>
         [Required]
@@ -66,9 +68,11 @@ namespace Wiedpug.Domain.Entities
         public required bool AreRenumbersApplied { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear to apply Gross Weights on bales
-        /// true: apply
-        /// false: not apply
+        /// A boolean value to indicate whether to apply Gross Weights on bales.
+        ///
+        /// true: apply.
+        ///
+        /// false: not apply.
         /// </summary>
         [Required]
         [MinLength(4)]
@@ -76,8 +80,10 @@ namespace Wiedpug.Domain.Entities
         public required bool AreGrossWeightsApplied { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear to apply Net Weights on bales
+        /// A boolean value to indicate whether to apply Net Weights on bales.
+        ///
         /// true: apply
+        ///
         /// false: not apply
         /// </summary>
         [Required]

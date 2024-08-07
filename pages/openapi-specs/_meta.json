@@ -1,7 +1,9 @@
 {
     "version-0.0-od": "OrganisationDetails: Ready for review",
     "version-0.0-ac": "Catalogues: Ready for review",
-    "0.0-tc-tcu-tcr": "TestCetificates, TestCertificatesUpdate, TestCertificatesRrequests: Ready for review",
+    "0.0-tc": "TestCetificates: Ready for review",
+    "0.0-tcu": "TestCertificatesUpdate: Ready for review",
+    "0.0-tcr": "TestCertificatesRrequests: Ready for review",
     "0.0-trv": "TestRequestVerification: Ready for review",
     "0.0-li": "LotInvoices: Ready for review",
     "0.0-ts": "TestStatus: Ready for review",

@@ -21,9 +21,26 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public int? Season { get; set; }
 
+        /// <summary>
+        /// A group field of SellingCentre/Type and Sale Number
+        ///
+        /// From: The current value that the Sale Identity is to be changed from.
+        ///
+        /// To: The new value that the Sale Identity is to be changed to.
+        ///
+        /// SellingCentre/Type can be one of the following code:
+        ///
+        /// SellingCentre/Type (New Zealand):
+        ///
+        /// C: Christchurch; N: Napier.
+        ///
+        /// SellingCentre/Type (Australia):
+        ///
+        /// A: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(4)]
-        public SaleIdentity? SaleIdentity { get; set; }
+        public string? SaleIdentity { get; set; }
 
         [MinLength(1)]
         [MaxLength(5)]
@@ -100,8 +117,10 @@ namespace Wiedpug.Domain.Entities
         public Currency? GSTAmount { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whether the GST is aplicable. 
+        /// A boolean value to indicate whether the GST is aplicable.
+        /// 
         /// true: applicable.
+        /// 
         /// false: not applicable.
         /// </summary>
         [MinLength(4)]
@@ -110,7 +129,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether the Company ABN is applicable to invoice. 
+        /// 
         /// true: applicable.
+        /// 
         /// false: not applicable.
         /// </summary>
         [MinLength(4)]

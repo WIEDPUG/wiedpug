@@ -15,10 +15,6 @@ namespace Wiedpug.Domain.Enums
         "The codes used in transmissions are those defined in the Australian Wool Selling Regulation.")]
     public enum CentreCodeGermany
     {
-
-
-        [Description("BE: Berlin - Germany")]
-        BE,
         [Description("BL: Blumenthal - Germany")]
         BL,
     }

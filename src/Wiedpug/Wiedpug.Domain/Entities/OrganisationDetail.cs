@@ -36,7 +36,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether the organisation transmits or receives data electronically.
+        /// 
         /// true: The organisation transmits or receives data electronically. 
+        /// 
         /// false: The organisation neither transmits nor receives data electronically.
         /// </summary>
         [Required]

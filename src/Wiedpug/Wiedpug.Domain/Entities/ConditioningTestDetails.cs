@@ -86,6 +86,9 @@ namespace Wiedpug.Domain.Entities
         [StringLength (1)]
         public required InvoiceMassFlag InvoiceMassFlag { get; set; }
 
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [Required]
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]

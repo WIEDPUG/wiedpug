@@ -13,26 +13,11 @@ namespace Wiedpug.Domain.Enums
         [Description("NZ: New Zealand")]
         NZ,
 
-        [Description("FR: France")]
-        FR,
-
-        [Description("ZA: South Africa")]
-        ZA,
-
-        [Description("BE: Belgium")]
-        BE,
-
-        [Description("GB: United Kingdom of Great Britain")]
-        GB,
-
         [Description("DE: Germany")]
         DE,
 
         [Description("IT: Italy")]
         IT,
-
-        [Description("NL: Netherlands")]
-        NL,
 
         [Description("CN: China")]
         CN,
@@ -40,7 +25,22 @@ namespace Wiedpug.Domain.Enums
         [Description("TW: Taiwan")]
         TW,
 
-        [Description("US: USA")]
-        US,
+        // [Description("FR: France")]
+        // FR,
+  
+        // [Description("ZA: South Africa")]
+        // ZA,
+
+        // [Description("BE: Belgium")]
+        // BE,
+
+        // [Description("GB: United Kingdom of Great Britain")]
+        // GB,
+
+        // [Description("NL: Netherlands")]
+        // NL,
+
+        // [Description("US: USA")]
+        // US,
     }
 }

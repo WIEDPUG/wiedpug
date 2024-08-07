@@ -4,8 +4,13 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class PremiumTestDetails
+    public class TestDetails
     {
+        [Required]
+        [MinLength(1)]
+        [MaxLength(1)]
+        public required TestDetailsType TestDetailsType { get; set; }
+
         [Required]
         [MinLength(1)]
         [MaxLength(11)]
@@ -81,5 +86,11 @@ namespace Wiedpug.Domain.Entities
         [MinLength(1)]
         [MaxLength(1)]
         public DarkAndMedullatedFibreRisk? DarkAndMedullatedFibreRisk { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        public double? AshContentDryBasis { get; set; }
+
+        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        public double? AlcoholExtractableMatterDryBasis { get; set; }
     }
 }

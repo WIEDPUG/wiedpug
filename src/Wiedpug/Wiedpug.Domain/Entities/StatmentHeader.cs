@@ -14,8 +14,11 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required string ClientCode { get; set; }
+        public required int ClientCode { get; set; }
 
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]

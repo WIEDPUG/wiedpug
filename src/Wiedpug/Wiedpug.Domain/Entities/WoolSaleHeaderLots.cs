@@ -15,13 +15,31 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public required int Season { get; set; }
 
+        /// <summary>
+        /// A group field of SellingCentre/Type and Sale Number
+        ///
+        /// From: The current value that the Sale Identity is to be changed from.
+        ///
+        /// To: The new value that the Sale Identity is to be changed to.
+        ///
+        /// SellingCentre/Type can be one of the following code:
+        ///
+        /// SellingCentre/Type (New Zealand):
+        ///
+        /// C: Christchurch; N: Napier.
+        ///
+        /// SellingCentre/Type (Australia):
+        ///
+        /// A: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(4)]
-        public required SaleIdentity SaleIdentity { get; set; }
+        public required string SaleIdentity { get; set; }
 
         /// <summary>
         /// The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). 
+        /// 
         /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
@@ -30,7 +48,7 @@ namespace Wiedpug.Domain.Entities
         public required Centre CentreStorage { get; set; }
 
         /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
         /// </summary>    
         [Required]
         [DataType(DataType.Date)]
@@ -50,8 +68,11 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// This is the published rate for the charge levied by the broker to the buyer for each bale purchased and is included in the last cost of the wool.
+        /// 
         /// It will not include freight if freight is listed separately in the Freight Charge field, if freight is not listed in the Freight Charge field it will include freight. 
+        /// 
         /// In Australia it will always include freight as the Freight Charge field is not used.
+        /// 
         /// Total up to 12 digits with 2 digits after the decimal point. e.g. 123.76
         /// </summary>
         [MinLength(6)]
@@ -64,8 +85,11 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// If specified, this is not part of the last cost of the wool. 
-        /// If a freight charge is not included in the post Sale Charge, then the freight charge is the charge levied by the broker should the buyer request that the broker transport the wool to the nearest designated area (usually a shipping port). 
+        /// 
+        /// If a freight charge is not included in the post Sale Charge, then the freight charge is the charge levied by the broker should the buyer request that the broker transport the wool to the nearest designated area (usually a shipping port).
+        /// 
         /// Freight Charge is not used in Australia.
+        /// 
         /// Total up to 12 digits with 2 digits after the decimal point. e.g. 23.76
         /// </summary>
         [MinLength(6)]
@@ -96,9 +120,11 @@ namespace Wiedpug.Domain.Entities
         public CatalogueSection? CatalogueSection { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.
-        /// true: is a final catalogue
-        /// false: is not a final catalogue
+        /// A boolean value to indicate whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.
+        /// 
+        /// true: is a final catalogue.
+        /// 
+        /// false: is not a final catalogue.
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
@@ -157,8 +183,10 @@ namespace Wiedpug.Domain.Entities
 
 
         /// <summary>
-        /// This is the organisation store that is storing the wool. 
+        /// This is the organisation store that is storing the wool.
+        /// 
         /// Note: If there is more than one organisation in a centre, then separate AWEX codes are required for each store.
+        /// 
         /// It is not necessarily the same as the Releasing Organisation.
         /// </summary>
         [MinLength(1)]
@@ -174,7 +202,8 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// The date on which payment is due. Also known as Prompt Date.
-        /// Date value in ISO 8601 standard UTC format. e.g. 2024-03-21
+        /// 
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
         /// </summary>
         /// 
         [DataType(DataType.Date)]
@@ -196,7 +225,7 @@ namespace Wiedpug.Domain.Entities
         public int? MaximumDaysDiscount { get; set; } // FIELD NUMBER 7 - Maximum Days Discount - Start: 34, Size: 2, Data Type: N, Justification: R, Requirement Designator: M
 
         /// <summary>
-        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -216,6 +245,7 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// The first date on which the wool is available for purchase.
+        /// 
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21. 
         /// </summary>
         [DataType(DataType.Date)]
@@ -225,8 +255,9 @@ namespace Wiedpug.Domain.Entities
         public string? LotAvailableDate { get; set; } // FIELD NUMBER 11 - Lot Available Date - Start: 50, Size: 6, Data Type: Date, Justification: F, Requirement Designator: O
 
         /// <summary>
-        /// The total (extended) amount of Post Sale Charge Rebate for the Lot. 
-        /// This value is provided where a value in the Post Sale Charge Rebate field exists (11A)
+        /// The total (extended) amount of Post Sale Charge Rebate for the Lot.
+        /// 
+        /// This value is provided where a value in the Post Sale Charge Rebate field exists
         /// </summary>
         [MinLength(6)]
         [MaxLength(15)]
@@ -272,8 +303,10 @@ namespace Wiedpug.Domain.Entities
         public string? ElectronicSaleFlag { get; set; } // FIELD NUMBER 10 - Electronic Sale Flag - Start: 36, Size: 1, Data Type: ID, Justification: L, Requirement Designator: O
 
         /// <summary>
-        /// A boolean value to indicates whether to display reserve price to buyers.
+        /// A boolean value to indicate whether to display reserve price to buyers.
+        /// 
         /// true: display.
+        /// 
         /// false: not display.
         /// </summary>
         [MinLength(4)]

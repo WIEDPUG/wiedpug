@@ -9,21 +9,20 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public LotHeader? LotHeader { get; set; }
 
         public List<LotHeaderPricingData>? LotHeaderPricings { get; set; }
+
         public EncryptedLotHeaderAwexData? EncryptedLotHeaderAwexData { get; set; }
 
         [Required]
         public required List<LotHeaderVendorDeclaration> LotHeaderVendorDeclarations { get; set; }
 
-        public ColourDetails? ColourDetails { get; set; }
-        public PremiumTestDetails? PremiumTestDetails { get; set; }
-        public SubjectiveInterlotDetails? SubjectiveInterlotDetails { get; set; }
+        public List<TestDetails>? TestDetailsCollection { get; set; }
+
+        public List<ColourTestDetails>? ColourTestDetailsCollection { get; set; }
+
+        public List<LengthAndStrengthTestDetails>? LengthAndStrengthTestDetailsCollection { get; set; }
+
         public CombinationDetails? CombinationDetails { get; set; }
-        public LengthAndStrengthCombDetails? LengthAndStrengthCombDetails { get; set; }
-        public LengthAndStrengthDetails? LengthAndStrengthDetails { get; set; }
-        public OMLDetails? OmlDetails { get; set; }
-        public CoreTestDetails? CoreTestDetails { get; set; }
-        public ColourCombinationDetails? ColourCombinationDetails { get; set; }
-        public OMIDetails? OmiDetails { get; set; }
+
         public List<FibreDiameterHistogram>? Histograms { get; set; }
         
         /// <summary>

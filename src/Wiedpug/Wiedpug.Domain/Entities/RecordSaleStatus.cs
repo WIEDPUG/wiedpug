@@ -33,9 +33,11 @@ namespace Wiedpug.Domain.Entities
         public required int PercentageSold { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whether the transfers are completed. 
-        /// true: completed.
-        /// false: not completed.
+        /// A boolean value to indicate whether the transfers are completed / Sale is finalised. 
+        /// 
+        /// true: Transfers are completed / Sale is finalised.
+        /// 
+        /// false: Transfers are not completed / Sale is not finalised.
         /// </summary>
         [Required]
         [MinLength(4)]

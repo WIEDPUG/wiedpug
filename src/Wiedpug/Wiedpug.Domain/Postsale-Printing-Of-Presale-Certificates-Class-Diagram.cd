@@ -4,7 +4,7 @@
     <Position X="2" Y="2.25" Width="3.25" />
     <AssociationLine Name="PrintPreSaleCertificatePostSales" Type="Wiedpug.Domain.Entities.PrintPreSaleCertificatePostSale">
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="-0.794" Y="0.243" Height="0.182" Width="4" />
+        <Position X="-1.363" Y="0.132" Height="0.182" Width="4" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>

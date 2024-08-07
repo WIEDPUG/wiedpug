@@ -26,6 +26,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public AmountType? AmountType { get; set; }
 
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]
@@ -38,7 +41,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether the GST amount is applicable to invoice. 
+        /// 
         /// true: applicable.
+        /// 
         /// false: not applicable.
         /// </summary>
         [Required]
@@ -48,7 +53,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether the Company ABN is applicable to invoice. 
+        /// 
         /// true: applicable.
+        /// 
         /// false: not applicable.
         /// </summary>
         [Required]

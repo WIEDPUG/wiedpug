@@ -23,11 +23,11 @@ namespace Wiedpug.API.ExampleResponses
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
-                                                OrganisationCode = "ABC",
+                        OrganisationCode = "ABC",
                     },
                     CurrentReceiver = new Organisation
                     {
-                                                OrganisationCode = "ATW",
+                        OrganisationCode = "ATW",
                     },
                     VersionNumber = 31,
                     SoftwareIdentifier = new SoftwareIdentifier
@@ -45,11 +45,15 @@ namespace Wiedpug.API.ExampleResponses
                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
-                            Suffix = "1234567",
+                            Suffix = 1234567,
                         },
-                        ClientCode = "019944",
-                        ChargeCode = "0511",
-                        LSSampleID = "F885688",
+                        ClientCode = 19944,
+                        ChargeCode = 5112,
+                        LsSampleId = new LsSampleId{
+                            Prefix = "F",
+                            Number = 88568,
+                            CheckDigit = 8
+                        },
                         CoreSampleReceived = "240423",
                         LSSampleReceived = "240424",
                         TRVMatched = "240424",
@@ -59,11 +63,15 @@ namespace Wiedpug.API.ExampleResponses
                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
-                            Suffix = "1234567",
+                            Suffix = 1234567,
                         },
-                        ClientCode = "019944",
-                        ChargeCode = "0511",
-                        LSSampleID = "F865734",
+                        ClientCode = 19944,
+                        ChargeCode = 5112,
+                        LsSampleId = new LsSampleId{
+                            Prefix = "F",
+                            Number = 86573,
+                            CheckDigit = 4
+                        },
                         CoreSampleReceived = "240423",
                         LSSampleReceived = "240424",
                         TRVMatched = "240424"
@@ -75,17 +83,35 @@ namespace Wiedpug.API.ExampleResponses
 
     }
 
-    public class RequestForTestStatusExample : IExamplesProvider<RequestForData>
+    public class RequestForTestStatusExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_M,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "M18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF" },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -135,11 +161,15 @@ namespace Wiedpug.API.ExampleResponses
                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
-                            Suffix = "1234567",
+                            Suffix = 1234567,
                         },
-                        ClientCode = "019944",
-                        ChargeCode = "0511",
-                        LSSampleID = "F885688",
+                        ClientCode = 19944,
+                        ChargeCode = 5112,
+                        LsSampleId = new LsSampleId{
+                            Prefix = "F",
+                            Number = 88568,
+                            CheckDigit = 8
+                        },
                         CoreSampleReceived = "240423",
                         LSSampleReceived = "240424",
                         TRVMatched = "240424",
@@ -149,11 +179,15 @@ namespace Wiedpug.API.ExampleResponses
                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
-                            Suffix = "1234567",
+                            Suffix = 1234567,
                         },
-                        ClientCode = "019944",
-                        ChargeCode = "0511",
-                        LSSampleID = "F865734",
+                        ClientCode = 19944,
+                        ChargeCode = 5112,
+                        LsSampleId = new LsSampleId{
+                            Prefix = "F",
+                            Number = 86573,
+                            CheckDigit = 4
+                        },
                         CoreSampleReceived = "240423",
                         LSSampleReceived = "240424",
                         TRVMatched = "240424"

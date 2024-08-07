@@ -17,8 +17,10 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
         /// This field is not used in New Zealand transmission.
-        /// For TRV only
+        /// 
+        /// For TRV only.
         /// </summary>
         /// 
         [MinLength(1)]

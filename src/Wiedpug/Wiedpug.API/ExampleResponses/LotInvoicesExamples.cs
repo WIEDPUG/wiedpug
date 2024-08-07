@@ -7,13 +7,11 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class LotInvoicesRequestExample : IExamplesProvider<LotInvoices>
+    public class LotInvoicesRequestExample : IExamplesProvider<List<LotInvoice>>
     {
-        public LotInvoices GetExamples()
+        public List<LotInvoice> GetExamples()
         {
-            return new LotInvoices()
-            {
-                LotInvoiceCollection = new List<LotInvoice>
+            return new List<LotInvoice>
                 {
                     new LotInvoice
                     {
@@ -47,14 +45,10 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_M,
-                                        SaleNumber = 29
-                                    },
-                                    CentreStorage = new Centre { 
+                                    SaleIdentity = "M29",
+                                    CentreStorage = new Centre {
                                         Country = CountryCode.AU,
-                                        CentreCode = CentreCodeAustralia.AR 
+                                        CentreCode = CentreCodeAustralia.AR
                                     },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,
@@ -93,9 +87,9 @@ namespace Wiedpug.API.ExampleResponses
 
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = new Centre { 
-                                        Country = CountryCode.AU, 
-                                        CentreCode = CentreCodeAustralia.G 
+                                    CentreCatalogue = new Centre {
+                                        Country = CountryCode.AU,
+                                        CentreCode = CentreCodeAustralia.G
                                     },
                                     DeliveryBasis = DeliveryBasis.D,
                                     StorageOrganisation = new Organisation
@@ -255,22 +249,40 @@ namespace Wiedpug.API.ExampleResponses
                              }
                         }
                     }
-                },
-            };
+                };
+
         }
     }
 
-    public class RequestForLotInovicesExample : IExamplesProvider<RequestForData>
+    public class RequestForLotInovicesExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_F,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "F18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF" },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -281,17 +293,15 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForLotInvoices200Example : IExamplesProvider<ApiResult<LotInvoices>>
+    public class RequestForLotInvoices200Example : IExamplesProvider<ApiResult<List<LotInvoice>>>
     {
-        public ApiResult<LotInvoices> GetExamples()
+        public ApiResult<List<LotInvoice>> GetExamples()
         {
-            return new ApiResult<LotInvoices>()
+            return new ApiResult<List<LotInvoice>>()
             {
                 
                 Message = null,
-                Data = new LotInvoices
-                {
-                    LotInvoiceCollection = new List<LotInvoice>
+                Data = new List<LotInvoice>
                 {
                     new LotInvoice
                     {
@@ -325,11 +335,7 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_M,
-                                        SaleNumber = 29
-                                    },
+                                    SaleIdentity = "M29",
                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AR },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,
@@ -338,7 +344,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CalculationBasis = CalculationBasis.B,
                                     FreightCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD },
                                     FreightRebate = new Currency { Value = 3.25, CurrencyUnit = CurrencyUnit.AUD },
-                                    ChargePerLot = new Currency{ 
+                                    ChargePerLot = new Currency{
                                         Value = 0.0,
                                         CurrencyUnit = CurrencyUnit.AUD
                                     },
@@ -509,7 +515,7 @@ namespace Wiedpug.API.ExampleResponses
                         }
                     }
                 },
-                }
+
             };
         }
     }

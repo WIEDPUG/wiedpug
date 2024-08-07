@@ -19,6 +19,7 @@ namespace Wiedpug.Domain.Shared.Constants
         /// </summary>
         ///
         public const string DATE_AND_TIME_UTC_ISO8601 = @"^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$";
+        public const string NUMBER_1_DIGIT = @"-?\d{1}";
         public const string NUMBER_2_DIGITS = @"-?\d{1,2}";
         public const string NUMBER_6_DIGITS = @"-?\d{1,6}";
         public const string NUMBER_10_DIGITS = @"-?\d{1,10}";

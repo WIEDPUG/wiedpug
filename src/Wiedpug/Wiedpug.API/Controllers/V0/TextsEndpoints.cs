@@ -14,13 +14,13 @@ public static class TextsEndpoints
         var group = routes.MapGroup("texts").WithTags("Texts");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(Texts), typeof(CreateTextsRequestExample))]
+        [SwaggerRequestExample(typeof(List<Text>), typeof(CreateTextsRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] Texts model) =>
+        ([FromBody] List<Text> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
@@ -37,14 +37,14 @@ public static class TextsEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForTextsRequestExample))]
+        [SwaggerRequestExample(typeof(RequestForDataRework), typeof(RequestForTextsRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForTexts200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] RequestForDataRework model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -53,7 +53,7 @@ public static class TextsEndpoints
         {
             Summary = "Retrieves the texts"
         })
-        .Produces<ApiResult<Texts>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<List<Text>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

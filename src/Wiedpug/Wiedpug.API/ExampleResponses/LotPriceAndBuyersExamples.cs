@@ -13,14 +13,12 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class CreateLotPriceAndBuyersRequestExample : IExamplesProvider<LotPriceAndBuyers>
+    public class CreateLotPriceAndBuyersRequestExample : IExamplesProvider<List<LotPriceAndBuyer>>
     {
-        public LotPriceAndBuyers GetExamples()
+        public List<LotPriceAndBuyer> GetExamples()
         {
-            return new LotPriceAndBuyers()
+            return new List<LotPriceAndBuyer>
             {
-                LotPriceAndBuyerCollection = new List<LotPriceAndBuyer>
-                {
                     new LotPriceAndBuyer
                     {
                         TransmissionHeader = new TransmissionHeader
@@ -69,11 +67,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CatalogueSection = CatalogueSection.FLC,
                                      IsFinalCatalogue = true,
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_M,
-                                        SaleNumber = 29
-                                    },
+                                    SaleIdentity = "M29",
                                     InvoicingOrganisation = new Organisation
                                     {
                                                                 OrganisationCode = "ABC",
@@ -124,23 +118,39 @@ namespace Wiedpug.API.ExampleResponses
                         }
  
                     }
-                }
-
             };
         }
     }
 
-    public class RequestForLotPriceAndBuyersRequestExample : IExamplesProvider<RequestForData>
+    public class RequestForLotPriceAndBuyersRequestExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_M,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "M18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -159,9 +169,7 @@ namespace Wiedpug.API.ExampleResponses
             {
                 
                 Message = null,
-                Data = new LotPriceAndBuyers
-                {
-                    LotPriceAndBuyerCollection = new List<LotPriceAndBuyer>
+                Data = new List<LotPriceAndBuyer>
                 {
                     new LotPriceAndBuyer
                     {
@@ -207,11 +215,7 @@ namespace Wiedpug.API.ExampleResponses
                                      CatalogueSection = CatalogueSection.FLC,
                                      IsFinalCatalogue = true,
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_M,
-                                        SaleNumber = 29
-                                    },
+                                    SaleIdentity = "M29",
                                     InvoicingOrganisation = new Organisation
                                     {
                                                                 OrganisationCode = "ABC",
@@ -257,8 +261,6 @@ namespace Wiedpug.API.ExampleResponses
                             }
                         }
                     }
-                }
-
                 }
             };
         }

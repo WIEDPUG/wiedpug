@@ -55,11 +55,20 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A group field of SellingCentre/Type and Sale Number
+        ///
         /// From: The current value that the Sale Identity is to be changed from.
+        ///
         /// To: The new value that the Sale Identity is to be changed to.
+        ///
         /// SellingCentre/Type can be one of the following code:
-        /// NZ_C: Christchurch; NZ_N: Napier; AU_A: Adelaide; AU: Australia; AU_B: Brisbane; AU_F: Fremantle; AU_G: Geelong;
-        /// AU_L: Launceston; AU_M: Melbourne; AU_N: Newcastle; AU_R: Goulburn; AU_S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
+        ///
+        /// SellingCentre/Type (New Zealand):
+        ///
+        /// C: Christchurch; N: Napier.
+        ///
+        /// SellingCentre/Type (Australia):
+        ///
+        /// A: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
         /// </summary>
         [MinLength(1)]
         [MaxLength(6)]
@@ -86,8 +95,10 @@ namespace Wiedpug.Domain.Entities
         public AdditionalPrintRequirements? AdditionalPrintRequirements { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear to print Team3-Hauteur
+        /// A boolean value to indicate whether to print Team3-Hauteur
+        ///
         /// true: print
+        ///
         /// false: not print
         /// </summary>
         [MinLength(4)]

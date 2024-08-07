@@ -9,38 +9,36 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class CreatePaymentAdvicesRequestExample : IExamplesProvider<PaymentAdvices>
+    public class CreatePaymentAdvicesRequestExample : IExamplesProvider<List<PaymentAdvice>>
     {
-        public PaymentAdvices GetExamples()
+        public List<PaymentAdvice> GetExamples()
         {
-            return new PaymentAdvices()
+            return new List<PaymentAdvice>
             {
-                PaymentAdviceCollection = new List<PaymentAdvice>
+                new PaymentAdvice
                 {
-                    new PaymentAdvice
+                    TransmissionHeader = new TransmissionHeader
                     {
-                                        TransmissionHeader = new TransmissionHeader
-                {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
-                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
-                    DocumentOriginator = new Organisation
-                    {
-                                                OrganisationCode = "ABC",
+                        DateFormatLastRevised = "2020-07-15",
+                        DateTransmissionFileCreated = "2016-01-17",
+                        CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                        DocumentOriginator = new Organisation
+                        {
+                                                    OrganisationCode = "ABC",
+                        },
+                        CurrentReceiver = new Organisation
+                        {
+                                                    OrganisationCode = "ATW",
+                        },
+                        VersionNumber = 31,
+                        SoftwareIdentifier = new SoftwareIdentifier
+                        {
+                            ProgramName = "NETR",
+                            SoftwareCompany = SoftwareCompany.Talman,
+                            Version = 1082
+                        },
+                        ABN = "72001967184"
                     },
-                    CurrentReceiver = new Organisation
-                    {
-                                                OrganisationCode = "ATW",
-                    },
-                    VersionNumber = 31,
-                    SoftwareIdentifier = new SoftwareIdentifier
-                    {
-                        ProgramName = "NETR",
-                        SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
-                    },
-                    ABN = "72001967184"
-                },
                         TransferConfig = new TransferConfig
                         {
                             TransferType = TransferType.Unrestrict
@@ -52,11 +50,7 @@ namespace Wiedpug.API.ExampleResponses
                             WoolSaleHeaderLots = new WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_M,
-                                        SaleNumber = 29
-                                    },
+                                    SaleIdentity ="M29",
                                     CentreStorage = new Centre {Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A},
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
@@ -112,23 +106,40 @@ namespace Wiedpug.API.ExampleResponses
                         Text = "dfsfbsdfafsafs fdsa"
                     }
                 }
-                    }
-                }
+                },
             };
         }
     }
 
-    public class RequestForPaymentAdvicesRequestExample : IExamplesProvider<RequestForData>
+    public class RequestForPaymentAdvicesRequestExample : IExamplesProvider<RequestForDataRework>
     {
-        public RequestForData GetExamples()
+        public RequestForDataRework GetExamples()
         {
-            return new RequestForData()
+            return new RequestForDataRework()
             {
-                SaleIdentity = new Domain.Entities.SaleIdentity
+                TransmissionHeader = new TransmissionHeader
                 {
-                    SellingCentreType = SellingCentreType.AU_M,
-                    SaleNumber = 18
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    ABN = "72001967184"
                 },
+                SaleIdentity = "M18",
                 OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
                 SaleDateRequested = "2023-10-31",
                 IsUsingNetworkDateTime = false,
@@ -147,10 +158,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 
                 Message = null,
-                Data = new PaymentAdvices
+                Data = new List<PaymentAdvice>
                 {
-                    PaymentAdviceCollection = new List<PaymentAdvice>
-                    {
                         new PaymentAdvice
                         {
                                                 TransmissionHeader = new TransmissionHeader
@@ -182,11 +191,7 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = new Domain.Entities.SaleIdentity
-                                    {
-                                        SellingCentreType = SellingCentreType.AU_M,
-                                        SaleNumber = 29
-                                    },
+                                    SaleIdentity = "M29",
                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.A,
@@ -254,8 +259,6 @@ namespace Wiedpug.API.ExampleResponses
                 }
                         }
                     }
-
-                }
             };
         }
     }

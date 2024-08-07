@@ -7,6 +7,9 @@ namespace Wiedpug.Domain.Entities
 {
     public class PaymentDetail
     {
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]

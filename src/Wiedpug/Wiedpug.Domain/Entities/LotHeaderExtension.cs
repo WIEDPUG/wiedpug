@@ -8,7 +8,9 @@ namespace Wiedpug.Domain.Entities
     {
         /// <summary>
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21.
+        /// 
         /// For records 31 and 55 this is the date core test was sampled or date combination/OML was requested. 
+        /// 
         /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
         /// </summary>
         [DataType(DataType.Date)]
@@ -26,9 +28,13 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// This field contains a description that is either an AWEX-ID description or another appraisal description.
-        /// Alternative valid appraisal descriptions include AWC type, Exporter type. 
+        /// 
+        /// Alternative valid appraisal descriptions include AWC type, Exporter type.
+        /// 
         /// The AWEX-ID description must conform to the current AWEX-ID code standard.
+        /// 
         /// If sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). 
+        /// 
         /// This field is to be always transmitted in upper case.
         /// </summary>
         [Required]
@@ -38,7 +44,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// A boolean value to indicate whether the GST amount is applicable to invoice. 
+        /// 
         /// true: applicable.
+        /// 
         /// false: not applicable.
         /// </summary>
         [MinLength(4)]

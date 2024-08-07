@@ -8,7 +8,7 @@ namespace Wiedpug.Domain.Entities
     public class TransmissionHeader
     {
         /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
         /// </summary>        
         [Required]
         [DataType(DataType.Date)]
@@ -18,7 +18,7 @@ namespace Wiedpug.Domain.Entities
         public required string DateFormatLastRevised { get; set; }
 
         /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
         /// </summary>
         [Required]
         [DataType(DataType.Date)]

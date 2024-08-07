@@ -9,16 +9,33 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required TransmissionType TransmissionTypeRequested { get; set; }
 
+        /// <summary>
+        /// A group field of SellingCentre/Type and Sale Number
+        ///
+        /// From: The current value that the Sale Identity is to be changed from.
+        ///
+        /// To: The new value that the Sale Identity is to be changed to.
+        ///
+        /// SellingCentre/Type can be one of the following code:
+        ///
+        /// SellingCentre/Type (New Zealand):
+        ///
+        /// C: Christchurch; N: Napier.
+        ///
+        /// SellingCentre/Type (Australia):
+        ///
+        /// A: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(4)]
-        public SaleIdentity? SaleIdentity { get; set; }
+        public string? SaleIdentity { get; set; }
 
         [MinLength(1)]
         [MaxLength(5)]
         public string? OrganisationRequested { get; set; }
 
         /// <summary>
-        /// Date value in ISO 8601 standard. e.g. 2024-03-21
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -36,7 +53,7 @@ namespace Wiedpug.Domain.Entities
         public string? StartDateTimeStatusRequest { get; set; }
 
         /// <summary>
-        /// Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
+        /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
         /// </summary>
         [DataType(DataType.DateTime)]
         [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
@@ -45,8 +62,10 @@ namespace Wiedpug.Domain.Entities
         public string? EndDateTimeStatusRequest { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whethear to use network datetime.
+        /// A boolean value to indicate whether to use network datetime.
+        /// 
         /// true: use network datetime.
+        /// 
         /// false: not use.
         /// </summary>
         [MinLength(4)]

@@ -58,7 +58,9 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// For records 31 and 55 this is the date core test was sampled or date combination/OML was requested.
-        /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.        
+        /// 
+        /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+        /// 
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21. 
         /// </summary>
         [DataType(DataType.Date)]
@@ -68,7 +70,7 @@ namespace Wiedpug.Domain.Entities
         public string? CoreTestSamplingDate { get; set; } // FIELD NUMBER 16 - Core Test Sampling Date - Start: 38, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
 
         /// <summary>
-        /// Date value in ISO 8601 standard UTC format. e.g. 2024-03-21. 
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
         [DataType(DataType.Date)]

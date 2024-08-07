@@ -139,8 +139,6 @@ namespace Wiedpug.Domain.Enums
         [Description("YP: New Zealand - Waipukurau")]
         YP,
         [Description("Z: New Zealand - Taupo")]
-        Z,
-        [Description("ZY: New Zealand - Ashburton")]
-        ZY
+        Z
     }
 }

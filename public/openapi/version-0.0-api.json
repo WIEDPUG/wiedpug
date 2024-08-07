@@ -9999,19 +9999,19 @@
                       "maxLength": 5,
                       "minLength": 0,
                       "type": "boolean",
-                      "description": "Boolean value to indicate wethear to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
+                      "description": "Boolean value to indicate whether to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
                   },
                   "applyGrossWeights": {
                       "maxLength": 5,
                       "minLength": 0,
                       "type": "boolean",
-                      "description": "Boolean value to indicate wethear to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
+                      "description": "Boolean value to indicate whether to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
                   },
                   "applyNetWeights": {
                       "maxLength": 5,
                       "minLength": 0,
                       "type": "boolean",
-                      "description": "Boolean value to indicate wethear to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
+                      "description": "Boolean value to indicate whether to apply renumbers on bales\r\nTrue for apply renumbers, False for not apply renumbers"
                   },
                   "interimHandlingDestinationCode": {
                       "$ref": "#/components/schemas/Organisation"
@@ -10490,7 +10490,7 @@
                       "minLength": 0,
                       "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
                       "type": "string",
-                      "description": "Date value in ISO 8601 standard UTC format. e.g. 2024-03-21.",
+                      "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
                       "format": "date"
                   },
                   "factorLaserscanNumerator": {
@@ -10596,7 +10596,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -13699,7 +13699,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -13842,7 +13842,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -13915,7 +13915,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -13988,7 +13988,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14061,7 +14061,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14134,7 +14134,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14207,7 +14207,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14302,7 +14302,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14372,7 +14372,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14445,7 +14445,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14518,7 +14518,7 @@
                       "minLength": 0,
                       "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
                       "type": "string",
-                      "description": "Date and Time with offset value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+                      "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
                       "format": "date-time",
                       "nullable": true
                   },
@@ -14967,13 +14967,13 @@
                       "maxLength": 5,
                       "minLength": 0,
                       "type": "boolean",
-                      "description": "Boolean value of wethear GST amount is applicable to invoice\r\nTrue for applicable, False for not applicable"
+                      "description": "Boolean value of whether GST amount is applicable to invoice\r\nTrue for applicable, False for not applicable"
                   },
                   "companyABNApplicable": {
                       "maxLength": 5,
                       "minLength": 0,
                       "type": "boolean",
-                      "description": "Boolean value of wethear Company ABN apply to invoice\r\nTrue for applicable, False for not applicable"
+                      "description": "Boolean value of whether Company ABN apply to invoice\r\nTrue for applicable, False for not applicable"
                   }
               },
               "additionalProperties": false
