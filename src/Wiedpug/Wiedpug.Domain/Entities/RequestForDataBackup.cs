@@ -30,7 +30,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(1)]
         [MaxLength(4)]
-        public string? SaleIdentity { get; set; }
+        public SaleIdentity? SaleIdentity { get; set; }
 
         [MinLength(1)]
         [MaxLength(5)]

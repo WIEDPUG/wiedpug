@@ -61,7 +61,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(4)]
         [MaxLength(5)]
-        public required bool IsCompanyABNApplicable { get; set; }
+        public required bool IsCompanyAbnApplicable { get; set; }
     }
 
 }

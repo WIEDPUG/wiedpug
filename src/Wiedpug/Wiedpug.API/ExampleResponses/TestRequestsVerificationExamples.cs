@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
                 TestRequestsVerificationDetails = new List<TestRequestsVerificationDetail> {
                     new TestRequestsVerificationDetail
@@ -68,7 +68,7 @@ namespace Wiedpug.API.ExampleResponses
                                  CentreCode = CentreCodeAustralia.A
                             },
                             SourceCode = SourceCode.Grower,
-                            IsCompanyABNApplicable = false
+                            IsCompanyAbnApplicable = false
                         },
                         TestRequestVerification = new TestRequestVerification
                         {
@@ -157,7 +157,7 @@ namespace Wiedpug.API.ExampleResponses
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.BA },
                             SourceCode = SourceCode.Dealer,
-                            IsCompanyABNApplicable = false
+                            IsCompanyAbnApplicable = false
                         },
                         TestRequestVerification = new TestRequestVerification
                         {
@@ -238,11 +238,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForTestRequestsVerificationExample : IExamplesProvider<RequestForDataRework>
+    public class RequestForTestRequestsVerificationExample : IExamplesProvider<RequestForData>
     {
-        public RequestForDataRework GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForDataRework()
+            return new RequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -264,15 +264,12 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
-                SaleIdentity = "M18",
-                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                SaleDateRequested = "2023-10-31",
-                IsUsingNetworkDateTime = false,
-                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                Season = 23
+                RequestForDataType = new DateTimeRangeRequestForDataType
+                {
+                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                }
             };
         }
     }
@@ -307,7 +304,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.AWTA,
                             Version = 1082
                         },
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
                     TestRequestsVerificationDetails = new List<TestRequestsVerificationDetail> {
                         new TestRequestsVerificationDetail
@@ -329,7 +326,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LotType = LotType.CombinedCertificate,
                                 CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SourceCode = SourceCode.Grower,
-                                IsCompanyABNApplicable = false
+                                IsCompanyAbnApplicable = false
                             },
                             TestRequestVerification = new TestRequestVerification
                             {
@@ -414,7 +411,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LotType = LotType.CombinedCertificate,
                                 CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SourceCode = SourceCode.Dealer,
-                                IsCompanyABNApplicable = false
+                                IsCompanyAbnApplicable = false
                             },
                             TestRequestVerification = new TestRequestVerification
                             {

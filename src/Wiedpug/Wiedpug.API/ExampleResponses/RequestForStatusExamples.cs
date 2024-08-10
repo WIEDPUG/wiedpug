@@ -26,14 +26,18 @@ namespace Wiedpug.API.ExampleResponses
                                                 OrganisationCode = "ATW",
                     },
                     VersionNumber = 36,
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
                 Filters = new List<RequestForStatusFilter>
                 {
                     new RequestForStatusFilter
                     {
                         TransmissionTypeRequested = Domain.Enums.TransmissionType.AuctionCatalogues,
-                        SaleIdentity = "F18",
+                        SaleIdentity = new SaleIdentity
+                        {
+                            SellingCentreType = "M",
+                            SaleNumber = 18
+                        },
                         OrganisationRequested = "AWNF",
                         SaleDateRequested = "2023-10-31",
                         IsUsingNetworkDateTime = false,
@@ -69,7 +73,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     OrganisationCode = "AWX",
                         },
                         VersionNumber = 36,
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
                     Responses = new List<TransmissionResponse>
                     {

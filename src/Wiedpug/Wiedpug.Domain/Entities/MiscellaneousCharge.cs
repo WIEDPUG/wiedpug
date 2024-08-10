@@ -7,12 +7,12 @@ namespace Wiedpug.Domain.Entities
     public class MiscellaneousCharge
     {
         /// <summary>
-        /// Optional enum type for charge type.
+        /// A code describing a charge such as penalty interest or miscellaneous adjustments to an earlier payment.
         /// </summary>
         /// 
         [MinLength(1)]
         [MaxLength(5)]
-        public ChargeType? ChargeType { get; set; }
+        public string? ChargeType { get; set; }
 
         /// <summary>
         /// Optional alphanumeric field for charge description.

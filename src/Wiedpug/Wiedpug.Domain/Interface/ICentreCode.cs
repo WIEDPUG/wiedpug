@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Interface
 {
-    public interface CentreCode
+    public interface ICentreCode
     {
 
     }

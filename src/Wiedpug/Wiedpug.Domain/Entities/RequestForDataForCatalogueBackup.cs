@@ -10,7 +10,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class RequestForDataForCatalogue
+    public class RequestForDataForCatalogueBackup
     {
 
         [Required]
@@ -44,7 +44,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(1)]
         [MaxLength(4)]
-        public string? SaleIdentity { get; set; }
+        public SaleIdentity? SaleIdentity { get; set; }
 
         [MinLength(1)]
         [MaxLength(8)]

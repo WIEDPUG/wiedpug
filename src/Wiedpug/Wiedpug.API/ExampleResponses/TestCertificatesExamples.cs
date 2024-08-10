@@ -3,6 +3,7 @@ using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.TestCertificateAggregate;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
+using Wiedpug.Domain.Interface;
 using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
@@ -33,7 +34,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
                 TestCertificateCollection = new List<TestCertificate>
                 {
@@ -70,7 +71,7 @@ namespace Wiedpug.API.ExampleResponses
                             ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
-                            IsCompanyABNApplicable = false
+                            IsCompanyAbnApplicable = false
                         },
                         TestDetailsCollection = new List<TestDetails>
                         {
@@ -78,7 +79,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "23456787",
+                                    CertificateIDNumber = 23456787,
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
@@ -199,14 +200,14 @@ namespace Wiedpug.API.ExampleResponses
                             ReportingFlag = ReportingFlag.U,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
-                            IsCompanyABNApplicable = false
+                            IsCompanyAbnApplicable = false
                         },
                         LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
                         {
                             new LengthAndStrengthTestDetails{
                                 CertificateIdentity =  new CertificateIdentity{
                                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                        CertificateIDNumber = "23456787",
+                                        CertificateIDNumber = 23456787,
                                         CertificateIDSuffix = CertificateIDSuffix.D,
                                         CertificateIDCD = 7
                                     },
@@ -233,7 +234,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "23456787",
+                                    CertificateIDNumber = 23456787,
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
@@ -316,11 +317,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class GetTestCertificatesRequestExample : IExamplesProvider<RequestForDataRework>
+    public class GetTestCertificatesRequestExample : IExamplesProvider<RequestForData>
     {
-        public RequestForDataRework GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForDataRework()
+            return new RequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -342,15 +343,11 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
-                SaleIdentity = "F18",
-                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                SaleDateRequested = "2023-10-31",
-                IsUsingNetworkDateTime = false,
-                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                Season = 23
+                RequestForDataType = new DateTimeRangeRequestForDataType { 
+                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                }
             };
         }
     }
@@ -385,7 +382,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             Version = 1082
                         },
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
                     TestCertificateCollection = new List<TestCertificate>
                     {
@@ -415,7 +412,7 @@ namespace Wiedpug.API.ExampleResponses
                             ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
-                            IsCompanyABNApplicable = false
+                            IsCompanyAbnApplicable = false
                         },
                         TestDetailsCollection = new List<TestDetails>
                         {
@@ -423,7 +420,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "23456787",
+                                    CertificateIDNumber = 23456787,
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
@@ -540,14 +537,14 @@ namespace Wiedpug.API.ExampleResponses
                             ReportingFlag = ReportingFlag.C,
                             ScouredType = ScouredType.NotScoured,
                             IsGSTApplicable = false,
-                            IsCompanyABNApplicable = false
+                            IsCompanyAbnApplicable = false
                         },
                         LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
                         {
                             new LengthAndStrengthTestDetails{
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "23456787",
+                                    CertificateIDNumber = 23456787,
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                              },
@@ -574,7 +571,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "23456787",
+                                    CertificateIDNumber = 23456787,
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                              }

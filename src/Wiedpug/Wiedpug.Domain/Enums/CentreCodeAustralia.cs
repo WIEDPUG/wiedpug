@@ -6,6 +6,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Wiedpug.Domain.Interface;
 
 namespace Wiedpug.Domain.Enums
 {

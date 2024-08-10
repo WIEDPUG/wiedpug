@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
                 TestCertificateRequestCollection = new List<TestCertificateRequest>
                 {
@@ -60,7 +60,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIdentity = new CertificateIdentity
                                     {
                                         CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                        CertificateIDNumber = "15969534",
+                                        CertificateIDNumber = 15969534,
                                         CertificateIDSuffix = CertificateIDSuffix.P,
                                         CertificateIDCD = 9
                                     },
@@ -71,7 +71,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
@@ -82,7 +82,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
@@ -110,17 +110,17 @@ namespace Wiedpug.API.ExampleResponses
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
-                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = "00000499", CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
+                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = 499, CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
                                     Woolbase = 53.74,
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 },
                                 new CertificateRequestDetail {
-                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = "00000499", CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
+                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = 499, CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
                                     Woolbase = 52.01,
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 },
                                 new CertificateRequestDetail {
-                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = "00000499", CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
+                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = 499, CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
                                     Woolbase = 54.26,
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 }
@@ -134,11 +134,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDataForTestCertificatesRequestsExample : IExamplesProvider<RequestForDataRework>
+    public class RequestForDataForTestCertificatesRequestsExample : IExamplesProvider<RequestForData>
     {
-        public RequestForDataRework GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForDataRework()
+            return new RequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -160,15 +160,12 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
-                SaleIdentity = "F18",
-                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                SaleDateRequested = "2023-10-31",
-                IsUsingNetworkDateTime = false,
-                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                Season = 23
+                RequestForDataType = new DateTimeRangeRequestForDataType
+                {
+                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                }
             };
         }
     }
@@ -203,7 +200,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             Version = 1082
                         },
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
                     TestCertificateRequestCollection = new List<TestCertificateRequest>
                 {
@@ -228,7 +225,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIdentity = new CertificateIdentity
                                     {
                                         CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                        CertificateIDNumber = "15969534",
+                                        CertificateIDNumber = 15969534,
                                         CertificateIDSuffix = CertificateIDSuffix.P,
                                         CertificateIDCD = 9
                                     },
@@ -239,7 +236,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
@@ -250,7 +247,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
@@ -278,17 +275,17 @@ namespace Wiedpug.API.ExampleResponses
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
-                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = "00000499", CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
+                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = 499, CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
                                     Woolbase = 53.74,
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 },
                                 new CertificateRequestDetail {
-                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = "00000499", CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
+                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = 499, CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
                                     Woolbase = 52.01,
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 },
                                 new CertificateRequestDetail {
-                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = "00000499", CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
+                                    CertificateIdentity = new CertificateIdentity { CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory, CertificateIDNumber = 499, CertificateIDSuffix = CertificateIDSuffix.P, CertificateIDCD = 7 },
                                     Woolbase = 54.26,
                                     Laboratory = Laboratory.AustralianWoolTestingAuthority
                                 }

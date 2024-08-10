@@ -15,9 +15,9 @@ namespace Wiedpug.Domain.Enums
         "The codes used in transmissions are those defined in the Australian Wool Selling Regulation.")]
     public enum CentreCodeItaly
     {
-        [Description("ZJ: Biella - Italy")]
+        [Description("BI: Biella - Italy")]
         BI,
-        [Description("ZK: Grisignano - Italy")]
+        [Description("GR: Grisignano - Italy")]
         GR
     }
 }

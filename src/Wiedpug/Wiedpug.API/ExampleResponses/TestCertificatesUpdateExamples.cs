@@ -34,13 +34,13 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
                 TestCertificateUpdateDetails = new List<TestCertificateUpdateDetail> {
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "16101382",
+                                    CertificateIDNumber = 16101382,
                                     CertificateIDSuffix = CertificateIDSuffix.L,
                                     CertificateIDCD = 6
                                 },
@@ -57,7 +57,7 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "16101382",
+                                    CertificateIDNumber = 16101382,
                                     CertificateIDSuffix = CertificateIDSuffix.M,
                                     CertificateIDCD = 5
                                 },
@@ -74,7 +74,7 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "15701332",
+                                    CertificateIDNumber = 15701332,
                                     CertificateIDSuffix = CertificateIDSuffix.B,
                                     CertificateIDCD = 6
                                 },
@@ -93,11 +93,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDataForTestCertificateUpdateExample : IExamplesProvider<RequestForDataRework>
+    public class RequestForDataForTestCertificateUpdateExample : IExamplesProvider<RequestForData>
     {
-        public RequestForDataRework GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForDataRework()
+            return new RequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -119,15 +119,13 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
-                SaleIdentity = "F18",
-                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                SaleDateRequested = "2023-10-31",
-                IsUsingNetworkDateTime = false,
-                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                Season = 23
+                RequestForDataType = new UseNetworkDateTimeRequestForDataType
+                {
+                    IsUsingNetworkDateTime
+                    = true
+                }
             };
         }
     }
@@ -162,13 +160,13 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             Version = 1082
                         },
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
                     TestCertificateUpdateDetails = new List<TestCertificateUpdateDetail> {
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "16101382",
+                                    CertificateIDNumber = 16101382,
                                     CertificateIDSuffix = CertificateIDSuffix.L,
                                     CertificateIDCD = 6
                                 },
@@ -185,7 +183,7 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "16101382",
+                                    CertificateIDNumber = 16101382,
                                     CertificateIDSuffix = CertificateIDSuffix.M,
                                     CertificateIDCD = 5
                                 },
@@ -202,7 +200,7 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = "15701332",
+                                    CertificateIDNumber = 15701332,
                                     CertificateIDSuffix = CertificateIDSuffix.B,
                                     CertificateIDCD = 6
                                 },

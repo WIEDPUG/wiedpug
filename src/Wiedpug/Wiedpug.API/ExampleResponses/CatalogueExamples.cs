@@ -37,7 +37,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                         CatalogueType = CatalogueType.A,
                         TransferConfig = new TransferConfig
@@ -60,7 +60,10 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = "F29",
+                                    SaleIdentity = new SaleIdentity{ 
+                                        SellingCentreType = "F",
+                                        SaleNumber = 29
+                                    },
                                     CentreStorage = new Centre { 
                                         Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     SaleDate = "2017-01-19",
@@ -167,7 +170,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000664",
+                                                CertificateIDNumber = 664,
                                                 CertificateIDSuffix = CertificateIDSuffix.L,
                                                 CertificateIDCD = 6
                                             },
@@ -203,7 +206,7 @@ namespace Wiedpug.API.ExampleResponses
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
@@ -318,7 +321,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                         CatalogueType=CatalogueType.A,
                         TransferConfig = new TransferConfig
@@ -339,7 +342,10 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                                 {
                                     Season = 16,
-                                    SaleIdentity = "M29",
+                                    SaleIdentity = new SaleIdentity{
+                                        SellingCentreType = "F",
+                                        SaleNumber = 29
+                                    },
                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AU },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState._1,
@@ -433,7 +439,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIdentity = new CertificateIdentity
                                                 {
                                                     CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                    CertificateIDNumber = "00000664",
+                                                    CertificateIDNumber = 664,
                                                     CertificateIDSuffix = CertificateIDSuffix.L,
                                                     CertificateIDCD = 6
                                                 },
@@ -463,7 +469,7 @@ namespace Wiedpug.API.ExampleResponses
                                                CertificateIdentity = new CertificateIdentity
                                                 {
                                                     CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                    CertificateIDNumber = "00000499",
+                                                    CertificateIDNumber = 499,
                                                     CertificateIDSuffix = CertificateIDSuffix.P,
                                                     CertificateIDCD = 7
                                                 },
@@ -566,7 +572,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             Version = 1082
                         },
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
                     CatalogueType = CatalogueType.A,
                     TransferConfig = new TransferConfig
@@ -587,7 +593,10 @@ namespace Wiedpug.API.ExampleResponses
                             WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                             {
                                 Season = 16,
-                                SaleIdentity = "M29",
+                                SaleIdentity = new SaleIdentity{
+                                        SellingCentreType = "F",
+                                        SaleNumber = 29
+                                    },
                                 CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SaleDate = "2017-01-19",
                                 WoolState = WoolState.A,
@@ -691,7 +700,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
                                                 CertificateIDSuffix = CertificateIDSuffix.C,
-                                                CertificateIDNumber = "00000664",
+                                                CertificateIDNumber = 664,
                                                 CertificateIDCD = 6
                                             },
                                             lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
@@ -721,7 +730,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
                                                 CertificateIDSuffix = CertificateIDSuffix.M,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDCD = 5
 
                                             },
@@ -799,15 +808,15 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDataForCatalogueRequestExamples : IMultipleExamplesProvider<List<RequestForDataForCatalogue>>
+    public class RequestForDataForCatalogueRequestExamples : IMultipleExamplesProvider<List<WoolSaleRequestForData>>
     {        
-        IEnumerable<SwaggerExample<List<RequestForDataForCatalogue>>> IMultipleExamplesProvider<List<RequestForDataForCatalogue>>.GetExamples()
+        IEnumerable<SwaggerExample<List<WoolSaleRequestForData>>> IMultipleExamplesProvider<List<WoolSaleRequestForData>>.GetExamples()
         {
             yield return SwaggerExample.Create(
                 "Request for Auction Catalogue Data and Updates",
-                new List<RequestForDataForCatalogue>
+                new List<WoolSaleRequestForData>
                 {
-                    new RequestForDataForCatalogue
+                    new WoolSaleRequestForData
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
@@ -829,28 +838,34 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.AWTA,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
-                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogues,
-                        SaleIdentity = "F18",
-                        OrganisationRequested = new Organisation {                         OrganisationCode = "ANF",},
-                        SaleDateRequested = "2023-10-31",
-                        IsUsingNetworkDateTime = false,
-                        WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ExcludedClasses = new List<ExcludedClass>
+                        RequestForDataType = new WoolSaleRequestForDataType
                         {
-                            new ExcludedClass
+                            CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogues,
+                            SaleIdentity = new SaleIdentity{
+                                            SellingCentreType = "M",
+                                            SaleNumber = 18
+                                        },
+                            RequestType = RequestTypeForData.PrivateDataRequest,
+                            OrganisationRequested = new Organisation {                         OrganisationCode = "ANF",},
+                            SaleDateRequested = "2023-10-31",
+                            WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
+                            ExcludedClasses = new List<ExcludedClass>
                             {
-                                ClassToBeExcluded = ClassToBeExcluded.InterlotComponentBaleHeader
+                                new ExcludedClass
+                                {
+                                    ClassToBeExcluded = ClassToBeExcluded.InterlotComponentBaleHeader
+                                },
+                                new ExcludedClass
+                                {
+                                    ClassToBeExcluded = ClassToBeExcluded.BaleIdentification
+                                }
                             },
-                            new ExcludedClass
-                            {
-                                ClassToBeExcluded = ClassToBeExcluded.BaleIdentification
-                            }                          
-                        },
-                        Season = 23
+                            Season = 23
+                        }
                     },
-                    new RequestForDataForCatalogue
+                    new WoolSaleRequestForData
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
@@ -872,16 +887,21 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.AWTA,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
-                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogueUpdates,
-                        SaleIdentity = "F18",
+                        RequestForDataType = new WoolSaleRequestForDataType
+                        {
+                                                    CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogueUpdates,
+                        SaleIdentity = new SaleIdentity{
+                                        SellingCentreType = "F",
+                                        SaleNumber = 29
+                                    },
                         OrganisationRequested = new Organisation
                         {
-                                                    OrganisationCode = "ANF",
+                            OrganisationCode = "ANF",
                         },
                         SaleDateRequested = "2023-10-31",
-                        IsUsingNetworkDateTime = false,
+                        RequestType = RequestTypeForData.DataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         ExcludedClasses = new List<ExcludedClass>
                         {
@@ -895,14 +915,15 @@ namespace Wiedpug.API.ExampleResponses
                             }
                         },
                         Season = 23
+                        }
                     }
                 });
 
             yield return SwaggerExample.Create(
                 "Request for Private Catalogue Data",
-                new List<RequestForDataForCatalogue>
+                new List<WoolSaleRequestForData>
                 {
-                    new RequestForDataForCatalogue
+                    new WoolSaleRequestForData
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
@@ -924,16 +945,21 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.AWTA,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
-                        CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.PrivateCatalogues,
-                        SaleIdentity = "F18",
+                        RequestForDataType = new WoolSaleRequestForDataType
+                        {
+                                                    CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.PrivateCatalogues,
+                        SaleIdentity = new SaleIdentity{
+                                        SellingCentreType = "F",
+                                        SaleNumber = 18
+                                    },
                         OrganisationRequested = new Organisation
                         {
                                                     OrganisationCode = "ANF",
                         },
                         SaleDateRequested = "2023-10-31",
-                        IsUsingNetworkDateTime = false,
+                        RequestType = RequestTypeForData.PrivateDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         ExcludedClasses = new List<ExcludedClass>
                         {
@@ -947,6 +973,7 @@ namespace Wiedpug.API.ExampleResponses
                             }
                         },
                         Season = 23
+                        }
                     }
                 });
         }
@@ -984,7 +1011,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.AWTA,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                         CatalogueType=CatalogueType.A,
                         WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
@@ -994,7 +1021,10 @@ namespace Wiedpug.API.ExampleResponses
                                     WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
                                     {
                                         Season = 16,
-                                        SaleIdentity = "M29",
+                                        SaleIdentity = new SaleIdentity{
+                                        SellingCentreType = "F",
+                                        SaleNumber = 29
+                                    },
                                         CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AD },
                                         SaleDate = "2017-01-19",
                                         WoolState = WoolState._1,
@@ -1089,7 +1119,7 @@ namespace Wiedpug.API.ExampleResponses
                                                       CertificateIdentity = new CertificateIdentity
                                                         {
                                                             CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                            CertificateIDNumber = "00000664",
+                                                            CertificateIDNumber = 664,
                                                             CertificateIDSuffix = CertificateIDSuffix.L,
                                                             CertificateIDCD = 6
                                                         },
@@ -1120,7 +1150,7 @@ namespace Wiedpug.API.ExampleResponses
                                                       CertificateIdentity = new CertificateIdentity
                                                     {
                                                         CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                        CertificateIDNumber = "00000499",
+                                                        CertificateIDNumber = 499,
                                                         CertificateIDSuffix = CertificateIDSuffix.P,
                                                         CertificateIDCD = 7
                                                     },

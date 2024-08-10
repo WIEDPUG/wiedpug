@@ -60,8 +60,8 @@ paths:
                   darkandMedullatedFibreRisk: D
                   certificateIdentity:
                     certificateIDPrefix: 3
+                    certificateIDNumber: 499
                     certificateIDSuffix: P
-                    certificateIDNumber: '00000499'
                     certificateIDCD: 7
                   woolBase: 32.14
                   dmfrErrorFields:
@@ -139,7 +139,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RequestForDataRework'
+              $ref: '#/components/schemas/RequestForData'
             example:
               transmissionHeader:
                 dateFormatLastRevised: '2020-07-15'
@@ -155,14 +155,8 @@ paths:
                   version: 1082
                   programName: NETR
                 abn: '72001967184'
-              saleIdentity: AU18
-              organisationRequested:
-                organisationCode: ANF
-              saleDateRequested: '2023-10-31'
-              isUsingNetworkDateTime: false
-              requestType: 4
-              woolTypeGroup: MFLC
-              season: 23
+              requestForDataType:
+                startDateTimeStatusRequest: '2024-03-21T19:25:04Z'
         required: true
       responses:
         '200':
@@ -209,8 +203,8 @@ paths:
                       darkandMedullatedFibreRisk: D
                       certificateIdentity:
                         certificateIDPrefix: 3
+                        certificateIDNumber: 499
                         certificateIDSuffix: P
-                        certificateIDNumber: '00000499'
                         certificateIDCD: 7
                       woolBase: 32.14
                       dmfrErrorFields:
@@ -334,6 +328,14 @@ components:
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses
+    CatalogueTransmissionType:
+      enum:
+        - 2
+        - 3
+        - 5
+      type: integer
+      description: ' Used to define the types of Catalogue. Only required for requesting Catalouge. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates'
+      format: int32
     Centre:
       required:
         - centreCode
@@ -481,7 +483,7 @@ components:
         - QI
         - ZH
       type: string
-      description: 'This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NJ: Nanjing - China<br />SH: Shanghai - China<br />QD: Qingdao - China<br />ZJ: Zhangjiagang - China'
+      description: 'This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NA: Nanjing - China<br />SH: Shanghai - China<br />QI: Qingdao - China<br />ZH: Zhangjiagang - China'
     CentreCodeGermany:
       enum:
         - BL
@@ -492,7 +494,7 @@ components:
         - BI
         - GR
       type: string
-      description: 'This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy'
+      description: 'This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BI: Biella - Italy<br />GR: Grisignano - Italy'
     CentreCodeNewZealand:
       enum:
         - A
@@ -600,18 +602,40 @@ components:
       properties:
         certificateIDPrefix:
           $ref: '#/components/schemas/CertificateIDPrefix'
-        certificateIDSuffix:
-          $ref: '#/components/schemas/CertificateIDSuffix'
         certificateIDNumber:
           maxLength: 8
           minLength: 1
-          type: string
+          type: integer
+          format: int32
+        certificateIDSuffix:
+          $ref: '#/components/schemas/CertificateIDSuffix'
         certificateIDCD:
           maxLength: 1
           minLength: 1
           type: integer
           format: int32
       additionalProperties: false
+    ClassForOneOfReferencesToBeDeleted:
+      type: object
+      properties:
+        useNetworkDateTimeRequestForDataType:
+          $ref: '#/components/schemas/UseNetworkDateTimeRequestForDataType'
+        dateTimeRangeRequestForDataType:
+          $ref: '#/components/schemas/DateTimeRangeRequestForDataType'
+        woolSaleRequestForDataType:
+          $ref: '#/components/schemas/WoolSaleRequestForDataType'
+      additionalProperties: false
+    ClassToBeExcluded:
+      enum:
+        - LotHeaderPricing
+        - LotHeaderAwexData
+        - LotHeaderVendorDeclaration
+        - ColourDetails
+        - InterlotComponentBaleHeader
+        - BaleIdentification
+        - FibreDiameterHistogramHeader
+        - FibreDiameterHistogramDetails
+      type: string
     CountryCode:
       enum:
         - AU
@@ -692,7 +716,7 @@ components:
           maxLength: 5
           minLength: 4
           type: boolean
-          description: "A boolean value to indicate whether it contact with exotic breeds.\r\n            \r\ntrue: contact with exofic breeds.\r\n            \r\nfalse: not contact with exofic breeds."
+          description: "A boolean value to indicate whether it contact with exotic breeds.\r\n            \r\ntrue: contact with exotic breeds.\r\n            \r\nfalse: not contact with exotic breeds."
         isCrutched:
           maxLength: 5
           minLength: 4
@@ -759,6 +783,27 @@ components:
           $ref: '#/components/schemas/DarkAndMedullatedFibreRiskVerification'
       additionalProperties: false
       description: A standard API response object used for all successful API responses
+    DateTimeRangeRequestForDataType:
+      required:
+        - startDateTimeStatusRequest
+      type: object
+      properties:
+        startDateTimeStatusRequest:
+          maxLength: 20
+          minLength: 1
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          type: string
+          description: Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
+          format: date-time
+        endDateTimeStatusRequest:
+          maxLength: 20
+          minLength: 1
+          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          type: string
+          description: Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
+          format: date-time
+          nullable: true
+      additionalProperties: false
     DeclaredBreed:
       enum:
         - A
@@ -834,6 +879,16 @@ components:
         - INVEX
       type: string
       description: 'A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record.'
+    ExcludedClass:
+      required:
+        - classToBeExcluded
+      type: object
+      properties:
+        classToBeExcluded:
+          $ref: '#/components/schemas/ClassToBeExcluded'
+        subClassToBeExcluded:
+          $ref: '#/components/schemas/SubClassToBeExcluded'
+      additionalProperties: false
     InformationCode:
       enum:
         - OK
@@ -851,61 +906,18 @@ components:
         centre:
           $ref: '#/components/schemas/Centre'
       additionalProperties: false
-    RequestForDataRework:
+    RequestForData:
       required:
-        - requestType
+        - requestForDataType
         - transmissionHeader
       type: object
       properties:
         transmissionHeader:
           $ref: '#/components/schemas/TransmissionHeader'
-        saleIdentity:
-          maxLength: 4
-          minLength: 1
-          type: string
-          description: "A group field of SellingCentre/Type and Sale Number\r\n            \r\nFrom: The current value that the Sale Identity is to be changed from.\r\n            \r\nTo: The new value that the Sale Identity is to be changed to.\r\n            \r\nSellingCentre/Type can be one of the following code:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; N: Napier.\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales."
-          nullable: true
-        organisationRequested:
-          $ref: '#/components/schemas/Organisation'
-        saleDateRequested:
-          maxLength: 10
-          minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
-          format: date
-          nullable: true
-        startDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
-          format: date-time
-          nullable: true
-        endDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
-          format: date-time
-          nullable: true
-        isUsingNetworkDateTime:
-          maxLength: 5
-          minLength: 4
-          type: boolean
-          description: "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
-          nullable: true
-        requestType:
-          $ref: '#/components/schemas/RequestTypeForData'
-        woolTypeGroup:
-          $ref: '#/components/schemas/WoolTypeGroup'
-        season:
-          pattern: '-?\d{1,2}'
-          type: integer
-          format: int32
-          nullable: true
+        requestForDataType:
+          oneOf:
+            - $ref: '#/components/schemas/UseNetworkDateTimeRequestForDataType'
+            - $ref: '#/components/schemas/DateTimeRangeRequestForDataType'
       additionalProperties: false
     RequestTypeForData:
       enum:
@@ -915,6 +927,25 @@ components:
       type: integer
       description: '1: Private Data Request<br />3: Data Re-Request<br />4: Broadcast Data Request'
       format: int32
+    SaleIdentity:
+      required:
+        - saleNumber
+        - sellingCentreType
+      type: object
+      properties:
+        sellingCentreType:
+          maxLength: 2
+          minLength: 1
+          type: string
+          description: "SellingCentre/Type can be one of the following code:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; N: Napier.\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales."
+        saleNumber:
+          maxLength: 2
+          minLength: 1
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+      additionalProperties: false
+      description: "A group field of SellingCentre/Type and Sale Number\r\n            \r\nFrom: The current value that the Sale Identity is to be changed from.\r\n            \r\nTo: The new value that the Sale Identity is to be changed to."
     Sex:
       enum:
         - E
@@ -953,6 +984,32 @@ components:
           type: string
           nullable: true
       additionalProperties: false
+    SubClassToBeExcluded:
+      enum:
+        - A
+        - B
+        - C
+        - D
+        - E
+        - F
+        - H
+        - I
+        - J
+        - K
+        - L
+        - M
+        - 'N'
+        - P
+        - R
+        - T
+        - U
+        - V
+        - W
+        - X
+        - 'Y'
+        - Z
+      type: string
+      description: 'A: First record of one type<br />B: Second record of that type<br />C: Colour Certificate record<br />D: Detail record<br />E: Scoured Yield Extension<br />F: Premium Certificate record<br />H: Header record<br />I: Subjective Interlot Certificate record<br />J: Combination Certificate record<br />K: Length and Strength Combination Certificate record<br />L: Length and Strength Certificate Record<br />M: Objectively Matched Lot Certificate Record<br />N: Objectively Matched Interlot Certificate Record<br />P: Core Test Certificate Record<br />R: Guidance Report Details<br />T: Trailer record<br />U: Length After Carding Test Details<br />V:Conditioning Test Details<br />W: Scoured Test Details<br />X: Colour Combination Certificate Record<br />Y: Post sale Core Test Detail<br />Z: Adjustment Note Details'
     TransferConfig:
       required:
         - transferType
@@ -966,7 +1023,7 @@ components:
             $ref: '#/components/schemas/Organisation'
           nullable: true
       additionalProperties: false
-      description: "Used to identify document transfer type: Restrict, Unrestric, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+      description: "Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
     TransferType:
       enum:
         - Unrestrict
@@ -1018,6 +1075,19 @@ components:
           pattern: ^[0-9]+$
           type: string
           description: Australian Business Number, 11 digits string
+        classForOneOfReferencesToBeDeleted:
+          $ref: '#/components/schemas/ClassForOneOfReferencesToBeDeleted'
+      additionalProperties: false
+    UseNetworkDateTimeRequestForDataType:
+      required:
+        - isUsingNetworkDateTime
+      type: object
+      properties:
+        isUsingNetworkDateTime:
+          maxLength: 5
+          minLength: 4
+          type: boolean
+          description: "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
       additionalProperties: false
     WarningCode:
       enum:
@@ -1031,6 +1101,43 @@ components:
         - DRVnn
       type: string
       description: 'A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error.'
+    WoolSaleRequestForDataType:
+      required:
+        - requestType
+      type: object
+      properties:
+        catalogueTransmissionType:
+          $ref: '#/components/schemas/CatalogueTransmissionType'
+        saleIdentity:
+          $ref: '#/components/schemas/SaleIdentity'
+        organisationRequested:
+          $ref: '#/components/schemas/Organisation'
+        saleDateRequested:
+          maxLength: 10
+          minLength: 1
+          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          type: string
+          description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+          format: date
+          nullable: true
+        requestType:
+          $ref: '#/components/schemas/RequestTypeForData'
+        woolTypeGroup:
+          $ref: '#/components/schemas/WoolTypeGroup'
+        excludedClasses:
+          maxItems: 80
+          minItems: 1
+          type: array
+          items:
+            $ref: '#/components/schemas/ExcludedClass'
+          description: "Cataglouge classes and sub-classes to be excluded in the request.\r\n\r\nOnly required for request for Catalogue. Not applicable for other documents."
+          nullable: true
+        season:
+          pattern: '-?\d{1,2}'
+          type: integer
+          format: int32
+          nullable: true
+      additionalProperties: false
     WoolTypeGroup:
       enum:
         - MFLC

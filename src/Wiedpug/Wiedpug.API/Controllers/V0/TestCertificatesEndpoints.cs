@@ -35,14 +35,14 @@ public static class TestCertificatesEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForDataRework), typeof(GetTestCertificatesRequestExample))]
+        [SwaggerRequestExample(typeof(RequestForData), typeof(GetTestCertificatesRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(GetTestCertificates200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForDataRework model) =>
+        ([FromBody] RequestForData model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })

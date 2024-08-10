@@ -78,7 +78,7 @@ namespace Wiedpug.Domain.Entities
         public required int HashTotal { get; set; }
 
         /// <summary>
-        /// A boolean value to indicate whether Yield And Airflow Test is required.
+        /// A boolean value to indicate whether Yield And Laserscan Test is required.
         /// 
         /// true: Yield And Laserscan Test is required.
         /// 

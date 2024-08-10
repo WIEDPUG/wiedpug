@@ -1,0 +1,72 @@
+{
+    {
+        "Centre": {
+            "required": [
+                "centreCode",
+                "country"
+            ],
+            "type": "object",
+            "properties": {
+                "country": {
+                    "$ref": "#/components/schemas/CountryCode"
+                },
+                "centreCode": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/components/schemas/CentreCodeAustralia"
+                        },
+                        {
+                            "$ref": "#/components/schemas/CentreCodeChina"
+                        },
+                        {
+                            "$ref": "#/components/schemas/CentreCodeGermany"
+                        },
+                        {
+                            "$ref": "#/components/schemas/CentreCodeItaly"
+                        },
+                        {
+                            "$ref": "#/components/schemas/CentreCodeNewZealand"
+                        },
+                        {
+                            "$ref": "#/components/schemas/CentreCodeTaiwan"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": false,
+            "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country. \r\n\r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan"
+        },
+        "requestForDataType": {
+            "catalogueTransmissionType": "PrivateCatalogues",
+            "saleIdentity": {
+                "sellingCentreType": "F",
+                "saleNumber": 18
+            },
+            "organisationRequested": {
+                "organisationCode": "ANF"
+            },
+            "saleDateRequested": "2023-10-31",
+            "requestType": "PrivateDataRequest",
+            "woolTypeGroup": "MFLC",
+            "excludedClasses": [
+                {
+                    "classToBeExcluded": "InterlotComponentBaleHeader"
+                },
+                {
+                    "classToBeExcluded": "FibreDiameterHistogramDetails"
+                }
+            ],
+            "season": 23
+        }
+    },
+    {
+        "requestForDataType": {
+            "startDateTimeStatusRequest": "2024-03-21T19:25:04Z"
+        }
+    },
+    {
+        "requestForDataType": {
+            "isUsingNetworkDateTime": true
+        }
+    }
+}

@@ -36,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                          WoolSales = new List<WoolSale>()
                         {
@@ -45,7 +45,7 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = "M29",
+                                    SaleIdentity = new SaleIdentity { SellingCentreType = "M", SaleNumber = 18 },
                                     CentreStorage = new Centre {
                                         Country = CountryCode.AU,
                                         CentreCode = CentreCodeAustralia.AR
@@ -254,11 +254,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForLotInovicesExample : IExamplesProvider<RequestForDataRework>
+    public class RequestForLotInovicesExample : IExamplesProvider<RequestForData>
     {
-        public RequestForDataRework GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForDataRework()
+            return new RequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -280,15 +280,12 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
-                SaleIdentity = "F18",
-                OrganisationRequested = new Organisation { OrganisationCode = "ANF" },
-                SaleDateRequested = "2023-10-31",
-                IsUsingNetworkDateTime = false,
-                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                Season = 23
+                RequestForDataType = new DateTimeRangeRequestForDataType
+                {
+                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                }
             };
         }
     }
@@ -326,7 +323,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                          WoolSales = new List<WoolSale>()
                         {
@@ -335,7 +332,11 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
                                 {
                                     Season = 16,
-                                    SaleIdentity = "M29",
+                                    SaleIdentity = new SaleIdentity
+                                    {
+                                        SellingCentreType = "M",
+                                        SaleNumber = 18
+                                    },
                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AR },
                                     SaleDate = "2017-01-19",
                                     WoolState = WoolState.C,

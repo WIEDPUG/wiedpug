@@ -59,7 +59,9 @@ namespace Wiedpug.Domain.Entities
         [MinLength(1)]
         [MaxLength(11)]
         [RegularExpression(RegexPattern.NUMBERS)]
-        public required string ABN { get; set; }
+        public required string Abn { get; set; }
+
+        public ClassForOneOfReferencesToBeDeleted? ClassForOneOfReferencesToBeDeleted { get;set; }
 
     }
 }

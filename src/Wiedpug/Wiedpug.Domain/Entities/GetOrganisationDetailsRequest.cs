@@ -25,7 +25,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(11)]
-        public required string ABN { get; set; }
+        public required string Abn { get; set; }
 
         /// <summary>
         /// Date and Time in UTC format in ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ e.g. 2024-03-21T19:25:04Z

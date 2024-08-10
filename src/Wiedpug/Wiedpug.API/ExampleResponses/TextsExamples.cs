@@ -39,7 +39,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                         TransferConfig = new TransferConfig
                         {
@@ -59,11 +59,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForTextsRequestExample : IExamplesProvider<RequestForDataRework>
+    public class RequestForTextsRequestExample : IExamplesProvider<RequestForData>
     {
-        public RequestForDataRework GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForDataRework()
+            return new RequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -85,15 +85,12 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
-                SaleIdentity = "M18",
-                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                SaleDateRequested = "2023-10-31",
-                IsUsingNetworkDateTime = false,
-                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                Season = 23
+                RequestForDataType = new DateTimeRangeRequestForDataType
+                {
+                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                }
             };
         }
     }
@@ -130,7 +127,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                         Comments = new List<Comment>
                         {

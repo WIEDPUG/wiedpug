@@ -46,7 +46,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(4)]
-        public required string SaleIdentity { get; set; }
+        public required SaleIdentity SaleIdentity { get; set; }
 
         [MinLength(1)]
         [MaxLength(5)]

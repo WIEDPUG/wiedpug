@@ -23,6 +23,15 @@ npm install
 ```
 
 Local development:
+
+In the next.config.js file, comment out the following two lines:
+```
+  output: "export",
+  basePath: "/wiedpug"
+```
+(For pushing to GitHub, please uncomment these two lines. They will be required to build the GitHub Page.)
+
+Then run the command:
 ```
 npm run dev
 ```

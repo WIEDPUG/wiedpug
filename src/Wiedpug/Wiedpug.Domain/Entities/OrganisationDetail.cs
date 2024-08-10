@@ -54,7 +54,7 @@ namespace Wiedpug.Domain.Entities
         [MinLength(1)]
         [MaxLength(11)]
         [RegularExpression(RegexPattern.NUMBERS)]
-        public string? ABN { get; set; }
+        public string? Abn { get; set; }
 
         public PhoneNumber? FaxNumber { get; set; }
 

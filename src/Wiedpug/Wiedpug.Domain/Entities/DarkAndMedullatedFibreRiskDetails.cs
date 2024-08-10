@@ -50,9 +50,9 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// A boolean value to indicate whether it contact with exotic breeds.
         ///
-        /// true: contact with exofic breeds.
+        /// true: contact with exotic breeds.
         ///
-        /// false: not contact with exofic breeds.
+        /// false: not contact with exotic breeds.
         /// </summary>
         [Required]
         [MinLength(4)]

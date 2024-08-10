@@ -40,7 +40,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(1)]
         [MaxLength(4)]
-        public string? SaleIdentity { get; set; }
+        public SaleIdentity? SaleIdentity { get; set; }
 
         [MinLength(1)]
         [MaxLength(5)]
@@ -136,6 +136,6 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
-        public bool? IsCompanyABNApplicable { get; set; }
+        public bool? IsCompanyAbnApplicable { get; set; }
     }
 }

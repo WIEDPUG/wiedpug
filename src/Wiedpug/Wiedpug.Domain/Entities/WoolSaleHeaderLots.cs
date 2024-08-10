@@ -35,7 +35,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(4)]
-        public required string SaleIdentity { get; set; }
+        public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
         /// The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). 

@@ -34,7 +34,7 @@ namespace Wiedpug.Domain.Entities
         /// Required numeric field for charge code.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public required int ChargeCode { get; set; }
 
         /// <summary>

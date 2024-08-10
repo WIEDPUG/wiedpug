@@ -39,7 +39,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
                 TransferConfig = new TransferConfig
                  {
@@ -99,7 +99,11 @@ namespace Wiedpug.API.ExampleResponses
                                                                         OrganisationCode = "TTM",
                                             },
                                             Season = 23,
-                                            SaleIdentity = "N23",
+                                            SaleIdentity = new SaleIdentity
+                                            {
+                                                SellingCentreType = "M",
+                                                SaleNumber = 18
+                                            },
                                             CentreStorage =new Centre
                                             {
                                                 Country = CountryCode.AU,
@@ -170,11 +174,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDeliveryOrdersAndShippingInstructionsExample : IExamplesProvider<RequestForDataRework>
+    public class RequestForDeliveryOrdersAndShippingInstructionsExample : IExamplesProvider<RequestForData>
     {
-        public RequestForDataRework GetExamples()
+        public RequestForData GetExamples()
         {
-            return new RequestForDataRework()
+            return new RequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -196,15 +200,12 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
-                SaleIdentity = "F18",
-                OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                SaleDateRequested = "2023-10-31",
-                IsUsingNetworkDateTime = false,
-                RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                Season = 23
+                RequestForDataType = new UseNetworkDateTimeRequestForDataType
+                {
+                    IsUsingNetworkDateTime = true
+                }
             };
         }
     }
@@ -241,7 +242,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             Version = 1082
                         },
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
                     Consignments = new List<Consignment>
                 {
@@ -297,7 +298,11 @@ namespace Wiedpug.API.ExampleResponses
                                                                         OrganisationCode = "TTM",
                                             },
                                             Season = 23,
-                                            SaleIdentity = "N23",
+                                            SaleIdentity = new SaleIdentity
+                                            {
+                                                SellingCentreType = "M",
+                                                SaleNumber = 18
+                                            },
                                             CentreStorage = new Centre {
                                                 Country = CountryCode.AU,
                                                 CentreCode = CentreCodeAustralia.A

@@ -121,7 +121,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(1)]
         [MaxLength(4)]
-        public string? FirstOfferSaleIdentity { get; set; } // FIELD NUMBER 17 - First Offer Sale Identity - Start: 46, Size: 4, Data Type: GR, Justification: -, Requirement Designator: C
+        public SaleIdentity? FirstOfferSaleIdentity { get; set; } // FIELD NUMBER 17 - First Offer Sale Identity - Start: 46, Size: 4, Data Type: GR, Justification: -, Requirement Designator: C
 
         /// <summary>
         /// This is a compound name for lot number and lot suffix, where the lot number is 5 number characters and the lot suffix is 1 alphanumeric character.

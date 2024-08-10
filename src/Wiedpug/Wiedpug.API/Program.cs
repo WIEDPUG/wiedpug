@@ -6,6 +6,10 @@ using Wiedpug.API.Controllers.V0;
 //using Wiedpug.API.Controllers.V1;
 using Wiedpug.API.Controllers.V2;
 using Wiedpug.API.SchemaFilter.SwaggerOptions;
+using Microsoft.Extensions.DependencyInjection;
+using Wiedpug.Domain.Entities;
+using Microsoft.OpenApi.Models;
+using Wiedpug.Domain.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,7 +48,28 @@ builder.Services.AddSwaggerGen(c => {
     c.IncludeXmlComments(domainXmlFilePath);
 
     //c.ExampleFilters(); //To support examples
-    c.ExampleFilters_PrioritizingExplicitlyDefinedExamples();    
+    c.ExampleFilters_PrioritizingExplicitlyDefinedExamples();
+
+    // Polymorphism handling for RequestForDataType - convert to the OneOf relationships for the CatalogueRequestForDataType classes
+    c.MapType<IWoolSaleRequestForDataType>(() => new OpenApiSchema
+    {
+        OneOf = new List<OpenApiSchema>
+        {
+            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(UseNetworkDateTimeRequestForDataType) } },
+            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(DateTimeRangeRequestForDataType) } },
+            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(WoolSaleRequestForDataType) } }
+        }
+    });
+
+    // Polymorphism handling for RequestForDataType - convert to the OneOf relationships for the RequestForDataType classes
+    c.MapType<IRequestForDataType>(() => new OpenApiSchema
+    {
+        OneOf = new List<OpenApiSchema>
+        {
+            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(UseNetworkDateTimeRequestForDataType) } },
+            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(DateTimeRangeRequestForDataType) } }
+        }
+    });
 });
 
 
@@ -62,35 +87,35 @@ var apiVersionSet = app.NewApiVersionSet()
 var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(apiVersionSet);
 
 
-versionedGroup.MapTestCertificatesEndpoints();
+//versionedGroup.MapTestCertificatesEndpoints();
 
-versionedGroup.MapTestCertificateUpdateEndpoints();
+//versionedGroup.MapTestCertificateUpdateEndpoints();
 
-versionedGroup.MapTestCertificateRequestsEndpoints();
+//versionedGroup.MapTestCertificateRequestsEndpoints();
 
-versionedGroup.MapCatalogueEndpoints();
+//versionedGroup.MapCatalogueEndpoints();
 
-versionedGroup.MapOrganisationDetailsEndpoints();
+//versionedGroup.MapOrganisationDetailsEndpoints();
 
-versionedGroup.MapTestStatusEndpoints();
+//versionedGroup.MapTestStatusEndpoints();
 
-versionedGroup.MapTestRequestsVerificationEndpoints();
+//versionedGroup.MapTestRequestsVerificationEndpoints();
 
-versionedGroup.MapLotInvoicesEndpoints();
+//versionedGroup.MapLotInvoicesEndpoints();
 
-versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
+//versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
 
-versionedGroup.MapPaymentAdvicesEndpoints();
+//versionedGroup.MapPaymentAdvicesEndpoints();
 
-versionedGroup.MapPaymentConfirmationEndpoints();
+//versionedGroup.MapPaymentConfirmationEndpoints();
 
-versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
+//versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
 
-versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
+//versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
 
-versionedGroup.MapStatementsEndpoints();
+//versionedGroup.MapStatementsEndpoints();
 
-versionedGroup.MapTextsEndpoints();
+//versionedGroup.MapTextsEndpoints();
 
 versionedGroup.MapLotPriceAndBuyerEndpoints();
 

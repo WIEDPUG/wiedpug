@@ -37,14 +37,14 @@ public static class TestStatusEndpoints
 
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForDataRework), typeof(RequestForTestStatusExample))]
+        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForTestStatusExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForTestStatus200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForDataRework model) =>
+        ([FromBody] RequestForData model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })

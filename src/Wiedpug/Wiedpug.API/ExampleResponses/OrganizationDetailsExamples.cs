@@ -27,7 +27,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                                                 OrganisationCode = "ATW",
                     },
-                    ABN = "43006014106"
+                    Abn = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
                 {
@@ -118,7 +118,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                                                 OrganisationCode = "ATW",
                     },
-                    ABN = "43006014106"
+                    Abn = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
                 {
@@ -199,7 +199,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                                                 OrganisationCode = "ATW",
                     },
-                    ABN = "43006014106"
+                    Abn = "43006014106"
                 },
                 OrganisationDetailCollection = new List<OrganisationDetail>
                 {
@@ -277,7 +277,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         Version = 1082
                     },
-                    ABN = "72001967184",
+                    Abn = "72001967184",
                     StartDateTimeStatusRequest = "2024-02-01T19:25:04Z",
                     EndDateTimeStatusRequest = "2024-03-21T19:25:04Z",
                     IsUsingNetworkDateTime = true
@@ -315,7 +315,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Modiano,
                             Version = 1082
                         },
-                        ABN = "72001925678"
+                        Abn = "72001925678"
                     },
                     OrganisationDetailCollection = new List<OrganisationDetail>
                     {
@@ -476,7 +476,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.AWTA,
                             Version = 1082
                         },
-                        ABN = "72001925678"
+                        Abn = "72001925678"
                     },
                     OrganisationDetailCollection = new List<OrganisationDetail>
                     {
@@ -491,7 +491,7 @@ namespace Wiedpug.API.ExampleResponses
                             DateLastUpdated="2020-04-28",
                             IndustryGroupId=IndustryGroupId.E,
                             IsTransmitter=true,
-                            ABN = null,
+                            Abn = null,
                             PhoneNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
                                 CountryCode="61",
@@ -639,7 +639,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.AWTA,
                             Version = 1082
                         },
-                        ABN = "72001925678"
+                        Abn = "72001925678"
                     },
                     OrganisationDetailCollection = new List<OrganisationDetail>
                     {

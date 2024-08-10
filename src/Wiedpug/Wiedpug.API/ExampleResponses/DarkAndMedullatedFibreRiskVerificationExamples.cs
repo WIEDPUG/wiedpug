@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         Version = 1082
                     },
-                    ABN = "72001967184"
+                    Abn = "72001967184"
                 },
                 DarkAndMedullatedFibreRiskDetailsCollection = new List<DarkAndMedullatedFibreRiskDetails>
                 {
@@ -65,7 +65,7 @@ namespace Wiedpug.API.ExampleResponses
                         CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
@@ -84,11 +84,11 @@ namespace Wiedpug.API.ExampleResponses
             };
         }
 
-        public class RequestForDarkAndMedullatedFibreRiskVerificationExample : IExamplesProvider<RequestForDataRework>
+        public class RequestForDarkAndMedullatedFibreRiskVerificationExample : IExamplesProvider<RequestForData>
         {
-            public RequestForDataRework GetExamples()
+            public RequestForData GetExamples()
             {
-                return new RequestForDataRework()
+                return new RequestForData()
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
@@ -110,15 +110,10 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.AWTA,
                             Version = 1082
                         },
-                        ABN = "72001967184"
+                        Abn = "72001967184"
                     },
-                    SaleIdentity = "AU18",
-                    OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                    SaleDateRequested = "2023-10-31",
-                    IsUsingNetworkDateTime = false,
-                    RequestType = Domain.Enums.RequestTypeForData.BroadcastDataRequest,
-                    WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                    Season = 23
+                    RequestForDataType = new UseNetworkDateTimeRequestForDataType { IsUsingNetworkDateTime
+                    = true }
                 };
             }
         }
@@ -153,7 +148,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.AWTA,
                                 Version = 1082
                             },
-                            ABN = "72001967184"
+                            Abn = "72001967184"
                         },
                         DarkAndMedullatedFibreRiskDetailsCollection = new List<DarkAndMedullatedFibreRiskDetails>
                 {
@@ -183,7 +178,7 @@ namespace Wiedpug.API.ExampleResponses
                         CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = "00000499",
+                                                CertificateIDNumber = 499,
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
