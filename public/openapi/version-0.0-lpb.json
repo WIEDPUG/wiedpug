@@ -242,7 +242,6 @@
                                     "abn": "72001967184"
                                 },
                                 "requestForDataType": {
-                                    "catalogueTransmissionType": "PrivateCatalogues",
                                     "saleIdentity": {
                                         "sellingCentreType": "F",
                                         "saleNumber": 18
@@ -253,14 +252,6 @@
                                     "saleDateRequested": "2023-10-31",
                                     "requestType": "PrivateDataRequest",
                                     "woolTypeGroup": "MFLC",
-                                    "excludedClasses": [
-                                        {
-                                            "classToBeExcluded": "InterlotComponentBaleHeader"
-                                        },
-                                        {
-                                            "classToBeExcluded": "FibreDiameterHistogramDetails"
-                                        }
-                                    ],
                                     "season": 23
                                 }
                             }
@@ -576,30 +567,30 @@
                         "$ref": "#/components/schemas/CountryCode"
                     },
                     "centreCode": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/CentreCodeAustralia"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeChina"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeGermany"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeItaly"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeNewZealand"
-                            },
-                            {
-                                "$ref": "#/components/schemas/CentreCodeTaiwan"
-                            }
-                        ]
+                        "maxLength": 2,
+                        "minLength": 1
+                    },
+                    "centreAustralia": {
+                        "$ref": "#/components/schemas/CentreCodeAustralia"
+                    },
+                    "centreChina": {
+                        "$ref": "#/components/schemas/CentreCodeChina"
+                    },
+                    "centreGermany": {
+                        "$ref": "#/components/schemas/CentreCodeGermany"
+                    },
+                    "centreItaly": {
+                        "$ref": "#/components/schemas/CentreCodeItaly"
+                    },
+                    "centreNewZealand": {
+                        "$ref": "#/components/schemas/CentreCodeNewZealand"
+                    },
+                    "centreTaiwan": {
+                        "$ref": "#/components/schemas/CentreCodeTaiwan"
                     }
                 },
                 "additionalProperties": false,
-                "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country. \r\n\r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan"
+                "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia"
             },
             "CentreCodeAustralia": {
                 "enum": [
@@ -842,14 +833,12 @@
             },
             "ClassToBeExcluded": {
                 "enum": [
-                    "LotHeaderPricing",
-                    "LotHeaderAwexData",
-                    "LotHeaderVendorDeclaration",
-                    "ColourDetails",
-                    "InterlotComponentBaleHeader",
+                    "EncryptedLotHeaderAwexData",
+                    "ColourTestDetails",
+                    "CatalogueWoolSaleHeaderLotInterlotComponentBale",
                     "BaleIdentification",
-                    "FibreDiameterHistogramHeader",
-                    "FibreDiameterHistogramDetails"
+                    "FibreDiameterHistogram",
+                    "FibreDiameterHistogramDetail"
                 ],
                 "type": "string"
             },
@@ -974,21 +963,6 @@
                 ],
                 "type": "string",
                 "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
-            },
-            "ExcludedClass": {
-                "required": [
-                    "classToBeExcluded"
-                ],
-                "type": "object",
-                "properties": {
-                    "classToBeExcluded": {
-                        "$ref": "#/components/schemas/ClassToBeExcluded"
-                    },
-                    "subClassToBeExcluded": {
-                        "$ref": "#/components/schemas/SubClassToBeExcluded"
-                    }
-                },
-                "additionalProperties": false
             },
             "InformationCode": {
                 "enum": [
@@ -1293,34 +1267,6 @@
                     }
                 },
                 "additionalProperties": false
-            },
-            "SubClassToBeExcluded": {
-                "enum": [
-                    "A",
-                    "B",
-                    "C",
-                    "D",
-                    "E",
-                    "F",
-                    "H",
-                    "I",
-                    "J",
-                    "K",
-                    "L",
-                    "M",
-                    "N",
-                    "P",
-                    "R",
-                    "T",
-                    "U",
-                    "V",
-                    "W",
-                    "X",
-                    "Y",
-                    "Z"
-                ],
-                "type": "string",
-                "description": "A: First record of one type<br />B: Second record of that type<br />C: Colour Certificate record<br />D: Detail record<br />E: Scoured Yield Extension<br />F: Premium Certificate record<br />H: Header record<br />I: Subjective Interlot Certificate record<br />J: Combination Certificate record<br />K: Length and Strength Combination Certificate record<br />L: Length and Strength Certificate Record<br />M: Objectively Matched Lot Certificate Record<br />N: Objectively Matched Interlot Certificate Record<br />P: Core Test Certificate Record<br />R: Guidance Report Details<br />T: Trailer record<br />U: Length After Carding Test Details<br />V:Conditioning Test Details<br />W: Scoured Test Details<br />X: Colour Combination Certificate Record<br />Y: Post sale Core Test Detail<br />Z: Adjustment Note Details"
             },
             "TransferConfig": {
                 "required": [
@@ -1706,14 +1652,14 @@
                     "woolTypeGroup": {
                         "$ref": "#/components/schemas/WoolTypeGroup"
                     },
-                    "excludedClasses": {
+                    "classesToBeExcluded": {
                         "maxItems": 80,
                         "minItems": 1,
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/ExcludedClass"
+                            "$ref": "#/components/schemas/ClassToBeExcluded"
                         },
-                        "description": "Cataglouge classes and sub-classes to be excluded in the request.\r\n\r\nOnly required for request for Catalogue. Not applicable for other documents.",
+                        "description": "Cataglouge classes to be excluded in the request.\r\n\r\nOnly required for request for Catalogue. Not applicable for other documents.",
                         "nullable": true
                     },
                     "season": {

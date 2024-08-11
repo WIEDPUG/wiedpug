@@ -37,7 +37,7 @@
             "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country. \r\n\r\nThe mapping of country: centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan"
         },
         "requestForDataType": {
-            "catalogueTransmissionType": "PrivateCatalogues",
+            "catalogueTransmissionType": 2,
             "saleIdentity": {
                 "sellingCentreType": "F",
                 "saleNumber": 18
@@ -48,13 +48,9 @@
             "saleDateRequested": "2023-10-31",
             "requestType": "PrivateDataRequest",
             "woolTypeGroup": "MFLC",
-            "excludedClasses": [
-                {
-                    "classToBeExcluded": "InterlotComponentBaleHeader"
-                },
-                {
-                    "classToBeExcluded": "FibreDiameterHistogramDetails"
-                }
+            "ClassesTobeExcluded": [
+                    "FibreDiameterHistogram",
+                    "FibreDiameterHistogramDetail"
             ],
             "season": 23
         }

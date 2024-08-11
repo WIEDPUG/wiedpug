@@ -739,8 +739,8 @@ paths:
                       requestType: PrivateDataRequest
                       woolTypeGroup: MFLC
                       excludedClasses:
-                        - classToBeExcluded: InterlotComponentBaleHeader
-                        - classToBeExcluded: FibreDiameterHistogramDetails
+                        - classToBeExcluded: FibreDiameterHistogram
+                        - classToBeExcluded: FibreDiameterHistogramDetail
                       season: 23
                   - transmissionHeader:
                       dateFormatLastRevised: '2020-07-15'
@@ -760,15 +760,15 @@ paths:
                       catalogueTransmissionType: PrivateCatalogues
                       saleIdentity:
                         sellingCentreType: F
-                        saleNumber: 22
+                        saleNumber: 18
                       organisationRequested:
                         organisationCode: ANF
-                      saleDateRequested: '2023-11-05'
+                      saleDateRequested: '2023-10-31'
                       requestType: PrivateDataRequest
                       woolTypeGroup: MFLC
                       excludedClasses:
-                        - classToBeExcluded: InterlotComponentBaleHeader
-                        - classToBeExcluded: FibreDiameterHistogramDetails
+                        - classToBeExcluded: FibreDiameterHistogram
+                        - classToBeExcluded: FibreDiameterHistogramDetail
                       season: 23
               Request for Private Catalogue Data:
                 value:
@@ -797,8 +797,8 @@ paths:
                       requestType: PrivateDataRequest
                       woolTypeGroup: MFLC
                       excludedClasses:
-                        - classToBeExcluded: InterlotComponentBaleHeader
-                        - classToBeExcluded: FibreDiameterHistogramDetails
+                        - classToBeExcluded: FibreDiameterHistogram
+                        - classToBeExcluded: FibreDiameterHistogramDetail
                       season: 23
         required: true
       responses:
@@ -1572,14 +1572,12 @@ components:
       additionalProperties: false
     ClassToBeExcluded:
       enum:
-        - LotHeaderPricing
-        - LotHeaderAwexData
-        - LotHeaderVendorDeclaration
-        - ColourDetails
-        - InterlotComponentBaleHeader
+        - EncryptedLotHeaderAwexData
+        - ColourTestDetails
+        - CatalogueWoolSaleHeaderLotInterlotComponentBale
         - BaleIdentification
-        - FibreDiameterHistogramHeader
-        - FibreDiameterHistogramDetails
+        - FibreDiameterHistogram
+        - FibreDiameterHistogramDetail
       type: string
     ColourTestDetails:
       required:
@@ -1923,16 +1921,6 @@ components:
         - INVEX
       type: string
       description: 'A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record.'
-    ExcludedClass:
-      required:
-        - classToBeExcluded
-      type: object
-      properties:
-        classToBeExcluded:
-          $ref: '#/components/schemas/ClassToBeExcluded'
-        subClassToBeExcluded:
-          $ref: '#/components/schemas/SubClassToBeExcluded'
-      additionalProperties: false
     FibreDiameterHistogram:
       type: object
       properties:
@@ -2716,32 +2704,6 @@ components:
         currencyUnit:
           $ref: '#/components/schemas/CurrencyUnit'
       additionalProperties: false
-    SubClassToBeExcluded:
-      enum:
-        - A
-        - B
-        - C
-        - D
-        - E
-        - F
-        - H
-        - I
-        - J
-        - K
-        - L
-        - M
-        - 'N'
-        - P
-        - R
-        - T
-        - U
-        - V
-        - W
-        - X
-        - 'Y'
-        - Z
-      type: string
-      description: 'A: First record of one type<br />B: Second record of that type<br />C: Colour Certificate record<br />D: Detail record<br />E: Scoured Yield Extension<br />F: Premium Certificate record<br />H: Header record<br />I: Subjective Interlot Certificate record<br />J: Combination Certificate record<br />K: Length and Strength Combination Certificate record<br />L: Length and Strength Certificate Record<br />M: Objectively Matched Lot Certificate Record<br />N: Objectively Matched Interlot Certificate Record<br />P: Core Test Certificate Record<br />R: Guidance Report Details<br />T: Trailer record<br />U: Length After Carding Test Details<br />V:Conditioning Test Details<br />W: Scoured Test Details<br />X: Colour Combination Certificate Record<br />Y: Post sale Core Test Detail<br />Z: Adjustment Note Details'
     SubSamplingMethod:
       enum:
         - 1
@@ -3184,13 +3146,13 @@ components:
           $ref: '#/components/schemas/RequestTypeForData'
         woolTypeGroup:
           $ref: '#/components/schemas/WoolTypeGroup'
-        excludedClasses:
+        classesToBeExcluded:
           maxItems: 80
           minItems: 1
           type: array
           items:
-            $ref: '#/components/schemas/ExcludedClass'
-          description: "Cataglouge classes and sub-classes to be excluded in the request.\r\n\r\nOnly required for request for Catalogue. Not applicable for other documents."
+            $ref: '#/components/schemas/ClassToBeExcluded'
+          description: "Cataglouge classes to be excluded in the request.\r\n\r\nOnly required for request for Catalogue. Not applicable for other documents."
           nullable: true
         season:
           pattern: '-?\d{1,2}'

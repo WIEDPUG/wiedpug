@@ -70,7 +70,7 @@ namespace Wiedpug.Domain.Entities
         public WoolTypeGroup? WoolTypeGroup { get; set; }
 
         /// <summary>
-        /// Cataglouge classes and sub-classes to be excluded in the request.
+        /// Cataglouge classes to be excluded in the request.
         /// 
         /// Only required for request for Catalogue. Not applicable for other documents.
         /// 
@@ -78,7 +78,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         [MinLength(1)]
         [MaxLength(80)]
-        public List<ExcludedClass>? ExcludedClasses { get; set; }
+        public List<ClassToBeExcluded>? ClassesToBeExcluded { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Season { get; set; }

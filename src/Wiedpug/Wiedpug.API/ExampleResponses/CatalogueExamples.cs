@@ -851,16 +851,10 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationRequested = new Organisation {                         OrganisationCode = "ANF",},
                             SaleDateRequested = "2023-10-31",
                             WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                            ExcludedClasses = new List<ExcludedClass>
+                            ClassesToBeExcluded = new List<ClassToBeExcluded>
                             {
-                                new ExcludedClass
-                                {
-                                    ClassToBeExcluded = ClassToBeExcluded.InterlotComponentBaleHeader
-                                },
-                                new ExcludedClass
-                                {
-                                    ClassToBeExcluded = ClassToBeExcluded.BaleIdentification
-                                }
+                                ClassToBeExcluded.EncryptedLotHeaderAwexData,
+                                ClassToBeExcluded.ColourTestDetails
                             },
                             Season = 23
                         }
@@ -903,16 +897,10 @@ namespace Wiedpug.API.ExampleResponses
                         SaleDateRequested = "2023-10-31",
                         RequestType = RequestTypeForData.DataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ExcludedClasses = new List<ExcludedClass>
+                        ClassesToBeExcluded = new List<ClassToBeExcluded>
                         {
-                            new ExcludedClass
-                            {
-                                ClassToBeExcluded = ClassToBeExcluded.InterlotComponentBaleHeader
-                            },
-                            new ExcludedClass
-                            {
-                                ClassToBeExcluded = ClassToBeExcluded.FibreDiameterHistogramHeader
-                            }
+                                ClassToBeExcluded.EncryptedLotHeaderAwexData,
+                                ClassToBeExcluded.ColourTestDetails
                         },
                         Season = 23
                         }
@@ -961,16 +949,10 @@ namespace Wiedpug.API.ExampleResponses
                         SaleDateRequested = "2023-10-31",
                         RequestType = RequestTypeForData.PrivateDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ExcludedClasses = new List<ExcludedClass>
+                        ClassesToBeExcluded = new List<ClassToBeExcluded>
                         {
-                            new ExcludedClass
-                            {
-                                ClassToBeExcluded = ClassToBeExcluded.InterlotComponentBaleHeader
-                            },
-                            new ExcludedClass
-                            {
-                                ClassToBeExcluded = ClassToBeExcluded.FibreDiameterHistogramDetails
-                            }
+                                ClassToBeExcluded.ColourTestDetails,
+                                ClassToBeExcluded.FibreDiameterHistogram
                         },
                         Season = 23
                         }

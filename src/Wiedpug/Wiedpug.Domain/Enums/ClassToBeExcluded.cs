@@ -8,20 +8,16 @@ namespace Wiedpug.Domain.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum ClassToBeExcluded
     {
-        LotHeaderPricing,
+        EncryptedLotHeaderAwexData,
 
-        LotHeaderAwexData,
+        ColourTestDetails,
 
-        LotHeaderVendorDeclaration,
-
-        ColourDetails,
-
-        InterlotComponentBaleHeader,
+        CatalogueWoolSaleHeaderLotInterlotComponentBale,
 
         BaleIdentification,
 
-        FibreDiameterHistogramHeader,
+        FibreDiameterHistogram,
 
-        FibreDiameterHistogramDetails
+        FibreDiameterHistogramDetail
     }
 }
