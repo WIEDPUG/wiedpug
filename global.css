@@ -1,0 +1,42 @@
+/* global.css */
+.nextra-toc  {
+  display: none !important; /* Override default display: block */
+  }
+
+.nx-max-w-\[90rem\] {
+  max-width: 120rem !important;
+}
+
+.nx-mx-auto {
+  margin-left: 2rem !important;
+  margin-right:2rem !important;
+}
+
+.md\:nx-px-12 {
+  padding-left: 0rem !important; 
+  padding-right: 0rem !important;
+}
+
+.swagger-ui .wrapper{
+  width:auto !important;
+}
+
+.nx-w-full {
+  width: 100rem !important;
+}
+
+.nx-max-w-6xl {
+  max-width: 98rem !important;
+}
+
+main {
+  margin-left: 2rem !important;
+}
+
+.md\:nx-w-64 {
+  width: 20rem !important;
+}
+
+.nx-px-2 {
+  padding-left: 2rem !important;
+}

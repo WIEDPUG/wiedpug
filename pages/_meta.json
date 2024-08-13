@@ -1,5 +1,5 @@
 {
-    "index": "Homepage",
+  "index":"Home",
     "class-diagram": "Class Diagram",
     "sequence-diagram": "Sequence Diagram",
     "security-model": "Security Model",
