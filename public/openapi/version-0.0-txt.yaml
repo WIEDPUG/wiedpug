@@ -675,21 +675,6 @@
                 "type": "string",
                 "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
             },
-            "ClassForOneOfReferencesToBeDeleted": {
-                "type": "object",
-                "properties": {
-                    "useNetworkDateTimeRequestForDataType": {
-                        "$ref": "#/components/schemas/UseNetworkDateTimeRequestForDataType"
-                    },
-                    "dateTimeRangeRequestForDataType": {
-                        "$ref": "#/components/schemas/DateTimeRangeRequestForDataType"
-                    },
-                    "woolSaleRequestForDataType": {
-                        "$ref": "#/components/schemas/WoolSaleRequestForDataType"
-                    }
-                },
-                "additionalProperties": false
-            },
             "ClassToBeExcluded": {
                 "enum": [
                     "LotHeaderPricing",
@@ -1076,9 +1061,6 @@
                         "pattern": "^[0-9]+$",
                         "type": "string",
                         "description": "Australian Business Number, 11 digits string"
-                    },
-                    "classForOneOfReferencesToBeDeleted": {
-                        "$ref": "#/components/schemas/ClassForOneOfReferencesToBeDeleted"
                     }
                 },
                 "additionalProperties": false

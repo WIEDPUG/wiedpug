@@ -1060,21 +1060,6 @@
                 },
                 "additionalProperties": false
             },
-            "ClassForOneOfReferencesToBeDeleted": {
-                "type": "object",
-                "properties": {
-                    "useNetworkDateTimeRequestForDataType": {
-                        "$ref": "#/components/schemas/UseNetworkDateTimeRequestForDataType"
-                    },
-                    "dateTimeRangeRequestForDataType": {
-                        "$ref": "#/components/schemas/DateTimeRangeRequestForDataType"
-                    },
-                    "woolSaleRequestForDataType": {
-                        "$ref": "#/components/schemas/WoolSaleRequestForDataType"
-                    }
-                },
-                "additionalProperties": false
-            },
             "ClassToBeExcluded": {
                 "enum": [
                     "LotHeaderPricing",
@@ -1974,9 +1959,6 @@
                         "pattern": "^[0-9]+$",
                         "type": "string",
                         "description": "Australian Business Number, 11 digits string"
-                    },
-                    "classForOneOfReferencesToBeDeleted": {
-                        "$ref": "#/components/schemas/ClassForOneOfReferencesToBeDeleted"
                     }
                 },
                 "additionalProperties": false
