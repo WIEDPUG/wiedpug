@@ -62,10 +62,10 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? ColourZMaximum { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [RegularExpression(RegexPattern.DECIMAL_4_1)]
         public double? ColourYZMinimum { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [RegularExpression(RegexPattern.DECIMAL_4_1)]
         public double? ColourYZMaximum { get; set; }
 
         [MinLength(1)]
