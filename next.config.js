@@ -8,8 +8,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // output: "export",
-  // basePath: "/wiedpug"
+  output: "export",
+  basePath: "/wiedpug"
 }
 
 module.exports = {
