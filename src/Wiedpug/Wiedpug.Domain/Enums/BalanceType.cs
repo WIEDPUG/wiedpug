@@ -10,15 +10,15 @@ namespace Wiedpug.Domain.Enums
         Current,
 
         [Description("30: Balance - 30")]
-        _30,
+        Thirty,
 
         [Description("60: Balance - 60")]
-        _60,
+        Sixty,
 
-        [Description("Closing: Balance - 90")]
-        _90,
+        [Description("90: Balance - 90")]
+        Ninety,
 
-        [Description("Closing: Balance - 90+")]
-        _90Plus,
+        [Description("90Plus: Balance - 90+")]
+        NinetyPlus,
     }
 }

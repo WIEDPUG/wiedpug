@@ -10,36 +10,31 @@ namespace Wiedpug.Domain.Entities
         /// Clean weight = Net Weight X Yield
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_8_2)]
-        public required double CleanWeight1 { get; set; }
+        public required Weight CleanWeight1 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_8_2)]
-        public double? CleanWeight2 { get; set; }
+        public Weight? CleanWeight2 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_8_2)]
-        public double? CleanWeight3 { get; set; }
+        public Weight? CleanWeight3 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_8_2)]
-        public double? CleanWeight4 { get; set; }
+        public Weight? CleanWeight4 { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_8_2)]
-        public double? CleanWeight5 { get; set; }
+        public Weight? CleanWeight5 { get; set; }
 
         /// <summary>
         /// VMB - Minimum value.

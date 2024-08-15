@@ -52,17 +52,6 @@ builder.Services.AddSwaggerGen(c => {
 
     c.SchemaFilter<IncludeRequestForDataTypesForOpenApiSpec>();
 
-    // Polymorphism handling for RequestForDataType - convert to the OneOf relationships for the CatalogueRequestForDataType classes
-    c.MapType<IWoolSaleRequestForDataType>(() => new OpenApiSchema
-    {
-        OneOf = new List<OpenApiSchema>
-        {
-            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(UseNetworkDateTimeRequestForDataType) } },
-            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(DateTimeRangeRequestForDataType) } },
-            new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(WoolSaleRequestForDataType) } }
-        }
-    });
-
     // Polymorphism handling for RequestForDataType - convert to the OneOf relationships for the RequestForDataType classes
     c.MapType<IRequestForDataType>(() => new OpenApiSchema
     {

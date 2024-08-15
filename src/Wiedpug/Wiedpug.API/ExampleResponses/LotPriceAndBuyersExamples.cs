@@ -122,11 +122,11 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForLotPriceAndBuyersRequestExample : IExamplesProvider<RequestForData>
+    public class RequestForLotPriceAndBuyersRequestExample : IExamplesProvider<WoolSaleRequestForData>
     {
-        public RequestForData GetExamples()
+        public WoolSaleRequestForData GetExamples()
         {
-            return new RequestForData()
+            return new WoolSaleRequestForData()
             {
                 TransmissionHeader = new TransmissionHeader
                 {
@@ -149,6 +149,18 @@ namespace Wiedpug.API.ExampleResponses
                         Version = 1082
                     },
                     Abn = "72001967184"
+                },
+                WoolSaleRequestForDataType = new WoolSaleRequestForDataType
+                {
+                    SaleIdentity = new SaleIdentity
+                    {
+                        SellingCentreType = "M",
+                        SaleNumber = 18
+                    },
+                    OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
+                    SaleDateRequested = "2023-10-31",
+                    WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
+                    Season = 23
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {

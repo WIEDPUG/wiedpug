@@ -17,7 +17,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(30)]
-        public required ClassToBeExcluded ClassToBeExcluded { get; set; }
+        public required ItemsToBeExcluded ClassToBeExcluded { get; set; }
 
         [MinLength(1)]
         [MaxLength(1)]

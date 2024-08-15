@@ -14,8 +14,8 @@ namespace Wiedpug.Domain.ValueObject
         /// Fibre Diameter for the measurement.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double FibreDiameter { get; set; } // FIELD NUMBER 3 - Fibre Diameter-(1) - Start: 4, Size: 2, Data Type: N, Justification: R, Requirement Designator: M
+        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        public required int FibreDiameter { get; set; } // FIELD NUMBER 3 - Fibre Diameter-(1) - Start: 4, Size: 2, Data Type: N, Justification: R, Requirement Designator: M
 
         /// <summary>
         /// Percentage of fibres measured for the measurement.

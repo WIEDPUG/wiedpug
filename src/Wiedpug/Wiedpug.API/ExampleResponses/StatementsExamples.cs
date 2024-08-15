@@ -50,16 +50,39 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ClientCode = 345678,
                             StatementDate = "2024-03-21",
-                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
-                            OpeningBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
-                            OpeningBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
-                            OpeningBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
-                            OpeningBalance90 = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
-                            OpeningBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
+                            OpeningBalances = new List<Balance>
+                            {
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Current,
+                                    BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Thirty,
+                                    BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Sixty,
+                                    BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Ninety,
+                                    BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Ninety,
+                                    BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                            },
                         },
                         StatementDetails = new List<StatementDetail>
                         {
@@ -77,16 +100,39 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         StatementTrailer = new StatementTrailer
                         {
-                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
-                            ClosingBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
-                            ClosingBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
-                            ClosingBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
-                            ClosingBalance90 = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
-                            ClosingBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
+                            ClosingBalances = new List<Balance>
+                            {
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Current,
+                                    BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Thirty,
+                                    BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Sixty,
+                                    BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Ninety,
+                                    BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Ninety,
+                                    BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                            },
                         }
                     }
                 }
@@ -175,16 +221,39 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             ClientCode = 345678,
                             StatementDate = "2024-03-21",
-                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
-                            OpeningBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
-                            OpeningBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
-                            OpeningBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
-                            OpeningBalance90 = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
-                            OpeningBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
+                            OpeningBalances = new List<Balance>
+                            {
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Current,
+                                    BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Thirty,
+                                    BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Sixty,
+                                    BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Ninety,
+                                    BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                                new Balance
+                                {
+                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    BalanceType = BalanceType.Ninety,
+                                    BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                },
+                            },
                         },
                         StatementDetails = new List<StatementDetail>
                         {
@@ -202,16 +271,39 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         StatementTrailer = new StatementTrailer
                         {
-                            DebitOrCreditFlagCurrent = DebitCreditFlag.Debit,
-                            ClosingBalanceCurrent = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag30 = DebitCreditFlag.Debit,
-                            ClosingBalance30 = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag60 = DebitCreditFlag.Debit,
-                            ClosingBalance60 = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90 = DebitCreditFlag.Debit,
-                            ClosingBalance90 = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
-                            DebitOrCreditFlag90Plus = DebitCreditFlag.Debit,
-                            ClosingBalance90Plus = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD }
+                            ClosingBalances = new List<Balance>
+                                {
+                                    new Balance
+                                    {
+                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        BalanceType = BalanceType.Current,
+                                        BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                    },
+                                    new Balance
+                                    {
+                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        BalanceType = BalanceType.Thirty,
+                                        BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                    },
+                                    new Balance
+                                    {
+                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        BalanceType = BalanceType.Sixty,
+                                        BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                    },
+                                    new Balance
+                                    {
+                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        BalanceType = BalanceType.Ninety,
+                                        BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    },
+                                    new Balance
+                                    {
+                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        BalanceType = BalanceType.Ninety,
+                                        BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    },
+                                },
                         }
                     }
                 }

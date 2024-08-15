@@ -22,10 +22,10 @@ namespace Wiedpug.Domain.Enums
         [Description("N: OMI Details")]
         N,
 
-        [Description("R: Guidane Report Details")]
+        [Description("R: Guidance Report Details")]
         R,
 
-        [Description("W: Sourced Test Details")]
+        [Description("W: Scoured Test Details")]
         W,
 
         [Description("Y: Post-Sale Core Test Details")]

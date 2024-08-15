@@ -15,7 +15,5 @@ namespace Wiedpug.Domain.Entities
         public UseNetworkDateTimeRequestForDataType? UseNetworkDateTimeRequestForDataType { get; set; }
 
         public DateTimeRangeRequestForDataType? DateTimeRangeRequestForDataType { get; set; }
-
-        public WoolSaleRequestForDataType? WoolSaleRequestForDataType { get; set; }
     }
 }

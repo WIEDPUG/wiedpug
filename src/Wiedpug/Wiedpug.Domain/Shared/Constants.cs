@@ -6,8 +6,6 @@ namespace Wiedpug.Domain.Shared.Constants
         /// ISO 8601 Standard UTC date format: YYYY-MM-DD
         /// </summary>
         public const string DATE_UTC_ISO8601 = @"/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/";
-        public const string DATE_ISO8601 = @"/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/";
-        public const string DATE_AND_TIME_WITH_OFFSET_ISO8601 = @"/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])[+-]?(((([0][0-9])|([1][0-3])):(([03][0])|([14][5])))|14:00)$/";
         public const string DECIMAL_ONE_DIGIT = @"/^\d+(\.\d{1})?$/";
         public const string DECIMAL_TWO_DIGITS = @"/^\d+(\.\d{2})?$/";
         public const string DECIMAL_THREE_DIGITS = @"/^\d+(\.\d{3})?$/";
@@ -18,7 +16,7 @@ namespace Wiedpug.Domain.Shared.Constants
         /// ISO 8601 Standard UTC datetime format: YYYY-MM-DDTHH:mm:ssZ
         /// </summary>
         ///
-        public const string DATE_AND_TIME_UTC_ISO8601 = @"^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$";
+        public const string DATE_AND_TIME_UTC_ISO8601 = @"/(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$";
         public const string NUMBER_1_DIGIT = @"-?\d{1}";
         public const string NUMBER_2_DIGITS = @"-?\d{1,2}";
         public const string NUMBER_6_DIGITS = @"-?\d{1,6}";

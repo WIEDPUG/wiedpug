@@ -15,11 +15,11 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         [Required]
         public required List<LotHeaderVendorDeclaration> LotHeaderVendorDeclarations { get; set; }
 
-        public List<TestDetails>? TestDetailsCollection { get; set; }
+        public TestDetails? TestDetails { get; set; }
 
-        public List<ColourTestDetails>? ColourTestDetailsCollection { get; set; }
+        public ColourTestDetails? ColourTestDetails { get; set; }
 
-        public List<LengthAndStrengthTestDetails>? LengthAndStrengthTestDetailsCollection { get; set; }
+        public LengthAndStrengthTestDetails? LengthAndStrengthTestDetails { get; set; }
 
         public CombinationDetails? CombinationDetails { get; set; }
 
@@ -36,7 +36,7 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         /// <summary>
         /// This field is completely optional when sending Auction Catalogue Updates
         /// </summary>
-        public List<CatalogueWoolSaleHeaderLotInterlotComponentBale>? InterlotComponentBales { get; set; }
+        public List<InterlotComponentBale>? InterlotComponentBales { get; set; }
 
     }
 }

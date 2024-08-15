@@ -1,6 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Reflection.Emit;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -16,15 +20,47 @@ namespace Wiedpug.Domain.Entities
     {
         /// <summary>
         ///
-        /// SellingCentre/Type can be one of the following code:
+        /// The following codes are reserved for current and historical open cry auction selling centres:
         ///
         /// SellingCentre/Type (New Zealand):
         ///
-        /// C: Christchurch; N: Napier.
+        /// C: Christchurch; 
+        /// 
+        /// N: Napier.
+        /// 
         ///
         /// SellingCentre/Type (Australia):
         ///
-        /// A: Adelaide; AU: Australia; B: Brisbane; F: Fremantle; G: Geelong; L: Launceston; M: Melbourne; N: Newcastle; R: Goulburn; S: Sydney; PS: Private Sales; T: Auctions Plus Sales.
+        /// A: Adelaide; 
+        /// 
+        /// AU: Australia; 
+        /// 
+        /// B: Brisbane; 
+        /// 
+        /// F: Fremantle; 
+        /// 
+        /// G: Geelong; 
+        /// 
+        /// L: Launceston; 
+        /// 
+        /// M: Melbourne; 
+        /// 
+        /// N: Newcastle; 
+        /// 
+        /// R: Goulburn; 
+        /// 
+        /// S: Sydney.
+        /// 
+        /// 
+        /// The following codes are allocated for alternative sale types:
+        ///
+        /// PS: Private Sales; 
+        /// 
+        /// T: Auctions Plus Sales.
+        ///
+        /// 
+        /// Please contact the WIEDPUG Secretary for the latest list of reserved and allocated codes.
+        /// 
         /// </summary>
         [Required]
         [MinLength(1)]

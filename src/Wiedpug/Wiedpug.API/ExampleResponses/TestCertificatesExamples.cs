@@ -73,9 +73,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        TestDetailsCollection = new List<TestDetails>
-                        {
-                            new TestDetails
+                            TestDetails =new TestDetails
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -94,8 +92,7 @@ namespace Wiedpug.API.ExampleResponses
                                 RetestFlag = RetestFlag.NormalTest,
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
-                            }
-                        },
+                            },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> {
                             new FibreDiameterHistogram
                             {
@@ -202,8 +199,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
-                        {
+                        LengthAndStrengthTestDetails = 
                             new LengthAndStrengthTestDetails{
                                 CertificateIdentity =  new CertificateIdentity{
                                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -228,8 +224,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LsCertType = LsCertType.LengthAndStrengthTested,
                                 IsLsSampleSecured = false,
                                 DateIssued = "2024-01-22"
-                            }
-                        },
+                            },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
                             new CertificateIdentity{
@@ -414,8 +409,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        TestDetailsCollection = new List<TestDetails>
-                        {
+                        TestDetails = 
                             new TestDetails
                             {
                                 CertificateIdentity =  new CertificateIdentity{
@@ -435,8 +429,7 @@ namespace Wiedpug.API.ExampleResponses
                                 RetestFlag = RetestFlag.NormalTest,
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
-                            }
-                        },
+                            },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> 
                         {
                             new FibreDiameterHistogram
@@ -539,8 +532,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
-                        {
+                        LengthAndStrengthTestDetails = 
                             new LengthAndStrengthTestDetails{
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -565,8 +557,7 @@ namespace Wiedpug.API.ExampleResponses
                             LsCertType = LsCertType.LengthAndStrengthTested,
                             IsLsSampleSecured = false,
                             DateIssued = "2024-01-22"
-                            }
-                        },
+                            },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
                             new CertificateIdentity{

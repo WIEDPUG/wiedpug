@@ -3,12 +3,11 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    public enum DebitCreditFlag
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public enum DebitOrCreditFlag
     {
-        [Description("1: Debit")]
-        Debit = 1,
+        Debit,
 
-        [Description("2: Credit")]
-        Credit = 2
+        Credit
     }
 }

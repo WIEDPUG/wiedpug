@@ -266,7 +266,29 @@ namespace Wiedpug.API.ExampleResponses
         {
             return new GetOrganisationDetailsRequest()
             {
-                    CountryOfOrigin = CountryCode.AU,
+                TransmissionHeader = new TransmissionHeader
+                {
+                    DateFormatLastRevised = "2020-07-15",
+                    DateTransmissionFileCreated = "2016-01-17",
+                    CountryOfOrigin = Domain.Enums.CountryCode.AU,
+                    DocumentOriginator = new Organisation
+                    {
+                        OrganisationCode = "ABC",
+                    },
+                    CurrentReceiver = new Organisation
+                    {
+                        OrganisationCode = "ATW",
+                    },
+                    VersionNumber = 31,
+                    SoftwareIdentifier = new SoftwareIdentifier
+                    {
+                        ProgramName = "NETR",
+                        SoftwareCompany = SoftwareCompany.AWTA,
+                        Version = 1082
+                    },
+                    Abn = "72001967184"
+                },
+                CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
                                                 OrganisationCode = "ABC",

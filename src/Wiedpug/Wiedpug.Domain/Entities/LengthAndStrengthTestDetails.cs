@@ -33,16 +33,16 @@ namespace Wiedpug.Domain.Entities
         /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public required double StapleLength { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public required int StapleLength { get; set; }
 
         /// <summary>
         /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. 
         ///
         /// Minimum - the lowest value in a range of staple length values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? StapleLengthMinimum { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? StapleLengthMinimum { get; set; }
 
         /// <summary>
         /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot. 
@@ -50,8 +50,8 @@ namespace Wiedpug.Domain.Entities
         /// Maximum - the highest value in a range of staple length values.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? StapleLengthMaximum { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? StapleLengthMaximum { get; set; }
 
         /// <summary>
         /// The force required to break a staple of given thickness. 
@@ -60,8 +60,8 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Minimum - The lowest value in a range of staple strength values 
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? StapleStrengthMinimum { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? StapleStrengthMinimum { get; set; }
 
         /// <summary>
         /// The force required to break a staple of given thickness. 
@@ -70,8 +70,8 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Maximum - The highest value in a range of staple strength value
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? StapleStrengthMaximum { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? StapleStrengthMaximum { get; set; }
 
 
         /// <summary>
@@ -87,8 +87,8 @@ namespace Wiedpug.Domain.Entities
         /// The average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public required double StapleStrength { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public required int StapleStrength { get; set; }
 
         /// <summary>
         /// The position of break indicates the location of the weakest part of the staple.
@@ -155,8 +155,8 @@ namespace Wiedpug.Domain.Entities
         /// Any Length and Strength certificate for NZ Crossbred wool will include a calculated Barbe value based on the 2016 calculation.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? ExpectedBarbe { get; set; }
+        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        public int? ExpectedBarbe { get; set; }
 
         /// <summary>
         /// Coefficient of Variation of Hauteur. NOTE: Refer to note in `Team3Hauteur`.
@@ -171,10 +171,10 @@ namespace Wiedpug.Domain.Entities
         public double? Team3RomainePercentage { get; set; }
 
         /// <summary>
-        /// Date in ISO 8601 standard UTC date format. e.g. 2024-03-21
+        /// Date in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [Required]
         [MinLength(1)]
         [MaxLength(10)]

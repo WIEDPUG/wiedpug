@@ -4,11 +4,11 @@
     {
         public required TestDataHeader  TestDataHeader { get; set; }
 
-        public List<TestDetails>? TestDetailsCollection { get; set; }
+        public TestDetails? TestDetails { get; set; }
 
-        public List<ColourTestDetails>? ColourTestDetailsCollection { get; set; }
+        public ColourTestDetails? ColourTestDetails { get; set; }
 
-        public List<LengthAndStrengthTestDetails>? LengthAndStrengthTestDetailsCollection { get; set; }
+        public LengthAndStrengthTestDetails? LengthAndStrengthTestDetails { get; set; }
 
         public CombinationDetails? CombinationDetails {  get; set; }
         

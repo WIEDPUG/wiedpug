@@ -14,7 +14,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class DateTimeRangeRequestForDataType: IRequestForDataType, IWoolSaleRequestForDataType
+    public class DateTimeRangeRequestForDataType: IRequestForDataType
     {
         /// <summary>
         /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z

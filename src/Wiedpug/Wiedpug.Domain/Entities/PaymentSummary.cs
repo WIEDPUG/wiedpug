@@ -35,7 +35,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         public required string DatePaymentMade { get; set; }
     }
 

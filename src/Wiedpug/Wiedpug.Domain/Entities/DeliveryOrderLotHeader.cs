@@ -141,14 +141,20 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public required PackMaterial PackMaterial { get; set; }
 
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]
         [MaxLength(10)]
         public string? DateDeliveryRequired { get; set; }
 
+        /// <summary>
+        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// </summary>
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]
         [MaxLength(10)]
         public string? DatePickup { get; set; }

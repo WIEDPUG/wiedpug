@@ -14,7 +14,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class WoolSaleRequestForDataType: IWoolSaleRequestForDataType
+    public class WoolSaleRequestForDataType
     {
 
         /// <summary>
@@ -60,17 +60,12 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(10)]
         public string? SaleDateRequested { get; set; }
 
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required RequestTypeForData RequestType { get; set; }
-
         [MinLength(1)]
         [MaxLength(4)]
         public WoolTypeGroup? WoolTypeGroup { get; set; }
 
         /// <summary>
-        /// Cataglouge classes to be excluded in the request.
+        /// Catalouge field names to be excluded in the request.
         /// 
         /// Only required for request for Catalogue. Not applicable for other documents.
         /// 
@@ -78,7 +73,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         [MinLength(1)]
         [MaxLength(80)]
-        public List<ClassToBeExcluded>? ClassesToBeExcluded { get; set; }
+        public List<ItemsToBeExcluded>? ItemsToBeExcluded { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Season { get; set; }

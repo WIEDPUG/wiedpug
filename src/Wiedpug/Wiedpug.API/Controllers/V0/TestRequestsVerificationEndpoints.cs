@@ -11,7 +11,7 @@ public static class TestRequestsVerificationEndpoints
 {
     public static void MapTestRequestsVerificationEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("test-resquests-verification").WithTags("Test Requests Verification");
+        var group = routes.MapGroup("test-requests-verification").WithTags("Test Requests Verification");
 
         group.MapPost("/",
         [SwaggerRequestExample(typeof(TestRequestsVerification), typeof(TestRequestsVerificationRequestExample))]

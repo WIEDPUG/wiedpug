@@ -113,7 +113,7 @@ namespace Wiedpug.API.ExampleResponses
                                     PenaltyInterestRate = 11.35,
                                 },
                                 // No 11BA
-                                Lots = new List<CatalogueWoolSaleHeaderLot>
+                                CatalogueWoolSaleHeaderLots = new List<CatalogueWoolSaleHeaderLot>
                                 {
                                     new CatalogueWoolSaleHeaderLot
                                     {
@@ -164,8 +164,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 MulesingStatus = MulesingStatus.NM
                                             }
                                         },
-                                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
-                                        {
+                                        LengthAndStrengthTestDetails = 
                                             new LengthAndStrengthTestDetails {
                                             CertificateIdentity = new CertificateIdentity
                                             {
@@ -180,27 +179,26 @@ namespace Wiedpug.API.ExampleResponses
                                                 Value = 0.00,
                                                 Unit = WeightUnit.Kilograms
                                             },
-                                            StapleLength = 73.00,
+                                            StapleLength = 73,
                                             Charge = new Currency{
                                                 Value= 188.50,
                                                 CurrencyUnit = CurrencyUnit.AUD
                                             },
                                             StapleLengthCvPercentage = 16,
-                                            StapleStrength = 35.00,
+                                            StapleStrength = 35,
                                             PositionOfBreakPercentageTip = 77,
                                             PositionOfBreakPercentageMiddle = 23,
                                             PositionOfBreakPercentageBase = 0,
                                             Team3Hauteur = 72,
                                             LsCertType = LsCertType.LengthAndStrengthTested,
-                                            ExpectedBarbe = 111.00,
+                                            ExpectedBarbe = 111,
                                             Team3HauteurCvPercentage = 36.9,
                                             Team3RomainePercentage = 11.2,
                                             DateIssued = "2017-01-10",
                                             StapleStrengthLowest25Percent = 24,
                                             IsLsSampleSecured = true
                                             },
-                                        },
-                                        TestDetailsCollection = new List<TestDetails> {
+                                        TestDetails =
                                             new TestDetails //51P
                                         {
                                             CertificateIdentity = new CertificateIdentity
@@ -226,8 +224,6 @@ namespace Wiedpug.API.ExampleResponses
                                             Vm1 = 0.0,
                                             Vm2 = 0.9,
                                             Vm3 = 0.0,
-                                            DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
-                                        },
                                         },
                                         Histograms = new List<FibreDiameterHistogram>
                                         {
@@ -265,9 +261,9 @@ namespace Wiedpug.API.ExampleResponses
                                                 BaleNumber = "1"
                                             }
                                         },
-                                        InterlotComponentBales = new List<CatalogueWoolSaleHeaderLotInterlotComponentBale>
+                                        InterlotComponentBales = new List<InterlotComponentBale>
                                         {
-                                            new CatalogueWoolSaleHeaderLotInterlotComponentBale
+                                            new InterlotComponentBale
                                             {
                                                 InterlotComponentBaleHeader = new InterlotComponentBaleHeader //79B
                                                 {
@@ -388,7 +384,7 @@ namespace Wiedpug.API.ExampleResponses
                                     PenaltyInterestRate = 11.35
                                 },
                                 // No 11BA
-                                Lots = new List<CatalogueWoolSaleHeaderLot>
+                                CatalogueWoolSaleHeaderLots = new List<CatalogueWoolSaleHeaderLot>
                                 {
                                     new CatalogueWoolSaleHeaderLot
                                     {
@@ -432,8 +428,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 MulesingStatus = MulesingStatus.AA
                                             }
                                         },
-                                        LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails>
-                                        {
+                                        LengthAndStrengthTestDetails = 
                                             new LengthAndStrengthTestDetails
                                             {
                                                 CertificateIdentity = new CertificateIdentity
@@ -447,23 +442,22 @@ namespace Wiedpug.API.ExampleResponses
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                 RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
                                                 Charge = new Currency { Value = 256.23, CurrencyUnit = CurrencyUnit.AUD },
-                                                StapleLength = 73.00,
+                                                StapleLength = 73,
                                                 StapleLengthCvPercentage = 16,
-                                                StapleStrength = 35.00,
+                                                StapleStrength = 35,
                                                 PositionOfBreakPercentageTip = 77,
                                                 PositionOfBreakPercentageMiddle = 23,
                                                 PositionOfBreakPercentageBase = 0,
                                                 Team3Hauteur = 72,
                                                 LsCertType = LsCertType.LengthAndStrengthTested,
                                                 IsLsSampleSecured = true,
-                                                ExpectedBarbe = 111.00,
+                                                ExpectedBarbe = 111,
                                                 Team3HauteurCvPercentage = 36.9,
                                                 Team3RomainePercentage = 11.2,
                                                 DateIssued = "2017-01-10",
                                                 StapleStrengthLowest25Percent = 24
-                                            }
-                                        },
-                                        TestDetailsCollection = new List<TestDetails> {
+                                            },
+                                        TestDetails = 
                                             new TestDetails //51P
                                             {
                                                CertificateIdentity = new CertificateIdentity
@@ -490,8 +484,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 Vm2 = 0.9,
                                                 Vm3 = 0.0,
                                                 DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
-                                            }
-                                        },
+                                            },
                                         Histograms = new List<FibreDiameterHistogram>
                                         {
                                             new FibreDiameterHistogram
@@ -520,9 +513,9 @@ namespace Wiedpug.API.ExampleResponses
                                             AreaOfOrigin = "V11",
                                             Bales = 8,
                                         },
-                                        InterlotComponentBales = new List<CatalogueWoolSaleHeaderLotInterlotComponentBale>
+                                        InterlotComponentBales = new List<InterlotComponentBale>
                                         {
-                                            new CatalogueWoolSaleHeaderLotInterlotComponentBale
+                                            new InterlotComponentBale
                                             {
                                                 InterlotComponentBaleHeader = new InterlotComponentBaleHeader //79B
                                                 {
@@ -640,7 +633,7 @@ namespace Wiedpug.API.ExampleResponses
                             },
 
                             // No 11BA
-                            Lots = new List<CatalogueWoolSaleHeaderLot>
+                            CatalogueWoolSaleHeaderLots = new List<CatalogueWoolSaleHeaderLot>
                             {
                                 new CatalogueWoolSaleHeaderLot
                                 {
@@ -692,8 +685,7 @@ namespace Wiedpug.API.ExampleResponses
                                             MulesingStatus = MulesingStatus.AA
                                         }
                                     },
-                                    LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails> //51L
-                                    {
+                                    LengthAndStrengthTestDetails =
                                         new LengthAndStrengthTestDetails
                                             {
                                             CertificateIdentity = new CertificateIdentity
@@ -707,23 +699,22 @@ namespace Wiedpug.API.ExampleResponses
                                             Charge = new Currency { Value = 230.23, CurrencyUnit = CurrencyUnit.AUD },
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
-                                            StapleLength = 73.00,
+                                            StapleLength = 73,
                                             StapleLengthCvPercentage = 16,
-                                            StapleStrength = 35.00,
+                                            StapleStrength = 35,
                                             PositionOfBreakPercentageTip = 77,
                                             PositionOfBreakPercentageMiddle = 23,
                                             PositionOfBreakPercentageBase = 0,
                                             Team3Hauteur = 72,
                                             LsCertType = LsCertType.LengthAndStrengthTested,
                                             IsLsSampleSecured = true,
-                                            ExpectedBarbe = 111.00,
+                                            ExpectedBarbe = 111,
                                             Team3HauteurCvPercentage = 36.9,
                                             Team3RomainePercentage = 11.2,
                                             DateIssued = "2017-01-10",
                                             StapleStrengthLowest25Percent = 24
-                                            }
-                                        },
-                                    TestDetailsCollection = new List<TestDetails> {
+                                            },
+                                    TestDetails = 
                                         new TestDetails //51P
                                         {
                                             CertificateIdentity = new CertificateIdentity
@@ -752,8 +743,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Vm2 = 0.9,
                                             Vm3 = 0.0,
                                             DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D
-                                        }
-                                    },
+                                        },
                                     Histograms = new List<FibreDiameterHistogram>
                                     {
                                         new FibreDiameterHistogram
@@ -840,23 +830,26 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = "72001967184"
                         },
-                        RequestForDataType = new WoolSaleRequestForDataType
+                        WoolSaleRequestForDataType = new WoolSaleRequestForDataType
                         {
                             CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogues,
                             SaleIdentity = new SaleIdentity{
                                             SellingCentreType = "M",
                                             SaleNumber = 18
                                         },
-                            RequestType = RequestTypeForData.PrivateDataRequest,
                             OrganisationRequested = new Organisation {                         OrganisationCode = "ANF",},
                             SaleDateRequested = "2023-10-31",
                             WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                            ClassesToBeExcluded = new List<ClassToBeExcluded>
+                            ItemsToBeExcluded = new List<ItemsToBeExcluded>
                             {
-                                ClassToBeExcluded.EncryptedLotHeaderAwexData,
-                                ClassToBeExcluded.ColourTestDetails
+                                ItemsToBeExcluded.encryptedLotHeaderAwexData,
+                                ItemsToBeExcluded.colourTestDetails
                             },
                             Season = 23
+                        },
+                        RequestForDataType = new DateTimeRangeRequestForDataType
+                        {
+                            StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                         }
                     },
                     new WoolSaleRequestForData
@@ -883,7 +876,7 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = "72001967184"
                         },
-                        RequestForDataType = new WoolSaleRequestForDataType
+                        WoolSaleRequestForDataType = new WoolSaleRequestForDataType
                         {
                                                     CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.AuctionCatalogueUpdates,
                         SaleIdentity = new SaleIdentity{
@@ -895,14 +888,17 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "ANF",
                         },
                         SaleDateRequested = "2023-10-31",
-                        RequestType = RequestTypeForData.DataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ClassesToBeExcluded = new List<ClassToBeExcluded>
+                        ItemsToBeExcluded = new List<ItemsToBeExcluded>
                         {
-                                ClassToBeExcluded.EncryptedLotHeaderAwexData,
-                                ClassToBeExcluded.ColourTestDetails
+                                ItemsToBeExcluded.encryptedLotHeaderAwexData,
+                                ItemsToBeExcluded.colourTestDetails
                         },
                         Season = 23
+                        },
+                        RequestForDataType = new DateTimeRangeRequestForDataType
+                        {
+                            StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                         }
                     }
                 });
@@ -935,7 +931,7 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = "72001967184"
                         },
-                        RequestForDataType = new WoolSaleRequestForDataType
+                        WoolSaleRequestForDataType = new WoolSaleRequestForDataType
                         {
                                                     CatalogueTransmissionType = Domain.Enums.CatalogueTransmissionType.PrivateCatalogues,
                         SaleIdentity = new SaleIdentity{
@@ -947,14 +943,17 @@ namespace Wiedpug.API.ExampleResponses
                                                     OrganisationCode = "ANF",
                         },
                         SaleDateRequested = "2023-10-31",
-                        RequestType = RequestTypeForData.PrivateDataRequest,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        ClassesToBeExcluded = new List<ClassToBeExcluded>
+                        ItemsToBeExcluded = new List<ItemsToBeExcluded>
                         {
-                                ClassToBeExcluded.ColourTestDetails,
-                                ClassToBeExcluded.FibreDiameterHistogram
+                                ItemsToBeExcluded.colourTestDetails,
+                                ItemsToBeExcluded.fibreDiameterHistograms
                         },
                         Season = 23
+                        },
+                        RequestForDataType = new DateTimeRangeRequestForDataType
+                        {
+                            StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                         }
                     }
                 });
@@ -1047,7 +1046,7 @@ namespace Wiedpug.API.ExampleResponses
                                         PenaltyInterestRate = 11.35,
                                     },
                                     // No 11BA
-                                    Lots = new List<CatalogueWoolSaleHeaderLot>
+                                    CatalogueWoolSaleHeaderLots = new List<CatalogueWoolSaleHeaderLot>
                                     {
                                         new CatalogueWoolSaleHeaderLot
                                         {
@@ -1094,8 +1093,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     MulesingStatus = MulesingStatus.M
                                                 }
                                             },
-                                            LengthAndStrengthTestDetailsCollection = new List<LengthAndStrengthTestDetails> //51L
-                                            {
+                                            LengthAndStrengthTestDetails = 
                                                 new LengthAndStrengthTestDetails
                                                     { 
                                                       CertificateIdentity = new CertificateIdentity
@@ -1109,24 +1107,22 @@ namespace Wiedpug.API.ExampleResponses
                                                         Charge = new Currency { Value = 174.30, CurrencyUnit = CurrencyUnit.AUD },
                                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                         RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
-                                                        StapleLength = 73.00,
+                                                        StapleLength = 73,
                                                         StapleLengthCvPercentage = 16,
-                                                        StapleStrength = 35.00,
+                                                        StapleStrength = 35,
                                                         PositionOfBreakPercentageTip = 77,
                                                         PositionOfBreakPercentageMiddle = 23,
                                                         PositionOfBreakPercentageBase = 0,
                                                         Team3Hauteur = 72,
                                                         LsCertType = LsCertType.LengthAndStrengthTested,
                                                         IsLsSampleSecured = true,
-                                                        ExpectedBarbe = 111.00,
+                                                        ExpectedBarbe = 111,
                                                         Team3HauteurCvPercentage = 36.9,
                                                         Team3RomainePercentage = 11.2,
                                                         DateIssued = "2017-01-10",
                                                         StapleStrengthLowest25Percent = 24
-                                                 }
-                                            },
-                                            TestDetailsCollection = new List<TestDetails> 
-                                            {
+                                                 },
+                                            TestDetails =
                                                 new TestDetails
                                                 {
                                                       CertificateIdentity = new CertificateIdentity
@@ -1154,8 +1150,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         Vm3 = 0.0,
                                                         DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
                                              
-                                                }
-                                            },
+                                                },
                                             Histograms = new List<FibreDiameterHistogram>
                                             {
                                                 new FibreDiameterHistogram

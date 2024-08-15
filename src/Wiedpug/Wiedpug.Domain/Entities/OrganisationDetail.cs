@@ -24,7 +24,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>        
         [Required]
         [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_ISO8601)]
+        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]
         [MaxLength(10)]
         public required string DateLastUpdated { get; set; }

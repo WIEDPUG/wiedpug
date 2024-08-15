@@ -26,54 +26,8 @@ namespace Wiedpug.Domain.Entities
         public required string StatementDate { get; set; }
 
         [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlagCurrent { get; set; }
+        public required List<Balance> OpeningBalances { get; set; }
 
-        [Required]
-        [MinLength(6)]
-        [MaxLength(15)]
-        public required Currency OpeningBalanceCurrent { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag30 { get; set; }
-
-        [Required]
-        [MinLength(6)]
-        [MaxLength(15)]
-        public required Currency OpeningBalance30 { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag60 { get; set; }
-
-        [Required]
-        [MinLength(6)]
-        [MaxLength(15)]
-        public required Currency OpeningBalance60 { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag90 { get; set; }
-
-        [Required]
-        [MinLength(6)]
-        [MaxLength(15)]
-        public required Currency OpeningBalance90 { get; set; }
-
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required DebitCreditFlag DebitOrCreditFlag90Plus { get; set; }
-
-        [Required]
-        [MinLength(6)]
-        [MaxLength(15)]
-        public required Currency OpeningBalance90Plus { get; set; }
     }
 
 }

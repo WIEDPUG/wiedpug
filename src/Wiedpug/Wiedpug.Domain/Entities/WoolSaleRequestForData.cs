@@ -18,6 +18,9 @@ namespace Wiedpug.Domain.Entities
         public required TransmissionHeader TransmissionHeader { get; set; }
 
         [Required]
-        public required IWoolSaleRequestForDataType RequestForDataType { get; set; }
+        public required WoolSaleRequestForDataType WoolSaleRequestForDataType { get; set; }
+
+        [Required]
+        public required IRequestForDataType RequestForDataType { get; set; }
     }
 }

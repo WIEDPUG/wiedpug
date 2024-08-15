@@ -14,7 +14,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class UseNetworkDateTimeRequestForDataType: IRequestForDataType, IWoolSaleRequestForDataType
+    public class UseNetworkDateTimeRequestForDataType: IRequestForDataType
     {
         /// <summary>
         /// A boolean value to indicate whether to use network datetime.

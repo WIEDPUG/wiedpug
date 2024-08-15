@@ -8,6 +8,9 @@ namespace Wiedpug.Domain.Entities
     public class GetOrganisationDetailsRequest
     {
         [Required]
+        public required TransmissionHeader TransmissionHeader { get;  set; }
+
+        [Required]
         [MinLength(1)]
         [MaxLength(2)]
         public required CountryCode CountryOfOrigin { get; set; }
