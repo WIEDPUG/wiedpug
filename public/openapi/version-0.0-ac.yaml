@@ -2500,16 +2500,16 @@ components:
       description: 'Where a line/lot contains a Pack with a lower Material, the lower Material shall apply.The hierarchy from highest to lowest is N, E, J, K. Printed catalogue condition: The code for Nylon packs shall not be printed (but shall be transmitted).<br />N: Nylon Packs (complete lots only)<br />E: Experimental Packs<br />J: Jute packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and/or HDPE 1 and Jute packs)<br />K: HDPE1 packs (complete lots or lots that contain portions of Nylon and/or HDPE 5 and HDPE 1 packs)'
     PackType:
       enum:
-        - '0'
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
-        - '7'
-        - '8'
-        - '9'
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
         - A
         - B
         - C

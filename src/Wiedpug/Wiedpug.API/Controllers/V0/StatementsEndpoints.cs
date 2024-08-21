@@ -29,7 +29,7 @@ public static class StatementsEndpoints
             Summary = "Statements",
             Description = "Used to provide statements"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
@@ -38,6 +38,7 @@ public static class StatementsEndpoints
         group.MapPost("/data",
         [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForStatementsRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForStatements200Example))]
+        [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -52,7 +53,8 @@ public static class StatementsEndpoints
         {
             Summary = "Retrieves the statements"
         })
-        .Produces<ApiResult<Statements>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<Statements>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

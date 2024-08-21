@@ -37,9 +37,9 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = "72001967184"
                 },
-                DarkAndMedullatedFibreRiskDetailsCollection = new List<DarkAndMedullatedFibreRiskDetails>
+                DarkAndMedullatedFibreRiskDetails = new List<DarkAndMedullatedFibreRiskDetail>
                 {
-                    new DarkAndMedullatedFibreRiskDetails
+                    new DarkAndMedullatedFibreRiskDetail
                     {
                         DeclaredBreed = DeclaredBreed.A,
                         DeclaredWoolSubCategory=DeclaredWoolSubCategory.W,
@@ -125,7 +125,7 @@ namespace Wiedpug.API.ExampleResponses
                 return new ApiResult()
                 {
                     
-                    Message = null,
+                    ApiMessages = [],
                     Data =  new DarkAndMedullatedFibreRiskVerification()
                     {
                         TransmissionHeader = new TransmissionHeader
@@ -150,9 +150,9 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = "72001967184"
                         },
-                        DarkAndMedullatedFibreRiskDetailsCollection = new List<DarkAndMedullatedFibreRiskDetails>
+                        DarkAndMedullatedFibreRiskDetails = new List<DarkAndMedullatedFibreRiskDetail>
                 {
-                    new DarkAndMedullatedFibreRiskDetails
+                    new DarkAndMedullatedFibreRiskDetail
                     {
                         DeclaredBreed = DeclaredBreed.A,
                         DeclaredWoolSubCategory=DeclaredWoolSubCategory.W,

@@ -9,6 +9,6 @@ namespace Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate
         public required TransmissionHeader TransmissionHeader { get; set; }
 
         [Required]
-        public required List<OrganisationDetail> OrganisationDetailCollection { get; set; }
+        public required List<OrganisationInformationDetail> OrganisationInformationDetails { get; set; }
     }
 }

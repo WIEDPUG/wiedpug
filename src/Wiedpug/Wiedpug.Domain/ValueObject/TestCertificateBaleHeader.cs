@@ -20,6 +20,13 @@ namespace Wiedpug.Domain.ValueObject
         [MaxLength(15)]
         public required string BaleDescription { get; set; }
 
+        /// <summary>
+        /// The code for the area in which the wool was grown.
+        /// 
+        /// For further information please go to this URL:
+        /// 
+        /// http://www.awex.com.au/market-information/wool-statistical-areas-wsa/
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(4)]

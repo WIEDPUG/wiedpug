@@ -10,7 +10,7 @@ namespace Wiedpug.API.Model
         /// <summary>
         /// Contains information about the response if applicable.
         /// </summary>
-        public ApiMessage? Message { get; set; }
+        public List<ApiMessage>? ApiMessages { get; set; }
         
         /// <summary>
         /// Contains response data. e.g. Auction Catalogue
@@ -26,7 +26,7 @@ namespace Wiedpug.API.Model
         /// <summary>
         /// Contains information about the response if applicable.
         /// </summary>
-        public ApiMessage? Message { get; set; }
+        public List<ApiMessage>? ApiMessages { get; set; }
         /// <summary>
         /// Contains response data. e.g. Auction Catalogue
         /// </summary>

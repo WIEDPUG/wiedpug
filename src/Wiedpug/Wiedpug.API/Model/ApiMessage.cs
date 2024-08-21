@@ -10,8 +10,8 @@ namespace Wiedpug.API.Model
     {
         public string? Message { get; set; }
 
-        public List<WarningCode>? WarningCodes { get; set; }
+        public WarningCode? WarningCode { get; set; }
 
-        public List<InformationCode>? InformationCodes { get; set; }
+        public InformationCode? InformationCode { get; set; }
     }
 }

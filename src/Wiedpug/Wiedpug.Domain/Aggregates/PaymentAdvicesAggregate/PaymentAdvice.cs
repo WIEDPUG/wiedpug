@@ -21,7 +21,7 @@ namespace Wiedpug.Domain.Aggregates.PaymentAdviceAggregate
         public TransferConfig? TransferConfig { get; set; }
 
         [Required]
-        public required List<PaymentAdviceDetail> PaymentAdviceDetailList { get; set; }
+        public required List<PaymentAdviceDetail> PaymentAdviceDetails { get; set; }
 
         public List<Comment>? Comments { get; set; }
     }

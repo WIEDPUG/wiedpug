@@ -23,6 +23,6 @@ namespace Wiedpug.Domain.Aggregates.TestCertificateAggregate
         public TransferConfig? TransferConfig { get; set; }
 
         [Required]
-        public required List<TestCertificate> TestCertificateCollection { get; set; }
+        public required List<TestCertificateDetail> TestCertificateDetails { get; set; }
     }
 }

@@ -36,7 +36,11 @@ namespace Wiedpug.Domain.Entities
         public Weight? CoreSampleWeight { get; set; }
 
         /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
+        /// 
+        /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+        /// 
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]

@@ -18,7 +18,7 @@ namespace Wiedpug.Domain.Aggregates.LotInvoicesAggregate
         /// </summary>
         public TransferConfig? TransferConfig { get; set; }
 
-        public List<DarkAndMedullatedFibreRiskDetails>? DarkAndMedullatedFibreRiskDetailsCollection { get; set; }
+        public List<DarkAndMedullatedFibreRiskDetail>? DarkAndMedullatedFibreRiskDetails { get; set; }
 
     }
 }

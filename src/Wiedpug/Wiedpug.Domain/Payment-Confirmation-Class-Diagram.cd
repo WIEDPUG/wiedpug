@@ -1,21 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.PaymentConfirmation" Collapsed="true">
-    <Position X="1.5" Y="1.75" Width="2" />
+    <Position X="5.25" Y="3.5" Width="2" />
     <AssociationLine Name="Confirmations" Type="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.Confirmation" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="2.312" Y="2.312" />
-        <Point X="2.312" Y="2.687" />
-        <Point X="2.625" Y="2.687" />
-        <Point X="2.625" Y="3.5" />
+        <Point X="5.25" Y="3.812" />
+        <Point X="3.25" Y="3.812" />
+        <Point X="3.25" Y="5.5" />
       </Path>
-    </AssociationLine>
-    <AssociationLine Name="TransferConfig" Type="Wiedpug.Domain.Entities.TransferConfig" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="3.25" Y="2.312" />
-        <Point X="3.25" Y="2.781" />
-        <Point X="5.5" Y="2.781" />
-      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.953" Y="1.831" Height="0.182" Width="1.264" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQACAAAACAAAAAAAAAAAAAA=</HashCode>
@@ -30,7 +25,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.Confirmation" Collapsed="true">
-    <Position X="1.25" Y="3.5" Width="2" />
+    <Position X="1.5" Y="5.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Aggregates\PaymentConfirmationAggregate\Confirmation.cs</FileName>
@@ -43,28 +38,28 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="5.5" Y="1.5" Width="2" />
+    <Position X="5.25" Y="5.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PaymentDetail" Collapsed="true">
-    <Position X="7" Y="3.5" Width="1.5" />
+    <Position X="2.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAIAAAAQAACACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PaymentDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PaymentHeader" Collapsed="true">
-    <Position X="3.25" Y="5" Width="1.5" />
+    <Position X="1" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAgAggAAAAAAAAAIAAAAAACAAABCAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAggAAAAAAAAAIAEAAAACAAABCAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PaymentHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="5.5" Y="2.5" Width="1.5" />
+    <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>

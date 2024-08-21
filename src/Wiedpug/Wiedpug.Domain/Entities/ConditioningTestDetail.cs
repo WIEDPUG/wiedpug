@@ -4,7 +4,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class ConditioningTestDetails
+    public class ConditioningTestDetail
     {
         [Required]
         [MinLength(1)]
@@ -19,7 +19,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required string Laboratory { get; set; }
+        public required Laboratory Laboratory { get; set; }
 
         [MinLength(4)]
         [MaxLength(9)]
@@ -47,7 +47,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
-        public Weight? SumOfODMasses { get; set; }
+        public Weight? SumOfOdMasses { get; set; }
 
         [Required]
         [MinLength(4)]
@@ -56,11 +56,11 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double MoistureContent { get; set; }
+        public required double MoistureContentPercentage { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public required double Regain { get; set; }
+        public required double RegainPercentage { get; set; }
 
         /// <summary>
         /// Unit in KG.
@@ -68,7 +68,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(4)]
         [MaxLength(9)]
-        public required Weight NetWeightODOfConsignment { get; set; }
+        public required Weight NetWeightOdOfConsignment { get; set; }
 
         [Required]
         [StringLength (2)]

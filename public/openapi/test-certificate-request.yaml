@@ -23,6 +23,92 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/TestCertificateRequests"
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: 2020-07-15
+                dateTransmissionFileCreated: 2016-01-17
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ATC
+                currentReceiver:
+                  organisationCode: ATT
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 1
+                  version: 1082
+                  programName: NETR
+                abn: "72001967184"
+              testCertificateRequestDetails:
+                - certificateRequest:
+                    certificateType: C
+                    printRequirements: 0
+                    yieldType1: 2
+                    yieldType2: 4
+                    certificateReference: XXY1255
+                    clientsCrossReference: XXY1255
+                    bales: 96
+                    season: 21
+                    combinationRequest: N
+                    autoAdditionalMeasurementRequired: N
+                    additionalPrintRequirements: 0
+                    isPrintingTEAM3Hauteur: false
+                    certificateRequestDetails:
+                      - certificateIdentity:
+                          certificateIDPrefix: 3
+                          certificateIDNumber: 15969534
+                          certificateIDSuffix: P
+                          certificateIDCD: 9
+                        woolbase: 63.16
+                        laboratory: 1
+                      - certificateIdentity:
+                          certificateIDPrefix: 3
+                          certificateIDNumber: 499
+                          certificateIDSuffix: P
+                          certificateIDCD: 7
+                        woolbase: 61.52
+                        laboratory: 1
+                      - certificateIdentity:
+                          certificateIDPrefix: 3
+                          certificateIDNumber: 499
+                          certificateIDSuffix: P
+                          certificateIDCD: 7
+                        woolbase: 61.44
+                        laboratory: 1
+                - certificateRequest:
+                    certificateType: B
+                    printRequirements: 0
+                    yieldType1: 1
+                    yieldType2: 13
+                    certificateReference: XXY1205
+                    clientsCrossReference: XXZ1635
+                    bales: 96
+                    season: 21
+                    combinationRequest: C
+                    autoAdditionalMeasurementRequired: N
+                    additionalPrintRequirements: 3
+                    isPrintingTEAM3Hauteur: true
+                    certificateRequestDetails:
+                      - certificateIdentity:
+                          certificateIDPrefix: 3
+                          certificateIDNumber: 499
+                          certificateIDSuffix: P
+                          certificateIDCD: 7
+                        woolbase: 53.74
+                        laboratory: 1
+                      - certificateIdentity:
+                          certificateIDPrefix: 3
+                          certificateIDNumber: 499
+                          certificateIDSuffix: P
+                          certificateIDCD: 7
+                        woolbase: 52.01
+                        laboratory: 1
+                      - certificateIdentity:
+                          certificateIDPrefix: 3
+                          certificateIDNumber: 499
+                          certificateIDSuffix: P
+                          certificateIDCD: 7
+                        woolbase: 54.26
+                        laboratory: 1
         required: true
       responses:
         "200":
@@ -30,31 +116,63 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages: []
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
   /v0/test-certificate-requests/data:
     post:
       tags:
@@ -66,6 +184,22 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/RequestForData"
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: 2020-07-15
+                dateTransmissionFileCreated: 2016-01-17
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ABC
+                currentReceiver:
+                  organisationCode: ATW
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 8
+                  version: 1082
+                  programName: NETR
+                abn: "72001967184"
+              requestForDataType: {}
         required: true
       responses:
         "200":
@@ -73,37 +207,172 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TestCertificateRequestsApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/TestCertificateRequestsApiResult"
+              example:
+                apiMessages: []
+                data:
+                  transmissionHeader:
+                    dateFormatLastRevised: 2020-07-15
+                    dateTransmissionFileCreated: 2016-01-17
+                    countryOfOrigin: AU
+                    documentOriginator:
+                      organisationCode: ATC
+                    currentReceiver:
+                      organisationCode: ATT
+                    versionNumber: 31
+                    softwareIdentifier:
+                      softwareCompany: 1
+                      version: 1082
+                      programName: NETR
+                    abn: "72001967184"
+                  testCertificateRequestDetails:
+                    - certificateRequest:
+                        certificateType: F
+                        printRequirements: 0
+                        yieldType1: 2
+                        yieldType2: 4
+                        certificateReference: XXY1255
+                        clientsCrossReference: XXY1255
+                        bales: 96
+                        season: 21
+                        combinationRequest: N
+                        autoAdditionalMeasurementRequired: N
+                        additionalPrintRequirements: 0
+                        isPrintingTEAM3Hauteur: false
+                        certificateRequestDetails:
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDNumber: 15969534
+                              certificateIDSuffix: P
+                              certificateIDCD: 9
+                            woolbase: 63.16
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDNumber: 499
+                              certificateIDSuffix: P
+                              certificateIDCD: 7
+                            woolbase: 61.52
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDNumber: 499
+                              certificateIDSuffix: P
+                              certificateIDCD: 7
+                            woolbase: 61.44
+                            laboratory: 1
+                    - certificateRequest:
+                        certificateType: C
+                        printRequirements: 0
+                        yieldType1: 1
+                        yieldType2: 13
+                        certificateReference: XXY1205
+                        clientsCrossReference: XXZ1635
+                        bales: 96
+                        season: 21
+                        combinationRequest: C
+                        autoAdditionalMeasurementRequired: N
+                        additionalPrintRequirements: 3
+                        isPrintingTEAM3Hauteur: true
+                        certificateRequestDetails:
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDNumber: 499
+                              certificateIDSuffix: P
+                              certificateIDCD: 7
+                            woolbase: 53.74
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDNumber: 499
+                              certificateIDSuffix: P
+                              certificateIDCD: 7
+                            woolbase: 52.01
+                            laboratory: 1
+                          - certificateIdentity:
+                              certificateIDPrefix: 3
+                              certificateIDNumber: 499
+                              certificateIDSuffix: P
+                              certificateIDCD: 7
+                            woolbase: 54.26
+                            laboratory: 1
+        "204":
+          description: No Content
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages:
+                  - message: >-
+                      Resason:  You have requested data but there is nothing
+                      available.
+
+                      Action: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later.
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
         "404":
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
 components:
   schemas:
     TestCertificateRequests:
@@ -113,10 +382,12 @@ components:
       properties:
         transmissionHeader:
           $ref: "#/components/schemas/TransmissionHeader"
-        testCertificateRequestCollection:
+        transferConfig:
+          $ref: "#/components/schemas/TransferConfig"
+        testCertificateRequestDetails:
           type: array
           items:
-            $ref: "#/components/schemas/TestCertificateRequest"
+            $ref: "#/components/schemas/TestCertificateRequestDetail"
           nullable: true
       additionalProperties: false
     TransmissionHeader:
@@ -154,7 +425,10 @@ components:
         versionNumber:
           pattern: -?\d{1,2}
           type: integer
-          description: Two digits. e.g. 99
+          description: "The version number of the WIEDPUG Handbook that the transmission
+            relates to\r
+
+            Two digits. e.g. 99"
           format: int32
           nullable: true
         softwareIdentifier:
@@ -588,7 +862,36 @@ components:
       description: "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4:
         Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA"
       format: int32
-    TestCertificateRequest:
+    TransferConfig:
+      required:
+        - transferType
+      type: object
+      properties:
+        transferType:
+          $ref: "#/components/schemas/TransferType"
+        finalReceiverList:
+          type: array
+          items:
+            $ref: "#/components/schemas/Organisation"
+          nullable: true
+      additionalProperties: false
+      description: "Used to identify document transfer type: Restrict, Unrestrict, and
+        Exlcude.\r
+
+        \r
+
+        Only used for data retrieval. Do not include it in the
+        response."
+    TransferType:
+      enum:
+        - Unrestrict
+        - Restrict
+        - Exclude
+      type: string
+      description: "Unrestrict: Send document to all members<br />Restrict: Send
+        document to appointed members<br />Exclude: Send to all members
+        excluding the appointed members"
+    TestCertificateRequestDetail:
       required:
         - certificateRequest
       type: object
@@ -601,8 +904,11 @@ components:
     CertificateRequest:
       required:
         - bales
+        - certificateType
       type: object
       properties:
+        certificateType:
+          $ref: "#/components/schemas/CertificateType"
         printRequirements:
           $ref: "#/components/schemas/PrintRequirements"
         yieldType1:
@@ -640,6 +946,44 @@ components:
           maxLength: 6
           minLength: 1
           type: string
+          description: "This is a compound name for lot number and lot suffix, where the
+            lot \r
+
+            number is 5 numeric characters and the lot suffix is 1
+            alphanumeric\r
+
+            character.The suffix is used when a lot is broken up by
+            the original lot\r
+
+            number is retained; for example.If 2 bales of a 10-bale
+            lot got wet and\r
+
+            the 8 bales and the 2 bales are offered separately, one
+            could have a\r
+
+            suffix A and the other a suffix B.Where a suffix is not
+            used, the lot\r
+
+            number occupies the whole of the Lot Identity field and
+            is right justified.\r
+
+            \            \r
+
+            From:\r
+
+            \            \r
+
+            The current value that the Lot Identity is to be changed
+            from.\r
+
+            \r
+
+            To:\r
+
+            \r
+
+            The new value that the Lot Identity is to be changed
+            to."
           nullable: true
         printFlag:
           $ref: "#/components/schemas/PrintFlag"
@@ -663,10 +1007,27 @@ components:
 
             false: not print"
           nullable: true
-        commitType:
+        commitCombinationOrOmlForProcessing:
           maxLength: 1
           minLength: 1
-          type: string
+          type: boolean
+          description: "A boolean value to indicate whether to commit the combination/OML
+            request for processing\r
+
+            \            \r
+
+            true: Commit the combination/OML request for
+            processing\r
+
+            \            \r
+
+            false: Do not commit the combination/OML for processing
+            (request will be available via WOOLINK for viewing/committing)\r
+
+            \            \r
+
+            Note: For non-WOOLINK clients the request will be
+            committed for processing regardless of this field."
           nullable: true
         certificateRequestDetails:
           type: array
@@ -674,6 +1035,36 @@ components:
             $ref: "#/components/schemas/CertificateRequestDetail"
           nullable: true
       additionalProperties: false
+    CertificateType:
+      enum:
+        - B
+        - C
+        - F
+        - I
+        - J
+        - K
+        - L
+        - M
+        - N
+        - Q
+        - P
+        - R
+        - S
+        - U
+        - W
+        - X
+        - Y
+      type: string
+      description: "This field indicates what type of certificate is being
+        requested.<br />B: Bulk Class<br />C: Colour<br />F: Premium<br />I:
+        Subjectively Appraised Interlot<br />L: Combination<br />K: Length &
+        Strength Combination<br />L: Length & Strength<br />M: Objectively
+        Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class –
+        Quality Managedt<br />P: PTC<br />R: Guidance Report<br />S: Update Sale
+        Identity and Lot Identity on Core Test or OML’s for Sale. Catalogues
+        where certificate is not being printed<br />U: Uncombination of OML or
+        Combination certificate<br />W: Scoured Wool<br />X: Colour
+        Combination<br />Y: Post sale Core Test"
     PrintRequirements:
       enum:
         - 0
@@ -972,6 +1363,11 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+      description: "The certificate identity consists of a 1 digit prefix, followed by
+        an 8 digit certificate number, followed by a 1 character suffix,
+        followed by a 1 digit\r
+
+        check number.It is printed at the top of the certificate."
     CertificateIDPrefix:
       enum:
         - 2
@@ -1036,6 +1432,16 @@ components:
           maxLength: 4
           minLength: 1
           type: string
+          description: "The code for the area in which the wool was grown.\r
+
+            \r
+
+            For further information please go to this URL:\r
+
+            \r
+
+            http://www.awex.com.au/market-information/wool-statisti\
+            cal-areas-wsa/"
         bales:
           maxLength: 4
           minLength: 1
@@ -1052,8 +1458,12 @@ components:
     ApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           description: Contains response data. e.g. Auction Catalogue
           nullable: true
@@ -1065,16 +1475,10 @@ components:
         message:
           type: string
           nullable: true
-        warningCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/WarningCode"
-          nullable: true
-        informationCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/InformationCode"
-          nullable: true
+        warningCode:
+          $ref: "#/components/schemas/WarningCode"
+        informationCode:
+          $ref: "#/components/schemas/InformationCode"
       additionalProperties: false
     WarningCode:
       enum:
@@ -1207,11 +1611,15 @@ components:
             problem. e.g. 400, 403, or business relared problem etc.
           nullable: true
         errors:
-          $ref: "#/components/schemas/CustomErrors"
+          type: array
+          items:
+            $ref: "#/components/schemas/CustomError"
+          description: A collection of the erros
+          nullable: true
       additionalProperties: false
       description: A machine-readable format for specifying errors in HTTP API
         responses based on https://tools.ietf.org/html/rfc7807.
-    CustomErrors:
+    CustomError:
       type: object
       properties:
         errors:
@@ -1225,11 +1633,11 @@ components:
             e.g. errors: { "name": ["Product name is required"], "category":
             ["Category name cannot be longer than 20 characters."]  }'
           nullable: true
-        errorCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/ErrorCode"
+        errorMessage:
+          type: string
           nullable: true
+        errorCode:
+          $ref: "#/components/schemas/ErrorCode"
       additionalProperties: false
     ErrorCode:
       enum:
@@ -1308,8 +1716,12 @@ components:
     TestCertificateRequestsApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           $ref: "#/components/schemas/TestCertificateRequests"
       additionalProperties: false

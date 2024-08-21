@@ -29,9 +29,9 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = "43006014106"
                 },
-                OrganisationDetailCollection = new List<OrganisationDetail>
+                OrganisationInformationDetails = new List<OrganisationInformationDetail>
                 {
-                    new OrganisationDetail
+                    new OrganisationInformationDetail
                     {
                         Organisation = new Organisation
                             {
@@ -83,7 +83,7 @@ namespace Wiedpug.API.ExampleResponses
                         }
 
                     },
-                    new OrganisationDetail
+                    new OrganisationInformationDetail
                     {
                         Organisation = new Organisation
                             {
@@ -120,9 +120,9 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = "43006014106"
                 },
-                OrganisationDetailCollection = new List<OrganisationDetail>
+                OrganisationInformationDetails = new List<OrganisationInformationDetail>
                 {
-                    new OrganisationDetail
+                    new OrganisationInformationDetail
                     {
                         Id = "1",
                         Organisation = new Organisation
@@ -201,9 +201,9 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = "43006014106"
                 },
-                OrganisationDetailCollection = new List<OrganisationDetail>
+                OrganisationInformationDetails = new List<OrganisationInformationDetail>
                 {
-                    new OrganisationDetail
+                    new OrganisationInformationDetail
                     {
                         Organisation = new Organisation
                             {
@@ -314,7 +314,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult<OrganisationDetails>()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new OrganisationDetails 
                 {
                     TransmissionHeader = new TransmissionHeader
@@ -339,9 +339,9 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001925678"
                     },
-                    OrganisationDetailCollection = new List<OrganisationDetail>
+                    OrganisationInformationDetails = new List<OrganisationInformationDetail>
                     {
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "1",
                             Organisation = new Organisation
@@ -394,7 +394,7 @@ namespace Wiedpug.API.ExampleResponses
                             }
 
                         },
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "2",
                             Organisation = new Organisation
@@ -406,7 +406,7 @@ namespace Wiedpug.API.ExampleResponses
                             IndustryGroupId= IndustryGroupId.E,
                             IsTransmitter= false
                         },
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "3",
                             Organisation = new Organisation
@@ -475,7 +475,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new OrganisationDetails
                 {
                     TransmissionHeader = new TransmissionHeader
@@ -500,9 +500,9 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001925678"
                     },
-                    OrganisationDetailCollection = new List<OrganisationDetail>
+                    OrganisationInformationDetails = new List<OrganisationInformationDetail>
                     {
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "1",
                             Organisation = new Organisation
@@ -557,7 +557,7 @@ namespace Wiedpug.API.ExampleResponses
                             }
 
                         },
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "2",
                             Organisation = new Organisation
@@ -569,7 +569,7 @@ namespace Wiedpug.API.ExampleResponses
                             IndustryGroupId= IndustryGroupId.E,
                             IsTransmitter= false
                         },
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "3",
                             Organisation = new Organisation
@@ -638,7 +638,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new OrganisationDetails
                 {
                     TransmissionHeader = new TransmissionHeader
@@ -663,9 +663,9 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001925678"
                     },
-                    OrganisationDetailCollection = new List<OrganisationDetail>
+                    OrganisationInformationDetails = new List<OrganisationInformationDetail>
                     {
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "1",
                             Organisation = new Organisation
@@ -718,7 +718,7 @@ namespace Wiedpug.API.ExampleResponses
                             }
 
                         },
-                        new OrganisationDetail
+                        new OrganisationInformationDetail
                         {
                             Id = "2",
                             Organisation = new Organisation

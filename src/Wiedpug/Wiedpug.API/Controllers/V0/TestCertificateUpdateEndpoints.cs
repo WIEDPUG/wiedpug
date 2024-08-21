@@ -29,7 +29,7 @@ public static class TestCertificateUpdateEndpoints
             Summary = "Test Certificate Update",
             Description = "Sent to a test house to advise changes to an existing Certificate. A new Certificate will be reissued with the updated data."
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
@@ -39,6 +39,7 @@ public static class TestCertificateUpdateEndpoints
         group.MapPost("/data",
         [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForDataForTestCertificateUpdateExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataForTestCertificateUpdate200Example))]
+        [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -53,7 +54,8 @@ public static class TestCertificateUpdateEndpoints
         {
             Summary = "Retrieves the test certificate update"
         })
-        .Produces<ApiResult<TestCertificateUpdate>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<TestCertificateUpdate>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

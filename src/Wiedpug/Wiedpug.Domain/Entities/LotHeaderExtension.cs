@@ -7,11 +7,11 @@ namespace Wiedpug.Domain.Entities
     public class LotHeaderExtension
     {
         /// <summary>
-        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+        /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
         /// 
-        /// For records 31 and 55 this is the date core test was sampled or date combination/OML was requested. 
+        /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
         /// 
-        /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -55,19 +55,19 @@ namespace Wiedpug.Domain.Entities
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         /// <summary>
         /// Audit code used for verifying if AWEX-ID was issued by AWEX.

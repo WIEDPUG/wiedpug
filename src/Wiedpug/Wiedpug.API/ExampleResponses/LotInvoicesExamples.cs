@@ -42,7 +42,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                              new WoolSale
                              {
-                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
+                                WoolSaleHeaderLot = new Domain.Entities.WoolSaleHeaderLot
                                 {
                                     Season = 16,
                                     SaleIdentity = new SaleIdentity { SellingCentreType = "M", SaleNumber = 18 },
@@ -297,7 +297,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult<List<LotInvoice>>()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new List<LotInvoice>
                 {
                     new LotInvoice
@@ -329,7 +329,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                              new WoolSale
                              {
-                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots
+                                WoolSaleHeaderLot = new Domain.Entities.WoolSaleHeaderLot
                                 {
                                     Season = 16,
                                     SaleIdentity = new SaleIdentity

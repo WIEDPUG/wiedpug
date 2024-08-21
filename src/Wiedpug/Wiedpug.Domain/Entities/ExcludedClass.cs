@@ -11,7 +11,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    [Description("Cataglouge classes and sub-classes to be excluded in the request. Only required for request for Catalogue.Not applicable for other documents.")]
+    [Description("Cataglogue classes and sub-classes to be excluded in the request. Only required for request for Catalogue.Not applicable for other documents.")]
     public class ExcludedClass
     {
         [Required]

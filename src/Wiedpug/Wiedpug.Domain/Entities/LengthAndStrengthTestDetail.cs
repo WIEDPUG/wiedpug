@@ -4,12 +4,12 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class LengthAndStrengthTestDetails
+    public class LengthAndStrengthTestDetail
     {
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required LengthAndStrengthTestDetailsType lengthAndStrengthTestDetailsType { get; set; }
+        public required LengthAndStrengthTestDetailType lengthAndStrengthTestDetailsType { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -25,6 +25,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has 
+        /// been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; }
@@ -122,7 +126,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Anything issued prior to 1st July, 2006 will be based on the TEAM-2 calculations.
         ///
-        /// A check against the Date Issued field in the 51L or 51K record will determine which TEAM formula has been used.
+        /// A check against the Date Issued field in the Length and Strength Details record will determine which TEAM formula has been used.
         /// </summary>
         /// 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
@@ -159,13 +163,13 @@ namespace Wiedpug.Domain.Entities
         public int? ExpectedBarbe { get; set; }
 
         /// <summary>
-        /// Coefficient of Variation of Hauteur. NOTE: Refer to note in `Team3Hauteur`.
+        /// Coefficient of Variation of Hauteur. NOTE: Refer to note in Team3Hauteur.
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? Team3HauteurCvPercentage { get; set; }
 
         /// <summary>
-        /// Romaine. NOTE: Refer to note in `Team3Hauteur`.
+        /// Romaine. NOTE: Refer to note in Team3Hauteur.
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? Team3RomainePercentage { get; set; }

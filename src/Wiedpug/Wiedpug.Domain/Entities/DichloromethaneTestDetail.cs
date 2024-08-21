@@ -4,7 +4,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class DichloromethaneTestDetails
+    public class DichloromethaneTestDetail
     {
         [Required]
         [MinLength(1)]
@@ -19,7 +19,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required string Laboratory { get; set; }
+        public required Laboratory Laboratory { get; set; }
 
         [MinLength(4)]
         [MaxLength(9)]

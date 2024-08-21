@@ -3,7 +3,7 @@ using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Aggregates.StatementsAggregate
 {
-    public class Statement
+    public class StatementInformationDetail
     {
         [Required]
         public required StatementHeader StatementHeader { get; set; }

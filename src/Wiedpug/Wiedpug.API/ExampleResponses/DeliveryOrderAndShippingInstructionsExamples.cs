@@ -113,10 +113,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 OrganisationCode = "ABT",
                                             },
-                                            LotIdentityOrGroupName = new LotIdentityOrGroupName
-                                            {
-                                                LotIdentity = "552467"
-                                            },
+                                            LotIdentityOrGroupNumber = "552467",
                                             Bales = 30,
                                             Gross = new Weight{
                                                 Value = 1530.00,
@@ -217,7 +214,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new List<DeliveryOrdersAndShippingInstruction>
                 {
                         new DeliveryOrdersAndShippingInstruction
@@ -311,10 +308,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                  OrganisationCode = "MBC",
                                             },
-                                            LotIdentityOrGroupName = new LotIdentityOrGroupName
-                                            {
-                                                LotIdentity = "552467"
-                                            },
+                                            LotIdentityOrGroupNumber = "552467",
                                             Bales = 30,
                                             Gross = new Weight{
                                                 Value = 1520.00,

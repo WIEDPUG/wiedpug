@@ -126,7 +126,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data =  new TestStatus()
                 {
                     TransmissionHeader = new TransmissionHeader

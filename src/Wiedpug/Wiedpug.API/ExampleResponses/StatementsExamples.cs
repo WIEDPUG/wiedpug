@@ -38,9 +38,9 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = "72001967184"
                 },
-                StatementCollection = new List<Statement>
+                StatementInformationDetails = new List<StatementInformationDetail>
                 {
-                    new Statement
+                    new StatementInformationDetail
                     {
                         StatementHeader = new StatementHeader
                         {
@@ -184,7 +184,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new Statements
                 {
                     TransmissionHeader = new TransmissionHeader
@@ -209,9 +209,9 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001967184"
                     },
-                    StatementCollection = new List<Statement>
+                    StatementInformationDetails = new List<StatementInformationDetail>
                 {
-                    new Statement
+                    new StatementInformationDetail
                     {
                         StatementHeader = new StatementHeader
                         {

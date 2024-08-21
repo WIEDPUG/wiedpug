@@ -9,7 +9,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class CoreTestDetails
+    public class CoreTestDetail
     {
         [Required]
         [MinLength(1)]

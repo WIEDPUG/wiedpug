@@ -16,13 +16,11 @@ namespace Wiedpug.Domain.Aggregates.LotInvoicesAggregate
         [Required]
         public required LotInvoiceExtension LotInvoiceExtension { get; set; }
 
-        public TestDetails? TestDetails { get; set; }
+        public TestDetail? TestDetail { get; set; }
 
-        public ColourTestDetails? ColourTestDetails { get; set; }
+        public ColourTestDetail? ColourTestDetail { get; set; }
 
-        public LengthAndStrengthTestDetails? LengthAndStrengthTestDetails { get; set; }
-
-        public CombinationDetails? CombinationDetails { get; set; }
+        public LengthAndStrengthTestDetail? LengthAndStrengthTestDetail { get; set; }
 
         [Required]
         public required List<LotHeaderVendorDeclaration> LotHeaderVendorDeclarations { set; get; }

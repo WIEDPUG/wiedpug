@@ -20,6 +20,6 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public TransferConfig? TransferConfig { get; set; }
 
         [Required]
-        public required List<CatalogueWoolSaleHeader> WoolSaleHeaders { get; set; }        
+        public required List<WoolSaleHeader> WoolSaleHeaders { get; set; }        
     }
 }

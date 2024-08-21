@@ -14,6 +14,9 @@ namespace Wiedpug.Domain.Entities
 {
     public class CertificateRequest
     {
+        [Required]
+        public required CertificateType CertificateType { get; set; }
+
         [MinLength(1)]
         [MaxLength(1)]
         public PrintRequirements? PrintRequirements { get; set; }
@@ -74,6 +77,23 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(6)]
         public SaleIdentity? SaleIdentity { get; set; }
 
+        /// <summary>
+        /// This is a compound name for lot number and lot suffix, where the lot 
+        /// number is 5 numeric characters and the lot suffix is 1 alphanumeric
+        /// character.The suffix is used when a lot is broken up by the original lot
+        /// number is retained; for example.If 2 bales of a 10-bale lot got wet and
+        /// the 8 bales and the 2 bales are offered separately, one could have a
+        /// suffix A and the other a suffix B.Where a suffix is not used, the lot
+        /// number occupies the whole of the Lot Identity field and is right justified.
+        ///
+        /// From:
+        ///
+        /// The current value that the Lot Identity is to be changed from.
+        /// 
+        /// To:
+        /// 
+        /// The new value that the Lot Identity is to be changed to.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(6)]
         public string? LotIdentity { get; set; }
@@ -105,9 +125,18 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(5)]
         public bool? IsPrintingTEAM3Hauteur { get; set; }
 
+        /// <summary>
+        /// A boolean value to indicate whether to commit the combination/OML request for processing
+        ///
+        /// true: Commit the combination/OML request for processing
+        ///
+        /// false: Do not commit the combination/OML for processing (request will be available via WOOLINK for viewing/committing)
+        ///
+        /// Note: For non-WOOLINK clients the request will be committed for processing regardless of this field.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(1)]
-        public string? CommitType { get; set; }
+        public bool? CommitCombinationOrOmlForProcessing { get; set; }
 
         public List<CertificateRequestDetail>? CertificateRequestDetails { get; set; }
     }

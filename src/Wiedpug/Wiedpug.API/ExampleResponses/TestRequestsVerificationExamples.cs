@@ -57,7 +57,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Value = 1.00,
                                 Unit = WeightUnit.Kilograms
                             },
-                            LotIdentityOrGroupName = "567545",
+                            LotIdentityOrGroupNumber = "567545",
                         WeightNote = new WeightNote{
                             Prefix = "L",
                             Suffix = 1234567,
@@ -95,7 +95,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsDarkAndMedullatedFibreTestRequired = false,
                             IsPesticideResidueTestRequired = false
                         },
-                        ContractLimitRequirements = new ContractLimitRequirements
+                        ContractLimitRequirement = new ContractLimitRequirement
                         {
                             MicronMin = 15.5,
                             MicronMax = 25.0,
@@ -124,7 +124,7 @@ namespace Wiedpug.API.ExampleResponses
                             LACHauteurCVPercentMin = 10,
                             LACHauteurCVPercentMax = 20
                         },
-                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
+                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                         {
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
@@ -149,7 +149,7 @@ namespace Wiedpug.API.ExampleResponses
                             Bales = 1,
                             Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                            LotIdentityOrGroupName = "567545",
+                            LotIdentityOrGroupNumber = "567545",
                         WeightNote = new WeightNote{
                             Prefix = "L",
                             Suffix = 1234567,
@@ -184,7 +184,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsDarkAndMedullatedFibreTestRequired = true,
                             IsPesticideResidueTestRequired = true
                         },
-                        ContractLimitRequirements = new ContractLimitRequirements
+                        ContractLimitRequirement = new ContractLimitRequirement
                         {
                             MicronMin = 12.3,
                             MicronMax = 18.6,
@@ -217,7 +217,7 @@ namespace Wiedpug.API.ExampleResponses
                             LACHauteurCVPercentMin = 13,
                             LACHauteurCVPercentMax = 27
                         },
-                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
+                        DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                         {
                             DeclaredBreed = DeclaredBreed.A,
                             DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
@@ -281,7 +281,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new TestRequestsVerification()
                 {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
@@ -318,7 +318,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Bales = 1,
                                 Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                                 Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                                LotIdentityOrGroupName = "567545",
+                                LotIdentityOrGroupNumber = "567545",
                                 WeightNote = new WeightNote {
                                     Prefix = "L",
                                     Suffix = 1234567,
@@ -349,7 +349,7 @@ namespace Wiedpug.API.ExampleResponses
                                 IsDarkAndMedullatedFibreTestRequired = false,
                                 IsPesticideResidueTestRequired = false
                             },
-                            ContractLimitRequirements = new ContractLimitRequirements
+                            ContractLimitRequirement = new ContractLimitRequirement
                             {
                                 MicronMin = 15.5,
                                 MicronMax = 25.0,
@@ -374,7 +374,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LACHauteurCVPercentMin = 10,
                                 LACHauteurCVPercentMax = 20
                             },
-                            DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
+                            DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                             {
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,
@@ -403,7 +403,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Value = 1.00,
                                     Unit = WeightUnit.Kilograms
                                 },
-                                LotIdentityOrGroupName = "567545",
+                                LotIdentityOrGroupNumber = "567545",
                                 WeightNote = new WeightNote {
                                     Prefix = "L",
                                     Suffix = 1234567,
@@ -434,7 +434,7 @@ namespace Wiedpug.API.ExampleResponses
                                 IsDarkAndMedullatedFibreTestRequired = true,
                                 IsPesticideResidueTestRequired = true
                             },
-                            ContractLimitRequirements = new ContractLimitRequirements
+                            ContractLimitRequirement = new ContractLimitRequirement
                             {
                                 MicronMin = 12.3,
                                 MicronMax = 18.6,
@@ -467,7 +467,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LACHauteurCVPercentMin = 13,
                                 LACHauteurCVPercentMax = 27
                             },
-                            DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetails
+                            DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                             {
                                 DeclaredBreed = DeclaredBreed.A,
                                 DeclaredWoolSubCategory = DeclaredWoolSubCategory.N,

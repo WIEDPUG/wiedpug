@@ -8,10 +8,10 @@ using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
 {
-    public class CatalogueWoolSaleHeader
+    public class WoolSaleHeader
     {
         [Required]
-        public required WoolSaleHeaderLots WoolSaleHeaderLots { get; set; }
+        public required WoolSaleHeaderLot WoolSaleHeaderLot { get; set; }
        
 
         [Required]

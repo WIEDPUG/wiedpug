@@ -43,11 +43,11 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             TransferType = TransferType.Unrestrict
                         },
-                PaymentAdviceDetailList = new List<PaymentAdviceDetail>
+                PaymentAdviceDetails = new List<PaymentAdviceDetail>
                 {
                     new PaymentAdviceDetail
                     {
-                            WoolSaleHeaderLots = new WoolSaleHeaderLots
+                            WoolSaleHeaderLot = new WoolSaleHeaderLot
                                 {
                                     Season = 16,
                                     SaleIdentity =new SaleIdentity
@@ -158,7 +158,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new List<PaymentAdvice>
                 {
                         new PaymentAdvice
@@ -185,11 +185,11 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001967184"
                     },
-                    PaymentAdviceDetailList = new List<PaymentAdviceDetail>
+                    PaymentAdviceDetails = new List<PaymentAdviceDetail>
                 {
                     new PaymentAdviceDetail
                     {
-                                WoolSaleHeaderLots = new WoolSaleHeaderLots
+                                WoolSaleHeaderLot = new WoolSaleHeaderLot
                                 {
                                     Season = 16,
                                     SaleIdentity = new SaleIdentity

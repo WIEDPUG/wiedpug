@@ -24,6 +24,52 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/DarkAndMedullatedFibreRiskVerification"
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: 2020-07-15
+                dateTransmissionFileCreated: 2016-01-17
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ABC
+                currentReceiver:
+                  organisationCode: ATW
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 8
+                  version: 1082
+                  programName: NETR
+                abn: "72001967184"
+              darkAndMedullatedFibreRiskDetails:
+                - declaredBreed: A
+                  declaredWoolSubCategory: W
+                  declaredWoolCategory: P
+                  declaredQualifierCodes:
+                    - A
+                    - H
+                    - D
+                    - H
+                    - S
+                    - T
+                  declaredQualifierScale: 1
+                  isContactingWithExoticBreeds: true
+                  isCrutched: true
+                  isCrutchedWithin3MonthsOfShearing: false
+                  sex: E
+                  ageFrom: 12
+                  ageTo: 23
+                  darkAndMedullatedFibreRiskBroker: 1
+                  darkandMedullatedFibreRisk: D
+                  certificateIdentity:
+                    certificateIDPrefix: 3
+                    certificateIDNumber: 499
+                    certificateIDSuffix: P
+                    certificateIDCD: 7
+                  woolBase: 32.14
+                  dmfrErrorFields:
+                    - "12"
+                    - "18"
+                    - "9"
+                    - "2"
         required: true
       responses:
         "200":
@@ -31,31 +77,63 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages: []
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
   /v0/dark-and-medullated-fibre-risk-verification/data:
     post:
       tags:
@@ -67,6 +145,22 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/RequestForData"
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: 2020-07-15
+                dateTransmissionFileCreated: 2016-01-17
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ABC
+                currentReceiver:
+                  organisationCode: ATW
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 8
+                  version: 1082
+                  programName: NETR
+                abn: "72001967184"
+              requestForDataType: {}
         required: true
       responses:
         "200":
@@ -74,37 +168,132 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DarkAndMedullatedFibreRiskVerificationApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/DarkAndMedullatedFibreRiskVerificationApiResult"
+              example:
+                apiMessages: []
+                data:
+                  transmissionHeader:
+                    dateFormatLastRevised: 2020-07-15
+                    dateTransmissionFileCreated: 2016-01-17
+                    countryOfOrigin: AU
+                    documentOriginator:
+                      organisationCode: ABC
+                    currentReceiver:
+                      organisationCode: ATW
+                    versionNumber: 31
+                    softwareIdentifier:
+                      softwareCompany: 8
+                      version: 1082
+                      programName: NETR
+                    abn: "72001967184"
+                  darkAndMedullatedFibreRiskDetails:
+                    - declaredBreed: A
+                      declaredWoolSubCategory: W
+                      declaredWoolCategory: P
+                      declaredQualifierCodes:
+                        - A
+                        - H
+                        - D
+                        - H
+                        - S
+                        - T
+                      declaredQualifierScale: 1
+                      isContactingWithExoticBreeds: true
+                      isCrutched: true
+                      isCrutchedWithin3MonthsOfShearing: false
+                      sex: E
+                      ageFrom: 12
+                      ageTo: 23
+                      darkAndMedullatedFibreRiskBroker: 1
+                      darkandMedullatedFibreRisk: D
+                      certificateIdentity:
+                        certificateIDPrefix: 3
+                        certificateIDNumber: 499
+                        certificateIDSuffix: P
+                        certificateIDCD: 7
+                      woolBase: 32.14
+                      dmfrErrorFields:
+                        - "12"
+                        - "18"
+                        - "9"
+                        - "2"
+        "204":
+          description: No Content
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages:
+                  - message: >-
+                      Resason:  You have requested data but there is nothing
+                      available.
+
+                      Action: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later.
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
         "404":
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
 components:
   schemas:
     DarkAndMedullatedFibreRiskVerification:
@@ -116,10 +305,10 @@ components:
           $ref: "#/components/schemas/TransmissionHeader"
         transferConfig:
           $ref: "#/components/schemas/TransferConfig"
-        darkAndMedullatedFibreRiskDetailsCollection:
+        darkAndMedullatedFibreRiskDetails:
           type: array
           items:
-            $ref: "#/components/schemas/DarkAndMedullatedFibreRiskDetails"
+            $ref: "#/components/schemas/DarkAndMedullatedFibreRiskDetail"
           nullable: true
       additionalProperties: false
     TransmissionHeader:
@@ -157,7 +346,10 @@ components:
         versionNumber:
           pattern: -?\d{1,2}
           type: integer
-          description: Two digits. e.g. 99
+          description: "The version number of the WIEDPUG Handbook that the transmission
+            relates to\r
+
+            Two digits. e.g. 99"
           format: int32
           nullable: true
         softwareIdentifier:
@@ -620,7 +812,7 @@ components:
       description: "Unrestrict: Send document to all members<br />Restrict: Send
         document to appointed members<br />Exclude: Send to all members
         excluding the appointed members"
-    DarkAndMedullatedFibreRiskDetails:
+    DarkAndMedullatedFibreRiskDetail:
       required:
         - ageFrom
         - declaredBreed
@@ -714,8 +906,7 @@ components:
           type: array
           items:
             type: string
-          description: A list of DMFR Error Field, each field should be a numeric string
-            with up to two digits.
+          description: A list of attributes in error.
           nullable: true
       additionalProperties: false
     DeclaredBreed:
@@ -824,9 +1015,12 @@ components:
         - "5"
         - "6"
       type: string
-      description: "E: Error in Processing<br />N: Not Applicable<br />D: Not
-        Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk
-        Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6"
+      description: "The following codes are applicable to lots sampled on or after 1st
+        July, 2004. Spaces will be returned for lots sampled before this date
+        where data is not provided.<br />E: Error in Processing<br />N: Not
+        Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2:
+        Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk
+        Level 5<br />6: Risk Level 6"
     CertificateIdentity:
       required:
         - certificateIDCD
@@ -850,6 +1044,11 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+      description: "The certificate identity consists of a 1 digit prefix, followed by
+        an 8 digit certificate number, followed by a 1 character suffix,
+        followed by a 1 digit\r
+
+        check number.It is printed at the top of the certificate."
     CertificateIDPrefix:
       enum:
         - 2
@@ -887,8 +1086,12 @@ components:
     ApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           description: Contains response data. e.g. Auction Catalogue
           nullable: true
@@ -900,16 +1103,10 @@ components:
         message:
           type: string
           nullable: true
-        warningCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/WarningCode"
-          nullable: true
-        informationCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/InformationCode"
-          nullable: true
+        warningCode:
+          $ref: "#/components/schemas/WarningCode"
+        informationCode:
+          $ref: "#/components/schemas/InformationCode"
       additionalProperties: false
     WarningCode:
       enum:
@@ -1042,11 +1239,15 @@ components:
             problem. e.g. 400, 403, or business relared problem etc.
           nullable: true
         errors:
-          $ref: "#/components/schemas/CustomErrors"
+          type: array
+          items:
+            $ref: "#/components/schemas/CustomError"
+          description: A collection of the erros
+          nullable: true
       additionalProperties: false
       description: A machine-readable format for specifying errors in HTTP API
         responses based on https://tools.ietf.org/html/rfc7807.
-    CustomErrors:
+    CustomError:
       type: object
       properties:
         errors:
@@ -1060,11 +1261,11 @@ components:
             e.g. errors: { "name": ["Product name is required"], "category":
             ["Category name cannot be longer than 20 characters."]  }'
           nullable: true
-        errorCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/ErrorCode"
+        errorMessage:
+          type: string
           nullable: true
+        errorCode:
+          $ref: "#/components/schemas/ErrorCode"
       additionalProperties: false
     ErrorCode:
       enum:
@@ -1143,8 +1344,12 @@ components:
     DarkAndMedullatedFibreRiskVerificationApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           $ref: "#/components/schemas/DarkAndMedullatedFibreRiskVerification"
       additionalProperties: false

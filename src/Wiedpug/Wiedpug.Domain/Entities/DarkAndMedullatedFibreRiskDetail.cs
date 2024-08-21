@@ -11,7 +11,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class DarkAndMedullatedFibreRiskDetails
+    public class DarkAndMedullatedFibreRiskDetail
     {
         /// <summary>
         /// Enum type for declared breed.
@@ -124,7 +124,7 @@ namespace Wiedpug.Domain.Entities
         public double? WoolBase { get; set; }
 
         /// <summary>
-        /// A list of DMFR Error Field, each field should be a numeric string with up to two digits.
+        /// A list of attributes in error.
         /// </summary>
         public List<string>? DMFRErrorFields { get; set; }
     }

@@ -40,6 +40,6 @@ namespace Wiedpug.API.Model
         /// <summary>
         /// A collection of the erros
         /// </summary>
-        public CustomErrors? Errors { get; set; }
+        public List<CustomError>? Errors { get; set; }
     }
 }

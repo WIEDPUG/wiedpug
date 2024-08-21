@@ -8,8 +8,17 @@ namespace Wiedpug.Domain.Aggregates
     {
         [Required]
         public required TransmissionHeader TransmissionHeader { get; set; } //31
-                        
-        public List<TestCertificateRequest>? TestCertificateRequestCollection { get; set; } //32A
+
+        /// <summary>
+        /// Used to define document transfer type: unrestricted, restricted or exclusion.
+        /// 
+        /// Should only be required for document upload/create/update.
+        /// 
+        /// Should be excluded when returning document to members.
+        /// </summary>
+        public TransferConfig? TransferConfig { get; set; }
+
+        public List<TestCertificateRequestDetail>? TestCertificateRequestDetails { get; set; } //32A
 
     }
 }

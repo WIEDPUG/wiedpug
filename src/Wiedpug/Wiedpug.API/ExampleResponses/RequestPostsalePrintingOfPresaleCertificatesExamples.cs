@@ -127,7 +127,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new RequestPostsalePrintingOfPresaleCertificates
                 {
                     TransmissionHeader = new TransmissionHeader

@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.TestCertificateAggregate.TestCertificates" Collapsed="true">
-    <Position X="23.25" Y="11" Width="1.5" />
-    <AssociationLine Name="TestCertificateCollection" Type="Wiedpug.Domain.Entities.TestCertificate">
+    <Position X="25.5" Y="14.25" Width="2.75" />
+    <AssociationLine Name="TestCertificateDetails" Type="Wiedpug.Domain.Entities.TestCertificateDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="26.875" Y="14.25" />
+        <Point X="26.875" Y="13.875" />
+        <Point X="25" Y="13.875" />
+        <Point X="25" Y="11.312" />
+      </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.395" Y="0.195" />
+        <Position X="-3.222" Y="2.17" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAQCAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\TestCertificateAggregate\TestCertificates.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -16,212 +22,188 @@
       <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="TestCertificateCollection" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.TestCertificate" Collapsed="true">
-    <Position X="28.5" Y="11" Width="2.25" />
-    <AssociationLine Name="TestDataHeader" Type="Wiedpug.Domain.Entities.TestDataHeader" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="28.688" Y="11" />
-        <Point X="28.688" Y="9.031" />
-        <Point X="25" Y="9.031" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="CombinationDetails" Type="Wiedpug.Domain.Entities.CombinationDetails" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="29.438" Y="11" />
-        <Point X="29.438" Y="6.559" />
-        <Point X="29.469" Y="6.559" />
-        <Point X="29.469" Y="6.062" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="DichloromethaneTestDetails" Type="Wiedpug.Domain.Entities.DichloromethaneTestDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="29.75" Y="11" />
-        <Point X="29.75" Y="7.015" />
-        <Point X="34" Y="7.015" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ConditioningTestDetails" Type="Wiedpug.Domain.Entities.ConditioningTestDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="30.25" Y="11" />
-        <Point X="30.25" Y="8.281" />
-        <Point X="35.25" Y="8.281" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="LengthAfterCardingTestDetails" Type="Wiedpug.Domain.Entities.LengthAfterCardingTestDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="29.125" Y="11" />
-        <Point X="29.125" Y="7.281" />
-        <Point X="24.75" Y="7.281" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="LengthAdjustmentNoteDetails" Type="Wiedpug.Domain.Entities.AdjustmentNoteDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="29.688" Y="11.562" />
-        <Point X="29.688" Y="17.531" />
-        <Point X="27.5" Y="17.531" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.22" Y="-0.394" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="SublotCertificateNumbers" Type="Wiedpug.Domain.Entities.CertificateIdentity" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="29.125" Y="11.562" />
-        <Point X="29.125" Y="15.89" />
-        <Point X="25.25" Y="15.89" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.162" Y="0.081" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="FibreDiameterHistograms" Type="Wiedpug.Domain.Entities.FibreDiameterHistogram" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="30.625" Y="11.562" />
-        <Point X="30.625" Y="13.39" />
-        <Point X="35.5" Y="13.39" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Bales" Type="Wiedpug.Domain.Entities.Bale" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="30.5" Y="11" />
-        <Point X="30.5" Y="9.781" />
-        <Point X="34.5" Y="9.781" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="LengthAndStrengthTestDetailsCollection" Type="Wiedpug.Domain.Entities.LengthAndStrengthTestDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="30.125" Y="11.562" />
-        <Point X="30.125" Y="15.695" />
-        <Point X="33.5" Y="15.695" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="TestDetailsCollection" Type="Wiedpug.Domain.Entities.TestDetails" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="28.75" Y="11.562" />
-        <Point X="28.75" Y="13.531" />
-        <Point X="25.25" Y="13.531" />
-      </Path>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAQAAAAAIgASAAAAAAAEQAAAggACAQAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\TestCertificate.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="TestDataHeader" />
-      <Property Name="CombinationDetails" />
-      <Property Name="DichloromethaneTestDetails" />
-      <Property Name="ConditioningTestDetails" />
-      <Property Name="LengthAfterCardingTestDetails" />
-      <Property Name="LengthAdjustmentNoteDetails" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="SublotCertificateNumbers" />
-      <Property Name="FibreDiameterHistograms" />
-      <Property Name="Bales" />
-      <Property Name="ColourTestDetailsCollection" />
-      <Property Name="LengthAndStrengthTestDetailsCollection" />
-      <Property Name="TestDetailsCollection" />
+      <Property Name="TestCertificateDetails" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="19.75" Y="12.5" Width="1.75" />
+    <Position X="30.5" Y="14.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.CombinationDetails" Collapsed="true">
-    <Position X="27.5" Y="5.5" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAQEEAAAAAAAgQAAAABAAAACQAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\CombinationDetails.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.ConditioningTestDetails" Collapsed="true">
-    <Position X="35.25" Y="8" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAIAAAwADQAAgEBAAAAAADAAIAAAIAgQCAAAAAA=</HashCode>
-      <FileName>Entities\ConditioningTestDetails.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.DichloromethaneTestDetails" Collapsed="true">
-    <Position X="34" Y="6.75" Width="2.25" />
+  <Class Name="Wiedpug.Domain.Entities.DichloromethaneTestDetail" Collapsed="true">
+    <Position X="19.25" Y="8.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAwACQAAAEAAAIAAAAAAIAAAAAgAAAAAAAA=</HashCode>
-      <FileName>Entities\DichloromethaneTestDetails.cs</FileName>
+      <FileName>Entities\DichloromethaneTestDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogram" Collapsed="true">
-    <Position X="35.5" Y="13.25" Width="2" />
+  <Class Name="Wiedpug.Domain.Entities.AdjustmentNoteDetail" Collapsed="true">
+    <Position X="29" Y="9.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\FibreDiameterHistogram.cs</FileName>
+      <HashCode>AAAAAAAABAAAAAAgAAAAAAQICAAACAAAAgIIAAAAAAQ=</HashCode>
+      <FileName>Entities\AdjustmentNoteDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.AdjustmentNoteDetails" Collapsed="true">
-    <Position X="25.5" Y="17.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAEQICAAACAAAAgIIAAAAAAQ=</HashCode>
-      <FileName>Entities\AdjustmentNoteDetails.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.LengthAfterCardingTestDetails" Collapsed="true">
-    <Position X="22" Y="7" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAQAAAABACgICAAAAAAAAAAgAAAAAAAA=</HashCode>
-      <FileName>Entities\LengthAfterCardingTestDetails.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthTestDetails" Collapsed="true">
-    <Position X="33.5" Y="15.5" Width="3.25" />
+  <Class Name="Wiedpug.Domain.Entities.LengthAndStrengthTestDetail" Collapsed="true">
+    <Position X="28.5" Y="12.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAABEEEAwACRAEEEAAAAAAGAAAIhUAAIoAAAAAAAE=</HashCode>
-      <FileName>Entities\LengthAndStrengthTestDetails.cs</FileName>
+      <FileName>Entities\LengthAndStrengthTestDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.CertificateIdentity" Collapsed="true">
-    <Position X="23.75" Y="15.75" Width="1.5" />
+    <Position X="28.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgACAAAgAAAAA=</HashCode>
       <FileName>Entities\CertificateIdentity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TestDataHeader" Collapsed="true">
-    <Position X="22.75" Y="8.75" Width="2.25" />
+    <Position X="19" Y="13.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAIAAAEAAQhBAAAIEAABAIAIAAAACAMYAgEEAAAIAIQ=</HashCode>
+      <HashCode>AAIAAAEAAQgBAAEMAAABAIAIAAAACAMYAgEEAAAIAIQ=</HashCode>
       <FileName>Entities\TestDataHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="19.75" Y="11" Width="1.5" />
+    <Position X="26.5" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.Bale" Collapsed="true">
-    <Position X="34.5" Y="9.5" Width="1.5" />
+    <Position X="23.75" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Bale.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaleHeader" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="BaleDetails" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.ColourTestDetails" Collapsed="true">
-    <Position X="35.25" Y="11.25" Width="2.5" />
+  <Class Name="Wiedpug.Domain.Entities.ColourTestDetail" Collapsed="true">
+    <Position X="23" Y="6.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>gAEQAIIAcBwACYAAIAAAAAAEAAAAJEAAQFgAAAQAAAA=</HashCode>
-      <FileName>Entities\ColourTestDetails.cs</FileName>
+      <FileName>Entities\ColourTestDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.TestDetails" Collapsed="true">
-    <Position X="23.75" Y="13.25" Width="1.5" />
+  <Class Name="Wiedpug.Domain.Entities.TestCertificateDetail" Collapsed="true">
+    <Position X="23" Y="10.75" Width="2.75" />
+    <AssociationLine Name="AdjustmentNoteDetail" Type="Wiedpug.Domain.Entities.AdjustmentNoteDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.5" Y="10.75" />
+        <Point X="25.5" Y="9.531" />
+        <Point X="29" Y="9.531" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ColourTestDetail" Type="Wiedpug.Domain.Entities.ColourTestDetail" FixedFromPoint="true">
+      <Path>
+        <Point X="24.5" Y="10.75" />
+        <Point X="24.5" Y="7.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ConditioningTestDetail" Type="Wiedpug.Domain.Entities.ConditioningTestDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="23.25" Y="11.312" />
+        <Point X="23.25" Y="12.531" />
+        <Point X="20.75" Y="12.531" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DichloromethaneTestDetail" Type="Wiedpug.Domain.Entities.DichloromethaneTestDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="23.438" Y="10.75" />
+        <Point X="23.438" Y="9.031" />
+        <Point X="21.5" Y="9.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LengthAndStrengthTestDetail" Type="Wiedpug.Domain.Entities.LengthAndStrengthTestDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.375" Y="11.312" />
+        <Point X="25.375" Y="12.39" />
+        <Point X="28.5" Y="12.39" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="SublotCertificateNumbers" Type="Wiedpug.Domain.Entities.CertificateIdentity" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.062" Y="10.75" />
+        <Point X="25.062" Y="8.531" />
+        <Point X="28.25" Y="8.531" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TestDetail" Type="Wiedpug.Domain.Entities.TestDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="23.875" Y="10.75" />
+        <Point X="23.875" Y="7.781" />
+        <Point X="21.5" Y="7.781" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAECAAACwAAQAAAEAZAAQAAAAAIAAAAAgEAQAIQAA=</HashCode>
-      <FileName>Entities\TestDetails.cs</FileName>
+      <HashCode>AAAAEAAEAIgAAAAAQAAAAAAAEAAACAQAEQABAAAAAAA=</HashCode>
+      <FileName>Entities\TestCertificateDetail.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AdjustmentNoteDetail" />
+      <Property Name="ColourTestDetail" />
+      <Property Name="ConditioningTestDetail" />
+      <Property Name="DichloromethaneTestDetail" />
+      <Property Name="LengthAfterCardingTestDetail" />
+      <Property Name="LengthAndStrengthTestDetail" />
+      <Property Name="TestDataHeader" />
+      <Property Name="TestDetail" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bales" />
+      <Property Name="SublotCertificateNumbers" />
+      <Property Name="FibreDiameterHistograms" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.ConditioningTestDetail" Collapsed="true">
+    <Position X="18.75" Y="12.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAwgDQAAgEAAAAAAABAIIAAAEAgQACAAAAA=</HashCode>
+      <FileName>Entities\ConditioningTestDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.LengthAfterCardingTestDetail" Collapsed="true">
+    <Position X="18.25" Y="10.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAAAAQAAQAAAAAAAAAAAgAAAAAAAAgAQAAABAA=</HashCode>
+      <FileName>Entities\LengthAfterCardingTestDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TestDetail" Collapsed="true">
+    <Position X="20" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAECQEACwAAQAAgUAQAARAAAACYAAAAAgEAQAIQAA=</HashCode>
+      <FileName>Entities\TestDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleDetail" Collapsed="true">
+    <Position X="20.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABQIBAAAAAAAAABAAAAAAQEAACAAAAA=</HashCode>
+      <FileName>ValueObject\BaleDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.ValueObject.BaleHeader" Collapsed="true">
+    <Position X="23.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAACAAAAABAACAAAAAAAAAABAAA=</HashCode>
+      <FileName>ValueObject\BaleHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogram" Collapsed="true">
+    <Position X="27.75" Y="10.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\FibreDiameterHistogram.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

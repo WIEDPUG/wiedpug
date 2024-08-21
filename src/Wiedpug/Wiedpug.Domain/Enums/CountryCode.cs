@@ -24,23 +24,5 @@ namespace Wiedpug.Domain.Enums
 
         [Description("TW: Taiwan")]
         TW,
-
-        // [Description("FR: France")]
-        // FR,
-  
-        // [Description("ZA: South Africa")]
-        // ZA,
-
-        // [Description("BE: Belgium")]
-        // BE,
-
-        // [Description("GB: United Kingdom of Great Britain")]
-        // GB,
-
-        // [Description("NL: Netherlands")]
-        // NL,
-
-        // [Description("US: USA")]
-        // US,
     }
 }

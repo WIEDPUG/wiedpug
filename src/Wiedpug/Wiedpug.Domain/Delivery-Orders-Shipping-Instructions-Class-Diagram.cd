@@ -46,7 +46,7 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="8.75" Y="4" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -93,7 +93,7 @@
   <Class Name="Wiedpug.Domain.Entities.DeliveryOrderDetail" Collapsed="true">
     <Position X="5.75" Y="9.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ACEAAgAAYAAAAAEAAQQQAAAAAACCQAAAAAAAIgAgQAA=</HashCode>
+      <HashCode>ACEEAgAAYAACAAEAAQQQAAAAAAACQAAAAAAAIgAgQAA=</HashCode>
       <FileName>Entities\DeliveryOrderDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -120,21 +120,16 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.DeliveryOrderLotHeader" Collapsed="true">
-    <Position X="8.5" Y="12" Width="1.5" />
+    <Position X="8.5" Y="12" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAQAQhAQAAIEQAIAIAAAARQCAAAQA0kBABAgAA=</HashCode>
+      <HashCode>AAAEAAAQAQhAQAEIAQAIAIAAAARQCAAAQA0kBABAgAA=</HashCode>
       <FileName>Entities\DeliveryOrderLotHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.Bale" Collapsed="true">
     <Position X="4.75" Y="12.75" Width="2.25" />
-    <AssociationLine Name="PropertyIdentificationCodes" Type="System.String">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.164" Y="0.124" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Bale.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -142,7 +137,6 @@
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="BaleDetails" />
-      <Property Name="PropertyIdentificationCodes" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.BaleDetail" Collapsed="true">
@@ -158,11 +152,6 @@
       <HashCode>AAAAAAAAAAAAAAAACAACAAAAABAACAAAAAAAAAABAAA=</HashCode>
       <FileName>ValueObject\BaleHeader.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="System.String" Collapsed="true">
-    <Position X="9.5" Y="13.75" Width="1.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
     <Position X="9" Y="3" Width="1.5" />

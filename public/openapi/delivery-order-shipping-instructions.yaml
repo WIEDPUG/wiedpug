@@ -26,6 +26,87 @@ paths:
               type: array
               items:
                 $ref: "#/components/schemas/DeliveryOrdersAndShippingInstruction"
+            example:
+              - transmissionHeader:
+                  dateFormatLastRevised: 2020-07-15
+                  dateTransmissionFileCreated: 2016-01-17
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                  currentReceiver:
+                    organisationCode: ATW
+                  versionNumber: 31
+                  softwareIdentifier:
+                    softwareCompany: 1
+                    version: 1082
+                    programName: NETR
+                  abn: "72001967184"
+                transferConfig:
+                  transferType: Unrestrict
+                consignments:
+                  - consignmentHeader:
+                      consignmentReference: "1256745909"
+                      shipper:
+                        organisationCode: BTA
+                    countermarkHeadmarks:
+                      - countermarkHeadmarkLine1: "1234567789"
+                        countermarkHeadmarkLine2: "1234098765"
+                    deliveryOrders:
+                      - deliveryOrderDetail:
+                          deliveryOrderType: O
+                          deliveryOrderNumber: "4567891209"
+                          releasingOrganisation:
+                            organisationCode: AWS
+                          carrier:
+                            organisationCode: BTW
+                          areRenumbersApplied: false
+                          areGrossWeightsApplied: false
+                          areNetWeightsApplied: false
+                        deliveryOrderLots:
+                          - deliveryOrderLotHeader:
+                              invoicingOrganisation:
+                                organisationCode: AWT
+                              sellingOrganisation:
+                                organisationCode: TTM
+                              season: 23
+                              saleIdentity:
+                                sellingCentreType: M
+                                saleNumber: 18
+                              centreStorage:
+                                country: AU
+                                centreCode: A
+                              storageOrganisation:
+                                organisationCode: ABT
+                              lotIdentityOrGroupNumber: "552467"
+                              bales: 30
+                              gross:
+                                value: 1530
+                                unit: 0
+                              tare:
+                                value: 30
+                                unit: 0
+                              totalBalesInLot: 30
+                              packTypeOriginal: _1
+                              packTypePreferred: _2
+                              woolState: _3
+                              packMaterial: K
+                            countermarkHeadmarks:
+                              - countermarkHeadmarkLine1: "1234567789"
+                                countermarkHeadmarkLine2: "1234098765"
+                            bales:
+                              - baleHeader:
+                                  brand: ABCD
+                                  baleDescription: bale description
+                                  areaOfOrigin: MELB
+                                baleDetails:
+                                  - baleNumber: "12345"
+                                    baleDetailType: Renumbers
+                                    gross:
+                                      value: 1233
+                                      unit: 0
+                                    tare:
+                                      value: 23
+                                      unit: 0
         required: true
       responses:
         "200":
@@ -33,31 +114,63 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages: []
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
   /v0/delivery-order-shipping-instructions/data:
     post:
       tags:
@@ -69,6 +182,22 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/RequestForData"
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: 2020-07-15
+                dateTransmissionFileCreated: 2016-01-17
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ABC
+                currentReceiver:
+                  organisationCode: ATW
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 8
+                  version: 1082
+                  programName: NETR
+                abn: "72001967184"
+              requestForDataType: {}
         required: true
       responses:
         "200":
@@ -76,37 +205,165 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DeliveryOrdersAndShippingInstructionListApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/DeliveryOrdersAndShippingInstructionListApiResult"
+              example:
+                apiMessages: []
+                data:
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: ABC
+                      currentReceiver:
+                        organisationCode: ATW
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 1
+                        version: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    consignments:
+                      - consignmentHeader:
+                          consignmentReference: "1256745909"
+                          shipper:
+                            organisationCode: BTA
+                        countermarkHeadmarks:
+                          - countermarkHeadmarkLine1: "1234567789"
+                            countermarkHeadmarkLine2: "1234098765"
+                        deliveryOrders:
+                          - deliveryOrderDetail:
+                              deliveryOrderType: O
+                              deliveryOrderNumber: "4567891209"
+                              releasingOrganisation:
+                                organisationCode: AWS
+                              carrier:
+                                organisationCode: BTW
+                              areRenumbersApplied: false
+                              areGrossWeightsApplied: false
+                              areNetWeightsApplied: false
+                            deliveryOrderLots:
+                              - deliveryOrderLotHeader:
+                                  invoicingOrganisation:
+                                    organisationCode: ATX
+                                  sellingOrganisation:
+                                    organisationCode: TTM
+                                  season: 23
+                                  saleIdentity:
+                                    sellingCentreType: M
+                                    saleNumber: 18
+                                  centreStorage:
+                                    country: AU
+                                    centreCode: A
+                                  storageOrganisation:
+                                    organisationCode: MBC
+                                  lotIdentityOrGroupNumber: "552467"
+                                  bales: 30
+                                  gross:
+                                    value: 1520
+                                    unit: 0
+                                  tare:
+                                    value: 30
+                                    unit: 0
+                                  totalBalesInLot: 30
+                                  packTypeOriginal: _1
+                                  packTypePreferred: _2
+                                  woolState: _3
+                                  packMaterial: K
+                                countermarkHeadmarks:
+                                  - countermarkHeadmarkLine1: "1234567789"
+                                    countermarkHeadmarkLine2: "1234098765"
+                                bales:
+                                  - baleHeader:
+                                      brand: ABCD
+                                      baleDescription: bale description
+                                      areaOfOrigin: MELB
+                                    baleDetails:
+                                      - baleNumber: "12345"
+                                        baleDetailType: Renumbers
+                                        gross:
+                                          value: 1233
+                                          unit: 0
+                                        tare:
+                                          value: 23
+                                          unit: 0
+        "204":
+          description: No Content
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages:
+                  - message: >-
+                      Resason:  You have requested data but there is nothing
+                      available.
+
+                      Action: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later.
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
         "404":
           description: Not Found
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
 components:
   schemas:
     DeliveryOrdersAndShippingInstruction:
@@ -159,7 +416,10 @@ components:
         versionNumber:
           pattern: -?\d{1,2}
           type: integer
-          description: Two digits. e.g. 99
+          description: "The version number of the WIEDPUG Handbook that the transmission
+            relates to\r
+
+            Two digits. e.g. 99"
           format: int32
           nullable: true
         softwareIdentifier:
@@ -832,15 +1092,25 @@ components:
             false: not apply"
         interimHandlingDestinationCode:
           $ref: "#/components/schemas/Organisation"
-        interimHandlerDescriptionLine:
-          maxLength: 80
+        interimHandlerDescriptionLine1:
+          maxLength: 30
+          minLength: 1
+          type: string
+          nullable: true
+        interimHandlerDescriptionLine2:
+          maxLength: 30
           minLength: 1
           type: string
           nullable: true
         finalDestinationCode:
           $ref: "#/components/schemas/Organisation"
-        finalDestinationDescriptionLine:
-          maxLength: 80
+        finalDestinationDescriptionLine1:
+          maxLength: 30
+          minLength: 1
+          type: string
+          nullable: true
+        finalDestinationDescriptionLine2:
+          maxLength: 30
           minLength: 1
           type: string
           nullable: true
@@ -912,7 +1182,7 @@ components:
         - bales
         - gross
         - invoicingOrganisation
-        - lotIdentityOrGroupName
+        - lotIdentityOrGroupNumber
         - packMaterial
         - packTypeOriginal
         - packTypePreferred
@@ -944,8 +1214,64 @@ components:
           minLength: 1
           type: string
           nullable: true
-        lotIdentityOrGroupName:
-          $ref: "#/components/schemas/LotIdentityOrGroupName"
+        lotIdentityOrGroupNumber:
+          maxLength: 6
+          minLength: 1
+          type: string
+          description: "It can be a Lot Identity or a Group Number.\r
+
+            \            \r
+
+            Lot Identity:\r
+
+            \            \r
+
+            This is a compound name for lot number and lot suffix,
+            where the lot \r
+
+            number is 5 numeric characters and the lot suffix is 1
+            alphanumeric\r
+
+            character.The suffix is used when a lot is broken up by
+            the original lot\r
+
+            number is retained; for example.If 2 bales of a 10-bale
+            lot got wet and\r
+
+            the 8 bales and the 2 bales are offered separately, one
+            could have a\r
+
+            suffix A and the other a suffix B.Where a suffix is not
+            used, the lot\r
+
+            number occupies the whole of the Lot Identity field and
+            is right justified.\r
+
+            \            \r
+
+            From:\r
+
+            \            \r
+
+            The current value that the Lot Identity is to be changed
+            from.\r
+
+            \r
+
+            To:\r
+
+            \r
+
+            The new value that the Lot Identity is to be changed
+            to.\r
+
+            \            \r
+
+            Group Number:\r
+
+            \            \r
+
+            A code used to identify a group of lots."
         bales:
           maxLength: 4
           minLength: 1
@@ -1129,20 +1455,6 @@ components:
         \            \r
 
         To: The new value that the Sale Identity is to be changed to."
-    LotIdentityOrGroupName:
-      type: object
-      properties:
-        lotIdentity:
-          maxLength: 6
-          minLength: 1
-          type: string
-          nullable: true
-        groupName:
-          maxLength: 6
-          minLength: 1
-          type: string
-          nullable: true
-      additionalProperties: false
     Weight:
       required:
         - unit
@@ -1241,6 +1553,11 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+      description: "The certificate identity consists of a 1 digit prefix, followed by
+        an 8 digit certificate number, followed by a 1 character suffix,
+        followed by a 1 digit\r
+
+        check number.It is printed at the top of the certificate."
     CertificateIDPrefix:
       enum:
         - 2
@@ -1302,23 +1619,6 @@ components:
           items:
             $ref: "#/components/schemas/BaleDetail"
           nullable: true
-        propertyIdentificationCodes:
-          maxItems: 8
-          minItems: 1
-          type: array
-          items:
-            type: string
-          description: "Property Identification Code - the property code to identify the
-            source of the wool.\r
-
-            \r
-
-            This field is not used in New Zealand transmission.\r
-
-            \r
-
-            For TRV only."
-          nullable: true
       additionalProperties: false
     BaleHeader:
       required:
@@ -1339,6 +1639,16 @@ components:
           maxLength: 4
           minLength: 1
           type: string
+          description: "The code for the area in which the wool was grown.\r
+
+            \r
+
+            For further information please go to this URL:\r
+
+            \r
+
+            http://www.awex.com.au/market-information/wool-statisti\
+            cal-areas-wsa/"
         bales:
           maxLength: 4
           minLength: 1
@@ -1406,8 +1716,12 @@ components:
     ApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           description: Contains response data. e.g. Auction Catalogue
           nullable: true
@@ -1419,16 +1733,10 @@ components:
         message:
           type: string
           nullable: true
-        warningCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/WarningCode"
-          nullable: true
-        informationCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/InformationCode"
-          nullable: true
+        warningCode:
+          $ref: "#/components/schemas/WarningCode"
+        informationCode:
+          $ref: "#/components/schemas/InformationCode"
       additionalProperties: false
     WarningCode:
       enum:
@@ -1561,11 +1869,15 @@ components:
             problem. e.g. 400, 403, or business relared problem etc.
           nullable: true
         errors:
-          $ref: "#/components/schemas/CustomErrors"
+          type: array
+          items:
+            $ref: "#/components/schemas/CustomError"
+          description: A collection of the erros
+          nullable: true
       additionalProperties: false
       description: A machine-readable format for specifying errors in HTTP API
         responses based on https://tools.ietf.org/html/rfc7807.
-    CustomErrors:
+    CustomError:
       type: object
       properties:
         errors:
@@ -1579,11 +1891,11 @@ components:
             e.g. errors: { "name": ["Product name is required"], "category":
             ["Category name cannot be longer than 20 characters."]  }'
           nullable: true
-        errorCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/ErrorCode"
+        errorMessage:
+          type: string
           nullable: true
+        errorCode:
+          $ref: "#/components/schemas/ErrorCode"
       additionalProperties: false
     ErrorCode:
       enum:
@@ -1662,8 +1974,12 @@ components:
     DeliveryOrdersAndShippingInstructionListApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           type: array
           items:

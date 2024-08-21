@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.ConstrainedExecution;
 using System.Security.Principal;
+using System.Threading.Channels;
 using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
 using Wiedpug.Domain.Aggregates.LotPriceAndBuyersAggregate;
 using Wiedpug.Domain.Enums;
@@ -13,29 +15,65 @@ namespace Wiedpug.Domain.Entities
 {
     public class LotHeader
     {
+        /// <summary>
+        /// This is a compound name for lot number and lot suffix, where the lot 
+        /// number is 5 numeric characters and the lot suffix is 1 alphanumeric
+        /// character.The suffix is used when a lot is broken up by the original lot
+        /// number is retained; for example.If 2 bales of a 10-bale lot got wet and
+        /// the 8 bales and the 2 bales are offered separately, one could have a
+        /// suffix A and the other a suffix B.Where a suffix is not used, the lot
+        /// number occupies the whole of the Lot Identity field and is right justified.
+        ///
+        /// From:
+        ///
+        /// The current value that the Lot Identity is to be changed from.
+        /// 
+        /// To:
+        /// 
+        /// The new value that the Lot Identity is to be changed to.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(6)]
         public required string LotIdentity { get; set; } // FIELD NUMBER 2 - Lot Identity - Start: 3, Size: 6, Data Type: AN, Justification: R, Requirement Designator: M
 
+        /// <summary>
+        /// Number of bales
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public required int Bales { get; set; } // FIELD NUMBER 3 - Bales - Start: 9, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
-        [Required]
+        /// <summary>
+        /// Total weight of the wool. In transmissions from Test Houses, Gross 
+        /// includes Regrab Sample Weight.In all other transmissions, Regrab
+        /// Sample Weight will have been subtracted from the Gross of a lot or a
+        /// group before the transmission.
+        /// </summary>
+                [Required]
         [MinLength(4)]
         [MaxLength(9)]
         public required Weight Gross { get; set; } // FIELD NUMBER 4 - Gross - Start: 13, Size: 6, Data Type: N, Justification: R, Requirement Designator: M
 
+        /// <summary>
+        /// The weight of the bale packaging
+        /// </summary>
         [Required]
         [MinLength(4)]
         [MaxLength(9)]
         public required Weight Tare { get; set; } // FIELD NUMBER 5 - Tare - Start: 19, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
-        [MinLength(4)]
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has 
+        /// been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
+                [MinLength(4)]
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; } // FIELD NUMBER 6 - Regrab Sample Weight - Start: 23, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
+        /// <summary>
+        /// The page of the printed auction catalogue on which the lot details will appear
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? CataloguePageNumber { get; set; } // FIELD NUMBER 7 - Catalogue Page Number - Start: 25, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
 
@@ -76,7 +114,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(6)]
-        public required string CatalogueSymbols { get; set; }
+        public required string CatalogueSymbol { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -135,8 +173,14 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(6)]
         public string? FirstOfferLotIdentity { get; set; } // FIELD NUMBER 18 - First Offer Lot Identity - Start: 50, Size: 6, Data Type: AN, Justification: R, Requirement Designator: C
 
-        public PriceCurrency? CostPerWeightUnit { get; set; } // FIELD NUMBER 19 - Cost per Weight Unit - Start: 56, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        /// <summary>
+        /// The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.
+        /// </summary>
+        public Currency? CostPerWeightUnit { get; set; } // FIELD NUMBER 19 - Cost per Weight Unit - Start: 56, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
+        /// <summary>
+        /// Clean weight = Net Weight X Yield
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? CleanWeight { get; set; } // FIELD NUMBER 20 - Clean Weight - Start: 62, Size: 5, Data Type: N, Justification: R, Requirement Designator: O
@@ -163,11 +207,11 @@ namespace Wiedpug.Domain.Entities
 
 
         /// <summary>
-        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21. (YYYY-MM-DD)
-        /// 
         /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
         /// 
         /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+        /// 
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -211,19 +255,19 @@ namespace Wiedpug.Domain.Entities
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? BrokerReservePrice { get; set; } // FIELD NUMBER 7 - Broker Reserve Price - Start: 45, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? GrowerReservePrice { get; set; } // FIELD NUMBER 8 - Grower Reserve Price - Start: 51, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? OpeningPrice { get; set; } // FIELD NUMBER 9 - Opening Price - Start: 57, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         [MinLength(3)]
         [MaxLength(6)]
-        public PriceCurrency? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
+        public Currency? ValuationPrice { get; set; } // FIELD NUMBER 10 - Valuation Price - Start: 63, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         /// <summary>
         /// Audit code used for verifying if AWEX-ID was issued by AWEX.

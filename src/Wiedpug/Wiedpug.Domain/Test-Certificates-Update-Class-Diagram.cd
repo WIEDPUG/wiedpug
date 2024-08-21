@@ -2,25 +2,20 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.TestCertificateUpdateAggregate.TestCertificateUpdate" Collapsed="true">
     <Position X="5" Y="3.5" Width="2.75" />
-    <AssociationLine Name="TestCertificateUpdateDetails" Type="Wiedpug.Domain.Entities.TestCertificateUpdateDetail" FixedToPoint="true">
-      <Path>
-        <Point X="7.75" Y="3.812" />
-        <Point X="10" Y="3.812" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAQCAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\TestCertificateUpdateAggregate\TestCertificateUpdate.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
+      <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="TestCertificateUpdateDetails" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TestCertificateUpdateDetail" Collapsed="true">
-    <Position X="10" Y="3.5" Width="3" />
+    <Position X="10.25" Y="3.5" Width="3" />
     <Members>
       <Property Name="BaleDescription" Hidden="true" />
       <Property Name="Bales" Hidden="true" />
@@ -44,10 +39,17 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="4.25" Y="5.5" Width="3.25" />
+    <Position X="4.75" Y="5.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

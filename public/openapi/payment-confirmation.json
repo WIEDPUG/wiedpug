@@ -29,6 +29,60 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/PaymentConfirmation"
+              },
+              "example": {
+                "transmissionHeader": {
+                  "dateFormatLastRevised": "2020-07-15",
+                  "dateTransmissionFileCreated": "2016-01-17",
+                  "countryOfOrigin": "AU",
+                  "documentOriginator": {
+                    "organisationCode": "ATW"
+                  },
+                  "currentReceiver": {
+                    "organisationCode": "ATW"
+                  },
+                  "versionNumber": 31,
+                  "softwareIdentifier": {
+                    "softwareCompany": 1,
+                    "version": 1082,
+                    "programName": "NETR"
+                  },
+                  "abn": "72001967184"
+                },
+                "confirmations": [
+                  {
+                    "paymentHeader": {
+                      "clientCode": 55674,
+                      "statementDate": "2024-05-11",
+                      "amountRemitted": {
+                        "value": 262,
+                        "currencyUnit": "AUD"
+                      },
+                      "statementPaymentDate": "2024-06-01",
+                      "bankBSBNumber": "335567",
+                      "bankAccountNumber": "456735",
+                      "amountWithheldThisStatement": {
+                        "value": 690.45,
+                        "currencyUnit": "AUD"
+                      },
+                      "amountWithheldPreviousStatements": {
+                        "value": 672.23,
+                        "currencyUnit": "AUD"
+                      }
+                    },
+                    "paymentDetails": [
+                      {
+                        "statementDate": "2024-05-12",
+                        "accountReference": "12345678901",
+                        "amount": {
+                          "value": 723.23,
+                          "currencyUnit": "AUD"
+                        },
+                        "paymentType": 0
+                      }
+                    ]
+                  }
+                ]
               }
             }
           },
@@ -40,7 +94,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiResult"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApiResult"
+                  }
+                },
+                "example": {
+                  "apiMessages": []
                 }
               }
             }
@@ -51,6 +111,25 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                  "title": "One or more validation errors occurred",
+                  "status": 400,
+                  "detail": "",
+                  "errors": [
+                    {
+                      "errors": {
+                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                          "The field DateFormatLastRevised is required",
+                          "The field DateFormatLastRevised must match regulart expression pattern..."
+                        ],
+                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                          "The field CountryOfOrigin is required"
+                        ]
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -61,6 +140,12 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
                 }
               }
             }
@@ -71,6 +156,12 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
                 }
               }
             }
@@ -81,6 +172,12 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
                 }
               }
             }
@@ -100,6 +197,27 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestForData"
+              },
+              "example": {
+                "transmissionHeader": {
+                  "dateFormatLastRevised": "2020-07-15",
+                  "dateTransmissionFileCreated": "2016-01-17",
+                  "countryOfOrigin": "AU",
+                  "documentOriginator": {
+                    "organisationCode": "ABC"
+                  },
+                  "currentReceiver": {
+                    "organisationCode": "ATW"
+                  },
+                  "versionNumber": 31,
+                  "softwareIdentifier": {
+                    "softwareCompany": 8,
+                    "version": 1082,
+                    "programName": "NETR"
+                  },
+                  "abn": "72001967184"
+                },
+                "requestForDataType": {}
               }
             }
           },
@@ -111,7 +229,84 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PaymentConfirmationApiResult"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PaymentConfirmationApiResult"
+                  }
+                },
+                "example": {
+                  "apiMessages": [],
+                  "data": {
+                    "transmissionHeader": {
+                      "dateFormatLastRevised": "2020-07-15",
+                      "dateTransmissionFileCreated": "2016-01-17",
+                      "countryOfOrigin": "AU",
+                      "documentOriginator": {
+                        "organisationCode": "ATW"
+                      },
+                      "currentReceiver": {
+                        "organisationCode": "ATC"
+                      },
+                      "versionNumber": 31,
+                      "softwareIdentifier": {
+                        "softwareCompany": 1,
+                        "version": 1082,
+                        "programName": "NETR"
+                      },
+                      "abn": "72001967184"
+                    },
+                    "confirmations": [
+                      {
+                        "paymentHeader": {
+                          "clientCode": 223350,
+                          "statementDate": "2024-05-11",
+                          "amountRemitted": {
+                            "value": 262,
+                            "currencyUnit": "AUD"
+                          },
+                          "statementPaymentDate": "2024-06-01",
+                          "bankBSBNumber": "335567",
+                          "bankAccountNumber": "456735",
+                          "amountWithheldThisStatement": {
+                            "value": 690.45,
+                            "currencyUnit": "AUD"
+                          },
+                          "amountWithheldPreviousStatements": {
+                            "value": 672.23,
+                            "currencyUnit": "AUD"
+                          }
+                        },
+                        "paymentDetails": [
+                          {
+                            "statementDate": "2024-05-12",
+                            "accountReference": "12345678901",
+                            "amount": {
+                              "value": 693,
+                              "currencyUnit": "AUD"
+                            },
+                            "paymentType": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                },
+                "example": {
+                  "apiMessages": [
+                    {
+                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                    }
+                  ]
                 }
               }
             }
@@ -122,6 +317,25 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                  "title": "One or more validation errors occurred",
+                  "status": 400,
+                  "detail": "",
+                  "errors": [
+                    {
+                      "errors": {
+                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                          "The field DateFormatLastRevised is required",
+                          "The field DateFormatLastRevised must match regulart expression pattern..."
+                        ],
+                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                          "The field CountryOfOrigin is required"
+                        ]
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -132,6 +346,12 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
                 }
               }
             }
@@ -142,6 +362,12 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
                 }
               }
             }
@@ -152,6 +378,11 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "Resource not found",
+                  "status": 404
                 }
               }
             }
@@ -162,6 +393,12 @@
               "application/problem+json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
                 }
               }
             }
@@ -233,7 +470,7 @@
           "versionNumber": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
-            "description": "Two digits. e.g. 99",
+            "description": "The version number of the WIEDPUG Handbook that the transmission relates to\r\nTwo digits. e.g. 99",
             "format": "int32",
             "nullable": true
           },
@@ -764,8 +1001,13 @@
       "ApiResult": {
         "type": "object",
         "properties": {
-          "message": {
-            "$ref": "#/components/schemas/ApiMessage"
+          "apiMessages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiMessage"
+            },
+            "description": "Contains information about the response if applicable.",
+            "nullable": true
           },
           "data": {
             "description": "Contains response data. e.g. Auction Catalogue",
@@ -782,19 +1024,11 @@
             "type": "string",
             "nullable": true
           },
-          "warningCodes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/WarningCode"
-            },
-            "nullable": true
+          "warningCode": {
+            "$ref": "#/components/schemas/WarningCode"
           },
-          "informationCodes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/InformationCode"
-            },
-            "nullable": true
+          "informationCode": {
+            "$ref": "#/components/schemas/InformationCode"
           }
         },
         "additionalProperties": false
@@ -848,13 +1082,18 @@
             "nullable": true
           },
           "errors": {
-            "$ref": "#/components/schemas/CustomErrors"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomError"
+            },
+            "description": "A collection of the erros",
+            "nullable": true
           }
         },
         "additionalProperties": false,
         "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
       },
-      "CustomErrors": {
+      "CustomError": {
         "type": "object",
         "properties": {
           "errors": {
@@ -869,12 +1108,12 @@
             "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
             "nullable": true
           },
-          "errorCodes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ErrorCode"
-            },
+          "errorMessage": {
+            "type": "string",
             "nullable": true
+          },
+          "errorCode": {
+            "$ref": "#/components/schemas/ErrorCode"
           }
         },
         "additionalProperties": false
@@ -960,8 +1199,13 @@
       "PaymentConfirmationApiResult": {
         "type": "object",
         "properties": {
-          "message": {
-            "$ref": "#/components/schemas/ApiMessage"
+          "apiMessages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiMessage"
+            },
+            "description": "Contains information about the response if applicable.",
+            "nullable": true
           },
           "data": {
             "$ref": "#/components/schemas/PaymentConfirmation"

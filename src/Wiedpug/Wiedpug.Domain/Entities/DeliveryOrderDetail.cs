@@ -96,16 +96,24 @@ namespace Wiedpug.Domain.Entities
         public Organisation? InterimHandlingDestinationCode { get; set; }
 
         [MinLength(1)]
-        [MaxLength(80)]
-        public string? InterimHandlerDescriptionLine { get; set; }
+        [MaxLength(30)]
+        public string? InterimHandlerDescriptionLine1 { get; set; }
+
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string? InterimHandlerDescriptionLine2 { get; set; }
 
         [MinLength(1)]
         [MaxLength(8)]
         public Organisation? FinalDestinationCode { get; set; }
 
         [MinLength(1)]
-        [MaxLength(80)]
-        public string? FinalDestinationDescriptionLine { get; set; }
+        [MaxLength(30)]
+        public string? FinalDestinationDescriptionLine1 { get; set; }
+
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string? FinalDestinationDescriptionLine2 { get; set; }
 
 
 

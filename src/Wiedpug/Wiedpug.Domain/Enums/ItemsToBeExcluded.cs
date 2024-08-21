@@ -12,7 +12,7 @@ namespace Wiedpug.Domain.Enums
 
         colourTestDetails,
 
-        interlogComponentBales,
+        interlotComponentBales,
 
         baleIdentifications,
 

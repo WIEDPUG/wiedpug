@@ -4,6 +4,7 @@ using Wiedpug.Domain.Attributes;
 
 namespace Wiedpug.Domain.Enums
 {
+    [Description("The following codes are applicable to lots sampled on or after 1st July, 2004. Spaces will be returned for lots sampled before this date where data is not provided.")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum DarkAndMedullatedFibreRisk
     {

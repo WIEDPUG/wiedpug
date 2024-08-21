@@ -49,7 +49,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new Lot
                             {
-                                 WoolSaleHeaderLots = new WoolSaleHeaderLots
+                                 WoolSaleHeaderLot = new WoolSaleHeaderLot
                                  {
                                      ReleasingOrganisation = new Organisation
                                      {
@@ -177,7 +177,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new List<LotPriceAndBuyer>
                 {
                     new LotPriceAndBuyer
@@ -210,7 +210,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             new Lot
                             {
-                                 WoolSaleHeaderLots = new WoolSaleHeaderLots
+                                 WoolSaleHeaderLot = new WoolSaleHeaderLot
                                  {
                                      ReleasingOrganisation = new Organisation
                                      {

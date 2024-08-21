@@ -27,6 +27,381 @@ paths:
               type: array
               items:
                 $ref: "#/components/schemas/Catalogue"
+            examples:
+              New Auction Catalogue:
+                value:
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: AAT
+                      currentReceiver:
+                        organisationCode: ATW
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 1
+                        version: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    catalogueType: A
+                    transferConfig:
+                      transferType: Exclude
+                      finalReceiverList:
+                        - organisationCode: AMS
+                        - organisationCode: FIB
+                    woolSaleHeaders:
+                      - woolSaleHeaderLot:
+                          season: 16
+                          saleIdentity:
+                            sellingCentreType: F
+                            saleNumber: 29
+                          centreStorage:
+                            country: AU
+                            centreCode: A
+                          saleDate: 2017-01-19
+                          woolState: A
+                          packType: _2
+                          postSaleCharge:
+                            value: 25.96
+                            currencyUnit: AUD
+                          calculationBasis: B
+                          freightCharge:
+                            value: 0
+                            currencyUnit: AUD
+                          freightRebate:
+                            value: 3.25
+                            currencyUnit: AUD
+                          catalogueSection: FLC
+                          isFinalCatalogue: true
+                          invoicingOrganisation:
+                            organisationCode: ABC
+                          releasingOrganisation:
+                            organisationCode: ABC
+                          sellingOrganisation:
+                            organisationCode: ABC
+                          woolTypeGroup: MFLC
+                          centreCatalogue:
+                            country: AU
+                            centreCode: G
+                          deliveryBasis: D
+                          storageOrganisation:
+                            organisationCode: ABC
+                          storageDescription: 45 MAIN ST
+                          discountRate: 1.5
+                          maximumDaysDiscount: 0
+                          dateStorageChargeCommences: 2017-01-24
+                          storageChargePerBalePerDay:
+                            value: 0.245
+                            currencyUnit: AUD
+                          penaltyInterestRate: 11.35
+                        catalogueWoolSaleHeaderLots:
+                          - lotHeader:
+                              lotIdentity: "671"
+                              bales: 8
+                              gross:
+                                value: 1316
+                                unit: 0
+                              tare:
+                                value: 16
+                                unit: 0
+                              cataloguePageNumber: 65
+                              updateType: A
+                              catalogueSymbol: A
+                              packMaterial: N
+                              lotType: 4
+                              lightestIndividualBaleWeight:
+                                value: 149
+                                unit: 0
+                              reportingFlag: R
+                              costPerWeightUnit:
+                                value: 20
+                                currencyUnit: AUD
+                              cleanWeight:
+                                value: 30
+                                unit: 0
+                              packCondition: N
+                              coreTestSamplingDate: 2019-01-17
+                              woolDescription: MF6S
+                              isGstTaxInvoiceApplicable: true
+                              numberOfOverweightBales: 0
+                            encryptedLotHeaderAwexData:
+                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
+                              encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
+                            lotHeaderVendorDeclarations:
+                              - mulesingStatus: NM
+                            testDetail:
+                              testDetailsType: P
+                              certificateIdentity:
+                                certificateIDPrefix: 3
+                                certificateIDNumber: 499
+                                certificateIDSuffix: P
+                                certificateIDCD: 7
+                              laboratory: 1
+                              woolBase: 64.29
+                              airflowMean: 0
+                              vmb: 1.3
+                              hardHeadsBase: 0
+                              yields:
+                                - yieldValue: 74.4
+                                  yieldType: 1
+                                - yieldValue: 78.5
+                                  yieldType: 8
+                                - yieldValue: 75.7
+                                  yieldType: 12
+                                - yieldValue: 72.1
+                                  yieldType: 1
+                              retestFlag: 0
+                              yield5: 77.8
+                              reissueChargeFlag: 0
+                              vm1: 0
+                              vm2: 0.9
+                              vm3: 0
+                            lengthAndStrengthTestDetail:
+                              lengthAndStrengthTestDetailsType: L
+                              certificateIdentity:
+                                certificateIDPrefix: 3
+                                certificateIDNumber: 664
+                                certificateIDSuffix: L
+                                certificateIDCD: 6
+                              charge:
+                                value: 188.5
+                                currencyUnit: AUD
+                              laboratory: 1
+                              regrabSampleWeight:
+                                value: 0
+                                unit: 0
+                              stapleLength: 73
+                              stapleLengthCvPercentage: 16
+                              stapleStrength: 35
+                              positionOfBreakPercentageTip: 77
+                              positionOfBreakPercentageMiddle: 23
+                              positionOfBreakPercentageBase: 0
+                              team3Hauteur: 72
+                              lsCertType: 0
+                              isLsSampleSecured: true
+                              expectedBarbe: 111
+                              team3HauteurCvPercentage: 36.9
+                              team3RomainePercentage: 11.2
+                              dateIssued: 2017-01-10
+                              stapleStrengthLowest25Percent: 24
+                            fibreDiameterHistograms:
+                              - fibreDiameterHistogramHeader:
+                                  coefficientOfVariation: 19.9
+                                  comfortFactorPercentage: 98.7
+                                  fibresMeasured: 4000
+                                  reportingFlag: C
+                                  instrument: 1
+                                  subSamplingMethod: 1
+                                  numberOfSpecimens: 4
+                                  mean: 20.1
+                                  standardDeviation: 4
+                                  curvatureMeanDegPerMm: 61
+                                  coreTestSamplingDate: 2017-01-10
+                                  dateIssued: 2017-01-10
+                            catalogueLotDescription:
+                              brand: SALTBUSH/DOWNS
+                              baleDescription: AAAM
+                              areaOfOrigin: V11
+                              bales: 8
+                            baleIdentifications:
+                              - baleNumber: "1"
+                                eBaleId: "093253480000021002346917"
+                            interlotComponentBales:
+                              - interlotComponentBaleHeader:
+                                  brand: RC/FARMING
+                                  baleDescription: AAAMLMS
+                                  areaOfOrigin: W14
+                                  locationWithinStore: Z1-33
+                                  bales: 2
+                                  postcode: "6510"
+                                baleIdentifications:
+                                  - baleNumber: "2"
+                                    eBaleId: "093253480000021002346918"
+              New Private Catalogue:
+                value:
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: ABC
+                      currentReceiver:
+                        organisationCode: ATW
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 1
+                        version: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    catalogueType: A
+                    transferConfig:
+                      transferType: Exclude
+                      finalReceiverList:
+                        - organisationCode: AWL
+                    woolSaleHeaders:
+                      - woolSaleHeaderLot:
+                          season: 16
+                          saleIdentity:
+                            sellingCentreType: F
+                            saleNumber: 29
+                          centreStorage:
+                            country: AU
+                            centreCode: AU
+                          saleDate: 2017-01-19
+                          woolState: _1
+                          packType: _6
+                          postSaleCharge:
+                            value: 25.96
+                            currencyUnit: AUD
+                          calculationBasis: B
+                          freightCharge:
+                            value: 0
+                            currencyUnit: AUD
+                          freightRebate:
+                            value: 3.25
+                            currencyUnit: AUD
+                          catalogueSection: FLC
+                          isFinalCatalogue: true
+                          invoicingOrganisation:
+                            organisationCode: ABC
+                          releasingOrganisation:
+                            organisationCode: ABC
+                          sellingOrganisation:
+                            organisationCode: ABC
+                          woolTypeGroup: MFLC
+                          centreCatalogue:
+                            country: AU
+                            centreCode: G
+                          deliveryBasis: D
+                          storageOrganisation:
+                            organisationCode: ABC
+                          storageDescription: 45 MAIN ST
+                          discountRate: 1.5
+                          maximumDaysDiscount: 0
+                          dateStorageChargeCommences: 2017-01-24
+                          storageChargePerBalePerDay:
+                            value: 0.245
+                            currencyUnit: AUD
+                          penaltyInterestRate: 11.35
+                        catalogueWoolSaleHeaderLots:
+                          - lotHeader:
+                              lotIdentity: "671"
+                              bales: 8
+                              gross:
+                                value: 1316
+                                unit: 0
+                              tare:
+                                value: 16
+                                unit: 0
+                              cataloguePageNumber: 65
+                              updateType: A
+                              catalogueSymbol: A
+                              packMaterial: N
+                              lotType: 1
+                              lightestIndividualBaleWeight:
+                                value: 149
+                                unit: 0
+                              reportingFlag: R
+                              costPerWeightUnit:
+                                value: 20
+                                currencyUnit: AUD
+                              cleanWeight:
+                                value: 0
+                                unit: 0
+                              packCondition: N
+                              coreTestSamplingDate: 2019-01-17
+                              woolDescription: MF6S
+                              isGstTaxInvoiceApplicable: true
+                              numberOfOverweightBales: 0
+                            encryptedLotHeaderAwexData:
+                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
+                              encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
+                            lotHeaderVendorDeclarations:
+                              - mulesingStatus: AA
+                            testDetail:
+                              testDetailsType: P
+                              certificateIdentity:
+                                certificateIDPrefix: 3
+                                certificateIDNumber: 499
+                                certificateIDSuffix: P
+                                certificateIDCD: 7
+                              laboratory: 1
+                              woolBase: 64.29
+                              airflowMean: 0
+                              vmb: 1.3
+                              hardHeadsBase: 0
+                              yields:
+                                - yieldValue: 74.4
+                                  yieldType: 1
+                                - yieldValue: 78.5
+                                  yieldType: 8
+                                - yieldValue: 75.7
+                                  yieldType: 12
+                                - yieldValue: 72.1
+                                  yieldType: 1
+                              retestFlag: 0
+                              yield5: 77.8
+                              reissueChargeFlag: 0
+                              vm1: 0
+                              vm2: 0.9
+                              vm3: 0
+                              darkAndMedullatedFibreRisk: N
+                            lengthAndStrengthTestDetail:
+                              lengthAndStrengthTestDetailsType: L
+                              certificateIdentity:
+                                certificateIDPrefix: 3
+                                certificateIDNumber: 664
+                                certificateIDSuffix: L
+                                certificateIDCD: 6
+                              charge:
+                                value: 256.23
+                                currencyUnit: AUD
+                              laboratory: 1
+                              regrabSampleWeight:
+                                value: 0
+                                unit: 0
+                              stapleLength: 73
+                              stapleLengthCvPercentage: 16
+                              stapleStrength: 35
+                              positionOfBreakPercentageTip: 77
+                              positionOfBreakPercentageMiddle: 23
+                              positionOfBreakPercentageBase: 0
+                              team3Hauteur: 72
+                              lsCertType: 0
+                              isLsSampleSecured: true
+                              expectedBarbe: 111
+                              team3HauteurCvPercentage: 36.9
+                              team3RomainePercentage: 11.2
+                              dateIssued: 2017-01-10
+                              stapleStrengthLowest25Percent: 24
+                            fibreDiameterHistograms:
+                              - fibreDiameterHistogramHeader:
+                                  coefficientOfVariation: 19.9
+                                  comfortFactorPercentage: 98.7
+                                  fibresMeasured: 4000
+                                  reportingFlag: R
+                                  instrument: 1
+                                  subSamplingMethod: 1
+                                  numberOfSpecimens: 4
+                                  mean: 20.1
+                                  standardDeviation: 4
+                                  curvatureMeanDegPerMm: 61
+                                  coreTestSamplingDate: 2017-01-10
+                                  dateIssued: 2017-01-10
+                            catalogueLotDescription:
+                              brand: SALTBUSH/DOWNS
+                              baleDescription: AAAM
+                              areaOfOrigin: V11
+                              bales: 8
+                            interlotComponentBales:
+                              - interlotComponentBaleHeader:
+                                  brand: RC/FARMING
+                                  baleDescription: AAAMLMS
+                                  areaOfOrigin: W14
+                                  locationWithinStore: Z1-33
+                                  bales: 2
+                                  postcode: "6510"
         required: true
       responses:
         "200":
@@ -34,31 +409,63 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages: []
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'write' access to access this resource
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
   /v0/catalogue/updates:
     post:
       tags:
@@ -74,6 +481,185 @@ paths:
               type: array
               items:
                 $ref: "#/components/schemas/Catalogue"
+            example:
+              - transmissionHeader:
+                  dateFormatLastRevised: 2020-07-15
+                  dateTransmissionFileCreated: 2016-01-17
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                  currentReceiver:
+                    organisationCode: ATW
+                  versionNumber: 31
+                  softwareIdentifier:
+                    softwareCompany: 1
+                    version: 1082
+                    programName: NETR
+                  abn: "72001967184"
+                catalogueType: A
+                transferConfig:
+                  transferType: Exclude
+                  finalReceiverList:
+                    - organisationCode: AWM
+                    - organisationCode: FCB
+                woolSaleHeaders:
+                  - woolSaleHeaderLot:
+                      season: 16
+                      saleIdentity:
+                        sellingCentreType: F
+                        saleNumber: 29
+                      centreStorage:
+                        country: AU
+                        centreCode: A
+                      saleDate: 2017-01-19
+                      woolState: A
+                      packType: F
+                      postSaleCharge:
+                        value: 25.96
+                        currencyUnit: AUD
+                      calculationBasis: B
+                      freightCharge:
+                        value: 0
+                        currencyUnit: AUD
+                      freightRebate:
+                        value: 3.25
+                        currencyUnit: AUD
+                      catalogueSection: FLC
+                      isFinalCatalogue: true
+                      invoicingOrganisation:
+                        organisationCode: ABC
+                      releasingOrganisation:
+                        organisationCode: ABC
+                      sellingOrganisation:
+                        organisationCode: ABC
+                      woolTypeGroup: MFLC
+                      centreCatalogue:
+                        country: AU
+                        centreCode: G
+                      deliveryBasis: D
+                      storageOrganisation:
+                        organisationCode: ABC
+                      storageDescription: 45 MAIN ST
+                      discountRate: 1.5
+                      maximumDaysDiscount: 0
+                      dateStorageChargeCommences: 2017-01-24
+                      storageChargePerBalePerDay:
+                        value: 0.245
+                        currencyUnit: AUD
+                      penaltyInterestRate: 11.35
+                    catalogueWoolSaleHeaderLots:
+                      - lotHeader:
+                          lotIdentity: "671"
+                          bales: 8
+                          gross:
+                            value: 1316
+                            unit: 0
+                          tare:
+                            value: 16
+                            unit: 0
+                          cataloguePageNumber: 65
+                          updateType: A
+                          catalogueSymbol: A
+                          packMaterial: N
+                          lotType: 2
+                          lightestIndividualBaleWeight:
+                            value: 149
+                            unit: 0
+                          reportingFlag: R
+                          costPerWeightUnit:
+                            value: 20
+                            currencyUnit: AUD
+                          cleanWeight:
+                            value: 0
+                            unit: 0
+                          packCondition: N
+                          coreTestSamplingDate: 2019-01-17
+                          woolDescription: MF6S
+                          isGstTaxInvoiceApplicable: true
+                          numberOfOverweightBales: 0
+                        encryptedLotHeaderAwexData:
+                          encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
+                          encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
+                        lotHeaderVendorDeclarations:
+                          - mulesingStatus: AA
+                        testDetail:
+                          testDetailsType: P
+                          certificateIdentity:
+                            certificateIDPrefix: 3
+                            certificateIDNumber: 499
+                            certificateIDSuffix: M
+                            certificateIDCD: 5
+                          laboratory: 1
+                          woolBase: 64.29
+                          airflowMean: 0
+                          vmb: 1.3
+                          hardHeadsBase: 0
+                          yields:
+                            - yieldValue: 74.4
+                              yieldType: 1
+                            - yieldValue: 78.5
+                              yieldType: 8
+                            - yieldValue: 75.7
+                              yieldType: 12
+                            - yieldValue: 72.1
+                              yieldType: 1
+                          retestFlag: 0
+                          yield5: 77.8
+                          reissueChargeFlag: 0
+                          vm1: 0
+                          vm2: 0.9
+                          vm3: 0
+                          darkAndMedullatedFibreRisk: D
+                        lengthAndStrengthTestDetail:
+                          lengthAndStrengthTestDetailsType: L
+                          certificateIdentity:
+                            certificateIDPrefix: 3
+                            certificateIDNumber: 664
+                            certificateIDSuffix: C
+                            certificateIDCD: 6
+                          charge:
+                            value: 230.23
+                            currencyUnit: AUD
+                          laboratory: 1
+                          regrabSampleWeight:
+                            value: 0
+                            unit: 0
+                          stapleLength: 73
+                          stapleLengthCvPercentage: 16
+                          stapleStrength: 35
+                          positionOfBreakPercentageTip: 77
+                          positionOfBreakPercentageMiddle: 23
+                          positionOfBreakPercentageBase: 0
+                          team3Hauteur: 72
+                          lsCertType: 0
+                          isLsSampleSecured: true
+                          expectedBarbe: 111
+                          team3HauteurCvPercentage: 36.9
+                          team3RomainePercentage: 11.2
+                          dateIssued: 2017-01-10
+                          stapleStrengthLowest25Percent: 24
+                        fibreDiameterHistograms:
+                          - fibreDiameterHistogramHeader:
+                              coefficientOfVariation: 19.9
+                              comfortFactorPercentage: 98.7
+                              fibresMeasured: 4000
+                              reportingFlag: R
+                              instrument: 1
+                              subSamplingMethod: 1
+                              numberOfSpecimens: 4
+                              mean: 20.1
+                              standardDeviation: 4
+                              curvatureMeanDegPerMm: 61
+                              coreTestSamplingDate: 2017-01-10
+                              dateIssued: 2017-01-10
+                            fibreDiameterHistogramDetails:
+                              - fibreDiameterHistogramDetailMeasurements:
+                                  - fibreDiameter: 6
+                                    fibresMeasuredPercentage: 0.2503
+                                  - fibreDiameter: 7
+                                    fibresMeasuredPercentage: 0.2503
+                                  - fibreDiameter: 8
+                                    fibresMeasuredPercentage: 0.15
         required: true
       responses:
         "200":
@@ -81,31 +667,63 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages: []
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'write' access to access this resource
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
   /v0/catalogue/data:
     post:
       tags:
@@ -122,6 +740,95 @@ paths:
               type: array
               items:
                 $ref: "#/components/schemas/WoolSaleRequestForData"
+            examples:
+              Request for Auction Catalogue Data and Updates:
+                value:
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: ABC
+                      currentReceiver:
+                        organisationCode: ATW
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 8
+                        version: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    woolSaleRequestForDataType:
+                      catalogueTransmissionType: 2
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 18
+                      organisationRequested:
+                        organisationCode: ANF
+                      saleDateRequested: 2023-10-31
+                      woolTypeGroup: MFLC
+                      itemsToBeExcluded:
+                        - encryptedLotHeaderAwexData
+                        - colourTestDetails
+                      season: 23
+                    requestForDataType: {}
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: ABC
+                      currentReceiver:
+                        organisationCode: ATW
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 8
+                        version: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    woolSaleRequestForDataType:
+                      catalogueTransmissionType: 5
+                      saleIdentity:
+                        sellingCentreType: F
+                        saleNumber: 29
+                      organisationRequested:
+                        organisationCode: ANF
+                      saleDateRequested: 2023-10-31
+                      woolTypeGroup: MFLC
+                      itemsToBeExcluded:
+                        - encryptedLotHeaderAwexData
+                        - colourTestDetails
+                      season: 23
+                    requestForDataType: {}
+              Request for Private Catalogue Data:
+                value:
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: ABC
+                      currentReceiver:
+                        organisationCode: ATW
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 8
+                        version: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    woolSaleRequestForDataType:
+                      catalogueTransmissionType: 3
+                      saleIdentity:
+                        sellingCentreType: F
+                        saleNumber: 18
+                      organisationRequested:
+                        organisationCode: ANF
+                      saleDateRequested: 2023-10-31
+                      woolTypeGroup: MFLC
+                      itemsToBeExcluded:
+                        - colourTestDetails
+                        - fibreDiameterHistograms
+                      season: 23
+                    requestForDataType: {}
         required: true
       responses:
         "200":
@@ -129,31 +836,246 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CatalogueListApiResult"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CatalogueListApiResult"
+              example:
+                apiMessages: []
+                data:
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020007-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: ABC
+                      currentReceiver:
+                        organisationCode: ATW
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 8
+                        version: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    catalogueType: A
+                    woolSaleHeaders:
+                      - woolSaleHeaderLot:
+                          season: 16
+                          saleIdentity:
+                            sellingCentreType: F
+                            saleNumber: 29
+                          centreStorage:
+                            country: AU
+                            centreCode: AD
+                          saleDate: 2017-01-19
+                          woolState: _1
+                          packType: _9
+                          postSaleCharge:
+                            value: 25.96
+                            currencyUnit: AUD
+                          calculationBasis: B
+                          freightCharge:
+                            value: 0
+                            currencyUnit: AUD
+                          freightRebate:
+                            value: 3.25
+                            currencyUnit: AUD
+                          catalogueSection: FLC
+                          isFinalCatalogue: true
+                          invoicingOrganisation:
+                            organisationCode: ABC
+                          releasingOrganisation:
+                            organisationCode: ABC
+                          sellingOrganisation:
+                            organisationCode: ABC
+                          woolTypeGroup: MFLC
+                          centreCatalogue:
+                            country: AU
+                            centreCode: G
+                          deliveryBasis: D
+                          storageOrganisation:
+                            organisationCode: ABC
+                          storageDescription: 45 MAIN ST
+                          discountRate: 1.5
+                          maximumDaysDiscount: 0
+                          dateStorageChargeCommences: 2017-01-24
+                          storageChargePerBalePerDay:
+                            value: 0.245
+                            currencyUnit: AUD
+                          penaltyInterestRate: 11.35
+                        catalogueWoolSaleHeaderLots:
+                          - lotHeader:
+                              lotIdentity: "671"
+                              bales: 8
+                              gross:
+                                value: 1316
+                                unit: 0
+                              tare:
+                                value: 16
+                                unit: 0
+                              cataloguePageNumber: 65
+                              updateType: A
+                              catalogueSymbol: A
+                              packMaterial: N
+                              lotType: 5
+                              lightestIndividualBaleWeight:
+                                value: 149
+                                unit: 0
+                              reportingFlag: R
+                              costPerWeightUnit:
+                                value: 20
+                                currencyUnit: AUD
+                              cleanWeight:
+                                value: 0
+                                unit: 0
+                              packCondition: N
+                              coreTestSamplingDate: 2019-01-17
+                              woolDescription: MF6S
+                              numberOfOverweightBales: 0
+                            encryptedLotHeaderAwexData:
+                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
+                              encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
+                            lotHeaderVendorDeclarations:
+                              - mulesingStatus: M
+                            testDetail:
+                              testDetailsType: P
+                              certificateIdentity:
+                                certificateIDPrefix: 3
+                                certificateIDNumber: 499
+                                certificateIDSuffix: P
+                                certificateIDCD: 7
+                              laboratory: 1
+                              woolBase: 64.29
+                              airflowMean: 0
+                              vmb: 1.3
+                              hardHeadsBase: 0
+                              yields:
+                                - yieldValue: 74.4
+                                  yieldType: 1
+                                - yieldValue: 78.5
+                                  yieldType: 8
+                                - yieldValue: 75.7
+                                  yieldType: 12
+                                - yieldValue: 72.1
+                                  yieldType: 1
+                              retestFlag: 0
+                              yield5: 77.8
+                              reissueChargeFlag: 0
+                              vm1: 0
+                              vm2: 0.9
+                              vm3: 0
+                              darkAndMedullatedFibreRisk: N
+                            lengthAndStrengthTestDetail:
+                              lengthAndStrengthTestDetailsType: L
+                              certificateIdentity:
+                                certificateIDPrefix: 3
+                                certificateIDNumber: 664
+                                certificateIDSuffix: L
+                                certificateIDCD: 6
+                              charge:
+                                value: 174.3
+                                currencyUnit: AUD
+                              laboratory: 1
+                              regrabSampleWeight:
+                                value: 0
+                                unit: 0
+                              stapleLength: 73
+                              stapleLengthCvPercentage: 16
+                              stapleStrength: 35
+                              positionOfBreakPercentageTip: 77
+                              positionOfBreakPercentageMiddle: 23
+                              positionOfBreakPercentageBase: 0
+                              team3Hauteur: 72
+                              lsCertType: 0
+                              isLsSampleSecured: true
+                              expectedBarbe: 111
+                              team3HauteurCvPercentage: 36.9
+                              team3RomainePercentage: 11.2
+                              dateIssued: 2017-01-10
+                              stapleStrengthLowest25Percent: 24
+                            fibreDiameterHistograms:
+                              - fibreDiameterHistogramHeader:
+                                  coefficientOfVariation: 19.9
+                                  comfortFactorPercentage: 98.7
+                                  fibresMeasured: 4000
+                                  reportingFlag: R
+                                  instrument: 1
+                                  subSamplingMethod: 1
+                                  numberOfSpecimens: 4
+                                  mean: 20.1
+                                  standardDeviation: 4
+                                  curvatureMeanDegPerMm: 61
+                                  coreTestSamplingDate: 2017-01-10
+                                  dateIssued: 2017-01-10
+                            catalogueLotDescription:
+                              brand: SALTBUSH/DOWNS
+                              baleDescription: AAAM
+                              areaOfOrigin: V11
+                              bales: 8
+        "204":
+          description: No Content
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages:
+                  - message: >-
+                      Resason:  You have requested data but there is nothing
+                      available.
+
+                      Action: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later.
         "400":
           description: Bad Request
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
         "401":
           description: Unauthorized
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
         "403":
           description: Forbidden
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
         "500":
           description: Internal Server Error
           content:
             application/problem+json:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
 components:
   schemas:
     Catalogue:
@@ -172,7 +1094,7 @@ components:
         woolSaleHeaders:
           type: array
           items:
-            $ref: "#/components/schemas/CatalogueWoolSaleHeader"
+            $ref: "#/components/schemas/WoolSaleHeader"
       additionalProperties: false
     TransmissionHeader:
       required:
@@ -209,7 +1131,10 @@ components:
         versionNumber:
           pattern: -?\d{1,2}
           type: integer
-          description: Two digits. e.g. 99
+          description: "The version number of the WIEDPUG Handbook that the transmission
+            relates to\r
+
+            Two digits. e.g. 99"
           format: int32
           nullable: true
         softwareIdentifier:
@@ -678,20 +1603,20 @@ components:
       description: "Unrestrict: Send document to all members<br />Restrict: Send
         document to appointed members<br />Exclude: Send to all members
         excluding the appointed members"
-    CatalogueWoolSaleHeader:
+    WoolSaleHeader:
       required:
         - catalogueWoolSaleHeaderLots
-        - woolSaleHeaderLots
+        - woolSaleHeaderLot
       type: object
       properties:
-        woolSaleHeaderLots:
-          $ref: "#/components/schemas/WoolSaleHeaderLots"
+        woolSaleHeaderLot:
+          $ref: "#/components/schemas/WoolSaleHeaderLot"
         catalogueWoolSaleHeaderLots:
           type: array
           items:
             $ref: "#/components/schemas/CatalogueWoolSaleHeaderLot"
       additionalProperties: false
-    WoolSaleHeaderLots:
+    WoolSaleHeaderLot:
       required:
         - centreCatalogue
         - centreStorage
@@ -716,8 +1641,10 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
+          description: "The date on which the wool was sold.\r
+
+            Date value in ISO standard UTC date format. e.g.
+            2024-03-21 (YYYY-MM-DD)."
           format: date
         woolState:
           $ref: "#/components/schemas/WoolState"
@@ -736,6 +1663,7 @@ components:
         invoiceNumber:
           pattern: -?\d{1,8}
           type: string
+          description: Invoice number of the credit
           nullable: true
         catalogueSection:
           $ref: "#/components/schemas/CatalogueSection"
@@ -852,8 +1780,10 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
-          description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
-            2024-03-21T19:25:04+00:00.000Z
+          description: "Refers to when the sale starts\r
+
+            Date and Time value in ISO 8601 standard UTC datetime
+            format. e.g. 2024-03-21T19:25:04+00:00.000Z"
           format: date-time
           nullable: true
         saleEndDateTime:
@@ -861,8 +1791,10 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
-          description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
-            2024-03-21T19:25:04+00:00.000Z
+          description: "Refers to when the tender/offer sale stops.\r
+
+            Date and Time value in ISO 8601 standard UTC datetime
+            format. e.g. 2024-03-21T19:25:04+00:00.000Z"
           format: date-time
           nullable: true
         saleType:
@@ -1173,7 +2105,7 @@ components:
         lotHeaderPricings:
           type: array
           items:
-            $ref: "#/components/schemas/LotHeaderPricingData"
+            $ref: "#/components/schemas/LotHeaderPricing"
           nullable: true
         encryptedLotHeaderAwexData:
           $ref: "#/components/schemas/EncryptedLotHeaderAwexData"
@@ -1181,15 +2113,13 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/LotHeaderVendorDeclaration"
-        testDetails:
-          $ref: "#/components/schemas/TestDetails"
-        colourTestDetails:
-          $ref: "#/components/schemas/ColourTestDetails"
-        lengthAndStrengthTestDetails:
-          $ref: "#/components/schemas/LengthAndStrengthTestDetails"
-        combinationDetails:
-          $ref: "#/components/schemas/CombinationDetails"
-        histograms:
+        testDetail:
+          $ref: "#/components/schemas/TestDetail"
+        colourTestDetail:
+          $ref: "#/components/schemas/ColourTestDetail"
+        lengthAndStrengthTestDetail:
+          $ref: "#/components/schemas/LengthAndStrengthTestDetail"
+        fibreDiameterHistograms:
           type: array
           items:
             $ref: "#/components/schemas/FibreDiameterHistogram"
@@ -1214,7 +2144,7 @@ components:
     LotHeader:
       required:
         - bales
-        - catalogueSymbols
+        - catalogueSymbol
         - gross
         - lotIdentity
         - lotType
@@ -1229,9 +2159,48 @@ components:
           maxLength: 6
           minLength: 1
           type: string
+          description: "This is a compound name for lot number and lot suffix, where the
+            lot \r
+
+            number is 5 numeric characters and the lot suffix is 1
+            alphanumeric\r
+
+            character.The suffix is used when a lot is broken up by
+            the original lot\r
+
+            number is retained; for example.If 2 bales of a 10-bale
+            lot got wet and\r
+
+            the 8 bales and the 2 bales are offered separately, one
+            could have a\r
+
+            suffix A and the other a suffix B.Where a suffix is not
+            used, the lot\r
+
+            number occupies the whole of the Lot Identity field and
+            is right justified.\r
+
+            \            \r
+
+            From:\r
+
+            \            \r
+
+            The current value that the Lot Identity is to be changed
+            from.\r
+
+            \r
+
+            To:\r
+
+            \r
+
+            The new value that the Lot Identity is to be changed
+            to."
         bales:
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
         gross:
           $ref: "#/components/schemas/Weight"
@@ -1242,6 +2211,8 @@ components:
         cataloguePageNumber:
           pattern: -?\d{1,3}
           type: integer
+          description: The page of the printed auction catalogue on which the lot details
+            will appear
           format: int32
           nullable: true
         isNoLot:
@@ -1267,7 +2238,7 @@ components:
           $ref: "#/components/schemas/SourceCode"
         updateType:
           $ref: "#/components/schemas/UpdateType"
-        catalogueSymbols:
+        catalogueSymbol:
           maxLength: 6
           minLength: 1
           type: string
@@ -1331,7 +2302,7 @@ components:
             whole of the Lot Identity field."
           nullable: true
         costPerWeightUnit:
-          $ref: "#/components/schemas/PriceCurrency"
+          $ref: "#/components/schemas/Currency"
         cleanWeight:
           $ref: "#/components/schemas/Weight"
         yieldType:
@@ -1350,20 +2321,20 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: "Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21.
-            (YYYY-MM-DD)\r
-
-            \r
-
-            For records Fibre Diameter Histogram Header and Test
-            Request Verification this is the date core test was sampled or date
+          description: "For records Fibre Diameter Histogram Header and Test Request
+            Verification this is the date core test was sampled or date
             combination/OML was requested.\r
 
             \r
 
             For the Lot Header this is the date the core test was
             sampled, the last date of weighing for untested wool or the date the
-            Combination/OML was requested."
+            Combination/OML was requested.\r
+
+            \r
+
+            Date value in ISO 8601 standard UTC date format. e.g.
+            2024-03-21 (YYYY-MM-DD)."
           format: date
           nullable: true
         woolDescriptionComment:
@@ -1417,13 +2388,13 @@ components:
             false: not applicable."
           nullable: true
         brokerReservePrice:
-          $ref: "#/components/schemas/PriceCurrency"
+          $ref: "#/components/schemas/Currency"
         growerReservePrice:
-          $ref: "#/components/schemas/PriceCurrency"
+          $ref: "#/components/schemas/Currency"
         openingPrice:
-          $ref: "#/components/schemas/PriceCurrency"
+          $ref: "#/components/schemas/Currency"
         valuationPrice:
-          $ref: "#/components/schemas/PriceCurrency"
+          $ref: "#/components/schemas/Currency"
         woolDescriptionAuditCode:
           maxLength: 10
           minLength: 1
@@ -1522,20 +2493,6 @@ components:
       description: "R: Report, results for this test are supplied for information
         only<br />C: Certificate results for this test are certified<br />U:
         This lot is untested and there are no certificate results"
-    PriceCurrency:
-      required:
-        - value
-      type: object
-      properties:
-        value:
-          pattern: -?\d{1,6}
-          type: integer
-          description: Total up to 12 digits with 2 digits after the decimal point of per
-            unit cost. It is in cent.
-          format: int32
-        currencyUnit:
-          $ref: "#/components/schemas/CurrencyUnit"
-      additionalProperties: false
     YieldType:
       enum:
         - 1
@@ -1615,7 +2572,7 @@ components:
         grabbed<br />R: Repaired (previously core and/or grabbed and
         repaired)<br />X: Not repaired (previously cored and/or grabbed) (excl
         reoffer"
-    LotHeaderPricingData:
+    LotHeaderPricing:
       type: object
       properties:
         priceBasis:
@@ -1625,7 +2582,7 @@ components:
           minLength: 1
           type: string
           nullable: true
-        offers:
+        lotHeaderPricingDataOffers:
           type: array
           items:
             $ref: "#/components/schemas/LotHeaderPricingDataOffer"
@@ -1646,7 +2603,7 @@ components:
       type: object
       properties:
         offerPrice:
-          $ref: "#/components/schemas/PriceCurrency"
+          $ref: "#/components/schemas/Currency"
         offerDate:
           maxLength: 10
           minLength: 1
@@ -1898,20 +2855,38 @@ components:
         - M
         - ND
       type: string
-      description: "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased
-        Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M:
-        Mulesed<br />ND: Not Declared"
-    TestDetails:
+      description: "Note: Blank will be transmitted if the certificate was issued
+        prior to 21st July, 2008 or if the transmission was outside Australia.\r
+
+        \r
+
+        From:\r
+
+        \r
+
+        The current value that the Mulesing Status is to be changed
+        from\r
+
+        \r
+
+        To:\r
+
+        \            \r
+
+        The new value that the Mulesing Status is to be changed to.\r
+
+        \r
+
+        To obtain the current code list please go to this URL:
+        https://www.awex.com.au/standards/national-wool-declaration-nwd"
+    TestDetail:
       required:
-        - certificateIdentity
-        - laboratory
-        - reissueChargeFlag
         - testDetailsType
-        - yield1
+        - yields
       type: object
       properties:
         testDetailsType:
-          $ref: "#/components/schemas/TestDetailsType"
+          $ref: "#/components/schemas/TestDetailType"
         certificateIdentity:
           $ref: "#/components/schemas/CertificateIdentity"
         charge:
@@ -1923,16 +2898,64 @@ components:
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
+          description: "The oven-dry mass of wool fibre free from all impurities,
+            expressed as a percentage of the mass of the sample.\r
+
+            \r
+
+            Min The lowest value in a range of Wool Base values\r
+
+            \r
+
+            Max The highest value in a range of Wool Base values"
           format: double
           nullable: true
         airflowMean:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Average Fibre Diameter – Airflow
           format: double
           nullable: true
         vmb:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: "Vegetable Matter Base. The oven dry mass of ash-free, ethyl
+            alcohol \r
+
+            extractives - free burrs(including hardheads), twigs,
+            seeds, leaves\r
+
+            and grasses present, expressed as a percentage of the
+            mass of the\r
+
+            greasy core sample.\r
+
+            \r
+
+            Average.\r
+
+            \r
+
+            The average value of vegetable matter base values for a
+            number of lots.\r
+
+            \r
+
+            Minimum.\r
+
+            \r
+
+            The lowest value in a range of vegetable matter base
+            values.\r
+
+            \r
+
+            Maximum.\r
+
+            \r
+
+            The highest value in a range of vegetable matter base
+            values."
           format: double
           nullable: true
         hardHeadsBase:
@@ -1940,34 +2963,17 @@ components:
           type: number
           format: double
           nullable: true
-        yield1:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-        yield2:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield3:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yield4:
-          pattern: ^-?\d{1,3}\.\d{2}$
-          type: number
-          format: double
-          nullable: true
-        yieldType1:
-          $ref: "#/components/schemas/YieldType"
-        yieldType2:
-          $ref: "#/components/schemas/YieldType"
+        yields:
+          type: array
+          items:
+            $ref: "#/components/schemas/Yield"
         retestFlag:
           $ref: "#/components/schemas/RetestFlag"
         yield5:
           pattern: ^-?\d{1,3}\.\d{2}$
           type: number
+          description: The amount of recoverable fibre from a lot under set processing
+            conditions
           format: double
           nullable: true
         reissueChargeFlag:
@@ -1975,16 +2981,19 @@ components:
         vm1:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: The % of the core sample composed of burrs
           format: double
           nullable: true
         vm2:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: The % of the core sample composed of seeds and shive
           format: double
           nullable: true
         vm3:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: The % of the core sample composed of hardheads
           format: double
           nullable: true
         darkAndMedullatedFibreRisk:
@@ -1999,9 +3008,48 @@ components:
           type: number
           format: double
           nullable: true
+        vmbMinimum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          description: VMB - Minimum value.
+          format: double
+          nullable: true
+        vmbMaximum:
+          pattern: ^-?\d{1,2}\.\d{1}$
+          type: number
+          description: VMB - Maximum value.
+          format: double
+          nullable: true
+        factorWoolBase:
+          pattern: ^-?\d{1,8}\.\d{2}$
+          type: number
+          description: Factor for Wool Base.
+          format: double
+          nullable: true
+        factorVMB:
+          pattern: ^-?\d{1,7}\.\d{2}$
+          type: number
+          description: Factor for VMB.
+          format: double
+          nullable: true
+        factorHardHeadsBase:
+          pattern: ^-?\d{1,7}\.\d{2}$
+          type: number
+          description: Factor for Hard Heads Base.
+          format: double
+          nullable: true
+        factorAirflowMean:
+          pattern: ^-?\d{1,6}\.\d{6}$
+          type: number
+          description: Factor for Airflow Mean. Factor used in combination calculation.
+          format: double
+          nullable: true
+        combinationFlag:
+          $ref: "#/components/schemas/CombinationFlag"
       additionalProperties: false
-    TestDetailsType:
+    TestDetailType:
       enum:
+        - C
         - P
         - F
         - I
@@ -2011,10 +3059,10 @@ components:
         - W
         - Y
       type: string
-      description: "P: Core Test Details<br />F: Premium Test Details<br />I:
-        Subjective Interlot Details<br />M: OML Details<br />N: OMI Details<br
-        />R: Guidance Report Details<br />W: Scoured Test Details<br />Y:
-        Post-Sale Core Test Details"
+      description: "C: Combination Detail<br />P: Core Test Detail<br />F: Premium
+        Test Detail<br />I: Subjective Interlot Detail<br />M: OML Detail<br
+        />N: OMI Detail<br />R: Guidance Report Detail<br />W: Scoured Test
+        Detail<br />Y: Post-Sale Core Test Detail"
     CertificateIdentity:
       required:
         - certificateIDCD
@@ -2038,6 +3086,11 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+      description: "The certificate identity consists of a 1 digit prefix, followed by
+        an 8 digit certificate number, followed by a 1 character suffix,
+        followed by a 1 digit\r
+
+        check number.It is printed at the top of the certificate."
     CertificateIDPrefix:
       enum:
         - 2
@@ -2083,6 +3136,21 @@ components:
         Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing
         Service<br />4: South African Wool Testing Authority"
       format: int32
+    Yield:
+      type: object
+      properties:
+        yieldValue:
+          pattern: ^-?\d{1,3}\.\d{2}$
+          type: number
+          description: The amount of recoverable fibre from a lot under set processing
+            conditions
+          format: double
+          nullable: true
+        yieldType:
+          $ref: "#/components/schemas/YieldType"
+        cleanWeight:
+          $ref: "#/components/schemas/Weight"
+      additionalProperties: false
     RetestFlag:
       enum:
         - 0
@@ -2114,10 +3182,42 @@ components:
         - "5"
         - "6"
       type: string
-      description: "E: Error in Processing<br />N: Not Applicable<br />D: Not
-        Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk
-        Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6"
-    ColourTestDetails:
+      description: "The following codes are applicable to lots sampled on or after 1st
+        July, 2004. Spaces will be returned for lots sampled before this date
+        where data is not provided.<br />E: Error in Processing<br />N: Not
+        Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2:
+        Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk
+        Level 5<br />6: Risk Level 6"
+    CombinationFlag:
+      enum:
+        - N
+        - S
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        - A
+        - B
+        - C
+        - D
+        - E
+        - F
+      type: string
+      description: "This field indicates the following: If an Australian Securities
+        Exchange combination was requested and the combination satisfies the
+        contract parameters of ASX the appropriate flag will be transmitted.<br
+        />N. Normal Combination<br />S. ASX24 Combination (formerly SFE)<br />4.
+        ASX19.5 54W Combination<br />5. ASX21.0 55W Combination<br />6. ASX22.6
+        56W Combination<br />7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W
+        Combination<br />8. ASX19.5 54W and ASX21.0 55W Combination<br />9:
+        ASX21.0 55W and ASX22.6 56W Combination<br />A. ICAP Wool Contract -
+        China Type 54P<br />B. ICAP Wool Contract - China Type 54<br />C. ICAP
+        Wool Contract - China Type 55<br />D. ICAP Wool Contract - China Type
+        56<br />E. ICAP Wool Contract - China Type 424<br />F. ICAP Wool
+        Contract - China Type Standard"
+    ColourTestDetail:
       required:
         - calibrationFlag
         - certificateIdentity
@@ -2128,7 +3228,7 @@ components:
       type: object
       properties:
         colourTestDetailsType:
-          $ref: "#/components/schemas/ColourTestDetailsType"
+          $ref: "#/components/schemas/ColourTestDetailType"
         certificateIdentity:
           $ref: "#/components/schemas/CertificateIdentity"
         charge:
@@ -2140,61 +3240,79 @@ components:
         colourX:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Colour X value.
           format: double
           nullable: true
         colourY:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Colour Y value.
           format: double
           nullable: true
         colourZ:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: "Colour Z value.\r
+
+            \r
+
+            This measurement is used in New Zealand, but not in
+            Australia."
           format: double
           nullable: true
         colourYZ:
           pattern: ^-?\d{1,3}\.\d{1}$
           type: number
+          description: Average yellowness, Colour Y – Colour Z. The field has an optional
+            leading sign.
           format: double
           nullable: true
         colourXMinimum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Min – The lowest value in a range of Colour-X values.
           format: double
           nullable: true
         colourXMaximum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Max – The highest value in a range of Colour-X values.
           format: double
           nullable: true
         colourYMinimum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Min – The lowest value in a range of Colour-Y values.
           format: double
           nullable: true
         colourYMaximum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Max – The highest value in a range of Colour-Y values.
           format: double
           nullable: true
         colourZMinimum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Min – The lowest value in a range of Colour-Z values.
           format: double
           nullable: true
         colourZMaximum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Max – The highest value in a range of Colour-Z values.
           format: double
           nullable: true
         colourYZMinimum:
           pattern: ^-?\d{1,3}\.\d{1}$
           type: number
+          description: Min – The lowest value in a range of Colour-Y-Z values.
           format: double
           nullable: true
         colourYZMaximum:
           pattern: ^-?\d{1,3}\.\d{1}$
           type: number
+          description: Max – The highest value in a range of Colour-Y-Z values.
           format: double
           nullable: true
         coreBulkValue:
@@ -2207,21 +3325,26 @@ components:
         colourXAsIs:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Colour X value for scoured wool.
           format: double
           nullable: true
         colourYAsIs:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Colour Y value for scoured wool.
           format: double
           nullable: true
         colourZAsIs:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: Colour Z value for scoured wool.
           format: double
           nullable: true
         colourYZAsIs:
           pattern: ^-?\d{1,3}\.\d{1}$
           type: number
+          description: Colour Y – Colour Z, that is average yellowness for scoured
+            wool.The field has an optional leading sign.
           format: double
           nullable: true
         calibrationFlag:
@@ -2231,16 +3354,20 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD)
+          description: "The date the certificate was issued.\r
+
+            \r
+
+            Date value in ISO 8601 standard UTC date format. e.g.
+            2024-03-21 (YYYY-MM-DD)"
           format: date
       additionalProperties: false
-    ColourTestDetailsType:
+    ColourTestDetailType:
       enum:
         - C
         - X
       type: string
-      description: "C: Colour Test Details<br />X: Colour Combination Test Details"
+      description: "C: Colour Test Detail<br />X: Colour Combination Test Detail"
     CalibrationFlag:
       enum:
         - O
@@ -2252,7 +3379,7 @@ components:
         2001.<br />N: The values for Colour X, Y, Z and Y-Z have been measured
         by an instrument calibrated to certified tiles, based on illuminant D65
         and 10º observer angle, and corrected for any glass effects"
-    LengthAndStrengthTestDetails:
+    LengthAndStrengthTestDetail:
       required:
         - certificateIdentity
         - dateIssued
@@ -2270,7 +3397,7 @@ components:
       type: object
       properties:
         lengthAndStrengthTestDetailsType:
-          $ref: "#/components/schemas/LengthAndStrengthTestDetailsType"
+          $ref: "#/components/schemas/LengthAndStrengthTestDetailType"
         certificateIdentity:
           $ref: "#/components/schemas/CertificateIdentity"
         charge:
@@ -2406,8 +3533,9 @@ components:
 
             \            \r
 
-            A check against the Date Issued field in the 51L or 51K
-            record will determine which TEAM formula has been used."
+            A check against the Date Issued field in the Length and
+            Strength Details record will determine which TEAM formula has been
+            used."
           format: int32
           nullable: true
         reissueChargeFlag:
@@ -2444,13 +3572,13 @@ components:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
           description: "Coefficient of Variation of Hauteur. NOTE: Refer to note in
-            `Team3Hauteur`."
+            Team3Hauteur."
           format: double
           nullable: true
         team3RomainePercentage:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
-          description: "Romaine. NOTE: Refer to note in `Team3Hauteur`."
+          description: "Romaine. NOTE: Refer to note in Team3Hauteur."
           format: double
           nullable: true
         dateIssued:
@@ -2469,13 +3597,13 @@ components:
           format: int32
           nullable: true
       additionalProperties: false
-    LengthAndStrengthTestDetailsType:
+    LengthAndStrengthTestDetailType:
       enum:
         - L
         - K
       type: string
-      description: "L: Length And Strength Test Details<br />K: Length And Strength
-        Combination Test Details"
+      description: "L: Length And Strength Test Detail<br />K: Length And Strength
+        Combination Test Detail"
     LsCertType:
       enum:
         - 0
@@ -2485,90 +3613,6 @@ components:
       description: "0: Length & Strength tested<br />1: Length only test requested<br
         />2: Insufficient staples"
       format: int32
-    CombinationDetails:
-      required:
-        - cleanWeight1
-        - combinationFlag
-      type: object
-      properties:
-        cleanWeight1:
-          $ref: "#/components/schemas/Weight"
-        cleanWeight2:
-          $ref: "#/components/schemas/Weight"
-        cleanWeight3:
-          $ref: "#/components/schemas/Weight"
-        cleanWeight4:
-          $ref: "#/components/schemas/Weight"
-        cleanWeight5:
-          $ref: "#/components/schemas/Weight"
-        vmbMinimum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          description: VMB - Minimum value.
-          format: double
-          nullable: true
-        vmbMaximum:
-          pattern: ^-?\d{1,2}\.\d{1}$
-          type: number
-          description: VMB - Maximum value.
-          format: double
-          nullable: true
-        factorWoolBase:
-          pattern: ^-?\d{1,8}\.\d{2}$
-          type: number
-          description: Factor for Wool Base.
-          format: double
-          nullable: true
-        factorVMB:
-          pattern: ^-?\d{1,7}\.\d{2}$
-          type: number
-          description: Factor for VMB.
-          format: double
-          nullable: true
-        factorHardHeadsBase:
-          pattern: ^-?\d{1,7}\.\d{2}$
-          type: number
-          description: Factor for Hard Heads Base.
-          format: double
-          nullable: true
-        factorAirflowMean:
-          pattern: ^-?\d{1,6}\.\d{6}$
-          type: number
-          description: Factor for Airflow Mean. Factor used in combination calculation.
-          format: double
-          nullable: true
-        combinationFlag:
-          $ref: "#/components/schemas/CombinationFlag"
-      additionalProperties: false
-    CombinationFlag:
-      enum:
-        - N
-        - S
-        - "4"
-        - "5"
-        - "6"
-        - "7"
-        - "8"
-        - "9"
-        - A
-        - B
-        - C
-        - D
-        - E
-        - F
-      type: string
-      description: "This field indicates the following: If an Australian Securities
-        Exchange combination was requested and the combination satisfies the
-        contract parameters of ASX the appropriate flag will be transmitted.<br
-        />N. Normal Combination<br />S. ASX24 Combination (formerly SFE)<br />4.
-        ASX19.5 54W Combination<br />5. ASX21.0 55W Combination<br />6. ASX22.6
-        56W Combination<br />7. ASX19.5 54W, ASX21.0 55W and ASX22.6 56W
-        Combination<br />8. ASX19.5 54W and ASX21.0 55W Combination<br />9:
-        ASX21.0 55W and ASX22.6 56W Combination<br />A. ICAP Wool Contract -
-        China Type 54P<br />B. ICAP Wool Contract - China Type 54<br />C. ICAP
-        Wool Contract - China Type 55<br />D. ICAP Wool Contract - China Type
-        56<br />E. ICAP Wool Contract - China Type 424<br />F. ICAP Wool
-        Contract - China Type Standard"
     FibreDiameterHistogram:
       type: object
       properties:
@@ -2620,6 +3664,8 @@ components:
         mean:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: This is Laserscan Mean or OFDA Mean depending on the value of
+            instrument
           format: double
         standardDeviation:
           pattern: ^-?\d{1,2}\.\d{1}$
@@ -2633,11 +3679,15 @@ components:
         meanMinimum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: This is the Laserscan or OFDA Mean Minimum depending on the value
+            of instrument.This field will contain spaces until 30/06/2000
           format: double
           nullable: true
         meanMaximum:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
+          description: This is the Laserscan or OFDA Mean Maximum depending on the value
+            of instrument.This field will contain spaces until 30/06/2000
           format: double
           nullable: true
         coreTestSamplingDate:
@@ -2645,19 +3695,20 @@ components:
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: "For records 31 and 55 this is the date core test was sampled or
-            date combination/OML was requested.\r
+          description: "For records Fibre Diameter Histogram Header and Test Request
+            Verification this is the date core test was sampled or date
+            combination/OML was requested.\r
 
             \r
 
-            For the 21A record this is the date the core test was
+            For the Lot Header this is the date the core test was
             sampled, the last date of weighing for untested wool or the date the
             Combination/OML was requested.\r
 
             \r
 
             Date value in ISO 8601 standard UTC date format. e.g.
-            2024-03-21."
+            2024-03-21 (YYYY-MM-DD)."
           format: date
           nullable: true
         dateIssued:
@@ -2671,11 +3722,15 @@ components:
         factorLaserscanNumerator:
           pattern: ^-?\d{1,10}\.\d{6}$
           type: number
+          description: Factor used in numerator to calculate Laserscan Mean Laserscan Mean
+            = Factor Laserscan Numerator/Factor Laserscan Denominator
           format: double
           nullable: true
         factorLaserscanDenominator:
           pattern: ^-?\d{1,9}\.\d{6}$
           type: number
+          description: Factor used in denominator to calculate Laserscan Mean Laserscan
+            Mean = Factor Laserscan Numerator/Factor Laserscan Denominator
           format: double
           nullable: true
       additionalProperties: false
@@ -2694,10 +3749,10 @@ components:
       format: int32
     FibreDiameterHistogramDetail:
       required:
-        - fibreMeasurements
+        - fibreDiameterHistogramDetailMeasurements
       type: object
       properties:
-        fibreMeasurements:
+        fibreDiameterHistogramDetailMeasurements:
           type: array
           items:
             $ref: "#/components/schemas/FibreDiameterHistogramDetailMeasurement"
@@ -2730,14 +3785,26 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         baleDescription:
           maxLength: 15
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         areaOfOrigin:
           maxLength: 4
           minLength: 1
           type: string
+          description: "The code for the area in which the wool was grown.\r
+
+            \r
+
+            For further information please go to this URL:\r
+
+            \r
+
+            http://www.awex.com.au/market-information/wool-statisti\
+            cal-areas-wsa/"
           nullable: true
         locationWithinStore:
           maxLength: 20
@@ -2747,6 +3814,7 @@ components:
         bales:
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
         postcode:
           maxLength: 4
@@ -2761,6 +3829,7 @@ components:
           maxLength: 5
           minLength: 1
           type: string
+          description: The number used to identify a bale in a lot
           nullable: true
         eBaleId:
           maxLength: 30
@@ -2792,14 +3861,26 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         baleDescription:
           maxLength: 15
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         areaOfOrigin:
           maxLength: 4
           minLength: 1
           type: string
+          description: "The code for the area in which the wool was grown.\r
+
+            \r
+
+            For further information please go to this URL:\r
+
+            \r
+
+            http://www.awex.com.au/market-information/wool-statisti\
+            cal-areas-wsa/"
           nullable: true
         locationWithinStore:
           maxLength: 20
@@ -2809,6 +3890,7 @@ components:
         bales:
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
         postcode:
           maxLength: 20
@@ -2819,8 +3901,12 @@ components:
     ApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           description: Contains response data. e.g. Auction Catalogue
           nullable: true
@@ -2832,16 +3918,10 @@ components:
         message:
           type: string
           nullable: true
-        warningCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/WarningCode"
-          nullable: true
-        informationCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/InformationCode"
-          nullable: true
+        warningCode:
+          $ref: "#/components/schemas/WarningCode"
+        informationCode:
+          $ref: "#/components/schemas/InformationCode"
       additionalProperties: false
     WarningCode:
       enum:
@@ -2974,11 +4054,15 @@ components:
             problem. e.g. 400, 403, or business relared problem etc.
           nullable: true
         errors:
-          $ref: "#/components/schemas/CustomErrors"
+          type: array
+          items:
+            $ref: "#/components/schemas/CustomError"
+          description: A collection of the erros
+          nullable: true
       additionalProperties: false
       description: A machine-readable format for specifying errors in HTTP API
         responses based on https://tools.ietf.org/html/rfc7807.
-    CustomErrors:
+    CustomError:
       type: object
       properties:
         errors:
@@ -2992,11 +4076,11 @@ components:
             e.g. errors: { "name": ["Product name is required"], "category":
             ["Category name cannot be longer than 20 characters."]  }'
           nullable: true
-        errorCodes:
-          type: array
-          items:
-            $ref: "#/components/schemas/ErrorCode"
+        errorMessage:
+          type: string
           nullable: true
+        errorCode:
+          $ref: "#/components/schemas/ErrorCode"
       additionalProperties: false
     ErrorCode:
       enum:
@@ -3054,12 +4138,10 @@ components:
         woolTypeGroup:
           $ref: "#/components/schemas/WoolTypeGroup"
         itemsToBeExcluded:
-          maxItems: 80
-          minItems: 1
           type: array
           items:
             $ref: "#/components/schemas/ItemsToBeExcluded"
-          description: "Catalouge field names to be excluded in the request.\r
+          description: "Catalogue item names to be excluded in the request.\r
 
             \r
 
@@ -3087,7 +4169,7 @@ components:
       enum:
         - encryptedLotHeaderAwexData
         - colourTestDetails
-        - interlogComponentBales
+        - interlotComponentBales
         - baleIdentifications
         - fibreDiameterHistograms
         - fibreDiameterHistogramDetails
@@ -3137,8 +4219,12 @@ components:
     CatalogueListApiResult:
       type: object
       properties:
-        message:
-          $ref: "#/components/schemas/ApiMessage"
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
         data:
           type: array
           items:

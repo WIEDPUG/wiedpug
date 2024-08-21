@@ -9,7 +9,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class PropertyIdentificationCodes
+    public class PropertyIdentificationCode
     {
         /// <summary>
         /// Required alphanumeric field for PIC (1).

@@ -6,7 +6,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class WoolSaleHeaderLots
+    public class WoolSaleHeaderLot
     {
         /// <summary>
         /// Two digits e.g. 99
@@ -48,6 +48,7 @@ namespace Wiedpug.Domain.Entities
         public required Centre CentreStorage { get; set; }
 
         /// <summary>
+        /// The date on which the wool was sold.
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
         /// </summary>    
         [Required]
@@ -111,6 +112,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(15)]
         public Currency? ChargePerLot { get; set; }
 
+        /// <summary>
+        /// Invoice number of the credit
+        /// 
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
         public string? InvoiceNumber { get; set; }
 
@@ -131,7 +136,7 @@ namespace Wiedpug.Domain.Entities
         public bool? IsFinalCatalogue { get; set; }
 
         /// <summary>
-        /// The code for the broker who will raise the invoice for the wool
+        /// The code for the broker who will raise the invoice for the wool.
         /// </summary>
         [Required]
         [MinLength(1)]
@@ -152,7 +157,12 @@ namespace Wiedpug.Domain.Entities
         [MinLength(1)]
         [MaxLength(4)]
         public WoolTypeGroup? WoolTypeGroup { get; set; }
-        
+
+        /// <summary>
+        /// The centre (code) used to group lots of wool based on a location. This 
+        /// location is typically the core test/weighing centre and is often aligned
+        /// with the seller’s Post Sale Charge schedule.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(6)]
@@ -277,6 +287,7 @@ namespace Wiedpug.Domain.Entities
         public string? CatalogueAvailabilityDateTime { get; set; } // FIELD NUMBER 4 - Catalogue Availability Time - Start: 10, Size: 4, Data Type: Time, Justification: L, Requirement Designator: O
 
         /// <summary>
+        /// Refers to when the sale starts
         /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z
         /// </summary>
         [DataType(DataType.DateTime)]
@@ -286,6 +297,7 @@ namespace Wiedpug.Domain.Entities
         public string? SaleStartDateTime { get; set; } // FIELD NUMBER 5 - Sale Start Date - Start: 14, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
         /// <summary>
+        /// Refers to when the tender/offer sale stops.
         /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z
         /// </summary>
         [DataType(DataType.DateTime)]

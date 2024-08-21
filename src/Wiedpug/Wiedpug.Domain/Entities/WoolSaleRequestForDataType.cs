@@ -65,14 +65,12 @@ namespace Wiedpug.Domain.Entities
         public WoolTypeGroup? WoolTypeGroup { get; set; }
 
         /// <summary>
-        /// Catalouge field names to be excluded in the request.
+        /// Catalogue item names to be excluded in the request.
         /// 
         /// Only required for request for Catalogue. Not applicable for other documents.
         /// 
         /// </summary>
         /// 
-        [MinLength(1)]
-        [MaxLength(80)]
         public List<ItemsToBeExcluded>? ItemsToBeExcluded { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]

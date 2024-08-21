@@ -32,7 +32,7 @@ public static class LotPriceAndBuyerEndpoints
             Summary = "LotPriceAndBuyer",
             Description = "Used to provide lot price And buyer"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
@@ -41,6 +41,7 @@ public static class LotPriceAndBuyerEndpoints
         group.MapPost("/data",
         [SwaggerRequestExample(typeof(WoolSaleRequestForData), typeof(RequestForLotPriceAndBuyersRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForLotPriceAndBuyers200Example))]
+        [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -55,7 +56,8 @@ public static class LotPriceAndBuyerEndpoints
         {
             Summary = "Retrieves the lot price and buyer"
         })
-        .Produces<ApiResult<List<LotPriceAndBuyer>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<LotPriceAndBuyer>>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

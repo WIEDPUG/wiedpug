@@ -5,7 +5,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class TestCertificateRequest
+    public class TestCertificateRequestDetail
 
     {
         [Required]

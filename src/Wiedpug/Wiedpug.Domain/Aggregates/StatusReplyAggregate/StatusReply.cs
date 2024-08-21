@@ -10,7 +10,7 @@ namespace Wiedpug.Domain.Aggregates.StatusReplyAggregate
     public class StatusReply
     {
         public required TransmissionHeader TransmissionHeader { get; set; }
-        public List<TransmissionResponse>? Responses { get; set; }
+        public List<TransmissionResponse>? TransmissionResponses { get; set; }
 
     }
 }

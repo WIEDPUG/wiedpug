@@ -37,12 +37,19 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(8)]
         public required Organisation DocumentOriginator { get; set; }
 
-        [Required]
+        /// <summary>
+        /// The code for the organisation that will receive the document at the end 
+        /// of the current transmission.Where a document is transferred from one
+        /// organisation to another through an intermediary, the code for the
+        /// current receiver will vary from leg to leg of the journey.
+        /// </summary>
+                [Required]
         [MinLength(1)]
         [MaxLength(8)]
         public required Organisation CurrentReceiver { get; set; }
 
         /// <summary>
+        /// The version number of the WIEDPUG Handbook that the transmission relates to
         /// Two digits. e.g. 99
         /// </summary>
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]

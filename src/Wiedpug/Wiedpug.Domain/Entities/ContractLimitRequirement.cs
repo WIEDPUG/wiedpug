@@ -10,7 +10,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class ContractLimitRequirements
+    public class ContractLimitRequirement
     {
         /// <summary>
         /// Minimum micron, optional decimal with one digit precision.

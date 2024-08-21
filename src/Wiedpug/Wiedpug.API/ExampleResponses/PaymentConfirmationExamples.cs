@@ -118,7 +118,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new PaymentConfirmation
                 {
                     TransmissionHeader = new TransmissionHeader

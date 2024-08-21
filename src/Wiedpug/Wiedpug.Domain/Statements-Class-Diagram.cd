@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statements" Collapsed="true">
-    <Position X="2" Y="2" Width="2" />
+    <Position X="2.25" Y="2.75" Width="2" />
+    <AssociationLine Name="StatementInformationDetails" Type="Wiedpug.Domain.Aggregates.StatementsAggregate.StatementInformationDetail">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.159" Y="0.381" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACgAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\StatementsAggregate\Statements.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -11,14 +16,24 @@
       <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="StatementCollection" />
+      <Property Name="StatementInformationDetails" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statement" Collapsed="true">
-    <Position X="6.75" Y="2" Width="2.75" />
+  <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.StatementInformationDetail" Collapsed="true">
+    <Position X="2.5" Y="4.75" Width="2.75" />
+    <AssociationLine Name="StatementDetails" Type="Wiedpug.Domain.Entities.StatementDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="5.062" />
+        <Point X="7.375" Y="5.062" />
+        <Point X="7.375" Y="3.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.12" Y="0.258" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Aggregates\StatementsAggregate\Statement.cs</FileName>
+      <FileName>Aggregates\StatementsAggregate\StatementInformationDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="StatementHeader" />
@@ -29,35 +44,35 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="4.75" Y="0.75" Width="2" />
+    <Position X="6" Y="1.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.StatementDetail" Collapsed="true">
-    <Position X="10.5" Y="3" Width="2.25" />
+    <Position X="6.25" Y="2.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQEABACAAAIAAAAACAAIAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQEAAACAAEIAAAAACAAIAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Entities\StatmentDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.StatementHeader" Collapsed="true">
-    <Position X="9.75" Y="4.5" Width="1.5" />
+    <Position X="6.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgABQAAAAAAAAAAAAACABAAAAAAAAAAAAAAEQ=</HashCode>
+      <HashCode>AAAAAAAgAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Entities\StatmentHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.StatementTrailer" Collapsed="true">
-    <Position X="3.5" Y="4" Width="1.5" />
+    <Position X="2" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAhAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\StatmentTrailer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="2" Y="5.25" Width="1.5" />
+    <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>

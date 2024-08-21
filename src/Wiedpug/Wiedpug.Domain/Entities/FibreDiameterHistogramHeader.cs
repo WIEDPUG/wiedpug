@@ -39,6 +39,9 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public required int NumberOfSpecimens { get; set; } // FIELD NUMBER 9 - No. Of Specimens - Start: 18, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
+        /// <summary>
+        /// This is Laserscan Mean or OFDA Mean depending on the value of instrument
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public required double Mean { get; set; } // FIELD NUMBER 10 - Mean - Start: 22, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
@@ -50,18 +53,24 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? CurvatureMeanDegPerMm { get; set; } // FIELD NUMBER 12 - Curvature Mean (deg/mm) - Start: 28, Size: 3, Data Type: N, Justification: R, Requirement Designator: O        
 
+        /// <summary>
+        /// This is the Laserscan or OFDA Mean Minimum depending on the value of instrument.This field will contain spaces until 30/06/2000
+        /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? MeanMinimum { get; set; } // FIELD NUMBER 14 - Mean Minimum - Start: 32, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
+        /// <summary>
+        /// This is the Laserscan or OFDA Mean Maximum depending on the value of instrument.This field will contain spaces until 30/06/2000
+        /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? MeanMaximum { get; set; } // FIELD NUMBER 15 - Mean Maximum - Start: 35, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
         /// <summary>
-        /// For records 31 and 55 this is the date core test was sampled or date combination/OML was requested.
+        /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
         /// 
-        /// For the 21A record this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+        /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
         /// 
-        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21. 
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
@@ -79,9 +88,15 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(10)]
         public required string DateIssued { get; set; } // FIELD NUMBER 17 - Date Issued - Start: 44, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
 
+        /// <summary>
+        /// Factor used in numerator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator
+        /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_16_6)]
         public double? FactorLaserscanNumerator { get; set; } // FIELD NUMBER 18 - Factor – Laserscan Numerator - Start: 50, Size: 16, Data Type: D6, Justification: R, Requirement Designator: C
-        
+
+        /// <summary>
+        /// Factor used in denominator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator
+        /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_15_6)]
         public double? FactorLaserscanDenominator { get; set; } // FIELD NUMBER 19 - Factor – Laserscan Denominator - Start: 66, Size: 15, Data Type: D6, Justification: R, Requirement Designator: C
 

@@ -93,7 +93,7 @@ namespace Wiedpug.Domain.Entities
         public WoolTypeGroup? WoolTypeGroup { get; set; }
 
         /// <summary>
-        /// Cataglouge classes and sub-classes to be excluded in the request.
+        /// Cataglogue classes and sub-classes to be excluded in the request.
         /// 
         /// Only required for request for Catalogue. Not applicable for other documents.
         /// 

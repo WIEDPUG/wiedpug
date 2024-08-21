@@ -53,11 +53,11 @@ namespace Wiedpug.API.ExampleResponses
                                 }
                             },
                         },
-                        WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
+                        WoolSaleHeaders = new List<WoolSaleHeader>
                         {
-                            new CatalogueWoolSaleHeader
+                            new WoolSaleHeader
                             {
-                                WoolSaleHeaderLots = new WoolSaleHeaderLots
+                                WoolSaleHeaderLot = new WoolSaleHeaderLot
                                 {
                                     Season = 16,
                                     SaleIdentity = new SaleIdentity{ 
@@ -132,17 +132,17 @@ namespace Wiedpug.API.ExampleResponses
                                             CataloguePageNumber = 65,
                                             UpdateType = UpdateType.A,
                                             PackMaterial = PackMaterial.N,
-                                            CatalogueSymbols = "A",
+                                            CatalogueSymbol = "A",
                                             LotType = LotType.SubjectivelyMatchedInterlot,
                                             LightestIndividualBaleWeight = new Weight { Value = 149.00, Unit = WeightUnit.Kilograms },
                                             ReportingFlag = ReportingFlag.R,
-                                            CostPerWeightUnit = new PriceCurrency
+                                            CostPerWeightUnit = new Currency
                                             {
-                                                Value = 0,
+                                                Value = 20.00,
                                                 CurrencyUnit = CurrencyUnit.AUD,
                                             },
                                             CleanWeight = new Weight{
-                                                Value = 0.00,
+                                                Value = 30.00,
                                                 Unit = WeightUnit.Kilograms
                                             },
                                             PackCondition = PackCondition.N,
@@ -164,8 +164,8 @@ namespace Wiedpug.API.ExampleResponses
                                                 MulesingStatus = MulesingStatus.NM
                                             }
                                         },
-                                        LengthAndStrengthTestDetails = 
-                                            new LengthAndStrengthTestDetails {
+                                        LengthAndStrengthTestDetail = 
+                                            new LengthAndStrengthTestDetail {
                                             CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
@@ -173,7 +173,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDSuffix = CertificateIDSuffix.L,
                                                 CertificateIDCD = 6
                                             },
-                                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
+                                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = new Weight{
                                                 Value = 0.00,
@@ -198,8 +198,8 @@ namespace Wiedpug.API.ExampleResponses
                                             StapleStrengthLowest25Percent = 24,
                                             IsLsSampleSecured = true
                                             },
-                                        TestDetails =
-                                            new TestDetails //51P
+                                        TestDetail =
+                                            new TestDetail //51P
                                         {
                                             CertificateIdentity = new CertificateIdentity
                                             {
@@ -208,16 +208,36 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDSuffix = CertificateIDSuffix.P,
                                                 CertificateIDCD = 7
                                             },
-                                            TestDetailsType = TestDetailsType.P,
+                                            TestDetailsType = TestDetailType.P,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             WoolBase = 64.29,
                                             AirflowMean = 0.0,
                                             Vmb = 1.3,
                                             HardHeadsBase = 0.0,
-                                            Yield1 = 74.40,
-                                            Yield2 = 78.50,
-                                            Yield3 = 75.70,
-                                            Yield4 = 72.10,
+                                            Yields = new List<Yield>
+                                            {
+                                                new Yield
+                                                {
+                                                    YieldValue = 74.40,
+                                                    YieldType = YieldType.Reserved
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 78.50,
+                                                    YieldType = YieldType.IWTOScouredYieldAt16PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 75.70,
+                                                    YieldType = YieldType.IWTOCleanWoolContentAt17PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 72.10,
+                                                    YieldType = YieldType.Reserved
+                                                },
+
+                                            },
                                             RetestFlag = RetestFlag.NormalTest,
                                             Yield5 = 77.80,
                                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -225,7 +245,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Vm2 = 0.9,
                                             Vm3 = 0.0,
                                         },
-                                        Histograms = new List<FibreDiameterHistogram>
+                                        FibreDiameterHistograms = new List<FibreDiameterHistogram>
                                         {
                                             new FibreDiameterHistogram
                                             {
@@ -331,11 +351,11 @@ namespace Wiedpug.API.ExampleResponses
                                 }
                             }
                         },
-                        WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
+                        WoolSaleHeaders = new List<WoolSaleHeader>
                         {
-                            new CatalogueWoolSaleHeader
+                            new WoolSaleHeader
                             {
-                                WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
+                                WoolSaleHeaderLot = new Domain.Entities.WoolSaleHeaderLot //10
                                 {
                                     Season = 16,
                                     SaleIdentity = new SaleIdentity{
@@ -400,12 +420,12 @@ namespace Wiedpug.API.ExampleResponses
                                             CataloguePageNumber = 65,
                                             UpdateType = UpdateType.A,
                                             PackMaterial = PackMaterial.N,
-                                            CatalogueSymbols = "A",
+                                            CatalogueSymbol = "A",
                                             LotType = LotType.ClassedGrowerLot,
                                             LightestIndividualBaleWeight = new Weight { Value = 149.00, Unit = WeightUnit.Kilograms },
                                             ReportingFlag = ReportingFlag.R,
-                                            CostPerWeightUnit = new PriceCurrency{
-                                                Value=0,
+                                            CostPerWeightUnit = new Currency{
+                                                Value=20.00,
                                                 CurrencyUnit = CurrencyUnit.AUD
                                             },
                                             CleanWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
@@ -428,8 +448,8 @@ namespace Wiedpug.API.ExampleResponses
                                                 MulesingStatus = MulesingStatus.AA
                                             }
                                         },
-                                        LengthAndStrengthTestDetails = 
-                                            new LengthAndStrengthTestDetails
+                                        LengthAndStrengthTestDetail = 
+                                            new LengthAndStrengthTestDetail
                                             {
                                                 CertificateIdentity = new CertificateIdentity
                                                 {
@@ -438,7 +458,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     CertificateIDSuffix = CertificateIDSuffix.L,
                                                     CertificateIDCD = 6
                                                 },
-                                                lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
+                                                lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                 RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
                                                 Charge = new Currency { Value = 256.23, CurrencyUnit = CurrencyUnit.AUD },
@@ -457,8 +477,8 @@ namespace Wiedpug.API.ExampleResponses
                                                 DateIssued = "2017-01-10",
                                                 StapleStrengthLowest25Percent = 24
                                             },
-                                        TestDetails = 
-                                            new TestDetails //51P
+                                        TestDetail = 
+                                            new TestDetail //51P
                                             {
                                                CertificateIdentity = new CertificateIdentity
                                                 {
@@ -467,16 +487,36 @@ namespace Wiedpug.API.ExampleResponses
                                                     CertificateIDSuffix = CertificateIDSuffix.P,
                                                     CertificateIDCD = 7
                                                 },
-                                               TestDetailsType = TestDetailsType.P,
+                                               TestDetailsType = TestDetailType.P,
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                 WoolBase = 64.29,
                                                 AirflowMean = 0.0,
                                                 Vmb = 1.3,
                                                 HardHeadsBase = 0.0,
-                                                Yield1 = 74.40,
-                                                Yield2 = 78.50,
-                                                Yield3 = 75.70,
-                                                Yield4 = 72.10,
+                                                Yields = new List<Yield>
+                                                {
+                                                    new Yield
+                                                    {
+                                                        YieldValue = 74.40,
+                                                        YieldType = YieldType.Reserved
+                                                    },
+                                                    new Yield
+                                                    {
+                                                        YieldValue = 78.50,
+                                                        YieldType = YieldType.IWTOScouredYieldAt16PercentsRegain
+                                                    },
+                                                    new Yield
+                                                    {
+                                                        YieldValue = 75.70,
+                                                        YieldType = YieldType.IWTOCleanWoolContentAt17PercentsRegain
+                                                    },
+                                                    new Yield
+                                                    {
+                                                        YieldValue = 72.10,
+                                                        YieldType = YieldType.Reserved
+                                                    },
+
+                                                },
                                                 RetestFlag = RetestFlag.NormalTest,
                                                 Yield5 = 77.80,
                                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -485,7 +525,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 Vm3 = 0.0,
                                                 DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
                                             },
-                                        Histograms = new List<FibreDiameterHistogram>
+                                        FibreDiameterHistograms = new List<FibreDiameterHistogram>
                                         {
                                             new FibreDiameterHistogram
                                             {
@@ -579,11 +619,11 @@ namespace Wiedpug.API.ExampleResponses
  }
                             }
                     },
-                    WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
+                    WoolSaleHeaders = new List<WoolSaleHeader>
                     {
-                        new CatalogueWoolSaleHeader
+                        new WoolSaleHeader
                         {
-                            WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
+                            WoolSaleHeaderLot = new Domain.Entities.WoolSaleHeaderLot //10
                             {
                                 Season = 16,
                                 SaleIdentity = new SaleIdentity{
@@ -649,16 +689,16 @@ namespace Wiedpug.API.ExampleResponses
                                         CataloguePageNumber = 65,
                                         UpdateType = UpdateType.A,
                                         PackMaterial = PackMaterial.N,
-                                        CatalogueSymbols = "A",
+                                        CatalogueSymbol = "A",
                                         LotType = LotType.ObjectivelyMatchedLot,
                                         LightestIndividualBaleWeight = new Weight{
                                                 Value = 149.00,
                                                 Unit = WeightUnit.Kilograms
                                             },
                                         ReportingFlag = ReportingFlag.R,
-                                        CostPerWeightUnit = new PriceCurrency
+                                        CostPerWeightUnit = new Currency
                                         {
-                                            Value=0,
+                                            Value=20.00,
                                             CurrencyUnit = CurrencyUnit.AUD
                                         },
                                         CleanWeight = new Weight{
@@ -685,8 +725,8 @@ namespace Wiedpug.API.ExampleResponses
                                             MulesingStatus = MulesingStatus.AA
                                         }
                                     },
-                                    LengthAndStrengthTestDetails =
-                                        new LengthAndStrengthTestDetails
+                                    LengthAndStrengthTestDetail =
+                                        new LengthAndStrengthTestDetail
                                             {
                                             CertificateIdentity = new CertificateIdentity
                                             {
@@ -695,7 +735,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDNumber = 664,
                                                 CertificateIDCD = 6
                                             },
-                                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
+                                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                             Charge = new Currency { Value = 230.23, CurrencyUnit = CurrencyUnit.AUD },
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
@@ -714,8 +754,8 @@ namespace Wiedpug.API.ExampleResponses
                                             DateIssued = "2017-01-10",
                                             StapleStrengthLowest25Percent = 24
                                             },
-                                    TestDetails = 
-                                        new TestDetails //51P
+                                    TestDetail = 
+                                        new TestDetail //51P
                                         {
                                             CertificateIdentity = new CertificateIdentity
                                             {
@@ -725,17 +765,37 @@ namespace Wiedpug.API.ExampleResponses
                                                 CertificateIDCD = 5
 
                                             },
-                                            TestDetailsType = TestDetailsType.P,
+                                            TestDetailsType = TestDetailType.P,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                             RegrabSampleWeight = null,
                                             WoolBase = 64.29,
                                             AirflowMean = 0.0,
                                             Vmb = 1.3,
                                             HardHeadsBase = 0.0,
-                                            Yield1 = 74.40,
-                                            Yield2 = 78.50,
-                                            Yield3 = 75.70,
-                                            Yield4 = 72.10,
+                                            Yields = new List<Yield>
+                                            {
+                                                new Yield
+                                                {
+                                                    YieldValue = 74.40,
+                                                    YieldType = YieldType.Reserved
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 78.50,
+                                                    YieldType = YieldType.IWTOScouredYieldAt16PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 75.70,
+                                                    YieldType = YieldType.IWTOCleanWoolContentAt17PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 72.10,
+                                                    YieldType = YieldType.Reserved
+                                                },
+
+                                            },
                                             RetestFlag = RetestFlag.NormalTest,
                                             Yield5 = 77.80,
                                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -744,7 +804,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Vm3 = 0.0,
                                             DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D
                                         },
-                                    Histograms = new List<FibreDiameterHistogram>
+                                    FibreDiameterHistograms = new List<FibreDiameterHistogram>
                                     {
                                         new FibreDiameterHistogram
                                         {
@@ -767,7 +827,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 new FibreDiameterHistogramDetail //32A
                                                 {
-                                                    FibreMeasurements = new List<Domain.ValueObject.FibreDiameterHistogramDetailMeasurement>
+                                                    FibreDiameterHistogramDetailMeasurements = new List<Domain.ValueObject.FibreDiameterHistogramDetailMeasurement>
                                                     {
                                                         new Domain.ValueObject.FibreDiameterHistogramDetailMeasurement
                                                         {
@@ -967,7 +1027,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult<List<Catalogue>>()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new List<Catalogue>()
                 {
                     new()
@@ -995,11 +1055,11 @@ namespace Wiedpug.API.ExampleResponses
                             Abn = "72001967184"
                         },
                         CatalogueType=CatalogueType.A,
-                        WoolSaleHeaders = new List<CatalogueWoolSaleHeader>
+                        WoolSaleHeaders = new List<WoolSaleHeader>
                             {
-                                new CatalogueWoolSaleHeader
+                                new WoolSaleHeader
                                 {
-                                    WoolSaleHeaderLots = new Domain.Entities.WoolSaleHeaderLots //10
+                                    WoolSaleHeaderLot = new Domain.Entities.WoolSaleHeaderLot //10
                                     {
                                         Season = 16,
                                         SaleIdentity = new SaleIdentity{
@@ -1065,13 +1125,13 @@ namespace Wiedpug.API.ExampleResponses
                                                 CataloguePageNumber = 65,
                                                 UpdateType = UpdateType.A,
                                                 PackMaterial = PackMaterial.N,
-                                                CatalogueSymbols = "A",
+                                                CatalogueSymbol = "A",
                                                 LotType = LotType.OtherBulkClassLot,
                                                 LightestIndividualBaleWeight = new Weight { Value = 149.00, Unit = WeightUnit.Kilograms },
                                                 ReportingFlag = ReportingFlag.R,
-                                                CostPerWeightUnit = new PriceCurrency
+                                                CostPerWeightUnit = new Currency
                                                 {
-                                                    Value = 0,
+                                                    Value = 20.00,
                                                     CurrencyUnit = CurrencyUnit.AUD,
                                                 },
                                                 CleanWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
@@ -1093,8 +1153,8 @@ namespace Wiedpug.API.ExampleResponses
                                                     MulesingStatus = MulesingStatus.M
                                                 }
                                             },
-                                            LengthAndStrengthTestDetails = 
-                                                new LengthAndStrengthTestDetails
+                                            LengthAndStrengthTestDetail = 
+                                                new LengthAndStrengthTestDetail
                                                     { 
                                                       CertificateIdentity = new CertificateIdentity
                                                         {
@@ -1103,7 +1163,7 @@ namespace Wiedpug.API.ExampleResponses
                                                             CertificateIDSuffix = CertificateIDSuffix.L,
                                                             CertificateIDCD = 6
                                                         },
-                                                      lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.L,
+                                                      lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                                         Charge = new Currency { Value = 174.30, CurrencyUnit = CurrencyUnit.AUD },
                                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                         RegrabSampleWeight = new Weight { Value = 0.00, Unit = WeightUnit.Kilograms },
@@ -1122,8 +1182,8 @@ namespace Wiedpug.API.ExampleResponses
                                                         DateIssued = "2017-01-10",
                                                         StapleStrengthLowest25Percent = 24
                                                  },
-                                            TestDetails =
-                                                new TestDetails
+                                            TestDetail =
+                                                new TestDetail
                                                 {
                                                       CertificateIdentity = new CertificateIdentity
                                                     {
@@ -1132,16 +1192,36 @@ namespace Wiedpug.API.ExampleResponses
                                                         CertificateIDSuffix = CertificateIDSuffix.P,
                                                         CertificateIDCD = 7
                                                     },
-                                                      TestDetailsType = TestDetailsType.P,
+                                                      TestDetailsType = TestDetailType.P,
                                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                                         WoolBase = 64.29,
                                                         AirflowMean = 0.0,
                                                         Vmb = 1.3,
                                                         HardHeadsBase = 0.0,
-                                                        Yield1 = 74.40,
-                                                        Yield2 = 78.50,
-                                                        Yield3 = 75.70,
-                                                        Yield4 = 72.10,
+                                                        Yields = new List<Yield>
+                                                        {
+                                                            new Yield
+                                                            {
+                                                                YieldValue = 74.40,
+                                                                YieldType = YieldType.Reserved
+                                                            },
+                                                            new Yield
+                                                            {
+                                                                YieldValue = 78.50,
+                                                                YieldType = YieldType.IWTOScouredYieldAt16PercentsRegain
+                                                            },
+                                                            new Yield
+                                                            {
+                                                                YieldValue = 75.70,
+                                                                YieldType = YieldType.IWTOCleanWoolContentAt17PercentsRegain
+                                                            },
+                                                            new Yield
+                                                            {
+                                                                YieldValue = 72.10,
+                                                                YieldType = YieldType.Reserved
+                                                            },
+
+                                                        },
                                                         RetestFlag = RetestFlag.NormalTest,
                                                         Yield5 = 77.80,
                                                         ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
@@ -1151,7 +1231,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.N
                                              
                                                 },
-                                            Histograms = new List<FibreDiameterHistogram>
+                                            FibreDiameterHistograms = new List<FibreDiameterHistogram>
                                             {
                                                 new FibreDiameterHistogram
                                                 {

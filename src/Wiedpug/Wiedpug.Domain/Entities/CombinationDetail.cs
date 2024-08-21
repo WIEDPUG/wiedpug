@@ -4,7 +4,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class CombinationDetails
+    public class CombinationDetail
     {
         /// <summary>
         /// Clean weight = Net Weight X Yield

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.TestStatusAggregate.TestStatus" Collapsed="true">
-    <Position X="1.25" Y="1" Width="1.5" />
+    <Position X="4.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\TestStatusAggregate\TestStatus.cs</FileName>
@@ -15,21 +15,21 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TestStatusDetail" Collapsed="true">
-    <Position X="6.5" Y="1.25" Width="2.5" />
+    <Position X="3.75" Y="1" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACoAAAAAAAAAAAACAAAAAQADFAgACAAAAAAAIA=</HashCode>
       <FileName>Entities\TestStatusDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="1" Y="3.75" Width="1.75" />
+    <Position X="0.5" Y="3" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="4.5" Y="2.75" Width="1.5" />
+    <Position X="4.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>

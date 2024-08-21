@@ -88,7 +88,7 @@ public static class OrganisationDetailsEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        (string id, [FromBody] OrganisationDetail model) =>
+        (string id, [FromBody] OrganisationInformationDetail model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })

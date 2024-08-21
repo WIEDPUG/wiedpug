@@ -5,7 +5,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class AdjustmentNoteDetails
+    public class AdjustmentNoteDetail
     {
         [Required]
         [MinLength(1)]
@@ -70,6 +70,6 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(11)]
-        public required CertificateIdentity NewCertificateIdentity { get; set; }
+        public required CertificateIdentity CertificateIdentityNew { get; set; }
     }
 }

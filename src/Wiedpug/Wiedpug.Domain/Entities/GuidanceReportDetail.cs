@@ -1,24 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class TestDetails
+    public class GuidanceReportDetail
     {
-        [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required TestDetailsType TestDetailsType { get; set; }
-
         [Required]
         [MinLength(1)]
         [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity { get; set; }
 
+        [Required]
         [MinLength(6)]
         [MaxLength(15)]
-        public Currency? Charge { get; set; }
+        public required Currency Charge { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -36,14 +37,13 @@ namespace Wiedpug.Domain.Entities
         public double? AirflowMean { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? Vmb { get; set; }
+        public double VMB { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? HardHeadsBase { get; set; }
+        public double HardHeadsBase { get; set; }
 
-        [Required]
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public required double Yield1 { get; set; }
+        public double? Yield1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? Yield2 { get; set; }
@@ -62,12 +62,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public YieldType? YieldType2 { get; set; }
 
+        [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public RetestFlag? RetestFlag { get; set; }
-
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? Yield5 { get; set; }
+        public required RetestFlag RetestFlag { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -75,22 +73,12 @@ namespace Wiedpug.Domain.Entities
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? Vm1 { get; set; }
+        public double? VM1 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? Vm2 { get; set; }
+        public double? VM2 { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? Vm3 { get; set; }
-
-        [MinLength(1)]
-        [MaxLength(1)]
-        public DarkAndMedullatedFibreRisk? DarkAndMedullatedFibreRisk { get; set; }
-
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? AshContentDryBasis { get; set; }
-
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
-        public double? AlcoholExtractableMatterDryBasis { get; set; }
+        public double? VM3 { get; set; }
     }
 }

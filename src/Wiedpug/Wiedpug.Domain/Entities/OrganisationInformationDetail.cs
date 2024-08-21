@@ -5,7 +5,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class OrganisationDetail
+    public class OrganisationInformationDetail
     {
         public string? Id { get; set; }
 

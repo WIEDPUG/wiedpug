@@ -6,6 +6,6 @@ namespace Wiedpug.Domain.Entities
     public class FibreDiameterHistogramDetail
     {        
         [Required]
-        public required List<FibreDiameterHistogramDetailMeasurement> FibreMeasurements { get; set; }
+        public required List<FibreDiameterHistogramDetailMeasurement> FibreDiameterHistogramDetailMeasurements { get; set; }
     }
 }

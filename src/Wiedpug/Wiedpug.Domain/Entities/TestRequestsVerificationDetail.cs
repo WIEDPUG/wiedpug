@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Wiedpug.Domain.Aggregates.TestRequestsVerificationAggregate;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 using Wiedpug.Domain.ValueObject;
@@ -13,10 +14,10 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required TestRequestVerification TestRequestVerification { get;set; }
 
-        public ContractLimitRequirements?   ContractLimitRequirements { get; set; }
+        public ContractLimitRequirement?   ContractLimitRequirement { get; set; }
 
-        public DarkAndMedullatedFibreRiskDetails? DarkAndMedullatedFibreRiskDetails { get; set; }
+        public DarkAndMedullatedFibreRiskDetail? DarkAndMedullatedFibreRiskDetails { get; set; }
 
-        public List<Bale>? Bales { get; set; }
+        public List<TestRequestsVerificationBale>? TestRequestsVerificationBales { get; set; }
     }
 }

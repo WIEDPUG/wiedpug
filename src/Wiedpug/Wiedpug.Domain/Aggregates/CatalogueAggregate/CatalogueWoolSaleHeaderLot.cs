@@ -8,22 +8,20 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
     {
         public LotHeader? LotHeader { get; set; }
 
-        public List<LotHeaderPricingData>? LotHeaderPricings { get; set; }
+        public List<LotHeaderPricing>? LotHeaderPricings { get; set; }
 
         public EncryptedLotHeaderAwexData? EncryptedLotHeaderAwexData { get; set; }
 
         [Required]
         public required List<LotHeaderVendorDeclaration> LotHeaderVendorDeclarations { get; set; }
 
-        public TestDetails? TestDetails { get; set; }
+        public TestDetail? TestDetail { get; set; }
 
-        public ColourTestDetails? ColourTestDetails { get; set; }
+        public ColourTestDetail? ColourTestDetail { get; set; }
 
-        public LengthAndStrengthTestDetails? LengthAndStrengthTestDetails { get; set; }
+        public LengthAndStrengthTestDetail? LengthAndStrengthTestDetail { get; set; }
 
-        public CombinationDetails? CombinationDetails { get; set; }
-
-        public List<FibreDiameterHistogram>? Histograms { get; set; }
+        public List<FibreDiameterHistogram>? FibreDiameterHistograms { get; set; }
         
         /// <summary>
         /// This field is completely optional when sending Auction Catalogue Updates

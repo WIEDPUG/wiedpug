@@ -9,7 +9,7 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class LengthAfterCardingTestDetails
+    public class LengthAfterCardingTestDetail
     {
         [Required]
         [MinLength(1)]
@@ -19,22 +19,22 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required string Laboratory { get; set; }
+        public required Laboratory Laboratory { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public int? LACBarbe { get; set; }
+        public int? LacBarbe { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_4_1)]
-        public double? LACBarbeCV { get; set; }
+        public double? LacBarbeCvPercentage { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public int? LACHauteur { get; set; }
+        public int? LacHauteur { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        public int? LACHauteurCV { get; set; }
+        public int? LacHauteurCvPercentage { get; set; }
 
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? LACCardWaste { get; set; }
+        public double? LacCardWastePercentage { get; set; }
 
         [Required]
         [MinLength(6)]

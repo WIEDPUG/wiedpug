@@ -37,12 +37,13 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = "72001967184"
                 },
-                TestCertificateRequestCollection = new List<TestCertificateRequest>
+                TestCertificateRequestDetails = new List<TestCertificateRequestDetail>
                 {
-                    new TestCertificateRequest
+                    new TestCertificateRequestDetail
                     {
                         CertificateRequest = new CertificateRequest
                         {
+                            CertificateType = CertificateType.C,
                             PrintRequirements = PrintRequirements.OriginalCertificateCharge,
                             YieldType1 = YieldType.Reserved_1,
                             YieldType2 = YieldType.SchlumbergerCombedDry1PercentTFM,
@@ -92,10 +93,11 @@ namespace Wiedpug.API.ExampleResponses
                             }
                         }
                     },
-                                        new TestCertificateRequest
+                                        new TestCertificateRequestDetail
                     {
                         CertificateRequest = new CertificateRequest
                         {
+                            CertificateType = CertificateType.B,
                             PrintRequirements = PrintRequirements.OriginalCertificateCharge,
                             YieldType1 = YieldType.Reserved,
                             YieldType2 = YieldType.UnitedStatesCustomClean,
@@ -177,7 +179,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new TestCertificateRequests()
                 {
                     TransmissionHeader = new TransmissionHeader
@@ -202,12 +204,13 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001967184"
                     },
-                    TestCertificateRequestCollection = new List<TestCertificateRequest>
+                    TestCertificateRequestDetails = new List<TestCertificateRequestDetail>
                 {
-                    new TestCertificateRequest
+                    new TestCertificateRequestDetail
                     {
                         CertificateRequest = new CertificateRequest
                         {
+                            CertificateType = CertificateType.F,
                             PrintRequirements = PrintRequirements.OriginalCertificateCharge,
                             YieldType1 = YieldType.Reserved_1,
                             YieldType2 = YieldType.SchlumbergerCombedDry1PercentTFM,
@@ -257,10 +260,11 @@ namespace Wiedpug.API.ExampleResponses
                             }
                         }
                     },
-                                        new TestCertificateRequest
+                                        new TestCertificateRequestDetail
                     {
                         CertificateRequest = new CertificateRequest
                         {
+                            CertificateType = CertificateType.C,
                             PrintRequirements = PrintRequirements.OriginalCertificateCharge,
                             YieldType1 = YieldType.Reserved,
                             YieldType2 = YieldType.UnitedStatesCustomClean,

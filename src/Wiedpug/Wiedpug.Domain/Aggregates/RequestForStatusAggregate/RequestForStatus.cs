@@ -7,6 +7,6 @@ namespace Wiedpug.Domain.Aggregates.RequestForStatusAggregate
     {
         [Required]
         public required TransmissionHeader TransmissionHeader { get; set; }
-        public required List<RequestForStatusFilter> Filters { get; set; }
+        public required List<RequestForStatusFilter> RequestForStatusFilters { get; set; }
     }
 }

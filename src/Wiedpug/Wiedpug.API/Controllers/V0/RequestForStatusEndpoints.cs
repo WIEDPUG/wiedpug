@@ -17,6 +17,7 @@ public static class RequestForStatusEndpoints
         group.MapPost("/",
             [SwaggerRequestExample(typeof(RequestForStatus), typeof(RequestForStatusRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForStatusResponse200Example))]
+        [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -30,7 +31,8 @@ public static class RequestForStatusEndpoints
             Summary = "Request for Status",
             Description = "Used by brokers to request status"
         })
-        .Produces<ApiResult<StatusReply>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<StatusReply>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

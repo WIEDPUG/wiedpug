@@ -36,9 +36,9 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = "72001967184"
                 },
-                TestCertificateCollection = new List<TestCertificate>
+                TestCertificateDetails = new List<TestCertificateDetail>
                 {
-                    new TestCertificate {
+                    new TestCertificateDetail {
                         TestDataHeader = new TestDataHeader
                         {
                             Client = new Organisation
@@ -56,7 +56,7 @@ namespace Wiedpug.API.ExampleResponses
                             Value =10.00,
                             Unit = WeightUnit.Kilograms
                         },
-                            LotIdentityOrGroupName = "234234",
+                            LotIdentityOrGroupNumber = "234234",
                             RegrabSampleWeight = new Weight
                             {
                                 Value = 1.00,
@@ -73,7 +73,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                            TestDetails =new TestDetails
+                            TestDetail =new TestDetail
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -81,14 +81,36 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
-                                TestDetailsType = TestDetailsType.P,
+                                TestDetailsType = TestDetailType.P,
                                 Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                 WoolBase = 20.00,
                                 Vmb = 10.0,
                                 HardHeadsBase =3.5,
-                                Yield1 = 1.20,
-                                YieldType1 = YieldType.Reserved,
+                                Yields = new List<Yield>
+                                            {
+                                                new Yield
+                                                {
+                                                    YieldValue = 74.40,
+                                                    YieldType = YieldType.Reserved
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 78.50,
+                                                    YieldType = YieldType.IWTOScouredYieldAt16PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 75.70,
+                                                    YieldType = YieldType.IWTOCleanWoolContentAt17PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 72.10,
+                                                    YieldType = YieldType.Reserved
+                                                },
+
+                                            },
                                 RetestFlag = RetestFlag.NormalTest,
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
@@ -115,7 +137,7 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -131,7 +153,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -147,7 +169,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -166,7 +188,7 @@ namespace Wiedpug.API.ExampleResponses
                         }
 
                     },
-                    new TestCertificate
+                    new TestCertificateDetail
                     {
                         TestDataHeader = new TestDataHeader
                         {
@@ -187,7 +209,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Value = 1.00,
                                 Unit = WeightUnit.Kilograms
                             },
-                            LotIdentityOrGroupName = "123456",
+                            LotIdentityOrGroupNumber = "123456",
                             LotType = LotType.SubjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
                                 Country = CountryCode.AU,
@@ -199,15 +221,15 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        LengthAndStrengthTestDetails = 
-                            new LengthAndStrengthTestDetails{
+                        LengthAndStrengthTestDetail = 
+                            new LengthAndStrengthTestDetail{
                                 CertificateIdentity =  new CertificateIdentity{
                                         CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                                         CertificateIDNumber = 23456787,
                                         CertificateIDSuffix = CertificateIDSuffix.D,
                                         CertificateIDCD = 7
                                     },
-                                lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.K,
+                                lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.K,
                                 Charge = new Currency { Value = 123.25, CurrencyUnit = CurrencyUnit.AUD },
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Laboratory = Laboratory.NZWoolTestingAuthority,
@@ -256,7 +278,7 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -272,7 +294,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -288,7 +310,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -354,7 +376,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new TestCertificates 
                 {
                     TransmissionHeader = new TransmissionHeader
@@ -379,9 +401,9 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = "72001967184"
                     },
-                    TestCertificateCollection = new List<TestCertificate>
+                    TestCertificateDetails = new List<TestCertificateDetail>
                     {
-                    new TestCertificate 
+                    new TestCertificateDetail 
                     {
                         TestDataHeader = new TestDataHeader
                         {
@@ -389,7 +411,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ATW",
                             },
-                            LotIdentityOrGroupName = "123456",
+                            LotIdentityOrGroupNumber = "123456",
                             Bales = 1,
                             Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight
@@ -409,8 +431,8 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        TestDetails = 
-                            new TestDetails
+                        TestDetail = 
+                            new TestDetail
                             {
                                 CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
@@ -418,14 +440,36 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                                 },
-                                TestDetailsType = TestDetailsType.P,
+                                TestDetailsType = TestDetailType.P,
                                 Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                 WoolBase = 20.00,
                                 Vmb = 10.0,
                                 HardHeadsBase =3.5,
-                                Yield1 = 1.20,
-                                YieldType1 = YieldType.Reserved,
+                                            Yields = new List<Yield>
+                                            {
+                                                new Yield
+                                                {
+                                                    YieldValue = 74.40,
+                                                    YieldType = YieldType.Reserved
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 78.50,
+                                                    YieldType = YieldType.IWTOScouredYieldAt16PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 75.70,
+                                                    YieldType = YieldType.IWTOCleanWoolContentAt17PercentsRegain
+                                                },
+                                                new Yield
+                                                {
+                                                    YieldValue = 72.10,
+                                                    YieldType = YieldType.Reserved
+                                                },
+
+                                            },
                                 RetestFlag = RetestFlag.NormalTest,
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
@@ -453,7 +497,7 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -469,7 +513,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -485,7 +529,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -504,7 +548,7 @@ namespace Wiedpug.API.ExampleResponses
                         }
 
                     },
-                    new TestCertificate
+                    new TestCertificateDetail
                     {
                         TestDataHeader = new TestDataHeader
                         {
@@ -520,7 +564,7 @@ namespace Wiedpug.API.ExampleResponses
                                 Unit = WeightUnit.Kilograms
                             },
                             RegrabSampleWeight=new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                            LotIdentityOrGroupName = "123456",
+                            LotIdentityOrGroupNumber = "123456",
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
                                 Country = CountryCode.AU,
@@ -532,15 +576,15 @@ namespace Wiedpug.API.ExampleResponses
                             IsGSTApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        LengthAndStrengthTestDetails = 
-                            new LengthAndStrengthTestDetails{
+                        LengthAndStrengthTestDetail = 
+                            new LengthAndStrengthTestDetail{
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
                                     CertificateIDNumber = 23456787,
                                     CertificateIDSuffix = CertificateIDSuffix.D,
                                     CertificateIDCD = 7
                              },
-                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailsType.K,
+                            lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.K,
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
                             Charge = new Currency { Value = 156.34, CurrencyUnit = CurrencyUnit.AUD },
@@ -589,7 +633,7 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -605,7 +649,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -621,7 +665,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     new FibreDiameterHistogramDetail
                                     {
-                                        FibreMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {

@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Wiedpug.Domain.Entities;
 using Microsoft.OpenApi.Models;
 using Wiedpug.Domain.Interface;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +53,8 @@ builder.Services.AddSwaggerGen(c => {
 
     c.SchemaFilter<IncludeRequestForDataTypesForOpenApiSpec>();
 
+    c.ExampleFilters();
+
     // Polymorphism handling for RequestForDataType - convert to the OneOf relationships for the RequestForDataType classes
     c.MapType<IRequestForDataType>(() => new OpenApiSchema
     {
@@ -64,7 +67,9 @@ builder.Services.AddSwaggerGen(c => {
 });
 
 
-builder.Services.AddSwaggerExamplesFromAssemblies(Assembly.GetEntryAssembly());
+
+
+   builder.Services.AddSwaggerExamplesFromAssemblyOf<Program>();
 
 var app = builder.Build();
 

@@ -28,7 +28,7 @@ namespace Wiedpug.API.ExampleResponses
                     VersionNumber = 36,
                     Abn = "72001967184"
                 },
-                Filters = new List<RequestForStatusFilter>
+                RequestForStatusFilters = new List<RequestForStatusFilter>
                 {
                     new RequestForStatusFilter
                     {
@@ -56,7 +56,7 @@ namespace Wiedpug.API.ExampleResponses
             return new ApiResult<StatusReply>()
             {
                 
-                Message = null,
+                ApiMessages = [],
                 Data = new StatusReply
                 {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
@@ -75,7 +75,7 @@ namespace Wiedpug.API.ExampleResponses
                         VersionNumber = 36,
                         Abn = "72001967184"
                     },
-                    Responses = new List<TransmissionResponse>
+                    TransmissionResponses = new List<TransmissionResponse>
                     {
                         new TransmissionResponse
                         {

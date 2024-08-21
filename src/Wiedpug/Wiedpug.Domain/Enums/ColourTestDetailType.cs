@@ -4,13 +4,13 @@ using System.Text.Json.Serialization;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum ColourTestDetailsType
+    public enum ColourTestDetailType
 
     {
-        [Description("C: Colour Test Details")]
+        [Description("C: Colour Test Detail")]
         C,
 
-        [Description("X: Colour Combination Test Details")]
+        [Description("X: Colour Combination Test Detail")]
         X
 
     }

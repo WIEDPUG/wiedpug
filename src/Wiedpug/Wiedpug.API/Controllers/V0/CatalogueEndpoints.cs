@@ -37,7 +37,7 @@ public static class CatalogueEndpoints
             Summary = "Transmit new Auction Catalogues and Private Catalogues",
             Description = "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",            
         })        
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
@@ -59,7 +59,7 @@ public static class CatalogueEndpoints
             Summary = "Transmit Catalogue Updates",
             Description = "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited."
         })        
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
@@ -67,7 +67,8 @@ public static class CatalogueEndpoints
 
         group.MapPost("/data",
          //   [SwaggerRequestExample(typeof(List<RequestForDataForCatalogue>), typeof(RequestForDataForCatalogueRequestExamples))]            
-            [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataCatalogue200Example))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataCatalogue200Example))]
+        [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -81,7 +82,8 @@ public static class CatalogueEndpoints
             Summary = "Request for Data relating to Auction Catalogue, Private Catalogue and Auction Catalogue Updates",
             Description = "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates"
         })        
-        .Produces<ApiResult<List<Catalogue>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<Catalogue>>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")

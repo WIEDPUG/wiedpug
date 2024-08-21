@@ -2,48 +2,44 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate.OrganisationDetails" Collapsed="true">
     <Position X="2.25" Y="2.25" Width="1.75" />
-    <AssociationLine Name="OrganisationDetailCollection" Type="Wiedpug.Domain.Entities.OrganisationDetail">
+    <AssociationLine Name="OrganisationInformationDetails" Type="Wiedpug.Domain.Entities.OrganisationInformationDetail">
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="-4.192" Y="0.177" Height="0.182" Width="3.921" />
+        <Position X="0.141" Y="0.091" Height="0.182" Width="2.281" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\OrganisationDetailsAggregate\OrganisationDetails.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="OrganisationDetailCollection" />
+      <Property Name="OrganisationInformationDetails" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="7" Y="2.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAEAQAAAAAAAAAAAAAAABAAgAQAAAAQI=</HashCode>
+      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Wiedpug.Domain.Entities.OrganisationDetail" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Entities.OrganisationInformationDetail" Collapsed="true">
     <Position X="3" Y="4.25" Width="2.75" />
-    <AssociationLine Name="PhoneNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber" FixedFromPoint="true">
-      <Path>
-        <Point X="5.25" Y="4.812" />
-        <Point X="5.25" Y="6.75" />
-      </Path>
+    <AssociationLine Name="PhoneNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.362" Y="0.713" />
+        <Position X="-1.268" Y="1.338" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="FaxNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.149" Y="0.21" />
+        <Position X="0.086" Y="1.418" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>BABCAAAAAAAAAAAAEAAAQAAAEAAAIAAAAIAAEAACAAI=</HashCode>
-      <FileName>Entities\OrganisationDetail.cs</FileName>
+      <HashCode>BABCAAAAAAAAAAAAkAAAQAAAEAAAIAAAAIAAEAACAAA=</HashCode>
+      <FileName>Entities\OrganisationInformationDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="PhoneNumber" />
@@ -55,27 +51,32 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.Address" Collapsed="true">
-    <Position X="7.75" Y="4.25" Width="1.5" />
+    <Position X="7.75" Y="4.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAQAAAAAAAAAAAQAgAIAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>ValueObject\Address.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.Contact" Collapsed="true">
-    <Position X="0.5" Y="5.5" Width="3.25" />
+    <Position X="1.5" Y="5.5" Width="2.25" />
     <AssociationLine Name="PhoneNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="1" Y="6.062" />
-        <Point X="1" Y="7.031" />
+        <Point X="1.846" Y="6.062" />
+        <Point X="1.846" Y="7.031" />
         <Point X="4.25" Y="7.031" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.27" Y="-0.322" />
+        <Position X="2.53" Y="0.709" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="MobileNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber">
+    <AssociationLine Name="MobileNumber" Type="Wiedpug.Domain.ValueObject.PhoneNumber" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="6.062" />
+        <Point X="3.5" Y="6.859" />
+        <Point X="4.25" Y="6.859" />
+      </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="1.373" Y="0.304" />
+        <Position X="0.387" Y="0.81" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>

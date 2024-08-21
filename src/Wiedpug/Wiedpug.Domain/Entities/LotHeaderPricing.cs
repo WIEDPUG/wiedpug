@@ -10,7 +10,7 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
-    public class LotHeaderPricingData
+    public class LotHeaderPricing
     {
         [MinLength(1)]
         [MaxLength(1)]
@@ -20,6 +20,6 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public string? YieldBasis { get; set; } // FIELD NUMBER 4 - Yield Basis - Start: 5, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
-        public List<LotHeaderPricingDataOffer>? Offers { get; set; }
+        public List<LotHeaderPricingDataOffer>? LotHeaderPricingDataOffers { get; set; }
     }
 }
