@@ -466,7 +466,8 @@
             "$ref": "#/components/schemas/Centre"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
       },
       "Centre": {
         "required": [
@@ -783,7 +784,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exclude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
       },
       "TransferType": {
         "enum": [
@@ -803,7 +804,8 @@
           "text": {
             "maxLength": 80,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "A free form message"
           }
         },
         "additionalProperties": false

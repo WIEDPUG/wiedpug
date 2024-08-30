@@ -13,25 +13,41 @@ namespace Wiedpug.Domain.Entities
     public class ContractLimitRequirement
     {
         /// <summary>
-        /// Minimum micron, optional decimal with one digit precision.
+        /// The mean fibre diameter of a sample of wool measured in micrometers. This value can refer to Laserscan, Airflow or OFDA.
+        ///
+        /// Min: The lowest value in a range of Micron values
+        ///
+        /// Max: The highest value in a range of Micron values
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? MicronMin { get; set; }
 
         /// <summary>
-        /// Maximum micron, optional decimal with one digit precision.
+        /// The mean fibre diameter of a sample of wool measured in micrometers. This value can refer to Laserscan, Airflow or OFDA.
+        ///
+        /// Min: The lowest value in a range of Micron values
+        ///
+        /// Max: The highest value in a range of Micron values
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? MicronMax { get; set; }
 
         /// <summary>
-        /// Minimum colour Y-Z, optional decimal with one digit precision.
+        /// Average yellowness, Colour Y – Colour Z. The field has an optional leading sign.
+        /// 
+        /// Min – The lowest value in a range of Colour-Y-Z values.
+        /// 
+        /// Max – The highest value in a range of Colour-Y-Z values.
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_1)]
         public double? ColourYZMin { get; set; }
 
         /// <summary>
-        /// Maximum colour Y-Z, optional decimal with one digit precision.
+        /// Average yellowness, Colour Y – Colour Z. The field has an optional leading sign.
+        /// 
+        /// Min – The lowest value in a range of Colour-Y-Z values.
+        /// 
+        /// Max – The highest value in a range of Colour-Y-Z values.
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_1)]
         public double? ColourYZMax { get; set; }
@@ -40,121 +56,221 @@ namespace Wiedpug.Domain.Entities
         /// Minimum VMB, optional decimal with two digits precision.
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_2)]
-        public double? VMBMin { get; set; }
+        public double? VmbMin { get; set; }
 
         /// <summary>
         /// Maximum VMB, optional decimal with two digits precision.
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_3_2)]
-        public double? VMBMax { get; set; }
+        public double? VmbMax { get; set; }
 
         /// <summary>
-        /// Minimum wool base, optional decimal with two digits precision.
+        /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.
+        /// 
+        /// Min The lowest value in a range of Wool Base values
+        ///
+        /// Max The highest value in a range of Wool Base values
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? WoolBaseMin { get; set; }
 
         /// <summary>
-        /// Maximum wool base, optional decimal with two digits precision.
+        /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.
+        /// 
+        /// Min The lowest value in a range of Wool Base values
+        ///
+        /// Max The highest value in a range of Wool Base values
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? WoolBaseMax { get; set; }
 
         /// <summary>
-        /// Minimum dichloromethane on a dry basis, optional decimal with two digits precision.
+        /// Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.
+        ///
+        /// Min: The lowest value in a range of Dichloromethane, dry basis values
+        ///
+        /// Max: The highest value in a range of Dichloromethane, dry basis values
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? DichloromethaneDryBasisMin { get; set; }
 
         /// <summary>
-        /// Maximum dichloromethane on a dry basis, optional decimal with two digits precision.
+        /// Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.
+        ///
+        /// Min: The lowest value in a range of Dichloromethane, dry basis values
+        ///
+        /// Max: The highest value in a range of Dichloromethane, dry basis values
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? DichloromethaneDryBasisMax { get; set; }
 
         /// <summary>
-        /// Minimum conditioning mass, optional numeric field.
+        /// Mass of the sample after conditioning to a specified regain.
+        /// 
+        /// Min: The lowest value in a range of Conditioning Mass values
+        /// 
+        /// Max: The highest value in a range of Conditioning Mass values
         /// </summary>
-        ///
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? ConditioningMassMin { get; set; }
 
         /// <summary>
-        /// Maximum conditioning mass, optional numeric field.
+        /// Mass of the sample after conditioning to a specified regain.
+        /// 
+        /// Min: The lowest value in a range of Conditioning Mass values
+        /// 
+        /// Max: The highest value in a range of Conditioning Mass values
         /// </summary>
-        ///
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? ConditioningMassMax { get; set; }
 
         /// <summary>
-        /// Minimum LAC Barbe, optional numeric field.
-        /// </summary>
+        /// Length after Carding Barbe in mm (mean length biased by fibre weight)
         /// 
+        /// Min: The lowest value in a range of LAC Barbe values
+        /// 
+        /// Max: The highest value in a range of LAC Barbe values
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACBarbeMin { get; set; }
 
         /// <summary>
-        /// Maximum LAC Barbe, optional numeric field.
-        /// </summary>
+        /// Length after Carding Barbe in mm (mean length biased by fibre weight)
         /// 
+        /// Min: The lowest value in a range of LAC Barbe values
+        /// 
+        /// Max: The highest value in a range of LAC Barbe values
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACBarbeMax { get; set; }
 
         /// <summary>
-        /// Minimum LAC Hauteur, optional numeric field.
-        /// </summary>
+        /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur values
+        /// 
+        /// <20 Min: The lowest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <20 Max: The highest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <40 Min: The lowest value in a range of LAC Hauteur values where length is less than 40 mm
+        /// 
+        /// <40 Max: The highest value in a rang
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurMin { get; set; }
 
         /// <summary>
-        /// Maximum LAC Hauteur, optional numeric field.
-        /// </summary>
+        /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur values
+        /// 
+        /// <20 Min: The lowest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <20 Max: The highest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <40 Min: The lowest value in a range of LAC Hauteur values where length is less than 40 mm
+        /// 
+        /// <40 Max: The highest value in a rang
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurMax { get; set; }
 
         /// <summary>
-        /// Minimum LAC Hauteur under 20, optional numeric field.
-        /// </summary>
+        /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur values
+        /// 
+        /// <20 Min: The lowest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <20 Max: The highest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <40 Min: The lowest value in a range of LAC Hauteur values where length is less than 40 mm
+        /// 
+        /// <40 Max: The highest value in a rang
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurUnder20Min { get; set; }
 
         /// <summary>
-        /// Maximum LAC Hauteur under 20, optional numeric field.
-        /// </summary>
+        /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur values
+        /// 
+        /// <20 Min: The lowest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <20 Max: The highest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <40 Min: The lowest value in a range of LAC Hauteur values where length is less than 40 mm
+        /// 
+        /// <40 Max: The highest value in a rang
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurUnder20Max { get; set; }
 
         /// <summary>
-        /// Minimum LAC Hauteur under 40, optional numeric field.
-        /// </summary>
+        /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur values
+        /// 
+        /// <20 Min: The lowest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <20 Max: The highest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <40 Min: The lowest value in a range of LAC Hauteur values where length is less than 40 mm
+        /// 
+        /// <40 Max: The highest value in a rang
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurUnder40Min { get; set; }
 
         /// <summary>
-        /// Maximum LAC Hauteur under 40, optional numeric field.
-        /// </summary>
+        /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur values
+        /// 
+        /// <20 Min: The lowest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <20 Max: The highest value in a range of LAC Hauteur values where length is less than 20 mm
+        /// 
+        /// <40 Min: The lowest value in a range of LAC Hauteur values where length is less than 40 mm
+        /// 
+        /// <40 Max: The highest value in a rang
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurUnder40Max { get; set; }
 
         /// <summary>
-        /// Minimum LAC Hauteur CV(%), optional numeric field.
-        /// </summary>
+        /// Length after Carding - Coefficient of Variation of Hauteur.
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur CV(%) values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur CV(%) values
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurCVPercentMin { get; set; }
 
         /// <summary>
-        /// Maximum LAC Hauteur CV(%), optional numeric field.
-        /// </summary>
+        /// Length after Carding - Coefficient of Variation of Hauteur.
         /// 
+        /// Min: The lowest value in a range of LAC Hauteur CV(%) values
+        /// 
+        /// Max: The highest value in a range of LAC Hauteur CV(%) values
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? LACHauteurCVPercentMax { get; set; }
     }

@@ -12,48 +12,66 @@ namespace Wiedpug.Domain.Entities
     public class PropertyIdentificationCode
     {
         /// <summary>
-        /// Required alphanumeric field for PIC (1).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         [Required]
         public required string PIC1 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (2).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC2 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (3).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC3 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (4).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC4 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (5).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC5 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (6).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC6 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (7).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC7 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (8).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC8 { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for PIC (9).
+        /// Property Identification Code - the property code to identify the source of the wool.
+        /// 
+        /// This field is not used in New Zealand transmissions.
         /// </summary>
         public string? PIC9 { get; set; }
     }

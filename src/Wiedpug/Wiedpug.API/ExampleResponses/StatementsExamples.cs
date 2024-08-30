@@ -94,7 +94,7 @@ namespace Wiedpug.API.ExampleResponses
                                 AmountType = AmountType.Invoice,
                                 ItemDate = "2024-04-23",
                                 GstAmount = new Currency { Value = 134.30, CurrencyUnit = CurrencyUnit.AUD },
-                                IsGstTaxInvoiceApplicable = true,
+                                IsGstApplicable = true,
                                 IsCompanyAbnApplicable = true
                             }
                         },
@@ -265,7 +265,7 @@ namespace Wiedpug.API.ExampleResponses
                                 AmountType = AmountType.Invoice,
                                 ItemDate = "2024-04-23",
                                 GstAmount = new Currency { Value = 134.30, CurrencyUnit = CurrencyUnit.AUD },
-                                IsGstTaxInvoiceApplicable = true,
+                                IsGstApplicable = true,
                                 IsCompanyAbnApplicable = true
                             }
                         },

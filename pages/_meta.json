@@ -1,12 +1,8 @@
 {
   "index":"Home",
-    "class-diagram": "Class Diagram",
     "sequence-diagram": "Sequence Diagram",
-    "security-model": "Security Model",
     "http-response-codes": "HTTP Response Codes",    
-    "openapi-specs": "OpenAPI Specs",
-    "business-rules":"Business Rules",
+    "api-current": "API V0.0 (Current)",
     "release-versions": "Release Versions",
-    "specs":"specs-internal-review",
-    "data-dictionary":"Data Dictionary"
+    "versions":"Archive"
   }

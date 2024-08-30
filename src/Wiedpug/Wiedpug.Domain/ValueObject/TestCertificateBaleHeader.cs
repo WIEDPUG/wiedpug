@@ -10,11 +10,17 @@ namespace Wiedpug.Domain.ValueObject
 {
     public class TestCertificateBaleHeader
     {
+        /// <summary>
+        /// This field is to be always transmitted in upper case.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(30)]
         public required string Brand { get; set; }
 
+        /// <summary>
+        /// This field is to be always transmitted in upper case.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(15)]

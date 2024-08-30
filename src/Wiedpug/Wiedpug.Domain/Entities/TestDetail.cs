@@ -81,12 +81,6 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public RetestFlag? RetestFlag { get; set; }
 
-        /// <summary>
-        /// The amount of recoverable fibre from a lot under set processing conditions
-        /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
-        public double? Yield5 { get; set; }
-
         [MinLength(1)]
         [MaxLength(1)]
         public ReissueChargeFlag ReissueChargeFlag { get; set; }
@@ -141,7 +135,7 @@ namespace Wiedpug.Domain.Entities
         /// Factor for VMB.
         /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        public double? FactorVMB { get; set; }
+        public double? FactorVmb { get; set; }
 
         /// <summary>
         /// Factor for Hard Heads Base.

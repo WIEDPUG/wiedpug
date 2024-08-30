@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [Description("This field indicates whether the certificate is to show yield and/or Laserscan.")]
     public enum PrintRequirements
     {
         [Description("0: Yield and Laserscan are (to be) shown on the certificate")]

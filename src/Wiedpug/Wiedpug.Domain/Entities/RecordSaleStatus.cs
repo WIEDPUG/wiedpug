@@ -24,7 +24,7 @@ namespace Wiedpug.Domain.Entities
         public required int TotalLotsOffered { get; set; }
 
         /// <summary>
-        /// Required decimal field for the last cost of the first lot with two digits precision.
+        /// This indicates the progress of the sale, expressed as a percentage of the total lots offered and is calculated on the WoolSaleHeaderLot record grouping.
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]

@@ -21,11 +21,17 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(10)]
         public required string DeliveryOrderNumber { get; set; }
 
+        /// <summary>
+        /// The broker that is responsible for releasing the wool out of the store
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(8)]
         public required Organisation ReleasingOrganisation { get; set; }
 
+        /// <summary>
+        /// The code for the organisation which is to apply marks to the bales.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(8)]
         public Organisation? MarkingOrganisation { get; set; }

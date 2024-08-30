@@ -51,10 +51,10 @@
                 "testCertificateUpdateDetails": [
                   {
                     "certificateIdentity": {
-                      "certificateIDPrefix": 6,
-                      "certificateIDNumber": 16101382,
-                      "certificateIDSuffix": "L",
-                      "certificateIDCD": 6
+                      "certificateIdPrefix": 6,
+                      "certificateIdNumber": 16101382,
+                      "certificateIdSuffix": "L",
+                      "certificateIdCd": 6
                     },
                     "reissueType": "_06",
                     "client": {
@@ -68,10 +68,10 @@
                   },
                   {
                     "certificateIdentity": {
-                      "certificateIDPrefix": 6,
-                      "certificateIDNumber": 16101382,
-                      "certificateIDSuffix": "M",
-                      "certificateIDCD": 5
+                      "certificateIdPrefix": 6,
+                      "certificateIdNumber": 16101382,
+                      "certificateIdSuffix": "M",
+                      "certificateIdCd": 5
                     },
                     "reissueType": "_05",
                     "client": {
@@ -85,10 +85,10 @@
                   },
                   {
                     "certificateIdentity": {
-                      "certificateIDPrefix": 6,
-                      "certificateIDNumber": 15701332,
-                      "certificateIDSuffix": "B",
-                      "certificateIDCD": 6
+                      "certificateIdPrefix": 6,
+                      "certificateIdNumber": 15701332,
+                      "certificateIdSuffix": "B",
+                      "certificateIdCd": 6
                     },
                     "reissueType": "_02",
                     "client": {
@@ -276,10 +276,10 @@
                     "testCertificateUpdateDetails": [
                       {
                         "certificateIdentity": {
-                          "certificateIDPrefix": 6,
-                          "certificateIDNumber": 16101382,
-                          "certificateIDSuffix": "L",
-                          "certificateIDCD": 6
+                          "certificateIdPrefix": 6,
+                          "certificateIdNumber": 16101382,
+                          "certificateIdSuffix": "L",
+                          "certificateIdCd": 6
                         },
                         "reissueType": "_06",
                         "client": {
@@ -293,10 +293,10 @@
                       },
                       {
                         "certificateIdentity": {
-                          "certificateIDPrefix": 6,
-                          "certificateIDNumber": 16101382,
-                          "certificateIDSuffix": "M",
-                          "certificateIDCD": 5
+                          "certificateIdPrefix": 6,
+                          "certificateIdNumber": 16101382,
+                          "certificateIdSuffix": "M",
+                          "certificateIdCd": 5
                         },
                         "reissueType": "_05",
                         "client": {
@@ -310,10 +310,10 @@
                       },
                       {
                         "certificateIdentity": {
-                          "certificateIDPrefix": 6,
-                          "certificateIDNumber": 15701332,
-                          "certificateIDSuffix": "B",
-                          "certificateIDCD": 6
+                          "certificateIdPrefix": 6,
+                          "certificateIdNumber": 15701332,
+                          "certificateIdSuffix": "B",
+                          "certificateIdCd": 6
                         },
                         "reissueType": "_02",
                         "client": {
@@ -551,7 +551,8 @@
             "$ref": "#/components/schemas/Centre"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
       },
       "Centre": {
         "required": [
@@ -868,7 +869,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exclude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
       },
       "TransferType": {
         "enum": [
@@ -902,19 +903,19 @@
           "bales": {
             "pattern": "-?\\d{1,4}",
             "type": "integer",
-            "description": "Numeric field.",
+            "description": "Number of bales",
             "format": "int32"
           },
           "baleDescription": {
             "maxLength": 15,
             "minLength": 1,
             "type": "string",
-            "description": "Generic alphanumeric field."
+            "description": "This field is to be always transmitted in upper case."
           },
           "woolBase": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
-            "description": "Decimal field with two digits after the decimal point.",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
             "format": "double"
           },
           "woolPreparationCategoryFrom": {
@@ -954,26 +955,26 @@
       },
       "CertificateIdentity": {
         "required": [
-          "certificateIDCD",
-          "certificateIDNumber",
-          "certificateIDPrefix",
-          "certificateIDSuffix"
+          "certificateIdCd",
+          "certificateIdNumber",
+          "certificateIdPrefix",
+          "certificateIdSuffix"
         ],
         "type": "object",
         "properties": {
-          "certificateIDPrefix": {
-            "$ref": "#/components/schemas/CertificateIDPrefix"
+          "certificateIdPrefix": {
+            "$ref": "#/components/schemas/CertificateIdPrefix"
           },
-          "certificateIDNumber": {
+          "certificateIdNumber": {
             "maxLength": 8,
             "minLength": 1,
             "type": "integer",
             "format": "int32"
           },
-          "certificateIDSuffix": {
-            "$ref": "#/components/schemas/CertificateIDSuffix"
+          "certificateIdSuffix": {
+            "$ref": "#/components/schemas/CertificateIdSuffix"
           },
-          "certificateIDCD": {
+          "certificateIdCd": {
             "maxLength": 1,
             "minLength": 1,
             "type": "integer",
@@ -983,7 +984,7 @@
         "additionalProperties": false,
         "description": "The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit\r\ncheck number.It is printed at the top of the certificate."
       },
-      "CertificateIDPrefix": {
+      "CertificateIdPrefix": {
         "enum": [
           2,
           3,
@@ -993,7 +994,7 @@
         "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
         "format": "int32"
       },
-      "CertificateIDSuffix": {
+      "CertificateIdSuffix": {
         "enum": [
           "B",
           "C",
@@ -1024,7 +1025,7 @@
           "07"
         ],
         "type": "string",
-        "description": "01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change"
+        "description": "Instruction to the test house on the type of change requested for the new Certificate Reissue.<br />01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change"
       },
       "WoolPreparationCategory": {
         "enum": [
@@ -1048,7 +1049,7 @@
           "ND"
         ],
         "type": "string",
-        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
+        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nIn Australia, Mulesing status is not applicable for Combinations/OMLs, Guidance reports and Scoured wool.It is also not transmitted for non\r\nYield certificates when transmitted independently e.g.Length and Strength.\r\n            \r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
       },
       "SaleIdentity": {
         "required": [

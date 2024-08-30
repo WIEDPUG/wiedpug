@@ -9,6 +9,11 @@ using Wiedpug.Domain.Enums;
 
 namespace Wiedpug.Domain.ValueObject
 {
+    /// <summary>
+    /// A code used to identify organisations involved in the wool trade.
+    /// 
+    /// These codes are issued and maintained by the Network and are available online.
+    /// </summary>
     public class Organisation
     {
         [Required]

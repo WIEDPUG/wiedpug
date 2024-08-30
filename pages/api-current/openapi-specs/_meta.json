@@ -1,0 +1,18 @@
+{
+    "organisation-details": "OrganisationDetails: Ready for review",
+    "catalogue": "Catalogues: Ready for review",
+    "test-certificates": "TestCetificates: Ready for review",
+    "test-certificate-update": "TestCertificateUpdate: Ready for review",
+    "test-certificate-request": "TestCertificateRequests: Ready for review",
+    "test-requests-verification": "TestRequestsVerification: Ready for review",
+    "lot-invoices": "LotInvoices: Ready for review",
+    "test-status": "TestStatus: Ready for review",
+    "dark-and-medullated-fibre-risk-verification": "DarkAndMedullatedFibreRiskVerification: Ready for review",
+    "payment-advice": "PaymentAdvice: Ready for review",
+    "payment-confirmation": "PaymentConfirmation: Ready for review",
+    "delivery-order-shipping-instructions": "DeliveryOrder/ShippingInstructions: Ready for review",
+    "statements": "Statements: Ready for review",
+    "postsale-printing-of-presale-certificates": "RequestPostsalePrintingOfPresaleCertificates: Ready for review",
+    "texts": "Texts: Ready for review",
+    "lot-price-and-buyer": "LotPriceAndBuyer: Ready for review"
+  }

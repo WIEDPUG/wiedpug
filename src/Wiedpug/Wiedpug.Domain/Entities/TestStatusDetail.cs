@@ -13,7 +13,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required CertificateIDPrefix CertificateIDPrefix { get; set; }
+        public required CertificateIdPrefix CertificateIdPrefix { get; set; }
 
         /// <summary>
         /// Required generic string field for weight note.
@@ -31,16 +31,12 @@ namespace Wiedpug.Domain.Entities
         public required int ClientCode { get; set; }
 
         /// <summary>
-        /// Required numeric field for charge code.
+        /// A number allocated by the test house to identify cost/service level
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public required int ChargeCode { get; set; }
 
-        /// <summary>
-        /// Optional generic string field for L/S Sample ID.
-        /// </summary>
-        /// 
         [MinLength(1)]
         [MaxLength(7)]
         public LsSampleId? LsSampleId { get; set; }
@@ -65,7 +61,7 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]
         [MaxLength(10)]
-        public string? LSSampleReceived { get; set; }
+        public string? LsSampleReceived { get; set; }
 
         /// <summary>
         /// Optional date field for when the TRV matched.
@@ -76,7 +72,7 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
         [MinLength(1)]
         [MaxLength(10)]
-        public string? TRVMatched { get; set; }
+        public string? TrvMatched { get; set; }
 
         /// <summary>
         /// Optional date field for core sample check test.
@@ -92,7 +88,6 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Optional enum for L/S retuft required.
         /// </summary>
-        /// 
         [MinLength(1)]
         [MaxLength(1)]
         public LsRetuftRequired? LsRetuftRequired { get; set; }
@@ -111,7 +106,6 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Optional enum for core test recore required.
         /// </summary>
-        /// 
         [MinLength(1)]
         [MaxLength(1)]
         public CoreTestRecoreRequired? CoreTestRecoreRequired { get; set; }

@@ -15,9 +15,8 @@ namespace Wiedpug.Domain.Entities
         public string? ChargeType { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for charge description.
+        /// A description of the particular charge type.
         /// </summary>
-        /// 
         [MinLength(1)]
         [MaxLength(40)]
         public string? ChargeDescription { get; set; }

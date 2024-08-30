@@ -78,8 +78,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(10)]
         public string? CoreTestSamplingDate { get; set; } // FIELD NUMBER 16 - Core Test Sampling Date - Start: 38, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
 
-        /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// The date the certificate was issued.
+        /// 
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
         [DataType(DataType.Date)]

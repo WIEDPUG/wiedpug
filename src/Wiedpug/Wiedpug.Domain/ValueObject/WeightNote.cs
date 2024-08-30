@@ -9,6 +9,9 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.ValueObject
 {
+    /// <summary>
+    /// The first character contains the Weight Note prefix, and the next seven characters contain the weight Note Suffix.
+    /// </summary>
     public class WeightNote
     {
         [Required]

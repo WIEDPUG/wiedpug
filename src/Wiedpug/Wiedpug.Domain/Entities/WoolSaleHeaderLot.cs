@@ -38,9 +38,8 @@ namespace Wiedpug.Domain.Entities
         public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
-        /// The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). 
-        /// 
-        /// For example, the Centre- Storage against a lot in the AC or ACU is the location of the wool where the buyer would expect to take delivery.
+        /// The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the
+        /// Centre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
         [MinLength(1)]

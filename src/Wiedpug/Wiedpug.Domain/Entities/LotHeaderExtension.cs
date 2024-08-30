@@ -51,7 +51,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
-        public bool? IsGstTaxInvoiceApplicable { get; set; }
+        public bool? IsGstApplicable { get; set; }
 
         [MinLength(3)]
         [MaxLength(6)]

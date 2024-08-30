@@ -21,6 +21,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; }
@@ -35,12 +38,21 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
+        /// <summary>
+        /// Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.
+        ///
+        /// Min: The lowest value in a range of Dichloromethane, dry basis values
+        ///
+        /// Max: The highest value in a range of Dichloromethane, dry basis values
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double DichloromethaneDryBasis { get; set; }
 
         /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// The date the certificate was issued.
+        /// 
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
         [DataType(DataType.Date)]

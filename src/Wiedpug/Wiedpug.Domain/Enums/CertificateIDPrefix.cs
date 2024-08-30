@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
-    public enum CertificateIDPrefix
+    public enum CertificateIdPrefix
     {
         [Description("2: Sydney Laboratory")]
         SydneyLaboratory = 2,

@@ -1,32 +1,50 @@
 const fs = require('fs');
+const path = require('path');
 
 // Function to count occurrences of direct property names
 function countDirectPropertyNames(schema, propertyCounts = {}) {
     if (typeof schema === 'object' && schema !== null) {
+        const properties = schema.properties
         // Check if the schema has properties at the top level
-        if (schema.properties) {
-            for (const propName in schema) {
-                const propSchema = schema[propName];
+        if (properties) {
+            for (let propName in properties) {
+                const propSchema = properties[propName];
+
                 // Only count properties with a type
                 if (propSchema.type) {
-                    propertyCounts[propName] = (propertyCounts[propName] || 0) + 1;
+                    if (propertyCounts[propName]) {
+                        propertyCounts[propName] ++
+                    } else {
+                        propertyCounts[propName] = 1
+                    }
+                    
                 }
             }
 
         }
 
-        // // Process additional schemas if any, but only at the top level
-        // for (const value of Object.values(schema)) {
-        //     if (typeof value === 'object') {
-        //         // Check if the value is a schema and has properties
-        //         if (value.properties) {
-        //             countDirectPropertyNames(value, propertyCounts);
-        //         }
-        //     }
-        // }
     }
 
     return propertyCounts;
+}
+
+// Function to convert array to CSV format
+function arrayToCSV(array) {
+    return array.map(row => row.join(',')).join('\n');
+}
+
+// Function to save CSV to a file
+function saveCSV(array, filename) {
+    const csvContent = arrayToCSV(array);
+    const filePath = path.join(__dirname, filename);
+
+    fs.writeFile(filePath, csvContent, 'utf8', (err) => {
+        if (err) {
+            console.error('Error writing file:', err);
+        } else {
+            console.log('File saved successfully:', filePath);
+        }
+    });
 }
 
 // Main function to load the JSON file and count property names
@@ -42,15 +60,19 @@ function main(filePath) {
     for (const schemaName in schemas) {
         const schema = schemas[schemaName];
         const counts = countDirectPropertyNames(schema, allCounts);
-        for (const [propName, count] of Object.entries(counts)) {
-            allCounts[propName] = (allCounts[propName] || 0) + count;
-        }
+        // for (const [propName, count] of Object.entries(counts)) {
+        //     allCounts[propName] = (allCounts[propName] || 0) + count;
+        // }
     }
 
+    // sort the mao
+    const sortedArray = Object.entries(allCounts).sort((a,b)=> b[1] - a[1])
+
     // Print results
-    for (const [propName, count] of Object.entries(allCounts)) {
-        console.log(`Property Name: ${propName}, Count: ${count}`);
-    }
+    console.log(sortedArray)
+
+    // Trigger CSV download
+    saveCSV(sortedArray,'data.csv');
 }
 
 // Run the script

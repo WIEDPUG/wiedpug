@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [Description("This field provides options to produce certificates for combinations, omls and/or associated sublots")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum PrintFlag
     {

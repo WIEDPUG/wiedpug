@@ -12,6 +12,9 @@ namespace Wiedpug.Domain.Enums
     /// <summary>
     /// Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.
     /// 
+    /// In Australia, Mulesing status is not applicable for Combinations/OMLs, Guidance reports and Scoured wool.It is also not transmitted for non
+    /// Yield certificates when transmitted independently e.g.Length and Strength.
+    ///
     /// From:
     /// 
     /// The current value that the Mulesing Status is to be changed from

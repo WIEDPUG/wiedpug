@@ -13,6 +13,8 @@ namespace Wiedpug.Domain.Entities
         public required int ClientCode { get; set; }
 
         /// <summary>
+        /// The period ending date of the statement
+        ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
@@ -27,6 +29,8 @@ namespace Wiedpug.Domain.Entities
         public required Currency AmountRemitted { get; set; }
 
         /// <summary>
+        /// The date the payment was made
+        ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]

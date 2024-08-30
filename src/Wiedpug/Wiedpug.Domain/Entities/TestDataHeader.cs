@@ -1,12 +1,18 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection.Metadata;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Wiedpug.Domain.Aggregates.LotPriceAndBuyersAggregate;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 using Wiedpug.Domain.ValueObject;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -42,6 +48,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(4)]
         public SaleIdentity? SaleIdentity { get; set; }
 
+        /// <summary>
+        /// The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the
+        /// Centre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(5)]
         public Centre? CentreStorage { get; set; }
@@ -80,24 +90,49 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(8)]
         public WeightNote? WeightNote { get; set; }
 
+        /// <summary>
+        /// The identity given to the lot in the computer system by the owner of the wool.
+        /// 
+        /// Client’s Cross Reference is transmitted by the owner of the wool to a Test House when the owner either verifies a test request(in a type of
+        /// TRV document) or requests the printing of a certificate(in a type TCR document). If it is included in the transmission to the Test House, the
+        /// Test House will also include it in its transmission of the certificate.The owner of the wool will then be able to connect the transmitted certificate
+        /// with the wool in its computer system.In a Test Request Verification document, the field must contain the weight note number of the lot.
+        /// The value in this field is NOT printed on the certificate.It is the value in the Certificate Reference field that is printed on the certificate.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(8)]
         public string? ClientsCrossReference { get; set; }
 
+        /// <summary>
+        /// Number of bales
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public required int Bales { get; set; }
 
+        /// <summary>
+        /// Total weight of the wool. In transmissions from Test Houses, Gross 
+        /// includes Regrab Sample Weight. In all other transmissions, Regrab 
+        /// Sample Weight will have been subtracted from the Gross of a lot or a 
+        /// group before the transmission. See the chapter ‘Business Rules’ for a 
+        /// fuller explanation.
+        /// </summary>
         [Required]
         [MinLength(4)]
         [MaxLength(9)]
         public required Weight Gross { get; set; }
 
+        /// <summary>
+        /// The weight of the bale packaging
+        /// </summary>
         [Required]
         [MinLength(4)]
         [MaxLength(9)]
         public required Weight Tare { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; }
@@ -106,10 +141,16 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public MulesingStatus? MulesingStatus { get; set; }
 
+        /// <summary>
+        /// The gross weight of the lot as declared by the owner
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? DeclaredGross { get; set; }
 
+        /// <summary>
+        /// The tare weight of the lot as declared by the owner
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? DeclaredTare { get; set; }
@@ -150,7 +191,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
-        public bool? IsGSTApplicable { get; set; }
+        public bool? IsGstApplicable { get; set; }
 
         /// <summary>
         /// A boolean value to indicate whether the Company ABN is applicable to invoice. 

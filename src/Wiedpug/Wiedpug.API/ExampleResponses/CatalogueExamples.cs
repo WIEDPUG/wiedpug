@@ -148,7 +148,7 @@ namespace Wiedpug.API.ExampleResponses
                                             PackCondition = PackCondition.N,
                                             CoreTestSamplingDate = "2019-01-17",
                                             WoolDescription = "MF6S",
-                                            IsGstTaxInvoiceApplicable = true,
+                                            IsGstApplicable = true,
                                             NumberOfOverweightBales = 0
                                         },
                                         //No 21B
@@ -168,10 +168,10 @@ namespace Wiedpug.API.ExampleResponses
                                             new LengthAndStrengthTestDetail {
                                             CertificateIdentity = new CertificateIdentity
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = 664,
-                                                CertificateIDSuffix = CertificateIDSuffix.L,
-                                                CertificateIDCD = 6
+                                                CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                CertificateIdNumber = 664,
+                                                CertificateIdSuffix = CertificateIdSuffix.L,
+                                                CertificateIdCd = 6
                                             },
                                             lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
@@ -203,10 +203,10 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             CertificateIdentity = new CertificateIdentity
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = 499,
-                                                CertificateIDSuffix = CertificateIDSuffix.P,
-                                                CertificateIDCD = 7
+                                                CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                CertificateIdNumber = 499,
+                                                CertificateIdSuffix = CertificateIdSuffix.P,
+                                                CertificateIdCd = 7
                                             },
                                             TestDetailsType = TestDetailType.P,
                                             Laboratory = Laboratory.AustralianWoolTestingAuthority,
@@ -236,10 +236,14 @@ namespace Wiedpug.API.ExampleResponses
                                                     YieldValue = 72.10,
                                                     YieldType = YieldType.Reserved
                                                 },
+                                                new Yield
+                                                {
+                                                    YieldValue = 77.80,
+                                                    YieldType = YieldType.Reserved
+                                                },
 
                                             },
                                             RetestFlag = RetestFlag.NormalTest,
-                                            Yield5 = 77.80,
                                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                             Vm1 = 0.0,
                                             Vm2 = 0.9,
@@ -432,7 +436,7 @@ namespace Wiedpug.API.ExampleResponses
                                             PackCondition = PackCondition.N,
                                             CoreTestSamplingDate = "2019-01-17",
                                             WoolDescription = "MF6S",
-                                            IsGstTaxInvoiceApplicable = true,
+                                            IsGstApplicable = true,
                                             NumberOfOverweightBales = 0
                                         },
                                         //No 21B
@@ -453,10 +457,10 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 CertificateIdentity = new CertificateIdentity
                                                 {
-                                                    CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                    CertificateIDNumber = 664,
-                                                    CertificateIDSuffix = CertificateIDSuffix.L,
-                                                    CertificateIDCD = 6
+                                                    CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                    CertificateIdNumber = 664,
+                                                    CertificateIdSuffix = CertificateIdSuffix.L,
+                                                    CertificateIdCd = 6
                                                 },
                                                 lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
@@ -482,10 +486,10 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                CertificateIdentity = new CertificateIdentity
                                                 {
-                                                    CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                    CertificateIDNumber = 499,
-                                                    CertificateIDSuffix = CertificateIDSuffix.P,
-                                                    CertificateIDCD = 7
+                                                    CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                    CertificateIdNumber = 499,
+                                                    CertificateIdSuffix = CertificateIdSuffix.P,
+                                                    CertificateIdCd = 7
                                                 },
                                                TestDetailsType = TestDetailType.P,
                                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
@@ -518,7 +522,6 @@ namespace Wiedpug.API.ExampleResponses
 
                                                 },
                                                 RetestFlag = RetestFlag.NormalTest,
-                                                Yield5 = 77.80,
                                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                                 Vm1 = 0.0,
                                                 Vm2 = 0.9,
@@ -708,7 +711,7 @@ namespace Wiedpug.API.ExampleResponses
                                         PackCondition = PackCondition.N,
                                         CoreTestSamplingDate = "2019-01-17",
                                         WoolDescription = "MF6S",
-                                        IsGstTaxInvoiceApplicable = true,
+                                        IsGstApplicable = true,
                                         NumberOfOverweightBales = 0
                                     },
                                     //No 21B
@@ -730,10 +733,10 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                             CertificateIdentity = new CertificateIdentity
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDSuffix = CertificateIDSuffix.C,
-                                                CertificateIDNumber = 664,
-                                                CertificateIDCD = 6
+                                                CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                CertificateIdSuffix = CertificateIdSuffix.C,
+                                                CertificateIdNumber = 664,
+                                                CertificateIdCd = 6
                                             },
                                             lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                             Charge = new Currency { Value = 230.23, CurrencyUnit = CurrencyUnit.AUD },
@@ -759,10 +762,10 @@ namespace Wiedpug.API.ExampleResponses
                                         {
                                             CertificateIdentity = new CertificateIdentity
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDSuffix = CertificateIDSuffix.M,
-                                                CertificateIDNumber = 499,
-                                                CertificateIDCD = 5
+                                                CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                CertificateIdSuffix = CertificateIdSuffix.M,
+                                                CertificateIdNumber = 499,
+                                                CertificateIdCd = 5
 
                                             },
                                             TestDetailsType = TestDetailType.P,
@@ -797,7 +800,6 @@ namespace Wiedpug.API.ExampleResponses
 
                                             },
                                             RetestFlag = RetestFlag.NormalTest,
-                                            Yield5 = 77.80,
                                             ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                             Vm1 = 0.0,
                                             Vm2 = 0.9,
@@ -1158,10 +1160,10 @@ namespace Wiedpug.API.ExampleResponses
                                                     { 
                                                       CertificateIdentity = new CertificateIdentity
                                                         {
-                                                            CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                            CertificateIDNumber = 664,
-                                                            CertificateIDSuffix = CertificateIDSuffix.L,
-                                                            CertificateIDCD = 6
+                                                            CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                            CertificateIdNumber = 664,
+                                                            CertificateIdSuffix = CertificateIdSuffix.L,
+                                                            CertificateIdCd = 6
                                                         },
                                                       lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.L,
                                                         Charge = new Currency { Value = 174.30, CurrencyUnit = CurrencyUnit.AUD },
@@ -1187,10 +1189,10 @@ namespace Wiedpug.API.ExampleResponses
                                                 {
                                                       CertificateIdentity = new CertificateIdentity
                                                     {
-                                                        CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                        CertificateIDNumber = 499,
-                                                        CertificateIDSuffix = CertificateIDSuffix.P,
-                                                        CertificateIDCD = 7
+                                                        CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                        CertificateIdNumber = 499,
+                                                        CertificateIdSuffix = CertificateIdSuffix.P,
+                                                        CertificateIdCd = 7
                                                     },
                                                       TestDetailsType = TestDetailType.P,
                                                         Laboratory = Laboratory.AustralianWoolTestingAuthority,
@@ -1223,7 +1225,6 @@ namespace Wiedpug.API.ExampleResponses
 
                                                         },
                                                         RetestFlag = RetestFlag.NormalTest,
-                                                        Yield5 = 77.80,
                                                         ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                                         Vm1 = 0.0,
                                                         Vm2 = 0.9,

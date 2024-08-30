@@ -21,6 +21,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; }
@@ -49,6 +52,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(9)]
         public Weight? SumOfOdMasses { get; set; }
 
+        /// <summary>
+        /// Refer to Invoice Mass Flag to determine Gain or Loss.
+        /// </summary>
         [Required]
         [MinLength(4)]
         [MaxLength(9)]
@@ -58,6 +64,13 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double MoistureContentPercentage { get; set; }
 
+        /// <summary>
+        /// The amount of moisture in the fibres, expressed as a percentage of the clean oven-dry weight.
+        /// 
+        /// Nominated - The Regain nominated by the Test House client.
+        /// 
+        /// Test House - The Regain certified by the Test House.
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double RegainPercentage { get; set; }
@@ -86,8 +99,9 @@ namespace Wiedpug.Domain.Entities
         [StringLength (1)]
         public required InvoiceMassFlag InvoiceMassFlag { get; set; }
 
-        /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
+        /// The date the certificate was issued.
+        /// 
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
         [DataType(DataType.Date)]

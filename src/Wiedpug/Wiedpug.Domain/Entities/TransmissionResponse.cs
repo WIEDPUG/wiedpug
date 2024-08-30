@@ -12,6 +12,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(5)]
         public string? ErrorCode { get; set; }
 
+        /// <summary>
+        /// A free form message
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(69)]

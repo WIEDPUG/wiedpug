@@ -8,6 +8,8 @@ namespace Wiedpug.Domain.Entities
     public class PaymentDetail
     {
         /// <summary>
+        /// The period ending date of the statement
+        ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
@@ -16,6 +18,19 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(10)]
         public required string StatementDate { get; set; }
 
+        /// <summary>
+        /// Account Reference as per printed statement under heading “AWTA LTD REFERENCE”
+        ///
+        /// Examples:
+        ///
+        /// • Certificate Identity
+        ///
+        /// • Credit Note number
+        ///
+        /// • Debit Note number
+        ///
+        /// • Cheque number
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(11)]
@@ -31,6 +46,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required PaymentType PaymentType { get; set;}
 
+        /// <summary>
+        /// Reason for non payment
+        /// </summary>
         [MinLength(1)]
         [MaxLength(30)]
         public string? Reason { get; set; }

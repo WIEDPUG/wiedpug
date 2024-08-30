@@ -27,7 +27,7 @@ namespace Wiedpug.Domain.Entities
         public required string LotIdentity { get; set; }
 
         /// <summary>
-        /// Required decimal field for the last cost of the first lot with two digits precision.
+        /// This is the sum of the following amount: First Cost + (Post sale charge X total bales) + charge per lot.
         /// </summary>
         [Required]
         [MinLength(6)]

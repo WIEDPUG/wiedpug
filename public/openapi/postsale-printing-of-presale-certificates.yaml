@@ -183,10 +183,10 @@ paths:
                     abn: "72001967184"
                   printPreSaleCertificatePostSales:
                     - certificateIdentity:
-                        certificateIDPrefix: 2
-                        certificateIDNumber: 234567
-                        certificateIDSuffix: F
-                        certificateIDCD: 6
+                        certificateIdPrefix: 2
+                        certificateIdNumber: 234567
+                        certificateIdSuffix: F
+                        certificateIdCd: 6
                       weightNote:
                         prefix: L
                         suffix: 1234567
@@ -371,6 +371,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -783,7 +790,7 @@ components:
           nullable: true
       additionalProperties: false
       description: "Used to identify document transfer type: Restrict, Unrestrict, and
-        Exlcude.\r
+        Exclude.\r
 
         \r
 
@@ -867,7 +874,7 @@ components:
           minLength: 1
           pattern: -?\d{1,3}
           type: integer
-          description: Required numeric field for bales.
+          description: Number of bales
           format: int32
         gross:
           $ref: "#/components/schemas/Weight"
@@ -882,7 +889,8 @@ components:
           minLength: 1
           pattern: -?\d{1,6}
           type: integer
-          description: Optional numeric field for cost per weight unit.
+          description: The selling price per weight unit. Generally, cost per weight unit
+            will be in Australian cents per kilogram.
           format: int32
           nullable: true
         printFlag:
@@ -908,22 +916,22 @@ components:
       additionalProperties: false
     CertificateIdentity:
       required:
-        - certificateIDCD
-        - certificateIDNumber
-        - certificateIDPrefix
-        - certificateIDSuffix
+        - certificateIdCd
+        - certificateIdNumber
+        - certificateIdPrefix
+        - certificateIdSuffix
       type: object
       properties:
-        certificateIDPrefix:
-          $ref: "#/components/schemas/CertificateIDPrefix"
-        certificateIDNumber:
+        certificateIdPrefix:
+          $ref: "#/components/schemas/CertificateIdPrefix"
+        certificateIdNumber:
           maxLength: 8
           minLength: 1
           type: integer
           format: int32
-        certificateIDSuffix:
-          $ref: "#/components/schemas/CertificateIDSuffix"
-        certificateIDCD:
+        certificateIdSuffix:
+          $ref: "#/components/schemas/CertificateIdSuffix"
+        certificateIdCd:
           maxLength: 1
           minLength: 1
           type: integer
@@ -934,7 +942,7 @@ components:
         followed by a 1 digit\r
 
         check number.It is printed at the top of the certificate."
-    CertificateIDPrefix:
+    CertificateIdPrefix:
       enum:
         - 2
         - 3
@@ -943,7 +951,7 @@ components:
       description: "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6:
         Fremantle Laboratory"
       format: int32
-    CertificateIDSuffix:
+    CertificateIdSuffix:
       enum:
         - B
         - C
@@ -985,6 +993,8 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+      description: The first character contains the Weight Note prefix, and the next
+        seven characters contain the weight Note Suffix.
     SaleOutcome:
       enum:
         - 0
@@ -1134,7 +1144,9 @@ components:
         - 0
         - 1
       type: integer
-      description: "0: Deliver to Broker/Buyer Address<br />1: Deliver to Clearing House"
+      description: "A code to tell the Test House to whom the post-sale printed
+        certificate is to be delivered.<br />0: Deliver to Broker/Buyer
+        Address<br />1: Deliver to Clearing House"
       format: int32
     PrintFlag:
       enum:
@@ -1146,13 +1158,15 @@ components:
         - M
         - N
       type: string
-      description: "P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf
-        Combination/OML Certificate and associated sub-lots<br />S: Pdf
-        associated sub-lots excluding the Combination/OML Certificate<br />C:
-        Pdf Combination Certificate in Chinese and English<br />E: Pdf
-        Combination Certificate in Chinese and English & associated sublots in
-        English)<br />M: Pdf Combination Certificate in English & Mulesing
-        Status report<br />N: Pdf Mulesing Status report only"
+      description: "This field provides options to produce certificates for
+        combinations, omls and/or associated sublots<br />P: Normal RPP/TCR
+        request to pdf Certificate<br />A: Pdf Combination/OML Certificate and
+        associated sub-lots<br />S: Pdf associated sub-lots excluding the
+        Combination/OML Certificate<br />C: Pdf Combination Certificate in
+        Chinese and English<br />E: Pdf Combination Certificate in Chinese and
+        English & associated sublots in English)<br />M: Pdf Combination
+        Certificate in English & Mulesing Status report<br />N: Pdf Mulesing
+        Status report only"
     WoolinkSaleSystem:
       enum:
         - A

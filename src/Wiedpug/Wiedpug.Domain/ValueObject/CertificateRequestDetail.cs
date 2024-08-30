@@ -17,6 +17,13 @@ namespace Wiedpug.Domain.ValueObject
         [MaxLength(11)]
         public required CertificateIdentity CertificateIdentity {  get; set; }
 
+        /// <summary>
+        /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.
+        /// 
+        /// Min The lowest value in a range of Wool Base values
+        ///
+        /// Max The highest value in a range of Wool Base values
+        /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double Woolbase {  get; set; }
 

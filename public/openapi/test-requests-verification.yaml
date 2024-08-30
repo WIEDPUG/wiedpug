@@ -637,6 +637,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -1049,7 +1056,7 @@ components:
           nullable: true
       additionalProperties: false
       description: "Used to identify document transfer type: Restrict, Unrestrict, and
-        Exlcude.\r
+        Exclude.\r
 
         \r
 
@@ -1169,10 +1176,35 @@ components:
           maxLength: 8
           minLength: 1
           type: string
+          description: "The identity given to the lot in the computer system by the owner
+            of the wool.\r
+
+            \r
+
+            Client’s Cross Reference is transmitted by the owner of
+            the wool to a Test House when the owner either verifies a test
+            request(in a type of\r
+
+            TRV document) or requests the printing of a
+            certificate(in a type TCR document). If it is included in the
+            transmission to the Test House, the\r
+
+            Test House will also include it in its transmission of
+            the certificate.The owner of the wool will then be able to connect
+            the transmitted certificate\r
+
+            with the wool in its computer system.In a Test Request
+            Verification document, the field must contain the weight note number
+            of the lot.\r
+
+            The value in this field is NOT printed on the
+            certificate.It is the value in the Certificate Reference field that
+            is printed on the certificate."
           nullable: true
         bales:
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
         gross:
           $ref: "#/components/schemas/Weight"
@@ -1198,7 +1230,7 @@ components:
           $ref: "#/components/schemas/ScouredType"
         gstAmount:
           $ref: "#/components/schemas/Currency"
-        isGSTApplicable:
+        isGstApplicable:
           maxLength: 5
           minLength: 4
           type: boolean
@@ -1354,6 +1386,8 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+      description: The first character contains the Weight Note prefix, and the next
+        seven characters contain the weight Note Suffix.
     Weight:
       required:
         - unit
@@ -1388,6 +1422,15 @@ components:
         prior to 21st July, 2008 or if the transmission was outside Australia.\r
 
         \r
+
+        In Australia, Mulesing status is not applicable for
+        Combinations/OMLs, Guidance reports and Scoured wool.It is also not
+        transmitted for non\r
+
+        Yield certificates when transmitted independently e.g.Length and
+        Strength.\r
+
+        \            \r
 
         From:\r
 
@@ -1515,7 +1558,7 @@ components:
           maxLength: 30
           minLength: 1
           type: string
-          description: Optional alphanumeric field for grower name.
+          description: The name of the grower of the wool
           nullable: true
         coreSampleWeight:
           $ref: "#/components/schemas/Weight"
@@ -1543,13 +1586,13 @@ components:
         coresPerBale:
           pattern: -?\d{1,2}
           type: integer
-          description: Optional numeric field for cores per bale.
+          description: Number of core samples taken from the bale.
           format: int32
           nullable: true
         grabsPerBale:
           pattern: -?\d{1,2}
           type: integer
-          description: Optional numeric field for grabs per bale.
+          description: Number of grab samples taken from each bale
           format: int32
           nullable: true
         isPreviousDataToBeUpdated:
@@ -1720,25 +1763,65 @@ components:
         micronMin:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
-          description: Minimum micron, optional decimal with one digit precision.
+          description: "The mean fibre diameter of a sample of wool measured in
+            micrometers. This value can refer to Laserscan, Airflow or OFDA.\r
+
+            \            \r
+
+            Min: The lowest value in a range of Micron values\r
+
+            \            \r
+
+            Max: The highest value in a range of Micron values"
           format: double
           nullable: true
         micronMax:
           pattern: ^-?\d{1,2}\.\d{1}$
           type: number
-          description: Maximum micron, optional decimal with one digit precision.
+          description: "The mean fibre diameter of a sample of wool measured in
+            micrometers. This value can refer to Laserscan, Airflow or OFDA.\r
+
+            \            \r
+
+            Min: The lowest value in a range of Micron values\r
+
+            \            \r
+
+            Max: The highest value in a range of Micron values"
           format: double
           nullable: true
         colourYZMin:
           pattern: ^-?\d{1,3}\.\d{1}$
           type: number
-          description: Minimum colour Y-Z, optional decimal with one digit precision.
+          description: "Average yellowness, Colour Y – Colour Z. The field has an optional
+            leading sign.\r
+
+            \r
+
+            Min – The lowest value in a range of Colour-Y-Z
+            values.\r
+
+            \r
+
+            Max – The highest value in a range of Colour-Y-Z
+            values."
           format: double
           nullable: true
         colourYZMax:
           pattern: ^-?\d{1,3}\.\d{1}$
           type: number
-          description: Maximum colour Y-Z, optional decimal with one digit precision.
+          description: "Average yellowness, Colour Y – Colour Z. The field has an optional
+            leading sign.\r
+
+            \r
+
+            Min – The lowest value in a range of Colour-Y-Z
+            values.\r
+
+            \r
+
+            Max – The highest value in a range of Colour-Y-Z
+            values."
           format: double
           nullable: true
         vmbMin:
@@ -1756,27 +1839,65 @@ components:
         woolBaseMin:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
-          description: Minimum wool base, optional decimal with two digits precision.
+          description: "The oven-dry mass of wool fibre free from all impurities,
+            expressed as a percentage of the mass of the sample.\r
+
+            \r
+
+            Min The lowest value in a range of Wool Base values\r
+
+            \            \r
+
+            Max The highest value in a range of Wool Base values"
           format: double
           nullable: true
         woolBaseMax:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
-          description: Maximum wool base, optional decimal with two digits precision.
+          description: "The oven-dry mass of wool fibre free from all impurities,
+            expressed as a percentage of the mass of the sample.\r
+
+            \r
+
+            Min The lowest value in a range of Wool Base values\r
+
+            \            \r
+
+            Max The highest value in a range of Wool Base values"
           format: double
           nullable: true
         dichloromethaneDryBasisMin:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
-          description: Minimum dichloromethane on a dry basis, optional decimal with two
-            digits precision.
+          description: "Dichloromethane Extractable Matter (Residual Grease) remaining in
+            a sample of wool after scouring and drying.\r
+
+            \            \r
+
+            Min: The lowest value in a range of Dichloromethane, dry
+            basis values\r
+
+            \            \r
+
+            Max: The highest value in a range of Dichloromethane,
+            dry basis values"
           format: double
           nullable: true
         dichloromethaneDryBasisMax:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
-          description: Maximum dichloromethane on a dry basis, optional decimal with two
-            digits precision.
+          description: "Dichloromethane Extractable Matter (Residual Grease) remaining in
+            a sample of wool after scouring and drying.\r
+
+            \            \r
+
+            Min: The lowest value in a range of Dichloromethane, dry
+            basis values\r
+
+            \            \r
+
+            Max: The highest value in a range of Dichloromethane,
+            dry basis values"
           format: double
           nullable: true
         conditioningMassMin:
@@ -1786,61 +1907,93 @@ components:
         lacBarbeMin:
           pattern: -?\d{1,3}
           type: integer
-          description: Minimum LAC Barbe, optional numeric field.
+          description: "Length after Carding Barbe in mm (mean length biased by fibre
+            weight)\r
+
+            \r
+
+            Min: The lowest value in a range of LAC Barbe values\r
+
+            \r
+
+            Max: The highest value in a range of LAC Barbe values"
           format: int32
           nullable: true
         lacBarbeMax:
           pattern: -?\d{1,3}
           type: integer
-          description: Maximum LAC Barbe, optional numeric field.
+          description: "Length after Carding Barbe in mm (mean length biased by fibre
+            weight)\r
+
+            \r
+
+            Min: The lowest value in a range of LAC Barbe values\r
+
+            \r
+
+            Max: The highest value in a range of LAC Barbe values"
           format: int32
           nullable: true
         lacHauteurMin:
           pattern: -?\d{1,3}
           type: integer
-          description: Minimum LAC Hauteur, optional numeric field.
           format: int32
           nullable: true
         lacHauteurMax:
           pattern: -?\d{1,3}
           type: integer
-          description: Maximum LAC Hauteur, optional numeric field.
           format: int32
           nullable: true
         lacHauteurUnder20Min:
           pattern: -?\d{1,3}
           type: integer
-          description: Minimum LAC Hauteur under 20, optional numeric field.
           format: int32
           nullable: true
         lacHauteurUnder20Max:
           pattern: -?\d{1,3}
           type: integer
-          description: Maximum LAC Hauteur under 20, optional numeric field.
           format: int32
           nullable: true
         lacHauteurUnder40Min:
           pattern: -?\d{1,3}
           type: integer
-          description: Minimum LAC Hauteur under 40, optional numeric field.
           format: int32
           nullable: true
         lacHauteurUnder40Max:
           pattern: -?\d{1,3}
           type: integer
-          description: Maximum LAC Hauteur under 40, optional numeric field.
           format: int32
           nullable: true
         lacHauteurCVPercentMin:
           pattern: -?\d{1,3}
           type: integer
-          description: Minimum LAC Hauteur CV(%), optional numeric field.
+          description: "Length after Carding - Coefficient of Variation of Hauteur.\r
+
+            \r
+
+            Min: The lowest value in a range of LAC Hauteur CV(%)
+            values\r
+
+            \r
+
+            Max: The highest value in a range of LAC Hauteur CV(%)
+            values"
           format: int32
           nullable: true
         lacHauteurCVPercentMax:
           pattern: -?\d{1,3}
           type: integer
-          description: Maximum LAC Hauteur CV(%), optional numeric field.
+          description: "Length after Carding - Coefficient of Variation of Hauteur.\r
+
+            \r
+
+            Min: The lowest value in a range of LAC Hauteur CV(%)
+            values\r
+
+            \r
+
+            Max: The highest value in a range of LAC Hauteur CV(%)
+            values"
           format: int32
           nullable: true
       additionalProperties: false
@@ -1915,12 +2068,14 @@ components:
         ageFrom:
           pattern: -?\d{1,2}
           type: integer
-          description: Required numeric field for minimum age.
+          description: Youngest Age Code in the mob/sale lot (weight note) as per the
+            National Wool Declaration (NWD) Age Shearing Codes.
           format: int32
         ageTo:
           pattern: -?\d{1,2}
           type: integer
-          description: Optional numeric field for maximum age.
+          description: Oldest Age Code in the mob/sale lot (weight note) as per the
+            National Wool Declaration (NWD) Age Shearing Codes.
           format: int32
           nullable: true
         darkAndMedullatedFibreRiskBroker:
@@ -1932,6 +2087,16 @@ components:
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
+          description: "The oven-dry mass of wool fibre free from all impurities,
+            expressed as a percentage of the mass of the sample.\r
+
+            \r
+
+            Min The lowest value in a range of Wool Base values\r
+
+            \            \r
+
+            Max The highest value in a range of Wool Base values"
           format: double
           nullable: true
         dmfrErrorFields:
@@ -2055,22 +2220,22 @@ components:
         Level 5<br />6: Risk Level 6"
     CertificateIdentity:
       required:
-        - certificateIDCD
-        - certificateIDNumber
-        - certificateIDPrefix
-        - certificateIDSuffix
+        - certificateIdCd
+        - certificateIdNumber
+        - certificateIdPrefix
+        - certificateIdSuffix
       type: object
       properties:
-        certificateIDPrefix:
-          $ref: "#/components/schemas/CertificateIDPrefix"
-        certificateIDNumber:
+        certificateIdPrefix:
+          $ref: "#/components/schemas/CertificateIdPrefix"
+        certificateIdNumber:
           maxLength: 8
           minLength: 1
           type: integer
           format: int32
-        certificateIDSuffix:
-          $ref: "#/components/schemas/CertificateIDSuffix"
-        certificateIDCD:
+        certificateIdSuffix:
+          $ref: "#/components/schemas/CertificateIdSuffix"
+        certificateIdCd:
           maxLength: 1
           minLength: 1
           type: integer
@@ -2081,7 +2246,7 @@ components:
         followed by a 1 digit\r
 
         check number.It is printed at the top of the certificate."
-    CertificateIDPrefix:
+    CertificateIdPrefix:
       enum:
         - 2
         - 3
@@ -2090,7 +2255,7 @@ components:
       description: "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6:
         Fremantle Laboratory"
       format: int32
-    CertificateIDSuffix:
+    CertificateIdSuffix:
       enum:
         - B
         - C
@@ -2156,10 +2321,12 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         baleDescription:
           maxLength: 15
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         areaOfOrigin:
           maxLength: 4
           minLength: 1
@@ -2179,6 +2346,7 @@ components:
           minLength: 1
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
           nullable: true
         locationWithinStore:
@@ -2197,6 +2365,7 @@ components:
           maxLength: 5
           minLength: 1
           type: string
+          description: The number used to identify a bale in a lot
         baleDetailType:
           $ref: "#/components/schemas/BaleDetailType"
         showBaleIndicator:
@@ -2228,6 +2397,28 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          nullable: true
+        threeBaleCount:
+          pattern: -?\d{1,2}
+          type: integer
+          description: "The number of tripacks (3 bales) in the lot.\r
+
+            \            \r
+
+            Property for Tripacks BaleDetail, not necessary for
+            other types of bale details."
+          format: int32
+          nullable: true
+        twoBaleCount:
+          pattern: -?\d{1,2}
+          type: integer
+          description: "The number of two bale tri-packs.\r
+
+            \            \r
+
+            Property for Tripacks BaleDetail, not necessary for
+            other types of bale details."
+          format: int32
           nullable: true
       additionalProperties: false
     BaleDetailType:

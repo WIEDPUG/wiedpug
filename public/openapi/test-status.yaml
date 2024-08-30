@@ -39,7 +39,7 @@ paths:
                   programName: NETR
                 abn: "72001967184"
               testStatusDetails:
-                - certificateIDPrefix: 6
+                - certificateIdPrefix: 6
                   weightNote:
                     prefix: "1"
                     suffix: 1234567
@@ -53,7 +53,7 @@ paths:
                   lsSampleReceived: "240424"
                   trvMatched: "240424"
                   lsRetuftRequired: 1
-                - certificateIDPrefix: 6
+                - certificateIdPrefix: 6
                   weightNote:
                     prefix: "1"
                     suffix: 1234567
@@ -185,7 +185,7 @@ paths:
                       programName: NETR
                     abn: "72001967184"
                   testStatusDetails:
-                    - certificateIDPrefix: 6
+                    - certificateIdPrefix: 6
                       weightNote:
                         prefix: "1"
                         suffix: 1234567
@@ -199,7 +199,7 @@ paths:
                       lsSampleReceived: "240424"
                       trvMatched: "240424"
                       lsRetuftRequired: 1
-                    - certificateIDPrefix: 6
+                    - certificateIdPrefix: 6
                       weightNote:
                         prefix: "1"
                         suffix: 1234567
@@ -378,6 +378,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -790,7 +797,7 @@ components:
           nullable: true
       additionalProperties: false
       description: "Used to identify document transfer type: Restrict, Unrestrict, and
-        Exlcude.\r
+        Exclude.\r
 
         \r
 
@@ -807,14 +814,14 @@ components:
         excluding the appointed members"
     TestStatusDetail:
       required:
-        - certificateIDPrefix
+        - certificateIdPrefix
         - chargeCode
         - clientCode
         - weightNote
       type: object
       properties:
-        certificateIDPrefix:
-          $ref: "#/components/schemas/CertificateIDPrefix"
+        certificateIdPrefix:
+          $ref: "#/components/schemas/CertificateIdPrefix"
         weightNote:
           $ref: "#/components/schemas/WeightNote"
         clientCode:
@@ -825,7 +832,7 @@ components:
         chargeCode:
           pattern: -?\d{1,4}
           type: integer
-          description: Required numeric field for charge code.
+          description: A number allocated by the test house to identify cost/service level
           format: int32
         lsSampleId:
           $ref: "#/components/schemas/LsSampleId"
@@ -912,7 +919,7 @@ components:
           format: date
           nullable: true
       additionalProperties: false
-    CertificateIDPrefix:
+    CertificateIdPrefix:
       enum:
         - 2
         - 3
@@ -938,6 +945,8 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+      description: The first character contains the Weight Note prefix, and the next
+        seven characters contain the weight Note Suffix.
     LsSampleId:
       required:
         - checkDigit

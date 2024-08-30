@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [Description("A code showing the colour of lettering used for applying countermarks.")]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum CountermarkColour
 

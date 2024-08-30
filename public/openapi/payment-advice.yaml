@@ -426,6 +426,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -838,7 +845,7 @@ components:
           nullable: true
       additionalProperties: false
       description: "Used to identify document transfer type: Restrict, Unrestrict, and
-        Exlcude.\r
+        Exclude.\r
 
         \r
 
@@ -1421,7 +1428,7 @@ components:
           maxLength: 40
           minLength: 1
           type: string
-          description: Optional alphanumeric field for charge description.
+          description: A description of the particular charge type.
           nullable: true
         chargeAmount:
           $ref: "#/components/schemas/Currency"
@@ -1463,6 +1470,7 @@ components:
           maxLength: 80
           minLength: 1
           type: string
+          description: A free form message
       additionalProperties: false
     ApiResult:
       type: object

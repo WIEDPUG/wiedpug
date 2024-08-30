@@ -687,6 +687,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -1220,13 +1227,21 @@ components:
           maxLength: 50
           minLength: 1
           type: string
+          description: "he name of a person or organisation.\r
+
+            Contact – Name of a person in the organisation that can
+            be contacted for further information.\r
+
+            Organisation – the name of the organisation."
         dateLastUpdated:
           maxLength: 10
           minLength: 1
           pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
           type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD)
+          description: "The day the item was last amended.\r
+
+            Date value in ISO standard UTC date format. e.g.
+            2024-03-21 (YYYY-MM-DD)"
           format: date
         industryGroupId:
           $ref: "#/components/schemas/IndustryGroupId"
@@ -1280,9 +1295,8 @@ components:
         - T
         - V
       type: string
-      description: "A: Agent / Broker<br />C: Carrier<br />E: Exporter / Buyer<br />D:
-        Dump<br />M: Miscellaneous<br />P: Port<br />S: Shipping<br />T: Test
-        House<br />V: Vessel"
+      description: A code to describe the type of industry in which an organisation
+        operates.
     PhoneNumber:
       required:
         - standardPhoneNumber

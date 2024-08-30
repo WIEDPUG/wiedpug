@@ -91,14 +91,14 @@ namespace Wiedpug.Domain.Entities
         public required Sex Sex { get; set; }
 
         /// <summary>
-        /// Required numeric field for minimum age.
+        /// Youngest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public required int AgeFrom { get; set; }
 
         /// <summary>
-        /// Optional numeric field for maximum age.
+        /// Oldest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.
         /// </summary>
         /// 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
@@ -120,6 +120,13 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         public CertificateIdentity? CertificateIdentity { get; set; }
 
+        /// <summary>
+        /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.
+        /// 
+        /// Min The lowest value in a range of Wool Base values
+        ///
+        /// Max The highest value in a range of Wool Base values
+        /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public double? WoolBase { get; set; }
 

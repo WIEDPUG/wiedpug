@@ -4,7 +4,8 @@ using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Enums
 {
-     [JsonConverter(typeof(JsonStringEnumConverter))]
+    [Description("Instruction to the test house on the type of change requested for the new Certificate Reissue.")]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum ReissueType
     {
         [Description("01: Wool Preparation Category (WPC) Change")]

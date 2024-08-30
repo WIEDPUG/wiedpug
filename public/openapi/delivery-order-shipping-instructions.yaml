@@ -455,6 +455,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -867,7 +874,7 @@ components:
           nullable: true
       additionalProperties: false
       description: "Used to identify document transfer type: Restrict, Unrestrict, and
-        Exlcude.\r
+        Exclude.\r
 
         \r
 
@@ -920,6 +927,11 @@ components:
           maxLength: 14
           minLength: 1
           type: string
+          description: "This number is provided be the Australian Custom Service’s EXIT
+            system to the exporter. \r
+
+            It is included only if it is available at the time the
+            delivery order is produced."
           nullable: true
         shippingAgent:
           $ref: "#/components/schemas/Organisation"
@@ -931,6 +943,7 @@ components:
           maxLength: 7
           minLength: 1
           type: string
+          description: These codes are maintained by Australian Chamber of Shipping
           nullable: true
         voyageCode:
           maxLength: 6
@@ -941,6 +954,14 @@ components:
           maxLength: 5
           minLength: 1
           type: string
+          description: "The code that identifies the port at which the wool will be
+            unloaded. A \r
+
+            recognised code should be used in this field. These
+            codes are issued \r
+
+            and maintained by the Australian Chamber of Shipping
+            (ACOS)."
           nullable: true
         loadPortCode:
           maxLength: 5
@@ -987,11 +1008,13 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          description: The text to be applied as a countermark or headmark
           nullable: true
         countermarkHeadmarkLine2:
           maxLength: 30
           minLength: 1
           type: string
+          description: The text to be applied as a countermark or headmark
           nullable: true
       additionalProperties: false
     DeliveryOrder:
@@ -1126,28 +1149,33 @@ components:
         - B
         - R
       type: string
-      description: "B: Black<br />R: Red"
+      description: "A code showing the colour of lettering used for applying
+        countermarks.<br />B: Black<br />R: Red"
     CountermarkMarking:
       enum:
         - H
         - S
       type: string
-      description: "H: Hand Marking<br />S: Stencilling"
+      description: "A code showing the method of applying countermarks.<br />H: Hand
+        Marking<br />S: Stencilling"
     CountermarkSize:
       enum:
         - 3
         - 4
         - 6
       type: integer
-      description: "3: 3 Inches<br />4: 4 Inches<br />6: 6 Inches"
+      description: "A code showing the height (in inches) of the lettering used for
+        applying a countermark.<br />3: 3 Inches<br />4: 4 Inches<br />6: 6
+        Inches"
       format: int32
     CountermarkHeadmarkFlag:
       enum:
         - 1
         - 2
       type: integer
-      description: "1: Countermark is to be applied on the bale<br />2: Headmark is to
-        be applied on the bale"
+      description: "A flag that indicates whether the mark is to be placed on the side
+        or the end of the bale.<br />1: Countermark is to be applied on the
+        bale<br />2: Headmark is to be applied on the bale"
       format: int32
     Comment:
       required:
@@ -1158,6 +1186,7 @@ components:
           maxLength: 80
           minLength: 1
           type: string
+          description: A free form message
       additionalProperties: false
     DeliveryOrderLot:
       required:
@@ -1213,6 +1242,9 @@ components:
           maxLength: 15
           minLength: 1
           type: string
+          description: Used to provide more details on location within the Storage
+            Organisations facility - such as street address, warehouse number
+            etc. – to assist delivery.
           nullable: true
         lotIdentityOrGroupNumber:
           maxLength: 6
@@ -1277,6 +1309,7 @@ components:
           minLength: 1
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
         gross:
           $ref: "#/components/schemas/Weight"
@@ -1309,11 +1342,15 @@ components:
           maxLength: 10
           minLength: 1
           type: string
+          description: Shipping Identification Mark
           nullable: true
         blendSequence:
           maxLength: 2
           minLength: 1
           type: string
+          description: The sequence in which lots are to be blended by the processor. This
+            field is applicable only to local delivery orders containing
+            instructions for processing.
           nullable: true
         clientCrossReference:
           maxLength: 8
@@ -1532,22 +1569,22 @@ components:
         wool<br />A. Alpaca<br />C. Cashmere<br />M. Mohair
     CertificateIdentity:
       required:
-        - certificateIDCD
-        - certificateIDNumber
-        - certificateIDPrefix
-        - certificateIDSuffix
+        - certificateIdCd
+        - certificateIdNumber
+        - certificateIdPrefix
+        - certificateIdSuffix
       type: object
       properties:
-        certificateIDPrefix:
-          $ref: "#/components/schemas/CertificateIDPrefix"
-        certificateIDNumber:
+        certificateIdPrefix:
+          $ref: "#/components/schemas/CertificateIdPrefix"
+        certificateIdNumber:
           maxLength: 8
           minLength: 1
           type: integer
           format: int32
-        certificateIDSuffix:
-          $ref: "#/components/schemas/CertificateIDSuffix"
-        certificateIDCD:
+        certificateIdSuffix:
+          $ref: "#/components/schemas/CertificateIdSuffix"
+        certificateIdCd:
           maxLength: 1
           minLength: 1
           type: integer
@@ -1558,7 +1595,7 @@ components:
         followed by a 1 digit\r
 
         check number.It is printed at the top of the certificate."
-    CertificateIDPrefix:
+    CertificateIdPrefix:
       enum:
         - 2
         - 3
@@ -1567,7 +1604,7 @@ components:
       description: "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6:
         Fremantle Laboratory"
       format: int32
-    CertificateIDSuffix:
+    CertificateIdSuffix:
       enum:
         - B
         - C
@@ -1631,10 +1668,12 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         baleDescription:
           maxLength: 15
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         areaOfOrigin:
           maxLength: 4
           minLength: 1
@@ -1654,6 +1693,7 @@ components:
           minLength: 1
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
           nullable: true
         locationWithinStore:
@@ -1672,6 +1712,7 @@ components:
           maxLength: 5
           minLength: 1
           type: string
+          description: The number used to identify a bale in a lot
         baleDetailType:
           $ref: "#/components/schemas/BaleDetailType"
         showBaleIndicator:
@@ -1703,6 +1744,28 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          nullable: true
+        threeBaleCount:
+          pattern: -?\d{1,2}
+          type: integer
+          description: "The number of tripacks (3 bales) in the lot.\r
+
+            \            \r
+
+            Property for Tripacks BaleDetail, not necessary for
+            other types of bale details."
+          format: int32
+          nullable: true
+        twoBaleCount:
+          pattern: -?\d{1,2}
+          type: integer
+          description: "The number of two bale tri-packs.\r
+
+            \            \r
+
+            Property for Tripacks BaleDetail, not necessary for
+            other types of bale details."
+          format: int32
           nullable: true
       additionalProperties: false
     BaleDetailType:

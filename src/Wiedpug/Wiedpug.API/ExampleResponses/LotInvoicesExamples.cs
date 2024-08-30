@@ -131,15 +131,12 @@ namespace Wiedpug.API.ExampleResponses
                                                 Value = 12.24,
                                                 CurrencyUnit =CurrencyUnit.AUD
                                             },
-                                             PackMaterial = PackMaterial.K
-                                         },
-                                         LotInvoiceExtension = new LotInvoiceExtension
-                                         {
-                                             GSTFirstCost =new Currency{
+                                             PackMaterial = PackMaterial.K,
+                                             GstFirstCost =new Currency{
                                                 Value = 14.11,
                                                 CurrencyUnit =CurrencyUnit.AUD
                                             },
-                                             GSTTotalPostSaleCharge = new Currency{
+                                             GstTotalPostSaleCharge = new Currency{
                                                 Value = 51.80,
                                                 CurrencyUnit =CurrencyUnit.AUD
                                             },
@@ -403,12 +400,9 @@ namespace Wiedpug.API.ExampleResponses
                                                             },
                                              CostPerWeightUnit = 25,
                                              FirstCost = new Currency { Value = 12.24, CurrencyUnit = CurrencyUnit.AUD },
-                                             PackMaterial = PackMaterial.K
-                                         },
-                                         LotInvoiceExtension = new LotInvoiceExtension
-                                         {
-                                             GSTFirstCost =new Currency { Value = 141.11, CurrencyUnit = CurrencyUnit.AUD },
-                                             GSTTotalPostSaleCharge = new Currency { Value = 51.80, CurrencyUnit = CurrencyUnit.AUD },
+                                             PackMaterial = PackMaterial.K,
+                                             GstFirstCost =new Currency { Value = 141.11, CurrencyUnit = CurrencyUnit.AUD },
+                                             GstTotalPostSaleCharge = new Currency { Value = 51.80, CurrencyUnit = CurrencyUnit.AUD },
                                              TotalPostSaleCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD }
                                          },
                                          LotHeaderVendorDeclarations = new List<LotHeaderVendorDeclaration>

@@ -37,14 +37,28 @@ namespace Wiedpug.Domain.Entities
         public Weight? CleanWeight5 { get; set; }
 
         /// <summary>
-        /// VMB - Minimum value.
+        /// Vegetable Matter Base. The oven dry mass of ash-free, ethyl alcohol extractives - free burrs (including hardheads), twigs, seeds, leaves 
+        /// and grasses present, expressed as a percentage of the mass of the greasy core sample.
+        ///
+        /// Average: The average value of vegetable matter base values for a number of lots.
+        ///
+        /// Minimum: The lowest value in a range of vegetable matter base values.
+        ///
+        /// Maximum: The highest value in a range of vegetable matter base values.
         /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? VmbMinimum { get; set; }
 
         /// <summary>
-        /// VMB - Maximum value.
-        /// </summary>        
+        /// Vegetable Matter Base. The oven dry mass of ash-free, ethyl alcohol extractives - free burrs (including hardheads), twigs, seeds, leaves 
+        /// and grasses present, expressed as a percentage of the mass of the greasy core sample.
+        ///
+        /// Average: The average value of vegetable matter base values for a number of lots.
+        ///
+        /// Minimum: The lowest value in a range of vegetable matter base values.
+        ///
+        /// Maximum: The highest value in a range of vegetable matter base values.
+        /// </summary>      
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? VmbMaximum { get; set; }
 
@@ -58,7 +72,7 @@ namespace Wiedpug.Domain.Entities
         /// Factor for VMB.
         /// </summary>        
         [RegularExpression(RegexPattern.DECIMAL_9_2)]
-        public double? FactorVMB { get; set; }
+        public double? FactorVmb { get; set; }
 
         /// <summary>
         /// Factor for Hard Heads Base.

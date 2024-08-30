@@ -13,14 +13,14 @@ namespace Wiedpug.Domain.Entities
     public class LotInvoiceExtension
     {
         /// <summary>
-        /// Optional decimal field for GST on the first cost with two digits precision.
+        /// Goods & Services Tax Amount applicable to First Cost
         /// </summary>
         [MinLength(6)]
         [MaxLength(15)]
         public Currency? GSTFirstCost { get; set; }
 
         /// <summary>
-        /// Optional decimal field for GST on total post sale charge with two digits precision.
+        /// Goods & Services Tax Amount applicable to Total Post Sale Charge
         /// </summary>
         [MinLength(6)]
         [MaxLength(15)]
@@ -35,14 +35,14 @@ namespace Wiedpug.Domain.Entities
         public required Currency TotalPostSaleCharge { get; set; }
 
         /// <summary>
-        /// Optional decimal field for total post sale charge rebate with two digits precision.
+        /// The total (extended) amount of Post Sale Charge Rebate for the Lot. This value is provided where a value in the Post Sale Charge Rebate field exists
         /// </summary>
         [MinLength(6)]
         [MaxLength(15)]
         public Currency? TotalPostSaleChargeRebate { get; set; }
 
         /// <summary>
-        /// Optional decimal field for GST on total post sale charge rebate with two digits precision.
+        /// The total (extended) GST amount payable on the Post Sale Charge Rebate for the Lot.
         /// </summary>
         [MinLength(6)]
         [MaxLength(15)]

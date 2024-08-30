@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [Description("A code showing the height (in inches) of the lettering used for applying a countermark.")]
     public enum CountermarkSize
 
     {

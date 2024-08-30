@@ -10,11 +10,17 @@ namespace Wiedpug.Domain.ValueObject
 {
     public class BaleHeader
     {
+        /// <summary>
+        /// This field is to be always transmitted in upper case.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(30)]
         public required string Brand { get; set; }
 
+        /// <summary>
+        /// This field is to be always transmitted in upper case.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(15)]
@@ -32,6 +38,9 @@ namespace Wiedpug.Domain.ValueObject
         [MaxLength(4)]
         public required string AreaOfOrigin { get; set; }
 
+        /// <summary>
+        /// Number of bales
+        /// </summary>
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         [MinLength(1)]
         [MaxLength(4)]

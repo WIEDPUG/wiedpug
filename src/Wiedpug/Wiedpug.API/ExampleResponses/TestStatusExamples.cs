@@ -42,7 +42,7 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     new TestStatusDetail
                     {
-                        CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                        CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
                             Suffix = 1234567,
@@ -55,12 +55,12 @@ namespace Wiedpug.API.ExampleResponses
                             CheckDigit = 8
                         },
                         CoreSampleReceived = "240423",
-                        LSSampleReceived = "240424",
-                        TRVMatched = "240424",
+                        LsSampleReceived = "240424",
+                        TrvMatched = "240424",
                         LsRetuftRequired = LsRetuftRequired.Required
                     },
                     new TestStatusDetail {
-                        CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                        CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
                             Suffix = 1234567,
@@ -73,8 +73,8 @@ namespace Wiedpug.API.ExampleResponses
                             CheckDigit = 4
                         },
                         CoreSampleReceived = "240423",
-                        LSSampleReceived = "240424",
-                        TRVMatched = "240424"
+                        LsSampleReceived = "240424",
+                        TrvMatched = "240424"
                     }
                 }
             };
@@ -155,7 +155,7 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     new TestStatusDetail
                     {
-                        CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                        CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
                             Suffix = 1234567,
@@ -168,12 +168,12 @@ namespace Wiedpug.API.ExampleResponses
                             CheckDigit = 8
                         },
                         CoreSampleReceived = "240423",
-                        LSSampleReceived = "240424",
-                        TRVMatched = "240424",
+                        LsSampleReceived = "240424",
+                        TrvMatched = "240424",
                         LsRetuftRequired = LsRetuftRequired.Required
                     },
                     new TestStatusDetail {
-                        CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
+                        CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
                         WeightNote = new WeightNote{
                             Prefix = "1",
                             Suffix = 1234567,
@@ -186,8 +186,8 @@ namespace Wiedpug.API.ExampleResponses
                             CheckDigit = 4
                         },
                         CoreSampleReceived = "240423",
-                        LSSampleReceived = "240424",
-                        TRVMatched = "240424"
+                        LsSampleReceived = "240424",
+                        TrvMatched = "240424"
                     }
                 }
                 }

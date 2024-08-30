@@ -20,21 +20,21 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required CertificateIDPrefix CertificateIDPrefix { get; set; }
+        public required CertificateIdPrefix CertificateIdPrefix { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(8)]
-        public required int CertificateIDNumber { get; set; }
+        public required int CertificateIdNumber { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required CertificateIDSuffix CertificateIDSuffix { get; set; }
+        public required CertificateIdSuffix CertificateIdSuffix { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required int CertificateIDCD { get; set; }
+        public required int CertificateIdCd { get; set; }
     }
 }

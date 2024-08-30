@@ -50,7 +50,7 @@ namespace Wiedpug.Domain.Entities
         /// Sample Weight will have been subtracted from the Gross of a lot or a
         /// group before the transmission.
         /// </summary>
-                [Required]
+        [Required]
         [MinLength(4)]
         [MaxLength(9)]
         public required Weight Gross { get; set; } // FIELD NUMBER 4 - Gross - Start: 13, Size: 6, Data Type: N, Justification: R, Requirement Designator: M
@@ -251,7 +251,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
-        public bool? IsGstTaxInvoiceApplicable { get; set; }
+        public bool? IsGstApplicable { get; set; }
 
         [MinLength(3)]
         [MaxLength(6)]

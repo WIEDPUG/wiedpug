@@ -158,7 +158,7 @@
                                 "packCondition": "N",
                                 "coreTestSamplingDate": "2019-01-17",
                                 "woolDescription": "MF6S",
-                                "isGstTaxInvoiceApplicable": true,
+                                "isGstApplicable": true,
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
@@ -173,10 +173,10 @@
                               "testDetail": {
                                 "testDetailsType": "P",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 499,
-                                  "certificateIDSuffix": "P",
-                                  "certificateIDCD": 7
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 499,
+                                  "certificateIdSuffix": "P",
+                                  "certificateIdCd": 7
                                 },
                                 "laboratory": 1,
                                 "woolBase": 64.29,
@@ -185,24 +185,27 @@
                                 "hardHeadsBase": 0,
                                 "yields": [
                                   {
-                                    "yieldValue": 74.4,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 74.4
                                   },
                                   {
-                                    "yieldValue": 78.5,
-                                    "yieldType": 8
+                                    "yieldType": 8,
+                                    "yieldValue": 78.5
                                   },
                                   {
-                                    "yieldValue": 75.7,
-                                    "yieldType": 12
+                                    "yieldType": 12,
+                                    "yieldValue": 75.7
                                   },
                                   {
-                                    "yieldValue": 72.1,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 72.1
+                                  },
+                                  {
+                                    "yieldType": 1,
+                                    "yieldValue": 77.8
                                   }
                                 ],
                                 "retestFlag": 0,
-                                "yield5": 77.8,
                                 "reissueChargeFlag": 0,
                                 "vm1": 0,
                                 "vm2": 0.9,
@@ -211,10 +214,10 @@
                               "lengthAndStrengthTestDetail": {
                                 "lengthAndStrengthTestDetailsType": "L",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 664,
-                                  "certificateIDSuffix": "L",
-                                  "certificateIDCD": 6
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 664,
+                                  "certificateIdSuffix": "L",
+                                  "certificateIdCd": 6
                                 },
                                 "charge": {
                                   "value": 188.5,
@@ -417,7 +420,7 @@
                                 "packCondition": "N",
                                 "coreTestSamplingDate": "2019-01-17",
                                 "woolDescription": "MF6S",
-                                "isGstTaxInvoiceApplicable": true,
+                                "isGstApplicable": true,
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
@@ -432,10 +435,10 @@
                               "testDetail": {
                                 "testDetailsType": "P",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 499,
-                                  "certificateIDSuffix": "P",
-                                  "certificateIDCD": 7
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 499,
+                                  "certificateIdSuffix": "P",
+                                  "certificateIdCd": 7
                                 },
                                 "laboratory": 1,
                                 "woolBase": 64.29,
@@ -444,24 +447,23 @@
                                 "hardHeadsBase": 0,
                                 "yields": [
                                   {
-                                    "yieldValue": 74.4,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 74.4
                                   },
                                   {
-                                    "yieldValue": 78.5,
-                                    "yieldType": 8
+                                    "yieldType": 8,
+                                    "yieldValue": 78.5
                                   },
                                   {
-                                    "yieldValue": 75.7,
-                                    "yieldType": 12
+                                    "yieldType": 12,
+                                    "yieldValue": 75.7
                                   },
                                   {
-                                    "yieldValue": 72.1,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 72.1
                                   }
                                 ],
                                 "retestFlag": 0,
-                                "yield5": 77.8,
                                 "reissueChargeFlag": 0,
                                 "vm1": 0,
                                 "vm2": 0.9,
@@ -471,10 +473,10 @@
                               "lengthAndStrengthTestDetail": {
                                 "lengthAndStrengthTestDetailsType": "L",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 664,
-                                  "certificateIDSuffix": "L",
-                                  "certificateIDCD": 6
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 664,
+                                  "certificateIdSuffix": "L",
+                                  "certificateIdCd": 6
                                 },
                                 "charge": {
                                   "value": 256.23,
@@ -785,7 +787,7 @@
                             "packCondition": "N",
                             "coreTestSamplingDate": "2019-01-17",
                             "woolDescription": "MF6S",
-                            "isGstTaxInvoiceApplicable": true,
+                            "isGstApplicable": true,
                             "numberOfOverweightBales": 0
                           },
                           "encryptedLotHeaderAwexData": {
@@ -800,10 +802,10 @@
                           "testDetail": {
                             "testDetailsType": "P",
                             "certificateIdentity": {
-                              "certificateIDPrefix": 3,
-                              "certificateIDNumber": 499,
-                              "certificateIDSuffix": "M",
-                              "certificateIDCD": 5
+                              "certificateIdPrefix": 3,
+                              "certificateIdNumber": 499,
+                              "certificateIdSuffix": "M",
+                              "certificateIdCd": 5
                             },
                             "laboratory": 1,
                             "woolBase": 64.29,
@@ -812,24 +814,23 @@
                             "hardHeadsBase": 0,
                             "yields": [
                               {
-                                "yieldValue": 74.4,
-                                "yieldType": 1
+                                "yieldType": 1,
+                                "yieldValue": 74.4
                               },
                               {
-                                "yieldValue": 78.5,
-                                "yieldType": 8
+                                "yieldType": 8,
+                                "yieldValue": 78.5
                               },
                               {
-                                "yieldValue": 75.7,
-                                "yieldType": 12
+                                "yieldType": 12,
+                                "yieldValue": 75.7
                               },
                               {
-                                "yieldValue": 72.1,
-                                "yieldType": 1
+                                "yieldType": 1,
+                                "yieldValue": 72.1
                               }
                             ],
                             "retestFlag": 0,
-                            "yield5": 77.8,
                             "reissueChargeFlag": 0,
                             "vm1": 0,
                             "vm2": 0.9,
@@ -839,10 +840,10 @@
                           "lengthAndStrengthTestDetail": {
                             "lengthAndStrengthTestDetailsType": "L",
                             "certificateIdentity": {
-                              "certificateIDPrefix": 3,
-                              "certificateIDNumber": 664,
-                              "certificateIDSuffix": "C",
-                              "certificateIDCD": 6
+                              "certificateIdPrefix": 3,
+                              "certificateIdNumber": 664,
+                              "certificateIdSuffix": "C",
+                              "certificateIdCd": 6
                             },
                             "charge": {
                               "value": 230.23,
@@ -1295,10 +1296,10 @@
                               "testDetail": {
                                 "testDetailsType": "P",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 499,
-                                  "certificateIDSuffix": "P",
-                                  "certificateIDCD": 7
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 499,
+                                  "certificateIdSuffix": "P",
+                                  "certificateIdCd": 7
                                 },
                                 "laboratory": 1,
                                 "woolBase": 64.29,
@@ -1307,24 +1308,23 @@
                                 "hardHeadsBase": 0,
                                 "yields": [
                                   {
-                                    "yieldValue": 74.4,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 74.4
                                   },
                                   {
-                                    "yieldValue": 78.5,
-                                    "yieldType": 8
+                                    "yieldType": 8,
+                                    "yieldValue": 78.5
                                   },
                                   {
-                                    "yieldValue": 75.7,
-                                    "yieldType": 12
+                                    "yieldType": 12,
+                                    "yieldValue": 75.7
                                   },
                                   {
-                                    "yieldValue": 72.1,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 72.1
                                   }
                                 ],
                                 "retestFlag": 0,
-                                "yield5": 77.8,
                                 "reissueChargeFlag": 0,
                                 "vm1": 0,
                                 "vm2": 0.9,
@@ -1334,10 +1334,10 @@
                               "lengthAndStrengthTestDetail": {
                                 "lengthAndStrengthTestDetailsType": "L",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 664,
-                                  "certificateIDSuffix": "L",
-                                  "certificateIDCD": 6
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 664,
+                                  "certificateIdSuffix": "L",
+                                  "certificateIdCd": 6
                                 },
                                 "charge": {
                                   "value": 174.3,
@@ -1549,10 +1549,10 @@
                     "darkAndMedullatedFibreRiskBroker": 1,
                     "darkandMedullatedFibreRisk": "D",
                     "certificateIdentity": {
-                      "certificateIDPrefix": 3,
-                      "certificateIDNumber": 499,
-                      "certificateIDSuffix": "P",
-                      "certificateIDCD": 7
+                      "certificateIdPrefix": 3,
+                      "certificateIdNumber": 499,
+                      "certificateIdSuffix": "P",
+                      "certificateIdCd": 7
                     },
                     "woolBase": 32.14,
                     "dmfrErrorFields": [
@@ -1758,10 +1758,10 @@
                         "darkAndMedullatedFibreRiskBroker": 1,
                         "darkandMedullatedFibreRisk": "D",
                         "certificateIdentity": {
-                          "certificateIDPrefix": 3,
-                          "certificateIDNumber": 499,
-                          "certificateIDSuffix": "P",
-                          "certificateIDCD": 7
+                          "certificateIdPrefix": 3,
+                          "certificateIdNumber": 499,
+                          "certificateIdSuffix": "P",
+                          "certificateIdCd": 7
                         },
                         "woolBase": 32.14,
                         "dmfrErrorFields": [
@@ -2538,9 +2538,7 @@
                               "value": 12.24,
                               "currencyUnit": "AUD"
                             },
-                            "packMaterial": "K"
-                          },
-                          "lotInvoiceExtension": {
+                            "packMaterial": "K",
                             "gstFirstCost": {
                               "value": 14.11,
                               "currencyUnit": "AUD"
@@ -2889,9 +2887,7 @@
                                   "value": 12.24,
                                   "currencyUnit": "AUD"
                                 },
-                                "packMaterial": "K"
-                              },
-                              "lotInvoiceExtension": {
+                                "packMaterial": "K",
                                 "gstFirstCost": {
                                   "value": 141.11,
                                   "currencyUnit": "AUD"
@@ -5480,10 +5476,10 @@
                     "printPreSaleCertificatePostSales": [
                       {
                         "certificateIdentity": {
-                          "certificateIDPrefix": 2,
-                          "certificateIDNumber": 234567,
-                          "certificateIDSuffix": "F",
-                          "certificateIDCD": 6
+                          "certificateIdPrefix": 2,
+                          "certificateIdNumber": 234567,
+                          "certificateIdSuffix": "F",
+                          "certificateIdCd": 6
                         },
                         "weightNote": {
                           "prefix": "L",
@@ -5725,7 +5721,7 @@
                           "value": 134.3,
                           "currencyUnit": "AUD"
                         },
-                        "isGstTaxInvoiceApplicable": true,
+                        "isGstApplicable": true,
                         "isCompanyAbnApplicable": true
                       }
                     ],
@@ -6012,7 +6008,7 @@
                               "value": 134.3,
                               "currencyUnit": "AUD"
                             },
-                            "isGstTaxInvoiceApplicable": true,
+                            "isGstApplicable": true,
                             "isCompanyAbnApplicable": true
                           }
                         ],
@@ -6229,30 +6225,30 @@
                       "certificateRequestDetails": [
                         {
                           "certificateIdentity": {
-                            "certificateIDPrefix": 3,
-                            "certificateIDNumber": 15969534,
-                            "certificateIDSuffix": "P",
-                            "certificateIDCD": 9
+                            "certificateIdPrefix": 3,
+                            "certificateIdNumber": 15969534,
+                            "certificateIdSuffix": "P",
+                            "certificateIdCd": 9
                           },
                           "woolbase": 63.16,
                           "laboratory": 1
                         },
                         {
                           "certificateIdentity": {
-                            "certificateIDPrefix": 3,
-                            "certificateIDNumber": 499,
-                            "certificateIDSuffix": "P",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 3,
+                            "certificateIdNumber": 499,
+                            "certificateIdSuffix": "P",
+                            "certificateIdCd": 7
                           },
                           "woolbase": 61.52,
                           "laboratory": 1
                         },
                         {
                           "certificateIdentity": {
-                            "certificateIDPrefix": 3,
-                            "certificateIDNumber": 499,
-                            "certificateIDSuffix": "P",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 3,
+                            "certificateIdNumber": 499,
+                            "certificateIdSuffix": "P",
+                            "certificateIdCd": 7
                           },
                           "woolbase": 61.44,
                           "laboratory": 1
@@ -6277,30 +6273,30 @@
                       "certificateRequestDetails": [
                         {
                           "certificateIdentity": {
-                            "certificateIDPrefix": 3,
-                            "certificateIDNumber": 499,
-                            "certificateIDSuffix": "P",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 3,
+                            "certificateIdNumber": 499,
+                            "certificateIdSuffix": "P",
+                            "certificateIdCd": 7
                           },
                           "woolbase": 53.74,
                           "laboratory": 1
                         },
                         {
                           "certificateIdentity": {
-                            "certificateIDPrefix": 3,
-                            "certificateIDNumber": 499,
-                            "certificateIDSuffix": "P",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 3,
+                            "certificateIdNumber": 499,
+                            "certificateIdSuffix": "P",
+                            "certificateIdCd": 7
                           },
                           "woolbase": 52.01,
                           "laboratory": 1
                         },
                         {
                           "certificateIdentity": {
-                            "certificateIDPrefix": 3,
-                            "certificateIDNumber": 499,
-                            "certificateIDSuffix": "P",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 3,
+                            "certificateIdNumber": 499,
+                            "certificateIdSuffix": "P",
+                            "certificateIdCd": 7
                           },
                           "woolbase": 54.26,
                           "laboratory": 1
@@ -6499,30 +6495,30 @@
                           "certificateRequestDetails": [
                             {
                               "certificateIdentity": {
-                                "certificateIDPrefix": 3,
-                                "certificateIDNumber": 15969534,
-                                "certificateIDSuffix": "P",
-                                "certificateIDCD": 9
+                                "certificateIdPrefix": 3,
+                                "certificateIdNumber": 15969534,
+                                "certificateIdSuffix": "P",
+                                "certificateIdCd": 9
                               },
                               "woolbase": 63.16,
                               "laboratory": 1
                             },
                             {
                               "certificateIdentity": {
-                                "certificateIDPrefix": 3,
-                                "certificateIDNumber": 499,
-                                "certificateIDSuffix": "P",
-                                "certificateIDCD": 7
+                                "certificateIdPrefix": 3,
+                                "certificateIdNumber": 499,
+                                "certificateIdSuffix": "P",
+                                "certificateIdCd": 7
                               },
                               "woolbase": 61.52,
                               "laboratory": 1
                             },
                             {
                               "certificateIdentity": {
-                                "certificateIDPrefix": 3,
-                                "certificateIDNumber": 499,
-                                "certificateIDSuffix": "P",
-                                "certificateIDCD": 7
+                                "certificateIdPrefix": 3,
+                                "certificateIdNumber": 499,
+                                "certificateIdSuffix": "P",
+                                "certificateIdCd": 7
                               },
                               "woolbase": 61.44,
                               "laboratory": 1
@@ -6547,30 +6543,30 @@
                           "certificateRequestDetails": [
                             {
                               "certificateIdentity": {
-                                "certificateIDPrefix": 3,
-                                "certificateIDNumber": 499,
-                                "certificateIDSuffix": "P",
-                                "certificateIDCD": 7
+                                "certificateIdPrefix": 3,
+                                "certificateIdNumber": 499,
+                                "certificateIdSuffix": "P",
+                                "certificateIdCd": 7
                               },
                               "woolbase": 53.74,
                               "laboratory": 1
                             },
                             {
                               "certificateIdentity": {
-                                "certificateIDPrefix": 3,
-                                "certificateIDNumber": 499,
-                                "certificateIDSuffix": "P",
-                                "certificateIDCD": 7
+                                "certificateIdPrefix": 3,
+                                "certificateIdNumber": 499,
+                                "certificateIdSuffix": "P",
+                                "certificateIdCd": 7
                               },
                               "woolbase": 52.01,
                               "laboratory": 1
                             },
                             {
                               "certificateIdentity": {
-                                "certificateIDPrefix": 3,
-                                "certificateIDNumber": 499,
-                                "certificateIDSuffix": "P",
-                                "certificateIDCD": 7
+                                "certificateIdPrefix": 3,
+                                "certificateIdNumber": 499,
+                                "certificateIdSuffix": "P",
+                                "certificateIdCd": 7
                               },
                               "woolbase": 54.26,
                               "laboratory": 1
@@ -6731,10 +6727,10 @@
                 "testCertificateUpdateDetails": [
                   {
                     "certificateIdentity": {
-                      "certificateIDPrefix": 6,
-                      "certificateIDNumber": 16101382,
-                      "certificateIDSuffix": "L",
-                      "certificateIDCD": 6
+                      "certificateIdPrefix": 6,
+                      "certificateIdNumber": 16101382,
+                      "certificateIdSuffix": "L",
+                      "certificateIdCd": 6
                     },
                     "reissueType": "_06",
                     "client": {
@@ -6748,10 +6744,10 @@
                   },
                   {
                     "certificateIdentity": {
-                      "certificateIDPrefix": 6,
-                      "certificateIDNumber": 16101382,
-                      "certificateIDSuffix": "M",
-                      "certificateIDCD": 5
+                      "certificateIdPrefix": 6,
+                      "certificateIdNumber": 16101382,
+                      "certificateIdSuffix": "M",
+                      "certificateIdCd": 5
                     },
                     "reissueType": "_05",
                     "client": {
@@ -6765,10 +6761,10 @@
                   },
                   {
                     "certificateIdentity": {
-                      "certificateIDPrefix": 6,
-                      "certificateIDNumber": 15701332,
-                      "certificateIDSuffix": "B",
-                      "certificateIDCD": 6
+                      "certificateIdPrefix": 6,
+                      "certificateIdNumber": 15701332,
+                      "certificateIdSuffix": "B",
+                      "certificateIdCd": 6
                     },
                     "reissueType": "_02",
                     "client": {
@@ -6956,10 +6952,10 @@
                     "testCertificateUpdateDetails": [
                       {
                         "certificateIdentity": {
-                          "certificateIDPrefix": 6,
-                          "certificateIDNumber": 16101382,
-                          "certificateIDSuffix": "L",
-                          "certificateIDCD": 6
+                          "certificateIdPrefix": 6,
+                          "certificateIdNumber": 16101382,
+                          "certificateIdSuffix": "L",
+                          "certificateIdCd": 6
                         },
                         "reissueType": "_06",
                         "client": {
@@ -6973,10 +6969,10 @@
                       },
                       {
                         "certificateIdentity": {
-                          "certificateIDPrefix": 6,
-                          "certificateIDNumber": 16101382,
-                          "certificateIDSuffix": "M",
-                          "certificateIDCD": 5
+                          "certificateIdPrefix": 6,
+                          "certificateIdNumber": 16101382,
+                          "certificateIdSuffix": "M",
+                          "certificateIdCd": 5
                         },
                         "reissueType": "_05",
                         "client": {
@@ -6990,10 +6986,10 @@
                       },
                       {
                         "certificateIdentity": {
-                          "certificateIDPrefix": 6,
-                          "certificateIDNumber": 15701332,
-                          "certificateIDSuffix": "B",
-                          "certificateIDCD": 6
+                          "certificateIdPrefix": 6,
+                          "certificateIdNumber": 15701332,
+                          "certificateIdSuffix": "B",
+                          "certificateIdCd": 6
                         },
                         "reissueType": "_02",
                         "client": {
@@ -7183,16 +7179,16 @@
                       "sourceCode": 1,
                       "reportingFlag": "R",
                       "scouredType": 0,
-                      "isGSTApplicable": false,
+                      "isGstApplicable": false,
                       "isCompanyAbnApplicable": false
                     },
                     "testDetail": {
                       "testDetailsType": "P",
                       "certificateIdentity": {
-                        "certificateIDPrefix": 6,
-                        "certificateIDNumber": 23456787,
-                        "certificateIDSuffix": "D",
-                        "certificateIDCD": 7
+                        "certificateIdPrefix": 6,
+                        "certificateIdNumber": 23456787,
+                        "certificateIdSuffix": "D",
+                        "certificateIdCd": 7
                       },
                       "charge": {
                         "value": 100,
@@ -7204,20 +7200,20 @@
                       "hardHeadsBase": 3.5,
                       "yields": [
                         {
-                          "yieldValue": 74.4,
-                          "yieldType": 1
+                          "yieldType": 1,
+                          "yieldValue": 74.4
                         },
                         {
-                          "yieldValue": 78.5,
-                          "yieldType": 8
+                          "yieldType": 8,
+                          "yieldValue": 78.5
                         },
                         {
-                          "yieldValue": 75.7,
-                          "yieldType": 12
+                          "yieldType": 12,
+                          "yieldValue": 75.7
                         },
                         {
-                          "yieldValue": 72.1,
-                          "yieldType": 1
+                          "yieldType": 1,
+                          "yieldValue": 72.1
                         }
                       ],
                       "retestFlag": 0,
@@ -7308,16 +7304,16 @@
                       "sourceCode": 1,
                       "reportingFlag": "U",
                       "scouredType": 0,
-                      "isGSTApplicable": false,
+                      "isGstApplicable": false,
                       "isCompanyAbnApplicable": false
                     },
                     "lengthAndStrengthTestDetail": {
                       "lengthAndStrengthTestDetailsType": "K",
                       "certificateIdentity": {
-                        "certificateIDPrefix": 6,
-                        "certificateIDNumber": 23456787,
-                        "certificateIDSuffix": "D",
-                        "certificateIDCD": 7
+                        "certificateIdPrefix": 6,
+                        "certificateIdNumber": 23456787,
+                        "certificateIdSuffix": "D",
+                        "certificateIdCd": 7
                       },
                       "charge": {
                         "value": 123.25,
@@ -7341,10 +7337,10 @@
                     },
                     "sublotCertificateNumbers": [
                       {
-                        "certificateIDPrefix": 6,
-                        "certificateIDNumber": 23456787,
-                        "certificateIDSuffix": "D",
-                        "certificateIDCD": 7
+                        "certificateIdPrefix": 6,
+                        "certificateIdNumber": 23456787,
+                        "certificateIdSuffix": "D",
+                        "certificateIdCd": 7
                       }
                     ],
                     "fibreDiameterHistograms": [
@@ -7605,16 +7601,16 @@
                           "sourceCode": 1,
                           "reportingFlag": "R",
                           "scouredType": 0,
-                          "isGSTApplicable": false,
+                          "isGstApplicable": false,
                           "isCompanyAbnApplicable": false
                         },
                         "testDetail": {
                           "testDetailsType": "P",
                           "certificateIdentity": {
-                            "certificateIDPrefix": 6,
-                            "certificateIDNumber": 23456787,
-                            "certificateIDSuffix": "D",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 6,
+                            "certificateIdNumber": 23456787,
+                            "certificateIdSuffix": "D",
+                            "certificateIdCd": 7
                           },
                           "charge": {
                             "value": 100,
@@ -7626,20 +7622,20 @@
                           "hardHeadsBase": 3.5,
                           "yields": [
                             {
-                              "yieldValue": 74.4,
-                              "yieldType": 1
+                              "yieldType": 1,
+                              "yieldValue": 74.4
                             },
                             {
-                              "yieldValue": 78.5,
-                              "yieldType": 8
+                              "yieldType": 8,
+                              "yieldValue": 78.5
                             },
                             {
-                              "yieldValue": 75.7,
-                              "yieldType": 12
+                              "yieldType": 12,
+                              "yieldValue": 75.7
                             },
                             {
-                              "yieldValue": 72.1,
-                              "yieldType": 1
+                              "yieldType": 1,
+                              "yieldValue": 72.1
                             }
                           ],
                           "retestFlag": 0,
@@ -7730,16 +7726,16 @@
                           "sourceCode": 1,
                           "reportingFlag": "C",
                           "scouredType": 0,
-                          "isGSTApplicable": false,
+                          "isGstApplicable": false,
                           "isCompanyAbnApplicable": false
                         },
                         "lengthAndStrengthTestDetail": {
                           "lengthAndStrengthTestDetailsType": "K",
                           "certificateIdentity": {
-                            "certificateIDPrefix": 6,
-                            "certificateIDNumber": 23456787,
-                            "certificateIDSuffix": "D",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 6,
+                            "certificateIdNumber": 23456787,
+                            "certificateIdSuffix": "D",
+                            "certificateIdCd": 7
                           },
                           "charge": {
                             "value": 156.34,
@@ -7763,10 +7759,10 @@
                         },
                         "sublotCertificateNumbers": [
                           {
-                            "certificateIDPrefix": 6,
-                            "certificateIDNumber": 23456787,
-                            "certificateIDSuffix": "D",
-                            "certificateIDCD": 7
+                            "certificateIdPrefix": 6,
+                            "certificateIdNumber": 23456787,
+                            "certificateIdSuffix": "D",
+                            "certificateIdCd": 7
                           }
                         ],
                         "fibreDiameterHistograms": [
@@ -8671,7 +8667,7 @@
                 },
                 "testStatusDetails": [
                   {
-                    "certificateIDPrefix": 6,
+                    "certificateIdPrefix": 6,
                     "weightNote": {
                       "prefix": "1",
                       "suffix": 1234567
@@ -8689,7 +8685,7 @@
                     "lsRetuftRequired": 1
                   },
                   {
-                    "certificateIDPrefix": 6,
+                    "certificateIdPrefix": 6,
                     "weightNote": {
                       "prefix": "1",
                       "suffix": 1234567
@@ -8880,7 +8876,7 @@
                     },
                     "testStatusDetails": [
                       {
-                        "certificateIDPrefix": 6,
+                        "certificateIdPrefix": 6,
                         "weightNote": {
                           "prefix": "1",
                           "suffix": 1234567
@@ -8898,7 +8894,7 @@
                         "lsRetuftRequired": 1
                       },
                       {
-                        "certificateIDPrefix": 6,
+                        "certificateIdPrefix": 6,
                         "weightNote": {
                           "prefix": "1",
                           "suffix": 1234567
@@ -9459,7 +9455,7 @@
           "dateOfCreditNote",
           "dateOfOriginalInvoice",
           "gstAmount",
-          "isGSTApplicable",
+          "isGstApplicable",
           "reasonCode"
         ],
         "type": "object",
@@ -9470,6 +9466,7 @@
           "creditNoteInvoiceNumber": {
             "pattern": "-?\\d{1,8}",
             "type": "integer",
+            "description": "Invoice number of the credit",
             "format": "int32"
           },
           "dateOfCreditNote": {
@@ -9477,13 +9474,13 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+            "description": "Date the Credit note was issued\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date"
           },
           "creditNoteAmount": {
             "$ref": "#/components/schemas/Currency"
           },
-          "isGSTApplicable": {
+          "isGstApplicable": {
             "maxLength": 5,
             "minLength": 4,
             "type": "boolean",
@@ -9495,6 +9492,7 @@
           "reasonCode": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
+            "description": "Reason credit note was raised",
             "format": "int32"
           },
           "certificateIdentityOriginal": {
@@ -9505,7 +9503,7 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+            "description": "Date of the original invoice\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date"
           },
           "certificateIdentityNew": {
@@ -9671,7 +9669,8 @@
           "baleNumber": {
             "maxLength": 5,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "The number used to identify a bale in a lot"
           },
           "baleDetailType": {
             "$ref": "#/components/schemas/BaleDetailType"
@@ -9708,6 +9707,20 @@
             "minLength": 1,
             "type": "string",
             "nullable": true
+          },
+          "threeBaleCount": {
+            "pattern": "-?\\d{1,2}",
+            "type": "integer",
+            "description": "The number of tripacks (3 bales) in the lot.\r\n            \r\nProperty for Tripacks BaleDetail, not necessary for other types of bale details.",
+            "format": "int32",
+            "nullable": true
+          },
+          "twoBaleCount": {
+            "pattern": "-?\\d{1,2}",
+            "type": "integer",
+            "description": "The number of two bale tri-packs.\r\n            \r\nProperty for Tripacks BaleDetail, not necessary for other types of bale details.",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -9732,12 +9745,14 @@
           "brand": {
             "maxLength": 30,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "This field is to be always transmitted in upper case."
           },
           "baleDescription": {
             "maxLength": 15,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "This field is to be always transmitted in upper case."
           },
           "areaOfOrigin": {
             "maxLength": 4,
@@ -9750,6 +9765,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,4}",
             "type": "integer",
+            "description": "Number of bales",
             "format": "int32",
             "nullable": true
           },
@@ -10257,10 +10273,10 @@
           1
         ],
         "type": "integer",
-        "description": "0: Deliver to Broker/Buyer Address<br />1: Deliver to Clearing House",
+        "description": "A code to tell the Test House to whom the post-sale printed certificate is to be delivered.<br />0: Deliver to Broker/Buyer Address<br />1: Deliver to Clearing House",
         "format": "int32"
       },
-      "CertificateIDPrefix": {
+      "CertificateIdPrefix": {
         "enum": [
           2,
           3,
@@ -10270,7 +10286,7 @@
         "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
         "format": "int32"
       },
-      "CertificateIDSuffix": {
+      "CertificateIdSuffix": {
         "enum": [
           "B",
           "C",
@@ -10292,26 +10308,26 @@
       },
       "CertificateIdentity": {
         "required": [
-          "certificateIDCD",
-          "certificateIDNumber",
-          "certificateIDPrefix",
-          "certificateIDSuffix"
+          "certificateIdCd",
+          "certificateIdNumber",
+          "certificateIdPrefix",
+          "certificateIdSuffix"
         ],
         "type": "object",
         "properties": {
-          "certificateIDPrefix": {
-            "$ref": "#/components/schemas/CertificateIDPrefix"
+          "certificateIdPrefix": {
+            "$ref": "#/components/schemas/CertificateIdPrefix"
           },
-          "certificateIDNumber": {
+          "certificateIdNumber": {
             "maxLength": 8,
             "minLength": 1,
             "type": "integer",
             "format": "int32"
           },
-          "certificateIDSuffix": {
-            "$ref": "#/components/schemas/CertificateIDSuffix"
+          "certificateIdSuffix": {
+            "$ref": "#/components/schemas/CertificateIdSuffix"
           },
-          "certificateIDCD": {
+          "certificateIdCd": {
             "maxLength": 1,
             "minLength": 1,
             "type": "integer",
@@ -10344,12 +10360,14 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
+            "description": "This field is used when requesting a Test House to produce a Test Certificate (in a type TCR document). The value that is included in this \r\nfield will be printed by the Test House at the top of the certificate after the caption ‘REF’. No other use is made of this field by the Test House. \r\nIt does not form part of the transmitted certificate.",
             "nullable": true
           },
           "clientsCrossReference": {
             "maxLength": 8,
             "minLength": 1,
             "type": "string",
+            "description": "The identity given to the lot in the computer system by the owner of the wool.\r\n\r\nClient’s Cross Reference is transmitted by the owner of the wool to a Test House when the owner either verifies a test request(in a type of\r\nTRV document) or requests the printing of a certificate(in a type TCR document). If it is included in the transmission to the Test House, the\r\nTest House will also include it in its transmission of the certificate.The owner of the wool will then be able to connect the transmitted certificate\r\nwith the wool in its computer system.In a Test Request Verification document, the field must contain the weight note number of the lot.\r\nThe value in this field is NOT printed on the certificate.It is the value in the Certificate Reference field that is printed on the certificate.",
             "nullable": true
           },
           "declaredGross": {
@@ -10364,6 +10382,7 @@
           "bales": {
             "pattern": "-?\\d{1,4}",
             "type": "integer",
+            "description": "Number of bales",
             "format": "int32"
           },
           "season": {
@@ -10431,6 +10450,7 @@
           "woolbase": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
             "format": "double"
           },
           "laboratory": {
@@ -10674,7 +10694,7 @@
           "C"
         ],
         "type": "string",
-        "description": "N: Normal Combination Reuqest<br />S: ASX24 Combination Request (formerly SFE)<br />X: ASX19.5 54W, ASX21.0 55W or ASX22.6 56W Combination Request<br />4: ASX19.5 54W Combination Request<br />5: ASX21.0 55W Combination Request<br />6: ASX22.6 56W Combination Request<br />C: China Contract Combination Request"
+        "description": "For Australian Securities Exchange Combination requests, if an 'X' is requested, at least one of the three ASX 54W, 55W or 56W contract specifications must be satisfied for a certificate to be issued, whilst if 4, 5 or 6 is requested it must satisfy the requested contract for a certificate to be issued. Note: all 3 ASX contract specifications will be checked and the issued certificate will indicate all contracts that are satisfied. If an 'S' is requested only the ASX24 contract specification will be checked.<br />N: Normal Combination Reuqest<br />S: ASX24 Combination Request (formerly SFE)<br />X: ASX19.5 54W, ASX21.0 55W or ASX22.6 56W Combination Request<br />4: ASX19.5 54W Combination Request<br />5: ASX21.0 55W Combination Request<br />6: ASX22.6 56W Combination Request<br />C: China Contract Combination Request"
       },
       "Comment": {
         "required": [
@@ -10685,7 +10705,8 @@
           "text": {
             "maxLength": 80,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "A free form message"
           }
         },
         "additionalProperties": false
@@ -10743,6 +10764,7 @@
           "regainPercentage": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
+            "description": "The amount of moisture in the fibres, expressed as a percentage of the clean oven-dry weight.\r\n\r\nNominated - The Regain nominated by the Test House client.\r\n\r\nTest House - The Regain certified by the Test House.",
             "format": "double"
           },
           "netWeightOdOfConsignment": {
@@ -10762,7 +10784,6 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date"
           }
         },
@@ -10836,6 +10857,7 @@
             "maxLength": 14,
             "minLength": 1,
             "type": "string",
+            "description": "This number is provided be the Australian Custom Service’s EXIT system to the exporter. \r\nIt is included only if it is available at the time the delivery order is produced.",
             "nullable": true
           },
           "shippingAgent": {
@@ -10851,6 +10873,7 @@
             "maxLength": 7,
             "minLength": 1,
             "type": "string",
+            "description": "These codes are maintained by Australian Chamber of Shipping",
             "nullable": true
           },
           "voyageCode": {
@@ -10863,6 +10886,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
+            "description": "The code that identifies the port at which the wool will be unloaded. A \r\nrecognised code should be used in this field. These codes are issued \r\nand maintained by the Australian Chamber of Shipping (ACOS).",
             "nullable": true
           },
           "loadPortCode": {
@@ -10956,28 +10980,28 @@
           "micronMin": {
             "pattern": "^-?\\d{1,2}\\.\\d{1}$",
             "type": "number",
-            "description": "Minimum micron, optional decimal with one digit precision.",
+            "description": "The mean fibre diameter of a sample of wool measured in micrometers. This value can refer to Laserscan, Airflow or OFDA.\r\n            \r\nMin: The lowest value in a range of Micron values\r\n            \r\nMax: The highest value in a range of Micron values",
             "format": "double",
             "nullable": true
           },
           "micronMax": {
             "pattern": "^-?\\d{1,2}\\.\\d{1}$",
             "type": "number",
-            "description": "Maximum micron, optional decimal with one digit precision.",
+            "description": "The mean fibre diameter of a sample of wool measured in micrometers. This value can refer to Laserscan, Airflow or OFDA.\r\n            \r\nMin: The lowest value in a range of Micron values\r\n            \r\nMax: The highest value in a range of Micron values",
             "format": "double",
             "nullable": true
           },
           "colourYZMin": {
             "pattern": "^-?\\d{1,3}\\.\\d{1}$",
             "type": "number",
-            "description": "Minimum colour Y-Z, optional decimal with one digit precision.",
+            "description": "Average yellowness, Colour Y – Colour Z. The field has an optional leading sign.\r\n\r\nMin – The lowest value in a range of Colour-Y-Z values.\r\n\r\nMax – The highest value in a range of Colour-Y-Z values.",
             "format": "double",
             "nullable": true
           },
           "colourYZMax": {
             "pattern": "^-?\\d{1,3}\\.\\d{1}$",
             "type": "number",
-            "description": "Maximum colour Y-Z, optional decimal with one digit precision.",
+            "description": "Average yellowness, Colour Y – Colour Z. The field has an optional leading sign.\r\n\r\nMin – The lowest value in a range of Colour-Y-Z values.\r\n\r\nMax – The highest value in a range of Colour-Y-Z values.",
             "format": "double",
             "nullable": true
           },
@@ -10998,28 +11022,28 @@
           "woolBaseMin": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
-            "description": "Minimum wool base, optional decimal with two digits precision.",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
             "format": "double",
             "nullable": true
           },
           "woolBaseMax": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
-            "description": "Maximum wool base, optional decimal with two digits precision.",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
             "format": "double",
             "nullable": true
           },
           "dichloromethaneDryBasisMin": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
-            "description": "Minimum dichloromethane on a dry basis, optional decimal with two digits precision.",
+            "description": "Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.\r\n            \r\nMin: The lowest value in a range of Dichloromethane, dry basis values\r\n            \r\nMax: The highest value in a range of Dichloromethane, dry basis values",
             "format": "double",
             "nullable": true
           },
           "dichloromethaneDryBasisMax": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
-            "description": "Maximum dichloromethane on a dry basis, optional decimal with two digits precision.",
+            "description": "Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.\r\n            \r\nMin: The lowest value in a range of Dichloromethane, dry basis values\r\n            \r\nMax: The highest value in a range of Dichloromethane, dry basis values",
             "format": "double",
             "nullable": true
           },
@@ -11032,70 +11056,64 @@
           "lacBarbeMin": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Minimum LAC Barbe, optional numeric field.",
+            "description": "Length after Carding Barbe in mm (mean length biased by fibre weight)\r\n\r\nMin: The lowest value in a range of LAC Barbe values\r\n\r\nMax: The highest value in a range of LAC Barbe values",
             "format": "int32",
             "nullable": true
           },
           "lacBarbeMax": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Maximum LAC Barbe, optional numeric field.",
+            "description": "Length after Carding Barbe in mm (mean length biased by fibre weight)\r\n\r\nMin: The lowest value in a range of LAC Barbe values\r\n\r\nMax: The highest value in a range of LAC Barbe values",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurMin": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Minimum LAC Hauteur, optional numeric field.",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurMax": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Maximum LAC Hauteur, optional numeric field.",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurUnder20Min": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Minimum LAC Hauteur under 20, optional numeric field.",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurUnder20Max": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Maximum LAC Hauteur under 20, optional numeric field.",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurUnder40Min": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Minimum LAC Hauteur under 40, optional numeric field.",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurUnder40Max": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Maximum LAC Hauteur under 40, optional numeric field.",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurCVPercentMin": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Minimum LAC Hauteur CV(%), optional numeric field.",
+            "description": "Length after Carding - Coefficient of Variation of Hauteur.\r\n\r\nMin: The lowest value in a range of LAC Hauteur CV(%) values\r\n\r\nMax: The highest value in a range of LAC Hauteur CV(%) values",
             "format": "int32",
             "nullable": true
           },
           "lacHauteurCVPercentMax": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Maximum LAC Hauteur CV(%), optional numeric field.",
+            "description": "Length after Carding - Coefficient of Variation of Hauteur.\r\n\r\nMin: The lowest value in a range of LAC Hauteur CV(%) values\r\n\r\nMax: The highest value in a range of LAC Hauteur CV(%) values",
             "format": "int32",
             "nullable": true
           }
@@ -11118,7 +11136,7 @@
           "R"
         ],
         "type": "string",
-        "description": "B: Black<br />R: Red"
+        "description": "A code showing the colour of lettering used for applying countermarks.<br />B: Black<br />R: Red"
       },
       "CountermarkHeadmark": {
         "type": "object",
@@ -11127,12 +11145,14 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
+            "description": "The text to be applied as a countermark or headmark",
             "nullable": true
           },
           "countermarkHeadmarkLine2": {
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
+            "description": "The text to be applied as a countermark or headmark",
             "nullable": true
           }
         },
@@ -11144,7 +11164,7 @@
           2
         ],
         "type": "integer",
-        "description": "1: Countermark is to be applied on the bale<br />2: Headmark is to be applied on the bale",
+        "description": "A flag that indicates whether the mark is to be placed on the side or the end of the bale.<br />1: Countermark is to be applied on the bale<br />2: Headmark is to be applied on the bale",
         "format": "int32"
       },
       "CountermarkMarking": {
@@ -11153,7 +11173,7 @@
           "S"
         ],
         "type": "string",
-        "description": "H: Hand Marking<br />S: Stencilling"
+        "description": "A code showing the method of applying countermarks.<br />H: Hand Marking<br />S: Stencilling"
       },
       "CountermarkSize": {
         "enum": [
@@ -11162,7 +11182,7 @@
           6
         ],
         "type": "integer",
-        "description": "3: 3 Inches<br />4: 4 Inches<br />6: 6 Inches",
+        "description": "A code showing the height (in inches) of the lettering used for applying a countermark.<br />3: 3 Inches<br />4: 4 Inches<br />6: 6 Inches",
         "format": "int32"
       },
       "CountryCode": {
@@ -11323,13 +11343,13 @@
           "ageFrom": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
-            "description": "Required numeric field for minimum age.",
+            "description": "Youngest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.",
             "format": "int32"
           },
           "ageTo": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
-            "description": "Optional numeric field for maximum age.",
+            "description": "Oldest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.",
             "format": "int32",
             "nullable": true
           },
@@ -11345,6 +11365,7 @@
           "woolBase": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
             "format": "double",
             "nullable": true
           },
@@ -11706,6 +11727,7 @@
             "maxLength": 15,
             "minLength": 1,
             "type": "string",
+            "description": "Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.",
             "nullable": true
           },
           "lotIdentityOrGroupNumber": {
@@ -11719,6 +11741,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,4}",
             "type": "integer",
+            "description": "Number of bales",
             "format": "int32"
           },
           "gross": {
@@ -11761,12 +11784,14 @@
             "maxLength": 10,
             "minLength": 1,
             "type": "string",
+            "description": "Shipping Identification Mark",
             "nullable": true
           },
           "blendSequence": {
             "maxLength": 2,
             "minLength": 1,
             "type": "string",
+            "description": "The sequence in which lots are to be blended by the processor. This field is applicable only to local delivery orders containing instructions for processing.",
             "nullable": true
           },
           "clientCrossReference": {
@@ -11891,6 +11916,7 @@
           "dichloromethaneDryBasis": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
+            "description": "Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.\r\n            \r\nMin: The lowest value in a range of Dichloromethane, dry basis values\r\n            \r\nMax: The highest value in a range of Dichloromethane, dry basis values",
             "format": "double"
           },
           "dateIssued": {
@@ -11898,7 +11924,7 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+            "description": "The date the certificate was issued.\r\n\r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
             "format": "date"
           }
         },
@@ -12081,7 +12107,6 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date"
           },
           "factorLaserscanNumerator": {
@@ -12169,7 +12194,7 @@
           "V"
         ],
         "type": "string",
-        "description": "A: Agent / Broker<br />C: Carrier<br />E: Exporter / Buyer<br />D: Dump<br />M: Miscellaneous<br />P: Port<br />S: Shipping<br />T: Test House<br />V: Vessel"
+        "description": "A code to describe the type of industry in which an organisation operates."
       },
       "InformationCode": {
         "enum": [
@@ -12301,12 +12326,14 @@
           "lacBarbe": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
+            "description": "Length after Carding Barbe in mm (mean length biased by fibre weight)\r\n            \r\nMin The lowest value in a range of LAC Barbe values\r\n            \r\nMax The highest value in a range of LAC Barbe values",
             "format": "int32",
             "nullable": true
           },
           "lacBarbeCvPercentage": {
             "pattern": "^-?\\d{1,3}\\.\\d{1}$",
             "type": "number",
+            "description": "Length after Carding Barbe – Coefficient of Variation of Barbe.",
             "format": "double",
             "nullable": true
           },
@@ -12319,12 +12346,14 @@
           "lacHauteurCvPercentage": {
             "pattern": "-?\\d{1,3}",
             "type": "integer",
+            "description": "Length after Carding - Coefficient of Variation of Hauteur.\r\n\r\nMin: The lowest value in a range of LAC Hauteur CV(%) values\r\n\r\nMax: The highest value in a range of LAC Hauteur CV(%) values",
             "format": "int32",
             "nullable": true
           },
           "lacCardWastePercentage": {
             "pattern": "^-?\\d{1,2}\\.\\d{1}$",
             "type": "number",
+            "description": "Percentage Card Waste.",
             "format": "double",
             "nullable": true
           },
@@ -12475,7 +12504,6 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
             "format": "date"
           },
           "stapleStrengthLowest25Percent": {
@@ -12651,7 +12679,7 @@
             "type": "string",
             "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\n\r\nAlternative valid appraisal descriptions include AWC type, Exporter type.\r\n\r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\n\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\n\r\nThis field is to be always transmitted in upper case."
           },
-          "isGstTaxInvoiceApplicable": {
+          "isGstApplicable": {
             "maxLength": 5,
             "minLength": 4,
             "type": "boolean",
@@ -12813,16 +12841,12 @@
         "required": [
           "bales",
           "lotHeaderVendorDeclarations",
-          "lotInvoiceExtension",
           "lotInvoiceHeader"
         ],
         "type": "object",
         "properties": {
           "lotInvoiceHeader": {
             "$ref": "#/components/schemas/LotInvoiceHeader"
-          },
-          "lotInvoiceExtension": {
-            "$ref": "#/components/schemas/LotInvoiceExtension"
           },
           "testDetail": {
             "$ref": "#/components/schemas/TestDetail"
@@ -12855,30 +12879,6 @@
         },
         "additionalProperties": false
       },
-      "LotInvoiceExtension": {
-        "required": [
-          "totalPostSaleCharge"
-        ],
-        "type": "object",
-        "properties": {
-          "gstFirstCost": {
-            "$ref": "#/components/schemas/Currency"
-          },
-          "gstTotalPostSaleCharge": {
-            "$ref": "#/components/schemas/Currency"
-          },
-          "totalPostSaleCharge": {
-            "$ref": "#/components/schemas/Currency"
-          },
-          "totalPostSaleChargeRebate": {
-            "$ref": "#/components/schemas/Currency"
-          },
-          "gstTotalPostSaleChargeRebate": {
-            "$ref": "#/components/schemas/Currency"
-          }
-        },
-        "additionalProperties": false
-      },
       "LotInvoiceHeader": {
         "required": [
           "bales",
@@ -12887,7 +12887,8 @@
           "gross",
           "lotIdentity",
           "packMaterial",
-          "tare"
+          "tare",
+          "totalPostSaleCharge"
         ],
         "type": "object",
         "properties": {
@@ -12900,7 +12901,7 @@
           "bales": {
             "pattern": "-?\\d{1,4}",
             "type": "integer",
-            "description": "Required numeric field for the number of bales.",
+            "description": "Number of bales",
             "format": "int32"
           },
           "gross": {
@@ -12915,7 +12916,7 @@
           "costPerWeightUnit": {
             "pattern": "-?\\d{1,6}",
             "type": "integer",
-            "description": "Required numeric field for cost per weight unit.",
+            "description": "The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.",
             "format": "int32"
           },
           "firstCost": {
@@ -12931,18 +12932,33 @@
             "maxLength": 8,
             "minLength": 1,
             "type": "string",
-            "description": "Optional alphanumeric field for client's cross reference.",
+            "description": "The identity given to the lot in the computer system by the owner of the wool.\r\n\r\nClient’s Cross Reference is transmitted by the owner of the wool to a Test House when the owner either verifies a test request(in a type of\r\nTRV document) or requests the printing of a certificate(in a type TCR document). If it is included in the transmission to the Test House, the\r\nTest House will also include it in its transmission of the certificate.The owner of the wool will then be able to connect the transmitted certificate\r\nwith the wool in its computer system.In a Test Request Verification document, the field must contain the weight note number of the lot.\r\nThe value in this field is NOT printed on the certificate.It is the value in the Certificate Reference field that is printed on the certificate.",
             "nullable": true
           },
           "woolDescription": {
             "maxLength": 20,
             "minLength": 1,
             "type": "string",
-            "description": "Optional alphanumeric field for wool description.",
+            "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\n\r\nAlternative valid appraisal descriptions include AWC type, Exporter type.\r\n\r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\n\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\n\r\nThis field is to be always transmitted in upper case.",
             "nullable": true
           },
           "packMaterial": {
             "$ref": "#/components/schemas/PackMaterial"
+          },
+          "gstFirstCost": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "gstTotalPostSaleCharge": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "totalPostSaleCharge": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "totalPostSaleChargeRebate": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "gstTotalPostSaleChargeRebate": {
+            "$ref": "#/components/schemas/Currency"
           }
         },
         "additionalProperties": false
@@ -13032,7 +13048,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,6}",
             "type": "integer",
-            "description": "Required numeric field for cost per weight unit.",
+            "description": "The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.",
             "format": "int32"
           },
           "buyingOrganisation": {
@@ -13046,7 +13062,7 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
             "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
+            "description": "The auction room time the lot was passed in, sold or withdrawn (unverified data).\r\n            \r\nDate and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
             "format": "date-time"
           }
         },
@@ -13155,7 +13171,7 @@
             "maxLength": 40,
             "minLength": 1,
             "type": "string",
-            "description": "Optional alphanumeric field for charge description.",
+            "description": "A description of the particular charge type.",
             "nullable": true
           },
           "chargeAmount": {
@@ -13177,7 +13193,7 @@
           "ND"
         ],
         "type": "string",
-        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
+        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nIn Australia, Mulesing status is not applicable for Combinations/OMLs, Guidance reports and Scoured wool.It is also not transmitted for non\r\nYield certificates when transmitted independently e.g.Length and Strength.\r\n            \r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
       },
       "Name": {
         "type": "object",
@@ -13227,7 +13243,8 @@
             "$ref": "#/components/schemas/Centre"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
       },
       "OrganisationDetails": {
         "required": [
@@ -13286,14 +13303,15 @@
           "nameOfOrganisation": {
             "maxLength": 50,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "he name of a person or organisation.\r\nContact – Name of a person in the organisation that can be contacted for further information.\r\nOrganisation – the name of the organisation."
           },
           "dateLastUpdated": {
             "maxLength": 10,
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
+            "description": "The day the item was last amended.\r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
             "format": "date"
           },
           "industryGroupId": {
@@ -13533,12 +13551,13 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
+            "description": "The period ending date of the statement\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
           },
           "accountReference": {
             "maxLength": 11,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "Account Reference as per printed statement under heading “AWTA LTD REFERENCE”\r\n            \r\nExamples:\r\n            \r\n• Certificate Identity\r\n            \r\n• Credit Note number\r\n            \r\n• Debit Note number\r\n            \r\n• Cheque number"
           },
           "amount": {
             "$ref": "#/components/schemas/Currency"
@@ -13550,6 +13569,7 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
+            "description": "Reason for non payment",
             "nullable": true
           }
         },
@@ -13576,7 +13596,7 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
+            "description": "The period ending date of the statement\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
           },
           "amountRemitted": {
             "$ref": "#/components/schemas/Currency"
@@ -13586,7 +13606,7 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
+            "description": "The date the payment was made\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
           },
           "bankBSBNumber": {
             "maxLength": 6,
@@ -13687,7 +13707,7 @@
           "N"
         ],
         "type": "string",
-        "description": "P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf Combination/OML Certificate and associated sub-lots<br />S: Pdf associated sub-lots excluding the Combination/OML Certificate<br />C: Pdf Combination Certificate in Chinese and English<br />E: Pdf Combination Certificate in Chinese and English & associated sublots in English)<br />M: Pdf Combination Certificate in English & Mulesing Status report<br />N: Pdf Mulesing Status report only"
+        "description": "This field provides options to produce certificates for combinations, omls and/or associated sublots<br />P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf Combination/OML Certificate and associated sub-lots<br />S: Pdf associated sub-lots excluding the Combination/OML Certificate<br />C: Pdf Combination Certificate in Chinese and English<br />E: Pdf Combination Certificate in Chinese and English & associated sublots in English)<br />M: Pdf Combination Certificate in English & Mulesing Status report<br />N: Pdf Mulesing Status report only"
       },
       "PrintPreSaleCertificatePostSale": {
         "required": [
@@ -13727,7 +13747,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Required numeric field for bales.",
+            "description": "Number of bales",
             "format": "int32"
           },
           "gross": {
@@ -13747,7 +13767,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,6}",
             "type": "integer",
-            "description": "Optional numeric field for cost per weight unit.",
+            "description": "The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.",
             "format": "int32",
             "nullable": true
           },
@@ -13778,7 +13798,7 @@
           3
         ],
         "type": "integer",
-        "description": "0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)",
+        "description": "This field indicates whether the certificate is to show yield and/or Laserscan.<br />0: Yield and Laserscan are (to be) shown on the certificate<br />1: Two certificates are (to be) issued, one with yield and one with Laserscan<br />2: Yield only is (to be) shown, the actual yields being those indicated by the values in the Yield Type fields<br />3: Laserscan only is (to be) shown)",
         "format": "int32"
       },
       "QualityScheme": {
@@ -13859,7 +13879,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,3}",
             "type": "integer",
-            "description": "Required decimal field for the last cost of the first lot with two digits precision.",
+            "description": "This indicates the progress of the sale, expressed as a percentage of the total lots offered and is calculated on the WoolSaleHeaderLot record grouping.",
             "format": "int32"
           },
           "areTransfersCompleted": {
@@ -13893,7 +13913,7 @@
           "07"
         ],
         "type": "string",
-        "description": "01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change"
+        "description": "Instruction to the test house on the type of change requested for the new Certificate Reissue.<br />01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change"
       },
       "ReportingFlag": {
         "enum": [
@@ -14125,19 +14145,21 @@
           "amount",
           "clientsReference",
           "isCompanyAbnApplicable",
-          "isGstTaxInvoiceApplicable"
+          "isGstApplicable"
         ],
         "type": "object",
         "properties": {
           "clientsReference": {
             "maxLength": 30,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "Client’s Reference as per printed statement under heading “CLIENT REFERENCE”\r\n            \r\nExamples:\r\n            \r\n• The first 30 characters of sale/lot-number/brand/description for Test Certificates\r\n\r\n• Type of Service, e.g. PSP, PRTPS, EDI, etc.\r\n            \r\n• Old and new certificate number for auto credits EFT – Electronic Funds Transfer"
           },
           "accountReference": {
             "maxLength": 11,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "Account Reference as per printed statement under heading “AWTA LTD REFERENCE”\r\n            \r\nExamples:\r\n            \r\n• Certificate Identity\r\n            \r\n• Credit Note number\r\n            \r\n• Debit Note number\r\n            \r\n• Cheque number"
           },
           "amount": {
             "$ref": "#/components/schemas/Currency"
@@ -14150,14 +14172,14 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+            "description": "The date the cost of the item was incurred\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date",
             "nullable": true
           },
           "gstAmount": {
             "$ref": "#/components/schemas/Currency"
           },
-          "isGstTaxInvoiceApplicable": {
+          "isGstApplicable": {
             "maxLength": 5,
             "minLength": 4,
             "type": "boolean",
@@ -14194,7 +14216,7 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
+            "description": "The period ending date of the statement\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
           },
           "openingBalances": {
             "type": "array",
@@ -14478,19 +14500,19 @@
           "bales": {
             "pattern": "-?\\d{1,4}",
             "type": "integer",
-            "description": "Numeric field.",
+            "description": "Number of bales",
             "format": "int32"
           },
           "baleDescription": {
             "maxLength": 15,
             "minLength": 1,
             "type": "string",
-            "description": "Generic alphanumeric field."
+            "description": "This field is to be always transmitted in upper case."
           },
           "woolBase": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
-            "description": "Decimal field with two digits after the decimal point.",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
             "format": "double"
           },
           "woolPreparationCategoryFrom": {
@@ -14607,11 +14629,13 @@
             "maxLength": 8,
             "minLength": 1,
             "type": "string",
+            "description": "The identity given to the lot in the computer system by the owner of the wool.\r\n\r\nClient’s Cross Reference is transmitted by the owner of the wool to a Test House when the owner either verifies a test request(in a type of\r\nTRV document) or requests the printing of a certificate(in a type TCR document). If it is included in the transmission to the Test House, the\r\nTest House will also include it in its transmission of the certificate.The owner of the wool will then be able to connect the transmitted certificate\r\nwith the wool in its computer system.In a Test Request Verification document, the field must contain the weight note number of the lot.\r\nThe value in this field is NOT printed on the certificate.It is the value in the Certificate Reference field that is printed on the certificate.",
             "nullable": true
           },
           "bales": {
             "pattern": "-?\\d{1,4}",
             "type": "integer",
+            "description": "Number of bales",
             "format": "int32"
           },
           "gross": {
@@ -14650,7 +14674,7 @@
           "gstAmount": {
             "$ref": "#/components/schemas/Currency"
           },
-          "isGSTApplicable": {
+          "isGstApplicable": {
             "maxLength": 5,
             "minLength": 4,
             "type": "boolean",
@@ -14725,13 +14749,6 @@
           "retestFlag": {
             "$ref": "#/components/schemas/RetestFlag"
           },
-          "yield5": {
-            "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-            "type": "number",
-            "description": "The amount of recoverable fibre from a lot under set processing conditions",
-            "format": "double",
-            "nullable": true
-          },
           "reissueChargeFlag": {
             "$ref": "#/components/schemas/ReissueChargeFlag"
           },
@@ -14792,7 +14809,7 @@
             "format": "double",
             "nullable": true
           },
-          "factorVMB": {
+          "factorVmb": {
             "pattern": "^-?\\d{1,7}\\.\\d{2}$",
             "type": "number",
             "description": "Factor for VMB.",
@@ -14856,7 +14873,7 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
-            "description": "Optional alphanumeric field for grower name.",
+            "description": "The name of the grower of the wool",
             "nullable": true
           },
           "coreSampleWeight": {
@@ -14874,14 +14891,14 @@
           "coresPerBale": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
-            "description": "Optional numeric field for cores per bale.",
+            "description": "Number of core samples taken from the bale.",
             "format": "int32",
             "nullable": true
           },
           "grabsPerBale": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
-            "description": "Optional numeric field for grabs per bale.",
+            "description": "Number of grab samples taken from each bale",
             "format": "int32",
             "nullable": true
           },
@@ -15103,15 +15120,15 @@
       },
       "TestStatusDetail": {
         "required": [
-          "certificateIDPrefix",
+          "certificateIdPrefix",
           "chargeCode",
           "clientCode",
           "weightNote"
         ],
         "type": "object",
         "properties": {
-          "certificateIDPrefix": {
-            "$ref": "#/components/schemas/CertificateIDPrefix"
+          "certificateIdPrefix": {
+            "$ref": "#/components/schemas/CertificateIdPrefix"
           },
           "weightNote": {
             "$ref": "#/components/schemas/WeightNote"
@@ -15125,7 +15142,7 @@
           "chargeCode": {
             "pattern": "-?\\d{1,4}",
             "type": "integer",
-            "description": "Required numeric field for charge code.",
+            "description": "A number allocated by the test house to identify cost/service level",
             "format": "int32"
           },
           "lsSampleId": {
@@ -15257,7 +15274,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exclude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
       },
       "TransferType": {
         "enum": [
@@ -15400,7 +15417,8 @@
             "format": "int32"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The first character contains the Weight Note prefix, and the next seven characters contain the weight Note Suffix."
       },
       "WeightUnit": {
         "enum": [
@@ -15786,15 +15804,15 @@
       "Yield": {
         "type": "object",
         "properties": {
+          "yieldType": {
+            "$ref": "#/components/schemas/YieldType"
+          },
           "yieldValue": {
             "pattern": "^-?\\d{1,3}\\.\\d{2}$",
             "type": "number",
             "description": "The amount of recoverable fibre from a lot under set processing conditions",
             "format": "double",
             "nullable": true
-          },
-          "yieldType": {
-            "$ref": "#/components/schemas/YieldType"
           },
           "cleanWeight": {
             "$ref": "#/components/schemas/Weight"

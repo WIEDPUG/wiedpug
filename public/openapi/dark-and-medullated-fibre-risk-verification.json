@@ -71,10 +71,10 @@
                     "darkAndMedullatedFibreRiskBroker": 1,
                     "darkandMedullatedFibreRisk": "D",
                     "certificateIdentity": {
-                      "certificateIDPrefix": 3,
-                      "certificateIDNumber": 499,
-                      "certificateIDSuffix": "P",
-                      "certificateIDCD": 7
+                      "certificateIdPrefix": 3,
+                      "certificateIdNumber": 499,
+                      "certificateIdSuffix": "P",
+                      "certificateIdCd": 7
                     },
                     "woolBase": 32.14,
                     "dmfrErrorFields": [
@@ -280,10 +280,10 @@
                         "darkAndMedullatedFibreRiskBroker": 1,
                         "darkandMedullatedFibreRisk": "D",
                         "certificateIdentity": {
-                          "certificateIDPrefix": 3,
-                          "certificateIDNumber": 499,
-                          "certificateIDSuffix": "P",
-                          "certificateIDCD": 7
+                          "certificateIdPrefix": 3,
+                          "certificateIdNumber": 499,
+                          "certificateIdSuffix": "P",
+                          "certificateIdCd": 7
                         },
                         "woolBase": 32.14,
                         "dmfrErrorFields": [
@@ -519,7 +519,8 @@
             "$ref": "#/components/schemas/Centre"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
       },
       "Centre": {
         "required": [
@@ -836,7 +837,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exclude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
       },
       "TransferType": {
         "enum": [
@@ -903,13 +904,13 @@
           "ageFrom": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
-            "description": "Required numeric field for minimum age.",
+            "description": "Youngest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.",
             "format": "int32"
           },
           "ageTo": {
             "pattern": "-?\\d{1,2}",
             "type": "integer",
-            "description": "Optional numeric field for maximum age.",
+            "description": "Oldest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.",
             "format": "int32",
             "nullable": true
           },
@@ -925,6 +926,7 @@
           "woolBase": {
             "pattern": "^-?\\d{1,2}\\.\\d{2}$",
             "type": "number",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
             "format": "double",
             "nullable": true
           },
@@ -1052,26 +1054,26 @@
       },
       "CertificateIdentity": {
         "required": [
-          "certificateIDCD",
-          "certificateIDNumber",
-          "certificateIDPrefix",
-          "certificateIDSuffix"
+          "certificateIdCd",
+          "certificateIdNumber",
+          "certificateIdPrefix",
+          "certificateIdSuffix"
         ],
         "type": "object",
         "properties": {
-          "certificateIDPrefix": {
-            "$ref": "#/components/schemas/CertificateIDPrefix"
+          "certificateIdPrefix": {
+            "$ref": "#/components/schemas/CertificateIdPrefix"
           },
-          "certificateIDNumber": {
+          "certificateIdNumber": {
             "maxLength": 8,
             "minLength": 1,
             "type": "integer",
             "format": "int32"
           },
-          "certificateIDSuffix": {
-            "$ref": "#/components/schemas/CertificateIDSuffix"
+          "certificateIdSuffix": {
+            "$ref": "#/components/schemas/CertificateIdSuffix"
           },
-          "certificateIDCD": {
+          "certificateIdCd": {
             "maxLength": 1,
             "minLength": 1,
             "type": "integer",
@@ -1081,7 +1083,7 @@
         "additionalProperties": false,
         "description": "The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit\r\ncheck number.It is printed at the top of the certificate."
       },
-      "CertificateIDPrefix": {
+      "CertificateIdPrefix": {
         "enum": [
           2,
           3,
@@ -1091,7 +1093,7 @@
         "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
         "format": "int32"
       },
-      "CertificateIDSuffix": {
+      "CertificateIdSuffix": {
         "enum": [
           "B",
           "C",

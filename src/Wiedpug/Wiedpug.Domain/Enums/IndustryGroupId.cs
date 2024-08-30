@@ -8,7 +8,11 @@ using System.Threading.Tasks;
 
 namespace Wiedpug.Domain.Enums
 {
+    /// <summary>
+    /// A code to describe the type of industry in which an organisation operates.
+    /// </summary>
     [JsonConverter(typeof(JsonStringEnumConverter))]
+
     public enum IndustryGroupId
     {
         [Description("A: Agent / Broker")]

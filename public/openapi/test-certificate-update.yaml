@@ -41,10 +41,10 @@ paths:
                 abn: "72001967184"
               testCertificateUpdateDetails:
                 - certificateIdentity:
-                    certificateIDPrefix: 6
-                    certificateIDNumber: 16101382
-                    certificateIDSuffix: L
-                    certificateIDCD: 6
+                    certificateIdPrefix: 6
+                    certificateIdNumber: 16101382
+                    certificateIdSuffix: L
+                    certificateIdCd: 6
                   reissueType: _06
                   client:
                     organisationCode: ABC
@@ -54,10 +54,10 @@ paths:
                   mulesingStatusFrom: ND
                   mulesingStatusTo: M
                 - certificateIdentity:
-                    certificateIDPrefix: 6
-                    certificateIDNumber: 16101382
-                    certificateIDSuffix: M
-                    certificateIDCD: 5
+                    certificateIdPrefix: 6
+                    certificateIdNumber: 16101382
+                    certificateIdSuffix: M
+                    certificateIdCd: 5
                   reissueType: _05
                   client:
                     organisationCode: ABC
@@ -67,10 +67,10 @@ paths:
                   mulesingStatusFrom: AA
                   mulesingStatusTo: M
                 - certificateIdentity:
-                    certificateIDPrefix: 6
-                    certificateIDNumber: 15701332
-                    certificateIDSuffix: B
-                    certificateIDCD: 6
+                    certificateIdPrefix: 6
+                    certificateIdNumber: 15701332
+                    certificateIdSuffix: B
+                    certificateIdCd: 6
                   reissueType: _02
                   client:
                     organisationCode: ABC
@@ -199,10 +199,10 @@ paths:
                     abn: "72001967184"
                   testCertificateUpdateDetails:
                     - certificateIdentity:
-                        certificateIDPrefix: 6
-                        certificateIDNumber: 16101382
-                        certificateIDSuffix: L
-                        certificateIDCD: 6
+                        certificateIdPrefix: 6
+                        certificateIdNumber: 16101382
+                        certificateIdSuffix: L
+                        certificateIdCd: 6
                       reissueType: _06
                       client:
                         organisationCode: ABC
@@ -212,10 +212,10 @@ paths:
                       mulesingStatusFrom: ND
                       mulesingStatusTo: M
                     - certificateIdentity:
-                        certificateIDPrefix: 6
-                        certificateIDNumber: 16101382
-                        certificateIDSuffix: M
-                        certificateIDCD: 5
+                        certificateIdPrefix: 6
+                        certificateIdNumber: 16101382
+                        certificateIdSuffix: M
+                        certificateIdCd: 5
                       reissueType: _05
                       client:
                         organisationCode: ABC
@@ -225,10 +225,10 @@ paths:
                       mulesingStatusFrom: AA
                       mulesingStatusTo: M
                     - certificateIdentity:
-                        certificateIDPrefix: 6
-                        certificateIDNumber: 15701332
-                        certificateIDSuffix: B
-                        certificateIDCD: 6
+                        certificateIdPrefix: 6
+                        certificateIdNumber: 15701332
+                        certificateIdSuffix: B
+                        certificateIdCd: 6
                       reissueType: _02
                       client:
                         organisationCode: ABC
@@ -403,6 +403,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -815,7 +822,7 @@ components:
           nullable: true
       additionalProperties: false
       description: "Used to identify document transfer type: Restrict, Unrestrict, and
-        Exlcude.\r
+        Exclude.\r
 
         \r
 
@@ -849,17 +856,26 @@ components:
         bales:
           pattern: -?\d{1,4}
           type: integer
-          description: Numeric field.
+          description: Number of bales
           format: int32
         baleDescription:
           maxLength: 15
           minLength: 1
           type: string
-          description: Generic alphanumeric field.
+          description: This field is to be always transmitted in upper case.
         woolBase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
-          description: Decimal field with two digits after the decimal point.
+          description: "The oven-dry mass of wool fibre free from all impurities,
+            expressed as a percentage of the mass of the sample.\r
+
+            \r
+
+            Min The lowest value in a range of Wool Base values\r
+
+            \            \r
+
+            Max The highest value in a range of Wool Base values"
           format: double
         woolPreparationCategoryFrom:
           $ref: "#/components/schemas/WoolPreparationCategory"
@@ -962,22 +978,22 @@ components:
       additionalProperties: false
     CertificateIdentity:
       required:
-        - certificateIDCD
-        - certificateIDNumber
-        - certificateIDPrefix
-        - certificateIDSuffix
+        - certificateIdCd
+        - certificateIdNumber
+        - certificateIdPrefix
+        - certificateIdSuffix
       type: object
       properties:
-        certificateIDPrefix:
-          $ref: "#/components/schemas/CertificateIDPrefix"
-        certificateIDNumber:
+        certificateIdPrefix:
+          $ref: "#/components/schemas/CertificateIdPrefix"
+        certificateIdNumber:
           maxLength: 8
           minLength: 1
           type: integer
           format: int32
-        certificateIDSuffix:
-          $ref: "#/components/schemas/CertificateIDSuffix"
-        certificateIDCD:
+        certificateIdSuffix:
+          $ref: "#/components/schemas/CertificateIdSuffix"
+        certificateIdCd:
           maxLength: 1
           minLength: 1
           type: integer
@@ -988,7 +1004,7 @@ components:
         followed by a 1 digit\r
 
         check number.It is printed at the top of the certificate."
-    CertificateIDPrefix:
+    CertificateIdPrefix:
       enum:
         - 2
         - 3
@@ -997,7 +1013,7 @@ components:
       description: "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6:
         Fremantle Laboratory"
       format: int32
-    CertificateIDSuffix:
+    CertificateIdSuffix:
       enum:
         - B
         - C
@@ -1032,10 +1048,11 @@ components:
         - "06"
         - "07"
       type: string
-      description: "01: Wool Preparation Category (WPC) Change<br />02: Mulesing
-        Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS
-        Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot
-        Change<br />07: WPC, MS and Sale/Lot Change"
+      description: "Instruction to the test house on the type of change requested for
+        the new Certificate Reissue.<br />01: Wool Preparation Category (WPC)
+        Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br
+        />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and
+        Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change"
     WoolPreparationCategory:
       enum:
         - B
@@ -1062,6 +1079,15 @@ components:
         prior to 21st July, 2008 or if the transmission was outside Australia.\r
 
         \r
+
+        In Australia, Mulesing status is not applicable for
+        Combinations/OMLs, Guidance reports and Scoured wool.It is also not
+        transmitted for non\r
+
+        Yield certificates when transmitted independently e.g.Length and
+        Strength.\r
+
+        \            \r
 
         From:\r
 

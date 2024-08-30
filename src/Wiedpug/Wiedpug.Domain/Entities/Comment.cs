@@ -10,6 +10,9 @@ namespace Wiedpug.Domain.Entities
 {
     public class Comment
     {
+        /// <summary>
+        /// A free form message
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(80)]

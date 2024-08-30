@@ -12,15 +12,15 @@ namespace Wiedpug.Domain.Entities
 {
     public class Yield
     {
+        [MinLength(1)]
+        [MaxLength(2)]
+        public YieldType? YieldType { get; set; }
+
         /// <summary>
         /// The amount of recoverable fibre from a lot under set processing conditions
         /// </summary>
         [RegularExpression(RegexPattern.DECIMAL_5_2)]
         public double? YieldValue { get; set; }
-
-        [MinLength(1)]
-        [MaxLength(2)]
-        public YieldType? YieldType { get; set; }
 
         /// <summary>
         /// Clean weight = Net Weight X Yield

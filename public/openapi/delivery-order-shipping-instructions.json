@@ -658,7 +658,8 @@
             "$ref": "#/components/schemas/Centre"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
       },
       "Centre": {
         "required": [
@@ -975,7 +976,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exclude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
       },
       "TransferType": {
         "enum": [
@@ -1035,6 +1036,7 @@
             "maxLength": 14,
             "minLength": 1,
             "type": "string",
+            "description": "This number is provided be the Australian Custom Service’s EXIT system to the exporter. \r\nIt is included only if it is available at the time the delivery order is produced.",
             "nullable": true
           },
           "shippingAgent": {
@@ -1050,6 +1052,7 @@
             "maxLength": 7,
             "minLength": 1,
             "type": "string",
+            "description": "These codes are maintained by Australian Chamber of Shipping",
             "nullable": true
           },
           "voyageCode": {
@@ -1062,6 +1065,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
+            "description": "The code that identifies the port at which the wool will be unloaded. A \r\nrecognised code should be used in this field. These codes are issued \r\nand maintained by the Australian Chamber of Shipping (ACOS).",
             "nullable": true
           },
           "loadPortCode": {
@@ -1119,12 +1123,14 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
+            "description": "The text to be applied as a countermark or headmark",
             "nullable": true
           },
           "countermarkHeadmarkLine2": {
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
+            "description": "The text to be applied as a countermark or headmark",
             "nullable": true
           }
         },
@@ -1268,7 +1274,7 @@
           "R"
         ],
         "type": "string",
-        "description": "B: Black<br />R: Red"
+        "description": "A code showing the colour of lettering used for applying countermarks.<br />B: Black<br />R: Red"
       },
       "CountermarkMarking": {
         "enum": [
@@ -1276,7 +1282,7 @@
           "S"
         ],
         "type": "string",
-        "description": "H: Hand Marking<br />S: Stencilling"
+        "description": "A code showing the method of applying countermarks.<br />H: Hand Marking<br />S: Stencilling"
       },
       "CountermarkSize": {
         "enum": [
@@ -1285,7 +1291,7 @@
           6
         ],
         "type": "integer",
-        "description": "3: 3 Inches<br />4: 4 Inches<br />6: 6 Inches",
+        "description": "A code showing the height (in inches) of the lettering used for applying a countermark.<br />3: 3 Inches<br />4: 4 Inches<br />6: 6 Inches",
         "format": "int32"
       },
       "CountermarkHeadmarkFlag": {
@@ -1294,7 +1300,7 @@
           2
         ],
         "type": "integer",
-        "description": "1: Countermark is to be applied on the bale<br />2: Headmark is to be applied on the bale",
+        "description": "A flag that indicates whether the mark is to be placed on the side or the end of the bale.<br />1: Countermark is to be applied on the bale<br />2: Headmark is to be applied on the bale",
         "format": "int32"
       },
       "Comment": {
@@ -1306,7 +1312,8 @@
           "text": {
             "maxLength": 80,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "A free form message"
           }
         },
         "additionalProperties": false
@@ -1380,6 +1387,7 @@
             "maxLength": 15,
             "minLength": 1,
             "type": "string",
+            "description": "Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.",
             "nullable": true
           },
           "lotIdentityOrGroupNumber": {
@@ -1393,6 +1401,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,4}",
             "type": "integer",
+            "description": "Number of bales",
             "format": "int32"
           },
           "gross": {
@@ -1435,12 +1444,14 @@
             "maxLength": 10,
             "minLength": 1,
             "type": "string",
+            "description": "Shipping Identification Mark",
             "nullable": true
           },
           "blendSequence": {
             "maxLength": 2,
             "minLength": 1,
             "type": "string",
+            "description": "The sequence in which lots are to be blended by the processor. This field is applicable only to local delivery orders containing instructions for processing.",
             "nullable": true
           },
           "clientCrossReference": {
@@ -1574,26 +1585,26 @@
       },
       "CertificateIdentity": {
         "required": [
-          "certificateIDCD",
-          "certificateIDNumber",
-          "certificateIDPrefix",
-          "certificateIDSuffix"
+          "certificateIdCd",
+          "certificateIdNumber",
+          "certificateIdPrefix",
+          "certificateIdSuffix"
         ],
         "type": "object",
         "properties": {
-          "certificateIDPrefix": {
-            "$ref": "#/components/schemas/CertificateIDPrefix"
+          "certificateIdPrefix": {
+            "$ref": "#/components/schemas/CertificateIdPrefix"
           },
-          "certificateIDNumber": {
+          "certificateIdNumber": {
             "maxLength": 8,
             "minLength": 1,
             "type": "integer",
             "format": "int32"
           },
-          "certificateIDSuffix": {
-            "$ref": "#/components/schemas/CertificateIDSuffix"
+          "certificateIdSuffix": {
+            "$ref": "#/components/schemas/CertificateIdSuffix"
           },
-          "certificateIDCD": {
+          "certificateIdCd": {
             "maxLength": 1,
             "minLength": 1,
             "type": "integer",
@@ -1603,7 +1614,7 @@
         "additionalProperties": false,
         "description": "The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit\r\ncheck number.It is printed at the top of the certificate."
       },
-      "CertificateIDPrefix": {
+      "CertificateIdPrefix": {
         "enum": [
           2,
           3,
@@ -1613,7 +1624,7 @@
         "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
         "format": "int32"
       },
-      "CertificateIDSuffix": {
+      "CertificateIdSuffix": {
         "enum": [
           "B",
           "C",
@@ -1673,12 +1684,14 @@
           "brand": {
             "maxLength": 30,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "This field is to be always transmitted in upper case."
           },
           "baleDescription": {
             "maxLength": 15,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "This field is to be always transmitted in upper case."
           },
           "areaOfOrigin": {
             "maxLength": 4,
@@ -1691,6 +1704,7 @@
             "minLength": 1,
             "pattern": "-?\\d{1,4}",
             "type": "integer",
+            "description": "Number of bales",
             "format": "int32",
             "nullable": true
           },
@@ -1713,7 +1727,8 @@
           "baleNumber": {
             "maxLength": 5,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "The number used to identify a bale in a lot"
           },
           "baleDetailType": {
             "$ref": "#/components/schemas/BaleDetailType"
@@ -1749,6 +1764,20 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
+            "nullable": true
+          },
+          "threeBaleCount": {
+            "pattern": "-?\\d{1,2}",
+            "type": "integer",
+            "description": "The number of tripacks (3 bales) in the lot.\r\n            \r\nProperty for Tripacks BaleDetail, not necessary for other types of bale details.",
+            "format": "int32",
+            "nullable": true
+          },
+          "twoBaleCount": {
+            "pattern": "-?\\d{1,2}",
+            "type": "integer",
+            "description": "The number of two bale tri-packs.\r\n            \r\nProperty for Tripacks BaleDetail, not necessary for other types of bale details.",
+            "format": "int32",
             "nullable": true
           }
         },

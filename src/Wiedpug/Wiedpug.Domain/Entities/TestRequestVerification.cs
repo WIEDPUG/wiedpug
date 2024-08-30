@@ -24,13 +24,15 @@ namespace Wiedpug.Domain.Entities
         public string? GrowerCode { get; set; }
 
         /// <summary>
-        /// Optional alphanumeric field for grower name.
+        /// The name of the grower of the wool
         /// </summary>
-        /// 
         [MinLength(1)]
         [MaxLength(30)]
         public string? GrowerName { get; set; }
 
+        /// <summary>
+        /// The weight of the initial core sample
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? CoreSampleWeight { get; set; }
@@ -49,16 +51,14 @@ namespace Wiedpug.Domain.Entities
         public string? CoreTestSamplingDate { get; set; }
 
         /// <summary>
-        /// Optional numeric field for cores per bale.
+        /// Number of core samples taken from the bale.
         /// </summary>
-        /// 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? CoresPerBale { get; set; }
 
         /// <summary>
-        /// Optional numeric field for grabs per bale.
+        /// Number of grab samples taken from each bale
         /// </summary>
-        /// 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? GrabsPerBale { get; set; }
 

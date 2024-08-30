@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Wiedpug.Domain.Enums
 {
+    [Description("A flag that indicates whether the mark is to be placed on the side or the end of the bale.")]
     public enum CountermarkHeadmarkFlag
 
     {

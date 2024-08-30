@@ -64,10 +64,10 @@ namespace Wiedpug.API.ExampleResponses
                         DarkandMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
                         CertificateIdentity = new CertificateIdentity
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = 499,
-                                                CertificateIDSuffix = CertificateIDSuffix.P,
-                                                CertificateIDCD = 7
+                                                CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                CertificateIdNumber = 499,
+                                                CertificateIdSuffix = CertificateIdSuffix.P,
+                                                CertificateIdCd = 7
                                             },
                         WoolBase = 32.14,
                         DMFRErrorFields = new List<string>
@@ -177,10 +177,10 @@ namespace Wiedpug.API.ExampleResponses
                         DarkandMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
                         CertificateIdentity = new CertificateIdentity
                                             {
-                                                CertificateIDPrefix = CertificateIDPrefix.MelbourneLaboratory,
-                                                CertificateIDNumber = 499,
-                                                CertificateIDSuffix = CertificateIDSuffix.P,
-                                                CertificateIDCD = 7
+                                                CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
+                                                CertificateIdNumber = 499,
+                                                CertificateIdSuffix = CertificateIdSuffix.P,
+                                                CertificateIdCd = 7
                                             },
                         WoolBase = 32.14,
                         DMFRErrorFields = new List<string>

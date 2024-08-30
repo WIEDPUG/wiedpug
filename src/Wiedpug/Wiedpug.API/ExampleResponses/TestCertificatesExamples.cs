@@ -70,16 +70,16 @@ namespace Wiedpug.API.ExampleResponses
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
-                            IsGSTApplicable = false,
+                            IsGstApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
                             TestDetail =new TestDetail
                             {
                                 CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 23456787,
-                                    CertificateIDSuffix = CertificateIDSuffix.D,
-                                    CertificateIDCD = 7
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 23456787,
+                                    CertificateIdSuffix = CertificateIdSuffix.D,
+                                    CertificateIdCd = 7
                                 },
                                 TestDetailsType = TestDetailType.P,
                                 Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
@@ -218,16 +218,16 @@ namespace Wiedpug.API.ExampleResponses
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.U,
                             ScouredType = ScouredType.NotScoured,
-                            IsGSTApplicable = false,
+                            IsGstApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
                         LengthAndStrengthTestDetail = 
                             new LengthAndStrengthTestDetail{
                                 CertificateIdentity =  new CertificateIdentity{
-                                        CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                        CertificateIDNumber = 23456787,
-                                        CertificateIDSuffix = CertificateIDSuffix.D,
-                                        CertificateIDCD = 7
+                                        CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                        CertificateIdNumber = 23456787,
+                                        CertificateIdSuffix = CertificateIdSuffix.D,
+                                        CertificateIdCd = 7
                                     },
                                 lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.K,
                                 Charge = new Currency { Value = 123.25, CurrencyUnit = CurrencyUnit.AUD },
@@ -250,10 +250,10 @@ namespace Wiedpug.API.ExampleResponses
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
                             new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 23456787,
-                                    CertificateIDSuffix = CertificateIDSuffix.D,
-                                    CertificateIDCD = 7
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 23456787,
+                                    CertificateIdSuffix = CertificateIdSuffix.D,
+                                    CertificateIdCd = 7
                                 },
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> {
@@ -428,17 +428,17 @@ namespace Wiedpug.API.ExampleResponses
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.R,
                             ScouredType = ScouredType.NotScoured,
-                            IsGSTApplicable = false,
+                            IsGstApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
                         TestDetail = 
                             new TestDetail
                             {
                                 CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 23456787,
-                                    CertificateIDSuffix = CertificateIDSuffix.D,
-                                    CertificateIDCD = 7
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 23456787,
+                                    CertificateIdSuffix = CertificateIdSuffix.D,
+                                    CertificateIdCd = 7
                                 },
                                 TestDetailsType = TestDetailType.P,
                                 Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
@@ -573,16 +573,16 @@ namespace Wiedpug.API.ExampleResponses
                             SourceCode = SourceCode.Grower,
                             ReportingFlag = ReportingFlag.C,
                             ScouredType = ScouredType.NotScoured,
-                            IsGSTApplicable = false,
+                            IsGstApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
                         LengthAndStrengthTestDetail = 
                             new LengthAndStrengthTestDetail{
                             CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 23456787,
-                                    CertificateIDSuffix = CertificateIDSuffix.D,
-                                    CertificateIDCD = 7
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 23456787,
+                                    CertificateIdSuffix = CertificateIdSuffix.D,
+                                    CertificateIdCd = 7
                              },
                             lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.K,
                             Laboratory = Laboratory.NZWoolTestingAuthority,
@@ -605,10 +605,10 @@ namespace Wiedpug.API.ExampleResponses
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
                             new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 23456787,
-                                    CertificateIDSuffix = CertificateIDSuffix.D,
-                                    CertificateIDCD = 7
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 23456787,
+                                    CertificateIdSuffix = CertificateIdSuffix.D,
+                                    CertificateIdCd = 7
                              }
                         },
                         FibreDiameterHistograms = new List<FibreDiameterHistogram> {

@@ -158,7 +158,7 @@
                                 "packCondition": "N",
                                 "coreTestSamplingDate": "2019-01-17",
                                 "woolDescription": "MF6S",
-                                "isGstTaxInvoiceApplicable": true,
+                                "isGstApplicable": true,
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
@@ -173,10 +173,10 @@
                               "testDetail": {
                                 "testDetailsType": "P",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 499,
-                                  "certificateIDSuffix": "P",
-                                  "certificateIDCD": 7
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 499,
+                                  "certificateIdSuffix": "P",
+                                  "certificateIdCd": 7
                                 },
                                 "laboratory": 1,
                                 "woolBase": 64.29,
@@ -185,24 +185,27 @@
                                 "hardHeadsBase": 0,
                                 "yields": [
                                   {
-                                    "yieldValue": 74.4,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 74.4
                                   },
                                   {
-                                    "yieldValue": 78.5,
-                                    "yieldType": 8
+                                    "yieldType": 8,
+                                    "yieldValue": 78.5
                                   },
                                   {
-                                    "yieldValue": 75.7,
-                                    "yieldType": 12
+                                    "yieldType": 12,
+                                    "yieldValue": 75.7
                                   },
                                   {
-                                    "yieldValue": 72.1,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 72.1
+                                  },
+                                  {
+                                    "yieldType": 1,
+                                    "yieldValue": 77.8
                                   }
                                 ],
                                 "retestFlag": 0,
-                                "yield5": 77.8,
                                 "reissueChargeFlag": 0,
                                 "vm1": 0,
                                 "vm2": 0.9,
@@ -211,10 +214,10 @@
                               "lengthAndStrengthTestDetail": {
                                 "lengthAndStrengthTestDetailsType": "L",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 664,
-                                  "certificateIDSuffix": "L",
-                                  "certificateIDCD": 6
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 664,
+                                  "certificateIdSuffix": "L",
+                                  "certificateIdCd": 6
                                 },
                                 "charge": {
                                   "value": 188.5,
@@ -417,7 +420,7 @@
                                 "packCondition": "N",
                                 "coreTestSamplingDate": "2019-01-17",
                                 "woolDescription": "MF6S",
-                                "isGstTaxInvoiceApplicable": true,
+                                "isGstApplicable": true,
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
@@ -432,10 +435,10 @@
                               "testDetail": {
                                 "testDetailsType": "P",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 499,
-                                  "certificateIDSuffix": "P",
-                                  "certificateIDCD": 7
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 499,
+                                  "certificateIdSuffix": "P",
+                                  "certificateIdCd": 7
                                 },
                                 "laboratory": 1,
                                 "woolBase": 64.29,
@@ -444,24 +447,23 @@
                                 "hardHeadsBase": 0,
                                 "yields": [
                                   {
-                                    "yieldValue": 74.4,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 74.4
                                   },
                                   {
-                                    "yieldValue": 78.5,
-                                    "yieldType": 8
+                                    "yieldType": 8,
+                                    "yieldValue": 78.5
                                   },
                                   {
-                                    "yieldValue": 75.7,
-                                    "yieldType": 12
+                                    "yieldType": 12,
+                                    "yieldValue": 75.7
                                   },
                                   {
-                                    "yieldValue": 72.1,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 72.1
                                   }
                                 ],
                                 "retestFlag": 0,
-                                "yield5": 77.8,
                                 "reissueChargeFlag": 0,
                                 "vm1": 0,
                                 "vm2": 0.9,
@@ -471,10 +473,10 @@
                               "lengthAndStrengthTestDetail": {
                                 "lengthAndStrengthTestDetailsType": "L",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 664,
-                                  "certificateIDSuffix": "L",
-                                  "certificateIDCD": 6
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 664,
+                                  "certificateIdSuffix": "L",
+                                  "certificateIdCd": 6
                                 },
                                 "charge": {
                                   "value": 256.23,
@@ -785,7 +787,7 @@
                             "packCondition": "N",
                             "coreTestSamplingDate": "2019-01-17",
                             "woolDescription": "MF6S",
-                            "isGstTaxInvoiceApplicable": true,
+                            "isGstApplicable": true,
                             "numberOfOverweightBales": 0
                           },
                           "encryptedLotHeaderAwexData": {
@@ -800,10 +802,10 @@
                           "testDetail": {
                             "testDetailsType": "P",
                             "certificateIdentity": {
-                              "certificateIDPrefix": 3,
-                              "certificateIDNumber": 499,
-                              "certificateIDSuffix": "M",
-                              "certificateIDCD": 5
+                              "certificateIdPrefix": 3,
+                              "certificateIdNumber": 499,
+                              "certificateIdSuffix": "M",
+                              "certificateIdCd": 5
                             },
                             "laboratory": 1,
                             "woolBase": 64.29,
@@ -812,24 +814,23 @@
                             "hardHeadsBase": 0,
                             "yields": [
                               {
-                                "yieldValue": 74.4,
-                                "yieldType": 1
+                                "yieldType": 1,
+                                "yieldValue": 74.4
                               },
                               {
-                                "yieldValue": 78.5,
-                                "yieldType": 8
+                                "yieldType": 8,
+                                "yieldValue": 78.5
                               },
                               {
-                                "yieldValue": 75.7,
-                                "yieldType": 12
+                                "yieldType": 12,
+                                "yieldValue": 75.7
                               },
                               {
-                                "yieldValue": 72.1,
-                                "yieldType": 1
+                                "yieldType": 1,
+                                "yieldValue": 72.1
                               }
                             ],
                             "retestFlag": 0,
-                            "yield5": 77.8,
                             "reissueChargeFlag": 0,
                             "vm1": 0,
                             "vm2": 0.9,
@@ -839,10 +840,10 @@
                           "lengthAndStrengthTestDetail": {
                             "lengthAndStrengthTestDetailsType": "L",
                             "certificateIdentity": {
-                              "certificateIDPrefix": 3,
-                              "certificateIDNumber": 664,
-                              "certificateIDSuffix": "C",
-                              "certificateIDCD": 6
+                              "certificateIdPrefix": 3,
+                              "certificateIdNumber": 664,
+                              "certificateIdSuffix": "C",
+                              "certificateIdCd": 6
                             },
                             "charge": {
                               "value": 230.23,
@@ -1295,10 +1296,10 @@
                               "testDetail": {
                                 "testDetailsType": "P",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 499,
-                                  "certificateIDSuffix": "P",
-                                  "certificateIDCD": 7
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 499,
+                                  "certificateIdSuffix": "P",
+                                  "certificateIdCd": 7
                                 },
                                 "laboratory": 1,
                                 "woolBase": 64.29,
@@ -1307,24 +1308,23 @@
                                 "hardHeadsBase": 0,
                                 "yields": [
                                   {
-                                    "yieldValue": 74.4,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 74.4
                                   },
                                   {
-                                    "yieldValue": 78.5,
-                                    "yieldType": 8
+                                    "yieldType": 8,
+                                    "yieldValue": 78.5
                                   },
                                   {
-                                    "yieldValue": 75.7,
-                                    "yieldType": 12
+                                    "yieldType": 12,
+                                    "yieldValue": 75.7
                                   },
                                   {
-                                    "yieldValue": 72.1,
-                                    "yieldType": 1
+                                    "yieldType": 1,
+                                    "yieldValue": 72.1
                                   }
                                 ],
                                 "retestFlag": 0,
-                                "yield5": 77.8,
                                 "reissueChargeFlag": 0,
                                 "vm1": 0,
                                 "vm2": 0.9,
@@ -1334,10 +1334,10 @@
                               "lengthAndStrengthTestDetail": {
                                 "lengthAndStrengthTestDetailsType": "L",
                                 "certificateIdentity": {
-                                  "certificateIDPrefix": 3,
-                                  "certificateIDNumber": 664,
-                                  "certificateIDSuffix": "L",
-                                  "certificateIDCD": 6
+                                  "certificateIdPrefix": 3,
+                                  "certificateIdNumber": 664,
+                                  "certificateIdSuffix": "L",
+                                  "certificateIdCd": 6
                                 },
                                 "charge": {
                                   "value": 174.3,
@@ -1606,7 +1606,8 @@
             "$ref": "#/components/schemas/Centre"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
       },
       "Centre": {
         "required": [
@@ -1931,7 +1932,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exclude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
       },
       "TransferType": {
         "enum": [
@@ -2541,7 +2542,7 @@
             "type": "string",
             "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\n\r\nAlternative valid appraisal descriptions include AWC type, Exporter type.\r\n\r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\n\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\n\r\nThis field is to be always transmitted in upper case."
           },
-          "isGstTaxInvoiceApplicable": {
+          "isGstApplicable": {
             "maxLength": 5,
             "minLength": 4,
             "type": "boolean",
@@ -2867,7 +2868,7 @@
           "ND"
         ],
         "type": "string",
-        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
+        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nIn Australia, Mulesing status is not applicable for Combinations/OMLs, Guidance reports and Scoured wool.It is also not transmitted for non\r\nYield certificates when transmitted independently e.g.Length and Strength.\r\n            \r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
       },
       "TestDetail": {
         "required": [
@@ -2926,13 +2927,6 @@
           },
           "retestFlag": {
             "$ref": "#/components/schemas/RetestFlag"
-          },
-          "yield5": {
-            "pattern": "^-?\\d{1,3}\\.\\d{2}$",
-            "type": "number",
-            "description": "The amount of recoverable fibre from a lot under set processing conditions",
-            "format": "double",
-            "nullable": true
           },
           "reissueChargeFlag": {
             "$ref": "#/components/schemas/ReissueChargeFlag"
@@ -2994,7 +2988,7 @@
             "format": "double",
             "nullable": true
           },
-          "factorVMB": {
+          "factorVmb": {
             "pattern": "^-?\\d{1,7}\\.\\d{2}$",
             "type": "number",
             "description": "Factor for VMB.",
@@ -3038,26 +3032,26 @@
       },
       "CertificateIdentity": {
         "required": [
-          "certificateIDCD",
-          "certificateIDNumber",
-          "certificateIDPrefix",
-          "certificateIDSuffix"
+          "certificateIdCd",
+          "certificateIdNumber",
+          "certificateIdPrefix",
+          "certificateIdSuffix"
         ],
         "type": "object",
         "properties": {
-          "certificateIDPrefix": {
-            "$ref": "#/components/schemas/CertificateIDPrefix"
+          "certificateIdPrefix": {
+            "$ref": "#/components/schemas/CertificateIdPrefix"
           },
-          "certificateIDNumber": {
+          "certificateIdNumber": {
             "maxLength": 8,
             "minLength": 1,
             "type": "integer",
             "format": "int32"
           },
-          "certificateIDSuffix": {
-            "$ref": "#/components/schemas/CertificateIDSuffix"
+          "certificateIdSuffix": {
+            "$ref": "#/components/schemas/CertificateIdSuffix"
           },
-          "certificateIDCD": {
+          "certificateIdCd": {
             "maxLength": 1,
             "minLength": 1,
             "type": "integer",
@@ -3067,7 +3061,7 @@
         "additionalProperties": false,
         "description": "The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit\r\ncheck number.It is printed at the top of the certificate."
       },
-      "CertificateIDPrefix": {
+      "CertificateIdPrefix": {
         "enum": [
           2,
           3,
@@ -3077,7 +3071,7 @@
         "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
         "format": "int32"
       },
-      "CertificateIDSuffix": {
+      "CertificateIdSuffix": {
         "enum": [
           "B",
           "C",
@@ -3111,15 +3105,15 @@
       "Yield": {
         "type": "object",
         "properties": {
+          "yieldType": {
+            "$ref": "#/components/schemas/YieldType"
+          },
           "yieldValue": {
             "pattern": "^-?\\d{1,3}\\.\\d{2}$",
             "type": "number",
             "description": "The amount of recoverable fibre from a lot under set processing conditions",
             "format": "double",
             "nullable": true
-          },
-          "yieldType": {
-            "$ref": "#/components/schemas/YieldType"
           },
           "cleanWeight": {
             "$ref": "#/components/schemas/Weight"
@@ -3501,7 +3495,6 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
             "format": "date"
           },
           "stapleStrengthLowest25Percent": {
@@ -3638,7 +3631,6 @@
             "minLength": 1,
             "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
             "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date"
           },
           "factorLaserscanNumerator": {

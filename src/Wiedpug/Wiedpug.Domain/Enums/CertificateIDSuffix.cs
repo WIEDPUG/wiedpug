@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum CertificateIDSuffix
+    public enum CertificateIdSuffix
     {
         [Description("B: Bulk Class")]
         B,

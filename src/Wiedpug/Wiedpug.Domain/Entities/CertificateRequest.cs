@@ -29,14 +29,31 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public YieldType? YieldType2 { get; set; }
 
+        /// <summary>
+        /// This field is used when requesting a Test House to produce a Test Certificate (in a type TCR document). The value that is included in this 
+        /// field will be printed by the Test House at the top of the certificate after the caption ‘REF’. No other use is made of this field by the Test House. 
+        /// It does not form part of the transmitted certificate.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(30)]
         public string? CertificateReference { get; set; }
 
+        /// <summary>
+        /// The identity given to the lot in the computer system by the owner of the wool.
+        /// 
+        /// Client’s Cross Reference is transmitted by the owner of the wool to a Test House when the owner either verifies a test request(in a type of
+        /// TRV document) or requests the printing of a certificate(in a type TCR document). If it is included in the transmission to the Test House, the
+        /// Test House will also include it in its transmission of the certificate.The owner of the wool will then be able to connect the transmitted certificate
+        /// with the wool in its computer system.In a Test Request Verification document, the field must contain the weight note number of the lot.
+        /// The value in this field is NOT printed on the certificate.It is the value in the Certificate Reference field that is printed on the certificate.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(8)]
         public string? ClientsCrossReference { get; set; }
 
+        /// <summary>
+        /// The gross weight of the lot as declared by the owner
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? DeclaredGross { get; set; }
@@ -45,10 +62,17 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(9)]
         public Weight? DeclaredTare { get; set; }
 
+        /// <summary>
+        /// The weight of wool removed after testing, to adjust the issued test results, in compliance with the relevant standard (e.g. removal of wet 
+        /// wool, contract weight adjustment, retained buyer sample, etc.).
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? SampleWeightRemoved { get; set; }
 
+        /// <summary>
+        /// Number of bales
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         public required int Bales { get; set; }

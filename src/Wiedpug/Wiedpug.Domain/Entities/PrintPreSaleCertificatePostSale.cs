@@ -64,7 +64,7 @@ namespace Wiedpug.Domain.Entities
         public required SaleOutcome SaleOutcome { get; set; }
 
         /// <summary>
-        /// Required numeric field for bales.
+        /// Number of bales
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
@@ -73,7 +73,11 @@ namespace Wiedpug.Domain.Entities
         public required int Bales { get; set; }
 
         /// <summary>
-        /// Required numeric field for gross weight.
+        /// Total weight of the wool. In transmissions from Test Houses, Gross 
+        /// includes Regrab Sample Weight. In all other transmissions, Regrab 
+        /// Sample Weight will have been subtracted from the Gross of a lot or a 
+        /// group before the transmission. See the chapter ‘Business Rules’ for a 
+        /// fuller explanation.
         /// </summary>
         [Required]
         [MinLength(4)]
@@ -103,7 +107,8 @@ namespace Wiedpug.Domain.Entities
         public required SaleIdentity SaleIdentity { get; set; }
 
         /// <summary>
-        /// Required enum type for centre-storage.
+        /// The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the
+        /// Centre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.
         /// </summary>
         [Required]
         [MinLength(1)]
@@ -119,9 +124,8 @@ namespace Wiedpug.Domain.Entities
         public required CertificateDeliveryIndicator CertificateDeliveryIndicator { get; set; }
 
         /// <summary>
-        /// Optional numeric field for cost per weight unit.
+        /// The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.
         /// </summary>
-        /// 
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
         [MinLength(1)]
         [MaxLength(6)]

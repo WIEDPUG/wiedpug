@@ -54,24 +54,24 @@ paths:
                     isPrintingTEAM3Hauteur: false
                     certificateRequestDetails:
                       - certificateIdentity:
-                          certificateIDPrefix: 3
-                          certificateIDNumber: 15969534
-                          certificateIDSuffix: P
-                          certificateIDCD: 9
+                          certificateIdPrefix: 3
+                          certificateIdNumber: 15969534
+                          certificateIdSuffix: P
+                          certificateIdCd: 9
                         woolbase: 63.16
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: 3
-                          certificateIDNumber: 499
-                          certificateIDSuffix: P
-                          certificateIDCD: 7
+                          certificateIdPrefix: 3
+                          certificateIdNumber: 499
+                          certificateIdSuffix: P
+                          certificateIdCd: 7
                         woolbase: 61.52
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: 3
-                          certificateIDNumber: 499
-                          certificateIDSuffix: P
-                          certificateIDCD: 7
+                          certificateIdPrefix: 3
+                          certificateIdNumber: 499
+                          certificateIdSuffix: P
+                          certificateIdCd: 7
                         woolbase: 61.44
                         laboratory: 1
                 - certificateRequest:
@@ -89,24 +89,24 @@ paths:
                     isPrintingTEAM3Hauteur: true
                     certificateRequestDetails:
                       - certificateIdentity:
-                          certificateIDPrefix: 3
-                          certificateIDNumber: 499
-                          certificateIDSuffix: P
-                          certificateIDCD: 7
+                          certificateIdPrefix: 3
+                          certificateIdNumber: 499
+                          certificateIdSuffix: P
+                          certificateIdCd: 7
                         woolbase: 53.74
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: 3
-                          certificateIDNumber: 499
-                          certificateIDSuffix: P
-                          certificateIDCD: 7
+                          certificateIdPrefix: 3
+                          certificateIdNumber: 499
+                          certificateIdSuffix: P
+                          certificateIdCd: 7
                         woolbase: 52.01
                         laboratory: 1
                       - certificateIdentity:
-                          certificateIDPrefix: 3
-                          certificateIDNumber: 499
-                          certificateIDSuffix: P
-                          certificateIDCD: 7
+                          certificateIdPrefix: 3
+                          certificateIdNumber: 499
+                          certificateIdSuffix: P
+                          certificateIdCd: 7
                         woolbase: 54.26
                         laboratory: 1
         required: true
@@ -243,24 +243,24 @@ paths:
                         isPrintingTEAM3Hauteur: false
                         certificateRequestDetails:
                           - certificateIdentity:
-                              certificateIDPrefix: 3
-                              certificateIDNumber: 15969534
-                              certificateIDSuffix: P
-                              certificateIDCD: 9
+                              certificateIdPrefix: 3
+                              certificateIdNumber: 15969534
+                              certificateIdSuffix: P
+                              certificateIdCd: 9
                             woolbase: 63.16
                             laboratory: 1
                           - certificateIdentity:
-                              certificateIDPrefix: 3
-                              certificateIDNumber: 499
-                              certificateIDSuffix: P
-                              certificateIDCD: 7
+                              certificateIdPrefix: 3
+                              certificateIdNumber: 499
+                              certificateIdSuffix: P
+                              certificateIdCd: 7
                             woolbase: 61.52
                             laboratory: 1
                           - certificateIdentity:
-                              certificateIDPrefix: 3
-                              certificateIDNumber: 499
-                              certificateIDSuffix: P
-                              certificateIDCD: 7
+                              certificateIdPrefix: 3
+                              certificateIdNumber: 499
+                              certificateIdSuffix: P
+                              certificateIdCd: 7
                             woolbase: 61.44
                             laboratory: 1
                     - certificateRequest:
@@ -278,24 +278,24 @@ paths:
                         isPrintingTEAM3Hauteur: true
                         certificateRequestDetails:
                           - certificateIdentity:
-                              certificateIDPrefix: 3
-                              certificateIDNumber: 499
-                              certificateIDSuffix: P
-                              certificateIDCD: 7
+                              certificateIdPrefix: 3
+                              certificateIdNumber: 499
+                              certificateIdSuffix: P
+                              certificateIdCd: 7
                             woolbase: 53.74
                             laboratory: 1
                           - certificateIdentity:
-                              certificateIDPrefix: 3
-                              certificateIDNumber: 499
-                              certificateIDSuffix: P
-                              certificateIDCD: 7
+                              certificateIdPrefix: 3
+                              certificateIdNumber: 499
+                              certificateIdSuffix: P
+                              certificateIdCd: 7
                             woolbase: 52.01
                             laboratory: 1
                           - certificateIdentity:
-                              certificateIDPrefix: 3
-                              certificateIDNumber: 499
-                              certificateIDSuffix: P
-                              certificateIDCD: 7
+                              certificateIdPrefix: 3
+                              certificateIdNumber: 499
+                              certificateIdSuffix: P
+                              certificateIdCd: 7
                             woolbase: 54.26
                             laboratory: 1
         "204":
@@ -464,6 +464,13 @@ components:
         centre:
           $ref: "#/components/schemas/Centre"
       additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online."
     Centre:
       required:
         - centreCode
@@ -876,7 +883,7 @@ components:
           nullable: true
       additionalProperties: false
       description: "Used to identify document transfer type: Restrict, Unrestrict, and
-        Exlcude.\r
+        Exclude.\r
 
         \r
 
@@ -919,11 +926,44 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          description: "This field is used when requesting a Test House to produce a Test
+            Certificate (in a type TCR document). The value that is included in
+            this \r
+
+            field will be printed by the Test House at the top of
+            the certificate after the caption ‘REF’. No other use is made of
+            this field by the Test House. \r
+
+            It does not form part of the transmitted certificate."
           nullable: true
         clientsCrossReference:
           maxLength: 8
           minLength: 1
           type: string
+          description: "The identity given to the lot in the computer system by the owner
+            of the wool.\r
+
+            \r
+
+            Client’s Cross Reference is transmitted by the owner of
+            the wool to a Test House when the owner either verifies a test
+            request(in a type of\r
+
+            TRV document) or requests the printing of a
+            certificate(in a type TCR document). If it is included in the
+            transmission to the Test House, the\r
+
+            Test House will also include it in its transmission of
+            the certificate.The owner of the wool will then be able to connect
+            the transmitted certificate\r
+
+            with the wool in its computer system.In a Test Request
+            Verification document, the field must contain the weight note number
+            of the lot.\r
+
+            The value in this field is NOT printed on the
+            certificate.It is the value in the Certificate Reference field that
+            is printed on the certificate."
           nullable: true
         declaredGross:
           $ref: "#/components/schemas/Weight"
@@ -934,6 +974,7 @@ components:
         bales:
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
         season:
           pattern: -?\d{1,2}
@@ -1072,11 +1113,12 @@ components:
         - 2
         - 3
       type: integer
-      description: "0: Yield and Laserscan are (to be) shown on the certificate<br
-        />1: Two certificates are (to be) issued, one with yield and one with
-        Laserscan<br />2: Yield only is (to be) shown, the actual yields being
-        those indicated by the values in the Yield Type fields<br />3: Laserscan
-        only is (to be) shown)"
+      description: "This field indicates whether the certificate is to show yield
+        and/or Laserscan.<br />0: Yield and Laserscan are (to be) shown on the
+        certificate<br />1: Two certificates are (to be) issued, one with yield
+        and one with Laserscan<br />2: Yield only is (to be) shown, the actual
+        yields being those indicated by the values in the Yield Type fields<br
+        />3: Laserscan only is (to be) shown)"
       format: int32
     YieldType:
       enum:
@@ -1275,13 +1317,15 @@ components:
         - M
         - N
       type: string
-      description: "P: Normal RPP/TCR request to pdf Certificate<br />A: Pdf
-        Combination/OML Certificate and associated sub-lots<br />S: Pdf
-        associated sub-lots excluding the Combination/OML Certificate<br />C:
-        Pdf Combination Certificate in Chinese and English<br />E: Pdf
-        Combination Certificate in Chinese and English & associated sublots in
-        English)<br />M: Pdf Combination Certificate in English & Mulesing
-        Status report<br />N: Pdf Mulesing Status report only"
+      description: "This field provides options to produce certificates for
+        combinations, omls and/or associated sublots<br />P: Normal RPP/TCR
+        request to pdf Certificate<br />A: Pdf Combination/OML Certificate and
+        associated sub-lots<br />S: Pdf associated sub-lots excluding the
+        Combination/OML Certificate<br />C: Pdf Combination Certificate in
+        Chinese and English<br />E: Pdf Combination Certificate in Chinese and
+        English & associated sublots in English)<br />M: Pdf Combination
+        Certificate in English & Mulesing Status report<br />N: Pdf Mulesing
+        Status report only"
     CombinationRequest:
       enum:
         - N
@@ -1292,11 +1336,19 @@ components:
         - "6"
         - C
       type: string
-      description: "N: Normal Combination Reuqest<br />S: ASX24 Combination Request
-        (formerly SFE)<br />X: ASX19.5 54W, ASX21.0 55W or ASX22.6 56W
-        Combination Request<br />4: ASX19.5 54W Combination Request<br />5:
-        ASX21.0 55W Combination Request<br />6: ASX22.6 56W Combination
-        Request<br />C: China Contract Combination Request"
+      description: "For Australian Securities Exchange Combination requests, if an 'X'
+        is requested, at least one of the three ASX 54W, 55W or 56W contract
+        specifications must be satisfied for a certificate to be issued, whilst
+        if 4, 5 or 6 is requested it must satisfy the requested contract for a
+        certificate to be issued. Note: all 3 ASX contract specifications will
+        be checked and the issued certificate will indicate all contracts that
+        are satisfied. If an 'S' is requested only the ASX24 contract
+        specification will be checked.<br />N: Normal Combination Reuqest<br
+        />S: ASX24 Combination Request (formerly SFE)<br />X: ASX19.5 54W,
+        ASX21.0 55W or ASX22.6 56W Combination Request<br />4: ASX19.5 54W
+        Combination Request<br />5: ASX21.0 55W Combination Request<br />6:
+        ASX22.6 56W Combination Request<br />C: China Contract Combination
+        Request"
     AutoAdditionalMeasurementRequired:
       enum:
         - N
@@ -1336,28 +1388,38 @@ components:
         woolbase:
           pattern: ^-?\d{1,2}\.\d{2}$
           type: number
+          description: "The oven-dry mass of wool fibre free from all impurities,
+            expressed as a percentage of the mass of the sample.\r
+
+            \r
+
+            Min The lowest value in a range of Wool Base values\r
+
+            \            \r
+
+            Max The highest value in a range of Wool Base values"
           format: double
         laboratory:
           $ref: "#/components/schemas/Laboratory"
       additionalProperties: false
     CertificateIdentity:
       required:
-        - certificateIDCD
-        - certificateIDNumber
-        - certificateIDPrefix
-        - certificateIDSuffix
+        - certificateIdCd
+        - certificateIdNumber
+        - certificateIdPrefix
+        - certificateIdSuffix
       type: object
       properties:
-        certificateIDPrefix:
-          $ref: "#/components/schemas/CertificateIDPrefix"
-        certificateIDNumber:
+        certificateIdPrefix:
+          $ref: "#/components/schemas/CertificateIdPrefix"
+        certificateIdNumber:
           maxLength: 8
           minLength: 1
           type: integer
           format: int32
-        certificateIDSuffix:
-          $ref: "#/components/schemas/CertificateIDSuffix"
-        certificateIDCD:
+        certificateIdSuffix:
+          $ref: "#/components/schemas/CertificateIdSuffix"
+        certificateIdCd:
           maxLength: 1
           minLength: 1
           type: integer
@@ -1368,7 +1430,7 @@ components:
         followed by a 1 digit\r
 
         check number.It is printed at the top of the certificate."
-    CertificateIDPrefix:
+    CertificateIdPrefix:
       enum:
         - 2
         - 3
@@ -1377,7 +1439,7 @@ components:
       description: "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6:
         Fremantle Laboratory"
       format: int32
-    CertificateIDSuffix:
+    CertificateIdSuffix:
       enum:
         - B
         - C
@@ -1424,10 +1486,12 @@ components:
           maxLength: 30
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         baleDescription:
           maxLength: 15
           minLength: 1
           type: string
+          description: This field is to be always transmitted in upper case.
         areaOfOrigin:
           maxLength: 4
           minLength: 1
@@ -1447,6 +1511,7 @@ components:
           minLength: 1
           pattern: -?\d{1,4}
           type: integer
+          description: Number of bales
           format: int32
           nullable: true
         locationWithinStore:

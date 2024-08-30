@@ -46,10 +46,10 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         CertificateIdentity = new CertificateIdentity
                         {
-                            CertificateIDPrefix = CertificateIDPrefix.SydneyLaboratory,
-                            CertificateIDNumber = 234567,
-                            CertificateIDSuffix = CertificateIDSuffix.F,
-                            CertificateIDCD = 6,
+                            CertificateIdPrefix = CertificateIdPrefix.SydneyLaboratory,
+                            CertificateIdNumber = 234567,
+                            CertificateIdSuffix = CertificateIdSuffix.F,
+                            CertificateIdCd = 6,
                         },
                         WeightNote = new WeightNote{
                             Prefix = "L",
@@ -160,10 +160,10 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         CertificateIdentity = new CertificateIdentity
                         {
-                            CertificateIDPrefix = CertificateIDPrefix.SydneyLaboratory,
-                            CertificateIDNumber = 234567,
-                            CertificateIDSuffix = CertificateIDSuffix.F,
-                            CertificateIDCD = 6,
+                            CertificateIdPrefix = CertificateIdPrefix.SydneyLaboratory,
+                            CertificateIdNumber = 234567,
+                            CertificateIdSuffix = CertificateIdSuffix.F,
+                            CertificateIdCd = 6,
                         },
                         WeightNote = new WeightNote{
                             Prefix = "L",

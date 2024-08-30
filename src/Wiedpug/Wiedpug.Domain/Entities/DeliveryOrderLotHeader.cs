@@ -12,6 +12,9 @@ namespace Wiedpug.Domain.Entities
 {
     public class DeliveryOrderLotHeader
     {
+        /// <summary>
+        /// The code for the broker who will raise the invoice for the wool.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(8)]
@@ -48,15 +51,26 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(4)]
         public required SaleIdentity SaleIdentity { get; set; }
 
+        /// <summary>
+        /// The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the
+        /// Centre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(5)]
         public Centre? CentreStorage { get; set; }
 
+        /// <summary>
+        /// This is the organisation store that is storing the wool. Note: If there is more than one organisation in a centre, then separate AWEX codes are 
+        /// required for each store. It is not necessarily the same as the Releasing Organisation.
+        /// </summary>
         [Required]
         [MinLength(1)]
         [MaxLength(5)]
         public required Organisation StorageOrganisation { get; set; }
 
+        /// <summary>
+        /// Used to provide more details on location within the Storage Organisations facility - such as street address, warehouse number etc. – to assist delivery.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(15)]
         public string? StorageDescription { get; set; }
@@ -91,22 +105,38 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(6)]
         public required string LotIdentityOrGroupNumber { get; set; }
 
+        /// <summary>
+        /// Number of bales
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         [MinLength(1)]
         [MaxLength(4)]
         public required int Bales { get; set; }
 
+        /// <summary>
+        /// Total weight of the wool. In transmissions from Test Houses, Gross 
+        /// includes Regrab Sample Weight. In all other transmissions, Regrab 
+        /// Sample Weight will have been subtracted from the Gross of a lot or a 
+        /// group before the transmission. See the chapter ‘Business Rules’ for a 
+        /// fuller explanation.
+        /// </summary>
         [Required]
         [MinLength(4)]
         [MaxLength(9)]
         public required Weight Gross { get; set; }
 
+        /// <summary>
+        /// The weight of the bale packaging
+        /// </summary>
         [Required]
         [MinLength(4)]
         [MaxLength(9)]
         public required Weight Tare { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; }
@@ -145,10 +175,16 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(6)]
         public int? RenumbersFirstBaleNumber { get; set; }
 
+        /// <summary>
+        /// Shipping Identification Mark
+        /// </summary>
         [MinLength(1)]
         [MaxLength(10)]
-        public string? SIM { get; set; }
+        public string? Sim { get; set; }
 
+        /// <summary>
+        /// The sequence in which lots are to be blended by the processor. This field is applicable only to local delivery orders containing instructions for processing.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(2)]
         public string? BlendSequence { get; set; }

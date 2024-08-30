@@ -1,0 +1,7 @@
+{
+    "class-diagram": "Class Diagram",
+    "security-model": "Security Model",  
+    "openapi-specs": "OpenApi Specs",
+    "business-rules":"Business Rules",
+    "schema":"API Schema"
+  }

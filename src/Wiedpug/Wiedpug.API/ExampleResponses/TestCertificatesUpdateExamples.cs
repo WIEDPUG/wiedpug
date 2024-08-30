@@ -39,10 +39,10 @@ namespace Wiedpug.API.ExampleResponses
                 TestCertificateUpdateDetails = new List<TestCertificateUpdateDetail> {
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 16101382,
-                                    CertificateIDSuffix = CertificateIDSuffix.L,
-                                    CertificateIDCD = 6
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 16101382,
+                                    CertificateIdSuffix = CertificateIdSuffix.L,
+                                    CertificateIdCd = 6
                                 },
                         ReissueType = ReissueType._06,
                         Client = new Organisation {
@@ -56,10 +56,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 16101382,
-                                    CertificateIDSuffix = CertificateIDSuffix.M,
-                                    CertificateIDCD = 5
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 16101382,
+                                    CertificateIdSuffix = CertificateIdSuffix.M,
+                                    CertificateIdCd = 5
                                 },
                         ReissueType = ReissueType._05,
                         Client = new Organisation {
@@ -73,10 +73,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 15701332,
-                                    CertificateIDSuffix = CertificateIDSuffix.B,
-                                    CertificateIDCD = 6
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 15701332,
+                                    CertificateIdSuffix = CertificateIdSuffix.B,
+                                    CertificateIdCd = 6
                                 },
                         ReissueType = ReissueType._02,
                         Client = new Organisation {
@@ -165,10 +165,10 @@ namespace Wiedpug.API.ExampleResponses
                     TestCertificateUpdateDetails = new List<TestCertificateUpdateDetail> {
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 16101382,
-                                    CertificateIDSuffix = CertificateIDSuffix.L,
-                                    CertificateIDCD = 6
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 16101382,
+                                    CertificateIdSuffix = CertificateIdSuffix.L,
+                                    CertificateIdCd = 6
                                 },
                         ReissueType = ReissueType._06,
                         Client = new Organisation {
@@ -182,10 +182,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 16101382,
-                                    CertificateIDSuffix = CertificateIDSuffix.M,
-                                    CertificateIDCD = 5
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 16101382,
+                                    CertificateIdSuffix = CertificateIdSuffix.M,
+                                    CertificateIdCd = 5
                                 },
                         ReissueType = ReissueType._05,
                         Client = new Organisation {
@@ -199,10 +199,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     new TestCertificateUpdateDetail {
                         CertificateIdentity =  new CertificateIdentity{
-                                    CertificateIDPrefix = CertificateIDPrefix.FremantleLaboratory,
-                                    CertificateIDNumber = 15701332,
-                                    CertificateIDSuffix = CertificateIDSuffix.B,
-                                    CertificateIDCD = 6
+                                    CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
+                                    CertificateIdNumber = 15701332,
+                                    CertificateIdSuffix = CertificateIdSuffix.B,
+                                    CertificateIdCd = 6
                                 },
                         ReissueType = ReissueType._02,
                         Client = new Organisation {

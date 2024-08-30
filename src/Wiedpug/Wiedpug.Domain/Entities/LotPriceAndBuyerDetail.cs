@@ -30,7 +30,7 @@ namespace Wiedpug.Domain.Entities
         public required string LotIdentity { get; set; }
 
         /// <summary>
-        /// Required numeric field for cost per weight unit.
+        /// The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
@@ -55,6 +55,8 @@ namespace Wiedpug.Domain.Entities
         public required SaleOutcome SaleOutcome { get; set; }
 
         /// <summary>
+        /// The auction room time the lot was passed in, sold or withdrawn (unverified data).
+        ///
         /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
         /// </summary>
         [Required]

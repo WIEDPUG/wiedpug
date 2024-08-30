@@ -21,6 +21,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(10)]
         public string? SubConsignmentReference { get; set; }
 
+        /// <summary>
+        /// This number is provided be the Australian Custom Service’s EXIT system to the exporter. 
+        /// It is included only if it is available at the time the delivery order is produced.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(14)]
         public string? EcnCrn { get; set; }
@@ -37,6 +41,9 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(8)]
         public Organisation? DumpingOrganisation { get; set; }
 
+        /// <summary>
+        /// These codes are maintained by Australian Chamber of Shipping
+        /// </summary>
         [MinLength(1)]
         [MaxLength(7)]
         public string? VesselCode { get; set; }
@@ -45,10 +52,18 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(6)]
         public string? VoyageCode { get; set; }
 
+        /// <summary>
+        /// The code that identifies the port at which the wool will be unloaded. A 
+        /// recognised code should be used in this field. These codes are issued 
+        /// and maintained by the Australian Chamber of Shipping (ACOS).
+        /// </summary>
         [MinLength(1)]
         [MaxLength(5)]
         public string? PortOfDischargeCode { get; set; }
 
+        /// <summary>
+        /// A recognised code should be used in this field. These codes are issued and maintained by the Australian Chamber of Shipping (ACOS).
+        /// </sunnary>
         [MinLength(1)]
         [MaxLength(5)]
         public string? LoadPortCode { get; set; }
@@ -67,10 +82,16 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(20)]
         public string? LoadPortDescription { get; set; }
 
+        /// <summary>
+        /// A recognised code should be used in this field. These codes are issued and maintained by the Australian Chamber of Shipping (ACOS).
+        /// </sunnary>
         [MinLength(1)]
         [MaxLength(20)]
         public string? PortOfDischargeDescription { get; set; }
 
+        /// <summary>
+        /// A recognised code should be used in this field. These codes are issued and maintained by the Australian Chamber of Shipping (ACOS).
+        /// </sunnary>
         [MinLength(1)]
         [MaxLength(5)]
         public string? AlternatePortOfDischargeCode { get; set; }

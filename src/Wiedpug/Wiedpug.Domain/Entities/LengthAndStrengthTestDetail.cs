@@ -174,8 +174,9 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.DECIMAL_3_1)]
         public double? Team3RomainePercentage { get; set; }
 
-        /// <summary>
-        /// Date in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
+        /// The date the certificate was issued.
+        /// 
+        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]

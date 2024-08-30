@@ -11,7 +11,7 @@ using Wiedpug.Domain.ValueObject;
 namespace Wiedpug.Domain.Entities
 {
     /// <summary>
-    /// Used to identify document transfer type: Restrict, Unrestrict, and Exlcude.
+    /// Used to identify document transfer type: Restrict, Unrestrict, and Exclude.
     /// 
     /// Only used for data retrieval. Do not include it in the response.
     /// </summary>

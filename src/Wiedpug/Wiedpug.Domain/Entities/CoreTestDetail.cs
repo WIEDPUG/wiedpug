@@ -25,10 +25,20 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required Laboratory Laboratory { get; set; }
 
+        /// <summary>
+        /// The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.
+        /// </summary>
         [MinLength(4)]
         [MaxLength(9)]
         public Weight? RegrabSampleWeight { get; set; }
 
+        /// <summary>
+        /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.
+        /// 
+        /// Min The lowest value in a range of Wool Base values
+        ///
+        /// Max The highest value in a range of Wool Base values
+        /// </summary>
         [Required]
         [RegularExpression(RegexPattern.DECIMAL_4_2)]
         public required double WoolBase { get; set; }
