@@ -5,6 +5,7 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
+    [RemoveUnderscoreFromEnumItem]
     [Description("The state of the wool itemised in the invoice.")]
     public enum WoolState
     {

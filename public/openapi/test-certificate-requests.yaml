@@ -12,56 +12,105 @@ info:
     url: https://wiedpug.github.io/wiedpug
   version: v0.0
 paths:
-  /v0/payment-confirmation:
+  /v0/test-certificate-requests:
     post:
       tags:
-        - Payment Confirmation
-      summary: Payment Confirmation
-      description: Used to provide payment confirmation
-      operationId: CreatePaymentConfirmation
+        - Test Certificate Requests
+      summary: Test Certificate Requests
+      description: Sent to a Test House to initiate the printing of a certificate.
       requestBody:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PaymentConfirmation"
+              type: array
+              items:
+                $ref: "#/components/schemas/TestCertificateRequests"
             example:
-              transmissionHeader:
-                dateFormatLastRevised: 2020-07-15
-                dateTransmissionFileCreated: 2016-01-17
-                countryOfOrigin: AU
-                documentOriginator:
-                  organisationCode: ATW
-                currentReceiver:
-                  organisationCode: ATW
-                versionNumber: 31
-                softwareIdentifier:
-                  softwareCompany: 1
-                  version: 1082
-                  programName: NETR
-                abn: "72001967184"
-              confirmations:
-                - paymentHeader:
-                    clientCode: 55674
-                    statementDate: 2024-05-11
-                    amountRemitted:
-                      value: 262
-                      currencyUnit: AUD
-                    statementPaymentDate: 2024-06-01
-                    bankBSBNumber: "335567"
-                    bankAccountNumber: "456735"
-                    amountWithheldThisStatement:
-                      value: 690.45
-                      currencyUnit: AUD
-                    amountWithheldPreviousStatements:
-                      value: 672.23
-                      currencyUnit: AUD
-                  paymentDetails:
-                    - statementDate: 2024-05-12
-                      accountReference: "12345678901"
-                      amount:
-                        value: 723.23
-                        currencyUnit: AUD
-                      paymentType: 0
+              - transmissionHeader:
+                  dateFormatLastRevised: 2020-07-15
+                  dateTransmissionFileCreated: 2016-01-17
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ATC
+                  currentReceiver:
+                    organisationCode: ATT
+                  versionNumber: 31
+                  softwareIdentifier:
+                    softwareCompany: 1
+                    softwareVersion: 1082
+                    programName: NETR
+                  abn: "72001967184"
+                testCertificateRequestDetails:
+                  - certificateRequest:
+                      certificateType: C
+                      printRequirements: 0
+                      yieldType1: 2
+                      yieldType2: 4
+                      certificateReference: XXY1255
+                      clientCrossReference: XXY1255
+                      numberOfBales: 96
+                      season: 21
+                      combinationRequest: N
+                      autoAdditionalMeasurementRequired: N
+                      additionalPrintRequirements: 0
+                      isPrintingTEAM3Hauteur: false
+                      certificateRequestDetails:
+                        - certificateIdentity:
+                            certificateIdPrefix: 3
+                            certificateIdNumber: 15969534
+                            certificateIdSuffix: P
+                            certificateIdCd: 9
+                          woolbase: 63.16
+                          laboratory: 1
+                        - certificateIdentity:
+                            certificateIdPrefix: 3
+                            certificateIdNumber: 499
+                            certificateIdSuffix: P
+                            certificateIdCd: 7
+                          woolbase: 61.52
+                          laboratory: 1
+                        - certificateIdentity:
+                            certificateIdPrefix: 3
+                            certificateIdNumber: 499
+                            certificateIdSuffix: P
+                            certificateIdCd: 7
+                          woolbase: 61.44
+                          laboratory: 1
+                  - certificateRequest:
+                      certificateType: B
+                      printRequirements: 0
+                      yieldType1: 1
+                      yieldType2: 13
+                      certificateReference: XXY1205
+                      clientCrossReference: XXZ1635
+                      numberOfBales: 96
+                      season: 21
+                      combinationRequest: C
+                      autoAdditionalMeasurementRequired: N
+                      additionalPrintRequirements: 3
+                      isPrintingTEAM3Hauteur: true
+                      certificateRequestDetails:
+                        - certificateIdentity:
+                            certificateIdPrefix: 3
+                            certificateIdNumber: 499
+                            certificateIdSuffix: P
+                            certificateIdCd: 7
+                          woolbase: 53.74
+                          laboratory: 1
+                        - certificateIdentity:
+                            certificateIdPrefix: 3
+                            certificateIdNumber: 499
+                            certificateIdSuffix: P
+                            certificateIdCd: 7
+                          woolbase: 52.01
+                          laboratory: 1
+                        - certificateIdentity:
+                            certificateIdPrefix: 3
+                            certificateIdNumber: 499
+                            certificateIdSuffix: P
+                            certificateIdCd: 7
+                          woolbase: 54.26
+                          laboratory: 1
         required: true
       responses:
         "200":
@@ -126,33 +175,35 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-  /v0/payment-confirmation/data:
+  /v0/test-certificate-requests/data:
     post:
       tags:
-        - Payment Confirmation
-      summary: Retrieves the payment confirmation
-      operationId: RequestForPaymentConfirmation
+        - Test Certificate Requests
+      summary: Retrieves the test certificates request
+      operationId: GetTestCertificatesRequests
       requestBody:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/RequestForData"
+              type: array
+              items:
+                $ref: "#/components/schemas/RequestForData"
             example:
-              transmissionHeader:
-                dateFormatLastRevised: 2020-07-15
-                dateTransmissionFileCreated: 2016-01-17
-                countryOfOrigin: AU
-                documentOriginator:
-                  organisationCode: ABC
-                currentReceiver:
-                  organisationCode: ATW
-                versionNumber: 31
-                softwareIdentifier:
-                  softwareCompany: 8
-                  version: 1082
-                  programName: NETR
-                abn: "72001967184"
-              requestForDataType: {}
+              - transmissionHeader:
+                  dateFormatLastRevised: 2020-07-15
+                  dateTransmissionFileCreated: 2016-01-17
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                  currentReceiver:
+                    organisationCode: ATW
+                  versionNumber: 31
+                  softwareIdentifier:
+                    softwareCompany: 8
+                    softwareVersion: 1082
+                    programName: NETR
+                  abn: "72001967184"
+                requestForDataType: {}
         required: true
       responses:
         "200":
@@ -162,47 +213,95 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/PaymentConfirmationApiResult"
+                  $ref: "#/components/schemas/TestCertificateRequestsListApiResult"
               example:
                 apiMessages: []
                 data:
-                  transmissionHeader:
-                    dateFormatLastRevised: 2020-07-15
-                    dateTransmissionFileCreated: 2016-01-17
-                    countryOfOrigin: AU
-                    documentOriginator:
-                      organisationCode: ATW
-                    currentReceiver:
-                      organisationCode: ATC
-                    versionNumber: 31
-                    softwareIdentifier:
-                      softwareCompany: 1
-                      version: 1082
-                      programName: NETR
-                    abn: "72001967184"
-                  confirmations:
-                    - paymentHeader:
-                        clientCode: 223350
-                        statementDate: 2024-05-11
-                        amountRemitted:
-                          value: 262
-                          currencyUnit: AUD
-                        statementPaymentDate: 2024-06-01
-                        bankBSBNumber: "335567"
-                        bankAccountNumber: "456735"
-                        amountWithheldThisStatement:
-                          value: 690.45
-                          currencyUnit: AUD
-                        amountWithheldPreviousStatements:
-                          value: 672.23
-                          currencyUnit: AUD
-                      paymentDetails:
-                        - statementDate: 2024-05-12
-                          accountReference: "12345678901"
-                          amount:
-                            value: 693
-                            currencyUnit: AUD
-                          paymentType: 0
+                  - transmissionHeader:
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
+                      countryOfOrigin: AU
+                      documentOriginator:
+                        organisationCode: ATC
+                      currentReceiver:
+                        organisationCode: ATT
+                      versionNumber: 31
+                      softwareIdentifier:
+                        softwareCompany: 1
+                        softwareVersion: 1082
+                        programName: NETR
+                      abn: "72001967184"
+                    testCertificateRequestDetails:
+                      - certificateRequest:
+                          certificateType: F
+                          printRequirements: 0
+                          yieldType1: 2
+                          yieldType2: 4
+                          certificateReference: XXY1255
+                          clientCrossReference: XXY1255
+                          numberOfBales: 96
+                          season: 21
+                          combinationRequest: N
+                          autoAdditionalMeasurementRequired: N
+                          additionalPrintRequirements: 0
+                          isPrintingTEAM3Hauteur: false
+                          certificateRequestDetails:
+                            - certificateIdentity:
+                                certificateIdPrefix: 3
+                                certificateIdNumber: 15969534
+                                certificateIdSuffix: P
+                                certificateIdCd: 9
+                              woolbase: 63.16
+                              laboratory: 1
+                            - certificateIdentity:
+                                certificateIdPrefix: 3
+                                certificateIdNumber: 499
+                                certificateIdSuffix: P
+                                certificateIdCd: 7
+                              woolbase: 61.52
+                              laboratory: 1
+                            - certificateIdentity:
+                                certificateIdPrefix: 3
+                                certificateIdNumber: 499
+                                certificateIdSuffix: P
+                                certificateIdCd: 7
+                              woolbase: 61.44
+                              laboratory: 1
+                      - certificateRequest:
+                          certificateType: C
+                          printRequirements: 0
+                          yieldType1: 1
+                          yieldType2: 13
+                          certificateReference: XXY1205
+                          clientCrossReference: XXZ1635
+                          numberOfBales: 96
+                          season: 21
+                          combinationRequest: C
+                          autoAdditionalMeasurementRequired: N
+                          additionalPrintRequirements: 3
+                          isPrintingTEAM3Hauteur: true
+                          certificateRequestDetails:
+                            - certificateIdentity:
+                                certificateIdPrefix: 3
+                                certificateIdNumber: 499
+                                certificateIdSuffix: P
+                                certificateIdCd: 7
+                              woolbase: 53.74
+                              laboratory: 1
+                            - certificateIdentity:
+                                certificateIdPrefix: 3
+                                certificateIdNumber: 499
+                                certificateIdSuffix: P
+                                certificateIdCd: 7
+                              woolbase: 52.01
+                              laboratory: 1
+                            - certificateIdentity:
+                                certificateIdPrefix: 3
+                                certificateIdNumber: 499
+                                certificateIdSuffix: P
+                                certificateIdCd: 7
+                              woolbase: 54.26
+                              laboratory: 1
         "204":
           description: No Content
           content:
@@ -280,9 +379,8 @@ paths:
                 detail: Error details..
 components:
   schemas:
-    PaymentConfirmation:
+    TestCertificateRequests:
       required:
-        - confirmations
         - transmissionHeader
       type: object
       properties:
@@ -290,10 +388,11 @@ components:
           $ref: "#/components/schemas/TransmissionHeader"
         transferConfig:
           $ref: "#/components/schemas/TransferConfig"
-        confirmations:
+        testCertificateRequestDetails:
           type: array
           items:
-            $ref: "#/components/schemas/Confirmation"
+            $ref: "#/components/schemas/TestCertificateRequestDetail"
+          nullable: true
       additionalProperties: false
     TransmissionHeader:
       required:
@@ -308,7 +407,7 @@ components:
         dateFormatLastRevised:
           maxLength: 10
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
           type: string
           description: Date value in ISO standard UTC date format. e.g. 2024-03-21
             (YYYY-MM-DD).
@@ -316,7 +415,7 @@ components:
         dateTransmissionFileCreated:
           maxLength: 10
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
           type: string
           description: Date value in ISO standard UTC date format. e.g. 2024-03-21
             (YYYY-MM-DD).
@@ -432,6 +531,15 @@ components:
 
         The legacy codes for Overseas Centre are under
         CentreCodeAustralia"
+      discriminator:
+        propertyName: Country
+        mapping:
+          AU: "#/components/schemas/CentreCodeAustralia"
+          CN: "#/components/schemas/CentreCodeChina"
+          DE: "#/components/schemas/CentreCodeGermany"
+          IT: "#/components/schemas/CentreCodeItaly"
+          NZ: "#/components/schemas/CentreCodeNewZealand"
+          TW: "#/components/schemas/CentreCodeTaiwan"
     CentreCodeAustralia:
       enum:
         - A
@@ -748,7 +856,7 @@ components:
       properties:
         softwareCompany:
           $ref: "#/components/schemas/SoftwareCompany"
-        version:
+        softwareVersion:
           pattern: -?\d{1,4}
           type: integer
           description: Version no. e.g. 2400
@@ -803,171 +911,628 @@ components:
       description: "Unrestrict: Send document to all members<br />Restrict: Send
         document to appointed members<br />Exclude: Send to all members
         excluding the appointed members"
-    Confirmation:
+    TestCertificateRequestDetail:
       required:
-        - paymentHeader
+        - certificateRequest
       type: object
       properties:
-        paymentHeader:
-          $ref: "#/components/schemas/PaymentHeader"
-        paymentDetails:
-          type: array
-          items:
-            $ref: "#/components/schemas/PaymentDetail"
-          nullable: true
+        certificateRequest:
+          $ref: "#/components/schemas/CertificateRequest"
+        baleHeader:
+          $ref: "#/components/schemas/BaleHeader"
       additionalProperties: false
-    PaymentHeader:
+    CertificateRequest:
       required:
-        - amountRemitted
-        - bankAccountNumber
-        - bankBSBNumber
-        - clientCode
-        - statementDate
-        - statementPaymentDate
+        - certificateType
+        - numberOfBales
       type: object
       properties:
-        clientCode:
-          pattern: -?\d{1,6}
+        certificateType:
+          $ref: "#/components/schemas/CertificateType"
+        printRequirements:
+          $ref: "#/components/schemas/PrintRequirements"
+        yieldType1:
+          $ref: "#/components/schemas/YieldType"
+        yieldType2:
+          $ref: "#/components/schemas/YieldType"
+        certificateReference:
+          maxLength: 30
+          minLength: 1
+          type: string
+          description: "This field is used when requesting a Test House to produce a Test
+            Certificate (in a type TCR document). The value that is included in
+            this \r
+
+            field will be printed by the Test House at the top of
+            the certificate after the caption ‘REF’. No other use is made of
+            this field by the Test House. \r
+
+            It does not form part of the transmitted certificate."
+          nullable: true
+        clientCrossReference:
+          maxLength: 8
+          minLength: 1
+          type: string
+          description: "The identity given to the lot in the computer system by the owner
+            of the wool.\r
+
+            \r
+
+            Client’s Cross Reference is transmitted by the owner of
+            the wool to a Test House when the owner either verifies a test
+            request(in a type of\r
+
+            TRV document) or requests the printing of a
+            certificate(in a type TCR document). If it is included in the
+            transmission to the Test House, the\r
+
+            Test House will also include it in its transmission of
+            the certificate.The owner of the wool will then be able to connect
+            the transmitted certificate\r
+
+            with the wool in its computer system.In a Test Request
+            Verification document, the field must contain the weight note number
+            of the lot.\r
+
+            The value in this field is NOT printed on the
+            certificate.It is the value in the Certificate Reference field that
+            is printed on the certificate."
+          nullable: true
+        declaredGross:
+          $ref: "#/components/schemas/Weight"
+        declaredTare:
+          $ref: "#/components/schemas/Weight"
+        sampleWeightRemoved:
+          $ref: "#/components/schemas/Weight"
+        numberOfBales:
+          pattern: -?\d{1,4}
+          type: integer
+          description: Number of bales
+          format: int32
+        season:
+          pattern: -?\d{1,2}
           type: integer
           format: int32
-        statementDate:
-          maxLength: 10
-          minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
-          type: string
-          description: "The period ending date of the statement\r
-
-            \            \r
-
-            Date value in ISO standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)."
-        amountRemitted:
-          $ref: "#/components/schemas/Currency"
-        statementPaymentDate:
-          maxLength: 10
-          minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
-          type: string
-          description: "The date the payment was made\r
-
-            \            \r
-
-            Date value in ISO standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)."
-        bankBSBNumber:
+          nullable: true
+        saleIdentity:
+          $ref: "#/components/schemas/SaleIdentity"
+        lotIdentity:
           maxLength: 6
           minLength: 1
-          pattern: -?\d{1,6}
           type: string
-        bankAccountNumber:
-          maxLength: 9
+          description: "This is a compound name for lot number and lot suffix, where the
+            lot \r
+
+            number is 5 numeric characters and the lot suffix is 1
+            alphanumeric\r
+
+            character.The suffix is used when a lot is broken up by
+            the original lot\r
+
+            number is retained; for example.If 2 bales of a 10-bale
+            lot got wet and\r
+
+            the 8 bales and the 2 bales are offered separately, one
+            could have a\r
+
+            suffix A and the other a suffix B.Where a suffix is not
+            used, the lot\r
+
+            number occupies the whole of the Lot Identity field and
+            is right justified.\r
+
+            \            \r
+
+            From:\r
+
+            \            \r
+
+            The current value that the Lot Identity is to be changed
+            from.\r
+
+            \r
+
+            To:\r
+
+            \r
+
+            The new value that the Lot Identity is to be changed
+            to."
+          nullable: true
+        printFlag:
+          $ref: "#/components/schemas/PrintFlag"
+        combinationRequest:
+          $ref: "#/components/schemas/CombinationRequest"
+        autoAdditionalMeasurementRequired:
+          $ref: "#/components/schemas/AutoAdditionalMeasurementRequired"
+        additionalPrintRequirements:
+          $ref: "#/components/schemas/AdditionalPrintRequirements"
+        isPrintingTEAM3Hauteur:
+          maxLength: 5
+          minLength: 4
+          type: boolean
+          description: "A boolean value to indicate whether to print Team3-Hauteur\r
+
+            \            \r
+
+            true: print\r
+
+            \            \r
+
+            false: not print"
+          nullable: true
+        commitCombinationOrOmlForProcessing:
+          maxLength: 1
           minLength: 1
-          pattern: -?\d{1,9}
-          type: string
-        amountWithheldThisStatement:
-          $ref: "#/components/schemas/Currency"
-        amountWithheldPreviousStatements:
-          $ref: "#/components/schemas/Currency"
+          type: boolean
+          description: "A boolean value to indicate whether to commit the combination/OML
+            request for processing\r
+
+            \            \r
+
+            true: Commit the combination/OML request for
+            processing\r
+
+            \            \r
+
+            false: Do not commit the combination/OML for processing
+            (request will be available via WOOLINK for viewing/committing)\r
+
+            \            \r
+
+            Note: For non-WOOLINK clients the request will be
+            committed for processing regardless of this field."
+          nullable: true
+        certificateRequestDetails:
+          type: array
+          items:
+            $ref: "#/components/schemas/CertificateRequestDetail"
+          nullable: true
       additionalProperties: false
-    Currency:
+    CertificateType:
+      enum:
+        - B
+        - C
+        - F
+        - I
+        - J
+        - K
+        - L
+        - M
+        - N
+        - Q
+        - P
+        - R
+        - S
+        - U
+        - W
+        - X
+        - Y
+      type: string
+      description: "This field indicates what type of certificate is being
+        requested.<br />B: Bulk Class<br />C: Colour<br />F: Premium<br />I:
+        Subjectively Appraised Interlot<br />L: Combination<br />K: Length &
+        Strength Combination<br />L: Length & Strength<br />M: Objectively
+        Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class –
+        Quality Managedt<br />P: PTC<br />R: Guidance Report<br />S: Update Sale
+        Identity and Lot Identity on Core Test or OML’s for Sale. Catalogues
+        where certificate is not being printed<br />U: Uncombination of OML or
+        Combination certificate<br />W: Scoured Wool<br />X: Colour
+        Combination<br />Y: Post sale Core Test"
+    PrintRequirements:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+      type: integer
+      description: "This field indicates whether the certificate is to show yield
+        and/or Laserscan.<br />0: Yield and Laserscan are (to be) shown on the
+        certificate<br />1: Two certificates are (to be) issued, one with yield
+        and one with Laserscan<br />2: Yield only is (to be) shown, the actual
+        yields being those indicated by the values in the Yield Type fields<br
+        />3: Laserscan only is (to be) shown)"
+      format: int32
+    YieldType:
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
+        - 22
+        - 23
+        - 24
+        - 25
+        - 26
+        - 27
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+        - 33
+        - 42
+        - 43
+      type: integer
+      description: "Yield Type indicates either the type of yield transmitted in
+        another field or record, or the type of yield used to arrive at the
+        value in another field.<br />1. RESERVED<br />2. RESERVED<br />3.
+        Estimated.<br />4. Schlumberger Combed Dry (1% TFM)<br />5. Schlumberger
+        Combed Dry (2% TFM)<br />7. Noble Combed in Oil<br />8. IWTO Scoured
+        Yield at 16% Regain<br />9. IWTO Scoured Yield at 17% Regain<br />10.
+        Japanese Clean Scoured<br />11. Australian Carbonising<br />12. IWTO
+        Clean Wool Content, 17% Regain<br />13. United States Custom Clean<br
+        />14. Card Sliver<br />15. ASTM Clean Wool Fibre Present<br />16. Noble
+        Dry Combed<br />17. Schlumberger Combed in Oil (4.6% TFM)<br />18. Noble
+        Combed Dry<br />19. Theoretical Card Sliver<br />20. ASTM Laboratory
+        Scoured Yield<br />21. Conditioned at 12.00%<br />22. Conditioned at
+        13.00%<br />23. Conditioned at 13.50%<br />24: Conditioned at 13.64%<br
+        />25. Conditioned at 14.00%<br />26. Conditioned at 14.40%<br />27.
+        Conditioned at 15.00%<br />28. Conditioned at 16.00%<br />29.
+        Conditioned at 17.00%<br />30. Conditioned at 18.00%<br />31.
+        Conditioned at 18.25%<br />32. Japanese Clean Scoured at 17%<br />33.
+        New Zealand Process Yield<br />42. IWT0 Schlumberger Oil T&N (2.0% &
+        T.FM.)<br />43. IWTO Clean Wool Content, 16% Regain"
+      format: int32
+    Weight:
       required:
+        - unit
         - value
       type: object
       properties:
         value:
-          pattern: ^-?\d{1,10}\.\d{2}$
+          pattern: ^-?\d{1,6}(\.\d{2})?$
           type: number
-          description: Total up to 12 digits with 2 digits after the decimal point.
           format: double
-        currencyUnit:
-          $ref: "#/components/schemas/CurrencyUnit"
+        unit:
+          $ref: "#/components/schemas/WeightUnit"
       additionalProperties: false
-    CurrencyUnit:
-      enum:
-        - AUD
-        - BEF
-        - NZD
-        - BGP
-        - FRF
-        - DEM
-        - ITL
-        - CNY
-        - ANG
-        - TWD
-        - ZAR
-        - USD
-        - EUR
-      type: string
-      description: "AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New
-        Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br
-        />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese
-        Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New
-        Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR:
-        Euro"
-    PaymentDetail:
-      required:
-        - accountReference
-        - amount
-        - paymentType
-        - statementDate
-      type: object
-      properties:
-        statementDate:
-          maxLength: 10
-          minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
-          type: string
-          description: "The period ending date of the statement\r
-
-            \            \r
-
-            Date value in ISO standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)."
-        accountReference:
-          maxLength: 11
-          minLength: 1
-          type: string
-          description: "Account Reference as per printed statement under heading “AWTA LTD
-            REFERENCE”\r
-
-            \            \r
-
-            Examples:\r
-
-            \            \r
-
-            • Certificate Identity\r
-
-            \            \r
-
-            • Credit Note number\r
-
-            \            \r
-
-            • Debit Note number\r
-
-            \            \r
-
-            • Cheque number"
-        amount:
-          $ref: "#/components/schemas/Currency"
-        paymentType:
-          $ref: "#/components/schemas/PaymentType"
-        reason:
-          maxLength: 30
-          minLength: 1
-          type: string
-          description: Reason for non payment
-          nullable: true
-      additionalProperties: false
-    PaymentType:
+    WeightUnit:
       enum:
         - 0
         - 1
         - 2
       type: integer
-      description: "0: Paid<br />1: Withheld<br />2: Withheld pending credit"
+      description: "0: Kilograms<br />1: Pounds<br />2: Grams"
       format: int32
+    SaleIdentity:
+      required:
+        - saleNumber
+        - sellingCentreType
+      type: object
+      properties:
+        sellingCentreType:
+          maxLength: 2
+          minLength: 1
+          type: string
+          description: "The following codes are reserved for current and historical open
+            cry auction selling centres:\r
+
+            \            \r
+
+            SellingCentre/Type (New Zealand):\r
+
+            \            \r
+
+            C: Christchurch; \r
+
+            \r
+
+            N: Napier.\r
+
+            \r
+
+            \            \r
+
+            SellingCentre/Type (Australia):\r
+
+            \            \r
+
+            A: Adelaide; \r
+
+            \r
+
+            AU: Australia; \r
+
+            \r
+
+            B: Brisbane; \r
+
+            \r
+
+            F: Fremantle; \r
+
+            \r
+
+            G: Geelong; \r
+
+            \r
+
+            L: Launceston; \r
+
+            \r
+
+            M: Melbourne; \r
+
+            \r
+
+            N: Newcastle; \r
+
+            \r
+
+            R: Goulburn; \r
+
+            \r
+
+            S: Sydney.\r
+
+            \r
+
+            \r
+
+            The following codes are allocated for alternative sale
+            types:\r
+
+            \            \r
+
+            PS: Private Sales; \r
+
+            \r
+
+            T: Auctions Plus Sales.\r
+
+            \            \r
+
+            \r
+
+            Please contact the WIEDPUG Secretary for the latest list
+            of reserved and allocated codes."
+        saleNumber:
+          maxLength: 2
+          minLength: 1
+          pattern: -?\d{1,2}
+          type: integer
+          format: int32
+      additionalProperties: false
+      description: "A group field of SellingCentre/Type and Sale Number\r
+
+        \            \r
+
+        From: The current value that the Sale Identity is to be changed
+        from.\r
+
+        \            \r
+
+        To: The new value that the Sale Identity is to be changed to."
+    PrintFlag:
+      enum:
+        - Normal
+        - A
+        - S
+        - C
+        - E
+        - M
+        - N
+      type: string
+      description: "This field provides options to produce certificates for
+        combinations, omls and/or associated sublots<br />P: Normal RPP/TCR
+        request to pdf Certificate<br />A: Pdf Combination/OML Certificate and
+        associated sub-lots<br />S: Pdf associated sub-lots excluding the
+        Combination/OML Certificate<br />C: Pdf Combination Certificate in
+        Chinese and English<br />E: Pdf Combination Certificate in Chinese and
+        English & associated sublots in English)<br />M: Pdf Combination
+        Certificate in English & Mulesing Status report<br />N: Pdf Mulesing
+        Status report only"
+    CombinationRequest:
+      enum:
+        - N
+        - S
+        - X
+        - "4"
+        - "5"
+        - "6"
+        - C
+      type: string
+      description: "For Australian Securities Exchange Combination requests, if an 'X'
+        is requested, at least one of the three ASX 54W, 55W or 56W contract
+        specifications must be satisfied for a certificate to be issued, whilst
+        if 4, 5 or 6 is requested it must satisfy the requested contract for a
+        certificate to be issued. Note: all 3 ASX contract specifications will
+        be checked and the issued certificate will indicate all contracts that
+        are satisfied. If an 'S' is requested only the ASX24 contract
+        specification will be checked.<br />N: Normal Combination Reuqest<br
+        />S: ASX24 Combination Request (formerly SFE)<br />X: ASX19.5 54W,
+        ASX21.0 55W or ASX22.6 56W Combination Request<br />4: ASX19.5 54W
+        Combination Request<br />5: ASX21.0 55W Combination Request<br />6:
+        ASX22.6 56W Combination Request<br />C: China Contract Combination
+        Request"
+    AutoAdditionalMeasurementRequired:
+      enum:
+        - N
+        - L
+        - C
+        - B
+      type: string
+      description: "N: Automatic combinations not required<br />L: Automatic Length &
+        Strength Combination required<br />C: Automatic Colour Combination is
+        required<br />B: Both Length & Strength and Colour combinations
+        required"
+    AdditionalPrintRequirements:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+      type: integer
+      description: "0: No additional print requirements<br />1: Print VM Breakdown
+        only<br />2: Print VM Breakdown and Curvature<br />3: Print VM Breakdown
+        and Comfort Factor<br />4: Print VM Breakdown, Curvature and Comfort
+        Factor<br />5: Print Curvature only<br />6: Print Comfort Factor Only<br
+        />7: Print Curvature and Comfort Factor"
+      format: int32
+    CertificateRequestDetail:
+      required:
+        - certificateIdentity
+        - laboratory
+      type: object
+      properties:
+        certificateIdentity:
+          $ref: "#/components/schemas/CertificateIdentity"
+        woolbase:
+          pattern: ^-?\d{1,2}(\.\d{2})?$
+          type: number
+          description: "The oven-dry mass of wool fibre free from all impurities,
+            expressed as a percentage of the mass of the sample.\r
+
+            \r
+
+            Min The lowest value in a range of Wool Base values\r
+
+            \            \r
+
+            Max The highest value in a range of Wool Base values"
+          format: double
+        laboratory:
+          $ref: "#/components/schemas/Laboratory"
+      additionalProperties: false
+    CertificateIdentity:
+      required:
+        - certificateIdCd
+        - certificateIdNumber
+        - certificateIdPrefix
+        - certificateIdSuffix
+      type: object
+      properties:
+        certificateIdPrefix:
+          $ref: "#/components/schemas/CertificateIdPrefix"
+        certificateIdNumber:
+          maxLength: 8
+          minLength: 1
+          type: integer
+          format: int32
+        certificateIdSuffix:
+          $ref: "#/components/schemas/CertificateIdSuffix"
+        certificateIdCd:
+          maxLength: 1
+          minLength: 1
+          type: integer
+          format: int32
+      additionalProperties: false
+      description: "The certificate identity consists of a 1 digit prefix, followed by
+        an 8 digit certificate number, followed by a 1 character suffix,
+        followed by a 1 digit\r
+
+        check number.It is printed at the top of the certificate."
+    CertificateIdPrefix:
+      enum:
+        - 2
+        - 3
+        - 6
+      type: integer
+      description: "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6:
+        Fremantle Laboratory"
+      format: int32
+    CertificateIdSuffix:
+      enum:
+        - B
+        - C
+        - D
+        - F
+        - I
+        - J
+        - L
+        - M
+        - N
+        - Q
+        - P
+        - R
+        - W
+        - Y
+      type: string
+      description: "B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test
+        Certificate – Other Grower Lot)<br />F: Premium Test<br />I:
+        Subjectively Appraised Interlot<br />J: Combination - Yield & Micron,
+        Length & Strength, Colour<br />L: Length & Strength<br />M: Objectively
+        Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class –
+        Quality Managed<br />P: PTC (Pre-sale Test Certificate - Classed Grower
+        Lot)<br />R: Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core
+        Test"
+    Laboratory:
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+      type: integer
+      description: "The code for a Test House.<br />1: Australian Wool Testing
+        Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing
+        Service<br />4: South African Wool Testing Authority"
+      format: int32
+    BaleHeader:
+      required:
+        - areaOfOrigin
+        - baleDescription
+        - brand
+      type: object
+      properties:
+        brand:
+          maxLength: 30
+          minLength: 1
+          type: string
+          description: This field is to be always transmitted in upper case.
+        baleDescription:
+          maxLength: 15
+          minLength: 1
+          type: string
+          description: This field is to be always transmitted in upper case.
+        areaOfOrigin:
+          maxLength: 4
+          minLength: 1
+          type: string
+          description: "The code for the area in which the wool was grown.\r
+
+            \r
+
+            For further information please go to this URL:\r
+
+            \r
+
+            http://www.awex.com.au/market-information/wool-statisti\
+            cal-areas-wsa/"
+        numberOfBales:
+          maxLength: 4
+          minLength: 1
+          pattern: -?\d{1,4}
+          type: integer
+          description: Number of bales
+          format: int32
+          nullable: true
+        locationWithinStore:
+          maxLength: 20
+          minLength: 1
+          type: string
+          nullable: true
+      additionalProperties: false
     ApiResult:
       type: object
       properties:
@@ -1184,6 +1749,11 @@ components:
             - $ref: "#/components/schemas/UseNetworkDateTimeRequestForDataType"
             - $ref: "#/components/schemas/DateTimeRangeRequestForDataType"
       additionalProperties: false
+      discriminator:
+        propertyName: RequestForDataType
+        mapping:
+          UseNetworkDateTimeRequestForDataType: "#/components/schemas/UseNetworkDateTimeRequestForDataType"
+          DateTimeRangeRequestForDataType: "#/components/schemas/DateTimeRangeRequestForDataType"
     UseNetworkDateTimeRequestForDataType:
       required:
         - isUsingNetworkDateTime
@@ -1211,7 +1781,7 @@ components:
         startDateTimeStatusRequest:
           maxLength: 20
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
           description: Date and Time value in ISO 8601 standard UTC format. e.g.
             2024-03-21T19:25:04Z
@@ -1219,14 +1789,14 @@ components:
         endDateTimeStatusRequest:
           maxLength: 20
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
           description: Date and Time value in ISO 8601 standard UTC format. e.g.
             2024-03-21T19:25:04Z
           format: date-time
           nullable: true
       additionalProperties: false
-    PaymentConfirmationApiResult:
+    TestCertificateRequestsListApiResult:
       type: object
       properties:
         apiMessages:
@@ -1236,7 +1806,11 @@ components:
           description: Contains information about the response if applicable.
           nullable: true
         data:
-          $ref: "#/components/schemas/PaymentConfirmation"
+          type: array
+          items:
+            $ref: "#/components/schemas/TestCertificateRequests"
+          description: Contains response data. e.g. Auction Catalogue
+          nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses
   securitySchemes:

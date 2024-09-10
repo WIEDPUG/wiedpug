@@ -39,7 +39,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int Bales { get; set; }
+        public required int NumberOfBales { get; set; }
 
         /// <summary>
         /// This field is to be always transmitted in upper case.

@@ -37,7 +37,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -59,12 +59,13 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForTextsRequestExample : IExamplesProvider<RequestForData>
+    public class RequestForTextsRequestExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -83,7 +84,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -91,15 +92,16 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                 }
+                }
             };
         }
     }
 
-    public class RequestForTexts200Example : IExamplesProvider<ApiResult>
+    public class RequestForTexts200Example : IExamplesProvider<ApiResult<List<Text>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<Text>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<Text>>()
             {
                 
                 ApiMessages = [],
@@ -125,7 +127,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },

@@ -53,7 +53,6 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Maximum - the highest value in a range of staple length values.
         /// </summary>
-        [Required]
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         public int? StapleLengthMaximum { get; set; }
 

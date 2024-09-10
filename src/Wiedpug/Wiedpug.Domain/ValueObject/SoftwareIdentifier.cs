@@ -16,7 +16,7 @@ namespace Wiedpug.Domain.ValueObject
         /// </summary>      
         /// 
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public int? Version { get; set; }
+        public int? SoftwareVersion { get; set; }
 
         [MinLength(1)]
         [MaxLength(4)]

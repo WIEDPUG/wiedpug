@@ -9,12 +9,13 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class TestRequestsVerificationRequestExample : IExamplesProvider<TestRequestsVerification>
+    public class TestRequestsVerificationRequestExample : IExamplesProvider<List<TestRequestsVerification>>
     {
-        public TestRequestsVerification GetExamples()
+        public List<TestRequestsVerification> GetExamples()
         {
-            return new TestRequestsVerification()
+            return new List<TestRequestsVerification>()
             {
+                new TestRequestsVerification {
                 TransmissionHeader = new Domain.Entities.TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -33,7 +34,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -46,7 +47,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                                         OrganisationCode = "AWT",
                             },
-                            Bales = 1,
+                            NumberOfBales = 1,
                             Gross = new Weight
                             {
                                 Value = 1.00,
@@ -146,7 +147,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                                         OrganisationCode = "AWT",
                             },
-                            Bales = 1,
+                            NumberOfBales = 1,
                             Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                             LotIdentityOrGroupNumber = "567545",
@@ -233,17 +234,19 @@ namespace Wiedpug.API.ExampleResponses
                     }
 
                 }
+                }
 
             };
         }
     }
 
-    public class RequestForTestRequestsVerificationExample : IExamplesProvider<RequestForData>
+    public class RequestForTestRequestsVerificationExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -262,7 +265,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -270,20 +273,22 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                 }
+                }
             };
         }
     }
 
-    public class RequestForTestRequestsVerification200Example : IExamplesProvider<ApiResult>
+    public class RequestForTestRequestsVerification200Example : IExamplesProvider<ApiResult<List<TestRequestsVerification>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<TestRequestsVerification>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<TestRequestsVerification>>()
             {
                 
                 ApiMessages = [],
-                Data = new TestRequestsVerification()
+                Data = new List<TestRequestsVerification>()
                 {
+                    new TestRequestsVerification {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
@@ -302,7 +307,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.AWTA,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
@@ -315,7 +320,7 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                                             OrganisationCode = "AWT",
                                 },
-                                Bales = 1,
+                                NumberOfBales = 1,
                                 Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                                 Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                                 LotIdentityOrGroupNumber = "567545",
@@ -396,7 +401,7 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                                             OrganisationCode = "AWT",
                                 },
-                                Bales = 1,
+                                NumberOfBales = 1,
                                 Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
                                 Tare = new Weight
                                 {
@@ -482,6 +487,7 @@ namespace Wiedpug.API.ExampleResponses
                             }
                         }
 
+                    }
                     }
                 }
             };

@@ -14,13 +14,13 @@ public static class TestStatusEndpoints
         var group = routes.MapGroup("test-status").WithTags("Test Status");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(TestStatus), typeof(TestStatusRequestExample))]
+        [SwaggerRequestExample(typeof(List<TestStatus>), typeof(TestStatusRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] TestStatus model) =>
+        ([FromBody] List<TestStatus> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })        
@@ -37,7 +37,7 @@ public static class TestStatusEndpoints
 
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForTestStatusExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(RequestForTestStatusExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForTestStatus200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -45,7 +45,7 @@ public static class TestStatusEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -54,7 +54,7 @@ public static class TestStatusEndpoints
         {
             Summary = "Retrieves the test status"
         })
-        .Produces<List<ApiResult<TestStatus>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<TestStatus>>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

@@ -18,6 +18,11 @@ namespace Wiedpug.Domain.Aggregates.StatementsAggregate
         public TransferConfig? TransferConfig { get; set; }
 
         [Required]
-        public required List<StatementInformationDetail> StatementInformationDetails { get; set; }
+        public required StatementHeader StatementHeader { get; set; }
+
+        public List<StatementDetail>? StatementDetails { get; set; }
+
+        [Required]
+        public required StatementTrailer StatementTrailer { get; set; }
     }
 }

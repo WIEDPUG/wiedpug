@@ -17,7 +17,7 @@ namespace Wiedpug.Domain.Entities
         public required string EncryptionKeyIdentifier { get; set; }
 
         /// <summary>
-        /// The encrypted LotHeaderAwexData in string format based on base64 encoding.
+        /// The encrypted LotHeaderAwexData in string format based on base64 encoding and JWE (JSON Web Encryption) for encryption: https://datatracker.ietf.org/doc/html/rfc7516.
         /// 
         /// The schema reference can be found here: #/components/schemas/LotHeaderAwexData.
         /// 
@@ -92,6 +92,13 @@ namespace Wiedpug.Domain.Entities
         [Required]
         public required string EncryptedLotHeaderAwexDataString { get; set; }
 
+
+
+        /**
+         The following two properties are used for adding EncryptedLotHeaderAwexDataString reference when converting to OpenApi.
+         Don't delete it here, they will be removed in the openapi converting process.
+         The loigc is in Wiedpug.API\SchemaFilter\DiscriminatorFilter.cs
+         */
         public LotHeaderAwexData? LotHeaderAwexData { get; set; }
     }
 }

@@ -13,13 +13,13 @@ public static class TestCertificatesEndpoints
         var group = routes.MapGroup("/test-certificates").WithTags("Test Certificates");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(TestCertificates), typeof(CreateTestCertificatesRequestExample))]
+        [SwaggerRequestExample(typeof(List<TestCertificates>), typeof(CreateTestCertificatesRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] TestCertificates model) =>
+        ([FromBody] List<TestCertificates> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -35,7 +35,7 @@ public static class TestCertificatesEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(GetTestCertificatesRequestExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(GetTestCertificatesRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(GetTestCertificates200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -43,7 +43,7 @@ public static class TestCertificatesEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -52,7 +52,7 @@ public static class TestCertificatesEndpoints
         {
             Summary = "Retrieves the test certificates"
         })
-        .Produces<List<ApiResult<TestCertificates>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<TestCertificates>>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

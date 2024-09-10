@@ -35,7 +35,7 @@ paths:
                 versionNumber: 31
                 softwareIdentifier:
                   softwareCompany: 8
-                  version: 1082
+                  softwareVersion: 1082
                   programName: NETR
                 abn: "72001967184"
               countryOfOrigin: AU
@@ -43,7 +43,7 @@ paths:
                 organisationCode: ABC
               softwareIdentifier:
                 softwareCompany: 1
-                version: 1082
+                softwareVersion: 1082
                 programName: NETR
               abn: "72001967184"
               startDateTimeStatusRequest: 2024-02-01T19:25:04Z
@@ -71,7 +71,7 @@ paths:
                     versionNumber: 31
                     softwareIdentifier:
                       softwareCompany: 6
-                      version: 1082
+                      softwareVersion: 1082
                       programName: NETR
                     abn: "72001925678"
                   organisationInformationDetails:
@@ -84,11 +84,11 @@ paths:
                       isTransmitter: true
                       phoneNumber:
                         standardPhoneNumber:
-                          countryCode: "61"
+                          countryCode: AU
                           number: "0317229370"
                       faxNumber:
                         standardPhoneNumber:
-                          countryCode: "61"
+                          countryCode: AU
                           number: "03763262290"
                       addresses:
                         - name:
@@ -98,13 +98,13 @@ paths:
                           streetAddressLine2: KENSINGTON
                           locality: Sydney
                           administrativeArea: NSW
-                          postCode: "3031"
+                          postcode: "3031"
                           country: AU
                       contacts:
                         - firstName: HEAD OFFICE
                           phoneNumber:
                             standardPhoneNumber:
-                              countryCode: "61"
+                              countryCode: AU
                               number: "0309332782"
                     - id: "2"
                       organisation:
@@ -122,7 +122,7 @@ paths:
                       isTransmitter: true
                       phoneNumber:
                         standardPhoneNumber:
-                          countryCode: "61"
+                          countryCode: AU
                           number: "0254009986"
                       addresses:
                         - name:
@@ -132,18 +132,18 @@ paths:
                           streetAddressLine2: NEWCASTLE
                           locality: Sydney
                           administrativeArea: NSW
-                          postCode: "2031"
+                          postcode: "2031"
                           country: AU
                       contacts:
                         - firstName: MIKE
                           lastName: PWOELL
                           phoneNumber:
                             standardPhoneNumber:
-                              countryCode: "61"
+                              countryCode: AU
                               number: "0387569072"
                           mobileNumber:
                             standardPhoneNumber:
-                              countryCode: "61"
+                              countryCode: AU
                               number: "0353298764"
                           email: mpowell@awtn.co.au
         "204":
@@ -260,11 +260,11 @@ paths:
                     isTransmitter: true
                     phoneNumber:
                       standardPhoneNumber:
-                        countryCode: "61"
+                        countryCode: AU
                         number: "0389004637"
                     faxNumber:
                       standardPhoneNumber:
-                        countryCode: "61"
+                        countryCode: AU
                         number: "0320874405"
                     addresses:
                       - name:
@@ -274,13 +274,13 @@ paths:
                         streetAddressLine2: KENSINGTON
                         locality: Sydney
                         administrativeArea: NSW
-                        postCode: "3031"
+                        postcode: "3031"
                         country: AU
                     contacts:
                       - firstName: HEAD OFFICE
                         phoneNumber:
                           standardPhoneNumber:
-                            countryCode: "61"
+                            countryCode: AU
                             number: "0310108809"
         "401":
           description: Unauthorized
@@ -360,11 +360,11 @@ paths:
                   isTransmitter: true
                   phoneNumber:
                     standardPhoneNumber:
-                      countryCode: "61"
+                      countryCode: AU
                       number: "0389004637"
                   faxNumber:
                     standardPhoneNumber:
-                      countryCode: "61"
+                      countryCode: AU
                       number: "0320874405"
                   addresses:
                     - name:
@@ -374,13 +374,13 @@ paths:
                       streetAddressLine2: KENSINGTON
                       locality: Sydney
                       administrativeArea: NSW
-                      postCode: "3031"
+                      postcode: "3031"
                       country: AU
                   contacts:
                     - firstName: HEAD OFFICE
                       phoneNumber:
                         standardPhoneNumber:
-                          countryCode: "61"
+                          countryCode: AU
                           number: "0310108809"
         required: true
       responses:
@@ -410,11 +410,11 @@ paths:
                     isTransmitter: true
                     phoneNumber:
                       standardPhoneNumber:
-                        countryCode: "61"
+                        countryCode: AU
                         number: "0389004637"
                     faxNumber:
                       standardPhoneNumber:
-                        countryCode: "61"
+                        countryCode: AU
                         number: "0320874405"
                     addresses:
                       - name:
@@ -424,13 +424,13 @@ paths:
                         streetAddressLine2: KENSINGTON
                         locality: Sydney
                         administrativeArea: NSW
-                        postCode: "3031"
+                        postcode: "3031"
                         country: AU
                     contacts:
                       - firstName: HEAD OFFICE
                         phoneNumber:
                           standardPhoneNumber:
-                            countryCode: "61"
+                            countryCode: AU
                             number: "0310108809"
         "400":
           description: Bad Request
@@ -583,7 +583,7 @@ components:
         startDateTimeStatusRequest:
           maxLength: 20
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
           description: "Date and Time in UTC format in ISO 8601 standard. Format:
             YYYY-MM-DDTHH:mm:ssZ e.g. 2024-03-21T19:25:04Z"
@@ -592,7 +592,7 @@ components:
         endDateTimeStatusRequest:
           maxLength: 20
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
           type: string
           description: "Date and Time in UTC format in ISO 8601 standard. Format:
             YYYY-MM-DDTHH:mm:ssZ. e.g. 2024-03-21T19:25:04Z"
@@ -626,7 +626,7 @@ components:
         dateFormatLastRevised:
           maxLength: 10
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
           type: string
           description: Date value in ISO standard UTC date format. e.g. 2024-03-21
             (YYYY-MM-DD).
@@ -634,7 +634,7 @@ components:
         dateTransmissionFileCreated:
           maxLength: 10
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
           type: string
           description: Date value in ISO standard UTC date format. e.g. 2024-03-21
             (YYYY-MM-DD).
@@ -750,6 +750,15 @@ components:
 
         The legacy codes for Overseas Centre are under
         CentreCodeAustralia"
+      discriminator:
+        propertyName: Country
+        mapping:
+          AU: "#/components/schemas/CentreCodeAustralia"
+          CN: "#/components/schemas/CentreCodeChina"
+          DE: "#/components/schemas/CentreCodeGermany"
+          IT: "#/components/schemas/CentreCodeItaly"
+          NZ: "#/components/schemas/CentreCodeNewZealand"
+          TW: "#/components/schemas/CentreCodeTaiwan"
     CentreCodeAustralia:
       enum:
         - A
@@ -1066,7 +1075,7 @@ components:
       properties:
         softwareCompany:
           $ref: "#/components/schemas/SoftwareCompany"
-        version:
+        softwareVersion:
           pattern: -?\d{1,4}
           type: integer
           description: Version no. e.g. 2400
@@ -1236,7 +1245,7 @@ components:
         dateLastUpdated:
           maxLength: 10
           minLength: 1
-          pattern: /(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
           type: string
           description: "The day the item was last amended.\r
 
@@ -1318,10 +1327,7 @@ components:
       type: object
       properties:
         countryCode:
-          maxLength: 3
-          minLength: 1
-          pattern: ^[0-9]+$
-          type: string
+          $ref: "#/components/schemas/CountryCode"
         number:
           maxLength: 15
           minLength: 1
@@ -1367,7 +1373,7 @@ components:
           description: "State, province, region. Use ISO region codes:
             https://en.wikipedia.org/wiki/ISO_3166-2"
           nullable: true
-        postCode:
+        postcode:
           maxLength: 20
           minLength: 1
           type: string

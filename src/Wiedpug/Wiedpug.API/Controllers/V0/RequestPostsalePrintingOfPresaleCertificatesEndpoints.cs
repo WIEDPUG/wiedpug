@@ -13,13 +13,13 @@ public static class RequestPostsalePrintingOfPresaleCertificatesEndpoints
         var group = routes.MapGroup("postsale-printing-of-presale-certificates").WithTags("Request Postsale Printing Of Presale Certificates");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(RequestPostsalePrintingOfPresaleCertificates), typeof(CreatePaymentConfirmationRequestExample))]
+        [SwaggerRequestExample(typeof(List<RequestPostsalePrintingOfPresaleCertificates>), typeof(CreatePaymentConfirmationRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestPostsalePrintingOfPresaleCertificates model) =>
+        ([FromBody] List<RequestPostsalePrintingOfPresaleCertificates> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
@@ -36,7 +36,7 @@ public static class RequestPostsalePrintingOfPresaleCertificatesEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForRequestPostsalePrintingOfPresaleCertificatesExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(RequestForRequestPostsalePrintingOfPresaleCertificatesExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForRequestPostsalePrintingOfPresaleCertificates200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -44,7 +44,7 @@ public static class RequestPostsalePrintingOfPresaleCertificatesEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -53,7 +53,7 @@ public static class RequestPostsalePrintingOfPresaleCertificatesEndpoints
         {
             Summary = "Retrieves the request postsale printing of presale certificates"
         })
-        .Produces<List<ApiResult<RequestPostsalePrintingOfPresaleCertificates>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<RequestPostsalePrintingOfPresaleCertificates>>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

@@ -49,7 +49,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(1)]
         [MaxLength(8)]
-        public string? ClientsCrossReference { get; set; }
+        public string? ClientCrossReference { get; set; }
 
         /// <summary>
         /// The gross weight of the lot as declared by the owner
@@ -75,7 +75,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int Bales { get; set; }
+        public required int NumberOfBales { get; set; }
 
         [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? Season { get; set; }

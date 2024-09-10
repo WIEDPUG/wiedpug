@@ -43,7 +43,7 @@ namespace Wiedpug.Domain.Entities
         /// organisation to another through an intermediary, the code for the
         /// current receiver will vary from leg to leg of the journey.
         /// </summary>
-                [Required]
+        [Required]
         [MinLength(1)]
         [MaxLength(8)]
         public required Organisation CurrentReceiver { get; set; }
@@ -67,8 +67,5 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         [RegularExpression(RegexPattern.NUMBERS)]
         public required string Abn { get; set; }
-
-        public ClassForOneOfReferencesToBeDeleted? ClassForOneOfReferencesToBeDeleted { get;set; }
-
     }
 }

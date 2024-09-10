@@ -43,13 +43,13 @@ namespace Wiedpug.API.ExampleResponses
                         IsTransmitter=true,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
-                            CountryCode="61",
+                            CountryCode= CountryCode.AU,
                             Number="0389004637"
                             }
                         },
                         FaxNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
-                            CountryCode="61",
+                            CountryCode= CountryCode.AU,
                             Number= "0320874405"
                             }
                         },
@@ -65,7 +65,7 @@ namespace Wiedpug.API.ExampleResponses
                                 StreetAddressLine2="KENSINGTON",
                                 AdministrativeArea = "NSW",
                                 Locality = "Sydney",
-                                PostCode="3031",
+                                Postcode="3031",
                                 Country=CountryCode.AU
                             }
                         },
@@ -75,7 +75,7 @@ namespace Wiedpug.API.ExampleResponses
                                 FirstName="HEAD OFFICE",
                                 PhoneNumber= new PhoneNumber {
                                     StandardPhoneNumber = new StandardPhoneNumber{
-                                    CountryCode="61",
+                                    CountryCode= CountryCode.AU,
                                     Number="0310108809"
                                     }
                                 }
@@ -135,13 +135,13 @@ namespace Wiedpug.API.ExampleResponses
                         IsTransmitter=true,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
-                            CountryCode="61",
+                            CountryCode= CountryCode.AU,
                             Number="0389004637"
                             }
                         },
                         FaxNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
-                            CountryCode="61",
+                            CountryCode= CountryCode.AU,
                             Number= "0320874405"
                             }
                         },
@@ -157,7 +157,7 @@ namespace Wiedpug.API.ExampleResponses
                                 StreetAddressLine2="KENSINGTON",
                                 AdministrativeArea = "NSW",
                                 Locality = "Sydney",
-                                PostCode="3031",
+                                Postcode="3031",
                                 Country=CountryCode.AU
                             }
                         },
@@ -167,7 +167,7 @@ namespace Wiedpug.API.ExampleResponses
                                 FirstName="HEAD OFFICE",
                                 PhoneNumber= new PhoneNumber {
                                     StandardPhoneNumber = new StandardPhoneNumber{
-                                    CountryCode="61",
+                                    CountryCode= CountryCode.AU,
                                     Number="0310108809"
                                     }
                                 }
@@ -215,13 +215,13 @@ namespace Wiedpug.API.ExampleResponses
                         IsTransmitter=true,
                         PhoneNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
-                            CountryCode="61",
+                            CountryCode= CountryCode.AU,
                             Number="0389004637"
                             }
                         },
                         FaxNumber= new PhoneNumber {
                             StandardPhoneNumber = new StandardPhoneNumber{
-                            CountryCode="61",
+                            CountryCode= CountryCode.AU,
                             Number= "0320874405"
                             }
                         },
@@ -237,7 +237,7 @@ namespace Wiedpug.API.ExampleResponses
                                 StreetAddressLine2="KENSINGTON",
                                 AdministrativeArea = "NSW",
                                 Locality = "Sydney",
-                                PostCode="3031",
+                                Postcode="3031",
                                 Country=CountryCode.AU
                             }
                         },
@@ -247,7 +247,7 @@ namespace Wiedpug.API.ExampleResponses
                                 FirstName="HEAD OFFICE",
                                 PhoneNumber= new PhoneNumber {
                                     StandardPhoneNumber = new StandardPhoneNumber{
-                                    CountryCode="61",
+                                    CountryCode= CountryCode.AU,
                                     Number="0310108809"
                                     }
                                 },
@@ -284,7 +284,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -297,7 +297,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184",
                     StartDateTimeStatusRequest = "2024-02-01T19:25:04Z",
@@ -335,7 +335,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Modiano,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001925678"
                     },
@@ -354,13 +354,13 @@ namespace Wiedpug.API.ExampleResponses
                             IsTransmitter=true,
                             PhoneNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode="61",
+                                CountryCode= CountryCode.AU,
                                 Number="0317229370"
                                 }
                             },
                             FaxNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode="61",
+                                CountryCode= CountryCode.AU,
                                 Number= "03763262290"
                                 }
                             },
@@ -376,7 +376,7 @@ namespace Wiedpug.API.ExampleResponses
                                 StreetAddressLine2="KENSINGTON",
                                 AdministrativeArea = "NSW",
                                 Locality = "Sydney",
-                                PostCode="3031",
+                                Postcode="3031",
                                 Country=CountryCode.AU
                                 }
                             },
@@ -386,7 +386,7 @@ namespace Wiedpug.API.ExampleResponses
                                     FirstName="HEAD OFFICE",
                                     PhoneNumber= new PhoneNumber {
                                         StandardPhoneNumber = new StandardPhoneNumber{
-                                        CountryCode="61",
+                                        CountryCode= CountryCode.AU,
                                         Number="0309332782"
                                         }
                                     }
@@ -420,7 +420,7 @@ namespace Wiedpug.API.ExampleResponses
                             PhoneNumber= new PhoneNumber
                             {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode = "61",
+                                CountryCode =  CountryCode.AU,
                                 Number = "0254009986"
                                 }
                             },
@@ -437,7 +437,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StreetAddressLine2="NEWCASTLE",
                                     AdministrativeArea = "NSW",
                                     Locality = "Sydney",
-                                    PostCode="2031",
+                                    Postcode="2031",
                                     Country=CountryCode.AU
                                 }
                             },
@@ -448,13 +448,13 @@ namespace Wiedpug.API.ExampleResponses
                                     LastName = "PWOELL",
                                     PhoneNumber = new PhoneNumber {
                                         StandardPhoneNumber = new StandardPhoneNumber{
-                                        CountryCode="61",
+                                        CountryCode= CountryCode.AU,
                                         Number="0387569072"
                                         }
                                     },
                                     MobileNumber = new PhoneNumber {
                                         StandardPhoneNumber = new StandardPhoneNumber{
-                                        CountryCode="61",
+                                        CountryCode= CountryCode.AU,
                                         Number="0353298764"
                                         }
                                     },
@@ -496,7 +496,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.AWTA,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001925678"
                     },
@@ -516,13 +516,13 @@ namespace Wiedpug.API.ExampleResponses
                             Abn = null,
                             PhoneNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode="61",
+                                CountryCode= CountryCode.AU,
                                 Number="0317229370"
                                 }
                             },
                             FaxNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode="61",
+                                CountryCode= CountryCode.AU,
                                 Number= "03763262290"
                                 }
                             },
@@ -538,7 +538,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StreetAddressLine2="NEWCASTLE",
                                     AdministrativeArea = "NSW",
                                     Locality = "Sydney",
-                                    PostCode="3031",
+                                    Postcode="3031",
                                     Country=CountryCode.AU
 
                                 }
@@ -549,7 +549,7 @@ namespace Wiedpug.API.ExampleResponses
                                     FirstName="HEAD OFFICE",
                                     PhoneNumber= new PhoneNumber {
                                         StandardPhoneNumber = new StandardPhoneNumber{
-                                        CountryCode="61",
+                                        CountryCode= CountryCode.AU,
                                         Number="0309332782"
                                         }
                                     }
@@ -583,7 +583,7 @@ namespace Wiedpug.API.ExampleResponses
                             PhoneNumber= new PhoneNumber
                             {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode = "61",
+                                CountryCode = CountryCode.AU,
                                 Number = "0254009986"
                                 }
                             },
@@ -600,7 +600,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StreetAddressLine2="NEWCASTLE",
                                     AdministrativeArea = "NSW",
                                     Locality = "Sydney",
-                                    PostCode="2031",
+                                    Postcode="2031",
                                     Country=CountryCode.AU
                                 }
                             },
@@ -611,13 +611,13 @@ namespace Wiedpug.API.ExampleResponses
                                     LastName = "PWOELL",
                                     PhoneNumber = new PhoneNumber {
                                         StandardPhoneNumber = new StandardPhoneNumber{
-                                        CountryCode="61",
+                                        CountryCode= CountryCode.AU,
                                         Number="0387569072"
                                         }
                                     },
                                     MobileNumber = new PhoneNumber {
                                         StandardPhoneNumber = new StandardPhoneNumber{
-                                        CountryCode="61",
+                                        CountryCode= CountryCode.AU,
                                         Number="0353298764"
                                         }
                                     },
@@ -659,7 +659,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.AWTA,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001925678"
                     },
@@ -678,13 +678,13 @@ namespace Wiedpug.API.ExampleResponses
                             IsTransmitter=true,
                             PhoneNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode="61",
+                                CountryCode= CountryCode.AU,
                                 Number="0317229370"
                                 }
                             },
                             FaxNumber= new PhoneNumber {
                                 StandardPhoneNumber = new StandardPhoneNumber{
-                                CountryCode="61",
+                                CountryCode= CountryCode.AU,
                                 Number= "03763262290"
                                 }
                             },
@@ -700,7 +700,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StreetAddressLine2="KENSINGTON",
                                     AdministrativeArea = "NSW",
                                     Locality = "Sydney",
-                                    PostCode="3031",
+                                    Postcode="3031",
                                     Country=CountryCode.AU
                                 }
                             },
@@ -710,7 +710,7 @@ namespace Wiedpug.API.ExampleResponses
                                     FirstName="HEAD OFFICE",
                                     PhoneNumber= new PhoneNumber {
                                         StandardPhoneNumber = new StandardPhoneNumber{
-                                        CountryCode="61",
+                                        CountryCode= CountryCode.AU,
                                         Number="0309332782"
                                         }
                                     }

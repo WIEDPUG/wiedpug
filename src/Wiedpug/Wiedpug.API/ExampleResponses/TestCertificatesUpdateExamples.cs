@@ -8,12 +8,13 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class TestCertificateUpdateRequestExample : IExamplesProvider<TestCertificateUpdate>
+    public class TestCertificateUpdateRequestExample : IExamplesProvider<List<TestCertificateUpdate>>
     {
-        public TestCertificateUpdate GetExamples()
+        public List<TestCertificateUpdate> GetExamples()
         {
-            return new TestCertificateUpdate()
+            return new List<TestCertificateUpdate>()
             {
+                new TestCertificateUpdate {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -32,7 +33,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -48,7 +49,7 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        Bales = 2,
+                        NumberOfBales = 2,
                         BaleDescription = "AAA M",
                         WoolBase = 60.43,
                         MulesingStatusFrom = MulesingStatus.ND,
@@ -65,7 +66,7 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        Bales = 7,
+                        NumberOfBales = 7,
                         BaleDescription = "AAA M",
                         WoolBase = 65.12,
                         MulesingStatusFrom = MulesingStatus.AA,
@@ -82,23 +83,25 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        Bales = 8,
+                        NumberOfBales = 8,
                         BaleDescription = "PCA M",
                         WoolBase = 50.31,
                         MulesingStatusFrom = MulesingStatus.NM,
                         MulesingStatusTo = MulesingStatus.M
                     }
                 }
+                }
             };
         }
     }
 
-    public class RequestForDataForTestCertificateUpdateExample : IExamplesProvider<RequestForData>
+    public class RequestForDataForTestCertificateUpdateExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -117,7 +120,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -126,20 +129,22 @@ namespace Wiedpug.API.ExampleResponses
                     IsUsingNetworkDateTime
                     = true
                 }
+                }
             };
         }
     }
 
-    public class RequestForDataForTestCertificateUpdate200Example : IExamplesProvider<ApiResult>
+    public class RequestForDataForTestCertificateUpdate200Example : IExamplesProvider<ApiResult<List<TestCertificateUpdate>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<TestCertificateUpdate>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<TestCertificateUpdate>>()
             {
                 
                 ApiMessages = [],
-                Data = new TestCertificateUpdate()
+                Data = new List<TestCertificateUpdate>()
                 {
+                    new TestCertificateUpdate {
                     TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
@@ -158,7 +163,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
@@ -174,7 +179,7 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        Bales = 2,
+                        NumberOfBales = 2,
                         BaleDescription = "AAA M",
                         WoolBase = 60.43,
                         MulesingStatusFrom = MulesingStatus.ND,
@@ -191,7 +196,7 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        Bales = 7,
+                        NumberOfBales = 7,
                         BaleDescription = "AAA M",
                         WoolBase = 65.12,
                         MulesingStatusFrom = MulesingStatus.AA,
@@ -208,11 +213,12 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        Bales = 8,
+                        NumberOfBales = 8,
                         BaleDescription = "PCA M",
                         WoolBase = 50.31,
                         MulesingStatusFrom = MulesingStatus.NM,
                         MulesingStatusTo = MulesingStatus.M
+                    }
                     }
                 }
                 }

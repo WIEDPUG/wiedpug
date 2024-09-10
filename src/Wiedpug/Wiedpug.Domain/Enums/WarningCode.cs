@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Text.Json.Serialization;
+using Wiedpug.Domain.Attributes;
 
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
+    [RemoveUnderscoreFromEnumItem]
     [Description("A code to indicate the different types of errors.")]
     public enum WarningCode
     {

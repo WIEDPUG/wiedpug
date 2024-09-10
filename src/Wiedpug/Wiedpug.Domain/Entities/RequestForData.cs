@@ -14,5 +14,17 @@ namespace Wiedpug.Domain.Entities
 
         [Required]
         public required IRequestForDataType RequestForDataType { get; set; }
+
+
+
+        /**
+         The following two properties are used for IRequestForDataType "oneOf" relationship referencing when converting to OpenApi.
+         Don't delete it here, they will be removed in the openapi converting process.
+         The loigc is in Wiedpug.API\SchemaFilter\DiscriminatorFilter.cs
+         */
+
+        public UseNetworkDateTimeRequestForDataType? UseNetworkDateTimeRequestForDataType { get; set; }
+
+        public DateTimeRangeRequestForDataType? DateTimeRangeRequestForDataType { get; set; }
     }
 }

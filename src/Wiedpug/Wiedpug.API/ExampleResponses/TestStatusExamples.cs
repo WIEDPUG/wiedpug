@@ -10,12 +10,13 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class TestStatusRequestExample : IExamplesProvider<TestStatus>
+    public class TestStatusRequestExample : IExamplesProvider<List<TestStatus>>
     {
-        public TestStatus GetExamples()
+        public List<TestStatus> GetExamples()
         {
-            return new TestStatus()
+            return new List<TestStatus>()
             {
+                new TestStatus {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -34,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -77,18 +78,20 @@ namespace Wiedpug.API.ExampleResponses
                         TrvMatched = "240424"
                     }
                 }
+                }
             };
         }
 
 
     }
 
-    public class RequestForTestStatusExample : IExamplesProvider<RequestForData>
+    public class RequestForTestStatusExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -107,7 +110,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -115,20 +118,22 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                 }
+                }
             };
         }
     }
 
-    public class RequestForTestStatus200Example : IExamplesProvider<ApiResult>
+    public class RequestForTestStatus200Example : IExamplesProvider<ApiResult<List<TestStatus>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<TestStatus>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<TestStatus>>()
             {
                 
                 ApiMessages = [],
-                Data =  new TestStatus()
+                Data =  new List<TestStatus>
                 {
+                    new TestStatus {
                     TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
@@ -147,7 +152,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.AWTA,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
@@ -188,6 +193,7 @@ namespace Wiedpug.API.ExampleResponses
                         CoreSampleReceived = "240423",
                         LsSampleReceived = "240424",
                         TrvMatched = "240424"
+                    }
                     }
                 }
                 }

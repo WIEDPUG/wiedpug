@@ -34,7 +34,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -115,7 +115,7 @@ namespace Wiedpug.API.ExampleResponses
                                          LotInvoiceHeader = new LotInvoiceHeader
                                          {
                                              LotIdentity = "39",
-                                             Bales = 34,
+                                             NumberOfBales = 34,
                                              Gross = new Weight
                                             {
                                                 Value = 23.00,
@@ -251,12 +251,13 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForLotInovicesExample : IExamplesProvider<RequestForData>
+    public class RequestForLotInovicesExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -275,13 +276,14 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                }
                 }
             };
         }
@@ -318,7 +320,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -387,7 +389,7 @@ namespace Wiedpug.API.ExampleResponses
                                          LotInvoiceHeader = new LotInvoiceHeader
                                          {
                                              LotIdentity = "39",
-                                             Bales = 34,
+                                             NumberOfBales = 34,
                                                           Gross = new Weight
                                                             {
                                                                 Value = 23.00,

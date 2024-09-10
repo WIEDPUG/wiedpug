@@ -42,7 +42,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int Bales { get; set; } // FIELD NUMBER 3 - Bales - Start: 9, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
+        public required int NumberOfBales { get; set; } // FIELD NUMBER 3 - Bales - Start: 9, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
         /// <summary>
         /// Total weight of the wool. In transmissions from Test Houses, Gross 
@@ -193,6 +193,15 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public OfferType? OfferType { get; set; } // FIELD NUMBER 23 - Offer Type - Start: 70, Size: 2, Data Type: ID, Justification: R, Requirement Designator: O
 
+        /// <summary>
+        /// The identity given to the lot in the computer system by the owner of the wool.
+        /// 
+        /// Client’s Cross Reference is transmitted by the owner of the wool to a Test House when the owner either verifies a test request(in a type of
+        /// TRV document) or requests the printing of a certificate(in a type TCR document). If it is included in the transmission to the Test House, the
+        /// Test House will also include it in its transmission of the certificate.The owner of the wool will then be able to connect the transmitted certificate
+        /// with the wool in its computer system.In a Test Request Verification document, the field must contain the weight note number of the lot.
+        /// The value in this field is NOT printed on the certificate.It is the value in the Certificate Reference field that is printed on the certificate.
+        /// </summary>
         [MinLength(1)]
         [MaxLength(8)]
         public string? ClientCrossReference { get; set; } // FIELD NUMBER 24 - Client Cross Reference - Start: 72, Size: 8, Data Type: AN, Justification: L, Requirement Designator: O

@@ -42,7 +42,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [Required]
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public int Bales { get; set; } // FIELD NUMBER 7 - Bales - Start: 73, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
+        public int NumberOfBales { get; set; } // FIELD NUMBER 7 - Bales - Start: 73, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
         [MinLength(1)]
         [MaxLength(4)]

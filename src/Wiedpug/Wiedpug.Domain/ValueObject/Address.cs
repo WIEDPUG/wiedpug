@@ -55,7 +55,7 @@ namespace Wiedpug.Domain.ValueObject
 
         [MinLength(1)]
         [MaxLength(20)]
-        public string? PostCode { get; set; }
+        public string? Postcode { get; set; }
 
         /// <summary>
         /// Use ISO 3166-1 country code: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes

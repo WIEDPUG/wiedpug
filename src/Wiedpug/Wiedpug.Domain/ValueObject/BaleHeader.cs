@@ -44,7 +44,7 @@ namespace Wiedpug.Domain.ValueObject
         [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
         [MinLength(1)]
         [MaxLength(4)]
-        public int? Bales {  get; set; }
+        public int? NumberOfBales {  get; set; }
 
         [MinLength(1)]
         [MaxLength(20)]

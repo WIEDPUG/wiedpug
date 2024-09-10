@@ -41,7 +41,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -122,12 +122,13 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForLotPriceAndBuyersRequestExample : IExamplesProvider<WoolSaleRequestForData>
+    public class RequestForLotPriceAndBuyersRequestExample : IExamplesProvider<List<WoolSaleRequestForData>>
     {
-        public WoolSaleRequestForData GetExamples()
+        public List<WoolSaleRequestForData> GetExamples()
         {
-            return new WoolSaleRequestForData()
+            return new List<WoolSaleRequestForData>()
             {
+                new WoolSaleRequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -146,7 +147,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -166,15 +167,16 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                 }
+                }
             };
         }
     }
 
-    public class RequestForLotPriceAndBuyers200Example : IExamplesProvider<ApiResult>
+    public class RequestForLotPriceAndBuyers200Example : IExamplesProvider<ApiResult<List<LotPriceAndBuyer>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<LotPriceAndBuyer>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<LotPriceAndBuyer>>()
             {
                 
                 ApiMessages = [],
@@ -202,7 +204,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },

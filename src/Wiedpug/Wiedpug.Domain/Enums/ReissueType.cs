@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel;
 using System.Text.Json.Serialization;
+using Wiedpug.Domain.Attributes;
 using Wiedpug.Domain.Entities;
 
 namespace Wiedpug.Domain.Enums
 {
     [Description("Instruction to the test house on the type of change requested for the new Certificate Reissue.")]
+    [RemoveUnderscoreFromEnumItem]
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum ReissueType
     {

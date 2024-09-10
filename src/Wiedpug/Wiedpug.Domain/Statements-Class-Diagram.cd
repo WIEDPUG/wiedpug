@@ -2,40 +2,13 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.Statements" Collapsed="true">
     <Position X="2.25" Y="2.75" Width="2" />
-    <AssociationLine Name="StatementInformationDetails" Type="Wiedpug.Domain.Aggregates.StatementsAggregate.StatementInformationDetail">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.159" Y="0.381" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACgAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAiAAAACAAAAAAAEAAAAAA=</HashCode>
       <FileName>Aggregates\StatementsAggregate\Statements.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
       <Property Name="TransferConfig" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="StatementInformationDetails" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Wiedpug.Domain.Aggregates.StatementsAggregate.StatementInformationDetail" Collapsed="true">
-    <Position X="2.5" Y="4.75" Width="2.75" />
-    <AssociationLine Name="StatementDetails" Type="Wiedpug.Domain.Entities.StatementDetail" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="5.25" Y="5.062" />
-        <Point X="7.375" Y="5.062" />
-        <Point X="7.375" Y="3.312" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.12" Y="0.258" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Aggregates\StatementsAggregate\StatementInformationDetail.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
       <Property Name="StatementHeader" />
       <Property Name="StatementTrailer" />
     </ShowAsAssociation>
@@ -46,19 +19,19 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="6" Y="1.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.StatementDetail" Collapsed="true">
     <Position X="6.25" Y="2.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQEAAACAAEIAAAAACAAIAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAQAAAACAAEIAAAAACAAIAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Entities\StatmentDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.StatementHeader" Collapsed="true">
-    <Position X="6.25" Y="6.25" Width="1.5" />
+    <Position X="6.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Entities\StatmentHeader.cs</FileName>

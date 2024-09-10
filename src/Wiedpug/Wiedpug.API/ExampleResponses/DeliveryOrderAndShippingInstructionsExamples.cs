@@ -37,7 +37,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -114,7 +114,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 OrganisationCode = "ABT",
                                             },
                                             LotIdentityOrGroupNumber = "552467",
-                                            Bales = 30,
+                                            NumberOfBales = 30,
                                             Gross = new Weight{
                                                 Value = 1530.00,
                                                 Unit = WeightUnit.Kilograms
@@ -171,12 +171,13 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForDeliveryOrdersAndShippingInstructionsExample : IExamplesProvider<RequestForData>
+    public class RequestForDeliveryOrdersAndShippingInstructionsExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -195,7 +196,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -203,15 +204,16 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     IsUsingNetworkDateTime = true
                 }
+                }
             };
         }
     }
 
-    public class RequestForDeliveryOrdersAndShippingInstructions200Example : IExamplesProvider<ApiResult>
+    public class RequestForDeliveryOrdersAndShippingInstructions200Example : IExamplesProvider<ApiResult<List<DeliveryOrdersAndShippingInstruction>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<DeliveryOrdersAndShippingInstruction>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<DeliveryOrdersAndShippingInstruction>>()
             {
                 
                 ApiMessages = [],
@@ -237,7 +239,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
@@ -309,7 +311,7 @@ namespace Wiedpug.API.ExampleResponses
                                                  OrganisationCode = "MBC",
                                             },
                                             LotIdentityOrGroupNumber = "552467",
-                                            Bales = 30,
+                                            NumberOfBales = 30,
                                             Gross = new Weight{
                                                 Value = 1520.00,
                                                 Unit = WeightUnit.Kilograms

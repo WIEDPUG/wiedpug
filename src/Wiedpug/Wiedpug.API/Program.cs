@@ -53,7 +53,19 @@ builder.Services.AddSwaggerGen(c => {
 
     c.SchemaFilter<IncludeRequestForDataTypesForOpenApiSpec>();
 
-    c.ExampleFilters();
+    // Enable the UseAllOfForInheritance setting
+    //c.UseAllOfForInheritance();
+
+    // Optionally, enable the Discriminator feature to identify derived types
+    c.UseOneOfForPolymorphism();
+
+    //c.UseAllOfToExtendReferenceSchemas();
+
+    // Register the AllOfSchemaFilter
+    //c.SchemaFilter<AllOfSchemaForReferencedFieldSchemaFilter>();
+
+    // Enable discriminators
+    c.SchemaFilter<DiscriminatorFilter>();
 
     // Polymorphism handling for RequestForDataType - convert to the OneOf relationships for the RequestForDataType classes
     c.MapType<IRequestForDataType>(() => new OpenApiSchema
@@ -64,6 +76,8 @@ builder.Services.AddSwaggerGen(c => {
             new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(DateTimeRangeRequestForDataType) } }
         }
     });
+
+    c.ExampleFilters();
 });
 
 

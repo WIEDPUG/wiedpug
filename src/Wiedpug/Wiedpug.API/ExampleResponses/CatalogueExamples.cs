@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -120,7 +120,7 @@ namespace Wiedpug.API.ExampleResponses
                                         LotHeader = new Domain.Entities.LotHeader //20
                                         {
                                             LotIdentity = "671",
-                                            Bales = 8,
+                                            NumberOfBales = 8,
                                             Gross = new Weight{
                                                 Value = 1316.00,
                                                 Unit = WeightUnit.Kilograms 
@@ -275,7 +275,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Brand = "SALTBUSH/DOWNS",
                                             BaleDescription = "AAAM",
                                             AreaOfOrigin = "V11",
-                                            Bales = 8,
+                                            NumberOfBales = 8,
                                         },
                                         BaleIdentifications = new List<Domain.ValueObject.BaleIdentification> //84
                                         {
@@ -295,7 +295,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     BaleDescription = "AAAMLMS",
                                                     AreaOfOrigin = "W14",
                                                     LocationWithinStore = "Z1-33",
-                                                    Bales = 2,
+                                                    NumberOfBales = 2,
                                                     Postcode = "6510"
                                                 },
                                                 BaleIdentifications = new List<Domain.ValueObject.BaleIdentification> //84
@@ -339,7 +339,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.Talman,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -415,7 +415,7 @@ namespace Wiedpug.API.ExampleResponses
                                         LotHeader = new Domain.Entities.LotHeader //20
                                         {
                                             LotIdentity = "671",
-                                            Bales = 8,
+                                            NumberOfBales = 8,
                                             Gross = new Weight{
                                                 Value = 1316.00,
                                                 Unit = WeightUnit.Kilograms
@@ -554,7 +554,7 @@ namespace Wiedpug.API.ExampleResponses
                                             Brand = "SALTBUSH/DOWNS",
                                             BaleDescription = "AAAM",
                                             AreaOfOrigin = "V11",
-                                            Bales = 8,
+                                            NumberOfBales = 8,
                                         },
                                         InterlotComponentBales = new List<InterlotComponentBale>
                                         {
@@ -566,7 +566,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     BaleDescription = "AAAMLMS",
                                                     AreaOfOrigin = "W14",
                                                     LocationWithinStore = "Z1-33",
-                                                    Bales = 2,
+                                                    NumberOfBales = 2,
                                                     Postcode = "6510"
                                                 }
                                             }
@@ -606,7 +606,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
@@ -683,7 +683,7 @@ namespace Wiedpug.API.ExampleResponses
                                     LotHeader = new Domain.Entities.LotHeader //20
                                     {
                                         LotIdentity = "671",
-                                        Bales = 8,
+                                        NumberOfBales = 8,
                                         Gross = new Weight { Value = 1316.00, Unit = WeightUnit.Kilograms },
                                         Tare = new Weight{
                                                 Value =16.00,
@@ -888,7 +888,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.AWTA,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -934,7 +934,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.AWTA,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -989,7 +989,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.AWTA,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -1052,7 +1052,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.AWTA,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -1115,7 +1115,7 @@ namespace Wiedpug.API.ExampleResponses
                                             LotHeader = new Domain.Entities.LotHeader //20
                                             {
                                                 LotIdentity = "671",
-                                                Bales = 8,
+                                                NumberOfBales = 8,
                                                 Gross = new Weight{
                                                 Value = 1316.00,
                                                 Unit = WeightUnit.Kilograms
@@ -1258,7 +1258,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 Brand = "SALTBUSH/DOWNS",
                                                 BaleDescription = "AAAM",
                                                 AreaOfOrigin = "V11",
-                                                Bales = 8
+                                                NumberOfBales = 8
                                             }
                                         }
                                     }

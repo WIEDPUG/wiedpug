@@ -15,5 +15,8 @@
     "build": "npm run openapi && next build",
     "start": "npm run openapi && next start",
     "openapi": "node processOpenApiFile.js"
+  },
+  "devDependencies": {
+    "swagger-js-codegen": "^1.13.0"
   }
 }

@@ -13,22 +13,22 @@ public static class DarkAndMedullatedFibreRiskVerificationEndpoints
 {
     public static void MapDarkAndMedullatedFibreRiskVerificationEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("dark-and-medullated-fibre-risk-verification").WithTags("Dark And Medullated Fibre Risk Verification");
+        var group = routes.MapGroup("dark-and-medullated-fibre-risk-verifications").WithTags("Dark And Medullated Fibre Risk Verifications");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(DarkAndMedullatedFibreRiskVerification), typeof(DarkAndMedullatedFibreRiskVerificationRequestExample))]
+        [SwaggerRequestExample(typeof(List<DarkAndMedullatedFibreRiskVerification>), typeof(DarkAndMedullatedFibreRiskVerificationRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] DarkAndMedullatedFibreRiskVerification model) =>
+        ([FromBody] List<DarkAndMedullatedFibreRiskVerification> model) =>
             {
                
             })        
         .WithOpenApi(o => new(o)
         {
-            Summary = "Dark And Medullated Fibre Risk Verification",
+            Summary = "Dark And Medullated Fibre Risk Verifications",
             Description = "Sent by a broker organisation to AWTA to include the Dark and Medullated Fibre Risk (DMFR) on a Certificate that has been issued."
         })
         .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
@@ -39,7 +39,7 @@ public static class DarkAndMedullatedFibreRiskVerificationEndpoints
 
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForDarkAndMedullatedFibreRiskVerificationExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(RequestForDarkAndMedullatedFibreRiskVerificationExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDarkAndMedullatedFibreRiskVerification200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -47,16 +47,16 @@ public static class DarkAndMedullatedFibreRiskVerificationEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("RequestForDarkAndMedullatedFibreRiskVerification")
+        .WithName("RequestForDarkAndMedullatedFibreRiskVerifications")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Retrieves the dark and medullated fibre risk verification"
+            Summary = "Retrieves the dark and medullated fibre risk verifications"
         })
-        .Produces<List<ApiResult<DarkAndMedullatedFibreRiskVerification>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<DarkAndMedullatedFibreRiskVerification>>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

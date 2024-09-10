@@ -5,6 +5,7 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
+    [RemoveUnderscoreFromEnumItem]
     [Description("A code used to indicate how the wool has been baled. The most common type is Farm bales. <strong>Original</strong> - the pack type when the wool was originally baled. <strong>Preferred</strong> - The pack type which the buyer would prefer to be used when his wool is dumped.")]
     public enum PackType
     {

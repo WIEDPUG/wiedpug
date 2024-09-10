@@ -34,7 +34,7 @@ namespace Wiedpug.Domain.Entities
     /// The legacy codes for Overseas Centre are under CentreCodeAustralia
     /// </summary> 
     public class Centre
-    {
+    { 
         [Required]
         [MinLength(1)]
         [MaxLength(3)]
@@ -45,6 +45,12 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(2)]
         public required object CentreCode { get; set; }
 
+
+        /**
+         The following two properties are used for CentreCode "oneOf" relationship referencing when converting to OpenApi.
+         Don't delete it here, they will be removed in the openapi converting process.
+         The loigc is in Wiedpug.API\SchemaFilter\DiscriminatorFilter.cs
+         */
         public CentreCodeAustralia? CentreAustralia { get; set; }
 
         public CentreCodeChina? CentreChina { get; set; }

@@ -28,143 +28,144 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Statements"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Statements"
+                }
               },
-              "example": {
-                "transmissionHeader": {
-                  "dateFormatLastRevised": "2020-07-15",
-                  "dateTransmissionFileCreated": "2016-01-17",
-                  "countryOfOrigin": "AU",
-                  "documentOriginator": {
-                    "organisationCode": "ABC"
-                  },
-                  "currentReceiver": {
-                    "organisationCode": "ATC"
-                  },
-                  "versionNumber": 31,
-                  "softwareIdentifier": {
-                    "softwareCompany": 1,
-                    "version": 1082,
-                    "programName": "NETR"
-                  },
-                  "abn": "72001967184"
-                },
-                "statementInformationDetails": [
-                  {
-                    "statementHeader": {
-                      "client": {
-                        "organisationCode": "ADC"
-                      },
-                      "clientCode": 345678,
-                      "statementDate": "2024-03-21",
-                      "openingBalances": [
-                        {
-                          "balanceType": "Current",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 234.54,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Thirty",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 365.5,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Sixty",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 566.78,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Ninety",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 234.34,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Ninety",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 500.34,
-                            "currencyUnit": "AUD"
-                          }
-                        }
-                      ]
+              "example": [
+                {
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2020-07-15",
+                    "dateTransmissionFileCreated": "2016-01-17",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "ABC"
                     },
-                    "statementDetails": [
+                    "currentReceiver": {
+                      "organisationCode": "ATC"
+                    },
+                    "versionNumber": 31,
+                    "softwareIdentifier": {
+                      "softwareCompany": 1,
+                      "softwareVersion": 1082,
+                      "programName": "NETR"
+                    },
+                    "abn": "72001967184"
+                  },
+                  "statementHeader": {
+                    "client": {
+                      "organisationCode": "ADC"
+                    },
+                    "clientCode": 345678,
+                    "statementDate": "2024-03-21",
+                    "openingBalances": [
                       {
-                        "clientsReference": "1234567890",
-                        "accountReference": "AWTA LED REFERENCE",
-                        "amount": {
-                          "value": 866.3,
+                        "balanceType": "Current",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 234.54,
                           "currencyUnit": "AUD"
-                        },
-                        "amountType": 0,
-                        "itemDate": "2024-04-23",
-                        "gstAmount": {
-                          "value": 134.3,
-                          "currencyUnit": "AUD"
-                        },
-                        "isGstApplicable": true,
-                        "isCompanyAbnApplicable": true
-                      }
-                    ],
-                    "statementTrailer": {
-                      "closingBalances": [
-                        {
-                          "balanceType": "Current",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 234.54,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Thirty",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 365.5,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Sixty",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 566.78,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Ninety",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 234.34,
-                            "currencyUnit": "AUD"
-                          }
-                        },
-                        {
-                          "balanceType": "Ninety",
-                          "debitOrCreditFlag": "Debit",
-                          "balanceValue": {
-                            "value": 500.34,
-                            "currencyUnit": "AUD"
-                          }
                         }
-                      ]
+                      },
+                      {
+                        "balanceType": "Thirty",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 365.5,
+                          "currencyUnit": "AUD"
+                        }
+                      },
+                      {
+                        "balanceType": "Sixty",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 566.78,
+                          "currencyUnit": "AUD"
+                        }
+                      },
+                      {
+                        "balanceType": "Ninety",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 234.34,
+                          "currencyUnit": "AUD"
+                        }
+                      },
+                      {
+                        "balanceType": "Ninety",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 500.34,
+                          "currencyUnit": "AUD"
+                        }
+                      }
+                    ]
+                  },
+                  "statementDetails": [
+                    {
+                      "clientsReference": "1234567890",
+                      "accountReference": "AWTA LED REFERENCE",
+                      "amount": {
+                        "value": 866.3,
+                        "currencyUnit": "AUD"
+                      },
+                      "amountType": 0,
+                      "itemDate": "2024-04-23",
+                      "gstAmount": {
+                        "value": 134.3,
+                        "currencyUnit": "AUD"
+                      },
+                      "isGstApplicable": true,
+                      "isCompanyAbnApplicable": true
                     }
+                  ],
+                  "statementTrailer": {
+                    "closingBalances": [
+                      {
+                        "balanceType": "Current",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 234.54,
+                          "currencyUnit": "AUD"
+                        }
+                      },
+                      {
+                        "balanceType": "Thirty",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 365.5,
+                          "currencyUnit": "AUD"
+                        }
+                      },
+                      {
+                        "balanceType": "Sixty",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 566.78,
+                          "currencyUnit": "AUD"
+                        }
+                      },
+                      {
+                        "balanceType": "Ninety",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 234.34,
+                          "currencyUnit": "AUD"
+                        }
+                      },
+                      {
+                        "balanceType": "NinetyPlus",
+                        "debitOrCreditFlag": "Debit",
+                        "balanceValue": {
+                          "value": 500.34,
+                          "currencyUnit": "AUD"
+                        }
+                      }
+                    ]
                   }
-                ]
-              }
+                }
+              ]
             }
           },
           "required": true
@@ -277,29 +278,34 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestForData"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RequestForData"
+                }
               },
-              "example": {
-                "transmissionHeader": {
-                  "dateFormatLastRevised": "2020-07-15",
-                  "dateTransmissionFileCreated": "2016-01-17",
-                  "countryOfOrigin": "AU",
-                  "documentOriginator": {
-                    "organisationCode": "ABC"
+              "example": [
+                {
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2020-07-15",
+                    "dateTransmissionFileCreated": "2016-01-17",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "ABC"
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "ATW"
+                    },
+                    "versionNumber": 31,
+                    "softwareIdentifier": {
+                      "softwareCompany": 8,
+                      "softwareVersion": 1082,
+                      "programName": "NETR"
+                    },
+                    "abn": "72001967184"
                   },
-                  "currentReceiver": {
-                    "organisationCode": "ATW"
-                  },
-                  "versionNumber": 31,
-                  "softwareIdentifier": {
-                    "softwareCompany": 8,
-                    "version": 1082,
-                    "programName": "NETR"
-                  },
-                  "abn": "72001967184"
-                },
-                "requestForDataType": {}
-              }
+                  "requestForDataType": {}
+                }
+              ]
             }
           },
           "required": true
@@ -312,146 +318,144 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/StatementsApiResult"
+                    "$ref": "#/components/schemas/StatementsListApiResult"
                   }
                 },
                 "example": {
                   "apiMessages": [],
-                  "data": {
-                    "transmissionHeader": {
-                      "dateFormatLastRevised": "2020-07-15",
-                      "dateTransmissionFileCreated": "2016-01-17",
-                      "countryOfOrigin": "AU",
-                      "documentOriginator": {
-                        "organisationCode": "ATC"
-                      },
-                      "currentReceiver": {
-                        "organisationCode": "ATT"
-                      },
-                      "versionNumber": 31,
-                      "softwareIdentifier": {
-                        "softwareCompany": 1,
-                        "version": 1082,
-                        "programName": "NETR"
-                      },
-                      "abn": "72001967184"
-                    },
-                    "statementInformationDetails": [
-                      {
-                        "statementHeader": {
-                          "client": {
-                            "organisationCode": "ATT"
-                          },
-                          "clientCode": 345678,
-                          "statementDate": "2024-03-21",
-                          "openingBalances": [
-                            {
-                              "balanceType": "Current",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 234.54,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Thirty",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 365.5,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Sixty",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 566.78,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Ninety",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 234.34,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Ninety",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 500.34,
-                                "currencyUnit": "AUD"
-                              }
-                            }
-                          ]
+                  "data": [
+                    {
+                      "transmissionHeader": {
+                        "dateFormatLastRevised": "2020-07-15",
+                        "dateTransmissionFileCreated": "2016-01-17",
+                        "countryOfOrigin": "AU",
+                        "documentOriginator": {
+                          "organisationCode": "ATC"
                         },
-                        "statementDetails": [
+                        "currentReceiver": {
+                          "organisationCode": "ATT"
+                        },
+                        "versionNumber": 31,
+                        "softwareIdentifier": {
+                          "softwareCompany": 1,
+                          "softwareVersion": 1082,
+                          "programName": "NETR"
+                        },
+                        "abn": "72001967184"
+                      },
+                      "statementHeader": {
+                        "client": {
+                          "organisationCode": "ATT"
+                        },
+                        "clientCode": 345678,
+                        "statementDate": "2024-03-21",
+                        "openingBalances": [
                           {
-                            "clientsReference": "1234567890",
-                            "accountReference": "AWTA LED REFERENCE",
-                            "amount": {
-                              "value": 866.3,
+                            "balanceType": "Current",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 234.54,
                               "currencyUnit": "AUD"
-                            },
-                            "amountType": 0,
-                            "itemDate": "2024-04-23",
-                            "gstAmount": {
-                              "value": 134.3,
-                              "currencyUnit": "AUD"
-                            },
-                            "isGstApplicable": true,
-                            "isCompanyAbnApplicable": true
-                          }
-                        ],
-                        "statementTrailer": {
-                          "closingBalances": [
-                            {
-                              "balanceType": "Current",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 234.54,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Thirty",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 365.5,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Sixty",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 566.78,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Ninety",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 234.34,
-                                "currencyUnit": "AUD"
-                              }
-                            },
-                            {
-                              "balanceType": "Ninety",
-                              "debitOrCreditFlag": "Debit",
-                              "balanceValue": {
-                                "value": 500.34,
-                                "currencyUnit": "AUD"
-                              }
                             }
-                          ]
+                          },
+                          {
+                            "balanceType": "Thirty",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 365.5,
+                              "currencyUnit": "AUD"
+                            }
+                          },
+                          {
+                            "balanceType": "Sixty",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 566.78,
+                              "currencyUnit": "AUD"
+                            }
+                          },
+                          {
+                            "balanceType": "Ninety",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 234.34,
+                              "currencyUnit": "AUD"
+                            }
+                          },
+                          {
+                            "balanceType": "NinetyPlus",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 500.34,
+                              "currencyUnit": "AUD"
+                            }
+                          }
+                        ]
+                      },
+                      "statementDetails": [
+                        {
+                          "clientsReference": "1234567890",
+                          "accountReference": "AWTA LED REFERENCE",
+                          "amount": {
+                            "value": 866.3,
+                            "currencyUnit": "AUD"
+                          },
+                          "amountType": 0,
+                          "itemDate": "2024-04-23",
+                          "gstAmount": {
+                            "value": 134.3,
+                            "currencyUnit": "AUD"
+                          },
+                          "isGstApplicable": true,
+                          "isCompanyAbnApplicable": true
                         }
+                      ],
+                      "statementTrailer": {
+                        "closingBalances": [
+                          {
+                            "balanceType": "Current",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 234.54,
+                              "currencyUnit": "AUD"
+                            }
+                          },
+                          {
+                            "balanceType": "Thirty",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 365.5,
+                              "currencyUnit": "AUD"
+                            }
+                          },
+                          {
+                            "balanceType": "Sixty",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 566.78,
+                              "currencyUnit": "AUD"
+                            }
+                          },
+                          {
+                            "balanceType": "Ninety",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 234.34,
+                              "currencyUnit": "AUD"
+                            }
+                          },
+                          {
+                            "balanceType": "NinetyPlus",
+                            "debitOrCreditFlag": "Debit",
+                            "balanceValue": {
+                              "value": 500.34,
+                              "currencyUnit": "AUD"
+                            }
+                          }
+                        ]
                       }
-                    ]
-                  }
+                    }
+                  ]
                 }
               }
             }
@@ -573,7 +577,8 @@
     "schemas": {
       "Statements": {
         "required": [
-          "statementInformationDetails",
+          "statementHeader",
+          "statementTrailer",
           "transmissionHeader"
         ],
         "type": "object",
@@ -584,11 +589,18 @@
           "transferConfig": {
             "$ref": "#/components/schemas/TransferConfig"
           },
-          "statementInformationDetails": {
+          "statementHeader": {
+            "$ref": "#/components/schemas/StatementHeader"
+          },
+          "statementDetails": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/StatementInformationDetail"
-            }
+              "$ref": "#/components/schemas/StatementDetail"
+            },
+            "nullable": true
+          },
+          "statementTrailer": {
+            "$ref": "#/components/schemas/StatementTrailer"
           }
         },
         "additionalProperties": false
@@ -607,7 +619,7 @@
           "dateFormatLastRevised": {
             "maxLength": 10,
             "minLength": 1,
-            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
             "type": "string",
             "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date"
@@ -615,7 +627,7 @@
           "dateTransmissionFileCreated": {
             "maxLength": 10,
             "minLength": 1,
-            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
             "type": "string",
             "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date"
@@ -713,7 +725,18 @@
           }
         },
         "additionalProperties": false,
-        "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia"
+        "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia",
+        "discriminator": {
+          "propertyName": "Country",
+          "mapping": {
+            "AU": "#/components/schemas/CentreCodeAustralia",
+            "CN": "#/components/schemas/CentreCodeChina",
+            "DE": "#/components/schemas/CentreCodeGermany",
+            "IT": "#/components/schemas/CentreCodeItaly",
+            "NZ": "#/components/schemas/CentreCodeNewZealand",
+            "TW": "#/components/schemas/CentreCodeTaiwan"
+          }
+        }
       },
       "CentreCodeAustralia": {
         "enum": [
@@ -945,7 +968,7 @@
           "softwareCompany": {
             "$ref": "#/components/schemas/SoftwareCompany"
           },
-          "version": {
+          "softwareVersion": {
             "pattern": "-?\\d{1,4}",
             "type": "integer",
             "description": "Version no. e.g. 2400",
@@ -1005,29 +1028,6 @@
         "type": "string",
         "description": "Unrestrict: Send document to all members<br />Restrict: Send document to appointed members<br />Exclude: Send to all members excluding the appointed members"
       },
-      "StatementInformationDetail": {
-        "required": [
-          "statementHeader",
-          "statementTrailer"
-        ],
-        "type": "object",
-        "properties": {
-          "statementHeader": {
-            "$ref": "#/components/schemas/StatementHeader"
-          },
-          "statementDetails": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/StatementDetail"
-            },
-            "nullable": true
-          },
-          "statementTrailer": {
-            "$ref": "#/components/schemas/StatementTrailer"
-          }
-        },
-        "additionalProperties": false
-      },
       "StatementHeader": {
         "required": [
           "client",
@@ -1048,14 +1048,24 @@
           "statementDate": {
             "maxLength": 10,
             "minLength": 1,
-            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
             "type": "string",
             "description": "The period ending date of the statement\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
           },
           "openingBalances": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Balance"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Balance"
+                },
+                {
+                  "$ref": "#/components/schemas/ClosingBalance"
+                },
+                {
+                  "$ref": "#/components/schemas/OpeningBalance"
+                }
+              ]
             }
           }
         },
@@ -1090,7 +1100,7 @@
           "NinetyPlus"
         ],
         "type": "string",
-        "description": "Current: Balance - Current<br />30: Balance - 30<br />60: Balance - 60<br />90: Balance - 90<br />90Plus: Balance - 90+"
+        "description": "Current: Balance - Current<br />Thirty: Balance - 30<br />Sixty: Balance - 60<br />Ninety: Balance - 90<br />NinetyPlus: Balance - 90+"
       },
       "DebitOrCreditFlag": {
         "enum": [
@@ -1106,7 +1116,7 @@
         "type": "object",
         "properties": {
           "value": {
-            "pattern": "^-?\\d{1,10}\\.\\d{2}$",
+            "pattern": "^-?\\d{1,10}(\\.\\d{2})?$",
             "type": "number",
             "description": "Total up to 12 digits with 2 digits after the decimal point.",
             "format": "double"
@@ -1135,6 +1145,24 @@
         ],
         "type": "string",
         "description": "AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR: Euro"
+      },
+      "ClosingBalance": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Balance"
+          }
+        ],
+        "additionalProperties": false
+      },
+      "OpeningBalance": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Balance"
+          }
+        ],
+        "additionalProperties": false
       },
       "StatementDetail": {
         "required": [
@@ -1167,7 +1195,7 @@
           "itemDate": {
             "maxLength": 10,
             "minLength": 1,
-            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)$/",
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
             "type": "string",
             "description": "The date the cost of the item was incurred\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
             "format": "date",
@@ -1213,7 +1241,17 @@
           "closingBalances": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Balance"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Balance"
+                },
+                {
+                  "$ref": "#/components/schemas/ClosingBalance"
+                },
+                {
+                  "$ref": "#/components/schemas/OpeningBalance"
+                }
+              ]
             }
           }
         },
@@ -1374,7 +1412,14 @@
             ]
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "RequestForDataType",
+          "mapping": {
+            "UseNetworkDateTimeRequestForDataType": "#/components/schemas/UseNetworkDateTimeRequestForDataType",
+            "DateTimeRangeRequestForDataType": "#/components/schemas/DateTimeRangeRequestForDataType"
+          }
+        }
       },
       "UseNetworkDateTimeRequestForDataType": {
         "required": [
@@ -1400,7 +1445,7 @@
           "startDateTimeStatusRequest": {
             "maxLength": 20,
             "minLength": 1,
-            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
             "type": "string",
             "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
             "format": "date-time"
@@ -1408,7 +1453,7 @@
           "endDateTimeStatusRequest": {
             "maxLength": 20,
             "minLength": 1,
-            "pattern": "/(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
             "type": "string",
             "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
             "format": "date-time",
@@ -1417,7 +1462,7 @@
         },
         "additionalProperties": false
       },
-      "StatementsApiResult": {
+      "StatementsListApiResult": {
         "type": "object",
         "properties": {
           "apiMessages": {
@@ -1429,7 +1474,12 @@
             "nullable": true
           },
           "data": {
-            "$ref": "#/components/schemas/Statements"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Statements"
+            },
+            "description": "Contains response data. e.g. Auction Catalogue",
+            "nullable": true
           }
         },
         "additionalProperties": false,

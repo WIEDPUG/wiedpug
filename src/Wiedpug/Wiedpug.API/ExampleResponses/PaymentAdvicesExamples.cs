@@ -1,5 +1,6 @@
 ﻿using Swashbuckle.AspNetCore.Filters;
 using Wiedpug.API.Model;
+using Wiedpug.Domain.Aggregates.LotPriceAndBuyerAggregate;
 using Wiedpug.Domain.Aggregates.PaymentAdviceAggregate;
 using Wiedpug.Domain.Aggregates.PaymentAdviceDetailAggregate;
 using Wiedpug.Domain.Aggregates.TestCertificateAggregate;
@@ -35,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
@@ -115,12 +116,13 @@ namespace Wiedpug.API.ExampleResponses
         }
     }
 
-    public class RequestForPaymentAdvicesRequestExample : IExamplesProvider<RequestForData>
+    public class RequestForPaymentAdvicesRequestExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -139,7 +141,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -147,15 +149,16 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                 }
+                }
             };
         }
     }
 
-    public class RequestForPaymentAdvices200Example : IExamplesProvider<ApiResult>
+    public class RequestForPaymentAdvices200Example : IExamplesProvider<ApiResult<List<PaymentAdvice>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<PaymentAdvice>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<PaymentAdvice>>()
             {
                 
                 ApiMessages = [],
@@ -181,7 +184,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },

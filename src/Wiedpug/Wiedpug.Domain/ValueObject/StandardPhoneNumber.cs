@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.ValueObject
@@ -14,7 +15,7 @@ namespace Wiedpug.Domain.ValueObject
         [MinLength(1)]
         [MaxLength(3)]
         [RegularExpression(RegexPattern.NUMBERS)]
-        public required string CountryCode { get; set; }
+        public required CountryCode CountryCode { get; set; }
 
         [Required]
         [RegularExpression(RegexPattern.NUMBERS)]

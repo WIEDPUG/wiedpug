@@ -25,11 +25,14 @@ const processOpenApiFile = () => {
     updateEnumValues(openApiSpec);
     console.log(`Enum values like "_23" are converted to "23".`);
 
-    RemovePropertyFromSchema(openApiSpec, "EncryptedLotHeaderAwexData", "lotHeaderAwexData")
+    // update data example enum values
+    replaceQuoteUnderscore(openApiSpec)
 
-    RemovePropertyFromSchema(openApiSpec, "TransmissionHeader", "classForOneOfReferencesToBeDeleted")
+    //RemovePropertyFromSchema(openApiSpec, "EncryptedLotHeaderAwexData", "lotHeaderAwexData")
 
-    modifyCentreSchema(openApiSpec)
+    //RemovePropertyFromSchema(openApiSpec, "TransmissionHeader", "classForOneOfReferencesToBeDeleted")
+
+    //modifyCentreSchema(openApiSpec)
 
     // Save the modified OpenAPI spec
     saveOpenApiSpec(outputFile, openApiSpec);
@@ -63,8 +66,10 @@ const updateEnumValues = (openApiSpec) => {
             const schema = schemas[schemaName];
             // Check for enums
             if (schema.enum) {
+                console.log(schema.enum)
                 schema.enum = schema.enum.map(value => {
                     if (`${value}`.startsWith('_')) {
+                        console.log(schema.enum)
                         return `${value}`.substring(1); // Remove the leading '_'
                     }
                     return value;
@@ -93,6 +98,35 @@ const updateEnumValuesInSchema = (schema) => {
 };
 
 
+function replaceQuoteUnderscore(jsonObj) {
+    // Helper function to recursively traverse and replace '"_' with '"'
+    function recursiveReplace(obj) {
+        if (typeof obj === 'object' && obj !== null) {
+            if (Array.isArray(obj)) {
+                // If it's an array, process each element
+                return obj.map(recursiveReplace);
+            } else {
+                // If it's an object, process its keys and values
+                const newObj = {};
+                for (let key in obj) {
+                    if (obj.hasOwnProperty(key)) {
+                        // Replace '"_' with '"' in the key
+                        let newKey = key.replace(/"_/g, '"');
+                        // Process the value recursively
+                        newObj[newKey] = recursiveReplace(obj[key]);
+                    }
+                }
+                return newObj;
+            }
+        } else if (typeof obj === 'string') {
+            // If the value is a string, replace '"_' with '"'
+            return obj.replace(/"_/g, '"');
+        }
+        return obj; // For other types (numbers, booleans, etc.), return as is
+    }
+
+    return recursiveReplace(jsonObj);
+}
 
 
 /**
@@ -186,18 +220,18 @@ const generateOpenApiFilesByEndpoints = () => {
     const inputFile = `public/openapi/${API_FILE_NAME}.json`; // Path to your input OpenAPI spec
     const outputDir = 'public/openapi'; // Directory to save the output files
     const endpointGroups = {
-        'catalogue': 'catalogue',
+        'catalogues': 'catalogues',
         'test-certificates': 'test-certificates',
-        'dark-and-medullated-fibre-risk-verification': 'dark-and-medullated-fibre-risk-verification',
+        'dark-and-medullated-fibre-risk-verifications': 'dark-and-medullated-fibre-risk-verifications',
         'delivery-order-shipping-instructions': 'delivery-order-shipping-instructions',
         'lot-invoices': 'lot-invoices',
-        'lot-price-and-buyer': 'lot-price-and-buyer',
-        'payment-advice': 'payment-advice',
-        'payment-confirmation': 'payment-confirmation',
+        'lot-price-and-buyers': 'lot-price-and-buyers',
+        'payment-advices': 'payment-advices',
+        'payment-confirmations': 'payment-confirmations',
         'organisation-details': 'organisation-details',
-        'test-certificate-update': 'test-certificate-update',
-        'test-certificate-request': 'test-certificate-request',
-        'test-requests-verification': 'test-requests-verification',
+        'test-certificate-updates': 'test-certificate-updates',
+        'test-certificate-requests': 'test-certificate-requests',
+        'test-requests-verifications': 'test-requests-verifications',
         'test-status': 'test-status',
         'statements': 'statements',
         'postsale-printing-of-presale-certificates':'postsale-printing-of-presale-certificates',

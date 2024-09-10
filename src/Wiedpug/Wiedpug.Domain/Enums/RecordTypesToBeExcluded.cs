@@ -6,6 +6,7 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {    
     [JsonConverter(typeof(JsonStringEnumConverter))]
+    [RemoveUnderscoreFromEnumItem]
     public enum RecordTypesToBeExcluded
     {
         [Description("00: Transmission Header")]

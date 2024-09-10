@@ -5,6 +5,7 @@ using Wiedpug.Domain.Attributes;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
+    [RemoveUnderscoreFromEnumItem]
     [Description("This field indicates the following: If an Australian Securities Exchange combination was requested and the combination satisfies the contract parameters of ASX the appropriate flag will be transmitted.")]
     public enum CombinationFlag
     {

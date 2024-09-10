@@ -10,24 +10,24 @@ public static class PaymentConfirmationEndpoints
 {
     public static void MapPaymentConfirmationEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("payment-confirmation").WithTags("Payment Confirmation");
+        var group = routes.MapGroup("payment-confirmations").WithTags("Payment Confirmations");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(PaymentConfirmation), typeof(CreatePaymentConfirmationRequestExample))]
+        [SwaggerRequestExample(typeof(List<PaymentConfirmation>), typeof(CreatePaymentConfirmationRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] PaymentConfirmation model) =>
+        ([FromBody] List<PaymentConfirmation> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
-        .WithName("CreatePaymentConfirmation")
+        .WithName("CreatePaymentConfirmations")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Payment Confirmation",
-            Description = "Used to provide payment confirmation"
+            Summary = "Payment Confirmations",
+            Description = "Used to provide payment confirmations"
         })
         .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
@@ -36,7 +36,7 @@ public static class PaymentConfirmationEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForPaymentConfirmationRequestExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(RequestForPaymentConfirmationRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForPaymentConfirmation200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -44,7 +44,7 @@ public static class PaymentConfirmationEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
@@ -53,7 +53,7 @@ public static class PaymentConfirmationEndpoints
         {
             Summary = "Retrieves the payment confirmation"
         })
-        .Produces<List<ApiResult<PaymentConfirmation>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<PaymentConfirmation>>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

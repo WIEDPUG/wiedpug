@@ -36,7 +36,7 @@ public static class DeliveryOrderAndShippingInstructionsEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForDeliveryOrdersAndShippingInstructionsExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(RequestForDeliveryOrdersAndShippingInstructionsExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDeliveryOrdersAndShippingInstructions200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -44,7 +44,7 @@ public static class DeliveryOrderAndShippingInstructionsEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })

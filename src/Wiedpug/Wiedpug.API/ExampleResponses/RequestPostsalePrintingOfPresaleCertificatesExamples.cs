@@ -10,12 +10,13 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class CreateRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<RequestPostsalePrintingOfPresaleCertificates>
+    public class CreateRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<List<RequestPostsalePrintingOfPresaleCertificates>>
     {
-        public RequestPostsalePrintingOfPresaleCertificates GetExamples()
+        public List<RequestPostsalePrintingOfPresaleCertificates> GetExamples()
         {
-            return new RequestPostsalePrintingOfPresaleCertificates()
+            return new List<RequestPostsalePrintingOfPresaleCertificates>()
             {
+                new RequestPostsalePrintingOfPresaleCertificates() {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -36,7 +37,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -62,8 +63,8 @@ namespace Wiedpug.API.ExampleResponses
 
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
-                        Bales = 23,
-                        Gross = new Weight{ 
+                        NumberOfBales = 23,
+                        Gross = new Weight{
                             Value=2340.00,
                             Unit = WeightUnit.Kilograms
                         },
@@ -79,17 +80,18 @@ namespace Wiedpug.API.ExampleResponses
                         CertificateDeliveryIndicator = CertificateDeliveryIndicator.ToBrokerOrBuyerAddress
                     }
                 }
-
+                }
             };
         }
     }
 
-    public class RequestForRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<RequestForData>
+    public class RequestForRequestPostsalePrintingOfPresaleCertificatesExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -108,7 +110,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -116,20 +118,22 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                 }
+                }
             };
         }
     }
 
-    public class RequestForRequestPostsalePrintingOfPresaleCertificates200Example : IExamplesProvider<ApiResult>
+    public class RequestForRequestPostsalePrintingOfPresaleCertificates200Example : IExamplesProvider<ApiResult<List<RequestPostsalePrintingOfPresaleCertificates>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<RequestPostsalePrintingOfPresaleCertificates>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<RequestPostsalePrintingOfPresaleCertificates>>()
             {
                 
                 ApiMessages = [],
-                Data = new RequestPostsalePrintingOfPresaleCertificates
+                Data = new List<RequestPostsalePrintingOfPresaleCertificates>
                 {
+                    new RequestPostsalePrintingOfPresaleCertificates {
                     TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
@@ -150,7 +154,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
@@ -175,7 +179,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "AWT",
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
-                        Bales = 23,
+                        NumberOfBales = 23,
                         Gross = new Weight
                         {
                             Value =2340.00,
@@ -194,6 +198,7 @@ namespace Wiedpug.API.ExampleResponses
                     }
                 }
 
+                }
                 }
             };
         }

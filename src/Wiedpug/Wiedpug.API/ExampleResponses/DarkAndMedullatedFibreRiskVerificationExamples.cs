@@ -9,12 +9,13 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class DarkAndMedullatedFibreRiskVerificationRequestExample : IExamplesProvider<DarkAndMedullatedFibreRiskVerification>
+    public class DarkAndMedullatedFibreRiskVerificationRequestExample : IExamplesProvider<List<DarkAndMedullatedFibreRiskVerification>>
     {
-        public DarkAndMedullatedFibreRiskVerification GetExamples()
+        public List<DarkAndMedullatedFibreRiskVerification> GetExamples()
         {
-            return new DarkAndMedullatedFibreRiskVerification()
+            return new List<DarkAndMedullatedFibreRiskVerification>()
             {
+                new DarkAndMedullatedFibreRiskVerification() {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -33,7 +34,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -78,18 +79,20 @@ namespace Wiedpug.API.ExampleResponses
                             "2"
                         }
                     }
-                    
 
+
+                }
                 }
             };
         }
 
-        public class RequestForDarkAndMedullatedFibreRiskVerificationExample : IExamplesProvider<RequestForData>
+        public class RequestForDarkAndMedullatedFibreRiskVerificationExample : IExamplesProvider<List<RequestForData>>
         {
-            public RequestForData GetExamples()
+            public List<RequestForData> GetExamples()
             {
-                return new RequestForData()
+                return new List<RequestForData>()
                 {
+                    new RequestForData {
                     TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
@@ -108,26 +111,28 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.AWTA,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
                     RequestForDataType = new UseNetworkDateTimeRequestForDataType { IsUsingNetworkDateTime
                     = true }
+                    }
                 };
             }
         }
 
-        public class RequestForDarkAndMedullatedFibreRiskVerification200Example : IExamplesProvider<ApiResult>
+        public class RequestForDarkAndMedullatedFibreRiskVerification200Example : IExamplesProvider<ApiResult<List<DarkAndMedullatedFibreRiskVerification>>>
         {
-            public ApiResult GetExamples()
+            public ApiResult<List<DarkAndMedullatedFibreRiskVerification>> GetExamples()
             {
-                return new ApiResult()
+                return new ApiResult<List<DarkAndMedullatedFibreRiskVerification>>()
                 {
                     
                     ApiMessages = [],
-                    Data =  new DarkAndMedullatedFibreRiskVerification()
+                    Data =  new List<DarkAndMedullatedFibreRiskVerification>()
                     {
+                        new DarkAndMedullatedFibreRiskVerification{
                         TransmissionHeader = new TransmissionHeader
                         {
                             DateFormatLastRevised = "2020-07-15",
@@ -146,7 +151,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ProgramName = "NETR",
                                 SoftwareCompany = SoftwareCompany.AWTA,
-                                Version = 1082
+                                SoftwareVersion =  1082
                             },
                             Abn = "72001967184"
                         },
@@ -194,6 +199,7 @@ namespace Wiedpug.API.ExampleResponses
 
 
                 }
+                    }
                     }
                 };
             }

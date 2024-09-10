@@ -10,7 +10,7 @@ public static class PaymentAdvicesEndpoints
 {
     public static void MapPaymentAdvicesEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("payment-advice").WithTags("Payment Advice");
+        var group = routes.MapGroup("payment-advices").WithTags("Payment Advices");
 
         group.MapPost("/",
         [SwaggerRequestExample(typeof(List<PaymentAdvice>), typeof(CreatePaymentAdvicesRequestExample))]
@@ -26,7 +26,7 @@ public static class PaymentAdvicesEndpoints
         .WithName("CreatePaymentAdvices")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Payment Advice",
+            Summary = "Payment Advices",
             Description = "Used to provide payment advices"
         })
         .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
@@ -36,7 +36,7 @@ public static class PaymentAdvicesEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForPaymentAdvicesRequestExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(RequestForPaymentAdvicesRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForPaymentAdvices200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -44,7 +44,7 @@ public static class PaymentAdvicesEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })

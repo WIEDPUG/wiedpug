@@ -8,12 +8,13 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class CreateTestCertificatesRequestExample : IExamplesProvider<TestCertificates>
+    public class CreateTestCertificatesRequestExample : IExamplesProvider<List<TestCertificates>>
     {
-        public TestCertificates GetExamples()
+        public List<TestCertificates> GetExamples()
         {
-            return new TestCertificates()
+            return new List<TestCertificates>()
             {
+                new TestCertificates {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -32,7 +33,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -45,7 +46,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ATW",
                             },
-                            Bales = 1,
+                            NumberOfBales = 1,
                             Gross =new Weight
                         {
                             Value =1.00,
@@ -197,7 +198,7 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ATC",
 
                             },
-                            Bales = 1,
+                            NumberOfBales = 1,
                             Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight
                             {
@@ -221,7 +222,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGstApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        LengthAndStrengthTestDetail = 
+                        LengthAndStrengthTestDetail =
                             new LengthAndStrengthTestDetail{
                                 CertificateIdentity =  new CertificateIdentity{
                                         CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
@@ -330,16 +331,18 @@ namespace Wiedpug.API.ExampleResponses
 
                     }
                 }
+                }
             };
         }
     }
 
-    public class GetTestCertificatesRequestExample : IExamplesProvider<RequestForData>
+    public class GetTestCertificatesRequestExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>
             {
+                new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -358,27 +361,29 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
-                RequestForDataType = new DateTimeRangeRequestForDataType { 
+                RequestForDataType = new DateTimeRangeRequestForDataType {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                }
                 }
             };
         }
     }
 
-    public class GetTestCertificates200Example : IExamplesProvider<ApiResult>
+    public class GetTestCertificates200Example : IExamplesProvider<ApiResult<List<TestCertificates>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<TestCertificates>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<TestCertificates>> ()
             {
                 
                 ApiMessages = [],
-                Data = new TestCertificates 
-                {
+                Data = new List<TestCertificates>
+                {   
+                    new TestCertificates {
                     TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
@@ -397,13 +402,13 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
                     TestCertificateDetails = new List<TestCertificateDetail>
                     {
-                    new TestCertificateDetail 
+                    new TestCertificateDetail
                     {
                         TestDataHeader = new TestDataHeader
                         {
@@ -412,7 +417,7 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ATW",
                             },
                             LotIdentityOrGroupNumber = "123456",
-                            Bales = 1,
+                            NumberOfBales = 1,
                             Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight
                             {
@@ -431,7 +436,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGstApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        TestDetail = 
+                        TestDetail =
                             new TestDetail
                             {
                                 CertificateIdentity =  new CertificateIdentity{
@@ -474,7 +479,7 @@ namespace Wiedpug.API.ExampleResponses
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Vm1 = 20.0
                             },
-                        FibreDiameterHistograms = new List<FibreDiameterHistogram> 
+                        FibreDiameterHistograms = new List<FibreDiameterHistogram>
                         {
                             new FibreDiameterHistogram
                             {
@@ -556,7 +561,7 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ATW",
                             },
-                            Bales = 1,
+                            NumberOfBales = 1,
                             Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
                             Tare = new Weight
                             {
@@ -576,7 +581,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsGstApplicable = false,
                             IsCompanyAbnApplicable = false
                         },
-                        LengthAndStrengthTestDetail = 
+                        LengthAndStrengthTestDetail =
                             new LengthAndStrengthTestDetail{
                             CertificateIdentity =  new CertificateIdentity{
                                     CertificateIdPrefix = CertificateIdPrefix.FremantleLaboratory,
@@ -683,6 +688,7 @@ namespace Wiedpug.API.ExampleResponses
                             }
                         }
 
+                    }
                     }
                 }
                 }

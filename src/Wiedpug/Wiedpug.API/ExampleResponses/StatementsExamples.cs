@@ -10,12 +10,13 @@ using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.API.ExampleResponses
 {
-    public class CreateStatementsRequestExample : IExamplesProvider<Statements>
+    public class CreateStatementsRequestExample : IExamplesProvider<List<Statements>>
     {
-        public Statements GetExamples()
+        public List<Statements> GetExamples()
         {
-            return new Statements()
+            return new List<Statements>()
             {
+                new Statements(){
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -34,14 +35,10 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.Talman,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
-                StatementInformationDetails = new List<StatementInformationDetail>
-                {
-                    new StatementInformationDetail
-                    {
                         StatementHeader = new StatementHeader
                         {
                             Client = new Organisation
@@ -129,24 +126,25 @@ namespace Wiedpug.API.ExampleResponses
                                 new Balance
                                 {
                                     DebitOrCreditFlag = DebitOrCreditFlag.Debit,
-                                    BalanceType = BalanceType.Ninety,
+                                    BalanceType = BalanceType.NinetyPlus,
                                     BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
                                 },
                             },
                         }
                     }
-                }
+
 
             };
         }
     }
 
-    public class RequestForStatementsRequestExample : IExamplesProvider<RequestForData>
+    public class RequestForStatementsRequestExample : IExamplesProvider<List<RequestForData>>
     {
-        public RequestForData GetExamples()
+        public List<RequestForData> GetExamples()
         {
-            return new RequestForData()
+            return new List<RequestForData>()
             {
+                new RequestForData{
                 TransmissionHeader = new TransmissionHeader
                 {
                     DateFormatLastRevised = "2020-07-15",
@@ -165,7 +163,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         ProgramName = "NETR",
                         SoftwareCompany = SoftwareCompany.AWTA,
-                        Version = 1082
+                        SoftwareVersion =  1082
                     },
                     Abn = "72001967184"
                 },
@@ -173,20 +171,22 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
                 }
+                }
             };
         }
     }
 
-    public class RequestForStatements200Example : IExamplesProvider<ApiResult>
+    public class RequestForStatements200Example : IExamplesProvider<ApiResult<List<Statements>>>
     {
-        public ApiResult GetExamples()
+        public ApiResult<List<Statements>> GetExamples()
         {
-            return new ApiResult()
+            return new ApiResult<List<Statements>>()
             {
                 
                 ApiMessages = [],
-                Data = new Statements
+                Data = new List<Statements>
                 {
+                    new Statements{
                     TransmissionHeader = new TransmissionHeader
                     {
                         DateFormatLastRevised = "2020-07-15",
@@ -205,14 +205,10 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             ProgramName = "NETR",
                             SoftwareCompany = SoftwareCompany.Talman,
-                            Version = 1082
+                            SoftwareVersion =  1082
                         },
                         Abn = "72001967184"
                     },
-                    StatementInformationDetails = new List<StatementInformationDetail>
-                {
-                    new StatementInformationDetail
-                    {
                         StatementHeader = new StatementHeader
                         {
                             Client = new Organisation
@@ -250,7 +246,7 @@ namespace Wiedpug.API.ExampleResponses
                                 new Balance
                                 {
                                     DebitOrCreditFlag = DebitOrCreditFlag.Debit,
-                                    BalanceType = BalanceType.Ninety,
+                                    BalanceType = BalanceType.NinetyPlus,
                                     BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
                                 },
                             },
@@ -300,15 +296,12 @@ namespace Wiedpug.API.ExampleResponses
                                     new Balance
                                     {
                                         DebitOrCreditFlag = DebitOrCreditFlag.Debit,
-                                        BalanceType = BalanceType.Ninety,
+                                        BalanceType = BalanceType.NinetyPlus,
                                         BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
                                     },
                                 },
                         }
                     }
-                }
-
-
 
                 }
             };

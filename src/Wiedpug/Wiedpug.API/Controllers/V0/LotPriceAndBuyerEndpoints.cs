@@ -13,7 +13,7 @@ public static class LotPriceAndBuyerEndpoints
 {
     public static void MapLotPriceAndBuyerEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("lot-price-and-buyer").WithTags("Lot Price And Buyer");
+        var group = routes.MapGroup("lot-price-and-buyers").WithTags("Lot Price And Buyers");
 
         group.MapPost("/",
         [SwaggerRequestExample(typeof(List<LotPriceAndBuyer>), typeof(CreateLotPriceAndBuyersRequestExample))]
@@ -26,7 +26,7 @@ public static class LotPriceAndBuyerEndpoints
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })
-        .WithName("CreateLotPriceAndBuyer")
+        .WithName("CreateLotPriceAndBuyers")
         .WithOpenApi(o => new(o)
         {
             Summary = "LotPriceAndBuyer",
@@ -39,7 +39,7 @@ public static class LotPriceAndBuyerEndpoints
         .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(WoolSaleRequestForData), typeof(RequestForLotPriceAndBuyersRequestExample))]
+        [SwaggerRequestExample(typeof(List<WoolSaleRequestForData>), typeof(RequestForLotPriceAndBuyersRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForLotPriceAndBuyers200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -47,14 +47,14 @@ public static class LotPriceAndBuyerEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] WoolSaleRequestForData model) =>
+        ([FromBody] List<WoolSaleRequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("RequestForLotPriceAndBuyer")
+        .WithName("RequestForLotPriceAndBuyers")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Retrieves the lot price and buyer"
+            Summary = "Retrieves the lot price and buyers"
         })
         .Produces<List<ApiResult<List<LotPriceAndBuyer>>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")

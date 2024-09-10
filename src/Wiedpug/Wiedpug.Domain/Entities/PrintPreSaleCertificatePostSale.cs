@@ -70,7 +70,7 @@ namespace Wiedpug.Domain.Entities
         [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
         [MinLength(1)]
         [MaxLength(3)]
-        public required int Bales { get; set; }
+        public required int NumberOfBales { get; set; }
 
         /// <summary>
         /// Total weight of the wool. In transmissions from Test Houses, Gross 

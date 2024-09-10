@@ -11,22 +11,22 @@ public static class TestCertificateUpdateEndpoints
 {
     public static void MapTestCertificateUpdateEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("test-certificate-update").WithTags("Test Certificate Update");
+        var group = routes.MapGroup("test-certificate-updates").WithTags("Test Certificate Updates");
 
         group.MapPost("/",
-        [SwaggerRequestExample(typeof(TestCertificateUpdate), typeof(TestCertificateUpdateRequestExample))]
+        [SwaggerRequestExample(typeof(List<TestCertificateUpdate>), typeof(TestCertificateUpdateRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CommonResponse200Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400SingleObjectRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] TestCertificateUpdate model) =>
+        ([FromBody] List<TestCertificateUpdate> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
             })        
         .WithOpenApi(o => new(o)
         {
-            Summary = "Test Certificate Update",
+            Summary = "Test Certificate Updates",
             Description = "Sent to a test house to advise changes to an existing Certificate. A new Certificate will be reissued with the updated data."
         })
         .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
@@ -37,7 +37,7 @@ public static class TestCertificateUpdateEndpoints
 
 
         group.MapPost("/data",
-        [SwaggerRequestExample(typeof(RequestForData), typeof(RequestForDataForTestCertificateUpdateExample))]
+        [SwaggerRequestExample(typeof(List<RequestForData>), typeof(RequestForDataForTestCertificateUpdateExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(RequestForDataForTestCertificateUpdate200Example))]
         [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
@@ -45,16 +45,16 @@ public static class TestCertificateUpdateEndpoints
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
         [SwaggerResponseExample(StatusCodes.Status404NotFound, typeof(CommonResponse404NotFoundExample))]
         [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] RequestForData model) =>
+        ([FromBody] List<RequestForData> model) =>
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetTestCertificateUpdate")
+        .WithName("GetTestCertificateUpdates")
         .WithOpenApi(o => new(o)
         {
-            Summary = "Retrieves the test certificate update"
+            Summary = "Retrieves the test certificate updates"
         })
-        .Produces<List<ApiResult<TestCertificateUpdate>>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<List<ApiResult<List<TestCertificateUpdate>>>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

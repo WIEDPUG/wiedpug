@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Entities;
 using Wiedpug.Domain.Enums;
+using Wiedpug.Domain.Attributes;
+using System.ComponentModel;
 
 namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
 {
@@ -10,7 +12,7 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public required TransmissionHeader TransmissionHeader { get; set; }
 
         /// <summary>
-        /// Used to define the type of catalogue: 1 - Action Catalogue, 2 - Private Catalogue
+        /// Used to define the type of catalogue
         /// </summary>
         [Required]
         [MinLength(1)]
@@ -18,6 +20,7 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         public required CatalogueType CatalogueType { get; set; }
 
         public TransferConfig? TransferConfig { get; set; }
+
 
         [Required]
         public required List<WoolSaleHeader> WoolSaleHeaders { get; set; }        
