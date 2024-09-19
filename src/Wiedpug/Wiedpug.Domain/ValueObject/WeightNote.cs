@@ -20,9 +20,7 @@ namespace Wiedpug.Domain.ValueObject
         public required string Prefix{ get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_7_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(7)]
+        [Range(-9999999,9999999)]
         public required int Suffix { get; set; }
     }
 }

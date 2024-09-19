@@ -2,6 +2,7 @@
 using System.Security.Principal;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -13,10 +14,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string StatementDate { get; set; }
+        public required UtcDate StatementDate { get; set; }
 
         /// <summary>
         /// Account Reference as per printed statement under heading “AWTA LTD REFERENCE”

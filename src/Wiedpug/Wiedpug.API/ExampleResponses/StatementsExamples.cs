@@ -19,8 +19,8 @@ namespace Wiedpug.API.ExampleResponses
                 new Statements(){
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     CurrentReceiver = new Organisation
                     {
@@ -37,7 +37,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                         StatementHeader = new StatementHeader
                         {
@@ -46,38 +46,38 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ADC",
                             },
                             ClientCode = 345678,
-                            StatementDate = "2024-03-21",
+                            StatementDate = new UtcDate{ Date="2024-03-21"},
                             OpeningBalances = new List<Balance>
                             {
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Current,
-                                    BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 234.54, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Thirty,
-                                    BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 365.50, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Sixty,
-                                    BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 566.78, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Ninety,
-                                    BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 234.34, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Ninety,
-                                    BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 500.34, CurrencyCode = CurrencyCode.AUD },
                                 },
                             },
                         },
@@ -87,10 +87,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ClientsReference = "1234567890",
                                 AccountReference = "AWTA LED REFERENCE",
-                                Amount = new Currency { Value = 866.30, CurrencyUnit = CurrencyUnit.AUD },
+                                Amount = new Currency { Value = 866.30, CurrencyCode = CurrencyCode.AUD },
                                 AmountType = AmountType.Invoice,
-                                ItemDate = "2024-04-23",
-                                GstAmount = new Currency { Value = 134.30, CurrencyUnit = CurrencyUnit.AUD },
+                                ItemDate = new UtcDate{ Date="2024-04-23"},
+                                GstAmount = new Currency { Value = 134.30, CurrencyCode = CurrencyCode.AUD },
                                 IsGstApplicable = true,
                                 IsCompanyAbnApplicable = true
                             }
@@ -101,33 +101,33 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Current,
-                                    BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 234.54, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Thirty,
-                                    BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 365.50, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Sixty,
-                                    BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 566.78, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Ninety,
-                                    BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 234.34, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.NinetyPlus,
-                                    BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 500.34, CurrencyCode = CurrencyCode.AUD },
                                 },
                             },
                         }
@@ -147,8 +147,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData{
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -165,11 +165,11 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -189,8 +189,8 @@ namespace Wiedpug.API.ExampleResponses
                     new Statements{
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -207,7 +207,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                         StatementHeader = new StatementHeader
                         {
@@ -216,38 +216,38 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ATT",
                             },
                             ClientCode = 345678,
-                            StatementDate = "2024-03-21",
+                            StatementDate = new UtcDate{ Date="2024-03-21"},
                             OpeningBalances = new List<Balance>
                             {
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Current,
-                                    BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 234.54, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Thirty,
-                                    BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 365.50, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Sixty,
-                                    BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 566.78, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.Ninety,
-                                    BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 234.34, CurrencyCode = CurrencyCode.AUD },
                                 },
                                 new Balance
                                 {
-                                    DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                    DebitOrCreditType = DebitOrCreditType.DR,
                                     BalanceType = BalanceType.NinetyPlus,
-                                    BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                    BalanceValue = new Currency { Value = 500.34, CurrencyCode = CurrencyCode.AUD },
                                 },
                             },
                         },
@@ -257,10 +257,10 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 ClientsReference = "1234567890",
                                 AccountReference = "AWTA LED REFERENCE",
-                                Amount = new Currency { Value = 866.30, CurrencyUnit = CurrencyUnit.AUD },
+                                Amount = new Currency { Value = 866.30, CurrencyCode = CurrencyCode.AUD },
                                 AmountType = AmountType.Invoice,
-                                ItemDate = "2024-04-23",
-                                GstAmount = new Currency { Value = 134.30, CurrencyUnit = CurrencyUnit.AUD },
+                                ItemDate = new UtcDate{ Date="2024-04-23"},
+                                GstAmount = new Currency { Value = 134.30, CurrencyCode = CurrencyCode.AUD },
                                 IsGstApplicable = true,
                                 IsCompanyAbnApplicable = true
                             }
@@ -271,33 +271,33 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                     new Balance
                                     {
-                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        DebitOrCreditType = DebitOrCreditType.DR,
                                         BalanceType = BalanceType.Current,
-                                        BalanceValue = new Currency { Value = 234.54, CurrencyUnit = CurrencyUnit.AUD },
+                                        BalanceValue = new Currency { Value = 234.54, CurrencyCode = CurrencyCode.AUD },
                                     },
                                     new Balance
                                     {
-                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        DebitOrCreditType = DebitOrCreditType.DR,
                                         BalanceType = BalanceType.Thirty,
-                                        BalanceValue = new Currency { Value = 365.50, CurrencyUnit = CurrencyUnit.AUD },
+                                        BalanceValue = new Currency { Value = 365.50, CurrencyCode = CurrencyCode.AUD },
                                     },
                                     new Balance
                                     {
-                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        DebitOrCreditType = DebitOrCreditType.DR,
                                         BalanceType = BalanceType.Sixty,
-                                        BalanceValue = new Currency { Value = 566.78, CurrencyUnit = CurrencyUnit.AUD },
+                                        BalanceValue = new Currency { Value = 566.78, CurrencyCode = CurrencyCode.AUD },
                                     },
                                     new Balance
                                     {
-                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        DebitOrCreditType = DebitOrCreditType.DR,
                                         BalanceType = BalanceType.Ninety,
-                                        BalanceValue = new Currency { Value = 234.34, CurrencyUnit = CurrencyUnit.AUD },
+                                        BalanceValue = new Currency { Value = 234.34, CurrencyCode = CurrencyCode.AUD },
                                     },
                                     new Balance
                                     {
-                                        DebitOrCreditFlag = DebitOrCreditFlag.Debit,
+                                        DebitOrCreditType = DebitOrCreditType.DR,
                                         BalanceType = BalanceType.NinetyPlus,
-                                        BalanceValue = new Currency { Value = 500.34, CurrencyUnit = CurrencyUnit.AUD },
+                                        BalanceValue = new Currency { Value = 500.34, CurrencyCode = CurrencyCode.AUD },
                                     },
                                 },
                         }

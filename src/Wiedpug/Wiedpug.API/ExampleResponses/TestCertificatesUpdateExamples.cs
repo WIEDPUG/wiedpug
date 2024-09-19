@@ -17,8 +17,8 @@ namespace Wiedpug.API.ExampleResponses
                 new TestCertificateUpdate {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 TestCertificateUpdateDetails = new List<TestCertificateUpdateDetail> {
                     new TestCertificateUpdateDetail {
@@ -49,8 +49,8 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        NumberOfBales = 2,
-                        BaleDescription = "AAA M",
+                        NumberOfBales = new NumberOfBales{BalesCount=2},
+                        BaleDescription = new BaleDescription{ Description="AAA"},
                         WoolBase = 60.43,
                         MulesingStatusFrom = MulesingStatus.ND,
                         MulesingStatusTo = MulesingStatus.M
@@ -66,8 +66,8 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        NumberOfBales = 7,
-                        BaleDescription = "AAA M",
+                        NumberOfBales = new NumberOfBales{BalesCount=7},
+                        BaleDescription = new BaleDescription{ Description="AAA"},
                         WoolBase = 65.12,
                         MulesingStatusFrom = MulesingStatus.AA,
                         MulesingStatusTo = MulesingStatus.M
@@ -83,8 +83,8 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        NumberOfBales = 8,
-                        BaleDescription = "PCA M",
+                        NumberOfBales = new NumberOfBales{BalesCount=8},
+                        BaleDescription = new BaleDescription{Description="PCA" },
                         WoolBase = 50.31,
                         MulesingStatusFrom = MulesingStatus.NM,
                         MulesingStatusTo = MulesingStatus.M
@@ -104,8 +104,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -122,7 +122,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new UseNetworkDateTimeRequestForDataType
                 {
@@ -147,8 +147,8 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificateUpdate {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -165,7 +165,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     TestCertificateUpdateDetails = new List<TestCertificateUpdateDetail> {
                     new TestCertificateUpdateDetail {
@@ -179,8 +179,8 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        NumberOfBales = 2,
-                        BaleDescription = "AAA M",
+                        NumberOfBales = new NumberOfBales{BalesCount=2},
+                        BaleDescription = new BaleDescription{ Description="AAA"},
                         WoolBase = 60.43,
                         MulesingStatusFrom = MulesingStatus.ND,
                         MulesingStatusTo = MulesingStatus.M
@@ -196,8 +196,8 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        NumberOfBales = 7,
-                        BaleDescription = "AAA M",
+                        NumberOfBales = new NumberOfBales{BalesCount=7},
+                        BaleDescription = new BaleDescription{ Description="AAA"},
                         WoolBase = 65.12,
                         MulesingStatusFrom = MulesingStatus.AA,
                         MulesingStatusTo = MulesingStatus.M
@@ -213,8 +213,8 @@ namespace Wiedpug.API.ExampleResponses
                         Client = new Organisation {
                             OrganisationCode = "ABC",
                         },
-                        NumberOfBales = 8,
-                        BaleDescription = "PCA M",
+                        NumberOfBales = new NumberOfBales{BalesCount=8},
+                        BaleDescription = new BaleDescription{Description="PCA" },
                         WoolBase = 50.31,
                         MulesingStatusFrom = MulesingStatus.NM,
                         MulesingStatusTo = MulesingStatus.M

@@ -47,7 +47,7 @@ public static class TestCertificatesEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetTestCertificates")
+        .WithName("RequestForTestCertificates")
         .WithOpenApi(o => new(o)
         {
             Summary = "Retrieves the test certificates"

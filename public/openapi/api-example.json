@@ -9665,7 +9665,7 @@
             "$ref": "#/components/schemas/BalanceType"
           },
           "debitOrCreditFlag": {
-            "$ref": "#/components/schemas/DebitOrCreditFlag"
+            "$ref": "#/components/schemas/DebitOrCreditType"
           },
           "balanceValue": {
             "$ref": "#/components/schemas/Currency"
@@ -11263,12 +11263,12 @@
             "format": "double"
           },
           "currencyUnit": {
-            "$ref": "#/components/schemas/CurrencyUnit"
+            "$ref": "#/components/schemas/CurrencyCode"
           }
         },
         "additionalProperties": false
       },
-      "CurrencyUnit": {
+      "CurrencyCode": {
         "enum": [
           "AUD",
           "BEF",
@@ -11504,7 +11504,7 @@
         },
         "additionalProperties": false
       },
-      "DebitOrCreditFlag": {
+      "DebitOrCreditType": {
         "enum": [
           "Debit",
           "Credit"
@@ -13238,7 +13238,7 @@
             "$ref": "#/components/schemas/Currency"
           },
           "debitOrCreditFlag": {
-            "$ref": "#/components/schemas/DebitOrCreditFlag"
+            "$ref": "#/components/schemas/DebitOrCreditType"
           }
         },
         "additionalProperties": false
@@ -14398,7 +14398,7 @@
             "format": "double"
           },
           "currencyUnit": {
-            "$ref": "#/components/schemas/CurrencyUnit"
+            "$ref": "#/components/schemas/CurrencyCode"
           }
         },
         "additionalProperties": false

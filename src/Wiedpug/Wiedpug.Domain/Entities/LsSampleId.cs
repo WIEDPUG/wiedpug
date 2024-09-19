@@ -21,11 +21,11 @@ namespace Wiedpug.Domain.Entities
         public required string Prefix { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
+        [Range(-99999,99999)]
         public required int Number { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_1_DIGIT)]
+        [Range(-9,9)]
         public required int CheckDigit { get; set; }
     }
 }

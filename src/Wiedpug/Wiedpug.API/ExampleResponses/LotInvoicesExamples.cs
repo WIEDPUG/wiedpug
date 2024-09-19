@@ -17,8 +17,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = "2020-07-15",
-                            DateTransmissionFileCreated = "2016-01-17",
+                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -36,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 SoftwareVersion =  1082
                             },
-                            Abn = "72001967184"
+                            Abn = 72001967184
                         },
                          WoolSales = new List<WoolSale>()
                         {
@@ -44,32 +44,32 @@ namespace Wiedpug.API.ExampleResponses
                              {
                                 WoolSaleHeaderLot = new Domain.Entities.WoolSaleHeaderLot
                                 {
-                                    Season = 16,
+                                    Season = new Season{SeasonValue= 16},
                                     SaleIdentity = new SaleIdentity { SellingCentreType = "M", SaleNumber = 18 },
                                     CentreStorage = new Centre {
                                         Country = CountryCode.AU,
                                         CentreCode = CentreCodeAustralia.AR
                                     },
-                                    SaleDate = "2017-01-19",
+                                    SaleDate = new UtcDate{Date="2017-01-19" },
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
                                     PostSaleCharge = new Currency{
                                                 Value = 25.96,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
                                     CalculationBasis = CalculationBasis.B,
                                     FreightCharge = new Currency{
                                                 Value = 0.00,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
                                     FreightRebate = new Currency{
                                                 Value = 3.25,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
                                     ChargePerLot = new Currency
                                     {
                                         Value = 0.00,
-                                        CurrencyUnit = CurrencyUnit.AUD
+                                        CurrencyCode = CurrencyCode.AUD
                                     },
                                     InvoicingOrganisation = new Organisation
                             {
@@ -97,14 +97,14 @@ namespace Wiedpug.API.ExampleResponses
                                                                 OrganisationCode = "ABC",
                                     },
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = "2017-01-27",
+                                    PaymentDueDate = new UtcDate{ Date="2017-01-24"},
                                     DiscountRate = 1.51,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = "2017-01-24",
+                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value = 0.245,
-                                        CurrencyUnit = CurrencyUnit.AUD
+                                        CurrencyCode = CurrencyCode.AUD
                                     },
                                     PenaltyInterestRate = 11.35
                                 },
@@ -114,33 +114,33 @@ namespace Wiedpug.API.ExampleResponses
                                      {
                                          LotInvoiceHeader = new LotInvoiceHeader
                                          {
-                                             LotIdentity = "39",
-                                             NumberOfBales = 34,
+                                             LotIdentity = new LotIdentity{Identity="39123" },
+                                             NumberOfBales = new NumberOfBales{BalesCount=34 },
                                              Gross = new Weight
                                             {
                                                 Value = 23.00,
-                                                Unit = WeightUnit.Kilograms
+                                                WeightCode = WeightCode.KG
                                             },
                                              Tare = new Weight
                                             {
                                                 Value = 12.00,
-                                                Unit = WeightUnit.Kilograms
+                                                WeightCode = WeightCode.KG
                                             },
                                              CostPerWeightUnit = 25,
                                              FirstCost = new Currency{
                                                 Value = 12.24,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
                                              PackMaterial = PackMaterial.K,
                                              GstFirstCost =new Currency{
                                                 Value = 14.11,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
                                              GstTotalPostSaleCharge = new Currency{
                                                 Value = 51.80,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
-                                             TotalPostSaleCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD }
+                                             TotalPostSaleCharge = new Currency { Value = 0.00, CurrencyCode = CurrencyCode.AUD }
                                          },
                                          LotHeaderVendorDeclarations = new List<LotHeaderVendorDeclaration>
                                          {
@@ -156,7 +156,7 @@ namespace Wiedpug.API.ExampleResponses
                                                   BaleHeader = new BaleHeader
                                                   {
                                                       Brand = "FTT",
-                                                      BaleDescription = "AAC",
+                                                      BaleDescription = new BaleDescription{Description="AAC"},
                                                       AreaOfOrigin = "Melbourne",
                                                       LocationWithinStore = "AWTA LTD"
                                                   },
@@ -170,12 +170,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 18.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -185,12 +185,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 201.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -200,12 +200,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = .02010,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -215,12 +215,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 178.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -230,12 +230,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 168.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       }
                                                   }
@@ -260,8 +260,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -278,11 +278,11 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -303,8 +303,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = "2020-07-15",
-                            DateTransmissionFileCreated = "2016-01-17",
+                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -322,7 +322,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 SoftwareVersion =  1082
                             },
-                            Abn = "72001967184"
+                            Abn = 72001967184
                         },
                          WoolSales = new List<WoolSale>()
                         {
@@ -330,23 +330,23 @@ namespace Wiedpug.API.ExampleResponses
                              {
                                 WoolSaleHeaderLot = new Domain.Entities.WoolSaleHeaderLot
                                 {
-                                    Season = 16,
+                                    Season = new Season{SeasonValue= 16},
                                     SaleIdentity = new SaleIdentity
                                     {
                                         SellingCentreType = "M",
                                         SaleNumber = 18
                                     },
                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AR },
-                                    SaleDate = "2017-01-19",
+                                    SaleDate = new UtcDate{Date="2017-01-19" },
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
-                                    PostSaleCharge = new Currency { Value = 25.96, CurrencyUnit = CurrencyUnit.AUD },
+                                    PostSaleCharge = new Currency { Value = 25.96, CurrencyCode = CurrencyCode.AUD },
                                     CalculationBasis = CalculationBasis.B,
-                                    FreightCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD },
-                                    FreightRebate = new Currency { Value = 3.25, CurrencyUnit = CurrencyUnit.AUD },
+                                    FreightCharge = new Currency { Value = 0.00, CurrencyCode = CurrencyCode.AUD },
+                                    FreightRebate = new Currency { Value = 3.25, CurrencyCode = CurrencyCode.AUD },
                                     ChargePerLot = new Currency{
                                         Value = 0.0,
-                                        CurrencyUnit = CurrencyUnit.AUD
+                                        CurrencyCode = CurrencyCode.AUD
                                     },
                                     InvoicingOrganisation = new Organisation
                             {
@@ -371,14 +371,14 @@ namespace Wiedpug.API.ExampleResponses
                                          OrganisationCode = "ABC",
                                     },
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = "2017-01-27",
+                                    PaymentDueDate = new UtcDate{ Date="2017-01-24"},
                                     DiscountRate = 1.51,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = "2017-01-24",
+                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value =0.245,
-                                        CurrencyUnit = CurrencyUnit.AUD
+                                        CurrencyCode = CurrencyCode.AUD
                                     },
                                     PenaltyInterestRate = 11.35
                                 },
@@ -388,24 +388,24 @@ namespace Wiedpug.API.ExampleResponses
                                      {
                                          LotInvoiceHeader = new LotInvoiceHeader
                                          {
-                                             LotIdentity = "39",
-                                             NumberOfBales = 34,
+                                             LotIdentity = new LotIdentity{Identity="39123" },
+                                             NumberOfBales = new NumberOfBales{BalesCount=34 },
                                                           Gross = new Weight
                                                             {
                                                                 Value = 23.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 12.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                              CostPerWeightUnit = 25,
-                                             FirstCost = new Currency { Value = 12.24, CurrencyUnit = CurrencyUnit.AUD },
+                                             FirstCost = new Currency { Value = 12.24, CurrencyCode = CurrencyCode.AUD },
                                              PackMaterial = PackMaterial.K,
-                                             GstFirstCost =new Currency { Value = 141.11, CurrencyUnit = CurrencyUnit.AUD },
-                                             GstTotalPostSaleCharge = new Currency { Value = 51.80, CurrencyUnit = CurrencyUnit.AUD },
-                                             TotalPostSaleCharge = new Currency { Value = 0.00, CurrencyUnit = CurrencyUnit.AUD }
+                                             GstFirstCost =new Currency { Value = 141.11, CurrencyCode = CurrencyCode.AUD },
+                                             GstTotalPostSaleCharge = new Currency { Value = 51.80, CurrencyCode = CurrencyCode.AUD },
+                                             TotalPostSaleCharge = new Currency { Value = 0.00, CurrencyCode = CurrencyCode.AUD }
                                          },
                                          LotHeaderVendorDeclarations = new List<LotHeaderVendorDeclaration>
                                          {
@@ -421,7 +421,7 @@ namespace Wiedpug.API.ExampleResponses
                                                   BaleHeader = new BaleHeader
                                                   {
                                                       Brand = "FTT",
-                                                      BaleDescription = "AAC",
+                                                      BaleDescription = new BaleDescription{Description="AAC"},
                                                       AreaOfOrigin = "Melbourne",
                                                       LocationWithinStore = "AWTA LTD"
                                                   },
@@ -435,12 +435,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 181.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 12.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -450,12 +450,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 201.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -465,12 +465,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 18.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -480,12 +480,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 178.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       },
                                                        new BaleDetail
@@ -495,12 +495,12 @@ namespace Wiedpug.API.ExampleResponses
                                                           Gross = new Weight
                                                             {
                                                                 Value = 168.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             },
                                                           Tare = new Weight
                                                             {
                                                                 Value = 2.00,
-                                                                Unit = WeightUnit.Kilograms
+                                                                WeightCode = WeightCode.KG
                                                             }
                                                       }
                                                   }

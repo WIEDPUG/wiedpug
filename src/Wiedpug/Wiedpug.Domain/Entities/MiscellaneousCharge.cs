@@ -35,7 +35,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag { get; set; }
+        public required DebitOrCreditType DebitOrCreditType { get; set; }
     }
 
 

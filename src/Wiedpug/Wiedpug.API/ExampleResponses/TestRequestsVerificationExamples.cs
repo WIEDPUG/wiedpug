@@ -18,8 +18,8 @@ namespace Wiedpug.API.ExampleResponses
                 new TestRequestsVerification {
                 TransmissionHeader = new Domain.Entities.TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -36,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 TestRequestsVerificationDetails = new List<TestRequestsVerificationDetail> {
                     new TestRequestsVerificationDetail
@@ -47,16 +47,16 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                                         OrganisationCode = "AWT",
                             },
-                            NumberOfBales = 1,
+                            NumberOfBales = new NumberOfBales{BalesCount=1 },
                             Gross = new Weight
                             {
                                 Value = 1.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                             Tare = new Weight
                             {
                                 Value = 1.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                             LotIdentityOrGroupNumber = "567545",
                         WeightNote = new WeightNote{
@@ -81,9 +81,9 @@ namespace Wiedpug.API.ExampleResponses
                             CoreSampleWeight = new Weight
                             {
                                 Value =100,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
-                            CoreTestSamplingDate = "2024-04-15",
+                            CoreTestSamplingDate = new UtcDate { Date="2024-04-15"},
                             CoresPerBale = 5,
                             GrabsPerBale = 10,
                             IsYieldAndMicronTestRequired = true,
@@ -92,7 +92,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsColourTestRequired = false,
                             IsLaserscanTestRequired = true,
                             IsAirflowTestRequired = false,
-                            IsOFDATestRequired = true,
+                            IsOfdaTestRequired = true,
                             IsDarkAndMedullatedFibreTestRequired = false,
                             IsPesticideResidueTestRequired = false
                         },
@@ -111,9 +111,9 @@ namespace Wiedpug.API.ExampleResponses
                             ConditioningMassMin = new Weight
                             {
                                 Value = 500.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
-                            ConditioningMassMax = new Weight { Value = 1500.00, Unit = WeightUnit.Kilograms },
+                            ConditioningMassMax = new Weight { Value = 1500.00, WeightCode = WeightCode.KG },
                             LACBarbeMin = 10,
                             LACBarbeMax = 30,
                             LACHauteurMin = 15,
@@ -147,9 +147,9 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                                         OrganisationCode = "AWT",
                             },
-                            NumberOfBales = 1,
-                            Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                            Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                            NumberOfBales = new NumberOfBales{BalesCount=1 },
+                            Gross = new Weight { Value = 1.00, WeightCode = WeightCode.KG },
+                            Tare = new Weight { Value = 1.00, WeightCode = WeightCode.KG },
                             LotIdentityOrGroupNumber = "567545",
                         WeightNote = new WeightNote{
                             Prefix = "L",
@@ -170,9 +170,9 @@ namespace Wiedpug.API.ExampleResponses
                             CoreSampleWeight = new Weight
                             {
                                 Value=100.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
-                            CoreTestSamplingDate = "2024-04-25",
+                            CoreTestSamplingDate = new UtcDate{ Date="2024-04-25"},
                             CoresPerBale = 4,
                             GrabsPerBale = 20,
                             IsYieldAndMicronTestRequired = true,
@@ -181,7 +181,7 @@ namespace Wiedpug.API.ExampleResponses
                             IsColourTestRequired = false,
                             IsLaserscanTestRequired = false,
                             IsAirflowTestRequired = false,
-                            IsOFDATestRequired = false,
+                            IsOfdaTestRequired = false,
                             IsDarkAndMedullatedFibreTestRequired = true,
                             IsPesticideResidueTestRequired = true
                         },
@@ -200,12 +200,12 @@ namespace Wiedpug.API.ExampleResponses
                             ConditioningMassMin = new Weight
                             {
                                 Value = 260.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                             ConditioningMassMax = new Weight
                             {
                                 Value = 1200.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                             LACBarbeMin = 17,
                             LACBarbeMax = 56,
@@ -249,8 +249,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -267,11 +267,11 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -291,8 +291,8 @@ namespace Wiedpug.API.ExampleResponses
                     new TestRequestsVerification {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -309,7 +309,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.AWTA,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     TestRequestsVerificationDetails = new List<TestRequestsVerificationDetail> {
                         new TestRequestsVerificationDetail
@@ -320,9 +320,9 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                                             OrganisationCode = "AWT",
                                 },
-                                NumberOfBales = 1,
-                                Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
-                                Tare = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                                NumberOfBales = new NumberOfBales{BalesCount=1 },
+                                Gross = new Weight { Value = 1.00, WeightCode = WeightCode.KG },
+                                Tare = new Weight { Value = 1.00, WeightCode = WeightCode.KG },
                                 LotIdentityOrGroupNumber = "567545",
                                 WeightNote = new WeightNote {
                                     Prefix = "L",
@@ -340,8 +340,8 @@ namespace Wiedpug.API.ExampleResponses
                                 HashTotal = 123456,
                                 GrowerCode = "G123",
                                 GrowerName = "John Doe",
-                                CoreSampleWeight = new Weight { Value = 20.00, Unit = WeightUnit.Kilograms },
-                                CoreTestSamplingDate = "2024-04-15",
+                                CoreSampleWeight = new Weight { Value = 20.00, WeightCode = WeightCode.KG },
+                                CoreTestSamplingDate = new UtcDate{ Date="2024-04-15"},
                                 CoresPerBale = 5,
                                 GrabsPerBale = 10,
                                 IsYieldAndMicronTestRequired = true,
@@ -350,7 +350,7 @@ namespace Wiedpug.API.ExampleResponses
                                 IsColourTestRequired = false,
                                 IsLaserscanTestRequired = true,
                                 IsAirflowTestRequired = false,
-                                IsOFDATestRequired = true,
+                                IsOfdaTestRequired = true,
                                 IsDarkAndMedullatedFibreTestRequired = false,
                                 IsPesticideResidueTestRequired = false
                             },
@@ -366,8 +366,8 @@ namespace Wiedpug.API.ExampleResponses
                                 WoolBaseMax = 65.00,
                                 DichloromethaneDryBasisMin = 0.05,
                                 DichloromethaneDryBasisMax = 0.15,
-                                ConditioningMassMin = new Weight { Value = 500.00, Unit = WeightUnit.Kilograms },
-                                ConditioningMassMax = new Weight { Value = 1500.00, Unit = WeightUnit.Kilograms },
+                                ConditioningMassMin = new Weight { Value = 500.00, WeightCode = WeightCode.KG },
+                                ConditioningMassMax = new Weight { Value = 1500.00, WeightCode = WeightCode.KG },
                                 LACBarbeMin = 10,
                                 LACBarbeMax = 30,
                                 LACHauteurMin = 15,
@@ -401,12 +401,12 @@ namespace Wiedpug.API.ExampleResponses
                                 {
                                                             OrganisationCode = "AWT",
                                 },
-                                NumberOfBales = 1,
-                                Gross = new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                                NumberOfBales = new NumberOfBales{BalesCount=1 },
+                                Gross = new Weight { Value = 1.00, WeightCode = WeightCode.KG },
                                 Tare = new Weight
                                 {
                                     Value = 1.00,
-                                    Unit = WeightUnit.Kilograms
+                                    WeightCode = WeightCode.KG
                                 },
                                 LotIdentityOrGroupNumber = "567545",
                                 WeightNote = new WeightNote {
@@ -425,8 +425,8 @@ namespace Wiedpug.API.ExampleResponses
                                 HashTotal = 125534,
                                 GrowerCode = "G4643",
                                 GrowerName = "Alice Stonewood",
-                                CoreSampleWeight = new Weight { Value = 164.00, Unit = WeightUnit.Kilograms },
-                                CoreTestSamplingDate = "2024-04-25",
+                                CoreSampleWeight = new Weight { Value = 164.00, WeightCode = WeightCode.KG },
+                                CoreTestSamplingDate = new UtcDate{ Date="2024-04-25"},
                                 CoresPerBale = 4,
                                 GrabsPerBale = 20,
                                 IsYieldAndMicronTestRequired = true,
@@ -435,7 +435,7 @@ namespace Wiedpug.API.ExampleResponses
                                 IsColourTestRequired = false,
                                 IsLaserscanTestRequired = false,
                                 IsAirflowTestRequired = false,
-                                IsOFDATestRequired = false,
+                                IsOfdaTestRequired = false,
                                 IsDarkAndMedullatedFibreTestRequired = true,
                                 IsPesticideResidueTestRequired = true
                             },
@@ -454,12 +454,12 @@ namespace Wiedpug.API.ExampleResponses
                                 ConditioningMassMin = new Weight
                             {
                                 Value = 126.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                                 ConditioningMassMax = new Weight
                             {
                                 Value = 1200.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                                 LACBarbeMin = 17,
                                 LACBarbeMax = 56,

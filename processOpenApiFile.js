@@ -12,11 +12,12 @@ const API_FILE_NAME = 'api'
  * - Remove undersocre in the enum values, eg change from "_12" to "12".
  * - Remove classes used for schema reference for oneOf relationships
  * - Modify CentreCode to oneOf relationships
+ * - Update the values in the example for re-used dataTypes
  * 
  */
 const processOpenApiFile = () => {
     const inputFile = `public/openapi/${SWAGGER_FILE_NAME}.json`; // Path to your input OpenAPI spec
-    const outputFile = `public/openapi/${API_FILE_NAME}.json`; // Path to save the modified OpenAPI spec
+    const outputFile = `public/openapi/${API_FILE_NAME}`; // Path to save the modified OpenAPI spec
 
     // Load the OpenAPI specification
     const openApiSpec = loadOpenApiSpec(inputFile);
@@ -26,16 +27,17 @@ const processOpenApiFile = () => {
     console.log(`Enum values like "_23" are converted to "23".`);
 
     // update data example enum values
-    replaceQuoteUnderscore(openApiSpec)
+    const newSpec = replaceQuoteUnderscore(openApiSpec)
 
-    //RemovePropertyFromSchema(openApiSpec, "EncryptedLotHeaderAwexData", "lotHeaderAwexData")
+    const spec = AllOfReferenceToSchemaWitDescription(newSpec)
 
-    //RemovePropertyFromSchema(openApiSpec, "TransmissionHeader", "classForOneOfReferencesToBeDeleted")
+    HandleReferencedSchemas(spec)
+    const replacedSpec = ReplaceDataExample(spec)
 
-    //modifyCentreSchema(openApiSpec)
+    const handledDoubleSpec = hanldeDoubleMultipleOf(replacedSpec)
 
     // Save the modified OpenAPI spec
-    saveOpenApiSpec(outputFile, openApiSpec);
+    saveOpenApiSpec(outputFile, handledDoubleSpec);
 
     console.log('OpenAPI spec updated and saved to', outputFile);
 };
@@ -48,8 +50,20 @@ const loadOpenApiSpec = (filePath) => {
 
 // Save OpenAPI spec back to file
 const saveOpenApiSpec = (filePath, openApiSpec) => {
-    fs.writeJsonSync(filePath, openApiSpec, { spaces: 2 });
+    fs.writeJsonSync(`${filePath}.json`, openApiSpec, { spaces: 2 });
+
+    // Convert to YAML and save as YAML
+    const yamlData = YAML.stringify(openApiSpec, { indent: 2 });
+    fs.writeFileSync(`${filePath}.yaml`, yamlData, 'utf8');
 };
+
+const saveApiToYaml= () => {
+    const filePath = `public/openapi/${API_FILE_NAME}`
+    const openApiSpec = loadOpenApiSpec(`${filePath}.json`);
+    // Convert to YAML and save as YAML
+    const yamlData = YAML.stringify(openApiSpec, { indent: 2 });
+    fs.writeFileSync(`${filePath}.yaml`, yamlData, 'utf8');  
+}
 
 
 /**
@@ -99,33 +113,23 @@ const updateEnumValuesInSchema = (schema) => {
 
 
 function replaceQuoteUnderscore(jsonObj) {
-    // Helper function to recursively traverse and replace '"_' with '"'
-    function recursiveReplace(obj) {
-        if (typeof obj === 'object' && obj !== null) {
-            if (Array.isArray(obj)) {
-                // If it's an array, process each element
-                return obj.map(recursiveReplace);
-            } else {
-                // If it's an object, process its keys and values
-                const newObj = {};
-                for (let key in obj) {
-                    if (obj.hasOwnProperty(key)) {
-                        // Replace '"_' with '"' in the key
-                        let newKey = key.replace(/"_/g, '"');
-                        // Process the value recursively
-                        newObj[newKey] = recursiveReplace(obj[key]);
-                    }
-                }
-                return newObj;
+    // Iterate through each key in the object
+    for (const key in jsonObj) {
+        const jsonValue = jsonObj[key];
+        if (typeof jsonValue === 'string' && jsonValue.startsWith('_')) {
+            if (jsonValue == undefined) {
+                console.log("undefined jsonValue with key:", key)
             }
-        } else if (typeof obj === 'string') {
-            // If the value is a string, replace '"_' with '"'
-            return obj.replace(/"_/g, '"');
+            // Replace the underscore if the value is a string and starts with "_"
+            jsonObj[key] = jsonValue.replace(/^_/, '');
+            console.log(`Replaced ${jsonValue} with ${jsonObj[key]}.`)
+        } else if (typeof jsonValue === 'object' && jsonValue !== null) {
+            // If the value is an object or array, recursively process it
+            replaceQuoteUnderscore(jsonValue);
         }
-        return obj; // For other types (numbers, booleans, etc.), return as is
     }
 
-    return recursiveReplace(jsonObj);
+    return jsonObj;
 }
 
 
@@ -136,13 +140,13 @@ function replaceQuoteUnderscore(jsonObj) {
  * 
  */
 const RemovePropertyFromSchema = (openApiSpec, schemaName, propertyName) => {
-    
+
     if (openApiSpec.components && openApiSpec.components.schemas) {
         const schemas = openApiSpec.components.schemas;
-        
+
         if (schemas[schemaName]) {
             const schema = schemas[schemaName];
-            
+
             if (schema.properties && schema.properties[propertyName]) {
                 delete schema.properties[propertyName];
                 console.log(`Property "${propertyName}" removed from schema "${schemaName}".`);
@@ -196,7 +200,7 @@ const modifyCentreSchema = (openApiSpec) => {
                     country: properties.country,
                     centreCode: newCentreCodeProperty
                 };
-                
+
                 console.log(`Schema "${schemaName}" modified successfully.`);
             } else {
                 console.log(`No properties found in schema "${schemaName}".`);
@@ -219,6 +223,7 @@ const modifyCentreSchema = (openApiSpec) => {
 const generateOpenApiFilesByEndpoints = () => {
     const inputFile = `public/openapi/${API_FILE_NAME}.json`; // Path to your input OpenAPI spec
     const outputDir = 'public/openapi'; // Directory to save the output files
+    // {groupName, fileName}
     const endpointGroups = {
         'catalogues': 'catalogues',
         'test-certificates': 'test-certificates',
@@ -234,8 +239,9 @@ const generateOpenApiFilesByEndpoints = () => {
         'test-requests-verifications': 'test-requests-verifications',
         'test-status': 'test-status',
         'statements': 'statements',
-        'postsale-printing-of-presale-certificates':'postsale-printing-of-presale-certificates',
-        'texts':'texts',
+        'postsale-printing-of-presale-certificates': 'postsale-printing-of-presale-certificates',
+        'texts': 'texts',
+        'keys': 'keys',
     };
 
     // Create output directory if it doesn't exist
@@ -362,17 +368,197 @@ const saveOpenApiSpecYaml = (outputDir, fileName, openApiSpec) => {
 };
 
 
+// Function to convert schemas with `allOf` to `schema`
+const convertAllOfToSchema = (schema) => {
+    if (schema.allOf) {
+        // Create a new schema object to hold the converted schema
+        const newSchema = { ...schema };
+
+        // Move the `allOf` content to `schema`
+        newSchema.schema = { ...schema.allOf[0] };
+
+        // If there is a description in the original schema, move it under the new `schema`
+        if (schema.description) {
+            newSchema.schema.description = schema.description;
+        }
+
+        // Remove the `allOf` and `description` from the outer schema
+        delete newSchema.allOf;
+        delete newSchema.description;
+
+        // Copy additional properties from the original schema
+        Object.keys(schema).forEach((key) => {
+            if (key !== 'allOf' && key !== 'description') {
+                newSchema[key] = schema[key];
+            }
+        });
+        return newSchema;
+    }
+
+    // Recursively convert nested schemas
+    if (schema.properties) {
+        Object.keys(schema.properties).forEach((key) => {
+            schema.properties[key] = convertAllOfToSchema(schema.properties[key]);
+        });
+    }
+
+    return schema;
+}
 
 
+const AllOfReferenceToSchemaWitDescription = (openApiSpec) => {
+    // Convert all schemas in the OpenAPI spec
+    openApiSpec.components && openApiSpec.components.schemas
+    if (openApiSpec.components && openApiSpec.components.schemas) {
+        Object.keys(openApiSpec.components.schemas).forEach((schemaName) => {
+            convertAllOfToSchema(openApiSpec.components.schemas[schemaName]);
+        });
+    }
+
+    return openApiSpec;
+}
 
 
+const HandleReferencedSchemas = (openApiSpec) => {
+    // Check if the schemas section exists
+    if (openApiSpec.components && openApiSpec.components.schemas) {
+        // Check if the UtcDate schema exists
+        if (openApiSpec.components.schemas.UtcDate) {
+            // Remove the additionalProperties field
+            delete openApiSpec.components.schemas.UtcDate.additionalProperties;
+        }
+
+        if (openApiSpec.components.schemas.UtcDateTime) {
+            // Remove the additionalProperties field
+            delete openApiSpec.components.schemas.UtcDateTime.additionalProperties;
+        }
+
+        if (openApiSpec.components.schemas.Season) {
+            // Remove the additionalProperties field
+            delete openApiSpec.components.schemas.Season.additionalProperties;
+        }
+
+        if (openApiSpec.components.schemas.NumberOfBales) {
+            // Remove the additionalProperties field
+            delete openApiSpec.components.schemas.NumberOfBales.additionalProperties;
+        }
+
+        if (openApiSpec.components.schemas.LotIdentity) {
+            // Remove the additionalProperties field
+            delete openApiSpec.components.schemas.LotIdentity.additionalProperties;
+        }
+    }
+}
+
+const ReplaceDataExample = (openApiSpec) => {
+    // Convert object to a JSON string for replacement
+    let jsonString = JSON.stringify(openApiSpec);
+
+    // Use a regular expression to find patterns like {"dateTime": "value"} and convert to "value"
+    jsonString = jsonString.replace(/{"dateTime":"([^"]+)"}?/g, (match, p1, offset) => {
+        console.log(`Found match at position ${offset}: ${match}`);
+        console.log(`Replaced by "${p1}"`);
+        // Replace the object with just the datetime value
+        return `"${p1}"`;
+    });
+
+    // Use a regular expression to find patterns like {"date": "value"} and convert to "value"
+    jsonString = jsonString.replace(/{"date":"([^"]+)"}?/g, (match, p1, offset) => {
+        console.log(`Found match at position ${offset}: ${match}`);
+        console.log(`Replaced by "${p1}"`);
+        // Replace the object with just the date value
+        return `"${p1}"`;
+    });
+
+    // Use a regular expression to find patterns like {"identity": "value"} and convert to "value"
+    jsonString = jsonString.replace(/{"identity":"([^"]+)"}?/g, (match, p1, offset) => {
+        console.log(`Found match at position ${offset}: ${match}`);
+        console.log(`Replaced by "${p1}"`);
+        // Replace the object with just the date value
+        return `"${p1}"`;
+    });
+
+    // Use a regular expression to find patterns like {"seasonValue": "value"} and convert to value
+    jsonString = jsonString.replace(/{"seasonValue":(\d+)}/g, (match, p1, offset) => {
+        console.log(`Found match at position ${offset}: ${match}`);
+        console.log(`Replaced by ${p1}`);
+        // Replace the object with just the date value
+        return p1;
+    });
+
+    // Use a regular expression to find patterns like {"balesCount": "value"} and convert to value
+    jsonString = jsonString.replace(/{"balesCount":(\d+)}/g, (match, p1, offset) => {
+        console.log(`Found match at position ${offset}: ${match}`);
+        console.log(`Replaced by ${p1}`);
+        // Replace the object with just the date value
+        return p1;
+    });
+
+    // Convert the updated string back to a JavaScript object
+    return JSON.parse(jsonString);
+}
 
 
+const hanldeDoubleMultipleOf = (openApiSpec) => {
 
-const main = () =>{
-    processOpenApiFile()
+    function processSchema(schema) {
+        // Iterate over the keys in the current schema
+        for (let key in schema) {
+            let field = schema[key];
+
+            // Check if this field is an object and recurse if necessary
+            if (typeof field === 'object' && field !== null) {
+                // If the field is a number with double format, calculate multipleOf
+                if (field.type === "number" && field.format === "double" && typeof field.maximum === 'number') {
+                    const maxValueStr = field.maximum.toString();
+                    const decimalPart = maxValueStr.split('.')[1];
+                    
+                    if (decimalPart) {
+                        const decimalDigits = decimalPart.length;
+                        field.multipleOf = 1 / Math.pow(10, decimalDigits);
+                    } else {
+                        field.multipleOf = 1; // No decimal part, treat as integer
+                    }
+
+                    console.log(`Added multipleOf to field: ${key}, multipleOf: ${field.multipleOf}`);
+                }
+
+                // Recurse into nested objects or properties
+                processSchema(field);
+            }
+        }
+    }
+
+    // Apply the function to the 'components.schemas' or the root object of your openApiSpec
+    processSchema(openApiSpec.components.schemas);
+
+    return openApiSpec
+}
+
+const generateSchemaOnlyFile = () =>{
+    const inputFile = `public/openapi/${API_FILE_NAME}.json`; // Path to your input OpenAPI spec
+    const outputDir = 'public/openapi'; // Directory to save the output files
+
+    // Create output directory if it doesn't exist
+    fs.ensureDirSync(outputDir);
+
+    // Load the OpenAPI specification
+    let openApiSpec = loadOpenApiSpec(inputFile);
+
+    // Remove the "paths" section
+    delete openApiSpec.paths;
+
+    saveOpenApiSpecJson(outputDir, `schema.json`, openApiSpec);
+}
+
+
+const main = () => {
+    
+    processOpenApiFile()  // If you start from api.json file directly, comment out this line
+
+    saveApiToYaml()
     generateOpenApiFilesByEndpoints()
-
+    generateSchemaOnlyFile()
 }
 
 main()

@@ -18,13 +18,8 @@ namespace Wiedpug.Domain.ValueObject
         [MaxLength(30)]
         public required string Brand { get; set; }
 
-        /// <summary>
-        /// This field is to be always transmitted in upper case.
-        /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(15)]
-        public required string BaleDescription { get; set; }
+        public required BaleDescription BaleDescription { get; set; }
 
         /// <summary>
         /// The code for the area in which the wool was grown.
@@ -38,13 +33,7 @@ namespace Wiedpug.Domain.ValueObject
         [MaxLength(4)]
         public required string AreaOfOrigin { get; set; }
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(4)]
-        public int? NumberOfBales {  get; set; }
+        public NumberOfBales? NumberOfBales {  get; set; }
 
         [MinLength(1)]
         [MaxLength(20)]

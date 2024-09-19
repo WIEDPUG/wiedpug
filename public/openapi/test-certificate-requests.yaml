@@ -18,6 +18,7 @@ paths:
         - Test Certificate Requests
       summary: Test Certificate Requests
       description: Sent to a Test House to initiate the printing of a certificate.
+      operationId: CreateTestCertificateRequests
       requestBody:
         content:
           application/json:
@@ -39,7 +40,7 @@ paths:
                     softwareCompany: 1
                     softwareVersion: 1082
                     programName: NETR
-                  abn: "72001967184"
+                  abn: 72001967184
                 testCertificateRequestDetails:
                   - certificateRequest:
                       certificateType: C
@@ -53,7 +54,7 @@ paths:
                       combinationRequest: N
                       autoAdditionalMeasurementRequired: N
                       additionalPrintRequirements: 0
-                      isPrintingTEAM3Hauteur: false
+                      isPrintingTeam3Hauteur: false
                       certificateRequestDetails:
                         - certificateIdentity:
                             certificateIdPrefix: 3
@@ -88,7 +89,7 @@ paths:
                       combinationRequest: C
                       autoAdditionalMeasurementRequired: N
                       additionalPrintRequirements: 3
-                      isPrintingTEAM3Hauteur: true
+                      isPrintingTeam3Hauteur: true
                       certificateRequestDetails:
                         - certificateIdentity:
                             certificateIdPrefix: 3
@@ -202,7 +203,7 @@ paths:
                     softwareCompany: 8
                     softwareVersion: 1082
                     programName: NETR
-                  abn: "72001967184"
+                  abn: 72001967184
                 requestForDataType: {}
         required: true
       responses:
@@ -230,7 +231,7 @@ paths:
                         softwareCompany: 1
                         softwareVersion: 1082
                         programName: NETR
-                      abn: "72001967184"
+                      abn: 72001967184
                     testCertificateRequestDetails:
                       - certificateRequest:
                           certificateType: F
@@ -244,7 +245,7 @@ paths:
                           combinationRequest: N
                           autoAdditionalMeasurementRequired: N
                           additionalPrintRequirements: 0
-                          isPrintingTEAM3Hauteur: false
+                          isPrintingTeam3Hauteur: false
                           certificateRequestDetails:
                             - certificateIdentity:
                                 certificateIdPrefix: 3
@@ -279,7 +280,7 @@ paths:
                           combinationRequest: C
                           autoAdditionalMeasurementRequired: N
                           additionalPrintRequirements: 3
-                          isPrintingTEAM3Hauteur: true
+                          isPrintingTeam3Hauteur: true
                           certificateRequestDetails:
                             - certificateIdentity:
                                 certificateIdPrefix: 3
@@ -405,21 +406,9 @@ components:
       type: object
       properties:
         dateFormatLastRevised:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         dateTransmissionFileCreated:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         countryOfOrigin:
           $ref: "#/components/schemas/CountryCode"
         documentOriginator:
@@ -427,7 +416,8 @@ components:
         currentReceiver:
           $ref: "#/components/schemas/Organisation"
         versionNumber:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: "The version number of the WIEDPUG Handbook that the transmission
             relates to\r
@@ -438,12 +428,17 @@ components:
         softwareIdentifier:
           $ref: "#/components/schemas/SoftwareIdentifier"
         abn:
-          maxLength: 11
-          minLength: 1
-          pattern: ^[0-9]+$
-          type: string
-          description: Australian Business Number, 11 digits string
+          maximum: 99999999999
+          minimum: 10000000000
+          type: integer
+          description: Australian Business Number, 11 digits
+          format: int64
       additionalProperties: false
+    UtcDate:
+      type: string
+      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
+      example: 2024-03-21
     CountryCode:
       enum:
         - AU
@@ -532,7 +527,7 @@ components:
         The legacy codes for Overseas Centre are under
         CentreCodeAustralia"
       discriminator:
-        propertyName: Country
+        propertyName: country
         mapping:
           AU: "#/components/schemas/CentreCodeAustralia"
           CN: "#/components/schemas/CentreCodeChina"
@@ -857,7 +852,8 @@ components:
         softwareCompany:
           $ref: "#/components/schemas/SoftwareCompany"
         softwareVersion:
-          pattern: -?\d{1,4}
+          maximum: 9999
+          minimum: -9999
           type: integer
           description: Version no. e.g. 2400
           format: int32
@@ -985,60 +981,13 @@ components:
         sampleWeightRemoved:
           $ref: "#/components/schemas/Weight"
         numberOfBales:
-          pattern: -?\d{1,4}
-          type: integer
-          description: Number of bales
-          format: int32
+          $ref: "#/components/schemas/NumberOfBales"
         season:
-          pattern: -?\d{1,2}
-          type: integer
-          format: int32
-          nullable: true
+          $ref: "#/components/schemas/Season"
         saleIdentity:
           $ref: "#/components/schemas/SaleIdentity"
         lotIdentity:
-          maxLength: 6
-          minLength: 1
-          type: string
-          description: "This is a compound name for lot number and lot suffix, where the
-            lot \r
-
-            number is 5 numeric characters and the lot suffix is 1
-            alphanumeric\r
-
-            character.The suffix is used when a lot is broken up by
-            the original lot\r
-
-            number is retained; for example.If 2 bales of a 10-bale
-            lot got wet and\r
-
-            the 8 bales and the 2 bales are offered separately, one
-            could have a\r
-
-            suffix A and the other a suffix B.Where a suffix is not
-            used, the lot\r
-
-            number occupies the whole of the Lot Identity field and
-            is right justified.\r
-
-            \            \r
-
-            From:\r
-
-            \            \r
-
-            The current value that the Lot Identity is to be changed
-            from.\r
-
-            \r
-
-            To:\r
-
-            \r
-
-            The new value that the Lot Identity is to be changed
-            to."
-          nullable: true
+          $ref: "#/components/schemas/LotIdentity"
         printFlag:
           $ref: "#/components/schemas/PrintFlag"
         combinationRequest:
@@ -1047,7 +996,7 @@ components:
           $ref: "#/components/schemas/AutoAdditionalMeasurementRequired"
         additionalPrintRequirements:
           $ref: "#/components/schemas/AdditionalPrintRequirements"
-        isPrintingTEAM3Hauteur:
+        isPrintingTeam3Hauteur:
           maxLength: 5
           minLength: 4
           type: boolean
@@ -1192,24 +1141,36 @@ components:
       format: int32
     Weight:
       required:
-        - unit
         - value
+        - weightCode
       type: object
       properties:
         value:
-          pattern: ^-?\d{1,6}(\.\d{2})?$
+          maximum: 999999.99
+          minimum: -999999.99
           type: number
           format: double
-        unit:
-          $ref: "#/components/schemas/WeightUnit"
+          multipleOf: 0.01
+        weightCode:
+          $ref: "#/components/schemas/WeightCode"
       additionalProperties: false
-    WeightUnit:
+    WeightCode:
       enum:
-        - 0
-        - 1
-        - 2
+        - KG
+        - LB
+        - G
+      type: string
+      description: "KG: Kilograms<br />LB: Pounds<br />G: Grams"
+    NumberOfBales:
+      maximum: 9999
+      minimum: -9999
       type: integer
-      description: "0: Kilograms<br />1: Pounds<br />2: Grams"
+      description: Number of bales
+      format: int32
+    Season:
+      maximum: 99
+      minimum: -99
+      type: integer
       format: int32
     SaleIdentity:
       required:
@@ -1304,9 +1265,8 @@ components:
             Please contact the WIEDPUG Secretary for the latest list
             of reserved and allocated codes."
         saleNumber:
-          maxLength: 2
-          minLength: 1
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           format: int32
       additionalProperties: false
@@ -1320,6 +1280,46 @@ components:
         \            \r
 
         To: The new value that the Sale Identity is to be changed to."
+    LotIdentity:
+      maxLength: 6
+      minLength: 0
+      type: string
+      description: "This is a compound name for lot number and lot suffix, where the
+        lot \r
+
+        number is 5 numeric characters and the lot suffix is 1
+        alphanumeric\r
+
+        character.The suffix is used when a lot is broken up by the
+        original lot\r
+
+        number is retained; for example.If 2 bales of a 10-bale lot got
+        wet and\r
+
+        the 8 bales and the 2 bales are offered separately, one could
+        have a\r
+
+        suffix A and the other a suffix B.Where a suffix is not used,
+        the lot\r
+
+        number occupies the whole of the Lot Identity field and is right
+        justified.\r
+
+        \            \r
+
+        From:\r
+
+        \            \r
+
+        The current value that the Lot Identity is to be changed from.\r
+
+        \r
+
+        To:\r
+
+        \r
+
+        The new value that the Lot Identity is to be changed to."
     PrintFlag:
       enum:
         - Normal
@@ -1399,7 +1399,8 @@ components:
         certificateIdentity:
           $ref: "#/components/schemas/CertificateIdentity"
         woolbase:
-          pattern: ^-?\d{1,2}(\.\d{2})?$
+          maximum: 99.99
+          minimum: -99.99
           type: number
           description: "The oven-dry mass of wool fibre free from all impurities,
             expressed as a percentage of the mass of the sample.\r
@@ -1412,6 +1413,7 @@ components:
 
             Max The highest value in a range of Wool Base values"
           format: double
+          multipleOf: 0.01
         laboratory:
           $ref: "#/components/schemas/Laboratory"
       additionalProperties: false
@@ -1501,10 +1503,7 @@ components:
           type: string
           description: This field is to be always transmitted in upper case.
         baleDescription:
-          maxLength: 15
-          minLength: 1
-          type: string
-          description: This field is to be always transmitted in upper case.
+          $ref: "#/components/schemas/BaleDescription"
         areaOfOrigin:
           maxLength: 4
           minLength: 1
@@ -1520,19 +1519,24 @@ components:
             http://www.awex.com.au/market-information/wool-statisti\
             cal-areas-wsa/"
         numberOfBales:
-          maxLength: 4
-          minLength: 1
-          pattern: -?\d{1,4}
-          type: integer
-          description: Number of bales
-          format: int32
-          nullable: true
+          $ref: "#/components/schemas/NumberOfBales"
         locationWithinStore:
           maxLength: 20
           minLength: 1
           type: string
           nullable: true
       additionalProperties: false
+    BaleDescription:
+      required:
+        - description
+      type: object
+      properties:
+        description:
+          maxLength: 15
+          minLength: 1
+          type: string
+      additionalProperties: false
+      description: This field is to be always transmitted in upper case.
     ApiResult:
       type: object
       properties:
@@ -1750,7 +1754,7 @@ components:
             - $ref: "#/components/schemas/DateTimeRangeRequestForDataType"
       additionalProperties: false
       discriminator:
-        propertyName: RequestForDataType
+        propertyName: requestForDataType
         mapping:
           UseNetworkDateTimeRequestForDataType: "#/components/schemas/UseNetworkDateTimeRequestForDataType"
           DateTimeRangeRequestForDataType: "#/components/schemas/DateTimeRangeRequestForDataType"
@@ -1779,23 +1783,16 @@ components:
       type: object
       properties:
         startDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g.
-            2024-03-21T19:25:04Z
-          format: date-time
+          $ref: "#/components/schemas/UtcDateTime"
         endDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g.
-            2024-03-21T19:25:04Z
-          format: date-time
-          nullable: true
+          $ref: "#/components/schemas/UtcDateTime"
       additionalProperties: false
+    UtcDateTime:
+      type: string
+      description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
+        2024-03-21T19:25:04+00:00.000Z
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+      example: 2024-03-21T19:25:04+00:00.000Z
     TestCertificateRequestsListApiResult:
       type: object
       properties:

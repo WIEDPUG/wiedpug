@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -61,7 +62,7 @@ namespace Wiedpug.Domain.Entities
         public required Weight GainLossOfInvoiceMass { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public required double MoistureContentPercentage { get; set; }
 
         /// <summary>
@@ -72,7 +73,7 @@ namespace Wiedpug.Domain.Entities
         /// Test House - The Regain certified by the Test House.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public required double RegainPercentage { get; set; }
 
         /// <summary>
@@ -104,10 +105,6 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateIssued { get; set; }
+        public required UtcDate DateIssued { get; set; }
     }
 }

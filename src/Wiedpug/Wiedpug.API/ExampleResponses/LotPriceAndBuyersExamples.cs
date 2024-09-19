@@ -23,8 +23,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = "2020-07-15",
-                            DateTransmissionFileCreated = "2016-01-17",
+                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -43,7 +43,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 SoftwareVersion =  1082
                             },
-                            Abn = "72001967184"
+                            Abn = 72001967184
                         },
                         Lots = new List<Lot>
                         {
@@ -61,12 +61,12 @@ namespace Wiedpug.API.ExampleResponses
                                         Country = CountryCode.AU,
                                         CentreCode =  CentreCodeAustralia.A
                                      },
-                                     SaleDate = "2017-01-19",
+                                     SaleDate = new UtcDate{ Date="2017-01-10"},
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
                                      CatalogueSection = CatalogueSection.FLC,
                                      IsFinalCatalogue = true,
-                                    Season = 16,
+                                    Season = new Season{SeasonValue= 16},
                                     SaleIdentity = new SaleIdentity { SellingCentreType = "M", SaleNumber = 18 },
                                     InvoicingOrganisation = new Organisation
                                     {
@@ -84,7 +84,7 @@ namespace Wiedpug.API.ExampleResponses
                                  {
                                      new LotPriceAndBuyerDetail
                                      {
-                                         LotIdentity = "123456",
+                                         LotIdentity = new LotIdentity{Identity="123456" },
                                          CostPerWeightUnit = 110,
                                          BuyingOrganisation = new Organisation
                                          {
@@ -92,11 +92,11 @@ namespace Wiedpug.API.ExampleResponses
 
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
-                                         AuctionSaleTime = "2024-05-22T19:25:04Z"
+                                         AuctionSaleTime = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                                      },
                                      new LotPriceAndBuyerDetail
                                      {
-                                         LotIdentity = "123468",
+                                         LotIdentity = new LotIdentity{Identity="123468" },
                                          CostPerWeightUnit = 150,
                                          BuyingOrganisation = new Organisation
                                          {
@@ -104,12 +104,12 @@ namespace Wiedpug.API.ExampleResponses
 
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
-                                         AuctionSaleTime = "2024-05-22T19:30:00Z"
+                                         AuctionSaleTime = new UtcDateTime{DateTime="2024-05-22T19:30:00Z"}
                                      }
                                  },
                                  RecordSaleStatus = new RecordSaleStatus
                                  {
-                                     FileCreationDateTime = "2024-05-22T20:30:00Z",
+                                     FileCreationDateTime = new UtcDateTime{DateTime="2024-05-22T20:30:00Z"},
                                      TotalLotsOffered = 2,
                                      PercentageSold = 100,
                                      AreTransfersCompleted = true
@@ -131,8 +131,8 @@ namespace Wiedpug.API.ExampleResponses
                 new WoolSaleRequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -149,7 +149,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 WoolSaleRequestForDataType = new WoolSaleRequestForDataType
                 {
@@ -159,13 +159,13 @@ namespace Wiedpug.API.ExampleResponses
                         SaleNumber = 18
                     },
                     OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                    SaleDateRequested = "2023-10-31",
+                    SaleDateRequested = new UtcDate{ Date="2023-10-31"},
                     WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                    Season = 23
+                    Season = new Season{SeasonValue= 23}
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -186,8 +186,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = "2020-07-15",
-                            DateTransmissionFileCreated = "2016-01-17",
+                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -206,7 +206,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.Talman,
                                 SoftwareVersion =  1082
                             },
-                            Abn = "72001967184"
+                            Abn = 72001967184
                         },
                                                 Lots = new List<Lot>
                         {
@@ -220,12 +220,12 @@ namespace Wiedpug.API.ExampleResponses
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
                                      CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
-                                     SaleDate = "2017-01-19",
+                                     SaleDate = new UtcDate{ Date="2017-01-10"},
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
                                      CatalogueSection = CatalogueSection.FLC,
                                      IsFinalCatalogue = true,
-                                    Season = 16,
+                                    Season = new Season{SeasonValue= 16},
                                     SaleIdentity =  new SaleIdentity
                                     {
                                         SellingCentreType = "M",
@@ -245,30 +245,30 @@ namespace Wiedpug.API.ExampleResponses
                                  {
                                      new LotPriceAndBuyerDetail
                                      {
-                                         LotIdentity = "123456",
+                                         LotIdentity = new LotIdentity{Identity="123456" },
                                          CostPerWeightUnit = 110,
                                          BuyingOrganisation = new Organisation
                                          {
                                                                      OrganisationCode = "WWT",
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
-                                         AuctionSaleTime = "2024-05-22T19:25:04Z"
+                                         AuctionSaleTime = new UtcDateTime{DateTime="2024-05-22T19:25:04Z"}
                                      },
                                      new LotPriceAndBuyerDetail
                                      {
-                                         LotIdentity = "123468",
+                                         LotIdentity = new LotIdentity{Identity="123468" },
                                          CostPerWeightUnit = 150,
                                          BuyingOrganisation = new Organisation
                                          {
                                                                      OrganisationCode = "AAT",
                                          },
                                          SaleOutcome = SaleOutcome.Sold,
-                                         AuctionSaleTime = "2024-05-22T19:30:00Z"
+                                         AuctionSaleTime = new UtcDateTime{DateTime="2024-05-22T19:30:00Z"}
                                      }
                                  },
                                  RecordSaleStatus = new RecordSaleStatus
                                  {
-                                     FileCreationDateTime = "2024-05-22T20:30:00Z",
+                                     FileCreationDateTime = new UtcDateTime{DateTime="2024-05-22T20:30:00Z"},
                                      TotalLotsOffered = 2,
                                      PercentageSold = 100,
                                      AreTransfersCompleted = true

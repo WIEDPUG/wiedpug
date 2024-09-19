@@ -18,8 +18,8 @@ namespace Wiedpug.API.ExampleResponses
                 new DarkAndMedullatedFibreRiskVerification() {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -36,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 DarkAndMedullatedFibreRiskDetails = new List<DarkAndMedullatedFibreRiskDetail>
                 {
@@ -95,8 +95,8 @@ namespace Wiedpug.API.ExampleResponses
                     new RequestForData {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -113,7 +113,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.AWTA,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     RequestForDataType = new UseNetworkDateTimeRequestForDataType { IsUsingNetworkDateTime
                     = true }
@@ -135,8 +135,8 @@ namespace Wiedpug.API.ExampleResponses
                         new DarkAndMedullatedFibreRiskVerification{
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = "2020-07-15",
-                            DateTransmissionFileCreated = "2016-01-17",
+                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -153,7 +153,7 @@ namespace Wiedpug.API.ExampleResponses
                                 SoftwareCompany = SoftwareCompany.AWTA,
                                 SoftwareVersion =  1082
                             },
-                            Abn = "72001967184"
+                            Abn = 72001967184
                         },
                         DarkAndMedullatedFibreRiskDetails = new List<DarkAndMedullatedFibreRiskDetail>
                 {

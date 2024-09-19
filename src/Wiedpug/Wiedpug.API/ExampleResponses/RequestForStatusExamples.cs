@@ -16,8 +16,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new Domain.Entities.TransmissionHeader
                 {
-                    DateFormatLastRevised = "2022-07-25",
-                    DateTransmissionFileCreated = "2024-03-21",
+                    DateFormatLastRevised = new UtcDate{ Date="2022-07-25"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2024-03-21"},
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation { 
                                                 OrganisationCode = "AWX", },
@@ -26,7 +26,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 OrganisationCode = "ATW",
                     },
                     VersionNumber = 36,
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForStatusFilters = new List<RequestForStatusFilter>
                 {
@@ -39,10 +39,10 @@ namespace Wiedpug.API.ExampleResponses
                             SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
-                        SaleDateRequested = "2023-10-31",
+                        SaleDateRequested = new UtcDate{ Date="2023-10-31"},
                         IsUsingNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
-                        Season = 23
+                        Season = new Season{SeasonValue= 23}
                     }
                 }
             };
@@ -61,8 +61,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
                     {
-                        DateFormatLastRevised = "2022-07-25",
-                        DateTransmissionFileCreated = "2024-03-21",
+                        DateFormatLastRevised = new UtcDate{ Date="2022-07-25"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2024-03-21"},
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         CurrentReceiver = new Organisation
                         {
@@ -73,7 +73,7 @@ namespace Wiedpug.API.ExampleResponses
                                                     OrganisationCode = "AWX",
                         },
                         VersionNumber = 36,
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     TransmissionResponses = new List<TransmissionResponse>
                     {

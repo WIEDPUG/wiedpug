@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 namespace Wiedpug.Domain.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum DebitOrCreditFlag
+    public enum DebitOrCreditType
     {
-        Debit,
+        DR = 0,
 
-        Credit
+        CR
     }
 }

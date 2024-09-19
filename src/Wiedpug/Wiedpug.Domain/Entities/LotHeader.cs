@@ -8,6 +8,7 @@ using Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate;
 using Wiedpug.Domain.Aggregates.LotPriceAndBuyersAggregate;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 using static System.Net.WebRequestMethods;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -33,16 +34,10 @@ namespace Wiedpug.Domain.Entities
         /// The new value that the Lot Identity is to be changed to.
         /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(6)]
-        public required string LotIdentity { get; set; } // FIELD NUMBER 2 - Lot Identity - Start: 3, Size: 6, Data Type: AN, Justification: R, Requirement Designator: M
+        public required LotIdentity LotIdentity { get; set; } // FIELD NUMBER 2 - Lot Identity - Start: 3, Size: 6, Data Type: AN, Justification: R, Requirement Designator: M
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int NumberOfBales { get; set; } // FIELD NUMBER 3 - Bales - Start: 9, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
+        public required NumberOfBales NumberOfBales { get; set; } // FIELD NUMBER 3 - Bales - Start: 9, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
         /// <summary>
         /// Total weight of the wool. In transmissions from Test Houses, Gross 
@@ -74,7 +69,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// The page of the printed auction catalogue on which the lot details will appear
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? CataloguePageNumber { get; set; } // FIELD NUMBER 7 - Catalogue Page Number - Start: 25, Size: 3, Data Type: N, Justification: R, Requirement Designator: C
 
         /// <summary>
@@ -137,7 +132,6 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(4)]
         public ReportingFlag? ReportingFlag { get; set; } // FIELD NUMBER 15 - Reporting Flag - Start: 43, Size: 1, Data Type: ID, Justification: F, Requirement Designator: C
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
         public int? FirstOfferSeason { get; set; } // FIELD NUMBER 16 - First Offer Season - Start: 44, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
         /// <summary>
@@ -171,7 +165,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         [MinLength(1)]
         [MaxLength(6)]
-        public string? FirstOfferLotIdentity { get; set; } // FIELD NUMBER 18 - First Offer Lot Identity - Start: 50, Size: 6, Data Type: AN, Justification: R, Requirement Designator: C
+        public LotIdentity? FirstOfferLotIdentity { get; set; } // FIELD NUMBER 18 - First Offer Lot Identity - Start: 50, Size: 6, Data Type: AN, Justification: R, Requirement Designator: C
 
         /// <summary>
         /// The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.
@@ -222,11 +216,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? CoreTestSamplingDate { get; set; } // FIELD NUMBER 3 - Core Test Sampling Date - Start: 4, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
+        public UtcDate? CoreTestSamplingDate { get; set; } // FIELD NUMBER 3 - Core Test Sampling Date - Start: 4, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
 
         /// <summary>
         /// This field provides for additional comments relating to the information contained in the Wool Description field.
@@ -289,7 +279,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// This is the total number of bales with a Reweigh Gross Kg over 204kg.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? NumberOfOverweightBales { get; set; } // FIELD NUMBER 12 - Number of Overweight Bales - Start: 79, Size: 2, Data Type: N, Justification: R, Requirement Designator: C
 
     }

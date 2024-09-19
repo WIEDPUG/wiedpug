@@ -26,8 +26,7 @@ namespace Wiedpug.Domain.Entities
         public required Organisation SellingOrganisation { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public required int Season { get; set; }
+        public required Season Season { get; set; }
 
         /// <summary>
         /// A group field of SellingCentre/Type and Sale Number
@@ -105,14 +104,8 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(6)]
         public required string LotIdentityOrGroupNumber { get; set; }
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(4)]
-        public required int NumberOfBales { get; set; }
+        public required NumberOfBales NumberOfBales { get; set; }
 
         /// <summary>
         /// Total weight of the wool. In transmissions from Test Houses, Gross 
@@ -142,9 +135,7 @@ namespace Wiedpug.Domain.Entities
         public Weight? RegrabSampleWeight { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(4)]
+        [Range(-9999,9999)]
         public required int TotalBalesInLot { get; set; }
 
         [Required]
@@ -170,9 +161,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(11)]
         public CertificateIdentity? CertificateIdentity { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(6)]
+        [Range(-999999,999999)]
         public int? RenumbersFirstBaleNumber { get; set; }
 
         /// <summary>
@@ -214,20 +203,12 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? DateDeliveryRequired { get; set; }
+        public UtcDate? DateDeliveryRequired { get; set; }
 
         /// <summary>
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? DatePickup { get; set; }
+        public UtcDate? DatePickup { get; set; }
 
     }
 

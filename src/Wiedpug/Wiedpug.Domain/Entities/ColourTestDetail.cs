@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -40,13 +41,13 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Colour X value.
         /// </summary>
-                [RegularExpression(RegexPattern.DECIMAL_3_1)]
+                [Range(-999.9,999.9)]
         public double? ColourX { get; set; } // FIELD NUMBER 7 - Colour – X - Start: 24, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
         /// <summary>
         /// Colour Y value.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourY { get; set; } // FIELD NUMBER 8 - Colour – Y - Start: 27, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
         /// <summary>
@@ -54,61 +55,61 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// This measurement is used in New Zealand, but not in Australia.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourZ { get; set; } // FIELD NUMBER 9 - Colour – Z - Start: 30, Size: 3, Data Type: D1, Justification: R, Requirement Designator: M
 
         /// <summary>
         /// Average yellowness, Colour Y – Colour Z. The field has an optional leading sign.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYZ { get; set; } // FIELD NUMBER 10 - Colour – Y – Z - Start: 33, Size: 4, Data Type: D1, Justification: R, Requirement Designator: C
 
         /// <summary>
         /// Min – The lowest value in a range of Colour-X values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourXMinimum { get; set; }
 
         /// <summary>
         /// Max – The highest value in a range of Colour-X values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourXMaximum { get; set; }
 
         /// <summary>
         /// Min – The lowest value in a range of Colour-Y values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYMinimum { get; set; }
 
         /// <summary>
         /// Max – The highest value in a range of Colour-Y values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYMaximum { get; set; }
 
         /// <summary>
         /// Min – The lowest value in a range of Colour-Z values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourZMinimum { get; set; }
 
         /// <summary>
         /// Max – The highest value in a range of Colour-Z values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourZMaximum { get; set; }
 
         /// <summary>
         /// Min – The lowest value in a range of Colour-Y-Z values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYZMinimum { get; set; }
 
         /// <summary>
         /// Max – The highest value in a range of Colour-Y-Z values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYZMaximum { get; set; }
 
         [MinLength(1)]
@@ -123,25 +124,25 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Colour X value for scoured wool. 
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourXAsIs { get; set; } // FIELD NUMBER 14 - Colour – X (As–is) - Start: 48, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
         /// <summary>
         /// Colour Y value for scoured wool.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYAsIs { get; set; } // FIELD NUMBER 15 - Colour – Y (As–is) - Start: 51, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
         /// <summary>
         /// Colour Z value for scoured wool.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? ColourZAsIs { get; set; } // FIELD NUMBER 16 - Colour – Z (As–is) - Start: 54, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
         /// <summary>
         /// Colour Y – Colour Z, that is average yellowness for scoured wool.The field has an optional leading sign.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYZAsIs { get; set; } // FIELD NUMBER 17 - Colour – Y – Z (As–is) - Start: 57, Size: 4, Data Type: D1, Justification: R, Requirement Designator: C
 
         [Required]
@@ -155,10 +156,6 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateIssued { get; set; } // FIELD NUMBER 19 - Date Issued - Start: 62, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
+        public required UtcDate DateIssued { get; set; } // FIELD NUMBER 19 - Date Issued - Start: 62, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
     }
 }

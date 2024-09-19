@@ -40,28 +40,28 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max The highest value in a range of Wool Base values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? WoolBase { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? AirflowMean { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? Vmb { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? HardHeadsBase { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        [Range(-999.99,999.99)]
         public double? Yield1 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        [Range(-999.99,999.99)]
         public double? Yield2 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        [Range(-999.99,999.99)]
         public double? Yield3 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        [Range(-999.99,999.99)]
         public double? Yield4 { get; set; }
 
         [MinLength(1)]
@@ -82,13 +82,13 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required ReissueChargeFlag ReissueChargeFlag { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM1 { get; set; }
+        [Range(-999.9,999.9)]
+        public double? Vm1 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM2 { get; set; }
+        [Range(-999.9,999.9)]
+        public double? Vm2 { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
-        public double? VM3 { get; set; }
+        [Range(-999.9,999.9)]
+        public double? Vm3 { get; set; }
     }
 }

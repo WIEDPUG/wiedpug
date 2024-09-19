@@ -29,7 +29,8 @@ public static class CatalogueEndpoints
         ([FromBody] List<Catalogue> model) =>
         {
             //return TypedResults.Created($"/api/Catalogues/{model.ID}", model);
-        })        
+        })
+        .WithName("CreateCatalogues")
         .WithOpenApi(o => new(o)
         {
             ////Uncoment to mark this particular endpoint as Deprecated
@@ -53,7 +54,8 @@ public static class CatalogueEndpoints
         ([FromBody] List<Catalogue> model) =>
             {
                 //return TypedResults.Created($"/api/Catalogues/{model.ID}", model);
-            })        
+            })
+            .WithName("UpdateCatalogues")
         .WithOpenApi(o => new(o)
         {
             Summary = "Transmit Catalogue Updates",
@@ -76,7 +78,8 @@ public static class CatalogueEndpoints
         ([FromBody] List<WoolSaleRequestForData> model) =>
         {
             //return TypedResults.Created($"/api/Catalogues/{model.ID}", model);
-        })        
+        })
+            .WithName("RequestForCatalogues")
         .WithOpenApi(o => new(o)
         {
             Summary = "Request for Data relating to Auction Catalogue, Private Catalogue and Auction Catalogue Updates",

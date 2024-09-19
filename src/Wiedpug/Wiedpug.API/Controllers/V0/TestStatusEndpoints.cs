@@ -23,7 +23,8 @@ public static class TestStatusEndpoints
         ([FromBody] List<TestStatus> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-            })        
+            })
+            .WithName("CreateTestStatus")
         .WithOpenApi(o => new(o)
         {
             Summary = "Test Status",

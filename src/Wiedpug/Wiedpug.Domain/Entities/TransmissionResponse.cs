@@ -5,7 +5,7 @@ namespace Wiedpug.Domain.Entities
 {
     public class TransmissionResponse
     {
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
+        [Range(-9999,9999)]
         public int? RecordNumber { get; set; }
 
         [MinLength(1)]

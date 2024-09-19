@@ -64,6 +64,12 @@ builder.Services.AddSwaggerGen(c => {
     // Register the AllOfSchemaFilter
     //c.SchemaFilter<AllOfSchemaForReferencedFieldSchemaFilter>();
 
+    // Enable shared referenced filed processing
+    c.SchemaFilter<SharedReferencedFieldSchemaFilter>();
+
+    // Enable double type processing
+    //c.SchemaFilter<DoubleFieldSchemaFilter>();
+
     // Enable discriminators
     c.SchemaFilter<DiscriminatorFilter>();
 
@@ -128,6 +134,8 @@ versionedGroup.MapStatementsEndpoints();
 versionedGroup.MapTextsEndpoints();
 
 versionedGroup.MapLotPriceAndBuyerEndpoints();
+
+versionedGroup.MapKeysEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

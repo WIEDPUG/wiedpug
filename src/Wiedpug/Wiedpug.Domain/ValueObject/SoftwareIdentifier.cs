@@ -15,7 +15,7 @@ namespace Wiedpug.Domain.ValueObject
         /// Version no. e.g. 2400
         /// </summary>      
         /// 
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
+        [Range(-9999,9999)]
         public int? SoftwareVersion { get; set; }
 
         [MinLength(1)]

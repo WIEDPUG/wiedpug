@@ -24,7 +24,7 @@ namespace Wiedpug.Domain.ValueObject
         ///
         /// Max The highest value in a range of Wool Base values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double Woolbase {  get; set; }
 
         [Required]

@@ -25,7 +25,8 @@ public static class RequestForStatusEndpoints
         ([FromBody] RequestForStatus model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-            })        
+            })
+            .WithName("RequestForStatus")
         .WithOpenApi(o => new(o)
         {
             Summary = "Request for Status",

@@ -13,24 +13,19 @@ namespace Wiedpug.Domain.Entities
         public required Organisation Client { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [Range(-999999,999999)]
         public required int ClientCode { get; set; }
 
         /// <summary>
         /// The period ending date of the statement
-        ///
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string StatementDate { get; set; }
+        public required UtcDate StatementDate { get; set; }
 
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlagCurrent { get; set; }
+        public required DebitOrCreditType DebitOrCreditTypeCurrent { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -40,7 +35,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag30 { get; set; }
+        public required DebitOrCreditType DebitOrCreditType30 { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -50,7 +45,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag60 { get; set; }
+        public required DebitOrCreditType DebitOrCreditType60 { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -60,7 +55,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag90 { get; set; }
+        public required DebitOrCreditType DebitOrCreditType90 { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -70,7 +65,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag90Plus { get; set; }
+        public required DebitOrCreditType DebitOrCreditType90Plus { get; set; }
 
         [Required]
         [MinLength(6)]

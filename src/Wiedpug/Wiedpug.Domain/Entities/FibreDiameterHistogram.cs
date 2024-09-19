@@ -1,10 +1,13 @@
-﻿namespace Wiedpug.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+using Wiedpug.Domain.ValueObject;
+
+namespace Wiedpug.Domain.Entities
 {
     public class FibreDiameterHistogram
     {
         public FibreDiameterHistogramHeader? FibreDiameterHistogramHeader { get; set; } //31
 
-        public List<FibreDiameterHistogramDetail>? FibreDiameterHistogramDetails { get; set; } //32A
+        public List<FibreDiameterHistogramDetailMeasurement>? FibreDiameterHistogramDetailMeasurements { get; set; }
 
     }
 }

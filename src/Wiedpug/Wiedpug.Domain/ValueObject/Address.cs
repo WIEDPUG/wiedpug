@@ -54,7 +54,7 @@ namespace Wiedpug.Domain.ValueObject
         public string? AdministrativeArea { get; set; }
 
         [MinLength(1)]
-        [MaxLength(20)]
+        [MaxLength(4)]
         public string? Postcode { get; set; }
 
         /// <summary>

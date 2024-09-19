@@ -34,20 +34,11 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(8)]
         public required Organisation Client { get; set; }
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int NumberOfBales { get; set; }
+        public required NumberOfBales NumberOfBales { get; set; }
 
-        /// <summary>
-        /// This field is to be always transmitted in upper case.
-        /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(15)]
-        public required string BaleDescription { get; set; }
+        public required BaleDescription BaleDescription { get; set; }
 
         /// <summary>
         /// The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.
@@ -57,7 +48,7 @@ namespace Wiedpug.Domain.Entities
         /// Max The highest value in a range of Wool Base values
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public required double WoolBase { get; set; }
 
         /// <summary>
@@ -119,9 +110,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// The new value that the Lot Identity is to be changed to.
         /// </summary>
-        [MinLength(1)]
-        [MaxLength(6)]
-        public string? LotIdentityFrom { get; set; }
+        public LotIdentity? LotIdentityFrom { get; set; }
 
         /// <summary>
         /// This is a compound name for lot number and lot suffix, where the lot 
@@ -142,6 +131,6 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(1)]
         [MaxLength(6)]
-        public string? LotIdentityTo { get; set; }
+        public LotIdentity? LotIdentityTo { get; set; }
     }
 }

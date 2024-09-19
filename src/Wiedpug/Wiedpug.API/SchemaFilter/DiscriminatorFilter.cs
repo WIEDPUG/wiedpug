@@ -26,7 +26,7 @@ public class DiscriminatorFilter : ISchemaFilter
 
             schema.Discriminator = new OpenApiDiscriminator
             {
-                PropertyName = "Country",
+                PropertyName = "country",
                 Mapping = new Dictionary<string, string>
                 {
                         { "AU", "#/components/schemas/CentreCodeAustralia" },
@@ -63,7 +63,7 @@ public class DiscriminatorFilter : ISchemaFilter
         {
             schema.Discriminator = new OpenApiDiscriminator
             {
-                PropertyName = "RequestForDataType",
+                PropertyName = "requestForDataType",
                 Mapping = new Dictionary<string, string>
                 {
                         { "UseNetworkDateTimeRequestForDataType", "#/components/schemas/UseNetworkDateTimeRequestForDataType" },

@@ -29,6 +29,7 @@ namespace Wiedpug.Domain.Shared.Constants
         public const string NUMBER_8_DIGITS = @"-?\d{1,8}";
         public const string NUMBER_9_DIGITS = @"-?\d{1,9}";
         public const string NUMBERS = @"^[0-9]+$";
+        public const string ABN_NUMBER_11_DIGITS = @"^\d{11}";
         /// <summary>
         /// Total 4 digits, 2 digits after the decimal point
         /// </summary>

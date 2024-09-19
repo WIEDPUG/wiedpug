@@ -20,19 +20,11 @@ namespace Wiedpug.Domain.Entities
         /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
         /// </summary>
         [Required]
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public required string StartDateTimeStatusRequest { get; set; }
+        public required UtcDateTime StartDateTimeStatusRequest { get; set; }
 
         /// <summary>
         /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
         /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public string? EndDateTimeStatusRequest { get; set; }
+        public UtcDateTime? EndDateTimeStatusRequest { get; set; }
     }    
 }

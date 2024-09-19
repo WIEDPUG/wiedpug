@@ -23,9 +23,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(8)]
         public required Organisation Client { get; set; }
 
-        [MinLength(1)]
-        [MaxLength(2)]
-        public int? Season { get; set; }
+        public Season? Season { get; set; }
 
         /// <summary>
         /// A group field of SellingCentre/Type and Sale Number
@@ -103,12 +101,8 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(8)]
         public string? ClientCrossReference { get; set; }
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int NumberOfBales { get; set; }
+        public required NumberOfBales NumberOfBales { get; set; }
 
         /// <summary>
         /// Total weight of the wool. In transmissions from Test Houses, Gross 

@@ -6,26 +6,12 @@ using Wiedpug.Domain.ValueObject;
 namespace Wiedpug.Domain.Entities
 {
     public class TransmissionHeader
-    {
-        /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
-        /// </summary>        
+    {         
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateFormatLastRevised { get; set; }
+        public required UtcDate DateFormatLastRevised { get; set; }
 
-        /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
-        /// </summary>
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateTransmissionFileCreated { get; set; }
+        public required UtcDate DateTransmissionFileCreated { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -52,7 +38,7 @@ namespace Wiedpug.Domain.Entities
         /// The version number of the WIEDPUG Handbook that the transmission relates to
         /// Two digits. e.g. 99
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? VersionNumber { get; set; }
 
         [MinLength(1)]
@@ -60,12 +46,10 @@ namespace Wiedpug.Domain.Entities
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
         /// <summary>
-        /// Australian Business Number, 11 digits string
+        /// Australian Business Number, 11 digits
         /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(11)]
-        [RegularExpression(RegexPattern.NUMBERS)]
-        public required string Abn { get; set; }
+        [Range(10000000000,99999999999)]
+        public required long Abn { get; set; }
     }
 }

@@ -20,8 +20,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -38,7 +38,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                         TransferConfig = new TransferConfig
                         {
@@ -50,14 +50,14 @@ namespace Wiedpug.API.ExampleResponses
                     {
                             WoolSaleHeaderLot = new WoolSaleHeaderLot
                                 {
-                                    Season = 16,
+                                    Season = new Season{SeasonValue= 16},
                                     SaleIdentity =new SaleIdentity
                 {
                     SellingCentreType = "M",
                     SaleNumber = 18
                 },
                                     CentreStorage = new Centre {Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A},
-                                    SaleDate = "2017-01-19",
+                                    SaleDate = new UtcDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     InvoicingOrganisation = new Organisation
@@ -75,10 +75,10 @@ namespace Wiedpug.API.ExampleResponses
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = "2017-01-24",
+                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency{ 
                                         Value = 0.245,
-                                        CurrencyUnit = CurrencyUnit.AUD
+                                        CurrencyCode = CurrencyCode.AUD
                                     },
                                     PenaltyInterestRate = 11.35,
                                 },
@@ -86,20 +86,20 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 new LotPaymentDetail
                                 {
-                                    LotIdentity = "123256",
+                                    LotIdentity = new LotIdentity{Identity="123456" },
                                     LotLastCost = new Currency{ 
                                         Value = 23.45,
-                                        CurrencyUnit = CurrencyUnit.AUD
+                                        CurrencyCode = CurrencyCode.AUD
                                     },
 
                                 }
                             },
                             PaymentSummary = new PaymentSummary
                             {
-                                LastCostPaid =new Currency { Value = 67.00, CurrencyUnit = CurrencyUnit.AUD },
-                                DiscountAmount=new Currency { Value = 23.00, CurrencyUnit = CurrencyUnit.AUD },
-                                NetAmountPaid=new Currency { Value = 77.00, CurrencyUnit = CurrencyUnit.AUD },
-                                DatePaymentMade="2024-05-24"
+                                LastCostPaid =new Currency { Value = 67.00, CurrencyCode = CurrencyCode.AUD },
+                                DiscountAmount=new Currency { Value = 23.00, CurrencyCode = CurrencyCode.AUD },
+                                NetAmountPaid=new Currency { Value = 77.00, CurrencyCode = CurrencyCode.AUD },
+                                DatePaymentMade= new UtcDate{Date="2024-05-24" }
                             }
 
                     }
@@ -125,8 +125,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -143,11 +143,11 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -168,8 +168,8 @@ namespace Wiedpug.API.ExampleResponses
                         {
                                                 TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -186,7 +186,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     PaymentAdviceDetails = new List<PaymentAdviceDetail>
                 {
@@ -194,14 +194,14 @@ namespace Wiedpug.API.ExampleResponses
                     {
                                 WoolSaleHeaderLot = new WoolSaleHeaderLot
                                 {
-                                    Season = 16,
+                                    Season = new Season{SeasonValue= 16},
                                     SaleIdentity = new SaleIdentity
                 {
                     SellingCentreType = "M",
                     SaleNumber = 18
                 },
                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
-                                    SaleDate = "2017-01-19",
+                                    SaleDate = new UtcDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     InvoicingOrganisation = new Organisation
@@ -225,11 +225,11 @@ namespace Wiedpug.API.ExampleResponses
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = "2017-01-24",
+                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value = 0.245,
-                                        CurrencyUnit = CurrencyUnit.USD,
+                                        CurrencyCode = CurrencyCode.USD,
                                     },
                                     PenaltyInterestRate = 11.35,
                                 },
@@ -237,8 +237,8 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 new LotPaymentDetail
                                 {
-                                    LotIdentity = "123256",
-                                    LotLastCost = new Currency { Value = 23.45, CurrencyUnit = CurrencyUnit.AUD }
+                                    LotIdentity = new LotIdentity{Identity="123456" },
+                                    LotLastCost = new Currency { Value = 23.45, CurrencyCode = CurrencyCode.AUD }
 
                                 }
                             },
@@ -246,14 +246,14 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 LastCostPaid =new Currency{
                                                 Value = 67.00,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
                                 DiscountAmount=new Currency{
                                                 Value = 23.00,
-                                                CurrencyUnit =CurrencyUnit.AUD
+                                                CurrencyCode =CurrencyCode.AUD
                                             },
-                                NetAmountPaid=new Currency { Value = 77.00, CurrencyUnit = CurrencyUnit.AUD },
-                                DatePaymentMade="2024-05-24"
+                                NetAmountPaid=new Currency { Value = 77.00, CurrencyCode = CurrencyCode.AUD },
+                                DatePaymentMade=new UtcDate{Date="2024-05-24" }
                             }
 
                     }

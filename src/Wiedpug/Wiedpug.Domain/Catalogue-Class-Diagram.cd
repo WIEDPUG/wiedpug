@@ -51,10 +51,10 @@
     <ShowAsAssociation>
       <Property Name="LotHeader" />
       <Property Name="EncryptedLotHeaderAwexData" />
-      <Property Name="CatalogueLotDescription" />
+      <Property Name="TestDetail" />
       <Property Name="ColourTestDetail" />
       <Property Name="LengthAndStrengthTestDetail" />
-      <Property Name="TestDetail" />
+      <Property Name="CatalogueLotDescription" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="LotHeaderPricings" />
@@ -74,22 +74,19 @@
   <Class Name="Wiedpug.Domain.Entities.CatalogueLotDescription" Collapsed="true">
     <Position X="26.5" Y="15.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAACgAAAABAACAAAAAAAAAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAACgACAABAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Entities\CatalogueLotDescription.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogram" Collapsed="true">
     <Position X="12.25" Y="19.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\FibreDiameterHistogram.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="FibreDiameterHistogramHeader" />
     </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="FibreDiameterHistogramDetails" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.InterlotComponentBale" Collapsed="true">
     <Position X="12.75" Y="14.5" Width="4" />
@@ -101,7 +98,7 @@
   <Class Name="Wiedpug.Domain.Entities.LotHeader" Collapsed="true">
     <Position X="26.25" Y="18" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIADAMAEAwxgAAKCAgAAoAAAAESCAgAEAGAAIIQIAA=</HashCode>
+      <HashCode>AAoADAMAEAwxgAAKCAgAAoCAAAESCAgAEAGAAIIQIAA=</HashCode>
       <FileName>Entities\LotHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -122,15 +119,8 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="30.75" Y="19.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogramDetail" Collapsed="true">
-    <Position X="11.25" Y="17.75" Width="3" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\FibreDiameterHistogramDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogramHeader" Collapsed="true">
@@ -209,7 +199,7 @@
   <Class Name="Wiedpug.Domain.Entities.TestDetail" Collapsed="true">
     <Position X="13.5" Y="15.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAECQEACwAAQAAgUAQAARAAAACYAAAAAgEAQAIQAA=</HashCode>
+      <HashCode>AAAAECQEACwAAQAAgUAQAARAAAAAYAAAAAgEAQAIQIA=</HashCode>
       <FileName>Entities\TestDetail.cs</FileName>
     </TypeIdentifier>
   </Class>

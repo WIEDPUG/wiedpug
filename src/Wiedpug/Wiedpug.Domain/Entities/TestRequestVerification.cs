@@ -41,25 +41,19 @@ namespace Wiedpug.Domain.Entities
         /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
         /// 
         /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
-        /// 
-        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? CoreTestSamplingDate { get; set; }
+        public UtcDate? CoreTestSamplingDate { get; set; }
 
         /// <summary>
         /// Number of core samples taken from the bale.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? CoresPerBale { get; set; }
 
         /// <summary>
         /// Number of grab samples taken from each bale
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? GrabsPerBale { get; set; }
 
         /// <summary>
@@ -78,7 +72,7 @@ namespace Wiedpug.Domain.Entities
         /// Required numeric field for hash total.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
+        [Range(-99999999,99999999)]
         public required int HashTotal { get; set; }
 
         /// <summary>
@@ -156,7 +150,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
-        public bool? IsOFDATestRequired { get; set; }
+        public bool? IsOfdaTestRequired { get; set; }
 
         /// <summary>
         /// A boolean value to indicate whether Dark And Medullated Fibre Test is required.

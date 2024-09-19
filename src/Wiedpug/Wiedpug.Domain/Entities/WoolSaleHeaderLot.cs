@@ -8,12 +8,8 @@ namespace Wiedpug.Domain.Entities
 {
     public class WoolSaleHeaderLot
     {
-        /// <summary>
-        /// Two digits e.g. 99
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public required int Season { get; set; }
+        public required Season Season { get; set; }
 
         /// <summary>
         /// A group field of SellingCentre/Type and Sale Number
@@ -45,17 +41,12 @@ namespace Wiedpug.Domain.Entities
         [MinLength(1)]
         [MaxLength(5)]
         public required Centre CentreStorage { get; set; }
-
+  
         /// <summary>
         /// The date on which the wool was sold.
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
         /// </summary>    
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string SaleDate { get; set; }
+        public required UtcDate SaleDate { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -115,7 +106,7 @@ namespace Wiedpug.Domain.Entities
         /// Invoice number of the credit
         /// 
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
+        [Range(-99999999,99999999)]
         public string? InvoiceNumber { get; set; }
 
 
@@ -209,38 +200,21 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(15)]
         public string? StorageDescription { get; set; } // FIELD NUMBER 4 - Storage Description - Start: 8, Size: 15, Data Type: AN, Justification: L, Requirement Designator: O
 
-        /// <summary>
-        /// The date on which payment is due. Also known as Prompt Date.
-        /// 
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
-        /// </summary>
-        /// 
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? PaymentDueDate { get; set; }
+        public UtcDate? PaymentDueDate { get; set; }
 
         /// <summary>
         /// Total 4 digits with 2 digits after the decimal point. e.g. 23.76
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? DiscountRate { get; set; } // FIELD NUMBER 6 - Discount Rate - Start: 30, Size: 4, Data Type: D2, Justification: F, Requirement Designator: M
 
         /// <summary>
         ///  2 digits number. e.g. 23
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? MaximumDaysDiscount { get; set; } // FIELD NUMBER 7 - Maximum Days Discount - Start: 34, Size: 2, Data Type: N, Justification: R, Requirement Designator: M
 
-        /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
-        /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? DateStorageChargeCommences { get; set; } // FIELD NUMBER 8 - Date Storage Charge Commences - Start: 36, Size: 6, Data Type: Date, Justification: F, Requirement Designator: M
+        public UtcDate? DateStorageChargeCommences { get; set; } // FIELD NUMBER 8 - Date Storage Charge Commences - Start: 36, Size: 6, Data Type: Date, Justification: F, Requirement Designator: M
 
         [MinLength(7)]
         [MaxLength(7)]
@@ -249,19 +223,10 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Total 4 digits with 2 digits after the decimal point. e.g. 23.76
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? PenaltyInterestRate { get; set; } // FIELD NUMBER 10 - Penalty Interest Rate - Start: 46, Size: 4, Data Type: D2, Justification: R, Requirement Designator: M
 
-        /// <summary>
-        /// The first date on which the wool is available for purchase.
-        /// 
-        /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21. (YYYY-MM-DD)
-        /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? LotAvailableDate { get; set; } // FIELD NUMBER 11 - Lot Available Date - Start: 50, Size: 6, Data Type: Date, Justification: F, Requirement Designator: O
+        public UtcDate? LotAvailableDate { get; set; } // FIELD NUMBER 11 - Lot Available Date - Start: 50, Size: 6, Data Type: Date, Justification: F, Requirement Designator: O
 
         /// <summary>
         /// The total (extended) amount of Post Sale Charge Rebate for the Lot.
@@ -276,34 +241,11 @@ namespace Wiedpug.Domain.Entities
 
         // Previous WoolSaleHeader - NonAuction
 
-        /// <summary>
-        /// Date and Time value in ISO 8601 standard. e.g. 2024-03-21T19:25:04.000Z
-        /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(24)]
-        public string? CatalogueAvailabilityDateTime { get; set; } // FIELD NUMBER 4 - Catalogue Availability Time - Start: 10, Size: 4, Data Type: Time, Justification: L, Requirement Designator: O
+        public UtcDateTime? CatalogueAvailabilityDateTime { get; set; } // FIELD NUMBER 4 - Catalogue Availability Time - Start: 10, Size: 4, Data Type: Time, Justification: L, Requirement Designator: O
 
-        /// <summary>
-        /// Refers to when the sale starts
-        /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z
-        /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(24)]
-        public string? SaleStartDateTime { get; set; } // FIELD NUMBER 5 - Sale Start Date - Start: 14, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
+        public UtcDateTime? SaleStartDateTime { get; set; } // FIELD NUMBER 5 - Sale Start Date - Start: 14, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
-        /// <summary>
-        /// Refers to when the tender/offer sale stops.
-        /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z
-        /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(24)]
-        public string? SaleEndDateTime { get; set; } // FIELD NUMBER 7 - Sale End Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
+        public UtcDateTime? SaleEndDateTime { get; set; } // FIELD NUMBER 7 - Sale End Date - Start: 24, Size: 6, Data Type: Date, Justification: L, Requirement Designator: O
 
         [MinLength(1)]
         [MaxLength(2)]
@@ -324,14 +266,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(5)]
         public bool? IsReservePriceDisplayed { get; set; } // FIELD NUMBER 11 - Reserve Price Display Flag - Start: 37, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
-        /// <summary>
-        /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04.000Z
-        /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(24)]
-        public string? TenderSaleReplyDateTime { get; set; }
+        public UtcDateTime? TenderSaleReplyDateTime { get; set; }
 
 
 

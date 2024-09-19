@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -37,7 +38,7 @@ namespace Wiedpug.Domain.Entities
         /// The mean length of a staple from tip to base. At least 60 staples are measured for each test lot.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public required int StapleLength { get; set; }
 
         /// <summary>
@@ -45,7 +46,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Minimum - the lowest value in a range of staple length values.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? StapleLengthMinimum { get; set; }
 
         /// <summary>
@@ -53,7 +54,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Maximum - the highest value in a range of staple length values.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? StapleLengthMaximum { get; set; }
 
         /// <summary>
@@ -63,7 +64,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Minimum - The lowest value in a range of staple strength values 
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? StapleStrengthMinimum { get; set; }
 
         /// <summary>
@@ -73,7 +74,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Maximum - The highest value in a range of staple strength value
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? StapleStrengthMaximum { get; set; }
 
 
@@ -81,7 +82,7 @@ namespace Wiedpug.Domain.Entities
         /// Staple length coefficient of variation. This is a measurement of the staple length variability and is reported as a percentage.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public required int StapleLengthCvPercentage { get; set; }
 
         /// <summary>
@@ -90,7 +91,7 @@ namespace Wiedpug.Domain.Entities
         /// The average strength is expressed in Newtons per kilotex.Individual staples range in strength from 0 to 100 Newtons per kilotex
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public required int StapleStrength { get; set; }
 
         /// <summary>
@@ -99,7 +100,7 @@ namespace Wiedpug.Domain.Entities
         /// Tip - Percentage of wool staple with a tip section position of break.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public required int PositionOfBreakPercentageTip { get; set; }
 
         /// <summary>
@@ -108,7 +109,7 @@ namespace Wiedpug.Domain.Entities
         /// Middle - Percentage of wool staples with a middle section position of break.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public required int PositionOfBreakPercentageMiddle { get; set; }
 
         /// <summary>
@@ -117,7 +118,7 @@ namespace Wiedpug.Domain.Entities
         /// Base - Percentage of wool staples with a base section position of break.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public required int PositionOfBreakPercentageBase { get; set; }
 
         /// <summary>
@@ -128,7 +129,7 @@ namespace Wiedpug.Domain.Entities
         /// A check against the Date Issued field in the Length and Strength Details record will determine which TEAM formula has been used.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? Team3Hauteur { get; set; }
 
         [MinLength(1)]
@@ -158,37 +159,32 @@ namespace Wiedpug.Domain.Entities
         /// Any Length and Strength certificate for NZ Crossbred wool will include a calculated Barbe value based on the 2016 calculation.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? ExpectedBarbe { get; set; }
 
         /// <summary>
         /// Coefficient of Variation of Hauteur. NOTE: Refer to note in Team3Hauteur.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? Team3HauteurCvPercentage { get; set; }
 
         /// <summary>
         /// Romaine. NOTE: Refer to note in Team3Hauteur.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? Team3RomainePercentage { get; set; }
 
         /// The date the certificate was issued.
         /// 
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [Required]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateIssued { get; set; }
+        public required UtcDate DateIssued { get; set; }
 
         /// <summary>
         /// Average Staple Strength of the lowest 25% of staples measured for Strength.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? StapleStrengthLowest25Percent { get; set; }
     }
 }

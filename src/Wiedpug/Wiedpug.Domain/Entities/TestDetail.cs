@@ -40,13 +40,13 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max The highest value in a range of Wool Base values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? WoolBase { get; set; }
 
         /// <summary>
         /// Average Fibre Diameter – Airflow
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? AirflowMean { get; set; }
 
         /// <summary>
@@ -67,10 +67,10 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// The highest value in a range of vegetable matter base values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? Vmb { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? HardHeadsBase { get; set; }
 
         [Required]
@@ -88,65 +88,65 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// The % of the core sample composed of burrs
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? Vm1 { get; set; }
 
         /// <summary>
         /// The % of the core sample composed of seeds and shive
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? Vm2 { get; set; }
 
         /// <summary>
         /// The % of the core sample composed of hardheads
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? Vm3 { get; set; }
 
         [MinLength(1)]
         [MaxLength(1)]
         public DarkAndMedullatedFibreRisk? DarkAndMedullatedFibreRisk { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? AshContentDryBasis { get; set; }
 
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? AlcoholExtractableMatterDryBasis { get; set; }
 
         /// <summary>
         /// VMB - Minimum value.
         /// </summary>        
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? VmbMinimum { get; set; }
 
         /// <summary>
         /// VMB - Maximum value.
         /// </summary>        
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? VmbMaximum { get; set; }
 
         /// <summary>
         /// Factor for Wool Base.
         /// </summary>        
-        [RegularExpression(RegexPattern.DECIMAL_10_2)]
+        [Range(-99999999.99,99999999.99)]
         public double? FactorWoolBase { get; set; }
 
         /// <summary>
         /// Factor for VMB.
         /// </summary>        
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
+        [Range(-9999999.99,9999999.99)]
         public double? FactorVmb { get; set; }
 
         /// <summary>
         /// Factor for Hard Heads Base.
         /// </summary>        
-        [RegularExpression(RegexPattern.DECIMAL_9_2)]
+        [Range(-9999999.99,9999999.99)]
         public double? FactorHardHeadsBase { get; set; }
 
         /// <summary>
         /// Factor for Airflow Mean. Factor used in combination calculation.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_12_6)]
+        [Range(-999999.999999,999999.999999)]
         public double? FactorAirflowMean { get; set; }
 
         [MinLength(1)]

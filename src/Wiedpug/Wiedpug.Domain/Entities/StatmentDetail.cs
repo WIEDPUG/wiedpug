@@ -52,14 +52,8 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// The date the cost of the item was incurred
-        ///
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? ItemDate { get; set; }
+        public UtcDate? ItemDate { get; set; }
 
         /// <summary>
         /// Goods & Services Tax Amount

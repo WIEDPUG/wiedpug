@@ -27,14 +27,14 @@ namespace Wiedpug.Domain.Entities
         /// Required numeric field for client code.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [Range(-999999,999999)]
         public required int ClientCode { get; set; }
 
         /// <summary>
         /// A number allocated by the test house to identify cost/service level
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
+        [Range(-9999,9999)]
         public required int ChargeCode { get; set; }
 
         [MinLength(1)]
@@ -46,44 +46,28 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? CoreSampleReceived { get; set; }
+        public UtcDate? CoreSampleReceived { get; set; }
 
         /// <summary>
         /// Optional date field for when the L/S sample was received.
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? LsSampleReceived { get; set; }
+        public UtcDate? LsSampleReceived { get; set; }
 
         /// <summary>
         /// Optional date field for when the TRV matched.
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? TrvMatched { get; set; }
+        public UtcDate? TrvMatched { get; set; }
 
         /// <summary>
         /// Optional date field for core sample check test.
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? CoreSampleCheckTest { get; set; }
+        public UtcDate? CoreSampleCheckTest { get; set; }
 
         /// <summary>
         /// Optional enum for L/S retuft required.
@@ -97,11 +81,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? LsRetuftReceived { get; set; }
+        public UtcDate? LsRetuftReceived { get; set; }
 
         /// <summary>
         /// Optional enum for core test recore required.
@@ -112,14 +92,8 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// Optional date field for when the core test recore was received.
-        ///
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? CoreTestRecoreReceived { get; set; }
+        public UtcDate? CoreTestRecoreReceived { get; set; }
     }
 
 

@@ -51,7 +51,7 @@
                       "softwareVersion": 1082,
                       "programName": "NETR"
                     },
-                    "abn": "72001967184"
+                    "abn": 72001967184
                   },
                   "lots": [
                     {
@@ -65,9 +65,9 @@
                           "country": "AU",
                           "centreCode": "A"
                         },
-                        "saleDate": "2017-01-19",
-                        "woolState": "_1",
-                        "packType": "_9",
+                        "saleDate": "2017-01-10",
+                        "woolState": "1",
+                        "packType": "9",
                         "catalogueSection": "FLC",
                         "isFinalCatalogue": true,
                         "invoicingOrganisation": {
@@ -93,7 +93,7 @@
                             "organisationCode": "WWT"
                           },
                           "saleOutcome": 0,
-                          "auctionSaleTime": "2024-05-22T19:25:04Z"
+                          "auctionSaleTime": "2024-03-21T19:25:04Z"
                         },
                         {
                           "lotIdentity": "123468",
@@ -250,7 +250,7 @@
                       "softwareVersion": 1082,
                       "programName": "NETR"
                     },
-                    "abn": "72001967184"
+                    "abn": 72001967184
                   },
                   "woolSaleRequestForDataType": {
                     "saleIdentity": {
@@ -302,7 +302,7 @@
                           "softwareVersion": 1082,
                           "programName": "NETR"
                         },
-                        "abn": "72001967184"
+                        "abn": 72001967184
                       },
                       "lots": [
                         {
@@ -316,9 +316,9 @@
                               "country": "AU",
                               "centreCode": "A"
                             },
-                            "saleDate": "2017-01-19",
-                            "woolState": "_1",
-                            "packType": "_9",
+                            "saleDate": "2017-01-10",
+                            "woolState": "1",
+                            "packType": "9",
                             "catalogueSection": "FLC",
                             "isFinalCatalogue": true,
                             "invoicingOrganisation": {
@@ -519,20 +519,10 @@
         "type": "object",
         "properties": {
           "dateFormatLastRevised": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "dateTransmissionFileCreated": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"
@@ -544,7 +534,8 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "versionNumber": {
-            "pattern": "-?\\d{1,2}",
+            "maximum": 99,
+            "minimum": -99,
             "type": "integer",
             "description": "The version number of the WIEDPUG Handbook that the transmission relates to\r\nTwo digits. e.g. 99",
             "format": "int32",
@@ -554,14 +545,20 @@
             "$ref": "#/components/schemas/SoftwareIdentifier"
           },
           "abn": {
-            "maxLength": 11,
-            "minLength": 1,
-            "pattern": "^[0-9]+$",
-            "type": "string",
-            "description": "Australian Business Number, 11 digits string"
+            "maximum": 99999999999,
+            "minimum": 10000000000,
+            "type": "integer",
+            "description": "Australian Business Number, 11 digits",
+            "format": "int64"
           }
         },
         "additionalProperties": false
+      },
+      "UtcDate": {
+        "type": "string",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
       },
       "CountryCode": {
         "enum": [
@@ -629,7 +626,7 @@
         "additionalProperties": false,
         "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia",
         "discriminator": {
-          "propertyName": "Country",
+          "propertyName": "country",
           "mapping": {
             "AU": "#/components/schemas/CentreCodeAustralia",
             "CN": "#/components/schemas/CentreCodeChina",
@@ -871,7 +868,8 @@
             "$ref": "#/components/schemas/SoftwareCompany"
           },
           "softwareVersion": {
-            "pattern": "-?\\d{1,4}",
+            "maximum": 9999,
+            "minimum": -9999,
             "type": "integer",
             "description": "Version no. e.g. 2400",
             "format": "int32",
@@ -965,10 +963,7 @@
         "type": "object",
         "properties": {
           "season": {
-            "pattern": "-?\\d{1,2}",
-            "type": "integer",
-            "description": "Two digits e.g. 99",
-            "format": "int32"
+            "$ref": "#/components/schemas/Season"
           },
           "saleIdentity": {
             "$ref": "#/components/schemas/SaleIdentity"
@@ -977,12 +972,7 @@
             "$ref": "#/components/schemas/Centre"
           },
           "saleDate": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "The date on which the wool was sold.\r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "woolState": {
             "$ref": "#/components/schemas/WoolState"
@@ -1006,7 +996,8 @@
             "$ref": "#/components/schemas/Currency"
           },
           "invoiceNumber": {
-            "pattern": "-?\\d{1,8}",
+            "maximum": 99999999,
+            "minimum": -99999999,
             "type": "string",
             "description": "Invoice number of the credit",
             "nullable": true
@@ -1056,85 +1047,54 @@
             "nullable": true
           },
           "paymentDueDate": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "The date on which payment is due. Also known as Prompt Date.\r\n\r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDate"
           },
           "discountRate": {
-            "pattern": "^-?\\d{1,2}(\\.\\d{2})?$",
+            "maximum": 99.99,
+            "minimum": -99.99,
             "type": "number",
             "description": "Total 4 digits with 2 digits after the decimal point. e.g. 23.76",
             "format": "double",
-            "nullable": true
+            "nullable": true,
+            "multipleOf": 0.01
           },
           "maximumDaysDiscount": {
-            "pattern": "-?\\d{1,2}",
+            "maximum": 99,
+            "minimum": -99,
             "type": "integer",
             "description": "2 digits number. e.g. 23",
             "format": "int32",
             "nullable": true
           },
           "dateStorageChargeCommences": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)",
-            "format": "date",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDate"
           },
           "storageChargePerBalePerDay": {
             "$ref": "#/components/schemas/StorageChargeCurrency"
           },
           "penaltyInterestRate": {
-            "pattern": "^-?\\d{1,2}(\\.\\d{2})?$",
+            "maximum": 99.99,
+            "minimum": -99.99,
             "type": "number",
             "description": "Total 4 digits with 2 digits after the decimal point. e.g. 23.76",
             "format": "double",
-            "nullable": true
+            "nullable": true,
+            "multipleOf": 0.01
           },
           "lotAvailableDate": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "The first date on which the wool is available for purchase.\r\n\r\nDate value in ISO 8601 standard UTC date format. e.g. 2024-03-21. (YYYY-MM-DD)",
-            "format": "date",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDate"
           },
           "postSaleChargeRebate": {
             "$ref": "#/components/schemas/Currency"
           },
           "catalogueAvailabilityDateTime": {
-            "maxLength": 24,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard. e.g. 2024-03-21T19:25:04.000Z",
-            "format": "date-time",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDateTime"
           },
           "saleStartDateTime": {
-            "maxLength": 24,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Refers to when the sale starts\r\nDate and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
-            "format": "date-time",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDateTime"
           },
           "saleEndDateTime": {
-            "maxLength": 24,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Refers to when the tender/offer sale stops.\r\nDate and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
-            "format": "date-time",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDateTime"
           },
           "saleType": {
             "$ref": "#/components/schemas/SaleType"
@@ -1153,16 +1113,16 @@
             "nullable": true
           },
           "tenderSaleReplyDateTime": {
-            "maxLength": 24,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04.000Z",
-            "format": "date-time",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDateTime"
           }
         },
         "additionalProperties": false
+      },
+      "Season": {
+        "maximum": 99,
+        "minimum": -99,
+        "type": "integer",
+        "format": "int32"
       },
       "SaleIdentity": {
         "required": [
@@ -1178,9 +1138,8 @@
             "description": "The following codes are reserved for current and historical open cry auction selling centres:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; \r\n\r\nN: Napier.\r\n\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; \r\n\r\nAU: Australia; \r\n\r\nB: Brisbane; \r\n\r\nF: Fremantle; \r\n\r\nG: Geelong; \r\n\r\nL: Launceston; \r\n\r\nM: Melbourne; \r\n\r\nN: Newcastle; \r\n\r\nR: Goulburn; \r\n\r\nS: Sydney.\r\n\r\n\r\nThe following codes are allocated for alternative sale types:\r\n            \r\nPS: Private Sales; \r\n\r\nT: Auctions Plus Sales.\r\n            \r\n\r\nPlease contact the WIEDPUG Secretary for the latest list of reserved and allocated codes."
           },
           "saleNumber": {
-            "maxLength": 2,
-            "minLength": 1,
-            "pattern": "-?\\d{1,2}",
+            "maximum": 99,
+            "minimum": -99,
             "type": "integer",
             "format": "int32"
           }
@@ -1236,18 +1195,20 @@
         "type": "object",
         "properties": {
           "value": {
-            "pattern": "^-?\\d{1,10}(\\.\\d{2})?$",
+            "maximum": 9999999999.99,
+            "minimum": -9999999999.99,
             "type": "number",
             "description": "Total up to 12 digits with 2 digits after the decimal point.",
-            "format": "double"
+            "format": "double",
+            "multipleOf": 0.01
           },
-          "currencyUnit": {
-            "$ref": "#/components/schemas/CurrencyUnit"
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCode"
           }
         },
         "additionalProperties": false
       },
-      "CurrencyUnit": {
+      "CurrencyCode": {
         "enum": [
           "AUD",
           "BEF",
@@ -1315,15 +1276,23 @@
         "type": "object",
         "properties": {
           "value": {
-            "pattern": "^-?\\d{1}(\\.\\d{3})?$",
+            "maximum": 9.999,
+            "minimum": -9.999,
             "type": "number",
-            "format": "double"
+            "format": "double",
+            "multipleOf": 0.001
           },
-          "currencyUnit": {
-            "$ref": "#/components/schemas/CurrencyUnit"
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCode"
           }
         },
         "additionalProperties": false
+      },
+      "UtcDateTime": {
+        "type": "string",
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+        "example": "2024-03-21T19:25:04+00:00.000Z"
       },
       "SaleType": {
         "enum": [
@@ -1347,15 +1316,11 @@
         "type": "object",
         "properties": {
           "lotIdentity": {
-            "maxLength": 6,
-            "minLength": 1,
-            "type": "string",
-            "description": "This is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to."
+            "$ref": "#/components/schemas/LotIdentity"
           },
           "costPerWeightUnit": {
-            "maxLength": 6,
-            "minLength": 1,
-            "pattern": "-?\\d{1,6}",
+            "maximum": 999999,
+            "minimum": -999999,
             "type": "integer",
             "description": "The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.",
             "format": "int32"
@@ -1367,15 +1332,16 @@
             "$ref": "#/components/schemas/SaleOutcome"
           },
           "auctionSaleTime": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "The auction room time the lot was passed in, sold or withdrawn (unverified data).\r\n            \r\nDate and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-            "format": "date-time"
+            "$ref": "#/components/schemas/UtcDateTime"
           }
         },
         "additionalProperties": false
+      },
+      "LotIdentity": {
+        "maxLength": 6,
+        "minLength": 0,
+        "type": "string",
+        "description": "This is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to."
       },
       "SaleOutcome": {
         "enum": [
@@ -1401,24 +1367,18 @@
         "type": "object",
         "properties": {
           "fileCreationDateTime": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Datetime of the file creation with ISO UTC datetime format."
+            "$ref": "#/components/schemas/UtcDateTime"
           },
           "totalLotsOffered": {
-            "maxLength": 6,
-            "minLength": 1,
-            "pattern": "-?\\d{1,6}",
+            "maximum": 999999,
+            "minimum": -999999,
             "type": "integer",
             "description": "Required decimal field for the last cost of the first lot with two digits precision.",
             "format": "int32"
           },
           "percentageSold": {
-            "maxLength": 3,
-            "minLength": 1,
-            "pattern": "-?\\d{1,3}",
+            "maximum": 999,
+            "minimum": -999,
             "type": "integer",
             "description": "This indicates the progress of the sale, expressed as a percentage of the total lots offered and is calculated on the WoolSaleHeaderLot record grouping.",
             "format": "int32"
@@ -1606,13 +1566,7 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "saleDateRequested": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDate"
           },
           "woolTypeGroup": {
             "$ref": "#/components/schemas/WoolTypeGroup"
@@ -1626,10 +1580,7 @@
             "nullable": true
           },
           "season": {
-            "pattern": "-?\\d{1,2}",
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "$ref": "#/components/schemas/Season"
           }
         },
         "additionalProperties": false
@@ -1677,21 +1628,10 @@
         "type": "object",
         "properties": {
           "startDateTimeStatusRequest": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-            "format": "date-time"
+            "$ref": "#/components/schemas/UtcDateTime"
           },
           "endDateTimeStatusRequest": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-            "format": "date-time",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDateTime"
           }
         },
         "additionalProperties": false

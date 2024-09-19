@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -34,32 +35,11 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(5)]
         public string? OrganisationRequested { get; set; }
 
-        /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
-        /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? SaleDateRequested { get; set; }
+        public UtcDate? SaleDateRequested { get; set; }
 
-        /// <summary>
-        /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
-        /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public string? StartDateTimeStatusRequest { get; set; }
+        public UtcDateTime? StartDateTimeStatusRequest { get; set; }
 
-        /// <summary>
-        /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
-        /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public string? EndDateTimeStatusRequest { get; set; }
+        public UtcDateTime? EndDateTimeStatusRequest { get; set; }
 
         /// <summary>
         /// A boolean value to indicate whether to use network datetime.
@@ -84,7 +64,6 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(80)]
         public List<String>? RecordTypesToBeExcluded { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? Season { get; set; }
+        public Season? Season { get; set; }
     }
 }

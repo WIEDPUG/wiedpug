@@ -25,17 +25,13 @@ namespace Wiedpug.Domain.Entities
         /// The new value that the Lot Identity is to be changed to.
         /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(6)]
-        public required string LotIdentity { get; set; }
+        public required LotIdentity LotIdentity { get; set; }
 
         /// <summary>
         /// The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(6)]
+        [Range(-999999,999999)]
         public required int CostPerWeightUnit { get; set; }
 
         /// <summary>
@@ -60,10 +56,6 @@ namespace Wiedpug.Domain.Entities
         /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
         /// </summary>
         [Required]
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public required string AuctionSaleTime { get; set; }
+        public required UtcDateTime AuctionSaleTime { get; set; }
     }
 }

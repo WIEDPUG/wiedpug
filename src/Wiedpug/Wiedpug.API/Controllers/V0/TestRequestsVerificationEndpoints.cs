@@ -23,7 +23,8 @@ public static class TestRequestsVerificationEndpoints
         ([FromBody] List<TestRequestsVerification> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-            })        
+            })
+            .WithName("CreateTestRequestsVerifications")
         .WithOpenApi(o => new(o)
         {
             Summary = "Test Request Verifications",

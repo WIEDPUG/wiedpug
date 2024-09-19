@@ -23,7 +23,8 @@ public static class TestCertificateRequestsEndpoints
         ([FromBody] List<TestCertificateRequests> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-            })        
+            })
+            .WithName("CreateTestCertificateRequests")
         .WithOpenApi(o => new(o)
         {
             Summary = "Test Certificate Requests",

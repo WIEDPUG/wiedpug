@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Enums;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -34,9 +35,7 @@ namespace Wiedpug.Domain.Entities
         /// Required date field for the date payment was made.
         /// </summary>
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        public required string DatePaymentMade { get; set; }
+        public required UtcDate DatePaymentMade { get; set; }
     }
 
 }

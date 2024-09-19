@@ -23,6 +23,7 @@
         ],
         "summary": "Test Certificate Updates",
         "description": "Sent to a test house to advise changes to an existing Certificate. A new Certificate will be reissued with the updated data.",
+        "operationId": "CreateTestCertificateUpdates",
         "requestBody": {
           "content": {
             "application/json": {
@@ -50,7 +51,7 @@
                       "softwareVersion": 1082,
                       "programName": "NETR"
                     },
-                    "abn": "72001967184"
+                    "abn": 72001967184
                   },
                   "testCertificateUpdateDetails": [
                     {
@@ -60,12 +61,14 @@
                         "certificateIdSuffix": "L",
                         "certificateIdCd": 6
                       },
-                      "reissueType": "_06",
+                      "reissueType": "06",
                       "client": {
                         "organisationCode": "ABC"
                       },
                       "numberOfBales": 2,
-                      "baleDescription": "AAA M",
+                      "baleDescription": {
+                        "description": "AAA"
+                      },
                       "woolBase": 60.43,
                       "mulesingStatusFrom": "ND",
                       "mulesingStatusTo": "M"
@@ -77,12 +80,14 @@
                         "certificateIdSuffix": "M",
                         "certificateIdCd": 5
                       },
-                      "reissueType": "_05",
+                      "reissueType": "05",
                       "client": {
                         "organisationCode": "ABC"
                       },
                       "numberOfBales": 7,
-                      "baleDescription": "AAA M",
+                      "baleDescription": {
+                        "description": "AAA"
+                      },
                       "woolBase": 65.12,
                       "mulesingStatusFrom": "AA",
                       "mulesingStatusTo": "M"
@@ -94,12 +99,14 @@
                         "certificateIdSuffix": "B",
                         "certificateIdCd": 6
                       },
-                      "reissueType": "_02",
+                      "reissueType": "02",
                       "client": {
                         "organisationCode": "ABC"
                       },
                       "numberOfBales": 8,
-                      "baleDescription": "PCA M",
+                      "baleDescription": {
+                        "description": "PCA"
+                      },
                       "woolBase": 50.31,
                       "mulesingStatusFrom": "NM",
                       "mulesingStatusTo": "M"
@@ -214,7 +221,7 @@
           "Test Certificate Updates"
         ],
         "summary": "Retrieves the test certificate updates",
-        "operationId": "GetTestCertificateUpdates",
+        "operationId": "RequestForTestCertificateUpdates",
         "requestBody": {
           "content": {
             "application/json": {
@@ -242,7 +249,7 @@
                       "softwareVersion": 1082,
                       "programName": "NETR"
                     },
-                    "abn": "72001967184"
+                    "abn": 72001967184
                   },
                   "requestForDataType": {}
                 }
@@ -282,7 +289,7 @@
                           "softwareVersion": 1082,
                           "programName": "NETR"
                         },
-                        "abn": "72001967184"
+                        "abn": 72001967184
                       },
                       "testCertificateUpdateDetails": [
                         {
@@ -292,12 +299,14 @@
                             "certificateIdSuffix": "L",
                             "certificateIdCd": 6
                           },
-                          "reissueType": "_06",
+                          "reissueType": "06",
                           "client": {
                             "organisationCode": "ABC"
                           },
                           "numberOfBales": 2,
-                          "baleDescription": "AAA M",
+                          "baleDescription": {
+                            "description": "AAA"
+                          },
                           "woolBase": 60.43,
                           "mulesingStatusFrom": "ND",
                           "mulesingStatusTo": "M"
@@ -309,12 +318,14 @@
                             "certificateIdSuffix": "M",
                             "certificateIdCd": 5
                           },
-                          "reissueType": "_05",
+                          "reissueType": "05",
                           "client": {
                             "organisationCode": "ABC"
                           },
                           "numberOfBales": 7,
-                          "baleDescription": "AAA M",
+                          "baleDescription": {
+                            "description": "AAA"
+                          },
                           "woolBase": 65.12,
                           "mulesingStatusFrom": "AA",
                           "mulesingStatusTo": "M"
@@ -326,12 +337,14 @@
                             "certificateIdSuffix": "B",
                             "certificateIdCd": 6
                           },
-                          "reissueType": "_02",
+                          "reissueType": "02",
                           "client": {
                             "organisationCode": "ABC"
                           },
                           "numberOfBales": 8,
-                          "baleDescription": "PCA M",
+                          "baleDescription": {
+                            "description": "PCA"
+                          },
                           "woolBase": 50.31,
                           "mulesingStatusFrom": "NM",
                           "mulesingStatusTo": "M"
@@ -492,20 +505,10 @@
         "type": "object",
         "properties": {
           "dateFormatLastRevised": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "dateTransmissionFileCreated": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"
@@ -517,7 +520,8 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "versionNumber": {
-            "pattern": "-?\\d{1,2}",
+            "maximum": 99,
+            "minimum": -99,
             "type": "integer",
             "description": "The version number of the WIEDPUG Handbook that the transmission relates to\r\nTwo digits. e.g. 99",
             "format": "int32",
@@ -527,14 +531,20 @@
             "$ref": "#/components/schemas/SoftwareIdentifier"
           },
           "abn": {
-            "maxLength": 11,
-            "minLength": 1,
-            "pattern": "^[0-9]+$",
-            "type": "string",
-            "description": "Australian Business Number, 11 digits string"
+            "maximum": 99999999999,
+            "minimum": 10000000000,
+            "type": "integer",
+            "description": "Australian Business Number, 11 digits",
+            "format": "int64"
           }
         },
         "additionalProperties": false
+      },
+      "UtcDate": {
+        "type": "string",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
       },
       "CountryCode": {
         "enum": [
@@ -602,7 +612,7 @@
         "additionalProperties": false,
         "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia",
         "discriminator": {
-          "propertyName": "Country",
+          "propertyName": "country",
           "mapping": {
             "AU": "#/components/schemas/CentreCodeAustralia",
             "CN": "#/components/schemas/CentreCodeChina",
@@ -844,7 +854,8 @@
             "$ref": "#/components/schemas/SoftwareCompany"
           },
           "softwareVersion": {
-            "pattern": "-?\\d{1,4}",
+            "maximum": 9999,
+            "minimum": -9999,
             "type": "integer",
             "description": "Version no. e.g. 2400",
             "format": "int32",
@@ -924,22 +935,18 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "numberOfBales": {
-            "pattern": "-?\\d{1,4}",
-            "type": "integer",
-            "description": "Number of bales",
-            "format": "int32"
+            "$ref": "#/components/schemas/NumberOfBales"
           },
           "baleDescription": {
-            "maxLength": 15,
-            "minLength": 1,
-            "type": "string",
-            "description": "This field is to be always transmitted in upper case."
+            "$ref": "#/components/schemas/BaleDescription"
           },
           "woolBase": {
-            "pattern": "^-?\\d{1,2}(\\.\\d{2})?$",
+            "maximum": 99.99,
+            "minimum": -99.99,
             "type": "number",
             "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
-            "format": "double"
+            "format": "double",
+            "multipleOf": 0.01
           },
           "woolPreparationCategoryFrom": {
             "$ref": "#/components/schemas/WoolPreparationCategory"
@@ -960,18 +967,10 @@
             "$ref": "#/components/schemas/SaleIdentity"
           },
           "lotIdentityFrom": {
-            "maxLength": 6,
-            "minLength": 1,
-            "type": "string",
-            "description": "This is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to.",
-            "nullable": true
+            "$ref": "#/components/schemas/LotIdentity"
           },
           "lotIdentityTo": {
-            "maxLength": 6,
-            "minLength": 1,
-            "type": "string",
-            "description": "This is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to.",
-            "nullable": true
+            "$ref": "#/components/schemas/LotIdentity"
           }
         },
         "additionalProperties": false
@@ -1050,6 +1049,28 @@
         "type": "string",
         "description": "Instruction to the test house on the type of change requested for the new Certificate Reissue.<br />01: Wool Preparation Category (WPC) Change<br />02: Mulesing Status (MS) Change<br />03: Sale/Lot Change<br />04: WPC and MS Change<br />05: WPC and Sale/Lot Change<br />06: MS and Sale/Lot Change<br />07: WPC, MS and Sale/Lot Change"
       },
+      "NumberOfBales": {
+        "maximum": 9999,
+        "minimum": -9999,
+        "type": "integer",
+        "description": "Number of bales",
+        "format": "int32"
+      },
+      "BaleDescription": {
+        "required": [
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "description": "This field is to be always transmitted in upper case."
+      },
       "WoolPreparationCategory": {
         "enum": [
           "B",
@@ -1088,15 +1109,20 @@
             "description": "The following codes are reserved for current and historical open cry auction selling centres:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; \r\n\r\nN: Napier.\r\n\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; \r\n\r\nAU: Australia; \r\n\r\nB: Brisbane; \r\n\r\nF: Fremantle; \r\n\r\nG: Geelong; \r\n\r\nL: Launceston; \r\n\r\nM: Melbourne; \r\n\r\nN: Newcastle; \r\n\r\nR: Goulburn; \r\n\r\nS: Sydney.\r\n\r\n\r\nThe following codes are allocated for alternative sale types:\r\n            \r\nPS: Private Sales; \r\n\r\nT: Auctions Plus Sales.\r\n            \r\n\r\nPlease contact the WIEDPUG Secretary for the latest list of reserved and allocated codes."
           },
           "saleNumber": {
-            "maxLength": 2,
-            "minLength": 1,
-            "pattern": "-?\\d{1,2}",
+            "maximum": 99,
+            "minimum": -99,
             "type": "integer",
             "format": "int32"
           }
         },
         "additionalProperties": false,
         "description": "A group field of SellingCentre/Type and Sale Number\r\n            \r\nFrom: The current value that the Sale Identity is to be changed from.\r\n            \r\nTo: The new value that the Sale Identity is to be changed to."
+      },
+      "LotIdentity": {
+        "maxLength": 6,
+        "minLength": 0,
+        "type": "string",
+        "description": "This is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to."
       },
       "ApiResult": {
         "type": "object",
@@ -1255,7 +1281,7 @@
         },
         "additionalProperties": false,
         "discriminator": {
-          "propertyName": "RequestForDataType",
+          "propertyName": "requestForDataType",
           "mapping": {
             "UseNetworkDateTimeRequestForDataType": "#/components/schemas/UseNetworkDateTimeRequestForDataType",
             "DateTimeRangeRequestForDataType": "#/components/schemas/DateTimeRangeRequestForDataType"
@@ -1284,24 +1310,19 @@
         "type": "object",
         "properties": {
           "startDateTimeStatusRequest": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-            "format": "date-time"
+            "$ref": "#/components/schemas/UtcDateTime"
           },
           "endDateTimeStatusRequest": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-            "format": "date-time",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDateTime"
           }
         },
         "additionalProperties": false
+      },
+      "UtcDateTime": {
+        "type": "string",
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+        "example": "2024-03-21T19:25:04+00:00.000Z"
       },
       "TestCertificateUpdateListApiResult": {
         "type": "object",

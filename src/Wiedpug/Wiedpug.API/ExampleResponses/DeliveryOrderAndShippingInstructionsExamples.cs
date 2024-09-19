@@ -21,8 +21,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                                         TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -39,7 +39,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 TransferConfig = new TransferConfig
                  {
@@ -98,7 +98,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                                         OrganisationCode = "TTM",
                                             },
-                                            Season = 23,
+                                            Season = new Season{SeasonValue= 23},
                                             SaleIdentity = new SaleIdentity
                                             {
                                                 SellingCentreType = "M",
@@ -114,14 +114,14 @@ namespace Wiedpug.API.ExampleResponses
                                                 OrganisationCode = "ABT",
                                             },
                                             LotIdentityOrGroupNumber = "552467",
-                                            NumberOfBales = 30,
+                                            NumberOfBales = new NumberOfBales{BalesCount=30 },
                                             Gross = new Weight{
                                                 Value = 1530.00,
-                                                Unit = WeightUnit.Kilograms
+                                                WeightCode = WeightCode.KG
                                             },
                                             Tare = new Weight{
                                                 Value = 30.00,
-                                                Unit = WeightUnit.Kilograms
+                                                WeightCode = WeightCode.KG
                                             },
                                             TotalBalesInLot = 30,
                                             PackTypeOriginal = PackType._1,
@@ -145,7 +145,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 BaleHeader = new BaleHeader
                                                 {
                                                     Brand = "ABCD",
-                                                    BaleDescription = "bale description",
+                                                    BaleDescription = new BaleDescription{ Description="bale description"},
                                                     AreaOfOrigin = "MELB"
                                                 },
                                                 BaleDetails = new List<BaleDetail>
@@ -154,8 +154,8 @@ namespace Wiedpug.API.ExampleResponses
                                                     {
                                                         BaleDetailType=BaleDetailType.Renumbers,
                                                         BaleNumber = "12345",
-                                                        Gross=new Weight { Value = 1233.00, Unit = WeightUnit.Kilograms },
-                                                        Tare=new Weight { Value = 23.00, Unit = WeightUnit.Kilograms }
+                                                        Gross=new Weight { Value = 1233.00, WeightCode = WeightCode.KG },
+                                                        Tare=new Weight { Value = 23.00, WeightCode = WeightCode.KG }
                                                     }
                                                 }
                                             }
@@ -180,8 +180,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -198,7 +198,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new UseNetworkDateTimeRequestForDataType
                 {
@@ -223,8 +223,8 @@ namespace Wiedpug.API.ExampleResponses
                         {
                                                 TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -241,7 +241,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     Consignments = new List<Consignment>
                 {
@@ -296,7 +296,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                                         OrganisationCode = "TTM",
                                             },
-                                            Season = 23,
+                                            Season = new Season{SeasonValue= 23},
                                             SaleIdentity = new SaleIdentity
                                             {
                                                 SellingCentreType = "M",
@@ -311,14 +311,14 @@ namespace Wiedpug.API.ExampleResponses
                                                  OrganisationCode = "MBC",
                                             },
                                             LotIdentityOrGroupNumber = "552467",
-                                            NumberOfBales = 30,
+                                            NumberOfBales = new NumberOfBales{BalesCount=30 },
                                             Gross = new Weight{
                                                 Value = 1520.00,
-                                                Unit = WeightUnit.Kilograms
+                                                WeightCode = WeightCode.KG
                                             },
                                             Tare = new Weight{
                                                 Value = 30.00,
-                                                Unit = WeightUnit.Kilograms
+                                                WeightCode = WeightCode.KG
                                             },
                                             TotalBalesInLot = 30,
                                             PackTypeOriginal = PackType._1,
@@ -342,7 +342,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 BaleHeader = new BaleHeader
                                                 {
                                                     Brand = "ABCD",
-                                                    BaleDescription = "bale description",
+                                                    BaleDescription = new BaleDescription{ Description="bale description"},
                                                     AreaOfOrigin = "MELB"
                                                 },
                                                 BaleDetails = new List<BaleDetail>
@@ -353,9 +353,9 @@ namespace Wiedpug.API.ExampleResponses
                                                         BaleNumber = "12345",
                                                         Gross=new Weight{
                                                 Value = 1233.00,
-                                                Unit = WeightUnit.Kilograms
+                                                WeightCode = WeightCode.KG
                                             },
-                                                        Tare=new Weight { Value = 23.00, Unit = WeightUnit.Kilograms }
+                                                        Tare=new Weight { Value = 23.00, WeightCode = WeightCode.KG }
                                                     }
                                                 }
                                             }

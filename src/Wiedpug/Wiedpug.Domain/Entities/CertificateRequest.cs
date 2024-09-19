@@ -70,15 +70,10 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(9)]
         public Weight? SampleWeightRemoved { get; set; }
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public required int NumberOfBales { get; set; }
+        public required NumberOfBales NumberOfBales { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? Season { get; set; }
+        public Season? Season { get; set; }
 
         /// <summary>
         /// A group field of SellingCentre/Type and Sale Number
@@ -118,9 +113,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// The new value that the Lot Identity is to be changed to.
         /// </summary>
-        [MinLength(1)]
-        [MaxLength(6)]
-        public string? LotIdentity { get; set; }
+        public LotIdentity? LotIdentity { get; set; }
 
         [MinLength(1)]
         [MaxLength(1)]
@@ -147,7 +140,7 @@ namespace Wiedpug.Domain.Entities
         /// </summary>
         [MinLength(4)]
         [MaxLength(5)]
-        public bool? IsPrintingTEAM3Hauteur { get; set; }
+        public bool? IsPrintingTeam3Hauteur { get; set; }
 
         /// <summary>
         /// A boolean value to indicate whether to commit the combination/OML request for processing

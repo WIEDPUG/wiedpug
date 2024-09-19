@@ -23,30 +23,21 @@ namespace Wiedpug.Domain.Entities
         public SoftwareIdentifier? SoftwareIdentifier { get; set; }
 
         /// <summary>
-        /// Australian Business Number
+        /// Australian Business Number, 11 digits
         /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(11)]
-        public required string Abn { get; set; }
+        [Range(10000000000,99999999999)]
+        public required long Abn { get; set; }
 
         /// <summary>
         /// Date and Time in UTC format in ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ e.g. 2024-03-21T19:25:04Z
         /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public string? StartDateTimeStatusRequest { get; set; }
+        public UtcDateTime? StartDateTimeStatusRequest { get; set; }
 
         /// <summary>
         /// Date and Time in UTC format in ISO 8601 standard. Format: YYYY-MM-DDTHH:mm:ssZ. e.g. 2024-03-21T19:25:04Z
         /// </summary>
-        [DataType(DataType.DateTime)]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public string? EndDateTimeStatusRequest { get; set; }
+        public UtcDateTime? EndDateTimeStatusRequest { get; set; }
 
         /// <summary>
         /// A boolean value to indicate whether to use network datetime.

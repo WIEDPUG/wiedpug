@@ -51,14 +51,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(5)]
         public Organisation? OrganisationRequested { get; set; }
 
-        /// <summary>
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
-        /// </summary>
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public string? SaleDateRequested { get; set; }
+        public UtcDate? SaleDateRequested { get; set; }
 
         [MinLength(1)]
         [MaxLength(4)]
@@ -73,7 +66,6 @@ namespace Wiedpug.Domain.Entities
         /// 
         public List<ItemsToBeExcluded>? ItemsToBeExcluded { get; set; }
 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
-        public int? Season { get; set; }
+        public Season? Season { get; set; }
     }    
 }

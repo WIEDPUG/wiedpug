@@ -40,7 +40,7 @@ paths:
                     softwareCompany: 1
                     softwareVersion: 1082
                     programName: NETR
-                  abn: "72001967184"
+                  abn: 72001967184
                 transferConfig:
                   transferType: Unrestrict
                 consignments:
@@ -81,14 +81,14 @@ paths:
                               numberOfBales: 30
                               gross:
                                 value: 1530
-                                unit: 0
+                                weightCode: KG
                               tare:
                                 value: 30
-                                unit: 0
+                                weightCode: KG
                               totalBalesInLot: 30
-                              packTypeOriginal: _1
-                              packTypePreferred: _2
-                              woolState: _3
+                              packTypeOriginal: "1"
+                              packTypePreferred: "2"
+                              woolState: "3"
                               packMaterial: K
                             countermarkHeadmarks:
                               - countermarkHeadmarkLine1: "1234567789"
@@ -96,17 +96,18 @@ paths:
                             bales:
                               - baleHeader:
                                   brand: ABCD
-                                  baleDescription: bale description
+                                  baleDescription:
+                                    description: bale description
                                   areaOfOrigin: MELB
                                 baleDetails:
                                   - baleNumber: "12345"
                                     baleDetailType: Renumbers
                                     gross:
                                       value: 1233
-                                      unit: 0
+                                      weightCode: KG
                                     tare:
                                       value: 23
-                                      unit: 0
+                                      weightCode: KG
         required: true
       responses:
         "200":
@@ -198,7 +199,7 @@ paths:
                     softwareCompany: 8
                     softwareVersion: 1082
                     programName: NETR
-                  abn: "72001967184"
+                  abn: 72001967184
                 requestForDataType: {}
         required: true
       responses:
@@ -226,7 +227,7 @@ paths:
                         softwareCompany: 1
                         softwareVersion: 1082
                         programName: NETR
-                      abn: "72001967184"
+                      abn: 72001967184
                     consignments:
                       - consignmentHeader:
                           consignmentReference: "1256745909"
@@ -265,14 +266,14 @@ paths:
                                   numberOfBales: 30
                                   gross:
                                     value: 1520
-                                    unit: 0
+                                    weightCode: KG
                                   tare:
                                     value: 30
-                                    unit: 0
+                                    weightCode: KG
                                   totalBalesInLot: 30
-                                  packTypeOriginal: _1
-                                  packTypePreferred: _2
-                                  woolState: _3
+                                  packTypeOriginal: "1"
+                                  packTypePreferred: "2"
+                                  woolState: "3"
                                   packMaterial: K
                                 countermarkHeadmarks:
                                   - countermarkHeadmarkLine1: "1234567789"
@@ -280,17 +281,18 @@ paths:
                                 bales:
                                   - baleHeader:
                                       brand: ABCD
-                                      baleDescription: bale description
+                                      baleDescription:
+                                        description: bale description
                                       areaOfOrigin: MELB
                                     baleDetails:
                                       - baleNumber: "12345"
                                         baleDetailType: Renumbers
                                         gross:
                                           value: 1233
-                                          unit: 0
+                                          weightCode: KG
                                         tare:
                                           value: 23
-                                          unit: 0
+                                          weightCode: KG
         "204":
           description: No Content
           content:
@@ -394,21 +396,9 @@ components:
       type: object
       properties:
         dateFormatLastRevised:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         dateTransmissionFileCreated:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         countryOfOrigin:
           $ref: "#/components/schemas/CountryCode"
         documentOriginator:
@@ -416,7 +406,8 @@ components:
         currentReceiver:
           $ref: "#/components/schemas/Organisation"
         versionNumber:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: "The version number of the WIEDPUG Handbook that the transmission
             relates to\r
@@ -427,12 +418,17 @@ components:
         softwareIdentifier:
           $ref: "#/components/schemas/SoftwareIdentifier"
         abn:
-          maxLength: 11
-          minLength: 1
-          pattern: ^[0-9]+$
-          type: string
-          description: Australian Business Number, 11 digits string
+          maximum: 99999999999
+          minimum: 10000000000
+          type: integer
+          description: Australian Business Number, 11 digits
+          format: int64
       additionalProperties: false
+    UtcDate:
+      type: string
+      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
+      example: 2024-03-21
     CountryCode:
       enum:
         - AU
@@ -521,7 +517,7 @@ components:
         The legacy codes for Overseas Centre are under
         CentreCodeAustralia"
       discriminator:
-        propertyName: Country
+        propertyName: country
         mapping:
           AU: "#/components/schemas/CentreCodeAustralia"
           CN: "#/components/schemas/CentreCodeChina"
@@ -846,7 +842,8 @@ components:
         softwareCompany:
           $ref: "#/components/schemas/SoftwareCompany"
         softwareVersion:
-          pattern: -?\d{1,4}
+          maximum: 9999
+          minimum: -9999
           type: integer
           description: Version no. e.g. 2400
           format: int32
@@ -927,7 +924,6 @@ components:
         consignmentReference:
           maxLength: 10
           minLength: 1
-          pattern: -?\d{1,10}
           type: string
         subConsignmentReference:
           maxLength: 10
@@ -1240,9 +1236,7 @@ components:
         sellingOrganisation:
           $ref: "#/components/schemas/Organisation"
         season:
-          pattern: -?\d{1,2}
-          type: integer
-          format: int32
+          $ref: "#/components/schemas/Season"
         saleIdentity:
           $ref: "#/components/schemas/SaleIdentity"
         centreStorage:
@@ -1316,12 +1310,7 @@ components:
 
             A code used to identify a group of lots."
         numberOfBales:
-          maxLength: 4
-          minLength: 1
-          pattern: -?\d{1,4}
-          type: integer
-          description: Number of bales
-          format: int32
+          $ref: "#/components/schemas/NumberOfBales"
         gross:
           $ref: "#/components/schemas/Weight"
         tare:
@@ -1329,9 +1318,8 @@ components:
         regrabSampleWeight:
           $ref: "#/components/schemas/Weight"
         totalBalesInLot:
-          maxLength: 4
-          minLength: 1
-          pattern: -?\d{1,4}
+          maximum: 9999
+          minimum: -9999
           type: integer
           format: int32
         packTypeOriginal:
@@ -1343,9 +1331,8 @@ components:
         certificateIdentity:
           $ref: "#/components/schemas/CertificateIdentity"
         renumbersFirstBaleNumber:
-          maxLength: 6
-          minLength: 1
-          pattern: -?\d{1,6}
+          maximum: 999999
+          minimum: -999999
           type: integer
           format: int32
           nullable: true
@@ -1400,24 +1387,15 @@ components:
         packMaterial:
           $ref: "#/components/schemas/PackMaterial"
         dateDeliveryRequired:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
-          nullable: true
+          $ref: "#/components/schemas/UtcDate"
         datePickup:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
-          nullable: true
+          $ref: "#/components/schemas/UtcDate"
       additionalProperties: false
+    Season:
+      maximum: 99
+      minimum: -99
+      type: integer
+      format: int32
     SaleIdentity:
       required:
         - saleNumber
@@ -1511,9 +1489,8 @@ components:
             Please contact the WIEDPUG Secretary for the latest list
             of reserved and allocated codes."
         saleNumber:
-          maxLength: 2
-          minLength: 1
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           format: int32
       additionalProperties: false
@@ -1527,27 +1504,34 @@ components:
         \            \r
 
         To: The new value that the Sale Identity is to be changed to."
+    NumberOfBales:
+      maximum: 9999
+      minimum: -9999
+      type: integer
+      description: Number of bales
+      format: int32
     Weight:
       required:
-        - unit
         - value
+        - weightCode
       type: object
       properties:
         value:
-          pattern: ^-?\d{1,6}(\.\d{2})?$
+          maximum: 999999.99
+          minimum: -999999.99
           type: number
           format: double
-        unit:
-          $ref: "#/components/schemas/WeightUnit"
+          multipleOf: 0.01
+        weightCode:
+          $ref: "#/components/schemas/WeightCode"
       additionalProperties: false
-    WeightUnit:
+    WeightCode:
       enum:
-        - 0
-        - 1
-        - 2
-      type: integer
-      description: "0: Kilograms<br />1: Pounds<br />2: Grams"
-      format: int32
+        - KG
+        - LB
+        - G
+      type: string
+      description: "KG: Kilograms<br />LB: Pounds<br />G: Grams"
     PackType:
       enum:
         - "0"
@@ -1705,10 +1689,7 @@ components:
           type: string
           description: This field is to be always transmitted in upper case.
         baleDescription:
-          maxLength: 15
-          minLength: 1
-          type: string
-          description: This field is to be always transmitted in upper case.
+          $ref: "#/components/schemas/BaleDescription"
         areaOfOrigin:
           maxLength: 4
           minLength: 1
@@ -1724,19 +1705,24 @@ components:
             http://www.awex.com.au/market-information/wool-statisti\
             cal-areas-wsa/"
         numberOfBales:
-          maxLength: 4
-          minLength: 1
-          pattern: -?\d{1,4}
-          type: integer
-          description: Number of bales
-          format: int32
-          nullable: true
+          $ref: "#/components/schemas/NumberOfBales"
         locationWithinStore:
           maxLength: 20
           minLength: 1
           type: string
           nullable: true
       additionalProperties: false
+    BaleDescription:
+      required:
+        - description
+      type: object
+      properties:
+        description:
+          maxLength: 15
+          minLength: 1
+          type: string
+      additionalProperties: false
+      description: This field is to be always transmitted in upper case.
     BaleDetail:
       required:
         - baleDetailType
@@ -1765,7 +1751,8 @@ components:
             bale details.
           nullable: true
         unitNumber:
-          pattern: -?\d{1,5}
+          maximum: 99999
+          minimum: -99999
           type: integer
           description: Property for Tripacks BaleDetail, not necessary for other types of
             bale details.
@@ -1781,7 +1768,8 @@ components:
           type: string
           nullable: true
         threeBaleCount:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: "The number of tripacks (3 bales) in the lot.\r
 
@@ -1792,7 +1780,8 @@ components:
           format: int32
           nullable: true
         twoBaleCount:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: "The number of two bale tri-packs.\r
 
@@ -2028,7 +2017,7 @@ components:
             - $ref: "#/components/schemas/DateTimeRangeRequestForDataType"
       additionalProperties: false
       discriminator:
-        propertyName: RequestForDataType
+        propertyName: requestForDataType
         mapping:
           UseNetworkDateTimeRequestForDataType: "#/components/schemas/UseNetworkDateTimeRequestForDataType"
           DateTimeRangeRequestForDataType: "#/components/schemas/DateTimeRangeRequestForDataType"
@@ -2057,23 +2046,16 @@ components:
       type: object
       properties:
         startDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g.
-            2024-03-21T19:25:04Z
-          format: date-time
+          $ref: "#/components/schemas/UtcDateTime"
         endDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g.
-            2024-03-21T19:25:04Z
-          format: date-time
-          nullable: true
+          $ref: "#/components/schemas/UtcDateTime"
       additionalProperties: false
+    UtcDateTime:
+      type: string
+      description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
+        2024-03-21T19:25:04+00:00.000Z
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+      example: 2024-03-21T19:25:04+00:00.000Z
     DeliveryOrdersAndShippingInstructionListApiResult:
       type: object
       properties:

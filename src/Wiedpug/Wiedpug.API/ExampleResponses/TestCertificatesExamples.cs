@@ -17,8 +17,8 @@ namespace Wiedpug.API.ExampleResponses
                 new TestCertificates {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -35,7 +35,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 TestCertificateDetails = new List<TestCertificateDetail>
                 {
@@ -46,22 +46,22 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ATW",
                             },
-                            NumberOfBales = 1,
+                            NumberOfBales = new NumberOfBales{BalesCount=1 },
                             Gross =new Weight
                         {
                             Value =1.00,
-                            Unit = WeightUnit.Kilograms
+                            WeightCode = WeightCode.KG
                         },
                             Tare = new Weight
                         {
                             Value =10.00,
-                            Unit = WeightUnit.Kilograms
+                            WeightCode = WeightCode.KG
                         },
                             LotIdentityOrGroupNumber = "234234",
                             RegrabSampleWeight = new Weight
                             {
                                 Value = 1.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                             LotType = LotType.ObjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
@@ -83,7 +83,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIdCd = 7
                                 },
                                 TestDetailsType = TestDetailType.P,
-                                Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
+                                Charge = new Currency { Value = 100.00, CurrencyCode = CurrencyCode.AUD },
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                 WoolBase = 20.00,
                                 Vmb = 10.0,
@@ -131,14 +131,10 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10"
+                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
+                                     DateIssued = new UtcDate{ Date="2017-01-10"}
                                 },
-                                FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
-                                {
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -149,13 +145,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 FibreDiameter = 24,
                                                 FibresMeasuredPercentage = 0.2228
-                                            }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
+                                            },
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 25,
@@ -166,24 +156,6 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 27,
                                                 FibresMeasuredPercentage = 0.3262
                                             }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1740
-                                            },
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1955
-                                            }
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -198,17 +170,17 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ATC",
 
                             },
-                            NumberOfBales = 1,
-                            Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
+                            NumberOfBales = new NumberOfBales{BalesCount=1 },
+                            Gross = new Weight { Value = 40.00, WeightCode = WeightCode.KG },
                             Tare = new Weight
                             {
                                 Value =10.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                             RegrabSampleWeight= new Weight
                             {
                                 Value = 1.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
                             LotIdentityOrGroupNumber = "123456",
                             LotType = LotType.SubjectivelyMatchedInterlot,
@@ -231,7 +203,7 @@ namespace Wiedpug.API.ExampleResponses
                                         CertificateIdCd = 7
                                     },
                                 lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.K,
-                                Charge = new Currency { Value = 123.25, CurrencyUnit = CurrencyUnit.AUD },
+                                Charge = new Currency { Value = 123.25, CurrencyCode = CurrencyCode.AUD },
                                 ReissueChargeFlag = ReissueChargeFlag.OriginalCertificateCharge,
                                 Laboratory = Laboratory.NZWoolTestingAuthority,
                                 StapleLength = 13,
@@ -246,7 +218,7 @@ namespace Wiedpug.API.ExampleResponses
                                 PositionOfBreakPercentageBase = 27,
                                 LsCertType = LsCertType.LengthAndStrengthTested,
                                 IsLsSampleSecured = false,
-                                DateIssued = "2024-01-22"
+                                DateIssued = new UtcDate{ Date="2024-01-22"}
                             },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
@@ -272,14 +244,10 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10"
+                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
+                                     DateIssued = new UtcDate{ Date="2017-01-10"}
                                 },
-                                FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
-                                {
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -290,13 +258,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 FibreDiameter = 24,
                                                 FibresMeasuredPercentage = 0.2228
-                                            }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
+                                            },
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 25,
@@ -307,24 +269,6 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 27,
                                                 FibresMeasuredPercentage = 0.3262
                                             }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1740
-                                            },
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1955
-                                            }
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -340,13 +284,13 @@ namespace Wiedpug.API.ExampleResponses
     {
         public List<RequestForData> GetExamples()
         {
-            return new List<RequestForData>
+        return new List<RequestForData>
             {
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15" },
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -363,10 +307,10 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -386,8 +330,8 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificates {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -404,7 +348,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     TestCertificateDetails = new List<TestCertificateDetail>
                     {
@@ -417,14 +361,14 @@ namespace Wiedpug.API.ExampleResponses
                                 OrganisationCode = "ATW",
                             },
                             LotIdentityOrGroupNumber = "123456",
-                            NumberOfBales = 1,
-                            Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
+                            NumberOfBales = new NumberOfBales{BalesCount=1 },
+                            Gross = new Weight { Value = 40.00, WeightCode = WeightCode.KG },
                             Tare = new Weight
                             {
                                 Value =10.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
-                            RegrabSampleWeight=new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                            RegrabSampleWeight=new Weight { Value = 1.00, WeightCode = WeightCode.KG },
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
                                 Country = CountryCode.AU,
@@ -446,7 +390,7 @@ namespace Wiedpug.API.ExampleResponses
                                     CertificateIdCd = 7
                                 },
                                 TestDetailsType = TestDetailType.P,
-                                Charge = new Currency { Value = 100.00, CurrencyUnit = CurrencyUnit.AUD },
+                                Charge = new Currency { Value = 100.00, CurrencyCode = CurrencyCode.AUD },
                                 Laboratory = Laboratory.AustralianWoolTestingAuthority,
                                 WoolBase = 20.00,
                                 Vmb = 10.0,
@@ -495,31 +439,21 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10"
+                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
+                                     DateIssued = new UtcDate{ Date="2017-01-10"}
                                 },
-                                FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
-                                {
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 23,
                                                 FibresMeasuredPercentage = 0.2345
                                             },
-                                             new FibreDiameterHistogramDetailMeasurement
-                                             {
+                                            new FibreDiameterHistogramDetailMeasurement
+                                            {
                                                 FibreDiameter = 24,
                                                 FibresMeasuredPercentage = 0.2228
-                                             }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
+                                            },
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 25,
@@ -530,24 +464,6 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 27,
                                                 FibresMeasuredPercentage = 0.3262
                                             }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1740
-                                            },
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1955
-                                            }
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -561,14 +477,14 @@ namespace Wiedpug.API.ExampleResponses
                             {
                                 OrganisationCode = "ATW",
                             },
-                            NumberOfBales = 1,
-                            Gross = new Weight { Value = 40.00, Unit = WeightUnit.Kilograms },
+                            NumberOfBales = new NumberOfBales{BalesCount=1 },
+                            Gross = new Weight { Value = 40.00, WeightCode = WeightCode.KG },
                             Tare = new Weight
                             {
                                 Value =10.00,
-                                Unit = WeightUnit.Kilograms
+                                WeightCode = WeightCode.KG
                             },
-                            RegrabSampleWeight=new Weight { Value = 1.00, Unit = WeightUnit.Kilograms },
+                            RegrabSampleWeight=new Weight { Value = 1.00, WeightCode = WeightCode.KG },
                             LotIdentityOrGroupNumber = "123456",
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
@@ -592,7 +508,7 @@ namespace Wiedpug.API.ExampleResponses
                             lengthAndStrengthTestDetailsType = LengthAndStrengthTestDetailType.K,
                             Laboratory = Laboratory.NZWoolTestingAuthority,
                             StapleLength = 13,
-                            Charge = new Currency { Value = 156.34, CurrencyUnit = CurrencyUnit.AUD },
+                            Charge = new Currency { Value = 156.34, CurrencyCode = CurrencyCode.AUD },
                             ReissueChargeFlag = ReissueChargeFlag.ReissuedWithAdditionalCharge,
                             StapleLengthCvPercentage = 25,
                             StapleStrength = 14,
@@ -605,7 +521,7 @@ namespace Wiedpug.API.ExampleResponses
                             PositionOfBreakPercentageBase = 27,
                             LsCertType = LsCertType.LengthAndStrengthTested,
                             IsLsSampleSecured = false,
-                            DateIssued = "2024-01-22"
+                            DateIssued = new UtcDate{ Date="2024-01-22"}
                             },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
@@ -631,14 +547,10 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = "2017-01-10",
-                                     DateIssued = "2017-01-10"
+                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
+                                     DateIssued = new UtcDate{ Date="2017-01-10"}
                                 },
-                                FibreDiameterHistogramDetails = new List<FibreDiameterHistogramDetail>
-                                {
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
+                                FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
@@ -649,13 +561,7 @@ namespace Wiedpug.API.ExampleResponses
                                             {
                                                 FibreDiameter = 24,
                                                 FibresMeasuredPercentage = 0.2228
-                                            }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
+                                            },
                                             new FibreDiameterHistogramDetailMeasurement
                                             {
                                                 FibreDiameter = 25,
@@ -666,24 +572,6 @@ namespace Wiedpug.API.ExampleResponses
                                                 FibreDiameter = 27,
                                                 FibresMeasuredPercentage = 0.3262
                                             }
-                                        }
-                                    },
-                                    new FibreDiameterHistogramDetail
-                                    {
-                                        FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
-                                        {
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1740
-                                            },
-                                            new FibreDiameterHistogramDetailMeasurement
-                                            {
-                                                FibreDiameter = 21,
-                                                FibresMeasuredPercentage = 0.1955
-                                            }
-                                        }
-                                    }
                                 }
                             }
                         }

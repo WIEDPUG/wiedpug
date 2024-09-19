@@ -25,7 +25,8 @@ public static class DarkAndMedullatedFibreRiskVerificationEndpoints
         ([FromBody] List<DarkAndMedullatedFibreRiskVerification> model) =>
             {
                
-            })        
+            })
+            .WithName("CreateDarkAndMedullatedFibreRiskVerifications")
         .WithOpenApi(o => new(o)
         {
             Summary = "Dark And Medullated Fibre Risk Verifications",

@@ -50,7 +50,7 @@ public static class OrganisationDetailsEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetOrganisationDetails")
+        .WithName("RequestForOrganisationDetails")
         .WithOpenApi(o => new(o)
         {
             Summary = "Retrieves the organisationdetails"

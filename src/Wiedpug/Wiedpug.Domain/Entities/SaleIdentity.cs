@@ -68,9 +68,7 @@ namespace Wiedpug.Domain.Entities
         public required string SellingCentreType { get; set; }
 
         [Required]
-        [MinLength(1)]
-        [MaxLength(2)]
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public required int SaleNumber { get; set; }
     }
 }

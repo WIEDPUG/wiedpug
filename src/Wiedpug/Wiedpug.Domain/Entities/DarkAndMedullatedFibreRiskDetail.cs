@@ -94,14 +94,14 @@ namespace Wiedpug.Domain.Entities
         /// Youngest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public required int AgeFrom { get; set; }
 
         /// <summary>
         /// Oldest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.
         /// </summary>
         /// 
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? AgeTo { get; set; }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max The highest value in a range of Wool Base values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? WoolBase { get; set; }
 
         /// <summary>

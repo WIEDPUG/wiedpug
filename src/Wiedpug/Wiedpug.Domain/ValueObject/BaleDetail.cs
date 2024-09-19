@@ -47,7 +47,7 @@ namespace Wiedpug.Domain.ValueObject
         /// <summary>
         /// Property for Tripacks BaleDetail, not necessary for other types of bale details.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_5_DIGITS)]
+        [Range(-99999,99999)]
         public int? UnitNumber { get; set; }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Wiedpug.Domain.ValueObject
         ///
         /// Property for Tripacks BaleDetail, not necessary for other types of bale details.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? ThreeBaleCount { get; set; }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Wiedpug.Domain.ValueObject
         ///
         /// Property for Tripacks BaleDetail, not necessary for other types of bale details.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public int? TwoBaleCount { get; set; }
     }
 }

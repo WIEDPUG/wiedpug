@@ -1,6 +1,8 @@
 {
+    "api": "Master Api",
     "organisation-details": "OrganisationDetails: Ready for review",
     "catalogues": "Catalogues: Ready for review",
+    "keys": "Encryption keys for LotHeaderAwexData: Ready for review",
     "test-certificates": "TestCetificates: Ready for review",
     "test-certificate-updates": "TestCertificateUpdates: Ready for review",
     "test-certificate-requests": "TestCertificateRequests: Ready for review",

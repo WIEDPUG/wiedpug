@@ -16,11 +16,11 @@ namespace Wiedpug.Domain.Entities
         /// Total up to 12 digits with 2 digits after the decimal point.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_12_2)]
+        [Range(-9999999999.99,9999999999.99)]
         public required double Value { get; set; }
 
         [MinLength(1)]
         [MaxLength(3)]
-        public CurrencyUnit? CurrencyUnit { get; set; }
+        public CurrencyCode? CurrencyCode { get; set; }
     }
 }

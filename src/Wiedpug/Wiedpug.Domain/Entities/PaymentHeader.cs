@@ -9,19 +9,14 @@ namespace Wiedpug.Domain.Entities
     public class PaymentHeader
     {
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [Range(-999999,999999)]
         public required int ClientCode { get; set; }
 
         /// <summary>
         /// The period ending date of the statement
-        ///
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string StatementDate { get; set; }
+        public required UtcDate StatementDate { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -30,26 +25,17 @@ namespace Wiedpug.Domain.Entities
 
         /// <summary>
         /// The date the payment was made
-        ///
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string StatementPaymentDate { get; set; }
+        public required UtcDate StatementPaymentDate { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(6)]
-        public required string BankBSBNumber { get; set; }
+        [Range(-999999,999999)]
+        public required int BankBsbNumber { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_9_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(9)]
-        public required string BankAccountNumber { get; set; }
+        [Range(-999999999,999999999)]
+        public required int BankAccountNumber { get; set; }
         
         [MinLength(6)]
         [MaxLength(15)]

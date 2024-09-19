@@ -51,7 +51,7 @@
                       "softwareVersion": 1082,
                       "programName": "NETR"
                     },
-                    "abn": "72001967184"
+                    "abn": 72001967184
                   },
                   "statementHeader": {
                     "client": {
@@ -62,42 +62,42 @@
                     "openingBalances": [
                       {
                         "balanceType": "Current",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 234.54,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "Thirty",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 365.5,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "Sixty",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 566.78,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "Ninety",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 234.34,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "Ninety",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 500.34,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       }
                     ]
@@ -108,13 +108,13 @@
                       "accountReference": "AWTA LED REFERENCE",
                       "amount": {
                         "value": 866.3,
-                        "currencyUnit": "AUD"
+                        "currencyCode": "AUD"
                       },
                       "amountType": 0,
                       "itemDate": "2024-04-23",
                       "gstAmount": {
                         "value": 134.3,
-                        "currencyUnit": "AUD"
+                        "currencyCode": "AUD"
                       },
                       "isGstApplicable": true,
                       "isCompanyAbnApplicable": true
@@ -124,42 +124,42 @@
                     "closingBalances": [
                       {
                         "balanceType": "Current",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 234.54,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "Thirty",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 365.5,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "Sixty",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 566.78,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "Ninety",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 234.34,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       },
                       {
                         "balanceType": "NinetyPlus",
-                        "debitOrCreditFlag": "Debit",
+                        "debitOrCreditType": "DR",
                         "balanceValue": {
                           "value": 500.34,
-                          "currencyUnit": "AUD"
+                          "currencyCode": "AUD"
                         }
                       }
                     ]
@@ -301,7 +301,7 @@
                       "softwareVersion": 1082,
                       "programName": "NETR"
                     },
-                    "abn": "72001967184"
+                    "abn": 72001967184
                   },
                   "requestForDataType": {}
                 }
@@ -341,7 +341,7 @@
                           "softwareVersion": 1082,
                           "programName": "NETR"
                         },
-                        "abn": "72001967184"
+                        "abn": 72001967184
                       },
                       "statementHeader": {
                         "client": {
@@ -352,42 +352,42 @@
                         "openingBalances": [
                           {
                             "balanceType": "Current",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 234.54,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "Thirty",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 365.5,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "Sixty",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 566.78,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "Ninety",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 234.34,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "NinetyPlus",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 500.34,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           }
                         ]
@@ -398,13 +398,13 @@
                           "accountReference": "AWTA LED REFERENCE",
                           "amount": {
                             "value": 866.3,
-                            "currencyUnit": "AUD"
+                            "currencyCode": "AUD"
                           },
                           "amountType": 0,
                           "itemDate": "2024-04-23",
                           "gstAmount": {
                             "value": 134.3,
-                            "currencyUnit": "AUD"
+                            "currencyCode": "AUD"
                           },
                           "isGstApplicable": true,
                           "isCompanyAbnApplicable": true
@@ -414,42 +414,42 @@
                         "closingBalances": [
                           {
                             "balanceType": "Current",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 234.54,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "Thirty",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 365.5,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "Sixty",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 566.78,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "Ninety",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 234.34,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           },
                           {
                             "balanceType": "NinetyPlus",
-                            "debitOrCreditFlag": "Debit",
+                            "debitOrCreditType": "DR",
                             "balanceValue": {
                               "value": 500.34,
-                              "currencyUnit": "AUD"
+                              "currencyCode": "AUD"
                             }
                           }
                         ]
@@ -617,20 +617,10 @@
         "type": "object",
         "properties": {
           "dateFormatLastRevised": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "dateTransmissionFileCreated": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"
@@ -642,7 +632,8 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "versionNumber": {
-            "pattern": "-?\\d{1,2}",
+            "maximum": 99,
+            "minimum": -99,
             "type": "integer",
             "description": "The version number of the WIEDPUG Handbook that the transmission relates to\r\nTwo digits. e.g. 99",
             "format": "int32",
@@ -652,14 +643,20 @@
             "$ref": "#/components/schemas/SoftwareIdentifier"
           },
           "abn": {
-            "maxLength": 11,
-            "minLength": 1,
-            "pattern": "^[0-9]+$",
-            "type": "string",
-            "description": "Australian Business Number, 11 digits string"
+            "maximum": 99999999999,
+            "minimum": 10000000000,
+            "type": "integer",
+            "description": "Australian Business Number, 11 digits",
+            "format": "int64"
           }
         },
         "additionalProperties": false
+      },
+      "UtcDate": {
+        "type": "string",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
       },
       "CountryCode": {
         "enum": [
@@ -727,7 +724,7 @@
         "additionalProperties": false,
         "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia",
         "discriminator": {
-          "propertyName": "Country",
+          "propertyName": "country",
           "mapping": {
             "AU": "#/components/schemas/CentreCodeAustralia",
             "CN": "#/components/schemas/CentreCodeChina",
@@ -969,7 +966,8 @@
             "$ref": "#/components/schemas/SoftwareCompany"
           },
           "softwareVersion": {
-            "pattern": "-?\\d{1,4}",
+            "maximum": 9999,
+            "minimum": -9999,
             "type": "integer",
             "description": "Version no. e.g. 2400",
             "format": "int32",
@@ -1041,16 +1039,13 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "clientCode": {
-            "pattern": "-?\\d{1,6}",
+            "maximum": 999999,
+            "minimum": -999999,
             "type": "integer",
             "format": "int32"
           },
           "statementDate": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "The period ending date of the statement\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)."
+            "$ref": "#/components/schemas/UtcDate"
           },
           "openingBalances": {
             "type": "array",
@@ -1075,15 +1070,15 @@
         "required": [
           "balanceType",
           "balanceValue",
-          "debitOrCreditFlag"
+          "debitOrCreditType"
         ],
         "type": "object",
         "properties": {
           "balanceType": {
             "$ref": "#/components/schemas/BalanceType"
           },
-          "debitOrCreditFlag": {
-            "$ref": "#/components/schemas/DebitOrCreditFlag"
+          "debitOrCreditType": {
+            "$ref": "#/components/schemas/DebitOrCreditType"
           },
           "balanceValue": {
             "$ref": "#/components/schemas/Currency"
@@ -1102,10 +1097,10 @@
         "type": "string",
         "description": "Current: Balance - Current<br />Thirty: Balance - 30<br />Sixty: Balance - 60<br />Ninety: Balance - 90<br />NinetyPlus: Balance - 90+"
       },
-      "DebitOrCreditFlag": {
+      "DebitOrCreditType": {
         "enum": [
-          "Debit",
-          "Credit"
+          "DR",
+          "CR"
         ],
         "type": "string"
       },
@@ -1116,18 +1111,20 @@
         "type": "object",
         "properties": {
           "value": {
-            "pattern": "^-?\\d{1,10}(\\.\\d{2})?$",
+            "maximum": 9999999999.99,
+            "minimum": -9999999999.99,
             "type": "number",
             "description": "Total up to 12 digits with 2 digits after the decimal point.",
-            "format": "double"
+            "format": "double",
+            "multipleOf": 0.01
           },
-          "currencyUnit": {
-            "$ref": "#/components/schemas/CurrencyUnit"
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCode"
           }
         },
         "additionalProperties": false
       },
-      "CurrencyUnit": {
+      "CurrencyCode": {
         "enum": [
           "AUD",
           "BEF",
@@ -1193,13 +1190,7 @@
             "$ref": "#/components/schemas/AmountType"
           },
           "itemDate": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "description": "The date the cost of the item was incurred\r\n            \r\nDate value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-            "format": "date",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDate"
           },
           "gstAmount": {
             "$ref": "#/components/schemas/Currency"
@@ -1414,7 +1405,7 @@
         },
         "additionalProperties": false,
         "discriminator": {
-          "propertyName": "RequestForDataType",
+          "propertyName": "requestForDataType",
           "mapping": {
             "UseNetworkDateTimeRequestForDataType": "#/components/schemas/UseNetworkDateTimeRequestForDataType",
             "DateTimeRangeRequestForDataType": "#/components/schemas/DateTimeRangeRequestForDataType"
@@ -1443,24 +1434,19 @@
         "type": "object",
         "properties": {
           "startDateTimeStatusRequest": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-            "format": "date-time"
+            "$ref": "#/components/schemas/UtcDateTime"
           },
           "endDateTimeStatusRequest": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "description": "Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z",
-            "format": "date-time",
-            "nullable": true
+            "$ref": "#/components/schemas/UtcDateTime"
           }
         },
         "additionalProperties": false
+      },
+      "UtcDateTime": {
+        "type": "string",
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+        "example": "2024-03-21T19:25:04+00:00.000Z"
       },
       "StatementsListApiResult": {
         "type": "object",

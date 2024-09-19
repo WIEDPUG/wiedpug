@@ -9,7 +9,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlagCurrent { get; set; }
+        public required DebitOrCreditType DebitOrCreditTypeCurrent { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -19,7 +19,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag30 { get; set; }
+        public required DebitOrCreditType DebitOrCreditType30 { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -29,7 +29,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag60 { get; set; }
+        public required DebitOrCreditType DebitOrCreditType60 { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -39,7 +39,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag90 { get; set; }
+        public required DebitOrCreditType DebitOrCreditType90 { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -49,7 +49,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(1)]
-        public required DebitOrCreditFlag DebitOrCreditFlag90Plus { get; set; }
+        public required DebitOrCreditType DebitOrCreditType90Plus { get; set; }
 
         [Required]
         [MinLength(6)]

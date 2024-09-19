@@ -43,9 +43,7 @@ namespace Wiedpug.Domain.Entities
         /// The new value that the Lot Identity is to be changed to.
         /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(6)]
-        public required string LotIdentity { get; set; }
+        public required LotIdentity LotIdentity { get; set; }
 
         /// <summary>
         /// Required generic string field for buying organisation.
@@ -63,14 +61,8 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(1)]
         public required SaleOutcome SaleOutcome { get; set; }
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(3)]
-        public required int NumberOfBales { get; set; }
+        public required NumberOfBales NumberOfBales { get; set; }
 
         /// <summary>
         /// Total weight of the wool. In transmissions from Test Houses, Gross 
@@ -126,9 +118,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// The selling price per weight unit. Generally, cost per weight unit will be in Australian cents per kilogram.
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(6)]
+        [Range(-999999,999999)]
         public int? CostPerWeightUnit { get; set; }
 
         /// <summary>

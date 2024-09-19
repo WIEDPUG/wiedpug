@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -13,13 +14,8 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(30)]
         public required string Brand { get; set; } // FIELD NUMBER 3 - Brand - Start: 4, Size: 30, Data Type: AN, Justification: L, Requirement Designator: M
 
-        /// <summary>
-        /// This field is to be always transmitted in upper case.
-        /// </summary>
         [Required]
-        [MinLength(1)]
-        [MaxLength(15)]
-        public required string BaleDescription { get; set; } // FIELD NUMBER 4 - Bale Description - Start: 34, Size: 15, Data Type: AN, Justification: L, Requirement Designator: M
+        public required BaleDescription BaleDescription { get; set; } // FIELD NUMBER 4 - Bale Description - Start: 34, Size: 15, Data Type: AN, Justification: L, Requirement Designator: M
 
         /// <summary>
         /// The code for the area in which the wool was grown.
@@ -36,15 +32,11 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(20)]
         public string? LocationWithinStore { get; set; } // FIELD NUMBER 6 - Location - within store - Start: 53, Size: 20, Data Type: AN, Justification: L, Requirement Designator: O
 
-        /// <summary>
-        /// Number of bales
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_4_DIGITS)]
-        public int NumberOfBales { get; set; } // FIELD NUMBER 7 - Bales - Start: 73, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
+        public required NumberOfBales NumberOfBales { get; set; } // FIELD NUMBER 7 - Bales - Start: 73, Size: 4, Data Type: N, Justification: R, Requirement Designator: M
 
         [MinLength(1)]
-        [MaxLength(20)]
+        [MaxLength(4)]
         public string? Postcode { get; set; }
     }
 }

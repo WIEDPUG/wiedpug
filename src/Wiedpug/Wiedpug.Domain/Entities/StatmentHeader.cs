@@ -13,19 +13,14 @@ namespace Wiedpug.Domain.Entities
         public required Organisation Client { get; set; }
 
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [Range(-999999,999999)]
         public required int ClientCode { get; set; }
 
         /// <summary>
         /// The period ending date of the statement
-        ///
-        /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string StatementDate { get; set; }
+        public required UtcDate StatementDate { get; set; }
 
         [Required]
         public required List<Balance> OpeningBalances { get; set; }

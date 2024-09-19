@@ -13,12 +13,12 @@ namespace Wiedpug.Domain.Entities
     public class Weight
     {
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_8_2)]
+        [Range(-999999.99,999999.99)]
         public required double Value { get; set; }
 
         [Required]
-        [MinLength(1)]
-        [MaxLength(1)]
-        public required WeightUnit Unit { get; set; }
+        [MinLength(5)]
+        [MaxLength(9)]
+        public required WeightCode WeightCode { get; set; }
     }
 }

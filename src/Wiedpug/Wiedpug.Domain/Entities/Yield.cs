@@ -19,7 +19,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// The amount of recoverable fibre from a lot under set processing conditions
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_5_2)]
+        [Range(-999.99,999.99)]
         public double? YieldValue { get; set; }
 
         /// <summary>

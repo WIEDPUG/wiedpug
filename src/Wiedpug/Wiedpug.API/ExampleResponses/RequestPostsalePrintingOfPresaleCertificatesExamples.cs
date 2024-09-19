@@ -19,8 +19,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestPostsalePrintingOfPresaleCertificates() {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     CurrentReceiver = new Organisation
                     {
@@ -39,7 +39,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 PrintPreSaleCertificatePostSales = new List<PrintPreSaleCertificatePostSale>
                 {
@@ -56,17 +56,17 @@ namespace Wiedpug.API.ExampleResponses
                             Prefix = "L",
                             Suffix = 1234567,
                         },
-                        LotIdentity = "45567L",
+                        LotIdentity = new LotIdentity{Identity="45567L" },
                         BuyingOrganisation = new Organisation
                         {
                             OrganisationCode = "AWT",
 
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
-                        NumberOfBales = 23,
+                        NumberOfBales = new NumberOfBales{BalesCount=23 },
                         Gross = new Weight{
                             Value=2340.00,
-                            Unit = WeightUnit.Kilograms
+                            WeightCode = WeightCode.KG
                         },
                         SaleIdentity = new SaleIdentity
                 {
@@ -94,8 +94,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -112,11 +112,11 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -136,8 +136,8 @@ namespace Wiedpug.API.ExampleResponses
                     new RequestPostsalePrintingOfPresaleCertificates {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         CurrentReceiver = new Organisation
                         {
@@ -156,7 +156,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     PrintPreSaleCertificatePostSales = new List<PrintPreSaleCertificatePostSale>
                 {
@@ -173,17 +173,17 @@ namespace Wiedpug.API.ExampleResponses
                             Prefix = "L",
                             Suffix = 1234567,
                         },
-                        LotIdentity = "45567L",
+                        LotIdentity = new LotIdentity{Identity="45567L" },
                         BuyingOrganisation = new Organisation
                         {
                             OrganisationCode = "AWT",
                         },
                         SaleOutcome = SaleOutcome.BidOrOfferPrice,
-                        NumberOfBales = 23,
+                        NumberOfBales = new NumberOfBales{BalesCount=23 },
                         Gross = new Weight
                         {
                             Value =2340.00,
-                            Unit = WeightUnit.Kilograms
+                            WeightCode = WeightCode.KG
                         },
                         SaleIdentity = new SaleIdentity
                 {

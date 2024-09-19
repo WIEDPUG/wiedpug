@@ -1,35 +1,26 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
     public class RecordSaleStatus
     {
-        /// <summary>
-        /// Datetime of the file creation with ISO UTC datetime format.
-        /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.DATE_AND_TIME_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(20)]
-        public required string FileCreationDateTime { get; set; }
+        public required UtcDateTime FileCreationDateTime { get; set; }
 
         /// <summary>
         /// Required decimal field for the last cost of the first lot with two digits precision.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(6)]
+        [Range(-999999,999999)]
         public required int TotalLotsOffered { get; set; }
 
         /// <summary>
         /// This indicates the progress of the sale, expressed as a percentage of the total lots offered and is calculated on the WoolSaleHeaderLot record grouping.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
-        [MinLength(1)]
-        [MaxLength(3)]
+        [Range(-999,999)]
         public required int PercentageSold { get; set; }
 
         /// <summary>

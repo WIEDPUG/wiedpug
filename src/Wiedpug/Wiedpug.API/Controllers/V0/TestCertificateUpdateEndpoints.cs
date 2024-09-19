@@ -23,7 +23,8 @@ public static class TestCertificateUpdateEndpoints
         ([FromBody] List<TestCertificateUpdate> model) =>
             {
                 //return TypedResults.Created($"/api/AuctionCatalogues/{model.ID}", model);
-            })        
+            })
+         .WithName("CreateTestCertificateUpdates")
         .WithOpenApi(o => new(o)
         {
             Summary = "Test Certificate Updates",
@@ -49,7 +50,7 @@ public static class TestCertificateUpdateEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetTestCertificateUpdates")
+        .WithName("RequestForTestCertificateUpdates")
         .WithOpenApi(o => new(o)
         {
             Summary = "Retrieves the test certificate updates"

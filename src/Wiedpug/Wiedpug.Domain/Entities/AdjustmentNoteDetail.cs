@@ -16,7 +16,7 @@ namespace Wiedpug.Domain.Entities
         /// Invoice number of the credit
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_8_DIGITS)]
+        [Range(-99999999,99999999)]
         public required int CreditNoteInvoiceNumber { get; set; }
 
         /// <summary>
@@ -24,12 +24,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateOfCreditNote { get; set; }
+        public required UtcDate DateOfCreditNote { get; set; }
 
         /// <summary>
         /// Amount to be credited
@@ -63,7 +58,7 @@ namespace Wiedpug.Domain.Entities
         /// Reason credit note was raised
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_2_DIGITS)]
+        [Range(-99,99)]
         public required int ReasonCode { get; set; }
 
         [Required]
@@ -77,11 +72,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateOfOriginalInvoice { get; set; }
+        public required UtcDate DateOfOriginalInvoice { get; set; }
 
         [Required]
         [MinLength(1)]

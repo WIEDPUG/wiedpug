@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Wiedpug.Domain.Shared.Constants;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -23,8 +24,7 @@ namespace Wiedpug.Domain.Entities
         /// The new value that the Lot Identity is to be changed to.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
-        public required string LotIdentity { get; set; }
+        public required LotIdentity LotIdentity { get; set; }
 
         /// <summary>
         /// This is the sum of the following amount: First Cost + (Post sale charge X total bales) + charge per lot.

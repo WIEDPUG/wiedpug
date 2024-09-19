@@ -39,7 +39,7 @@ paths:
                     softwareCompany: 1
                     softwareVersion: 1082
                     programName: NETR
-                  abn: "72001967184"
+                  abn: 72001967184
                 testCertificateDetails:
                   - testDataHeader:
                       client:
@@ -48,13 +48,13 @@ paths:
                       numberOfBales: 1
                       gross:
                         value: 1
-                        unit: 0
+                        weightCode: KG
                       tare:
                         value: 10
-                        unit: 0
+                        weightCode: KG
                       regrabSampleWeight:
                         value: 1
-                        unit: 0
+                        weightCode: KG
                       lotType: 7
                       centreAuction:
                         country: AU
@@ -73,7 +73,7 @@ paths:
                         certificateIdCd: 7
                       charge:
                         value: 100
-                        currencyUnit: AUD
+                        currencyCode: AUD
                       laboratory: 1
                       woolBase: 20
                       vmb: 10
@@ -104,22 +104,15 @@ paths:
                           curvatureMeanDegPerMm: 61
                           coreTestSamplingDate: 2017-01-10
                           dateIssued: 2017-01-10
-                        fibreDiameterHistogramDetails:
-                          - fibreDiameterHistogramDetailMeasurements:
-                              - fibreDiameter: 23
-                                fibresMeasuredPercentage: 0.2345
-                              - fibreDiameter: 24
-                                fibresMeasuredPercentage: 0.2228
-                          - fibreDiameterHistogramDetailMeasurements:
-                              - fibreDiameter: 25
-                                fibresMeasuredPercentage: 0.2543
-                              - fibreDiameter: 27
-                                fibresMeasuredPercentage: 0.3262
-                          - fibreDiameterHistogramDetailMeasurements:
-                              - fibreDiameter: 21
-                                fibresMeasuredPercentage: 0.174
-                              - fibreDiameter: 21
-                                fibresMeasuredPercentage: 0.1955
+                        fibreDiameterHistogramDetailMeasurements:
+                          - fibreDiameter: 23
+                            fibresMeasuredPercentage: 0.2345
+                          - fibreDiameter: 24
+                            fibresMeasuredPercentage: 0.2228
+                          - fibreDiameter: 25
+                            fibresMeasuredPercentage: 0.2543
+                          - fibreDiameter: 27
+                            fibresMeasuredPercentage: 0.3262
                   - testDataHeader:
                       client:
                         organisationCode: ATC
@@ -127,13 +120,13 @@ paths:
                       numberOfBales: 1
                       gross:
                         value: 40
-                        unit: 0
+                        weightCode: KG
                       tare:
                         value: 10
-                        unit: 0
+                        weightCode: KG
                       regrabSampleWeight:
                         value: 1
-                        unit: 0
+                        weightCode: KG
                       lotType: 4
                       centreAuction:
                         country: AU
@@ -152,7 +145,7 @@ paths:
                         certificateIdCd: 7
                       charge:
                         value: 123.25
-                        currencyUnit: AUD
+                        currencyCode: AUD
                       laboratory: 2
                       stapleLength: 13
                       stapleLengthMinimum: 13
@@ -187,22 +180,15 @@ paths:
                           curvatureMeanDegPerMm: 61
                           coreTestSamplingDate: 2017-01-10
                           dateIssued: 2017-01-10
-                        fibreDiameterHistogramDetails:
-                          - fibreDiameterHistogramDetailMeasurements:
-                              - fibreDiameter: 23
-                                fibresMeasuredPercentage: 0.2345
-                              - fibreDiameter: 24
-                                fibresMeasuredPercentage: 0.2228
-                          - fibreDiameterHistogramDetailMeasurements:
-                              - fibreDiameter: 25
-                                fibresMeasuredPercentage: 0.2543
-                              - fibreDiameter: 27
-                                fibresMeasuredPercentage: 0.3262
-                          - fibreDiameterHistogramDetailMeasurements:
-                              - fibreDiameter: 21
-                                fibresMeasuredPercentage: 0.174
-                              - fibreDiameter: 21
-                                fibresMeasuredPercentage: 0.1955
+                        fibreDiameterHistogramDetailMeasurements:
+                          - fibreDiameter: 23
+                            fibresMeasuredPercentage: 0.2345
+                          - fibreDiameter: 24
+                            fibresMeasuredPercentage: 0.2228
+                          - fibreDiameter: 25
+                            fibresMeasuredPercentage: 0.2543
+                          - fibreDiameter: 27
+                            fibresMeasuredPercentage: 0.3262
         required: true
       responses:
         "200":
@@ -272,7 +258,7 @@ paths:
       tags:
         - Test Certificates
       summary: Retrieves the test certificates
-      operationId: GetTestCertificates
+      operationId: RequestForTestCertificates
       requestBody:
         content:
           application/json:
@@ -294,7 +280,7 @@ paths:
                     softwareCompany: 8
                     softwareVersion: 1082
                     programName: NETR
-                  abn: "72001967184"
+                  abn: 72001967184
                 requestForDataType: {}
         required: true
       responses:
@@ -322,7 +308,7 @@ paths:
                         softwareCompany: 1
                         softwareVersion: 1082
                         programName: NETR
-                      abn: "72001967184"
+                      abn: 72001967184
                     testCertificateDetails:
                       - testDataHeader:
                           client:
@@ -331,13 +317,13 @@ paths:
                           numberOfBales: 1
                           gross:
                             value: 40
-                            unit: 0
+                            weightCode: KG
                           tare:
                             value: 10
-                            unit: 0
+                            weightCode: KG
                           regrabSampleWeight:
                             value: 1
-                            unit: 0
+                            weightCode: KG
                           lotType: 3
                           centreAuction:
                             country: AU
@@ -356,7 +342,7 @@ paths:
                             certificateIdCd: 7
                           charge:
                             value: 100
-                            currencyUnit: AUD
+                            currencyCode: AUD
                           laboratory: 1
                           woolBase: 20
                           vmb: 10
@@ -387,22 +373,15 @@ paths:
                               curvatureMeanDegPerMm: 61
                               coreTestSamplingDate: 2017-01-10
                               dateIssued: 2017-01-10
-                            fibreDiameterHistogramDetails:
-                              - fibreDiameterHistogramDetailMeasurements:
-                                  - fibreDiameter: 23
-                                    fibresMeasuredPercentage: 0.2345
-                                  - fibreDiameter: 24
-                                    fibresMeasuredPercentage: 0.2228
-                              - fibreDiameterHistogramDetailMeasurements:
-                                  - fibreDiameter: 25
-                                    fibresMeasuredPercentage: 0.2543
-                                  - fibreDiameter: 27
-                                    fibresMeasuredPercentage: 0.3262
-                              - fibreDiameterHistogramDetailMeasurements:
-                                  - fibreDiameter: 21
-                                    fibresMeasuredPercentage: 0.174
-                                  - fibreDiameter: 21
-                                    fibresMeasuredPercentage: 0.1955
+                            fibreDiameterHistogramDetailMeasurements:
+                              - fibreDiameter: 23
+                                fibresMeasuredPercentage: 0.2345
+                              - fibreDiameter: 24
+                                fibresMeasuredPercentage: 0.2228
+                              - fibreDiameter: 25
+                                fibresMeasuredPercentage: 0.2543
+                              - fibreDiameter: 27
+                                fibresMeasuredPercentage: 0.3262
                       - testDataHeader:
                           client:
                             organisationCode: ATW
@@ -410,13 +389,13 @@ paths:
                           numberOfBales: 1
                           gross:
                             value: 40
-                            unit: 0
+                            weightCode: KG
                           tare:
                             value: 10
-                            unit: 0
+                            weightCode: KG
                           regrabSampleWeight:
                             value: 1
-                            unit: 0
+                            weightCode: KG
                           lotType: 3
                           centreAuction:
                             country: AU
@@ -435,7 +414,7 @@ paths:
                             certificateIdCd: 7
                           charge:
                             value: 156.34
-                            currencyUnit: AUD
+                            currencyCode: AUD
                           laboratory: 2
                           stapleLength: 13
                           stapleLengthMinimum: 13
@@ -470,22 +449,15 @@ paths:
                               curvatureMeanDegPerMm: 61
                               coreTestSamplingDate: 2017-01-10
                               dateIssued: 2017-01-10
-                            fibreDiameterHistogramDetails:
-                              - fibreDiameterHistogramDetailMeasurements:
-                                  - fibreDiameter: 23
-                                    fibresMeasuredPercentage: 0.2345
-                                  - fibreDiameter: 24
-                                    fibresMeasuredPercentage: 0.2228
-                              - fibreDiameterHistogramDetailMeasurements:
-                                  - fibreDiameter: 25
-                                    fibresMeasuredPercentage: 0.2543
-                                  - fibreDiameter: 27
-                                    fibresMeasuredPercentage: 0.3262
-                              - fibreDiameterHistogramDetailMeasurements:
-                                  - fibreDiameter: 21
-                                    fibresMeasuredPercentage: 0.174
-                                  - fibreDiameter: 21
-                                    fibresMeasuredPercentage: 0.1955
+                            fibreDiameterHistogramDetailMeasurements:
+                              - fibreDiameter: 23
+                                fibresMeasuredPercentage: 0.2345
+                              - fibreDiameter: 24
+                                fibresMeasuredPercentage: 0.2228
+                              - fibreDiameter: 25
+                                fibresMeasuredPercentage: 0.2543
+                              - fibreDiameter: 27
+                                fibresMeasuredPercentage: 0.3262
         "204":
           description: No Content
           content:
@@ -589,21 +561,9 @@ components:
       type: object
       properties:
         dateFormatLastRevised:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         dateTransmissionFileCreated:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: Date value in ISO standard UTC date format. e.g. 2024-03-21
-            (YYYY-MM-DD).
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         countryOfOrigin:
           $ref: "#/components/schemas/CountryCode"
         documentOriginator:
@@ -611,7 +571,8 @@ components:
         currentReceiver:
           $ref: "#/components/schemas/Organisation"
         versionNumber:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: "The version number of the WIEDPUG Handbook that the transmission
             relates to\r
@@ -622,12 +583,17 @@ components:
         softwareIdentifier:
           $ref: "#/components/schemas/SoftwareIdentifier"
         abn:
-          maxLength: 11
-          minLength: 1
-          pattern: ^[0-9]+$
-          type: string
-          description: Australian Business Number, 11 digits string
+          maximum: 99999999999
+          minimum: 10000000000
+          type: integer
+          description: Australian Business Number, 11 digits
+          format: int64
       additionalProperties: false
+    UtcDate:
+      type: string
+      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
+      example: 2024-03-21
     CountryCode:
       enum:
         - AU
@@ -716,7 +682,7 @@ components:
         The legacy codes for Overseas Centre are under
         CentreCodeAustralia"
       discriminator:
-        propertyName: Country
+        propertyName: country
         mapping:
           AU: "#/components/schemas/CentreCodeAustralia"
           CN: "#/components/schemas/CentreCodeChina"
@@ -1041,7 +1007,8 @@ components:
         softwareCompany:
           $ref: "#/components/schemas/SoftwareCompany"
         softwareVersion:
-          pattern: -?\d{1,4}
+          maximum: 9999
+          minimum: -9999
           type: integer
           description: Version no. e.g. 2400
           format: int32
@@ -1143,11 +1110,7 @@ components:
         client:
           $ref: "#/components/schemas/Organisation"
         season:
-          maxLength: 2
-          minLength: 1
-          type: integer
-          format: int32
-          nullable: true
+          $ref: "#/components/schemas/Season"
         saleIdentity:
           $ref: "#/components/schemas/SaleIdentity"
         centreStorage:
@@ -1242,10 +1205,7 @@ components:
             is printed on the certificate."
           nullable: true
         numberOfBales:
-          pattern: -?\d{1,4}
-          type: integer
-          description: Number of bales
-          format: int32
+          $ref: "#/components/schemas/NumberOfBales"
         gross:
           $ref: "#/components/schemas/Weight"
         tare:
@@ -1300,6 +1260,11 @@ components:
             false: not applicable."
           nullable: true
       additionalProperties: false
+    Season:
+      maximum: 99
+      minimum: -99
+      type: integer
+      format: int32
     SaleIdentity:
       required:
         - saleNumber
@@ -1393,9 +1358,8 @@ components:
             Please contact the WIEDPUG Secretary for the latest list
             of reserved and allocated codes."
         saleNumber:
-          maxLength: 2
-          minLength: 1
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           format: int32
       additionalProperties: false
@@ -1420,35 +1384,41 @@ components:
           minLength: 1
           type: string
         suffix:
-          maxLength: 7
-          minLength: 1
-          pattern: -?\d{1,7}
+          maximum: 9999999
+          minimum: -9999999
           type: integer
           format: int32
       additionalProperties: false
       description: The first character contains the Weight Note prefix, and the next
         seven characters contain the weight Note Suffix.
+    NumberOfBales:
+      maximum: 9999
+      minimum: -9999
+      type: integer
+      description: Number of bales
+      format: int32
     Weight:
       required:
-        - unit
         - value
+        - weightCode
       type: object
       properties:
         value:
-          pattern: ^-?\d{1,6}(\.\d{2})?$
+          maximum: 999999.99
+          minimum: -999999.99
           type: number
           format: double
-        unit:
-          $ref: "#/components/schemas/WeightUnit"
+          multipleOf: 0.01
+        weightCode:
+          $ref: "#/components/schemas/WeightCode"
       additionalProperties: false
-    WeightUnit:
+    WeightCode:
       enum:
-        - 0
-        - 1
-        - 2
-      type: integer
-      description: "0: Kilograms<br />1: Pounds<br />2: Grams"
-      format: int32
+        - KG
+        - LB
+        - G
+      type: string
+      description: "KG: Kilograms<br />LB: Pounds<br />G: Grams"
     MulesingStatus:
       enum:
         - NM
@@ -1550,14 +1520,16 @@ components:
       type: object
       properties:
         value:
-          pattern: ^-?\d{1,10}(\.\d{2})?$
+          maximum: 9999999999.99
+          minimum: -9999999999.99
           type: number
           description: Total up to 12 digits with 2 digits after the decimal point.
           format: double
-        currencyUnit:
-          $ref: "#/components/schemas/CurrencyUnit"
+          multipleOf: 0.01
+        currencyCode:
+          $ref: "#/components/schemas/CurrencyCode"
       additionalProperties: false
-    CurrencyUnit:
+    CurrencyCode:
       enum:
         - AUD
         - BEF
@@ -1596,7 +1568,8 @@ components:
         regrabSampleWeight:
           $ref: "#/components/schemas/Weight"
         woolBase:
-          pattern: ^-?\d{1,2}(\.\d{2})?$
+          maximum: 99.99
+          minimum: -99.99
           type: number
           description: "The oven-dry mass of wool fibre free from all impurities,
             expressed as a percentage of the mass of the sample.\r
@@ -1610,14 +1583,18 @@ components:
             Max The highest value in a range of Wool Base values"
           format: double
           nullable: true
+          multipleOf: 0.01
         airflowMean:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Average Fibre Diameter – Airflow
           format: double
           nullable: true
+          multipleOf: 0.1
         vmb:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: "Vegetable Matter Base. The oven dry mass of ash-free, ethyl
             alcohol \r
@@ -1658,11 +1635,14 @@ components:
             values."
           format: double
           nullable: true
+          multipleOf: 0.1
         hardHeadsBase:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           format: double
           nullable: true
+          multipleOf: 0.1
         yields:
           type: array
           items:
@@ -1672,71 +1652,93 @@ components:
         reissueChargeFlag:
           $ref: "#/components/schemas/ReissueChargeFlag"
         vm1:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: The % of the core sample composed of burrs
           format: double
           nullable: true
+          multipleOf: 0.1
         vm2:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: The % of the core sample composed of seeds and shive
           format: double
           nullable: true
+          multipleOf: 0.1
         vm3:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: The % of the core sample composed of hardheads
           format: double
           nullable: true
+          multipleOf: 0.1
         darkAndMedullatedFibreRisk:
           $ref: "#/components/schemas/DarkAndMedullatedFibreRisk"
         ashContentDryBasis:
-          pattern: ^-?\d{1,2}(\.\d{2})?$
+          maximum: 99.99
+          minimum: -99.99
           type: number
           format: double
           nullable: true
+          multipleOf: 0.01
         alcoholExtractableMatterDryBasis:
-          pattern: ^-?\d{1,2}(\.\d{2})?$
+          maximum: 99.99
+          minimum: -99.99
           type: number
           format: double
           nullable: true
+          multipleOf: 0.01
         vmbMinimum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: VMB - Minimum value.
           format: double
           nullable: true
+          multipleOf: 0.1
         vmbMaximum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: VMB - Maximum value.
           format: double
           nullable: true
+          multipleOf: 0.1
         factorWoolBase:
-          pattern: ^-?\d{1,8}(\.\d{2})?$
+          maximum: 99999999.99
+          minimum: -99999999.99
           type: number
           description: Factor for Wool Base.
           format: double
           nullable: true
+          multipleOf: 0.01
         factorVmb:
-          pattern: ^-?\d{1,7}(\.\d{2})?$
+          maximum: 9999999.99
+          minimum: -9999999.99
           type: number
           description: Factor for VMB.
           format: double
           nullable: true
+          multipleOf: 0.01
         factorHardHeadsBase:
-          pattern: ^-?\d{1,7}(\.\d{2})?$
+          maximum: 9999999.99
+          minimum: -9999999.99
           type: number
           description: Factor for Hard Heads Base.
           format: double
           nullable: true
+          multipleOf: 0.01
         factorAirflowMean:
-          pattern: ^-?\d{1,6}(\.\d{6})?$
+          maximum: 999999.999999
+          minimum: -999999.999999
           type: number
           description: Factor for Airflow Mean. Factor used in combination calculation.
           format: double
           nullable: true
+          multipleOf: 0.000001
         combinationFlag:
           $ref: "#/components/schemas/CombinationFlag"
       additionalProperties: false
@@ -1835,12 +1837,14 @@ components:
         yieldType:
           $ref: "#/components/schemas/YieldType"
         yieldValue:
-          pattern: ^-?\d{1,3}(\.\d{2})?$
+          maximum: 999.99
+          minimum: -999.99
           type: number
           description: The amount of recoverable fibre from a lot under set processing
             conditions
           format: double
           nullable: true
+          multipleOf: 0.01
         cleanWeight:
           $ref: "#/components/schemas/Weight"
       additionalProperties: false
@@ -1988,19 +1992,24 @@ components:
         regrabSampleWeight:
           $ref: "#/components/schemas/Weight"
         colourX:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Colour X value.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourY:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Colour Y value.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourZ:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: "Colour Z value.\r
 
@@ -2010,61 +2019,80 @@ components:
             Australia."
           format: double
           nullable: true
+          multipleOf: 0.1
         colourYZ:
-          pattern: ^-?\d{1,3}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Average yellowness, Colour Y – Colour Z. The field has an optional
             leading sign.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourXMinimum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Min – The lowest value in a range of Colour-X values.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourXMaximum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Max – The highest value in a range of Colour-X values.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourYMinimum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Min – The lowest value in a range of Colour-Y values.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourYMaximum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Max – The highest value in a range of Colour-Y values.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourZMinimum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Min – The lowest value in a range of Colour-Z values.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourZMaximum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Max – The highest value in a range of Colour-Z values.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourYZMinimum:
-          pattern: ^-?\d{1,3}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Min – The lowest value in a range of Colour-Y-Z values.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourYZMaximum:
-          pattern: ^-?\d{1,3}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Max – The highest value in a range of Colour-Y-Z values.
           format: double
           nullable: true
+          multipleOf: 0.1
         coreBulkValue:
           maxLength: 2
           minLength: 1
@@ -2073,44 +2101,42 @@ components:
         reissueChargeFlag:
           $ref: "#/components/schemas/ReissueChargeFlag"
         colourXAsIs:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Colour X value for scoured wool.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourYAsIs:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Colour Y value for scoured wool.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourZAsIs:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Colour Z value for scoured wool.
           format: double
           nullable: true
+          multipleOf: 0.1
         colourYZAsIs:
-          pattern: ^-?\d{1,3}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Colour Y – Colour Z, that is average yellowness for scoured
             wool.The field has an optional leading sign.
           format: double
           nullable: true
+          multipleOf: 0.1
         calibrationFlag:
           $ref: "#/components/schemas/CalibrationFlag"
         dateIssued:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: "The date the certificate was issued.\r
-
-            \r
-
-            Date value in ISO 8601 standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)"
-          format: date
+          $ref: "#/components/schemas/UtcDate"
       additionalProperties: false
     ColourTestDetailType:
       enum:
@@ -2132,7 +2158,6 @@ components:
     LengthAndStrengthTestDetail:
       required:
         - certificateIdentity
-        - dateIssued
         - isLsSampleSecured
         - laboratory
         - lengthAndStrengthTestDetailsType
@@ -2156,13 +2181,15 @@ components:
         regrabSampleWeight:
           $ref: "#/components/schemas/Weight"
         stapleLength:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: The mean length of a staple from tip to base. At least 60 staples
             are measured for each test lot.
           format: int32
         stapleLengthMinimum:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The mean length of a staple from tip to base. At least 60 staples
             are measured for each test lot. \r
@@ -2174,7 +2201,8 @@ components:
           format: int32
           nullable: true
         stapleLengthMaximum:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The mean length of a staple from tip to base. At least 60 staples
             are measured for each test lot. \r
@@ -2186,7 +2214,8 @@ components:
           format: int32
           nullable: true
         stapleStrengthMinimum:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The force required to break a staple of given thickness. \r
 
@@ -2203,7 +2232,8 @@ components:
           format: int32
           nullable: true
         stapleStrengthMaximum:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The force required to break a staple of given thickness. \r
 
@@ -2220,13 +2250,15 @@ components:
           format: int32
           nullable: true
         stapleLengthCvPercentage:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: Staple length coefficient of variation. This is a measurement of
             the staple length variability and is reported as a percentage.
           format: int32
         stapleStrength:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The force required to break a staple of given thickness. \r
 
@@ -2237,7 +2269,8 @@ components:
             per kilotex"
           format: int32
         positionOfBreakPercentageTip:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The position of break indicates the location of the weakest part
             of the staple.\r
@@ -2248,7 +2281,8 @@ components:
             position of break."
           format: int32
         positionOfBreakPercentageMiddle:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The position of break indicates the location of the weakest part
             of the staple. \r
@@ -2259,7 +2293,8 @@ components:
             section position of break."
           format: int32
         positionOfBreakPercentageBase:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "The position of break indicates the location of the weakest part
             of the staple.\r
@@ -2270,7 +2305,8 @@ components:
             position of break."
           format: int32
         team3Hauteur:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "Predicted Fibre Length in the Top. NOTE: Any certificate issued
             (or reissued with a new Certificate ID Number) from 1st July, 2006
@@ -2306,7 +2342,8 @@ components:
 
             false: not secured"
         expectedBarbe:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "Expected Barbe length in the Top. Used for NZ Crossbred wool
             certificates based on the 2016 calculation. \r
@@ -2319,26 +2356,27 @@ components:
           format: int32
           nullable: true
         team3HauteurCvPercentage:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: "Coefficient of Variation of Hauteur. NOTE: Refer to note in
             Team3Hauteur."
           format: double
           nullable: true
+          multipleOf: 0.1
         team3RomainePercentage:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: "Romaine. NOTE: Refer to note in Team3Hauteur."
           format: double
           nullable: true
+          multipleOf: 0.1
         dateIssued:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         stapleStrengthLowest25Percent:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: Average Staple Strength of the lowest 25% of staples measured for
             Strength.
@@ -2385,7 +2423,8 @@ components:
         reissueChargeFlag:
           $ref: "#/components/schemas/ReissueChargeFlag"
         dichloromethaneDryBasis:
-          pattern: ^-?\d{1,2}(\.\d{2})?$
+          maximum: 99.99
+          minimum: -99.99
           type: number
           description: "Dichloromethane Extractable Matter (Residual Grease) remaining in
             a sample of wool after scouring and drying.\r
@@ -2400,18 +2439,9 @@ components:
             Max: The highest value in a range of Dichloromethane,
             dry basis values"
           format: double
+          multipleOf: 0.01
         dateIssued:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: "The date the certificate was issued.\r
-
-            \r
-
-            Date value in ISO 8601 standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)"
-          format: date
+          $ref: "#/components/schemas/UtcDate"
       additionalProperties: false
     ConditioningTestDetail:
       required:
@@ -2449,11 +2479,14 @@ components:
         gainLossOfInvoiceMass:
           $ref: "#/components/schemas/Weight"
         moistureContentPercentage:
-          pattern: ^-?\d{1,2}(\.\d{2})?$
+          maximum: 99.99
+          minimum: -99.99
           type: number
           format: double
+          multipleOf: 0.01
         regainPercentage:
-          pattern: ^-?\d{1,2}(\.\d{2})?$
+          maximum: 99.99
+          minimum: -99.99
           type: number
           description: "The amount of moisture in the fibres, expressed as a percentage of
             the clean oven-dry weight.\r
@@ -2467,6 +2500,7 @@ components:
 
             Test House - The Regain certified by the Test House."
           format: double
+          multipleOf: 0.01
         netWeightOdOfConsignment:
           $ref: "#/components/schemas/Weight"
         yieldType:
@@ -2476,11 +2510,7 @@ components:
         invoiceMassFlag:
           $ref: "#/components/schemas/InvoiceMassFlag"
         dateIssued:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          format: date
+          $ref: "#/components/schemas/UtcDate"
       additionalProperties: false
     InvoiceMassFlag:
       enum:
@@ -2500,7 +2530,8 @@ components:
         laboratory:
           $ref: "#/components/schemas/Laboratory"
         lacBarbe:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "Length after Carding Barbe in mm (mean length biased by fibre
             weight)\r
@@ -2515,18 +2546,22 @@ components:
           format: int32
           nullable: true
         lacBarbeCvPercentage:
-          pattern: ^-?\d{1,3}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Length after Carding Barbe – Coefficient of Variation of Barbe.
           format: double
           nullable: true
+          multipleOf: 0.1
         lacHauteur:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           format: int32
           nullable: true
         lacHauteurCvPercentage:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           description: "Length after Carding - Coefficient of Variation of Hauteur.\r
 
@@ -2542,11 +2577,13 @@ components:
           format: int32
           nullable: true
         lacCardWastePercentage:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Percentage Card Waste.
           format: double
           nullable: true
+          multipleOf: 0.1
         charge:
           $ref: "#/components/schemas/Currency"
       additionalProperties: false
@@ -2557,7 +2594,6 @@ components:
         - client
         - creditNoteAmount
         - creditNoteInvoiceNumber
-        - dateOfCreditNote
         - dateOfOriginalInvoice
         - gstAmount
         - isGstApplicable
@@ -2567,22 +2603,13 @@ components:
         client:
           $ref: "#/components/schemas/Organisation"
         creditNoteInvoiceNumber:
-          pattern: -?\d{1,8}
+          maximum: 99999999
+          minimum: -99999999
           type: integer
           description: Invoice number of the credit
           format: int32
         dateOfCreditNote:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: "Date the Credit note was issued\r
-
-            \            \r
-
-            Date value in ISO standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)."
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         creditNoteAmount:
           $ref: "#/components/schemas/Currency"
         isGstApplicable:
@@ -2601,24 +2628,15 @@ components:
         gstAmount:
           $ref: "#/components/schemas/Currency"
         reasonCode:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: Reason credit note was raised
           format: int32
         certificateIdentityOriginal:
           $ref: "#/components/schemas/CertificateIdentity"
         dateOfOriginalInvoice:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: "Date of the original invoice\r
-
-            \            \r
-
-            Date value in ISO standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)."
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         certificateIdentityNew:
           $ref: "#/components/schemas/CertificateIdentity"
       additionalProperties: false
@@ -2627,10 +2645,10 @@ components:
       properties:
         fibreDiameterHistogramHeader:
           $ref: "#/components/schemas/FibreDiameterHistogramHeader"
-        fibreDiameterHistogramDetails:
+        fibreDiameterHistogramDetailMeasurements:
           type: array
           items:
-            $ref: "#/components/schemas/FibreDiameterHistogramDetail"
+            $ref: "#/components/schemas/FibreDiameterHistogramDetailMeasurement"
           nullable: true
       additionalProperties: false
     FibreDiameterHistogramHeader:
@@ -2647,16 +2665,21 @@ components:
       type: object
       properties:
         coefficientOfVariation:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           format: double
+          multipleOf: 0.1
         comfortFactorPercentage:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: Percentage of Fibres 30 Microns and under.
           format: double
+          multipleOf: 0.1
         fibresMeasured:
-          pattern: -?\d{1,6}
+          maximum: 999999
+          minimum: -999999
           type: integer
           format: int32
           nullable: true
@@ -2667,79 +2690,70 @@ components:
         subSamplingMethod:
           $ref: "#/components/schemas/SubSamplingMethod"
         numberOfSpecimens:
-          pattern: -?\d{1,4}
+          maximum: 9999
+          minimum: -9999
           type: integer
           format: int32
         mean:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: This is Laserscan Mean or OFDA Mean depending on the value of
             instrument
           format: double
+          multipleOf: 0.1
         standardDeviation:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           format: double
+          multipleOf: 0.1
         curvatureMeanDegPerMm:
-          pattern: -?\d{1,3}
+          maximum: 999
+          minimum: -999
           type: integer
           format: int32
           nullable: true
         meanMinimum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: This is the Laserscan or OFDA Mean Minimum depending on the value
             of instrument.This field will contain spaces until 30/06/2000
           format: double
           nullable: true
+          multipleOf: 0.1
         meanMaximum:
-          pattern: ^-?\d{1,2}(\.\d{1})?$
+          maximum: 999.9
+          minimum: -999.9
           type: number
           description: This is the Laserscan or OFDA Mean Maximum depending on the value
             of instrument.This field will contain spaces until 30/06/2000
           format: double
           nullable: true
+          multipleOf: 0.1
         coreTestSamplingDate:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          description: "For records Fibre Diameter Histogram Header and Test Request
-            Verification this is the date core test was sampled or date
-            combination/OML was requested.\r
-
-            \r
-
-            For the Lot Header this is the date the core test was
-            sampled, the last date of weighing for untested wool or the date the
-            Combination/OML was requested.\r
-
-            \r
-
-            Date value in ISO 8601 standard UTC date format. e.g.
-            2024-03-21 (YYYY-MM-DD)."
-          format: date
-          nullable: true
+          $ref: "#/components/schemas/UtcDate"
         dateIssued:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          format: date
+          $ref: "#/components/schemas/UtcDate"
         factorLaserscanNumerator:
-          pattern: ^-?\d{1,10}(\.\d{6})?$
+          maximum: 9999999999.999998
+          minimum: -9999999999.999998
           type: number
           description: Factor used in numerator to calculate Laserscan Mean Laserscan Mean
             = Factor Laserscan Numerator/Factor Laserscan Denominator
           format: double
           nullable: true
+          multipleOf: 0.000001
         factorLaserscanDenominator:
-          pattern: ^-?\d{1,9}(\.\d{6})?$
+          maximum: 999999999.999999
+          minimum: -999999999.999999
           type: number
           description: Factor used in denominator to calculate Laserscan Mean Laserscan
             Mean = Factor Laserscan Numerator/Factor Laserscan Denominator
           format: double
           nullable: true
+          multipleOf: 0.000001
       additionalProperties: false
     Instrument:
       enum:
@@ -2754,16 +2768,6 @@ components:
       type: integer
       description: "1: Minicore"
       format: int32
-    FibreDiameterHistogramDetail:
-      required:
-        - fibreDiameterHistogramDetailMeasurements
-      type: object
-      properties:
-        fibreDiameterHistogramDetailMeasurements:
-          type: array
-          items:
-            $ref: "#/components/schemas/FibreDiameterHistogramDetailMeasurement"
-      additionalProperties: false
     FibreDiameterHistogramDetailMeasurement:
       required:
         - fibreDiameter
@@ -2771,15 +2775,18 @@ components:
       type: object
       properties:
         fibreDiameter:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: Fibre Diameter for the measurement.
           format: int32
         fibresMeasuredPercentage:
-          pattern: ^-?\d{1,2}(\.\d{4})?$
+          maximum: 9999.99
+          minimum: -9999.99
           type: number
           description: Percentage of fibres measured for the measurement.
           format: double
+          multipleOf: 0.01
       additionalProperties: false
     Bale:
       required:
@@ -2807,10 +2814,7 @@ components:
           type: string
           description: This field is to be always transmitted in upper case.
         baleDescription:
-          maxLength: 15
-          minLength: 1
-          type: string
-          description: This field is to be always transmitted in upper case.
+          $ref: "#/components/schemas/BaleDescription"
         areaOfOrigin:
           maxLength: 4
           minLength: 1
@@ -2826,19 +2830,24 @@ components:
             http://www.awex.com.au/market-information/wool-statisti\
             cal-areas-wsa/"
         numberOfBales:
-          maxLength: 4
-          minLength: 1
-          pattern: -?\d{1,4}
-          type: integer
-          description: Number of bales
-          format: int32
-          nullable: true
+          $ref: "#/components/schemas/NumberOfBales"
         locationWithinStore:
           maxLength: 20
           minLength: 1
           type: string
           nullable: true
       additionalProperties: false
+    BaleDescription:
+      required:
+        - description
+      type: object
+      properties:
+        description:
+          maxLength: 15
+          minLength: 1
+          type: string
+      additionalProperties: false
+      description: This field is to be always transmitted in upper case.
     BaleDetail:
       required:
         - baleDetailType
@@ -2867,7 +2876,8 @@ components:
             bale details.
           nullable: true
         unitNumber:
-          pattern: -?\d{1,5}
+          maximum: 99999
+          minimum: -99999
           type: integer
           description: Property for Tripacks BaleDetail, not necessary for other types of
             bale details.
@@ -2883,7 +2893,8 @@ components:
           type: string
           nullable: true
         threeBaleCount:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: "The number of tripacks (3 bales) in the lot.\r
 
@@ -2894,7 +2905,8 @@ components:
           format: int32
           nullable: true
         twoBaleCount:
-          pattern: -?\d{1,2}
+          maximum: 99
+          minimum: -99
           type: integer
           description: "The number of two bale tri-packs.\r
 
@@ -3130,7 +3142,7 @@ components:
             - $ref: "#/components/schemas/DateTimeRangeRequestForDataType"
       additionalProperties: false
       discriminator:
-        propertyName: RequestForDataType
+        propertyName: requestForDataType
         mapping:
           UseNetworkDateTimeRequestForDataType: "#/components/schemas/UseNetworkDateTimeRequestForDataType"
           DateTimeRangeRequestForDataType: "#/components/schemas/DateTimeRangeRequestForDataType"
@@ -3159,23 +3171,16 @@ components:
       type: object
       properties:
         startDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g.
-            2024-03-21T19:25:04Z
-          format: date-time
+          $ref: "#/components/schemas/UtcDateTime"
         endDateTimeStatusRequest:
-          maxLength: 20
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          description: Date and Time value in ISO 8601 standard UTC format. e.g.
-            2024-03-21T19:25:04Z
-          format: date-time
-          nullable: true
+          $ref: "#/components/schemas/UtcDateTime"
       additionalProperties: false
+    UtcDateTime:
+      type: string
+      description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
+        2024-03-21T19:25:04+00:00.000Z
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+      example: 2024-03-21T19:25:04+00:00.000Z
     TestCertificatesListApiResult:
       type: object
       properties:

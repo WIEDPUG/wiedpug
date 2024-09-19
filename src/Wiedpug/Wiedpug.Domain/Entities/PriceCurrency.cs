@@ -17,11 +17,11 @@ namespace Wiedpug.Domain.Entities
         /// Total up to 12 digits with 2 digits after the decimal point of per unit cost. It is in cent.
         /// </summary>
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_6_DIGITS)]
+        [Range(-999999,999999)]
         public required int Value { get; set; }
 
         [MinLength(1)]
         [MaxLength(3)]
-        public CurrencyUnit? CurrencyUnit { get; set; }
+        public CurrencyCode? CurrencyCode { get; set; }
     }
 }

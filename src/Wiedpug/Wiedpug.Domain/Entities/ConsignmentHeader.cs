@@ -12,7 +12,7 @@ namespace Wiedpug.Domain.Entities
     public class ConsignmentHeader
     {
         [Required]
-        [RegularExpression(RegexPattern.NUMBER_10_DIGITS)]
+
         [MinLength(1)]
         [MaxLength(10)]
         public required string ConsignmentReference { get; set; }

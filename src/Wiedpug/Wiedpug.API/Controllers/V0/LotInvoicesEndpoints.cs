@@ -23,7 +23,7 @@ public static class LotInvoicesEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("LotInvoices")
+        .WithName("CreateLotInvoices")
         .WithOpenApi(o => new(o)
         {
             Summary = "Create or upload the lot invoices"
@@ -47,7 +47,7 @@ public static class LotInvoicesEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetLotInvoices")
+        .WithName("RequestForLotInvoices")
         .WithOpenApi(o => new(o)
        {
             Summary = "Retrieves the lot invoices"

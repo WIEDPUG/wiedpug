@@ -19,7 +19,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max: The highest value in a range of Micron values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? MicronMin { get; set; }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max: The highest value in a range of Micron values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? MicronMax { get; set; }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max – The highest value in a range of Colour-Y-Z values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYZMin { get; set; }
 
         /// <summary>
@@ -49,19 +49,19 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max – The highest value in a range of Colour-Y-Z values.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_1)]
+        [Range(-999.9,999.9)]
         public double? ColourYZMax { get; set; }
 
         /// <summary>
         /// Minimum VMB, optional decimal with two digits precision.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_2)]
+        [Range(-9.99,9.99)]
         public double? VmbMin { get; set; }
 
         /// <summary>
         /// Maximum VMB, optional decimal with two digits precision.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_2)]
+        [Range(-9.99,9.99)]
         public double? VmbMax { get; set; }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max The highest value in a range of Wool Base values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? WoolBaseMin { get; set; }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max The highest value in a range of Wool Base values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? WoolBaseMax { get; set; }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max: The highest value in a range of Dichloromethane, dry basis values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? DichloromethaneDryBasisMin { get; set; }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max: The highest value in a range of Dichloromethane, dry basis values
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_2)]
+        [Range(-99.99,99.99)]
         public double? DichloromethaneDryBasisMax { get; set; }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max: The highest value in a range of LAC Barbe values
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACBarbeMin { get; set; }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max: The highest value in a range of LAC Barbe values
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACBarbeMax { get; set; }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// <40 Max: The highest value in a rang
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurMin { get; set; }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// <40 Max: The highest value in a rang
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurMax { get; set; }
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// <40 Max: The highest value in a rang
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurUnder20Min { get; set; }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// <40 Max: The highest value in a rang
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurUnder20Max { get; set; }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// <40 Max: The highest value in a rang
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurUnder40Min { get; set; }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// <40 Max: The highest value in a rang
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurUnder40Max { get; set; }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max: The highest value in a range of LAC Hauteur CV(%) values
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurCVPercentMin { get; set; }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max: The highest value in a range of LAC Hauteur CV(%) values
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LACHauteurCVPercentMax { get; set; }
     }
 

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Wiedpug.Domain.ValueObject;
 
 namespace Wiedpug.Domain.Entities
 {
@@ -21,9 +22,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// The new value that the Lot Identity is to be changed to.
         /// </summary>
-        [MinLength(1)]
-        [MaxLength(6)]
-        public string? LotIdentity {  get; set; }
+        public LotIdentity? LotIdentity {  get; set; }
 
         [MinLength(1)]
         [MaxLength(6)]

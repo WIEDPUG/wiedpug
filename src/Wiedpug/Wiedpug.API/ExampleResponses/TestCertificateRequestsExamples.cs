@@ -18,8 +18,8 @@ namespace Wiedpug.API.ExampleResponses
                 new TestCertificateRequests() {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -36,7 +36,7 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.Talman,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 TestCertificateRequestDetails = new List<TestCertificateRequestDetail>
                 {
@@ -50,12 +50,12 @@ namespace Wiedpug.API.ExampleResponses
                             YieldType2 = YieldType.SchlumbergerCombedDry1PercentTFM,
                             CertificateReference = "XXY1255",
                             ClientCrossReference = "XXY1255",
-                           NumberOfBales = 96,
-                            Season = 21,
+                           NumberOfBales = new NumberOfBales{BalesCount=96},
+                            Season = new Season{SeasonValue= 21},
                             CombinationRequest = CombinationRequest.N,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
-                            IsPrintingTEAM3Hauteur = false,
+                            IsPrintingTeam3Hauteur = false,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -104,12 +104,12 @@ namespace Wiedpug.API.ExampleResponses
                             YieldType2 = YieldType.UnitedStatesCustomClean,
                             CertificateReference = "XXY1205",
                             ClientCrossReference = "XXZ1635",
-                           NumberOfBales = 96,
-                            Season = 21,
+                           NumberOfBales = new NumberOfBales{BalesCount=96},
+                            Season = new Season{SeasonValue= 21},
                             CombinationRequest = CombinationRequest.C,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
-                            IsPrintingTEAM3Hauteur = true,
+                            IsPrintingTeam3Hauteur = true,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -147,8 +147,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = "2020-07-15",
-                    DateTransmissionFileCreated = "2016-01-17",
+                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -165,11 +165,11 @@ namespace Wiedpug.API.ExampleResponses
                         SoftwareCompany = SoftwareCompany.AWTA,
                         SoftwareVersion =  1082
                     },
-                    Abn = "72001967184"
+                    Abn = 72001967184
                 },
                 RequestForDataType = new DateTimeRangeRequestForDataType
                 {
-                    StartDateTimeStatusRequest = "2024-03-21T19:25:04Z"
+                    StartDateTimeStatusRequest = new UtcDateTime{DateTime="2024-03-21T19:25:04Z"}
                 }
                 }
             };
@@ -189,8 +189,8 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificateRequests {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = "2020-07-15",
-                        DateTransmissionFileCreated = "2016-01-17",
+                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
                         CountryOfOrigin = CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -207,7 +207,7 @@ namespace Wiedpug.API.ExampleResponses
                             SoftwareCompany = SoftwareCompany.Talman,
                             SoftwareVersion =  1082
                         },
-                        Abn = "72001967184"
+                        Abn = 72001967184
                     },
                     TestCertificateRequestDetails = new List<TestCertificateRequestDetail>
                 {
@@ -221,12 +221,12 @@ namespace Wiedpug.API.ExampleResponses
                             YieldType2 = YieldType.SchlumbergerCombedDry1PercentTFM,
                             CertificateReference = "XXY1255",
                             ClientCrossReference = "XXY1255",
-                            NumberOfBales = 96,
-                            Season = 21,
+                            NumberOfBales = new NumberOfBales{BalesCount=96},
+                            Season = new Season{SeasonValue= 21},
                             CombinationRequest = CombinationRequest.N,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.NoAdditionalRequirements,
-                            IsPrintingTEAM3Hauteur = false,
+                            IsPrintingTeam3Hauteur = false,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {
@@ -275,12 +275,12 @@ namespace Wiedpug.API.ExampleResponses
                             YieldType2 = YieldType.UnitedStatesCustomClean,
                             CertificateReference = "XXY1205",
                             ClientCrossReference = "XXZ1635",
-                            NumberOfBales = 96,
-                            Season = 21,
+                            NumberOfBales = new NumberOfBales{BalesCount=96},
+                            Season = new Season{SeasonValue= 21},
                             CombinationRequest = CombinationRequest.C,
                             AutoAdditionalMeasurementRequired = AutoAdditionalMeasurementRequired.N,
                             AdditionalPrintRequirements = AdditionalPrintRequirements.VMBreakdownAndConfortFactor,
-                            IsPrintingTEAM3Hauteur = true,
+                            IsPrintingTeam3Hauteur = true,
                             CertificateRequestDetails = new List<CertificateRequestDetail>
                             {
                                 new CertificateRequestDetail {

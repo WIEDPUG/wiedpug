@@ -1,0 +1,653 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WIEDPUG API",
+    "description": "API Documentation for the WIEDPUG Network",
+    "termsOfService": "https://wiedpug.github.io/wiedpug",
+    "contact": {
+      "name": "WIEDPUG Team",
+      "url": "https://wiedpug.github.io/wiedpug",
+      "email": "changethis@email.com"
+    },
+    "license": {
+      "name": "Applicable License",
+      "url": "https://wiedpug.github.io/wiedpug"
+    },
+    "version": "v0.0"
+  },
+  "paths": {
+    "/v0/keys": {
+      "post": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Create or upload the public encryption key for LotHeaderAwexData, return the encryption key id",
+        "operationId": "UploadKey",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                },
+                "example": {
+                  "apiMessages": [],
+                  "data": "d3c4a0fa-1d2f-4e9e-b45b-007faa22f2a5"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                  "title": "One or more validation errors occurred",
+                  "status": 400,
+                  "detail": "",
+                  "errors": [
+                    {
+                      "errors": {
+                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                          "The field DateFormatLastRevised is required",
+                          "The field DateFormatLastRevised must match regulart expression pattern..."
+                        ],
+                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                          "The field CountryOfOrigin is required"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v0/keys/{id}": {
+      "get": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Retrieves the public encryption key for LotHeaderAwexData by encryption key id",
+        "operationId": "GetKeyById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringApiResult"
+                },
+                "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "Resource not found",
+                  "status": 404
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Update the public encryption key for LotHeaderAwexData by encryption key id",
+        "operationId": "UpdateKeyById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                },
+                "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                  "title": "One or more validation errors occurred",
+                  "status": 400,
+                  "detail": "",
+                  "errors": [
+                    {
+                      "errors": {
+                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                          "The field DateFormatLastRevised is required",
+                          "The field DateFormatLastRevised must match regulart expression pattern..."
+                        ],
+                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                          "The field CountryOfOrigin is required"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "Resource not found",
+                  "status": 404
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Delete or Deactivate the public encryption key for LotHeaderAwexData by encryption key id",
+        "operationId": "DeleteKeyById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                },
+                "example": {
+                  "apiMessages": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "Resource not found",
+                  "status": 404
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiResult": {
+        "type": "object",
+        "properties": {
+          "apiMessages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiMessage"
+            },
+            "description": "Contains information about the response if applicable.",
+            "nullable": true
+          },
+          "data": {
+            "description": "Contains response data. e.g. Auction Catalogue",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A standard API response object used for all successful API responses"
+      },
+      "ApiMessage": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "warningCode": {
+            "$ref": "#/components/schemas/WarningCode"
+          },
+          "informationCode": {
+            "$ref": "#/components/schemas/InformationCode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WarningCode": {
+        "enum": [
+          "11",
+          "12",
+          "13",
+          "18",
+          "19",
+          "20",
+          "24",
+          "DRVnn"
+        ],
+        "type": "string",
+        "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
+      },
+      "InformationCode": {
+        "enum": [
+          "OK"
+        ],
+        "type": "string",
+        "description": "A code to indicate the information.\r\n\r\nFor AC, PC LI and GI transmissions, one record will be sent for each Wool Sale Header Lots received.\r\n\r\nOK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn\r\n\r\nWhere aann/nn = sale number/season\r\n    \r\ndd/mm/yy = sale date\r\n    \r\nooooo = selling organisation\r\n    \r\nnnnnn = number of lots\r\n    \r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None.\r\n\r\nOR\r\n\r\nFor all other types of transmissions, one record will be sent for each transmission file received.\r\n\r\nOK - ALL aaaaa DATA RECEIVED OK\r\n\r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None."
+      },
+      "ApiErrorResult": {
+        "required": [
+          "status",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference [RFC3986] that identifies the problem type.\r\n\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\n            \r\nWhen this member is not present, its value is assumed to be \"about:blank\".\r\n\r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+            "nullable": true
+          },
+          "title": {
+            "minLength": 1,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type.\r\n\r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\n\r\ne.g. \"One or more validation errors occurred.\""
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+            "format": "int32"
+          },
+          "detail": {
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomError"
+            },
+            "description": "A collection of the erros",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+      },
+      "CustomError": {
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            },
+            "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorCode": {
+            "$ref": "#/components/schemas/ErrorCode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ErrorCode": {
+        "enum": [
+          "DOXCT",
+          "INVTC",
+          "INVFR",
+          "INVAC",
+          "INVCR",
+          "INVDO",
+          "INVSO",
+          "INVEX"
+        ],
+        "type": "string",
+        "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
+      },
+      "StringApiResult": {
+        "type": "object",
+        "properties": {
+          "apiMessages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiMessage"
+            },
+            "description": "Contains information about the response if applicable.",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "description": "Contains response data. e.g. Auction Catalogue",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A standard API response object used for all successful API responses"
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Access Token that is added in the Authorization header of the HTTP request. Example: \"Authorization: Bearer {token}\". The JWT serves as a credential that proves the identity of the client to the server.",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "oauth2": {
+        "type": "oauth2",
+        "description": "Authentication for client applications by providing Client ID and Client Secret for an JWT Access Token.",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "/auth-server/oauth/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": []
+    }
+  ]
+}

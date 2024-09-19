@@ -13,11 +13,11 @@ namespace Wiedpug.Domain.Entities
     public class StorageChargeCurrency
     {
         [Required]
-        [RegularExpression(RegexPattern.DECIMAL_4_3)]
+        [Range(-9.999,9.999)]
         public required double Value { get; set; }
 
         [MinLength(1)]
         [MaxLength(3)]
-        public CurrencyUnit? CurrencyUnit { get; set; }
+        public CurrencyCode? CurrencyCode { get; set; }
     }
 }

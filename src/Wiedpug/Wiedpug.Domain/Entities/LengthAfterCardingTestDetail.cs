@@ -28,13 +28,13 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Max The highest value in a range of LAC Barbe values
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LacBarbe { get; set; }
 
         /// <summary>
         /// Length after Carding Barbe – Coefficient of Variation of Barbe.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_4_1)]
+        [Range(-999.9,999.9)]
         public double? LacBarbeCvPercentage { get; set; }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// <40 Max: The highest value in a rang
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LacHauteur { get; set; }
 
         /// <summary>
@@ -62,13 +62,13 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Max: The highest value in a range of LAC Hauteur CV(%) values
         /// </summary>
-        [RegularExpression(RegexPattern.NUMBER_3_DIGITS)]
+        [Range(-999,999)]
         public int? LacHauteurCvPercentage { get; set; }
 
         /// <summary>
         /// Percentage Card Waste.
         /// </summary>
-        [RegularExpression(RegexPattern.DECIMAL_3_1)]
+        [Range(-999.9,999.9)]
         public double? LacCardWastePercentage { get; set; }
 
         [Required]

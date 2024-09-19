@@ -30,11 +30,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>        
         [Required]
-        [DataType(DataType.Date)]
-        [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]
-        [MinLength(1)]
-        [MaxLength(10)]
-        public required string DateLastUpdated { get; set; }
+        public required UtcDate DateLastUpdated { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -56,12 +52,10 @@ namespace Wiedpug.Domain.Entities
         public PhoneNumber? PhoneNumber { get; set; }
 
         /// <summary>
-        /// Australian Business Number
+        /// Australian Business Number, 11 digits
         /// </summary>
-        [MinLength(1)]
-        [MaxLength(11)]
-        [RegularExpression(RegexPattern.NUMBERS)]
-        public string? Abn { get; set; }
+        [Range(10000000000,99999999999)]
+        public long? Abn { get; set; }
 
         /// <summary>
         /// The number to be used for sending facsimile messages to the organisation
