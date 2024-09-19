@@ -1,5 +1,6 @@
 node_modules/
 .next
+.env
 /src/Wiedpug/.vs
 /src/Wiedpug/Wiedpug.API/bin/Debug/net8.0
 /src/Wiedpug/Wiedpug.API/obj
