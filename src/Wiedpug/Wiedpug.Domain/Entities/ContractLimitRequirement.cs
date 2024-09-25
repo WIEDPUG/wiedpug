@@ -134,7 +134,7 @@ namespace Wiedpug.Domain.Entities
         /// Max: The highest value in a range of LAC Barbe values
         /// </summary>
         [Range(-999,999)]
-        public int? LACBarbeMin { get; set; }
+        public int? LacBarbeMin { get; set; }
 
         /// <summary>
         /// Length after Carding Barbe in mm (mean length biased by fibre weight)
@@ -144,7 +144,7 @@ namespace Wiedpug.Domain.Entities
         /// Max: The highest value in a range of LAC Barbe values
         /// </summary>
         [Range(-999,999)]
-        public int? LACBarbeMax { get; set; }
+        public int? LacBarbeMax { get; set; }
 
         /// <summary>
         /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
@@ -162,7 +162,7 @@ namespace Wiedpug.Domain.Entities
         /// <40 Max: The highest value in a rang
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurMin { get; set; }
+        public int? LacHauteurMin { get; set; }
 
         /// <summary>
         /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
@@ -180,7 +180,7 @@ namespace Wiedpug.Domain.Entities
         /// <40 Max: The highest value in a rang
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurMax { get; set; }
+        public int? LacHauteurMax { get; set; }
 
         /// <summary>
         /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
@@ -198,7 +198,7 @@ namespace Wiedpug.Domain.Entities
         /// <40 Max: The highest value in a rang
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurUnder20Min { get; set; }
+        public int? LacHauteurUnder20Min { get; set; }
 
         /// <summary>
         /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
@@ -216,7 +216,7 @@ namespace Wiedpug.Domain.Entities
         /// <40 Max: The highest value in a rang
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurUnder20Max { get; set; }
+        public int? LacHauteurUnder20Max { get; set; }
 
         /// <summary>
         /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
@@ -234,7 +234,7 @@ namespace Wiedpug.Domain.Entities
         /// <40 Max: The highest value in a rang
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurUnder40Min { get; set; }
+        public int? LacHauteurUnder40Min { get; set; }
 
         /// <summary>
         /// ength after Carding Hauteur in mm (mean length biased by cross-section of the fibres)
@@ -252,7 +252,7 @@ namespace Wiedpug.Domain.Entities
         /// <40 Max: The highest value in a rang
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurUnder40Max { get; set; }
+        public int? LacHauteurUnder40Max { get; set; }
 
         /// <summary>
         /// Length after Carding - Coefficient of Variation of Hauteur.
@@ -262,7 +262,7 @@ namespace Wiedpug.Domain.Entities
         /// Max: The highest value in a range of LAC Hauteur CV(%) values
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurCVPercentMin { get; set; }
+        public int? LacHauteurCvPercentMin { get; set; }
 
         /// <summary>
         /// Length after Carding - Coefficient of Variation of Hauteur.
@@ -272,7 +272,7 @@ namespace Wiedpug.Domain.Entities
         /// Max: The highest value in a range of LAC Hauteur CV(%) values
         /// </summary>
         [Range(-999,999)]
-        public int? LACHauteurCVPercentMax { get; set; }
+        public int? LacHauteurCvPercentMax { get; set; }
     }
 
 

@@ -12,6 +12,8 @@ namespace Wiedpug.Domain.ValueObject
 {
     /// <summary>
     /// Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z
+    /// 
+    /// auctionSaleTime: The auction room time the lot was passed in, sold or withdrawn (unverified data).
     /// </summary>
     public class UtcDateTime
     {

@@ -497,10 +497,18 @@
         "additionalProperties": false
       },
       "UtcDate": {
-        "type": "string",
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-        "example": "2024-03-21"
+        "type": "object",
+        "properties": {
+          "date": {
+            "maxLength": 10,
+            "minLength": 1,
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          }
+        },
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\r\n\r\ndateOfCreditNote: Date the Credit note was issued\r\n\r\ndateOfOriginalInvoice: Date of the original invoice\r\n\r\ndateIssue: The date the certificate was issued.\r\n\r\ndateLastUpdated: The day the item was last amended.\r\n\r\nstatementDate: The period ending date of the statement.\r\n\r\nstatementPaymentDate: The date the payment was made.\r\n\r\ndatePaymentMade: Required date field for the date payment was made.\r\n\r\nsaleDate: The date on which the wool was sold.\r\n\r\ncoreTestSamplingDate: For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\r\n\r\nitemDate: The date the cost of the item was incurred."
       },
       "CountryCode": {
         "enum": [
@@ -530,7 +538,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online.\r\n\r\ncurrentReceiver: The code for the organisation that will receive the document at the end of the current transmission.Where a document is transferred from one\r\norganisation to another through an intermediary, the code for the current receiver will vary from leg to leg of the journey.\r\n\r\nreleasingOrganisation: The broker that is responsible for releasing the wool out of the store.\r\n\r\nmarkingOrganisation: The code for the organisation which is to apply marks to the bales.\r\n\r\ninvoicingOrganisation: The code for the broker who will raise the invoice for the wool.\r\n\r\nstorageOrganisation: This is the organisation store that is storing the wool. Note: If there is more than one organisation in a centre, then separate AWEX codes are \r\nrequired for each store. It is not necessarily the same as the Releasing Organisation.\r\n\r\nclient: The code for the organisation that is the transmitter’s client. Where one organisation submits a TRV document to a Test House requesting tests \r\nfor one of its own clients, the code for that client will be used in this field."
       },
       "Centre": {
         "required": [
@@ -543,7 +551,7 @@
             "$ref": "#/components/schemas/CountryCode"
           },
           "centreCode": {
-            "oneOf": [
+            "anyOf": [
               {
                 "$ref": "#/components/schemas/CentreCodeAustralia"
               },
@@ -566,7 +574,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia",
+        "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia\r\n\r\ncentreStorage: The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the\r\nCentre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.\r\n\r\ncentreCatalogue: The centre (code) used to group lots of wool based on a location. This location is typically the core test/weighing centre and is often aligned with the seller’s Post Sale Charge schedule.\r\n\r\ncentreDelivery: Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.\r\n\r\ncentreAlternateDelivery: This field is to be used when the PSC includes optional delivery to a second area.",
         "discriminator": {
           "propertyName": "country",
           "mapping": {
@@ -1204,10 +1212,18 @@
         "additionalProperties": false
       },
       "UtcDateTime": {
-        "type": "string",
-        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
-        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-        "example": "2024-03-21T19:25:04+00:00.000Z"
+        "type": "object",
+        "properties": {
+          "dateTime": {
+            "maxLength": 20,
+            "minLength": 1,
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z\r\n\r\nauctionSaleTime: The auction room time the lot was passed in, sold or withdrawn (unverified data)."
       },
       "TestStatusListApiResult": {
         "type": "object",

@@ -776,10 +776,18 @@
         "additionalProperties": false
       },
       "UtcDate": {
-        "type": "string",
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-        "example": "2024-03-21"
+        "type": "object",
+        "properties": {
+          "date": {
+            "maxLength": 10,
+            "minLength": 1,
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          }
+        },
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\r\n\r\ndateOfCreditNote: Date the Credit note was issued\r\n\r\ndateOfOriginalInvoice: Date of the original invoice\r\n\r\ndateIssue: The date the certificate was issued.\r\n\r\ndateLastUpdated: The day the item was last amended.\r\n\r\nstatementDate: The period ending date of the statement.\r\n\r\nstatementPaymentDate: The date the payment was made.\r\n\r\ndatePaymentMade: Required date field for the date payment was made.\r\n\r\nsaleDate: The date on which the wool was sold.\r\n\r\ncoreTestSamplingDate: For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\r\n\r\nitemDate: The date the cost of the item was incurred."
       },
       "CountryCode": {
         "enum": [
@@ -809,7 +817,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online."
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online.\r\n\r\ncurrentReceiver: The code for the organisation that will receive the document at the end of the current transmission.Where a document is transferred from one\r\norganisation to another through an intermediary, the code for the current receiver will vary from leg to leg of the journey.\r\n\r\nreleasingOrganisation: The broker that is responsible for releasing the wool out of the store.\r\n\r\nmarkingOrganisation: The code for the organisation which is to apply marks to the bales.\r\n\r\ninvoicingOrganisation: The code for the broker who will raise the invoice for the wool.\r\n\r\nstorageOrganisation: This is the organisation store that is storing the wool. Note: If there is more than one organisation in a centre, then separate AWEX codes are \r\nrequired for each store. It is not necessarily the same as the Releasing Organisation.\r\n\r\nclient: The code for the organisation that is the transmitter’s client. Where one organisation submits a TRV document to a Test House requesting tests \r\nfor one of its own clients, the code for that client will be used in this field."
       },
       "Centre": {
         "required": [
@@ -822,7 +830,7 @@
             "$ref": "#/components/schemas/CountryCode"
           },
           "centreCode": {
-            "oneOf": [
+            "anyOf": [
               {
                 "$ref": "#/components/schemas/CentreCodeAustralia"
               },
@@ -845,7 +853,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia",
+        "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia\r\n\r\ncentreStorage: The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the\r\nCentre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.\r\n\r\ncentreCatalogue: The centre (code) used to group lots of wool based on a location. This location is typically the core test/weighing centre and is often aligned with the seller’s Post Sale Charge schedule.\r\n\r\ncentreDelivery: Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.\r\n\r\ncentreAlternateDelivery: This field is to be used when the PSC includes optional delivery to a second area.",
         "discriminator": {
           "propertyName": "country",
           "mapping": {
@@ -1337,10 +1345,16 @@
         "additionalProperties": false
       },
       "Season": {
-        "maximum": 99,
-        "minimum": -99,
-        "type": "integer",
-        "format": "int32"
+        "type": "object",
+        "properties": {
+          "seasonValue": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
       },
       "SaleIdentity": {
         "required": [
@@ -1507,10 +1521,18 @@
         "additionalProperties": false
       },
       "UtcDateTime": {
-        "type": "string",
-        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
-        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-        "example": "2024-03-21T19:25:04+00:00.000Z"
+        "type": "object",
+        "properties": {
+          "dateTime": {
+            "maxLength": 20,
+            "minLength": 1,
+            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z\r\n\r\nauctionSaleTime: The auction room time the lot was passed in, sold or withdrawn (unverified data)."
       },
       "SaleType": {
         "enum": [
@@ -1645,17 +1667,29 @@
         "additionalProperties": false
       },
       "LotIdentity": {
-        "maxLength": 6,
-        "minLength": 0,
-        "type": "string",
+        "type": "object",
+        "properties": {
+          "identity": {
+            "maxLength": 6,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
         "description": "This is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to."
       },
       "NumberOfBales": {
-        "maximum": 9999,
-        "minimum": -9999,
-        "type": "integer",
-        "description": "Number of bales",
-        "format": "int32"
+        "type": "object",
+        "properties": {
+          "balesCount": {
+            "maximum": 9999,
+            "minimum": -9999,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "description": "Number of bales"
       },
       "Weight": {
         "required": [
@@ -1675,7 +1709,8 @@
             "$ref": "#/components/schemas/WeightCode"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "coreSampleWeight: The weight of the initial core sample.\r\n\r\nsampleWeightRemoved: The weight of wool removed after testing, to adjust the issued test results, in compliance with the relevant standard (e.g. removal of wet \r\nwool, contract weight adjustment, retained buyer sample, etc.).\r\n\r\ndeclaredGross: The gross weight of the lot as declared by the owner.\r\n\r\ndeclaredTare: The tare weight of the lot as declared by the owner.\r\n\r\nregrabSampleWeight: The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.\r\n\r\nmassOfGlobalSample: Unit in Grams.\r\n\r\nsumOfOdMasses: Unit in Grams.\r\n\r\ngainLossOfInvoiceMass: Refer to Invoice Mass Flag to determine Gain or Loss.\r\n\r\nnetWeightOdOfConsignment: Unit in KG.\r\n\r\nofficialRegain: Unit in KG.\r\n\r\nconditioningMass: Mass of the sample after conditioning to a specified regain. Min: The lowest value in a range of Conditioning Mass values. Max: The highest value in a range of Conditioning Mass values.\r\n\r\ngross: Total weight of the wool. In transmissions from Test Houses, Gross includes Regrab Sample Weight. In all other transmissions, Regrab \r\nSample Weight will have been subtracted from the Gross of a lot or a group before the transmission. See the chapter ‘Business Rules’ for a fuller explanation.\r\n\r\ntare: The weight of the bale packaging.\r\n\r\nlightestIndividualBaleWeight: This is the Reweigh Gross Kg of the lightest bale in the lot.\r\n\r\ncleanWeight: Clean weight = Net Weight X Yield"
       },
       "WeightCode": {
         "enum": [
@@ -2715,12 +2750,12 @@
             "format": "int32"
           },
           "fibresMeasuredPercentage": {
-            "maximum": 9999.99,
-            "minimum": -9999.99,
+            "maximum": 99.9999,
+            "minimum": -99.99999,
             "type": "number",
             "description": "Percentage of fibres measured for the measurement.",
             "format": "double",
-            "multipleOf": 0.01
+            "multipleOf": 0.0001
           }
         },
         "additionalProperties": false

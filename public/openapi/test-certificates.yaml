@@ -590,10 +590,62 @@ components:
           format: int64
       additionalProperties: false
     UtcDate:
-      type: string
-      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
-      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-      example: 2024-03-21
+      type: object
+      properties:
+        date:
+          maxLength: 10
+          minLength: 1
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
+          type: string
+          format: date
+          nullable: true
+      description: "Date value in ISO standard UTC date format. e.g. 2024-03-21
+        (YYYY-MM-DD).\r
+
+        \r
+
+        dateOfCreditNote: Date the Credit note was issued\r
+
+        \r
+
+        dateOfOriginalInvoice: Date of the original invoice\r
+
+        \r
+
+        dateIssue: The date the certificate was issued.\r
+
+        \r
+
+        dateLastUpdated: The day the item was last amended.\r
+
+        \r
+
+        statementDate: The period ending date of the statement.\r
+
+        \r
+
+        statementPaymentDate: The date the payment was made.\r
+
+        \r
+
+        datePaymentMade: Required date field for the date payment was
+        made.\r
+
+        \r
+
+        saleDate: The date on which the wool was sold.\r
+
+        \r
+
+        coreTestSamplingDate: For records Fibre Diameter Histogram
+        Header and Test Request Verification this is the date core test was
+        sampled or date combination/OML was requested. For the Lot Header this
+        is the date the core test was sampled, the last date of weighing for
+        untested wool or the date the Combination/OML was requested.\r
+
+        \r
+
+        itemDate: The date the cost of the item was incurred."
     CountryCode:
       enum:
         - AU
@@ -624,7 +676,49 @@ components:
         \r
 
         These codes are issued and maintained by the Network and are
-        available online."
+        available online.\r
+
+        \r
+
+        currentReceiver: The code for the organisation that will receive
+        the document at the end of the current transmission.Where a document is
+        transferred from one\r
+
+        organisation to another through an intermediary, the code for
+        the current receiver will vary from leg to leg of the journey.\r
+
+        \r
+
+        releasingOrganisation: The broker that is responsible for
+        releasing the wool out of the store.\r
+
+        \r
+
+        markingOrganisation: The code for the organisation which is to
+        apply marks to the bales.\r
+
+        \r
+
+        invoicingOrganisation: The code for the broker who will raise
+        the invoice for the wool.\r
+
+        \r
+
+        storageOrganisation: This is the organisation store that is
+        storing the wool. Note: If there is more than one organisation in a
+        centre, then separate AWEX codes are \r
+
+        required for each store. It is not necessarily the same as the
+        Releasing Organisation.\r
+
+        \r
+
+        client: The code for the organisation that is the transmitter’s
+        client. Where one organisation submits a TRV document to a Test House
+        requesting tests \r
+
+        for one of its own clients, the code for that client will be
+        used in this field."
     Centre:
       required:
         - centreCode
@@ -634,7 +728,7 @@ components:
         country:
           $ref: "#/components/schemas/CountryCode"
         centreCode:
-          oneOf:
+          anyOf:
             - $ref: "#/components/schemas/CentreCodeAustralia"
             - $ref: "#/components/schemas/CentreCodeChina"
             - $ref: "#/components/schemas/CentreCodeGermany"
@@ -680,7 +774,34 @@ components:
         \r
 
         The legacy codes for Overseas Centre are under
-        CentreCodeAustralia"
+        CentreCodeAustralia\r
+
+        \r
+
+        centreStorage: The centre (code) representing the location at
+        which the wool is stored (relevant to the intended use of the document).
+        For example, the\r
+
+        Centre- Storage against a lot in the Catalogue is the location
+        of the wool where the buyer would expect to take delivery.\r
+
+        \r
+
+        centreCatalogue: The centre (code) used to group lots of wool
+        based on a location. This location is typically the core test/weighing
+        centre and is often aligned with the seller’s Post Sale Charge
+        schedule.\r
+
+        \r
+
+        centreDelivery: Inclusion of the Delivery Area Centre Code is
+        Mandatory when the Post Sale Service Charge includes delivery to a
+        nominated area and a “D” is included in the Delivery Basis Field.\r
+
+        \r
+
+        centreAlternateDelivery: This field is to be used when the PSC
+        includes optional delivery to a second area."
       discriminator:
         propertyName: country
         mapping:
@@ -1261,10 +1382,14 @@ components:
           nullable: true
       additionalProperties: false
     Season:
-      maximum: 99
-      minimum: -99
-      type: integer
-      format: int32
+      type: object
+      properties:
+        seasonValue:
+          maximum: 99
+          minimum: -99
+          type: integer
+          format: int32
+          nullable: true
     SaleIdentity:
       required:
         - saleNumber
@@ -1392,11 +1517,15 @@ components:
       description: The first character contains the Weight Note prefix, and the next
         seven characters contain the weight Note Suffix.
     NumberOfBales:
-      maximum: 9999
-      minimum: -9999
-      type: integer
+      type: object
+      properties:
+        balesCount:
+          maximum: 9999
+          minimum: -9999
+          type: integer
+          format: int32
+          nullable: true
       description: Number of bales
-      format: int32
     Weight:
       required:
         - value
@@ -1412,6 +1541,82 @@ components:
         weightCode:
           $ref: "#/components/schemas/WeightCode"
       additionalProperties: false
+      description: "coreSampleWeight: The weight of the initial core sample.\r
+
+        \r
+
+        sampleWeightRemoved: The weight of wool removed after testing,
+        to adjust the issued test results, in compliance with the relevant
+        standard (e.g. removal of wet \r
+
+        wool, contract weight adjustment, retained buyer sample,
+        etc.).\r
+
+        \r
+
+        declaredGross: The gross weight of the lot as declared by the
+        owner.\r
+
+        \r
+
+        declaredTare: The tare weight of the lot as declared by the
+        owner.\r
+
+        \r
+
+        regrabSampleWeight: The weight of a regrab sample, a grab sample
+        taken after the wool has been initially sampled and tested, is shown on
+        the new certificate.\r
+
+        \r
+
+        massOfGlobalSample: Unit in Grams.\r
+
+        \r
+
+        sumOfOdMasses: Unit in Grams.\r
+
+        \r
+
+        gainLossOfInvoiceMass: Refer to Invoice Mass Flag to determine
+        Gain or Loss.\r
+
+        \r
+
+        netWeightOdOfConsignment: Unit in KG.\r
+
+        \r
+
+        officialRegain: Unit in KG.\r
+
+        \r
+
+        conditioningMass: Mass of the sample after conditioning to a
+        specified regain. Min: The lowest value in a range of Conditioning Mass
+        values. Max: The highest value in a range of Conditioning Mass values.\r
+
+        \r
+
+        gross: Total weight of the wool. In transmissions from Test
+        Houses, Gross includes Regrab Sample Weight. In all other transmissions,
+        Regrab \r
+
+        Sample Weight will have been subtracted from the Gross of a lot
+        or a group before the transmission. See the chapter ‘Business Rules’ for
+        a fuller explanation.\r
+
+        \r
+
+        tare: The weight of the bale packaging.\r
+
+        \r
+
+        lightestIndividualBaleWeight: This is the Reweigh Gross Kg of
+        the lightest bale in the lot.\r
+
+        \r
+
+        cleanWeight: Clean weight = Net Weight X Yield"
     WeightCode:
       enum:
         - KG
@@ -2781,12 +2986,12 @@ components:
           description: Fibre Diameter for the measurement.
           format: int32
         fibresMeasuredPercentage:
-          maximum: 9999.99
-          minimum: -9999.99
+          maximum: 99.9999
+          minimum: -99.99999
           type: number
           description: Percentage of fibres measured for the measurement.
           format: double
-          multipleOf: 0.01
+          multipleOf: 0.0001
       additionalProperties: false
     Bale:
       required:
@@ -3176,11 +3381,22 @@ components:
           $ref: "#/components/schemas/UtcDateTime"
       additionalProperties: false
     UtcDateTime:
-      type: string
-      description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
-        2024-03-21T19:25:04+00:00.000Z
-      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-      example: 2024-03-21T19:25:04+00:00.000Z
+      type: object
+      properties:
+        dateTime:
+          maxLength: 20
+          minLength: 1
+          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+          type: string
+          format: date-time
+          nullable: true
+      description: "Date and Time value in ISO 8601 standard UTC datetime format. e.g.
+        2024-03-21T19:25:04+00:00.000Z\r
+
+        \r
+
+        auctionSaleTime: The auction room time the lot was passed in,
+        sold or withdrawn (unverified data)."
     TestCertificatesListApiResult:
       type: object
       properties:

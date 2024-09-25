@@ -8,6 +8,9 @@ using Wiedpug.Domain.Shared.Constants;
 
 namespace Wiedpug.Domain.ValueObject
 {
+    /// <summary>
+    /// faxNumber: The number to be used for sending facsimile messages to the organisation
+    /// </summary>
     public class PhoneNumber
     {
         /// <summary>

@@ -13,7 +13,7 @@ public class DiscriminatorFilter : ISchemaFilter
         {
             schema.Properties["centreCode"] = new OpenApiSchema
             {
-                OneOf = new List<OpenApiSchema>
+                AnyOf = new List<OpenApiSchema>
                 {
                     new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = "CentreCodeAustralia" } },
                     new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = "CentreCodeChina" } },

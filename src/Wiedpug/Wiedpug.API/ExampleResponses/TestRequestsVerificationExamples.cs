@@ -114,16 +114,16 @@ namespace Wiedpug.API.ExampleResponses
                                 WeightCode = WeightCode.KG
                             },
                             ConditioningMassMax = new Weight { Value = 1500.00, WeightCode = WeightCode.KG },
-                            LACBarbeMin = 10,
-                            LACBarbeMax = 30,
-                            LACHauteurMin = 15,
-                            LACHauteurMax = 45,
-                            LACHauteurUnder20Min = 5,
-                            LACHauteurUnder20Max = 15,
-                            LACHauteurUnder40Min = 8,
-                            LACHauteurUnder40Max = 25,
-                            LACHauteurCVPercentMin = 10,
-                            LACHauteurCVPercentMax = 20
+                            LacBarbeMin = 10,
+                            LacBarbeMax = 30,
+                            LacHauteurMin = 15,
+                            LacHauteurMax = 45,
+                            LacHauteurUnder20Min = 5,
+                            LacHauteurUnder20Max = 15,
+                            LacHauteurUnder40Min = 8,
+                            LacHauteurUnder40Max = 25,
+                            LacHauteurCvPercentMin = 10,
+                            LacHauteurCvPercentMax = 20
                         },
                         DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                         {
@@ -207,16 +207,16 @@ namespace Wiedpug.API.ExampleResponses
                                 Value = 1200.00,
                                 WeightCode = WeightCode.KG
                             },
-                            LACBarbeMin = 17,
-                            LACBarbeMax = 56,
-                            LACHauteurMin = 12,
-                            LACHauteurMax = 36,
-                            LACHauteurUnder20Min = 3,
-                            LACHauteurUnder20Max = 12,
-                            LACHauteurUnder40Min = 9,
-                            LACHauteurUnder40Max = 15,
-                            LACHauteurCVPercentMin = 13,
-                            LACHauteurCVPercentMax = 27
+                            LacBarbeMin = 17,
+                            LacBarbeMax = 56,
+                            LacHauteurMin = 12,
+                            LacHauteurMax = 36,
+                            LacHauteurUnder20Min = 3,
+                            LacHauteurUnder20Max = 12,
+                            LacHauteurUnder40Min = 9,
+                            LacHauteurUnder40Max = 15,
+                            LacHauteurCvPercentMin = 13,
+                            LacHauteurCvPercentMax = 27
                         },
                         DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                         {
@@ -368,16 +368,16 @@ namespace Wiedpug.API.ExampleResponses
                                 DichloromethaneDryBasisMax = 0.15,
                                 ConditioningMassMin = new Weight { Value = 500.00, WeightCode = WeightCode.KG },
                                 ConditioningMassMax = new Weight { Value = 1500.00, WeightCode = WeightCode.KG },
-                                LACBarbeMin = 10,
-                                LACBarbeMax = 30,
-                                LACHauteurMin = 15,
-                                LACHauteurMax = 45,
-                                LACHauteurUnder20Min = 5,
-                                LACHauteurUnder20Max = 15,
-                                LACHauteurUnder40Min = 8,
-                                LACHauteurUnder40Max = 25,
-                                LACHauteurCVPercentMin = 10,
-                                LACHauteurCVPercentMax = 20
+                                LacBarbeMin = 10,
+                                LacBarbeMax = 30,
+                                LacHauteurMin = 15,
+                                LacHauteurMax = 45,
+                                LacHauteurUnder20Min = 5,
+                                LacHauteurUnder20Max = 15,
+                                LacHauteurUnder40Min = 8,
+                                LacHauteurUnder40Max = 25,
+                                LacHauteurCvPercentMin = 10,
+                                LacHauteurCvPercentMax = 20
                             },
                             DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                             {
@@ -461,16 +461,16 @@ namespace Wiedpug.API.ExampleResponses
                                 Value = 1200.00,
                                 WeightCode = WeightCode.KG
                             },
-                                LACBarbeMin = 17,
-                                LACBarbeMax = 56,
-                                LACHauteurMin = 12,
-                                LACHauteurMax = 36,
-                                LACHauteurUnder20Min = 3,
-                                LACHauteurUnder20Max = 12,
-                                LACHauteurUnder40Min = 9,
-                                LACHauteurUnder40Max = 15,
-                                LACHauteurCVPercentMin = 13,
-                                LACHauteurCVPercentMax = 27
+                                LacBarbeMin = 17,
+                                LacBarbeMax = 56,
+                                LacHauteurMin = 12,
+                                LacHauteurMax = 36,
+                                LacHauteurUnder20Min = 3,
+                                LacHauteurUnder20Max = 12,
+                                LacHauteurUnder40Min = 9,
+                                LacHauteurUnder40Max = 15,
+                                LacHauteurCvPercentMin = 13,
+                                LacHauteurCvPercentMax = 27
                             },
                             DarkAndMedullatedFibreRiskDetails = new DarkAndMedullatedFibreRiskDetail
                             {

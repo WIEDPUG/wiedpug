@@ -21,7 +21,7 @@ namespace Wiedpug.Domain.ValueObject
         /// Percentage of fibres measured for the measurement.
         /// </summary>
         [Required]
-        [Range(-9999.99,9999.99)]
+        [Range(-99.99999,99.9999)]
         public required double FibresMeasuredPercentage { get; set; } // FIELD NUMBER 4 - Fibres Measured (%)-(1) - Start: 6, Size: 6, Data Type: D4, Justification: R, Requirement Designator: M
 
     }

@@ -65,7 +65,7 @@ builder.Services.AddSwaggerGen(c => {
     //c.SchemaFilter<AllOfSchemaForReferencedFieldSchemaFilter>();
 
     // Enable shared referenced filed processing
-    c.SchemaFilter<SharedReferencedFieldSchemaFilter>();
+    //c.SchemaFilter<SharedReferencedFieldSchemaFilter>();
 
     // Enable double type processing
     //c.SchemaFilter<DoubleFieldSchemaFilter>();
