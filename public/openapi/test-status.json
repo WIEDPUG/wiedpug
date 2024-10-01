@@ -13,7 +13,7 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "v0.0"
+    "version": "0.0"
   },
   "paths": {
     "/v0/test-status": {
@@ -497,18 +497,10 @@
         "additionalProperties": false
       },
       "UtcDate": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "format": "date",
-            "nullable": true
-          }
-        },
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\r\n\r\ndateOfCreditNote: Date the Credit note was issued\r\n\r\ndateOfOriginalInvoice: Date of the original invoice\r\n\r\ndateIssue: The date the certificate was issued.\r\n\r\ndateLastUpdated: The day the item was last amended.\r\n\r\nstatementDate: The period ending date of the statement.\r\n\r\nstatementPaymentDate: The date the payment was made.\r\n\r\ndatePaymentMade: Required date field for the date payment was made.\r\n\r\nsaleDate: The date on which the wool was sold.\r\n\r\ncoreTestSamplingDate: For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\r\n\r\nitemDate: The date the cost of the item was incurred."
+        "type": "string",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
       },
       "CountryCode": {
         "enum": [
@@ -543,11 +535,11 @@
       "Centre": {
         "required": [
           "centreCode",
-          "country"
+          "countryCode"
         ],
         "type": "object",
         "properties": {
-          "country": {
+          "countryCode": {
             "$ref": "#/components/schemas/CountryCode"
           },
           "centreCode": {
@@ -576,7 +568,7 @@
         "additionalProperties": false,
         "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia\r\n\r\ncentreStorage: The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the\r\nCentre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.\r\n\r\ncentreCatalogue: The centre (code) used to group lots of wool based on a location. This location is typically the core test/weighing centre and is often aligned with the seller’s Post Sale Charge schedule.\r\n\r\ncentreDelivery: Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.\r\n\r\ncentreAlternateDelivery: This field is to be used when the PSC includes optional delivery to a second area.",
         "discriminator": {
-          "propertyName": "country",
+          "propertyName": "countryCode",
           "mapping": {
             "AU": "#/components/schemas/CentreCodeAustralia",
             "CN": "#/components/schemas/CentreCodeChina",
@@ -1029,7 +1021,7 @@
             "nullable": true
           },
           "data": {
-            "description": "Contains response data. e.g. Auction Catalogue",
+            "description": "Contains response data.",
             "nullable": true
           }
         },
@@ -1212,18 +1204,10 @@
         "additionalProperties": false
       },
       "UtcDateTime": {
-        "type": "object",
-        "properties": {
-          "dateTime": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z\r\n\r\nauctionSaleTime: The auction room time the lot was passed in, sold or withdrawn (unverified data)."
+        "type": "string",
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+        "example": "2024-03-21T19:25:04+00:00.000Z"
       },
       "TestStatusListApiResult": {
         "type": "object",
@@ -1241,7 +1225,7 @@
             "items": {
               "$ref": "#/components/schemas/TestStatus"
             },
-            "description": "Contains response data. e.g. Auction Catalogue",
+            "description": "Contains response data.",
             "nullable": true
           }
         },

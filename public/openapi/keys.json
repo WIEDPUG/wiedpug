@@ -13,7 +13,7 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "v0.0"
+    "version": "0.0"
   },
   "paths": {
     "/v0/keys": {
@@ -483,7 +483,7 @@
             "nullable": true
           },
           "data": {
-            "description": "Contains response data. e.g. Auction Catalogue",
+            "description": "Contains response data.",
             "nullable": true
           }
         },
@@ -618,7 +618,7 @@
           },
           "data": {
             "type": "string",
-            "description": "Contains response data. e.g. Auction Catalogue",
+            "description": "Contains response data.",
             "nullable": true
           }
         },

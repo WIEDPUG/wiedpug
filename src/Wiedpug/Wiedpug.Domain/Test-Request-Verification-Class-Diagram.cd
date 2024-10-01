@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.TestRequestsVerificationAggregate.TestRequestsVerification" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.TestRequestsVerificationAggregate.TestRequestsVerification">
     <Position X="6" Y="7.25" Width="2.25" />
     <AssociationLine Name="TestRequestsVerificationDetails" Type="Wiedpug.Domain.Entities.TestRequestsVerificationDetail">
       <MemberNameLabel ManuallyPlaced="true">
@@ -21,12 +21,6 @@
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TestRequestsVerificationDetail" Collapsed="true">
     <Position X="6.5" Y="5.25" Width="2.5" />
-    <AssociationLine Name="ContractLimitRequirement" Type="Wiedpug.Domain.Entities.ContractLimitRequirement" FixedToPoint="true">
-      <Path>
-        <Point X="9" Y="5.5" />
-        <Point X="12.25" Y="5.5" />
-      </Path>
-    </AssociationLine>
     <AssociationLine Name="TestRequestVerification" Type="Wiedpug.Domain.Entities.TestRequestVerification" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="9" Y="5.375" />
@@ -35,15 +29,21 @@
         <Point X="10.5" Y="3.531" />
       </Path>
     </AssociationLine>
+    <AssociationLine Name="ContractLimitRequirement" Type="Wiedpug.Domain.Entities.ContractLimitRequirement" FixedToPoint="true">
+      <Path>
+        <Point X="9" Y="5.5" />
+        <Point X="12.25" Y="5.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAgAAAAgoAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\TestRequestsVerificationDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TestDataHeader" />
+      <Property Name="TestRequestVerification" />
       <Property Name="ContractLimitRequirement" />
       <Property Name="DarkAndMedullatedFibreRiskDetails" />
-      <Property Name="TestRequestVerification" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="TestRequestsVerificationBales" />
@@ -52,14 +52,14 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="2.25" Y="7.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.ContractLimitRequirement" Collapsed="true">
     <Position X="12.25" Y="5.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>BECBAAQIBAABAAAAAAVQQAEAAAAAAAgAAgEgFAEAACA=</HashCode>
+      <HashCode>BACBAARYBAARBAAAAQFAAAAAAAAIAAgAQggAAAABAEA=</HashCode>
       <FileName>Entities\ContractLimitRequirement.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,7 +73,7 @@
   <Class Name="Wiedpug.Domain.Entities.TestDataHeader" Collapsed="true">
     <Position X="11.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAEAAQgBAAEMAAABAIAIAAAACAMYAgEEAAAIAIQ=</HashCode>
+      <HashCode>AAoAAAEAAQgBAAEMAAABAICAAAAAAAMYAgEEAAAAAIQ=</HashCode>
       <FileName>Entities\TestDataHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -87,14 +87,14 @@
   <Class Name="Wiedpug.Domain.ValueObject.BaleDetail" Collapsed="true">
     <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABQIBAAAAAAAAABAAAAAAQEAACAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAABQIBAAAAAAAAABAAAAAAQEAACAgAAA=</HashCode>
       <FileName>ValueObject\BaleDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.ValueObject.BaleHeader" Collapsed="true">
     <Position X="7.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAACAAAAABAACAAAAAAAAAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAACAACAABAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>ValueObject\BaleHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -113,8 +113,8 @@
       <Property Name="BaleHeader" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="PropertyIdentificationCodes" />
       <Property Name="BaleDetails" />
+      <Property Name="PropertyIdentificationCodes" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="System.String" Collapsed="true">
@@ -125,7 +125,7 @@
   <Class Name="Wiedpug.Domain.Entities.TestRequestVerification" Collapsed="true">
     <Position X="10.5" Y="3.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>EAABAAAAAAAAIwACQABABIAAABQAAAAQAAQFIQAAAAA=</HashCode>
+      <HashCode>EAABAABAAAAAIwACQABABIAAABQAAAAQAAQBIQAAAAA=</HashCode>
       <FileName>Entities\TestRequestVerification.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -552,10 +552,47 @@ const generateSchemaOnlyFile = () =>{
 }
 
 
+const updateApiVersion = ()=>{    
+    // Paths to your config and API files
+    const configFilePath = path.join(__dirname, 'openapi-config.json');
+    const apiFilePath = path.join(__dirname, '/public/openapi/api.json');
+    
+    // Step 1: Read the version from openapi-config.json
+    const configData = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'));
+    const newVersion = configData.version; // e.g., "0.0.0"
+    
+    // Extract the major version from the version string
+    const majorVersion = newVersion.split('.')[0]; // Gets the major version (e.g., "0")
+    
+    // Step 2: Read and parse the OpenAPI JSON file
+    let apiData = JSON.parse(fs.readFileSync(apiFilePath, 'utf-8'));
+    
+    // Step 3: Update the version in the info section
+    apiData.info.version = newVersion; // Keep the full version in info
+    
+    // Step 4: Update the endpoints with the new major version in the paths
+    const oldVersionPattern = /\/v[0-9]+/g; // Match /v1 or /v0
+    Object.keys(apiData.paths).forEach((endpoint) => {
+        const newEndpoint = endpoint.replace(oldVersionPattern, `/v${majorVersion}`);
+        if (newEndpoint !== endpoint) {
+            apiData.paths[newEndpoint] = apiData.paths[endpoint];
+            delete apiData.paths[endpoint];
+        }
+    });
+    
+    // Step 5: Write the updated JSON back to api.json
+    fs.writeFileSync(apiFilePath, JSON.stringify(apiData, null, 2));
+    
+    console.log(`Updated OpenAPI spec with version: v${newVersion}`);
+    
+}
+
+
 const main = () => {
     
     processOpenApiFile()  // If you start from api.json file directly, comment out this line
 
+    updateApiVersion()
     saveApiToYaml()
     generateOpenApiFilesByEndpoints()
     generateSchemaOnlyFile()

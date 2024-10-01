@@ -1,0 +1,339 @@
+[
+    {
+        "data": [
+            {
+                "transmissionHeader": {
+                    "abn": 43006014106,
+                    "countryOfOrigin": "AU",
+                    "currentReceiver": {
+                        "organisationCode": "AAA",
+                        "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "S"
+                        }
+                    },
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-09-16",
+                    "documentOriginator": {
+                        "organisationCode": "AWT",
+                        "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                        }
+                    },
+                    "softwareIdentifier": {
+                        "softwareCompany": 8
+                    },
+                    "versionNumber": 37
+                },
+                "statementHeader": {
+                    "client": {
+                        "organisationCode": "AAA",
+                        "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "S"
+                        }
+                    },
+                    "clientCode": 59999,
+                    "openingBalances": [
+                        {
+                            "balanceType": "Current",
+                            "balanceValue": {
+                                "value": 0,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "Thirty",
+                            "balanceValue": {
+                                "value": 9978.17,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "Sixty",
+                            "balanceValue": {
+                                "value": 0,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "Ninety",
+                            "balanceValue": {
+                                "value": 0,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "NinetyPlus",
+                            "balanceValue": {
+                                "value": 904.87,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "CR"
+                        }
+                    ],
+                    "statementDate": "2024-09-15"
+                },
+                "statementDetails": [
+                    {
+                        "accountReference": "C99972",
+                        "amount": {
+                            "value": 2750,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXX Dockets - XXXXX",
+                        "gstAmount": {
+                            "value": 250,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-02"
+                    },
+                    {
+                        "accountReference": "399997226B1",
+                        "amount": {
+                            "value": 67.16,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/AAAA",
+                        "gstAmount": {
+                            "value": 6.11,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997803B7",
+                        "amount": {
+                            "value": 67.16,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/EXSUPAA",
+                        "gstAmount": {
+                            "value": 6.11,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997804L5",
+                        "amount": {
+                            "value": 38.06,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/EXSUPAA",
+                        "gstAmount": {
+                            "value": 3.46,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997805B2",
+                        "amount": {
+                            "value": 66.22,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/SUPAAAA",
+                        "gstAmount": {
+                            "value": 6.02,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997806L0",
+                        "amount": {
+                            "value": 38.06,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/SUPAAAA",
+                        "gstAmount": {
+                            "value": 3.46,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997807L8",
+                        "amount": {
+                            "value": 38.06,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/AAAA",
+                        "gstAmount": {
+                            "value": 3.46,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997808B6",
+                        "amount": {
+                            "value": 61.82,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/AAAXB",
+                        "gstAmount": {
+                            "value": 5.62,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997809L4",
+                        "amount": {
+                            "value": 32.45,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/AAAXB",
+                        "gstAmount": {
+                            "value": 2.95,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399997810B2",
+                        "amount": {
+                            "value": 66.22,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/C/L",
+                        "gstAmount": {
+                            "value": 6.02,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399998178B3",
+                        "amount": {
+                            "value": 61.82,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/STN",
+                        "gstAmount": {
+                            "value": 5.62,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-10"
+                    },
+                    {
+                        "accountReference": "399990294B4",
+                        "amount": {
+                            "value": 69.03,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/SUP P/B",
+                        "gstAmount": {
+                            "value": 6.28,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-11"
+                    },
+                    {
+                        "accountReference": "399990295L1",
+                        "amount": {
+                            "value": 38.06,
+                            "currencyCode": "AUD"
+                        },
+                        "amountType": 0,
+                        "clientsReference": "XXXXXXXXXXXXXX/SUP P/B",
+                        "gstAmount": {
+                            "value": 3.46,
+                            "currencyCode": "AUD"
+                        },
+                        "isCompanyAbnApplicable": true,
+                        "isGstApplicable": true,
+                        "itemDate": "2024-09-11"
+                    }
+                ],
+                "statementTrailer": {
+                    "closingBalances": [
+                        {
+                            "balanceType": "Current",
+                            "balanceValue": {
+                                "value": 3394.12,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "Thirty",
+                            "balanceValue": {
+                                "value": 9978.17,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "Sixty",
+                            "balanceValue": {
+                                "value": 0,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "Ninety",
+                            "balanceValue": {
+                                "value": 0,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "DR"
+                        },
+                        {
+                            "balanceType": "NinetyPlus",
+                            "balanceValue": {
+                                "value": 904.87,
+                                "currencyCode": "AUD"
+                            },
+                            "debitOrCreditType": "CR"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

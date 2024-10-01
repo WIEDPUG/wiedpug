@@ -58,7 +58,7 @@ namespace Wiedpug.API.ExampleResponses
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
                                      CentreStorage = new Centre {
-                                        Country = CountryCode.AU,
+                                        CountryCode = CountryCode.AU,
                                         CentreCode =  CentreCodeAustralia.A
                                      },
                                      SaleDate = new UtcDate{ Date="2017-01-10"},
@@ -78,7 +78,7 @@ namespace Wiedpug.API.ExampleResponses
                                                                 OrganisationCode = "ABC",
 
                                     },
-                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A }
+                                    CentreCatalogue = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A }
                                  },
                                  LotPriceAndBuyerDetails = new List<LotPriceAndBuyerDetail>
                                  {
@@ -219,7 +219,7 @@ namespace Wiedpug.API.ExampleResponses
                                         OrganisationCode = "ATS",
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
-                                     CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                     CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                      SaleDate = new UtcDate{ Date="2017-01-10"},
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
@@ -239,7 +239,7 @@ namespace Wiedpug.API.ExampleResponses
                                     {
                                                                 OrganisationCode = "ABC",
                                     },
-                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A }
+                                    CentreCatalogue = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A }
                                  },
                                  LotPriceAndBuyerDetails = new List<LotPriceAndBuyerDetail>
                                  {

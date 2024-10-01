@@ -29,20 +29,20 @@ env:
 
 jobs:
   # Build job
-  build-dotnet:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+  # build-dotnet:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: Set up .NET Core 8.x
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '8.x'
-          include-prerelease: false
+  #     - name: Set up .NET Core 8.x
+  #       uses: actions/setup-dotnet@v1
+  #       with:
+  #         dotnet-version: '8.x'
+  #         include-prerelease: false
         
-      - name: Build with dotnet
-        working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
-        run: dotnet build --configuration Release
+  #     - name: Build with dotnet
+  #       working-directory: ${{ env.DEFAULT_APP_DIRECTORY }}
+  #       run: dotnet build --configuration Release
     
   build-nextra:
     runs-on: ubuntu-latest

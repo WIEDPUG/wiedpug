@@ -10,7 +10,7 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: v0.0
+  version: "0.0"
 paths:
   /v0/catalogues:
     post:
@@ -58,7 +58,7 @@ paths:
                             sellingCentreType: F
                             saleNumber: 29
                           centreStorage:
-                            country: AU
+                            countryCode: AU
                             centreCode: A
                           saleDate: 2017-01-10
                           woolState: A
@@ -83,7 +83,7 @@ paths:
                             organisationCode: ABC
                           woolTypeGroup: MFLC
                           centreCatalogue:
-                            country: AU
+                            countryCode: AU
                             centreCode: G
                           deliveryBasis: D
                           storageOrganisation:
@@ -250,7 +250,7 @@ paths:
                             sellingCentreType: F
                             saleNumber: 29
                           centreStorage:
-                            country: AU
+                            countryCode: AU
                             centreCode: AU
                           saleDate: 2017-01-10
                           woolState: "1"
@@ -275,7 +275,7 @@ paths:
                             organisationCode: ABC
                           woolTypeGroup: MFLC
                           centreCatalogue:
-                            country: AU
+                            countryCode: AU
                             centreCode: G
                           deliveryBasis: D
                           storageOrganisation:
@@ -515,7 +515,7 @@ paths:
                         sellingCentreType: F
                         saleNumber: 29
                       centreStorage:
-                        country: AU
+                        countryCode: AU
                         centreCode: A
                       saleDate: 2017-01-10
                       woolState: A
@@ -540,7 +540,7 @@ paths:
                         organisationCode: ABC
                       woolTypeGroup: MFLC
                       centreCatalogue:
-                        country: AU
+                        countryCode: AU
                         centreCode: G
                       deliveryBasis: D
                       storageOrganisation:
@@ -807,7 +807,7 @@ paths:
                             sellingCentreType: F
                             saleNumber: 29
                           centreStorage:
-                            country: AU
+                            countryCode: AU
                             centreCode: AD
                           saleDate: 2017-01-10
                           woolState: "1"
@@ -832,7 +832,7 @@ paths:
                             organisationCode: ABC
                           woolTypeGroup: MFLC
                           centreCatalogue:
-                            country: AU
+                            countryCode: AU
                             centreCode: G
                           deliveryBasis: D
                           storageOrganisation:
@@ -1079,62 +1079,10 @@ components:
           format: int64
       additionalProperties: false
     UtcDate:
-      type: object
-      properties:
-        date:
-          maxLength: 10
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-          type: string
-          format: date
-          nullable: true
-      description: "Date value in ISO standard UTC date format. e.g. 2024-03-21
-        (YYYY-MM-DD).\r
-
-        \r
-
-        dateOfCreditNote: Date the Credit note was issued\r
-
-        \r
-
-        dateOfOriginalInvoice: Date of the original invoice\r
-
-        \r
-
-        dateIssue: The date the certificate was issued.\r
-
-        \r
-
-        dateLastUpdated: The day the item was last amended.\r
-
-        \r
-
-        statementDate: The period ending date of the statement.\r
-
-        \r
-
-        statementPaymentDate: The date the payment was made.\r
-
-        \r
-
-        datePaymentMade: Required date field for the date payment was
-        made.\r
-
-        \r
-
-        saleDate: The date on which the wool was sold.\r
-
-        \r
-
-        coreTestSamplingDate: For records Fibre Diameter Histogram
-        Header and Test Request Verification this is the date core test was
-        sampled or date combination/OML was requested. For the Lot Header this
-        is the date the core test was sampled, the last date of weighing for
-        untested wool or the date the Combination/OML was requested.\r
-
-        \r
-
-        itemDate: The date the cost of the item was incurred."
+      type: string
+      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
+      example: 2024-03-21
     CountryCode:
       enum:
         - AU
@@ -1211,10 +1159,10 @@ components:
     Centre:
       required:
         - centreCode
-        - country
+        - countryCode
       type: object
       properties:
-        country:
+        countryCode:
           $ref: "#/components/schemas/CountryCode"
         centreCode:
           anyOf:
@@ -1292,7 +1240,7 @@ components:
         centreAlternateDelivery: This field is to be used when the PSC
         includes optional delivery to a second area."
       discriminator:
-        propertyName: country
+        propertyName: countryCode
         mapping:
           AU: "#/components/schemas/CentreCodeAustralia"
           CN: "#/components/schemas/CentreCodeChina"
@@ -1839,14 +1787,10 @@ components:
           $ref: "#/components/schemas/UtcDateTime"
       additionalProperties: false
     Season:
-      type: object
-      properties:
-        seasonValue:
-          maximum: 99
-          minimum: -99
-          type: integer
-          format: int32
-          nullable: true
+      maximum: 99
+      minimum: -99
+      type: integer
+      format: int32
     SaleIdentity:
       required:
         - saleNumber
@@ -2107,22 +2051,11 @@ components:
           $ref: "#/components/schemas/CurrencyCode"
       additionalProperties: false
     UtcDateTime:
-      type: object
-      properties:
-        dateTime:
-          maxLength: 20
-          minLength: 1
-          pattern: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
-          type: string
-          format: date-time
-          nullable: true
-      description: "Date and Time value in ISO 8601 standard UTC datetime format. e.g.
-        2024-03-21T19:25:04+00:00.000Z\r
-
-        \r
-
-        auctionSaleTime: The auction room time the lot was passed in,
-        sold or withdrawn (unverified data)."
+      type: string
+      description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
+        2024-03-21T19:25:04+00:00.000Z
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+      example: 2024-03-21T19:25:04+00:00.000Z
     SaleType:
       enum:
         - A
@@ -2392,13 +2325,9 @@ components:
           nullable: true
       additionalProperties: false
     LotIdentity:
-      type: object
-      properties:
-        identity:
-          maxLength: 6
-          minLength: 0
-          type: string
-          nullable: true
+      maxLength: 6
+      minLength: 0
+      type: string
       description: "This is a compound name for lot number and lot suffix, where the
         lot \r
 
@@ -2436,15 +2365,11 @@ components:
 
         The new value that the Lot Identity is to be changed to."
     NumberOfBales:
-      type: object
-      properties:
-        balesCount:
-          maximum: 9999
-          minimum: -9999
-          type: integer
-          format: int32
-          nullable: true
+      maximum: 9999
+      minimum: -9999
+      type: integer
       description: Number of bales
+      format: int32
     Weight:
       required:
         - value
@@ -4069,7 +3994,7 @@ components:
           description: Contains information about the response if applicable.
           nullable: true
         data:
-          description: Contains response data. e.g. Auction Catalogue
+          description: Contains response data.
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses
@@ -4367,7 +4292,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Catalogue"
-          description: Contains response data. e.g. Auction Catalogue
+          description: Contains response data.
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses

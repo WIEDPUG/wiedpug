@@ -13,7 +13,7 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "v0.0"
+    "version": "0.0"
   },
   "paths": {
     "/v0/postsale-printing-of-presale-certificates": {
@@ -293,7 +293,7 @@
                             "saleNumber": 18
                           },
                           "centreStorage": {
-                            "country": "AU",
+                            "countryCode": "AU",
                             "centreCode": "AR"
                           },
                           "certificateDeliveryIndicator": 0
@@ -490,18 +490,10 @@
         "additionalProperties": false
       },
       "UtcDate": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "maxLength": 10,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-            "type": "string",
-            "format": "date",
-            "nullable": true
-          }
-        },
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\r\n\r\ndateOfCreditNote: Date the Credit note was issued\r\n\r\ndateOfOriginalInvoice: Date of the original invoice\r\n\r\ndateIssue: The date the certificate was issued.\r\n\r\ndateLastUpdated: The day the item was last amended.\r\n\r\nstatementDate: The period ending date of the statement.\r\n\r\nstatementPaymentDate: The date the payment was made.\r\n\r\ndatePaymentMade: Required date field for the date payment was made.\r\n\r\nsaleDate: The date on which the wool was sold.\r\n\r\ncoreTestSamplingDate: For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\r\n\r\nitemDate: The date the cost of the item was incurred."
+        "type": "string",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
       },
       "CountryCode": {
         "enum": [
@@ -536,11 +528,11 @@
       "Centre": {
         "required": [
           "centreCode",
-          "country"
+          "countryCode"
         ],
         "type": "object",
         "properties": {
-          "country": {
+          "countryCode": {
             "$ref": "#/components/schemas/CountryCode"
           },
           "centreCode": {
@@ -569,7 +561,7 @@
         "additionalProperties": false,
         "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia\r\n\r\ncentreStorage: The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the\r\nCentre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.\r\n\r\ncentreCatalogue: The centre (code) used to group lots of wool based on a location. This location is typically the core test/weighing centre and is often aligned with the seller’s Post Sale Charge schedule.\r\n\r\ncentreDelivery: Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.\r\n\r\ncentreAlternateDelivery: This field is to be used when the PSC includes optional delivery to a second area.",
         "discriminator": {
-          "propertyName": "country",
+          "propertyName": "countryCode",
           "mapping": {
             "AU": "#/components/schemas/CentreCodeAustralia",
             "CN": "#/components/schemas/CentreCodeChina",
@@ -1027,15 +1019,9 @@
         "description": "The first character contains the Weight Note prefix, and the next seven characters contain the weight Note Suffix."
       },
       "LotIdentity": {
-        "type": "object",
-        "properties": {
-          "identity": {
-            "maxLength": 6,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          }
-        },
+        "maxLength": 6,
+        "minLength": 0,
+        "type": "string",
         "description": "This is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to."
       },
       "SaleOutcome": {
@@ -1053,17 +1039,11 @@
         "format": "int32"
       },
       "NumberOfBales": {
-        "type": "object",
-        "properties": {
-          "balesCount": {
-            "maximum": 9999,
-            "minimum": -9999,
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          }
-        },
-        "description": "Number of bales"
+        "maximum": 9999,
+        "minimum": -9999,
+        "type": "integer",
+        "description": "Number of bales",
+        "format": "int32"
       },
       "Weight": {
         "required": [
@@ -1176,7 +1156,7 @@
             "nullable": true
           },
           "data": {
-            "description": "Contains response data. e.g. Auction Catalogue",
+            "description": "Contains response data.",
             "nullable": true
           }
         },
@@ -1359,18 +1339,10 @@
         "additionalProperties": false
       },
       "UtcDateTime": {
-        "type": "object",
-        "properties": {
-          "dateTime": {
-            "maxLength": 20,
-            "minLength": 1,
-            "pattern": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z\r\n\r\nauctionSaleTime: The auction room time the lot was passed in, sold or withdrawn (unverified data)."
+        "type": "string",
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+        "example": "2024-03-21T19:25:04+00:00.000Z"
       },
       "RequestPostsalePrintingOfPresaleCertificatesListApiResult": {
         "type": "object",
@@ -1388,7 +1360,7 @@
             "items": {
               "$ref": "#/components/schemas/RequestPostsalePrintingOfPresaleCertificates"
             },
-            "description": "Contains response data. e.g. Auction Catalogue",
+            "description": "Contains response data.",
             "nullable": true
           }
         },

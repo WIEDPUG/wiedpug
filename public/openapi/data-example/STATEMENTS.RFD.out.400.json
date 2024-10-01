@@ -1,0 +1,10 @@
+{
+	"title": "Error",
+	"status": 400,
+	"detail": "Validation error",
+	"errors": [
+		{
+			"errorMessage": "$[0]: required property 'transmissionHeader' not found"
+		}
+	]
+}

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.LotInvoicesAggregate.LotInvoice" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.LotInvoicesAggregate.LotInvoice">
     <Position X="15.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAQAACAAAACAAAAAAAAAAAAAA=</HashCode>
@@ -17,7 +17,7 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="15.25" Y="7.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,7 +66,7 @@
   <Class Name="Wiedpug.Domain.Entities.LotInvoiceHeader" Collapsed="true">
     <Position X="5.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAQIAEAkAAAAMAAgBAkCAAAAQAAAAAAGAAAAIAAA=</HashCode>
+      <HashCode>AAQAAQIAEAkAAAAMAAgBAsCAAAAQAAAAAAGAAAAAAAA=</HashCode>
       <FileName>Entities\LotInvoiceHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -86,7 +86,7 @@
   <Class Name="Wiedpug.Domain.Entities.FibreDiameterHistogram" Collapsed="true">
     <Position X="3.25" Y="7.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\FibreDiameterHistogram.cs</FileName>
     </TypeIdentifier>
   </Class>

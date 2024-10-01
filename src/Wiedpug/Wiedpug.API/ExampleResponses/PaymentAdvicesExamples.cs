@@ -56,7 +56,7 @@ namespace Wiedpug.API.ExampleResponses
                     SellingCentreType = "M",
                     SaleNumber = 18
                 },
-                                    CentreStorage = new Centre {Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A},
+                                    CentreStorage = new Centre {CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A},
                                     SaleDate = new UtcDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -70,7 +70,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "ABC",
                             },
 
-                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                    CentreCatalogue = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     StorageOrganisation = new Organisation {                         OrganisationCode = "ABC", },
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
@@ -200,7 +200,7 @@ namespace Wiedpug.API.ExampleResponses
                     SellingCentreType = "M",
                     SaleNumber = 18
                 },
-                                    CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                    CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     SaleDate = new UtcDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -215,7 +215,7 @@ namespace Wiedpug.API.ExampleResponses
                             },
 
                                     CentreCatalogue = new Centre {
-                                        Country = CountryCode.AU,
+                                        CountryCode = CountryCode.AU,
                                         CentreCode =  CentreCodeAustralia.A
                                     },
                                     StorageOrganisation = new Organisation

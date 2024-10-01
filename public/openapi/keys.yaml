@@ -10,7 +10,7 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: v0.0
+  version: "0.0"
 paths:
   /v0/keys:
     post:
@@ -328,7 +328,7 @@ components:
           description: Contains information about the response if applicable.
           nullable: true
         data:
-          description: Contains response data. e.g. Auction Catalogue
+          description: Contains response data.
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses
@@ -532,7 +532,7 @@ components:
           nullable: true
         data:
           type: string
-          description: Contains response data. e.g. Auction Catalogue
+          description: Contains response data.
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateRequests" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateRequests">
     <Position X="3.25" Y="0.5" Width="3" />
     <AssociationLine Name="TransmissionHeader" Type="Wiedpug.Domain.Entities.TransmissionHeader">
       <MemberNameLabel ManuallyPlaced="true">
@@ -21,15 +21,8 @@
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="2.75" Y="2.75" Width="2.75" />
-    <Members>
-      <Property Name="CurrentReceiver" Hidden="true" />
-      <Property Name="DateFormatLastRevised" Hidden="true" />
-      <Property Name="DateTransmissionFileCreated" Hidden="true" />
-      <Property Name="DocumentOriginator" Hidden="true" />
-      <Property Name="VersionNumber" Hidden="true" />
-    </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -54,7 +47,7 @@
   <Class Name="Wiedpug.Domain.Entities.CertificateRequest" Collapsed="true">
     <Position X="8.5" Y="3.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEQAAAQCCAAAAAAAJAAgAAAEACAIYBICEAACIAAg=</HashCode>
+      <HashCode>AAAAEQAAAQACAAAAAAAJAIiAAAEAAAIYBICEAACAAAo=</HashCode>
       <FileName>Entities\CertificateRequest.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -64,7 +57,7 @@
   <Class Name="Wiedpug.Domain.ValueObject.BaleHeader" Collapsed="true">
     <Position X="14" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAACAAAAABAACAAAAAAAAAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAACAACAABAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>ValueObject\BaleHeader.cs</FileName>
     </TypeIdentifier>
   </Class>

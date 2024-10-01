@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateUpdateAggregate.TestCertificateUpdate" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.TestCertificateUpdateAggregate.TestCertificateUpdate">
     <Position X="5" Y="3.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAQCAAAAAAAAAAAAAA=</HashCode>
@@ -18,7 +18,6 @@
     <Position X="10.25" Y="3.5" Width="3" />
     <Members>
       <Property Name="BaleDescription" Hidden="true" />
-      <Property Name="Bales" Hidden="true" />
       <Property Name="CertificateIdentity" Hidden="true" />
       <Property Name="Client" Hidden="true" />
       <Property Name="LotIdentityFrom" Hidden="true" />
@@ -30,7 +29,7 @@
       <Property Name="WoolPreparationCategoryTo" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>EAAAAAAAQCAQAABICAAAAAAgAAAACAAAAAgMACAAAAQ=</HashCode>
+      <HashCode>EAAAAAAAQCAQAABICAAAAACgAAAAAAAAAAgMACAAAAQ=</HashCode>
       <FileName>Entities\TestCertificateUpdateDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -41,7 +40,7 @@
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="4.75" Y="5.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>

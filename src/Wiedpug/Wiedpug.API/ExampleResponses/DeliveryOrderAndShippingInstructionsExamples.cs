@@ -106,7 +106,7 @@ namespace Wiedpug.API.ExampleResponses
                                             },
                                             CentreStorage =new Centre
                                             {
-                                                Country = CountryCode.AU,
+                                                CountryCode = CountryCode.AU,
                                                 CentreCode = CentreCodeAustralia.A
                                             },
                                             StorageOrganisation = new Organisation
@@ -303,7 +303,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 SaleNumber = 18
                                             },
                                             CentreStorage = new Centre {
-                                                Country = CountryCode.AU,
+                                                CountryCode = CountryCode.AU,
                                                 CentreCode = CentreCodeAustralia.A
                                             },
                                             StorageOrganisation = new Organisation

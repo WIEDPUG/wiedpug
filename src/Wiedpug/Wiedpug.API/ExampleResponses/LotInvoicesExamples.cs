@@ -47,7 +47,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Season = new Season{SeasonValue= 16},
                                     SaleIdentity = new SaleIdentity { SellingCentreType = "M", SaleNumber = 18 },
                                     CentreStorage = new Centre {
-                                        Country = CountryCode.AU,
+                                        CountryCode = CountryCode.AU,
                                         CentreCode = CentreCodeAustralia.AR
                                     },
                                     SaleDate = new UtcDate{Date="2017-01-19" },
@@ -88,7 +88,7 @@ namespace Wiedpug.API.ExampleResponses
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
                                     CentreCatalogue = new Centre {
-                                        Country = CountryCode.AU,
+                                        CountryCode = CountryCode.AU,
                                         CentreCode = CentreCodeAustralia.G
                                     },
                                     DeliveryBasis = DeliveryBasis.D,
@@ -336,7 +336,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = "M",
                                         SaleNumber = 18
                                     },
-                                    CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AR },
+                                    CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.AR },
                                     SaleDate = new UtcDate{Date="2017-01-19" },
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
@@ -364,7 +364,7 @@ namespace Wiedpug.API.ExampleResponses
 
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
+                                    CentreCatalogue = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D,
                                      StorageOrganisation = new Organisation
                                     {

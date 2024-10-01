@@ -47,7 +47,7 @@ namespace Wiedpug.Domain.Entities
         [Required]
         [MinLength(1)]
         [MaxLength(3)]
-        public required CountryCode Country { get; set; }
+        public required CountryCode CountryCode { get; set; }
 
         [Required]
         [MinLength(1)]

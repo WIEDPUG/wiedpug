@@ -74,7 +74,7 @@ namespace Wiedpug.API.ExampleResponses
                     SaleNumber = 18
                 },
                         CentreStorage = new Centre{
-                                Country = CountryCode.AU,
+                                CountryCode = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.A
                         },
                         CertificateDeliveryIndicator = CertificateDeliveryIndicator.ToBrokerOrBuyerAddress
@@ -191,7 +191,7 @@ namespace Wiedpug.API.ExampleResponses
                     SaleNumber = 18
                 },
                         CentreStorage = new Centre{
-                                Country = CountryCode.AU,
+                                CountryCode = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.AR
                         },
                         CertificateDeliveryIndicator = CertificateDeliveryIndicator.ToBrokerOrBuyerAddress

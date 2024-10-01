@@ -65,7 +65,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SaleNumber = 29
                                     },
                                     CentreStorage = new Centre { 
-                                        Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                        CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                     SaleDate = new UtcDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
@@ -94,7 +94,7 @@ namespace Wiedpug.API.ExampleResponses
 
                             },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
+                                    CentreCatalogue = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D,
                                     StorageOrganisation = new Organisation
                                     {
@@ -366,7 +366,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = "F",
                                         SaleNumber = 29
                                     },
-                                    CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AU },
+                                    CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.AU },
                                     SaleDate = new UtcDate{ Date="2017-01-10"},
                                     WoolState = WoolState._1,
                                     PackType = PackType._6,
@@ -391,7 +391,7 @@ namespace Wiedpug.API.ExampleResponses
                                         OrganisationCode = "ABC",
                                     },
                                     WoolTypeGroup = WoolTypeGroup.MFLC,
-                                    CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
+                                    CentreCatalogue = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
                                     DeliveryBasis = DeliveryBasis.D,
                                     StorageOrganisation = new Organisation {  
                                         OrganisationCode = "ABC", 
@@ -633,7 +633,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = "F",
                                         SaleNumber = 29
                                     },
-                                CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SaleDate = new UtcDate{ Date="2017-01-10"},
                                 WoolState = WoolState.A,
                                 PackType = PackType.F,
@@ -657,7 +657,7 @@ namespace Wiedpug.API.ExampleResponses
                                 },
                                 WoolTypeGroup = WoolTypeGroup.MFLC,
                                 CentreCatalogue = new Centre { 
-                                    Country = CountryCode.AU,
+                                    CountryCode = CountryCode.AU,
                                     CentreCode = CentreCodeAustralia.G },
                                 DeliveryBasis = DeliveryBasis.D,
                                 StorageOrganisation = new Organisation {  
@@ -1067,7 +1067,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SellingCentreType = "F",
                                         SaleNumber = 29
                                     },
-                                        CentreStorage = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.AD },
+                                        CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.AD },
                                         SaleDate = new UtcDate{ Date="2017-01-10"},
                                         WoolState = WoolState._1,
                                         PackType = PackType._9,
@@ -1090,7 +1090,7 @@ namespace Wiedpug.API.ExampleResponses
                                            OrganisationCode = "ABC",
                                         },
                                         WoolTypeGroup = WoolTypeGroup.MFLC,
-                                        CentreCatalogue = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
+                                        CentreCatalogue = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.G },
                                         DeliveryBasis = DeliveryBasis.D,
                                         StorageOrganisation = new Organisation {
                                             OrganisationCode = "ABC", 

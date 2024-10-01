@@ -26,7 +26,7 @@ public class DiscriminatorFilter : ISchemaFilter
 
             schema.Discriminator = new OpenApiDiscriminator
             {
-                PropertyName = "country",
+                PropertyName = "countryCode",
                 Mapping = new Dictionary<string, string>
                 {
                         { "AU", "#/components/schemas/CentreCodeAustralia" },

@@ -1,15 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.Catalogue" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.Catalogue">
     <Position X="28" Y="20.75" Width="2.5" />
-    <AssociationLine Name="WoolSaleHeaders" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.WoolSaleHeader" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="28" Y="21.062" />
-        <Point X="27.625" Y="21.062" />
-        <Point X="27.625" Y="21" />
-        <Point X="24.75" Y="21" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAACACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\CatalogueAggregate\Catalogue.cs</FileName>
@@ -17,6 +9,7 @@
     <ShowAsAssociation>
       <Property Name="TransmissionHeader" />
       <Property Name="TransferConfig" />
+      <Property Name="CatalogueType" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="WoolSaleHeaders" />
@@ -203,5 +196,12 @@
       <FileName>Entities\TestDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Enum Name="Wiedpug.Domain.Enums.CatalogueType" Collapsed="true">
+    <Position X="32.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAA=</HashCode>
+      <FileName>Enums\CatalogueType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -65,7 +65,7 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             LotType = LotType.ObjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
-                                Country = CountryCode.AU,
+                                CountryCode = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.A
                             },
                             SourceCode = SourceCode.Grower,
@@ -185,7 +185,7 @@ namespace Wiedpug.API.ExampleResponses
                             LotIdentityOrGroupNumber = "123456",
                             LotType = LotType.SubjectivelyMatchedInterlot,
                             CentreAuction = new Centre{
-                                Country = CountryCode.AU,
+                                CountryCode = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.A
                         },
                             SourceCode = SourceCode.Grower,
@@ -371,7 +371,7 @@ namespace Wiedpug.API.ExampleResponses
                             RegrabSampleWeight=new Weight { Value = 1.00, WeightCode = WeightCode.KG },
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
-                                Country = CountryCode.AU,
+                                CountryCode = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.A
                         },
                             SourceCode = SourceCode.Grower,
@@ -488,7 +488,7 @@ namespace Wiedpug.API.ExampleResponses
                             LotIdentityOrGroupNumber = "123456",
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre{
-                                Country = CountryCode.AU,
+                                CountryCode = CountryCode.AU,
                                 CentreCode =  CentreCodeAustralia.A
                         },
                             SourceCode = SourceCode.Grower,

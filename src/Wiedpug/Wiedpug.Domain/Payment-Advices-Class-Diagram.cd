@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvice" Collapsed="true">
+  <Class Name="Wiedpug.Domain.Aggregates.PaymentAdviceAggregate.PaymentAdvice">
     <Position X="8.5" Y="3.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAIAA=</HashCode>
@@ -11,14 +11,14 @@
       <Property Name="TransferConfig" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="Comments" />
       <Property Name="PaymentAdviceDetails" />
+      <Property Name="Comments" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
     <Position X="11" Y="1.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -36,8 +36,8 @@
       <FileName>Aggregates\PaymentAdvicesAggregate\PaymentAdviceDetail.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="PaymentSummary" />
       <Property Name="WoolSaleHeaderLot" />
+      <Property Name="PaymentSummary" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="LotPaymentDetails" />
@@ -54,7 +54,7 @@
   <Class Name="Wiedpug.Domain.Entities.MiscellaneousCharge" Collapsed="true">
     <Position X="17.75" Y="4.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAEACAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAEACAAAAAAAAAAAAIAAAAAAA=</HashCode>
       <FileName>Entities\MiscellaneousCharge.cs</FileName>
     </TypeIdentifier>
   </Class>

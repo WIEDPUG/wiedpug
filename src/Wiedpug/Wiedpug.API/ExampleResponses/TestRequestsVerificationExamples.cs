@@ -65,7 +65,7 @@ namespace Wiedpug.API.ExampleResponses
                         },
                             LotType = LotType.CombinedCertificate,
                             CentreAuction = new Centre {
-                                 Country = CountryCode.AU,
+                                 CountryCode = CountryCode.AU,
                                  CentreCode = CentreCodeAustralia.A
                             },
                             SourceCode = SourceCode.Grower,
@@ -156,7 +156,7 @@ namespace Wiedpug.API.ExampleResponses
                             Suffix = 1234567,
                         },
                             LotType = LotType.CombinedCertificate,
-                            CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.BA },
+                            CentreAuction = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.BA },
                             SourceCode = SourceCode.Dealer,
                             IsCompanyAbnApplicable = false
                         },
@@ -329,7 +329,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Suffix = 1234567,
                                 },
                                 LotType = LotType.CombinedCertificate,
-                                CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                CentreAuction = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SourceCode = SourceCode.Grower,
                                 IsCompanyAbnApplicable = false
                             },
@@ -414,7 +414,7 @@ namespace Wiedpug.API.ExampleResponses
                                     Suffix = 1234567,
                                 },
                                 LotType = LotType.CombinedCertificate,
-                                CentreAuction = new Centre { Country = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
+                                CentreAuction = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
                                 SourceCode = SourceCode.Dealer,
                                 IsCompanyAbnApplicable = false
                             },
