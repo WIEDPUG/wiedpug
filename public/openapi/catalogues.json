@@ -13,7 +13,7 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "0.0.0"
+    "version": "0.1.0"
   },
   "paths": {
     "/v0/catalogues": {
@@ -22,7 +22,7 @@
           "Catalogues"
         ],
         "summary": "Transmit new Auction Catalogues and Private Catalogues",
-        "description": "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
+        "description": "Transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "operationId": "CreateCatalogues",
         "parameters": [
           {

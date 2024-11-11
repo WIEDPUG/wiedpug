@@ -29,7 +29,7 @@ public static class CatalogueEndpoints
             ////Uncoment to mark this particular endpoint as Deprecated
             //Deprecated = true,
             Summary = "Transmit new Auction Catalogues and Private Catalogues",
-            Description = "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",            
+            Description = "Transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",            
         })        
         .Produces<List<ApiResult>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")

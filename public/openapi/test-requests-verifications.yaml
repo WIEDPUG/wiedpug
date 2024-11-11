@@ -10,7 +10,7 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: 0.0.0
+  version: 0.1.0
 paths:
   /v0/test-requests-verifications:
     post:
