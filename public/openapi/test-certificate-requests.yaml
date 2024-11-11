@@ -19,6 +19,13 @@ paths:
       summary: Test Certificate Requests
       description: Sent to a Test House to initiate the printing of a certificate.
       operationId: CreateTestCertificateRequests
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -182,6 +189,13 @@ paths:
         - Test Certificate Requests
       summary: Retrieves the test certificates request
       operationId: GetTestCertificatesRequests
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:

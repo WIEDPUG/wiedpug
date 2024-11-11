@@ -21,6 +21,13 @@ paths:
         catalogue data to the Network for auctions regulated by the Australian
         Wool Exchange Limited.
       operationId: CreateCatalogues
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -474,6 +481,13 @@ paths:
         data updates to the Network for auctions regulated by the Australian
         Wool Exchange Limited.
       operationId: UpdateCatalogues
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -733,6 +747,13 @@ paths:
         Re-requesting data for Auction Catalogues, Private Catalogues, and
         Auction Catalogue Updates
       operationId: RequestForCatalogues
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1018,6 +1039,13 @@ paths:
       description: Sent by a broker organisation to AWTA to include the Dark and
         Medullated Fibre Risk (DMFR) on a Certificate that has been issued.
       operationId: CreateDarkAndMedullatedFibreRiskVerifications
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1141,6 +1169,13 @@ paths:
         - Dark And Medullated Fibre Risk Verifications
       summary: Retrieves the dark and medullated fibre risk verifications
       operationId: RequestForDarkAndMedullatedFibreRiskVerifications
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1304,6 +1339,13 @@ paths:
       summary: Delivery Order/Shipping Instructions
       description: Used to provide delivery order/shipping instructions
       operationId: CreateDeliveryOrderAndShippingInstructions
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1462,6 +1504,13 @@ paths:
         - Delivery Order And Shipping Instructions
       summary: Retrieves the delivery order/shipping instructions
       operationId: RequestForDeliveryOrderAndShippingInstructions
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1658,6 +1707,13 @@ paths:
       summary: Upload the public encryption key for LotHeaderAwexData, return the
         encryption key id
       operationId: UploadKey
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1743,6 +1799,13 @@ paths:
         - Keys
       summary: Retrieves the public encryption key for LotHeaderAwexData
       operationId: GetKeyForAwexData
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       responses:
         "200":
           description: OK
@@ -1807,6 +1870,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1896,6 +1965,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       responses:
         "200":
           description: OK
@@ -1954,6 +2029,13 @@ paths:
         - Lot Invoices
       summary: Create or upload the lot invoices
       operationId: CreateLotInvoices
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -2167,6 +2249,13 @@ paths:
         - Lot Invoices
       summary: Retrieves the lot invoices
       operationId: RequestForLotInvoices
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -2420,6 +2509,13 @@ paths:
       summary: LotPriceAndBuyer
       description: Used to provide lot price And buyer
       operationId: CreateLotPriceAndBuyers
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -2554,6 +2650,13 @@ paths:
         - Lot Price And Buyers
       summary: Retrieves the lot price and buyers
       operationId: RequestForLotPriceAndBuyers
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -2736,6 +2839,13 @@ paths:
         - Organisation Details
       summary: Retrieves the organisationdetails
       operationId: RequestForOrganisationDetails
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -2951,6 +3061,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       responses:
         "200":
           description: OK
@@ -3054,6 +3170,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -3223,6 +3345,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       responses:
         "200":
           description: OK
@@ -3282,6 +3410,13 @@ paths:
       summary: Payment Advices
       description: Used to provide payment advices
       operationId: CreatePaymentAdvices
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -3423,6 +3558,13 @@ paths:
         - Payment Advices
       summary: Retrieves the payment advices
       operationId: RequestForPaymentAdvices
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -3602,6 +3744,13 @@ paths:
       summary: Payment Confirmations
       description: Used to provide payment confirmations
       operationId: CreatePaymentConfirmations
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -3717,6 +3866,13 @@ paths:
         - Payment Confirmations
       summary: Retrieves the payment confirmation
       operationId: RequestForPaymentConfirmation
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -3872,6 +4028,13 @@ paths:
       summary: Request Postsale Printing Of Presale Certificates
       description: Used to provide request postsale printing of presale certificates
       operationId: CreateRequestPostsalePrintingOfPresaleCertificates
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -3987,6 +4150,13 @@ paths:
         - Request Postsale Printing Of Presale Certificates
       summary: Retrieves the request postsale printing of presale certificates
       operationId: RequestForRequestPostsalePrintingOfPresaleCertificates
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -4144,6 +4314,13 @@ paths:
       summary: Statements
       description: Used to provide statements
       operationId: CreateStatements
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -5133,6 +5310,13 @@ paths:
         - Statements
       summary: Retrieves the statements
       operationId: RequestForStatements
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -5333,6 +5517,13 @@ paths:
       summary: Test Certificate Requests
       description: Sent to a Test House to initiate the printing of a certificate.
       operationId: CreateTestCertificateRequests
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -5496,6 +5687,13 @@ paths:
         - Test Certificate Requests
       summary: Retrieves the test certificates request
       operationId: GetTestCertificatesRequests
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -5700,6 +5898,13 @@ paths:
       description: Sent to a test house to advise changes to an existing Certificate.
         A new Certificate will be reissued with the updated data.
       operationId: CreateTestCertificateUpdates
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -5832,6 +6037,13 @@ paths:
         - Test Certificate Updates
       summary: Retrieves the test certificate updates
       operationId: RequestForTestCertificateUpdates
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -6003,6 +6215,13 @@ paths:
         - Test Certificates
       summary: Create or upload the test certificates
       operationId: CreateTestCertificates
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -6244,6 +6463,13 @@ paths:
         - Test Certificates
       summary: Retrieves the test certificates
       operationId: RequestForTestCertificates
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -6526,6 +6752,13 @@ paths:
       description: Sent by an organisation that has already requested a test by paper
         to the Test House, as a verification of the paper request
       operationId: CreateTestRequestsVerifications
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -6775,6 +7008,13 @@ paths:
         - Test Requests Verifications
       summary: Retrieves the test requests verification
       operationId: RequestForTestRequestsVerification
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -7064,6 +7304,13 @@ paths:
       summary: Test Status
       description: Used by test houses to update test status
       operationId: CreateTestStatus
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -7184,6 +7431,13 @@ paths:
         - Test Status
       summary: Retrieves the test status
       operationId: RequestForTestStatus
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -7344,6 +7598,13 @@ paths:
       summary: Texts
       description: Used to provide texts
       operationId: CreateTexts
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -7440,6 +7701,13 @@ paths:
         - Texts
       summary: Retrieves the texts
       operationId: RequestForTexts
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:

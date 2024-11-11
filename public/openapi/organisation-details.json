@@ -23,6 +23,17 @@
         ],
         "summary": "Retrieves the organisationdetails",
         "operationId": "RequestForOrganisationDetails",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -335,6 +346,15 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
           }
         ],
         "responses": {
@@ -489,6 +509,15 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
             }
           }
         ],
@@ -745,6 +774,15 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
             }
           }
         ],

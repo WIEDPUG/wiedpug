@@ -24,6 +24,17 @@
         "summary": "Transmit new Auction Catalogues and Private Catalogues",
         "description": "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "operationId": "CreateCatalogues",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -654,6 +665,17 @@
         "summary": "Transmit Catalogue Updates",
         "description": "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "operationId": "UpdateCatalogues",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1019,6 +1041,17 @@
         "summary": "Request for Data relating to Auction Catalogue, Private Catalogue and Auction Catalogue Updates",
         "description": "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates",
         "operationId": "RequestForCatalogues",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {

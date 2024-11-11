@@ -19,6 +19,13 @@ paths:
       summary: Upload the public encryption key for LotHeaderAwexData, return the
         encryption key id
       operationId: UploadKey
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -104,6 +111,13 @@ paths:
         - Keys
       summary: Retrieves the public encryption key for LotHeaderAwexData
       operationId: GetKeyForAwexData
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       responses:
         "200":
           description: OK
@@ -168,6 +182,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -257,6 +277,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       responses:
         "200":
           description: OK

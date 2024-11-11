@@ -24,6 +24,17 @@
         "summary": "Dark And Medullated Fibre Risk Verifications",
         "description": "Sent by a broker organisation to AWTA to include the Dark and Medullated Fibre Risk (DMFR) on a Certificate that has been issued.",
         "operationId": "CreateDarkAndMedullatedFibreRiskVerifications",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -200,6 +211,17 @@
         ],
         "summary": "Retrieves the dark and medullated fibre risk verifications",
         "operationId": "RequestForDarkAndMedullatedFibreRiskVerifications",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {

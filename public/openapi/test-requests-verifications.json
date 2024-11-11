@@ -24,6 +24,17 @@
         "summary": "Test Request Verifications",
         "description": "Sent by an organisation that has already requested a test by paper to the Test House, as a verification of the paper request",
         "operationId": "CreateTestRequestsVerifications",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -349,6 +360,17 @@
         ],
         "summary": "Retrieves the test requests verification",
         "operationId": "RequestForTestRequestsVerification",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {

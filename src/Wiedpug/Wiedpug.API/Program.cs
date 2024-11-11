@@ -28,7 +28,11 @@ builder.Services.AddApiVersioning(
                 {                    
                     options.DefaultApiVersion = new ApiVersion(1,0);
                     options.AssumeDefaultVersionWhenUnspecified = true;
-                    options.ApiVersionReader = new UrlSegmentApiVersionReader();
+                    options.ApiVersionReader = ApiVersionReader.Combine(
+                        new HeaderApiVersionReader("api-version"),
+                        new UrlSegmentApiVersionReader()
+                    );
+                    //options.ApiVersionReader = new UrlSegmentApiVersionReader();
                 })
             .AddApiExplorer(setup =>
             {
@@ -82,6 +86,8 @@ builder.Services.AddSwaggerGen(c => {
             new OpenApiSchema { Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = nameof(DateTimeRangeRequestForDataType) } }
         }
     });
+
+    c.OperationFilter<AddHeaderOperationFilter>();
 
     c.ExampleFilters();
 });

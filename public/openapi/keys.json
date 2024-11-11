@@ -23,6 +23,17 @@
         ],
         "summary": "Upload the public encryption key for LotHeaderAwexData, return the encryption key id",
         "operationId": "UploadKey",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -155,6 +166,17 @@
         ],
         "summary": "Retrieves the public encryption key for LotHeaderAwexData",
         "operationId": "GetKeyForAwexData",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -247,6 +269,15 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
             }
           }
         ],
@@ -380,6 +411,15 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
             }
           }
         ],

@@ -19,6 +19,13 @@ paths:
       summary: Statements
       description: Used to provide statements
       operationId: CreateStatements
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -1008,6 +1015,13 @@ paths:
         - Statements
       summary: Retrieves the statements
       operationId: RequestForStatements
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:

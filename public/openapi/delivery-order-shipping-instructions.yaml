@@ -19,6 +19,13 @@ paths:
       summary: Delivery Order/Shipping Instructions
       description: Used to provide delivery order/shipping instructions
       operationId: CreateDeliveryOrderAndShippingInstructions
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -177,6 +184,13 @@ paths:
         - Delivery Order And Shipping Instructions
       summary: Retrieves the delivery order/shipping instructions
       operationId: RequestForDeliveryOrderAndShippingInstructions
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
       requestBody:
         content:
           application/json:
