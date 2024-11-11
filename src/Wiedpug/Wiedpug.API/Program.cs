@@ -2,9 +2,10 @@
 using System.Reflection;
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
-using Wiedpug.API.Controllers.V0;
+//using Wiedpug.API.Controllers.V0;
 //using Wiedpug.API.Controllers.V1;
 //using Wiedpug.API.Controllers.V2;
+using Wiedpug.API.Controllers.V5;
 using Wiedpug.API.SchemaFilter.SwaggerOptions;
 using Microsoft.Extensions.DependencyInjection;
 using Wiedpug.Domain.Entities;
@@ -103,44 +104,45 @@ var apiVersionSet = app.NewApiVersionSet()
                 //.HasApiVersion(new ApiVersion(1, "Deprecated")) //Adding a Status of "Deprecated" to mark the version as Deprecated
             .HasApiVersion(new ApiVersion(0,0))
             .HasApiVersion(new ApiVersion(1,0))
-            .HasApiVersion(new ApiVersion(2,0))          
+            .HasApiVersion(new ApiVersion(2,0)) 
+            .HasApiVersion(new ApiVersion(5,0))           
             .ReportApiVersions()            
             .Build();
 var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(apiVersionSet);
 
 versionedGroup.MapCatalogueEndpoints();
 
-versionedGroup.MapOrganisationDetailsEndpoints();
+// versionedGroup.MapOrganisationDetailsEndpoints();
 
-versionedGroup.MapTestCertificatesEndpoints();
+// versionedGroup.MapTestCertificatesEndpoints();
 
-versionedGroup.MapTestCertificateUpdateEndpoints();
+// versionedGroup.MapTestCertificateUpdateEndpoints();
 
-versionedGroup.MapTestCertificateRequestsEndpoints();
+// versionedGroup.MapTestCertificateRequestsEndpoints();
 
-versionedGroup.MapTestStatusEndpoints();
+// versionedGroup.MapTestStatusEndpoints();
 
-versionedGroup.MapTestRequestsVerificationEndpoints();
+// versionedGroup.MapTestRequestsVerificationEndpoints();
 
-versionedGroup.MapLotInvoicesEndpoints();
+// versionedGroup.MapLotInvoicesEndpoints();
 
-versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
+// versionedGroup.MapDarkAndMedullatedFibreRiskVerificationEndpoints();
 
-versionedGroup.MapPaymentAdvicesEndpoints();
+// versionedGroup.MapPaymentAdvicesEndpoints();
 
-versionedGroup.MapPaymentConfirmationEndpoints();
+// versionedGroup.MapPaymentConfirmationEndpoints();
 
-versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
+// versionedGroup.MapDeliveryOrderAndShippingInstructionsEndpoints();
 
-versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
+// versionedGroup.MapRequestPostsalePrintingOfPresaleCertificatesEndpoints();
 
-versionedGroup.MapStatementsEndpoints();
+// versionedGroup.MapStatementsEndpoints();
 
-versionedGroup.MapTextsEndpoints();
+// versionedGroup.MapTextsEndpoints();
 
-versionedGroup.MapLotPriceAndBuyerEndpoints();
+// versionedGroup.MapLotPriceAndBuyerEndpoints();
 
-versionedGroup.MapKeysEndpoints();
+// versionedGroup.MapKeysEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

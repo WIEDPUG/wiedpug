@@ -13,15 +13,15 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "0.1.0"
+    "version": "5.0.0"
   },
   "paths": {
-    "/v0/catalogues": {
+    "/v5/catalogues": {
       "post": {
         "tags": [
           "Catalogues"
         ],
-        "summary": "Transmit new Auction Catalogues and Private Catalogues",
+        "summary": "Transmit new Auction Catalogues and Private Catalogues for V5",
         "description": "Transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "operationId": "CreateCatalogues",
         "parameters": [
@@ -657,7 +657,7 @@
         }
       }
     },
-    "/v0/catalogues/updates": {
+    "/v5/catalogues/updates": {
       "post": {
         "tags": [
           "Catalogues"
@@ -1033,7 +1033,7 @@
         }
       }
     },
-    "/v0/catalogues/data": {
+    "/v5/catalogues/data": {
       "post": {
         "tags": [
           "Catalogues"
@@ -4004,34 +4004,6 @@
           "fibreDiameterHistogramDetailMeasurements"
         ],
         "type": "string"
-      },
-      "UseNetworkDateTimeRequestForDataType": {
-        "required": [
-          "isUsingNetworkDateTime"
-        ],
-        "type": "object",
-        "properties": {
-          "isUsingNetworkDateTime": {
-            "type": "boolean",
-            "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
-          }
-        },
-        "additionalProperties": false
-      },
-      "DateTimeRangeRequestForDataType": {
-        "required": [
-          "startDateTimeStatusRequest"
-        ],
-        "type": "object",
-        "properties": {
-          "startDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          },
-          "endDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          }
-        },
-        "additionalProperties": false
       },
       "CatalogueListApiResult": {
         "type": "object",
