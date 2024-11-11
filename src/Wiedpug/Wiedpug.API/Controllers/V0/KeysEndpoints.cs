@@ -10,9 +10,7 @@ public static class KeysEndpoints
 {
     public static void MapKeysEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("/keys")
-            .MapToApiVersion(0, 0).
-            WithTags("Keys");
+        var group = routes.MapGroup("/keys").WithTags("Keys");
 
         group.MapPost("/AwexData",
         [SwaggerRequestExample(typeof(String), typeof(KeysRequestExample))]

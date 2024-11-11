@@ -10,9 +10,7 @@ public static class OrganisationDetailsEndpoints
 {
     public static void MapOrganisationDetailsEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("/organisation-details")
-            .MapToApiVersion(0, 0).
-            WithTags("Organisation Details");
+        var group = routes.MapGroup("/organisation-details").WithTags("Organisation Details");
 
         //group.MapPost("/",
         //[SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailsRequestExample))]

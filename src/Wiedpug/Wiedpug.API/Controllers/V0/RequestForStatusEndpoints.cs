@@ -10,9 +10,7 @@ public static class RequestForStatusEndpoints
 {
     public static void MapRequestForStatusEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("status")
-            .MapToApiVersion(0, 0)
-            .WithTags("Request for Status");
+        var group = routes.MapGroup("status").WithTags("Request for Status");
 
         group.MapPost("/",
             [SwaggerRequestExample(typeof(RequestForStatus), typeof(RequestForStatusRequestExample))]

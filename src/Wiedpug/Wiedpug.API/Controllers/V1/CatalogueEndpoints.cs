@@ -11,13 +11,7 @@ public static class CatalogueEndpoints
     public static void MapCatalogueEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/catalogues")
-            .MapToApiVersion(1,0)
             .WithTags("Catalogues");
-            ////Uncomment below to mark all endpoints in this file as Deprecated
-            //.WithOpenApi(o => new(o)
-            //{
-            //    Deprecated = true,
-            //});
 
         group.MapPost("/",            
             [SwaggerRequestExample(typeof(List<Catalogue>), typeof(CatalogueRequestExamples))]            
