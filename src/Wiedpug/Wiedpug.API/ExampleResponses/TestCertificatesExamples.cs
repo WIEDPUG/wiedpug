@@ -17,8 +17,8 @@ namespace Wiedpug.API.ExampleResponses
                 new TestCertificates {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -131,8 +131,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                     DateIssued = new UtcDate{ Date="2017-01-10"}
+                                     CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                     DateIssued = new LiteralDate{ Date="2017-01-10"}
                                 },
                                 FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
@@ -218,7 +218,7 @@ namespace Wiedpug.API.ExampleResponses
                                 PositionOfBreakPercentageBase = 27,
                                 LsCertType = LsCertType.LengthAndStrengthTested,
                                 IsLsSampleSecured = false,
-                                DateIssued = new UtcDate{ Date="2024-01-22"}
+                                DateIssued = new LiteralDate{ Date="2024-01-22"}
                             },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
@@ -244,8 +244,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                     DateIssued = new UtcDate{ Date="2017-01-10"}
+                                     CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                     DateIssued = new LiteralDate{ Date="2017-01-10"}
                                 },
                                 FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
@@ -289,8 +289,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15" },
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15" },
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -330,8 +330,8 @@ namespace Wiedpug.API.ExampleResponses
                     new TestCertificates {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -439,8 +439,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                     DateIssued = new UtcDate{ Date="2017-01-10"}
+                                     CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                     DateIssued = new LiteralDate{ Date="2017-01-10"}
                                 },
                                 FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {
@@ -521,7 +521,7 @@ namespace Wiedpug.API.ExampleResponses
                             PositionOfBreakPercentageBase = 27,
                             LsCertType = LsCertType.LengthAndStrengthTested,
                             IsLsSampleSecured = false,
-                            DateIssued = new UtcDate{ Date="2024-01-22"}
+                            DateIssued = new LiteralDate{ Date="2024-01-22"}
                             },
                         SublotCertificateNumbers = new List<CertificateIdentity>
                         {
@@ -547,8 +547,8 @@ namespace Wiedpug.API.ExampleResponses
                                      Mean = 20.1,
                                      StandardDeviation = 4.0,
                                      CurvatureMeanDegPerMm = 61,
-                                     CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                     DateIssued = new UtcDate{ Date="2017-01-10"}
+                                     CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                     DateIssued = new LiteralDate{ Date="2017-01-10"}
                                 },
                                 FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                         {

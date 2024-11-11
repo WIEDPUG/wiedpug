@@ -1,7 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.Catalogue">
-    <Position X="28" Y="20.75" Width="2.5" />
+    <Position X="6.5" Y="12" Width="2.5" />
+    <AssociationLine Name="WoolSaleHeaders" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.WoolSaleHeader" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="12.868" />
+        <Point X="7.125" Y="17.781" />
+        <Point X="10" Y="17.781" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="CatalogueType" Type="Wiedpug.Domain.Enums.CatalogueType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.688" Y="12.868" />
+        <Point X="7.688" Y="15.781" />
+        <Point X="10.5" Y="15.781" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAACACAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\CatalogueAggregate\Catalogue.cs</FileName>
@@ -30,11 +44,45 @@
         <Point X="19.688" Y="22.75" />
       </Path>
     </AssociationLine>
+    <AssociationLine Name="TestDetail" Type="Wiedpug.Domain.Entities.TestDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.375" Y="16.75" />
+        <Point X="18.375" Y="16.031" />
+        <Point X="15" Y="16.031" />
+      </Path>
+    </AssociationLine>
     <AssociationLine Name="ColourTestDetail" Type="Wiedpug.Domain.Entities.ColourTestDetail" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="21.125" Y="16.75" />
         <Point X="21.125" Y="13.781" />
         <Point X="25.75" Y="13.781" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LengthAndStrengthTestDetail" Type="Wiedpug.Domain.Entities.LengthAndStrengthTestDetail" FixedFromPoint="true">
+      <Path>
+        <Point X="19.188" Y="17.312" />
+        <Point X="19.188" Y="21" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="FibreDiameterHistograms" Type="Wiedpug.Domain.Entities.FibreDiameterHistogram" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.562" Y="17.312" />
+        <Point X="18.562" Y="19.781" />
+        <Point X="15" Y="19.781" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="CatalogueLotDescription" Type="Wiedpug.Domain.Entities.CatalogueLotDescription" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.625" Y="16.75" />
+        <Point X="21.625" Y="15.765" />
+        <Point X="26.5" Y="15.765" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="InterlotComponentBales" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.InterlotComponentBale" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.062" Y="16.75" />
+        <Point X="19.062" Y="14.781" />
+        <Point X="16.75" Y="14.781" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -110,7 +158,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="30.75" Y="19.75" Width="1.75" />
+    <Position X="10.5" Y="13.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
@@ -124,7 +172,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="28" Y="23" Width="1.5" />
+    <Position X="13.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>
@@ -138,23 +186,22 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.WoolSaleHeader" Collapsed="true">
-    <Position X="21.75" Y="20.75" Width="3" />
+    <Position X="10" Y="17.5" Width="3" />
     <AssociationLine Name="WoolSaleHeaderLot" Type="Wiedpug.Domain.Entities.WoolSaleHeaderLot" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.312" Y="21.312" />
-        <Point X="23.312" Y="23.312" />
-        <Point X="25" Y="23.312" />
+        <Point X="11.562" Y="18.062" />
+        <Point X="11.562" Y="18.812" />
+        <Point X="14" Y="18.812" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="CatalogueWoolSaleHeaderLots" Type="Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate.CatalogueWoolSaleHeaderLot" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="22.594" Y="20.75" />
-        <Point X="22.594" Y="20.375" />
-        <Point X="20.875" Y="20.375" />
-        <Point X="20.875" Y="17.312" />
+        <Point X="13" Y="17.812" />
+        <Point X="18.188" Y="17.812" />
+        <Point X="18.188" Y="17.312" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="1.486" Y="-4.294" />
+        <Position X="0.718" Y="0.148" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -169,7 +216,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.WoolSaleHeaderLot" Collapsed="true">
-    <Position X="25" Y="23" Width="1.75" />
+    <Position X="14" Y="18.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAgAAAQCSQEAAEBAxITEKCAAIACAQAAQAAExaUAggA=</HashCode>
       <FileName>Entities\WoolSaleHeaderLot.cs</FileName>
@@ -197,7 +244,7 @@
     </TypeIdentifier>
   </Class>
   <Enum Name="Wiedpug.Domain.Enums.CatalogueType" Collapsed="true">
-    <Position X="32.5" Y="20.75" Width="1.5" />
+    <Position X="10.5" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAA=</HashCode>
       <FileName>Enums\CatalogueType.cs</FileName>

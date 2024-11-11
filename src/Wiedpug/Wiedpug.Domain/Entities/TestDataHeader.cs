@@ -183,8 +183,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: not applicable.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsGstApplicable { get; set; }
 
         /// <summary>
@@ -194,8 +193,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: not applicable.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsCompanyAbnApplicable { get; set; }
     }
 }

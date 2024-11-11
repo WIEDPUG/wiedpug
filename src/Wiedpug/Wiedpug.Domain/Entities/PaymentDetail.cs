@@ -14,7 +14,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        public required UtcDate StatementDate { get; set; }
+        public required LiteralDate StatementDate { get; set; }
 
         /// <summary>
         /// Account Reference as per printed statement under heading “AWTA LTD REFERENCE”

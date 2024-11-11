@@ -18,8 +18,8 @@ namespace Wiedpug.API.ExampleResponses
                 new TestRequestsVerification {
                 TransmissionHeader = new Domain.Entities.TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -83,14 +83,14 @@ namespace Wiedpug.API.ExampleResponses
                                 Value =100,
                                 WeightCode = WeightCode.KG
                             },
-                            CoreTestSamplingDate = new UtcDate { Date="2024-04-15"},
+                            CoreTestSamplingDate = new LiteralDate { Date="2024-04-15"},
                             CoresPerBale = 5,
                             GrabsPerBale = 10,
                             IsYieldAndMicronTestRequired = true,
                             IsLengthAndStrengthTestRequired = false,
                             IsLengthOnlyTestRequired = true,
                             IsColourTestRequired = false,
-                            IsLaserscanTestRequired = true,
+                            LaserscanTestRequired = LaserscanTestRequired.N,
                             IsAirflowTestRequired = false,
                             IsOfdaTestRequired = true,
                             IsDarkAndMedullatedFibreTestRequired = false,
@@ -172,14 +172,14 @@ namespace Wiedpug.API.ExampleResponses
                                 Value=100.00,
                                 WeightCode = WeightCode.KG
                             },
-                            CoreTestSamplingDate = new UtcDate{ Date="2024-04-25"},
+                            CoreTestSamplingDate = new LiteralDate{ Date="2024-04-25"},
                             CoresPerBale = 4,
                             GrabsPerBale = 20,
                             IsYieldAndMicronTestRequired = true,
                             IsLengthAndStrengthTestRequired = false,
                             IsLengthOnlyTestRequired = false,
                             IsColourTestRequired = false,
-                            IsLaserscanTestRequired = false,
+                            LaserscanTestRequired = LaserscanTestRequired.S,
                             IsAirflowTestRequired = false,
                             IsOfdaTestRequired = false,
                             IsDarkAndMedullatedFibreTestRequired = true,
@@ -249,8 +249,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -291,8 +291,8 @@ namespace Wiedpug.API.ExampleResponses
                     new TestRequestsVerification {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -341,14 +341,14 @@ namespace Wiedpug.API.ExampleResponses
                                 GrowerCode = "G123",
                                 GrowerName = "John Doe",
                                 CoreSampleWeight = new Weight { Value = 20.00, WeightCode = WeightCode.KG },
-                                CoreTestSamplingDate = new UtcDate{ Date="2024-04-15"},
+                                CoreTestSamplingDate = new LiteralDate{ Date="2024-04-15"},
                                 CoresPerBale = 5,
                                 GrabsPerBale = 10,
                                 IsYieldAndMicronTestRequired = true,
                                 IsLengthAndStrengthTestRequired = false,
                                 IsLengthOnlyTestRequired = true,
                                 IsColourTestRequired = false,
-                                IsLaserscanTestRequired = true,
+                                LaserscanTestRequired = LaserscanTestRequired.P,
                                 IsAirflowTestRequired = false,
                                 IsOfdaTestRequired = true,
                                 IsDarkAndMedullatedFibreTestRequired = false,
@@ -426,14 +426,14 @@ namespace Wiedpug.API.ExampleResponses
                                 GrowerCode = "G4643",
                                 GrowerName = "Alice Stonewood",
                                 CoreSampleWeight = new Weight { Value = 164.00, WeightCode = WeightCode.KG },
-                                CoreTestSamplingDate = new UtcDate{ Date="2024-04-25"},
+                                CoreTestSamplingDate = new LiteralDate{ Date="2024-04-25"},
                                 CoresPerBale = 4,
                                 GrabsPerBale = 20,
                                 IsYieldAndMicronTestRequired = true,
                                 IsLengthAndStrengthTestRequired = false,
                                 IsLengthOnlyTestRequired = false,
                                 IsColourTestRequired = false,
-                                IsLaserscanTestRequired = false,
+                                LaserscanTestRequired = LaserscanTestRequired.N,
                                 IsAirflowTestRequired = false,
                                 IsOfdaTestRequired = false,
                                 IsDarkAndMedullatedFibreTestRequired = true,

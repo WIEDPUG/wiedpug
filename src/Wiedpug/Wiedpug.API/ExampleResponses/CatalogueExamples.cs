@@ -19,8 +19,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new Domain.Entities.TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17"},
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17"},
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator =new Organisation
                             {
@@ -66,7 +66,7 @@ namespace Wiedpug.API.ExampleResponses
                                     },
                                     CentreStorage = new Centre { 
                                         CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
-                                    SaleDate = new UtcDate{ Date="2017-01-10"},
+                                    SaleDate = new LiteralDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     PostSaleCharge = new Currency{
@@ -104,7 +104,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                    DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value = 0.245,
@@ -146,7 +146,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 WeightCode = WeightCode.KG
                                             },
                                             PackCondition = PackCondition.N,
-                                            CoreTestSamplingDate = new UtcDate{ Date="2019-01-17"},
+                                            CoreTestSamplingDate = new LiteralDate{ Date="2019-01-17"},
                                             WoolDescription = "MF6S",
                                             IsGstApplicable = true,
                                             NumberOfOverweightBales = 0
@@ -154,7 +154,6 @@ namespace Wiedpug.API.ExampleResponses
                                         //No 21B
                                         EncryptedLotHeaderAwexData = new EncryptedLotHeaderAwexData
                                         {
-                                            EncryptionKeyIdentifier = "123e4567-e89b-12d3-a456-426614174000",
                                             EncryptedLotHeaderAwexDataString = "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==",
                                         },
                                         LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
@@ -194,7 +193,7 @@ namespace Wiedpug.API.ExampleResponses
                                             ExpectedBarbe = 111,
                                             Team3HauteurCvPercentage = 36.9,
                                             Team3RomainePercentage = 11.2,
-                                            DateIssued = new UtcDate{ Date="2017-01-10"},
+                                            DateIssued = new LiteralDate{ Date="2017-01-10"},
                                             StapleStrengthLowest25Percent = 24,
                                             IsLsSampleSecured = true
                                             },
@@ -265,15 +264,15 @@ namespace Wiedpug.API.ExampleResponses
                                                     Mean = 20.1,
                                                     StandardDeviation = 4.0,
                                                     CurvatureMeanDegPerMm = 61,
-                                                    CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                                    DateIssued = new UtcDate{ Date="2017-01-10"}
+                                                    CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                                    DateIssued = new LiteralDate{ Date="2017-01-10"}
                                                 }
                                             }
                                         },
                                         CatalogueLotDescription = new Domain.Entities.CatalogueLotDescription //79A
                                         {
                                             Brand = "SALTBUSH/DOWNS",
-                                            BaleDescription = new BaleDescription{ Description="AAAM"},
+                                            BaleDescription = new BaleDescription{ BaleDescriptionContent="AAAM"},
                                             AreaOfOrigin = "V11",
                                             NumberOfBales = new NumberOfBales{BalesCount=8 },
                                         },
@@ -292,7 +291,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 InterlotComponentBaleHeader = new InterlotComponentBaleHeader //79B
                                                 {
                                                     Brand = "RC/FARMING",
-                                                    BaleDescription = new BaleDescription { Description="AAAMLMS"},
+                                                    BaleDescription = new BaleDescription { BaleDescriptionContent="AAAMLMS"},
                                                     AreaOfOrigin = "W14",
                                                     LocationWithinStore = "Z1-33",
                                                     NumberOfBales = new NumberOfBales{BalesCount=2 },
@@ -323,8 +322,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new Domain.Entities.TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17"},
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17"},
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -367,7 +366,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SaleNumber = 29
                                     },
                                     CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.AU },
-                                    SaleDate = new UtcDate{ Date="2017-01-10"},
+                                    SaleDate = new LiteralDate{ Date="2017-01-10"},
                                     WoolState = WoolState._1,
                                     PackType = PackType._6,
                                     PostSaleCharge = new Currency{ 
@@ -399,7 +398,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                    DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value = 0.245,
@@ -434,7 +433,7 @@ namespace Wiedpug.API.ExampleResponses
                                             },
                                             CleanWeight = new Weight { Value = 0.00, WeightCode = WeightCode.KG },
                                             PackCondition = PackCondition.N,
-                                            CoreTestSamplingDate = new UtcDate{ Date="2019-01-17"},
+                                            CoreTestSamplingDate = new LiteralDate{ Date="2019-01-17"},
                                             WoolDescription = "MF6S",
                                             IsGstApplicable = true,
                                             NumberOfOverweightBales = 0
@@ -442,7 +441,6 @@ namespace Wiedpug.API.ExampleResponses
                                         //No 21B
                                         EncryptedLotHeaderAwexData = new EncryptedLotHeaderAwexData
                                         {
-                                            EncryptionKeyIdentifier = "123e4567-e89b-12d3-a456-426614174000",
                                             EncryptedLotHeaderAwexDataString = "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==",
                                         },
                                         LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
@@ -478,7 +476,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 ExpectedBarbe = 111,
                                                 Team3HauteurCvPercentage = 36.9,
                                                 Team3RomainePercentage = 11.2,
-                                                DateIssued = new UtcDate{ Date="2017-01-10"},
+                                                DateIssued = new LiteralDate{ Date="2017-01-10"},
                                                 StapleStrengthLowest25Percent = 24
                                             },
                                         TestDetail = 
@@ -544,15 +542,15 @@ namespace Wiedpug.API.ExampleResponses
                                                     Mean = 20.1,
                                                     StandardDeviation = 4.0,
                                                     CurvatureMeanDegPerMm = 61,
-                                                    CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                                    DateIssued = new UtcDate{ Date="2017-01-10"}
+                                                    CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                                    DateIssued = new LiteralDate{ Date="2017-01-10"}
                                                 }
                                             }
                                         },
                                         CatalogueLotDescription = new Domain.Entities.CatalogueLotDescription //79A
                                         {
                                             Brand = "SALTBUSH/DOWNS",
-                                            BaleDescription = new BaleDescription{ Description="AAAM"},
+                                            BaleDescription = new BaleDescription{ BaleDescriptionContent="AAAM"},
                                             AreaOfOrigin = "V11",
                                             NumberOfBales = new NumberOfBales{BalesCount=8 },
                                         },
@@ -563,7 +561,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 InterlotComponentBaleHeader = new InterlotComponentBaleHeader //79B
                                                 {
                                                     Brand = "RC/FARMING",
-                                                    BaleDescription = new BaleDescription{ Description="AAAMLMS"},
+                                                    BaleDescription = new BaleDescription{ BaleDescriptionContent="AAAMLMS"},
                                                     AreaOfOrigin = "W14",
                                                     LocationWithinStore = "Z1-33",
                                                     NumberOfBales = new NumberOfBales{BalesCount=2 },
@@ -590,8 +588,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17"},
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17"},
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation {                         
                             OrganisationCode = "ABC",
@@ -634,7 +632,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SaleNumber = 29
                                     },
                                 CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
-                                SaleDate = new UtcDate{ Date="2017-01-10"},
+                                SaleDate = new LiteralDate{ Date="2017-01-10"},
                                 WoolState = WoolState.A,
                                 PackType = PackType.F,
                                 PostSaleCharge = new Currency { Value = 25.96, CurrencyCode = CurrencyCode.AUD },
@@ -666,7 +664,7 @@ namespace Wiedpug.API.ExampleResponses
                                 StorageDescription = "45 MAIN ST",
                                 DiscountRate = 1.50,
                                 MaximumDaysDiscount = 0,
-                                DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value = 0.245,
@@ -709,7 +707,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 WeightCode = WeightCode.KG
                                             },
                                         PackCondition = PackCondition.N,
-                                        CoreTestSamplingDate = new UtcDate{ Date="2019-01-17"},
+                                        CoreTestSamplingDate = new LiteralDate{ Date="2019-01-17"},
                                         WoolDescription = "MF6S",
                                         IsGstApplicable = true,
                                         NumberOfOverweightBales = 0
@@ -717,7 +715,6 @@ namespace Wiedpug.API.ExampleResponses
                                     //No 21B
                                         EncryptedLotHeaderAwexData = new EncryptedLotHeaderAwexData
                                         {
-                                            EncryptionKeyIdentifier = "123e4567-e89b-12d3-a456-426614174000",
                                             EncryptedLotHeaderAwexDataString = "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==",
                                         },
                                     LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
@@ -754,7 +751,7 @@ namespace Wiedpug.API.ExampleResponses
                                             ExpectedBarbe = 111,
                                             Team3HauteurCvPercentage = 36.9,
                                             Team3RomainePercentage = 11.2,
-                                            DateIssued = new UtcDate{ Date="2017-01-10"},
+                                            DateIssued = new LiteralDate{ Date="2017-01-10"},
                                             StapleStrengthLowest25Percent = 24
                                             },
                                     TestDetail = 
@@ -822,8 +819,8 @@ namespace Wiedpug.API.ExampleResponses
                                                 Mean = 20.1,
                                                 StandardDeviation = 4.0,
                                                 CurvatureMeanDegPerMm = 61,
-                                                CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                                DateIssued = new UtcDate{ Date="2017-01-10"}
+                                                CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                                DateIssued = new LiteralDate{ Date="2017-01-10"}
                                             },
                                             FibreDiameterHistogramDetailMeasurements = new List<FibreDiameterHistogramDetailMeasurement>
                                             {
@@ -871,8 +868,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17"},
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17"},
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -899,7 +896,7 @@ namespace Wiedpug.API.ExampleResponses
                                             SaleNumber = 18
                                         },
                             OrganisationRequested = new Organisation {                         OrganisationCode = "ANF",},
-                            SaleDateRequested = new UtcDate{ Date="2023-10-31"},
+                            SaleDateRequested = new LiteralDate{ Date="2023-10-31"},
                             WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                             ItemsToBeExcluded = new List<ItemsToBeExcluded>
                             {
@@ -917,8 +914,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17"},
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17"},
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -948,7 +945,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                             OrganisationCode = "ANF",
                         },
-                        SaleDateRequested = new UtcDate{ Date="2023-10-31"},
+                        SaleDateRequested = new LiteralDate{ Date="2023-10-31"},
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         ItemsToBeExcluded = new List<ItemsToBeExcluded>
                         {
@@ -972,8 +969,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17"},
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17"},
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -1003,7 +1000,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                                                     OrganisationCode = "ANF",
                         },
-                        SaleDateRequested = new UtcDate{ Date="2023-10-31"},
+                        SaleDateRequested = new LiteralDate{ Date="2023-10-31"},
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         ItemsToBeExcluded = new List<ItemsToBeExcluded>
                         {
@@ -1035,8 +1032,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new Domain.Entities.TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17"},
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17"},
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -1068,7 +1065,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SaleNumber = 29
                                     },
                                         CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.AD },
-                                        SaleDate = new UtcDate{ Date="2017-01-10"},
+                                        SaleDate = new LiteralDate{ Date="2017-01-10"},
                                         WoolState = WoolState._1,
                                         PackType = PackType._9,
                                         PostSaleCharge = new Currency { Value = 25.96, CurrencyCode = CurrencyCode.AUD },
@@ -1098,7 +1095,7 @@ namespace Wiedpug.API.ExampleResponses
                                         StorageDescription = "45 MAIN ST",
                                         DiscountRate = 1.50,
                                         MaximumDaysDiscount = 0,
-                                        DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                        DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                         StorageChargePerBalePerDay = new StorageChargeCurrency
                                         {
                                             Value = 0.245,
@@ -1137,14 +1134,13 @@ namespace Wiedpug.API.ExampleResponses
                                                 },
                                                 CleanWeight = new Weight { Value = 0.00, WeightCode = WeightCode.KG },
                                                 PackCondition = PackCondition.N,
-                                                CoreTestSamplingDate = new UtcDate{ Date="2019-01-17"},
+                                                CoreTestSamplingDate = new LiteralDate{ Date="2019-01-17"},
                                                 WoolDescription = "MF6S",
                                                 NumberOfOverweightBales = 0
                                             },
                                             //No 21B
                                             EncryptedLotHeaderAwexData = new EncryptedLotHeaderAwexData
                                             {
-                                                EncryptionKeyIdentifier = "123e4567-e89b-12d3-a456-426614174000",
                                                 EncryptedLotHeaderAwexDataString = "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==",
                                             },
                                             LotHeaderVendorDeclarations = new List<Domain.Entities.LotHeaderVendorDeclaration> //25A
@@ -1180,7 +1176,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         ExpectedBarbe = 111,
                                                         Team3HauteurCvPercentage = 36.9,
                                                         Team3RomainePercentage = 11.2,
-                                                        DateIssued = new UtcDate{ Date="2017-01-10"},
+                                                        DateIssued = new LiteralDate{ Date="2017-01-10"},
                                                         StapleStrengthLowest25Percent = 24
                                                  },
                                             TestDetail =
@@ -1247,15 +1243,15 @@ namespace Wiedpug.API.ExampleResponses
                                                         Mean = 20.1,
                                                         StandardDeviation = 4.0,
                                                         CurvatureMeanDegPerMm = 61,
-                                                        CoreTestSamplingDate = new UtcDate{ Date="2017-01-10"},
-                                                        DateIssued = new UtcDate{ Date="2017-01-10"}
+                                                        CoreTestSamplingDate = new LiteralDate{ Date="2017-01-10"},
+                                                        DateIssued = new LiteralDate{ Date="2017-01-10"}
                                                     }
                                                 }
                                             },
                                             CatalogueLotDescription = new Domain.Entities.CatalogueLotDescription //79A
                                             {
                                                 Brand = "SALTBUSH/DOWNS",
-                                                BaleDescription = new BaleDescription{ Description="AAAM"},
+                                                BaleDescription = new BaleDescription{ BaleDescriptionContent="AAAM"},
                                                 AreaOfOrigin = "V11",
                                                 NumberOfBales = new NumberOfBales{BalesCount=8 }
                                             }

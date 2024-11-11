@@ -26,7 +26,7 @@ namespace Wiedpug.Domain.Enums
         [Description("7: AWH")]
         AWH = 7,
 
-        [Description("6: AWTA")]
+        [Description("8: AWTA")]
         AWTA = 8
     }
 }

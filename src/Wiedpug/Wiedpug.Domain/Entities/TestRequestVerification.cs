@@ -38,11 +38,11 @@ namespace Wiedpug.Domain.Entities
         public Weight? CoreSampleWeight { get; set; }
 
         /// <summary>
-        /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
+        /// For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
         /// 
         /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
         /// </summary>
-        public UtcDate? CoreTestSamplingDate { get; set; }
+        public LiteralDate?  CoreTestSamplingDate { get; set; }
 
         /// <summary>
         /// Number of core samples taken from the bale.
@@ -64,8 +64,7 @@ namespace Wiedpug.Domain.Entities
         /// false: Do not update previous data.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsPreviousDataToBeUpdated { get; set; }
 
         /// <summary>
@@ -82,8 +81,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: Yield And Laserscan Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsYieldAndMicronTestRequired { get; set; }
 
         /// <summary>
@@ -93,8 +91,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: Length And Strength Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsLengthAndStrengthTestRequired { get; set; }
 
         /// <summary>
@@ -104,8 +101,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: Length Only Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsLengthOnlyTestRequired { get; set; }
 
         /// <summary>
@@ -115,20 +111,10 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: Colour Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsColourTestRequired { get; set; }
 
-        /// <summary>
-        /// A boolean value to indicate whether Laserscan Test is required.
-        /// 
-        /// true: Laserscan Test is required.
-        /// 
-        /// false: Laserscan Test is not required.
-        /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
-        public bool? IsLaserscanTestRequired { get; set; }
+        public LaserscanTestRequired? LaserscanTestRequired { get; set; }
 
         /// <summary>
         /// A boolean value to indicate whether Airflow Test is required.
@@ -137,8 +123,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: Airflow Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsAirflowTestRequired { get; set; }
 
         /// <summary>
@@ -148,8 +133,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: OFDA Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsOfdaTestRequired { get; set; }
 
         /// <summary>
@@ -159,8 +143,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: Dark And Medullated Fibre Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsDarkAndMedullatedFibreTestRequired { get; set; }
 
         /// <summary>
@@ -170,8 +153,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: Pesticide Residue Test is not required.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsPesticideResidueTestRequired { get; set; }
     }
 

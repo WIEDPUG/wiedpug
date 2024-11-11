@@ -4,10 +4,24 @@
     <Position X="2.25" Y="2.75" Width="2" />
     <AssociationLine Name="TransmissionHeader" Type="Wiedpug.Domain.Entities.TransmissionHeader" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.812" Y="2.75" />
-        <Point X="3.812" Y="2.375" />
-        <Point X="6.094" Y="2.375" />
-        <Point X="6.094" Y="2.062" />
+        <Point X="4.125" Y="3.618" />
+        <Point X="4.125" Y="4.562" />
+        <Point X="8.25" Y="4.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="StatementHeader" Type="Wiedpug.Domain.Entities.StatementHeader" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.312" Y="3.618" />
+        <Point X="3.312" Y="5.894" />
+        <Point X="5.938" Y="5.894" />
+        <Point X="5.938" Y="7" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="StatementDetails" Type="Wiedpug.Domain.Entities.StatementDetail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.938" Y="3.618" />
+        <Point X="3.938" Y="5.531" />
+        <Point X="7.5" Y="5.531" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -25,21 +39,21 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="6" Y="1.5" Width="2" />
+    <Position X="8.25" Y="4.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.StatementDetail" Collapsed="true">
-    <Position X="6.25" Y="2.75" Width="2.25" />
+    <Position X="7.5" Y="5.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAgAAAAQAAAACAAEIAAAAACAAIAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Entities\StatmentDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.StatementHeader" Collapsed="true">
-    <Position X="6.75" Y="4.5" Width="1.5" />
+    <Position X="5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Entities\StatmentHeader.cs</FileName>
@@ -53,7 +67,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="2" Y="0.75" Width="1.5" />
+    <Position X="9" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>

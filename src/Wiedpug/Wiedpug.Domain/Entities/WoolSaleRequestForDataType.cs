@@ -51,7 +51,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(5)]
         public Organisation? OrganisationRequested { get; set; }
 
-        public UtcDate? SaleDateRequested { get; set; }
+        public LiteralDate?  SaleDateRequested { get; set; }
 
         [MinLength(1)]
         [MaxLength(4)]

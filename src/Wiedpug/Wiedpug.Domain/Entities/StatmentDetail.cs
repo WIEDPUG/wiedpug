@@ -53,7 +53,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// The date the cost of the item was incurred
         /// </summary>
-        public UtcDate? ItemDate { get; set; }
+        public LiteralDate?  ItemDate { get; set; }
 
         /// <summary>
         /// Goods & Services Tax Amount
@@ -70,8 +70,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not applicable.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsGstApplicable { get; set; }
 
         /// <summary>
@@ -82,8 +81,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not applicable.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsCompanyAbnApplicable { get; set; }
     }
 

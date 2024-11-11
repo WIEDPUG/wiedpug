@@ -13,7 +13,7 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "0.0"
+    "version": "0.0.0"
   },
   "components": {
     "schemas": {
@@ -114,14 +114,12 @@
             "format": "int32"
           },
           "dateOfCreditNote": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "creditNoteAmount": {
             "$ref": "#/components/schemas/Currency"
           },
           "isGstApplicable": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST is aplicable.\r\n\r\ntrue: applicable.\r\n            \r\nfalse: not applicable."
           },
@@ -139,7 +137,7 @@
             "$ref": "#/components/schemas/CertificateIdentity"
           },
           "dateOfOriginalInvoice": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "certificateIdentityNew": {
             "$ref": "#/components/schemas/CertificateIdentity"
@@ -295,18 +293,9 @@
         "additionalProperties": false
       },
       "BaleDescription": {
-        "required": [
-          "description"
-        ],
-        "type": "object",
-        "properties": {
-          "description": {
-            "maxLength": 15,
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false,
+        "maxLength": 15,
+        "minLength": 1,
+        "type": "string",
         "description": "This field is to be always transmitted in upper case."
       },
       "BaleDetail": {
@@ -571,7 +560,7 @@
           5
         ],
         "type": "integer",
-        "description": " Used to define the types of Catalogue. Only required for requesting Catalouge. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
+        "description": " Used to define the types of Catalogue. Only required for requesting Catalogue. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
         "format": "int32"
       },
       "CatalogueType": {
@@ -580,7 +569,7 @@
           "P"
         ],
         "type": "string",
-        "description": "Used to define the type of catalogue"
+        "description": "Used to define the type of catalogue\r\n\r\nA: Auction Catalogues\r\n\r\nP: Private Catalogues"
       },
       "CatalogueWoolSaleHeaderLot": {
         "required": [
@@ -1053,15 +1042,11 @@
             "$ref": "#/components/schemas/AdditionalPrintRequirements"
           },
           "isPrintingTeam3Hauteur": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to print Team3-Hauteur\r\n            \r\ntrue: print\r\n            \r\nfalse: not print",
             "nullable": true
           },
-          "commitCombinationOrOmlForProcessing": {
-            "maxLength": 1,
-            "minLength": 1,
+          "isCommitRequired": {
             "type": "boolean",
             "description": "A boolean value to indicate whether to commit the combination/OML request for processing\r\n            \r\ntrue: Commit the combination/OML request for processing\r\n            \r\nfalse: Do not commit the combination/OML for processing (request will be available via WOOLINK for viewing/committing)\r\n            \r\nNote: For non-WOOLINK clients the request will be committed for processing regardless of this field.",
             "nullable": true
@@ -1315,7 +1300,7 @@
             "$ref": "#/components/schemas/CalibrationFlag"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
@@ -1449,7 +1434,7 @@
             "$ref": "#/components/schemas/InvoiceMassFlag"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
@@ -1950,7 +1935,9 @@
             "nullable": true
           },
           "errorCode": {
-            "$ref": "#/components/schemas/ErrorCode"
+            "type": "string",
+            "description": "The error code is defined by business rules to indicate the different types of errors.\r\n\r\nExamples of error code:\r\n \r\nDOXCT: Document originator does not match current transmitter.\"\r\n            \r\nINVTC: Invalid transfer config. All data rejected.\"\r\n\r\nINVFR: Invalid/missing FinalReceiverList record. All data rejected.\"\r\n            \r\nINVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.\"\r\n\r\nINVCR: Current receiver not awtm. All data rejected.\"\r\n\r\nINVDO: Invalid document originator code aaaaa. Data accepted.\"\r\n\r\nINVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.\"\r\n\r\nINVEX: Invalid excluded record.\"",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2015,20 +2002,14 @@
             "$ref": "#/components/schemas/DeclaredQualifierScale"
           },
           "isContactingWithExoticBreeds": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether it contact with exotic breeds.\r\n            \r\ntrue: contact with exotic breeds.\r\n            \r\nfalse: not contact with exotic breeds."
           },
           "isCrutched": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether it is crutched.\r\n\r\ntrue: crutched.\r\n            \r\nfalse: not crutched."
           },
           "isCrutchedWithin3MonthsOfShearing": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether crutching within 3 months of shearing.\r\n            \r\ntrue: yes.\r\n            \r\nfalse: no.",
             "nullable": true
@@ -2054,7 +2035,7 @@
           "darkAndMedullatedFibreRiskBroker": {
             "$ref": "#/components/schemas/DarkAndMedullatedFibreRiskBroker"
           },
-          "darkandMedullatedFibreRisk": {
+          "darkAndMedullatedFibreRisk": {
             "$ref": "#/components/schemas/DarkAndMedullatedFibreRisk"
           },
           "certificateIdentity": {
@@ -2302,20 +2283,14 @@
             "$ref": "#/components/schemas/CountermarkHeadmarkFlag"
           },
           "areRenumbersApplied": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to apply renumbers on bales. \r\n            \r\ntrue: apply renumbers.\r\n            \r\nfalse: not apply renumbers."
           },
           "areGrossWeightsApplied": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to apply Gross Weights on bales.\r\n            \r\ntrue: apply.\r\n            \r\nfalse: not apply."
           },
           "areNetWeightsApplied": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to apply Net Weights on bales.\r\n            \r\ntrue: apply\r\n            \r\nfalse: not apply"
           },
@@ -2496,10 +2471,10 @@
             "$ref": "#/components/schemas/PackMaterial"
           },
           "dateDeliveryRequired": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "datePickup": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
@@ -2596,23 +2571,17 @@
             "multipleOf": 0.01
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
       },
       "EncryptedLotHeaderAwexData": {
         "required": [
-          "encryptedLotHeaderAwexDataString",
-          "encryptionKeyIdentifier"
+          "encryptedLotHeaderAwexDataString"
         ],
         "type": "object",
         "properties": {
-          "encryptionKeyIdentifier": {
-            "maxLength": 80,
-            "minLength": 1,
-            "type": "string"
-          },
           "encryptedLotHeaderAwexDataString": {
             "minLength": 1,
             "type": "string",
@@ -2620,20 +2589,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "ErrorCode": {
-        "enum": [
-          "DOXCT",
-          "INVTC",
-          "INVFR",
-          "INVAC",
-          "INVCR",
-          "INVDO",
-          "INVSO",
-          "INVEX"
-        ],
-        "type": "string",
-        "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
       },
       "FibreDiameterHistogram": {
         "type": "object",
@@ -2667,7 +2622,7 @@
           },
           "fibresMeasuredPercentage": {
             "maximum": 99.9999,
-            "minimum": -99.99999,
+            "minimum": -99.9999,
             "type": "number",
             "description": "Percentage of fibres measured for the measurement.",
             "format": "double",
@@ -2768,10 +2723,10 @@
             "multipleOf": 0.1
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "factorLaserscanNumerator": {
             "maximum": 9999999999.999998,
@@ -2829,8 +2784,6 @@
             "$ref": "#/components/schemas/UtcDateTime"
           },
           "isUsingNetworkDateTime": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to use network datetime.\r\n            \r\ntrue: use network datetime.\r\n            \r\nfalse: not use.",
             "nullable": true
@@ -2945,7 +2898,7 @@
           "interlotComponentBales",
           "baleIdentifications",
           "fibreDiameterHistograms",
-          "fibreDiameterHistogramDetails"
+          "fibreDiameterHistogramDetailMeasurements"
         ],
         "type": "string"
       },
@@ -2959,6 +2912,15 @@
         "type": "integer",
         "description": "The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority",
         "format": "int32"
+      },
+      "LaserscanTestRequired": {
+        "enum": [
+          "N",
+          "S",
+          "P"
+        ],
+        "type": "string",
+        "description": "Note: A “Y” or space in this field will default to “S” when transmitting to AWTA Ltd.<br />N: Laserscan Test is not required<br />S: Standard Laserscan Test is required<br />P: Premium Laserscan Test is required"
       },
       "LengthAfterCardingTestDetail": {
         "required": [
@@ -3141,8 +3103,6 @@
             "$ref": "#/components/schemas/LsCertType"
           },
           "isLsSampleSecured": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the LS-sample is secured.\r\n            \r\ntrue: secured\r\n            \r\nfalse: not secured"
           },
@@ -3173,7 +3133,7 @@
             "multipleOf": 0.1
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "stapleStrengthLowest25Percent": {
             "maximum": 99,
@@ -3193,6 +3153,12 @@
         ],
         "type": "string",
         "description": "L: Length And Strength Test Detail<br />K: Length And Strength Combination Test Detail"
+      },
+      "LiteralDate": {
+        "type": "string",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\n\ndateOfCreditNote: Date the Credit note was issued\n\ndateOfOriginalInvoice: Date of the original invoice\\ndateIssue: The date the certificate was issued.\n\ndateLastUpdated: The day the item was last amended.\n\nstatementDate: The period ending date of the statement.\n\nstatementPaymentDate: The date the payment was made.\n\ndatePaymentMade: Required date field for the date payment was made.\n\nsaleDate: The date on which the wool was sold.\n\ncoreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\n\nitemDate: The date the cost of the item was incurred.",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
       },
       "Lot": {
         "required": [
@@ -3255,8 +3221,6 @@
             "nullable": true
           },
           "isNoLot": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the lot is included for sale in the auction.\r\n\r\nIt is used in New Zealand only.\r\n\r\ntrue: normal Lot.\r\n\r\nfalse: not a normal Lot.",
             "nullable": true
@@ -3319,7 +3283,7 @@
             "$ref": "#/components/schemas/PackCondition"
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "woolDescriptionComment": {
             "maxLength": 14,
@@ -3335,8 +3299,6 @@
             "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\n\r\nAlternative valid appraisal descriptions include AWC type, Exporter type.\r\n\r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\n\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\n\r\nThis field is to be always transmitted in upper case."
           },
           "isGstApplicable": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST amount is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
             "nullable": true
@@ -3445,7 +3407,7 @@
             "$ref": "#/components/schemas/Currency"
           },
           "offerDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
@@ -3835,7 +3797,7 @@
           "ND"
         ],
         "type": "string",
-        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nIn Australia, Mulesing status is not applicable for Combinations/OMLs, Guidance reports and Scoured wool.It is also not transmitted for non\r\nYield certificates when transmitted independently e.g.Length and Strength.\r\n            \r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
+        "description": "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared"
       },
       "Name": {
         "type": "object",
@@ -3965,14 +3927,12 @@
             "description": "he name of a person or organisation.\r\nContact – Name of a person in the organisation that can be contacted for further information.\r\nOrganisation – the name of the organisation."
           },
           "dateLastUpdated": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "industryGroupId": {
             "$ref": "#/components/schemas/IndustryGroupId"
           },
           "isTransmitter": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the organisation transmits or receives data electronically.\r\n\r\ntrue: The organisation transmits or receives data electronically. \r\n\r\nfalse: The organisation neither transmits nor receives data electronically."
           },
@@ -4205,7 +4165,7 @@
         "type": "object",
         "properties": {
           "statementDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "accountReference": {
             "maxLength": 11,
@@ -4247,13 +4207,13 @@
             "format": "int32"
           },
           "statementDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "amountRemitted": {
             "$ref": "#/components/schemas/Currency"
           },
           "statementPaymentDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "bankBsbNumber": {
             "maximum": 999999,
@@ -4295,7 +4255,7 @@
             "$ref": "#/components/schemas/Currency"
           },
           "datePaymentMade": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
@@ -4409,9 +4369,7 @@
           "printFlag": {
             "$ref": "#/components/schemas/PrintFlag"
           },
-          "isPrintingPrintTEAM3Hauteur": {
-            "maxLength": 5,
-            "minLength": 4,
+          "isPrintingTeam3Hauteur": {
             "type": "boolean",
             "description": "A boolean value to indicate whether to print Team3-Hauteur.\r\n\r\ntrue: print.\r\n\r\nfalse: not print.",
             "nullable": true
@@ -4512,8 +4470,6 @@
             "format": "int32"
           },
           "areTransfersCompleted": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the transfers are completed / Sale is finalised. \r\n\r\ntrue: Transfers are completed / Sale is finalised.\r\n\r\nfalse: Transfers are not completed / Sale is not finalised."
           }
@@ -4728,7 +4684,7 @@
           8
         ],
         "type": "integer",
-        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA",
+        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA",
         "format": "int32"
       },
       "SoftwareIdentifier": {
@@ -4812,20 +4768,16 @@
             "$ref": "#/components/schemas/AmountType"
           },
           "itemDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "gstAmount": {
             "$ref": "#/components/schemas/Currency"
           },
           "isGstApplicable": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST amount is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable."
           },
           "isCompanyAbnApplicable": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable."
           }
@@ -4851,7 +4803,7 @@
             "format": "int32"
           },
           "statementDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "openingBalances": {
             "type": "array",
@@ -5338,15 +5290,11 @@
             "$ref": "#/components/schemas/Currency"
           },
           "isGstApplicable": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST is aplicable.\r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
             "nullable": true
           },
           "isCompanyAbnApplicable": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
             "nullable": true
@@ -5573,7 +5521,7 @@
             "$ref": "#/components/schemas/Weight"
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "coresPerBale": {
             "maximum": 99,
@@ -5592,8 +5540,6 @@
             "nullable": true
           },
           "isPreviousDataToBeUpdated": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether data sent on a previous transmission is to be updated by data in the current transmission.\r\n\r\ntrue: Update previous data.\r\n\r\nfalse: Do not update previous data."
           },
@@ -5605,64 +5551,44 @@
             "format": "int32"
           },
           "isYieldAndMicronTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Yield And Laserscan Test is required.\r\n\r\ntrue: Yield And Laserscan Test is required.\r\n\r\nfalse: Yield And Laserscan Test is not required.",
             "nullable": true
           },
           "isLengthAndStrengthTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Length And Strength Test is required.\r\n\r\ntrue: Length And Strength Test is required.\r\n\r\nfalse: Length And Strength Test is not required.",
             "nullable": true
           },
           "isLengthOnlyTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Length Only Test is required.\r\n\r\ntrue: Length Only Test is required.\r\n\r\nfalse: Length Only Test is not required.",
             "nullable": true
           },
           "isColourTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Colour Test is required.\r\n\r\ntrue: Colour Test is required.\r\n\r\nfalse: Colour Test is not required.",
             "nullable": true
           },
-          "isLaserscanTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
-            "type": "boolean",
-            "description": "A boolean value to indicate whether Laserscan Test is required.\r\n\r\ntrue: Laserscan Test is required.\r\n\r\nfalse: Laserscan Test is not required.",
-            "nullable": true
+          "laserscanTestRequired": {
+            "$ref": "#/components/schemas/LaserscanTestRequired"
           },
           "isAirflowTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Airflow Test is required.\r\n\r\ntrue: Airflow Test is required.\r\n\r\nfalse: Airflow Test is not required.",
             "nullable": true
           },
           "isOfdaTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether OFDA Test is required.\r\n\r\ntrue: OFDA Test is required.\r\n\r\nfalse: OFDA Test is not required.",
             "nullable": true
           },
           "isDarkAndMedullatedFibreTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Dark And Medullated Fibre Test is required.\r\n\r\ntrue: Dark And Medullated Fibre Test is required.\r\n\r\nfalse: Dark And Medullated Fibre Test is not required.",
             "nullable": true
           },
           "isPesticideResidueTestRequired": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Pesticide Residue Test is required.\r\n\r\ntrue: Pesticide Residue Test is required.\r\n\r\nfalse: Pesticide Residue Test is not required.",
             "nullable": true
@@ -5828,28 +5754,28 @@
             "$ref": "#/components/schemas/LsSampleId"
           },
           "coreSampleReceived": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "lsSampleReceived": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "trvMatched": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "coreSampleCheckTest": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "lsRetuftRequired": {
             "$ref": "#/components/schemas/LsRetuftRequired"
           },
           "lsRetuftReceived": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "coreTestRecoreRequired": {
             "$ref": "#/components/schemas/CoreTestRecoreRequired"
           },
           "coreTestRecoreReceived": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
@@ -5963,10 +5889,10 @@
         "type": "object",
         "properties": {
           "dateFormatLastRevised": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "dateTransmissionFileCreated": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"
@@ -6014,19 +5940,11 @@
         "type": "object",
         "properties": {
           "isUsingNetworkDateTime": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
           }
         },
         "additionalProperties": false
-      },
-      "UtcDate": {
-        "type": "string",
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
-        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-        "example": "2024-03-21"
       },
       "UtcDateTime": {
         "type": "string",
@@ -6172,7 +6090,7 @@
             "$ref": "#/components/schemas/Centre"
           },
           "saleDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "woolState": {
             "$ref": "#/components/schemas/WoolState"
@@ -6206,8 +6124,6 @@
             "$ref": "#/components/schemas/CatalogueSection"
           },
           "isFinalCatalogue": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.\r\n\r\ntrue: is a final catalogue.\r\n\r\nfalse: is not a final catalogue.",
             "nullable": true
@@ -6247,7 +6163,7 @@
             "nullable": true
           },
           "paymentDueDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "discountRate": {
             "maximum": 99.99,
@@ -6267,7 +6183,7 @@
             "nullable": true
           },
           "dateStorageChargeCommences": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "storageChargePerBalePerDay": {
             "$ref": "#/components/schemas/StorageChargeCurrency"
@@ -6282,7 +6198,7 @@
             "multipleOf": 0.01
           },
           "lotAvailableDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "postSaleChargeRebate": {
             "$ref": "#/components/schemas/Currency"
@@ -6306,8 +6222,6 @@
             "nullable": true
           },
           "isReservePriceDisplayed": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to display reserve price to buyers.\r\n\r\ntrue: display.\r\n\r\nfalse: not display.",
             "nullable": true
@@ -6358,7 +6272,7 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "saleDateRequested": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "woolTypeGroup": {
             "$ref": "#/components/schemas/WoolTypeGroup"

@@ -10,7 +10,7 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: "0.0"
+  version: 0.0.0
 paths:
   /v0/payment-confirmations:
     post:
@@ -310,9 +310,9 @@ components:
       type: object
       properties:
         dateFormatLastRevised:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         dateTransmissionFileCreated:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         countryOfOrigin:
           $ref: "#/components/schemas/CountryCode"
         documentOriginator:
@@ -338,9 +338,38 @@ components:
           description: Australian Business Number, 11 digits
           format: int64
       additionalProperties: false
-    UtcDate:
+    LiteralDate:
       type: string
-      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+      description: >-
+        Date value in ISO standard UTC date format. e.g. 2024-03-21
+        (YYYY-MM-DD).
+
+
+        dateOfCreditNote: Date the Credit note was issued
+
+
+        dateOfOriginalInvoice: Date of the original invoice\ndateIssue: The date the certificate was issued.
+
+
+        dateLastUpdated: The day the item was last amended.
+
+
+        statementDate: The period ending date of the statement.
+
+
+        statementPaymentDate: The date the payment was made.
+
+
+        datePaymentMade: Required date field for the date payment was made.
+
+
+        saleDate: The date on which the wool was sold.
+
+
+        coreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+
+
+        itemDate: The date the cost of the item was incurred.
       format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
       example: 2024-03-21
     CountryCode:
@@ -849,7 +878,7 @@ components:
         - 8
       type: integer
       description: "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4:
-        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA"
+        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA"
       format: int32
     TransferConfig:
       required:
@@ -909,11 +938,11 @@ components:
           type: integer
           format: int32
         statementDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         amountRemitted:
           $ref: "#/components/schemas/Currency"
         statementPaymentDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         bankBsbNumber:
           maximum: 999999
           minimum: -999999
@@ -975,7 +1004,7 @@ components:
       type: object
       properties:
         statementDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         accountReference:
           maxLength: 11
           minLength: 1
@@ -1203,27 +1232,52 @@ components:
           type: string
           nullable: true
         errorCode:
-          $ref: "#/components/schemas/ErrorCode"
+          type: string
+          description: "The error code is defined by business rules to indicate the
+            different types of errors.\r
+
+            \r
+
+            Examples of error code:\r
+
+            \ \r
+
+            DOXCT: Document originator does not match current
+            transmitter.\"\r
+
+            \            \r
+
+            INVTC: Invalid transfer config. All data rejected.\"\r
+
+            \r
+
+            INVFR: Invalid/missing FinalReceiverList record. All
+            data rejected.\"\r
+
+            \            \r
+
+            INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data
+            rejected.\"\r
+
+            \r
+
+            INVCR: Current receiver not awtm. All data rejected.\"\r
+
+            \r
+
+            INVDO: Invalid document originator code aaaaa. Data
+            accepted.\"\r
+
+            \r
+
+            INVSO: Warning! Invalid selling org AAAAA using doc orig
+            AAAAA.\"\r
+
+            \r
+
+            INVEX: Invalid excluded record.\""
+          nullable: true
       additionalProperties: false
-    ErrorCode:
-      enum:
-        - DOXCT
-        - INVTC
-        - INVFR
-        - INVAC
-        - INVCR
-        - INVDO
-        - INVSO
-        - INVEX
-      type: string
-      description: "A code to indicate the different types of errors.<br />DOXCT:
-        Document originator does not match current transmitter.<br />INVTC:
-        Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing
-        FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale
-        aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver
-        not awtm. All data rejected.<br />INVDO: Invalid document originator
-        code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org
-        AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
     RequestForData:
       required:
         - requestForDataType
@@ -1248,8 +1302,6 @@ components:
       type: object
       properties:
         isUsingNetworkDateTime:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to use network datetime.\r
 

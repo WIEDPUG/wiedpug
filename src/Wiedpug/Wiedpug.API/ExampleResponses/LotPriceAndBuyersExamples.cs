@@ -23,8 +23,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -61,7 +61,7 @@ namespace Wiedpug.API.ExampleResponses
                                         CountryCode = CountryCode.AU,
                                         CentreCode =  CentreCodeAustralia.A
                                      },
-                                     SaleDate = new UtcDate{ Date="2017-01-10"},
+                                     SaleDate = new LiteralDate{ Date="2017-01-10"},
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
                                      CatalogueSection = CatalogueSection.FLC,
@@ -131,8 +131,8 @@ namespace Wiedpug.API.ExampleResponses
                 new WoolSaleRequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -159,7 +159,7 @@ namespace Wiedpug.API.ExampleResponses
                         SaleNumber = 18
                     },
                     OrganisationRequested = new Organisation { OrganisationCode = "ANF", },
-                    SaleDateRequested = new UtcDate{ Date="2023-10-31"},
+                    SaleDateRequested = new LiteralDate{ Date="2023-10-31"},
                     WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                     Season = new Season{SeasonValue= 23}
                 },
@@ -186,8 +186,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -220,7 +220,7 @@ namespace Wiedpug.API.ExampleResponses
                                      },
                                      WoolTypeGroup = WoolTypeGroup.MSKT,
                                      CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
-                                     SaleDate = new UtcDate{ Date="2017-01-10"},
+                                     SaleDate = new LiteralDate{ Date="2017-01-10"},
                                      WoolState = WoolState._1,
                                      PackType = PackType._9,
                                      CatalogueSection = CatalogueSection.FLC,

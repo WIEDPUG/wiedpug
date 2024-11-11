@@ -30,7 +30,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>        
         [Required]
-        public required UtcDate DateLastUpdated { get; set; }
+        public required LiteralDate DateLastUpdated { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -45,8 +45,7 @@ namespace Wiedpug.Domain.Entities
         /// false: The organisation neither transmits nor receives data electronically.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsTransmitter { get; set; }
 
         public PhoneNumber? PhoneNumber { get; set; }

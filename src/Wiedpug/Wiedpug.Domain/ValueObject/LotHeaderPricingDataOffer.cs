@@ -17,6 +17,6 @@ namespace Wiedpug.Domain.ValueObject
         public required Currency? OfferPrice { get; set; } // FIELD NUMBER 5 - Offer Price (1) - Start: 6, Size: 6, Data Type: N, Justification: R, Requirement Designator: O
 
         [Required]
-        public required UtcDate OfferDate { get; set; }
+        public required LiteralDate OfferDate { get; set; }
     }
 }

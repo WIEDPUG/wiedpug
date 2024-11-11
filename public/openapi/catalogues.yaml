@@ -10,7 +10,7 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: "0.0"
+  version: 0.0.0
 paths:
   /v0/catalogues:
     post:
@@ -127,7 +127,6 @@ paths:
                               isGstApplicable: true
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
-                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                               encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: NM
@@ -203,8 +202,7 @@ paths:
                                   dateIssued: 2017-01-10
                             catalogueLotDescription:
                               brand: SALTBUSH/DOWNS
-                              baleDescription:
-                                description: AAAM
+                              baleDescription: AAAM
                               areaOfOrigin: V11
                               numberOfBales: 8
                             baleIdentifications:
@@ -213,8 +211,7 @@ paths:
                             interlotComponentBales:
                               - interlotComponentBaleHeader:
                                   brand: RC/FARMING
-                                  baleDescription:
-                                    description: AAAMLMS
+                                  baleDescription: AAAMLMS
                                   areaOfOrigin: W14
                                   locationWithinStore: Z1-33
                                   numberOfBales: 2
@@ -319,7 +316,6 @@ paths:
                               isGstApplicable: true
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
-                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                               encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: AA
@@ -394,15 +390,13 @@ paths:
                                   dateIssued: 2017-01-10
                             catalogueLotDescription:
                               brand: SALTBUSH/DOWNS
-                              baleDescription:
-                                description: AAAM
+                              baleDescription: AAAM
                               areaOfOrigin: V11
                               numberOfBales: 8
                             interlotComponentBales:
                               - interlotComponentBaleHeader:
                                   brand: RC/FARMING
-                                  baleDescription:
-                                    description: AAAMLMS
+                                  baleDescription: AAAMLMS
                                   areaOfOrigin: W14
                                   locationWithinStore: Z1-33
                                   numberOfBales: 2
@@ -584,7 +578,6 @@ paths:
                           isGstApplicable: true
                           numberOfOverweightBales: 0
                         encryptedLotHeaderAwexData:
-                          encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                           encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                         lotHeaderVendorDeclarations:
                           - mulesingStatus: AA
@@ -875,7 +868,6 @@ paths:
                               woolDescription: MF6S
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
-                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                               encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: M
@@ -950,8 +942,7 @@ paths:
                                   dateIssued: 2017-01-10
                             catalogueLotDescription:
                               brand: SALTBUSH/DOWNS
-                              baleDescription:
-                                description: AAAM
+                              baleDescription: AAAM
                               areaOfOrigin: V11
                               numberOfBales: 8
         "204":
@@ -1050,9 +1041,9 @@ components:
       type: object
       properties:
         dateFormatLastRevised:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         dateTransmissionFileCreated:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         countryOfOrigin:
           $ref: "#/components/schemas/CountryCode"
         documentOriginator:
@@ -1078,9 +1069,38 @@ components:
           description: Australian Business Number, 11 digits
           format: int64
       additionalProperties: false
-    UtcDate:
+    LiteralDate:
       type: string
-      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+      description: >-
+        Date value in ISO standard UTC date format. e.g. 2024-03-21
+        (YYYY-MM-DD).
+
+
+        dateOfCreditNote: Date the Credit note was issued
+
+
+        dateOfOriginalInvoice: Date of the original invoice\ndateIssue: The date the certificate was issued.
+
+
+        dateLastUpdated: The day the item was last amended.
+
+
+        statementDate: The period ending date of the statement.
+
+
+        statementPaymentDate: The date the payment was made.
+
+
+        datePaymentMade: Required date field for the date payment was made.
+
+
+        saleDate: The date on which the wool was sold.
+
+
+        coreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+
+
+        itemDate: The date the cost of the item was incurred.
       format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
       example: 2024-03-21
     CountryCode:
@@ -1589,14 +1609,22 @@ components:
         - 8
       type: integer
       description: "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4:
-        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA"
+        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA"
       format: int32
     CatalogueType:
       enum:
         - A
         - P
       type: string
-      description: Used to define the type of catalogue
+      description: "Used to define the type of catalogue\r
+
+        \r
+
+        A: Auction Catalogues\r
+
+        \r
+
+        P: Private Catalogues"
     TransferConfig:
       required:
         - transferType
@@ -1657,7 +1685,7 @@ components:
         centreStorage:
           $ref: "#/components/schemas/Centre"
         saleDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         woolState:
           $ref: "#/components/schemas/WoolState"
         packType:
@@ -1681,8 +1709,6 @@ components:
         catalogueSection:
           $ref: "#/components/schemas/CatalogueSection"
         isFinalCatalogue:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the related section of the
             catalogue transmission is expected to have more amendments
@@ -1723,7 +1749,7 @@ components:
             etc. – to assist delivery.
           nullable: true
         paymentDueDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         discountRate:
           maximum: 99.99
           minimum: -99.99
@@ -1740,7 +1766,7 @@ components:
           format: int32
           nullable: true
         dateStorageChargeCommences:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         storageChargePerBalePerDay:
           $ref: "#/components/schemas/StorageChargeCurrency"
         penaltyInterestRate:
@@ -1752,7 +1778,7 @@ components:
           nullable: true
           multipleOf: 0.01
         lotAvailableDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         postSaleChargeRebate:
           $ref: "#/components/schemas/Currency"
         catalogueAvailabilityDateTime:
@@ -1769,8 +1795,6 @@ components:
           type: string
           nullable: true
         isReservePriceDisplayed:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to display reserve price to
             buyers.\r
@@ -2145,8 +2169,6 @@ components:
           format: int32
           nullable: true
         isNoLot:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the lot is included for sale
             in the auction.\r
@@ -2251,7 +2273,7 @@ components:
         packCondition:
           $ref: "#/components/schemas/PackCondition"
         coreTestSamplingDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         woolDescriptionComment:
           maxLength: 14
           minLength: 1
@@ -2288,8 +2310,6 @@ components:
 
             This field is to be always transmitted in upper case."
         isGstApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the GST amount is applicable
             to invoice. \r
@@ -2644,18 +2664,13 @@ components:
         offerPrice:
           $ref: "#/components/schemas/Currency"
         offerDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     EncryptedLotHeaderAwexData:
       required:
         - encryptedLotHeaderAwexDataString
-        - encryptionKeyIdentifier
       type: object
       properties:
-        encryptionKeyIdentifier:
-          maxLength: 80
-          minLength: 1
-          type: string
         encryptedLotHeaderAwexDataString:
           minLength: 1
           type: string
@@ -2889,39 +2904,9 @@ components:
         - M
         - ND
       type: string
-      description: "Note: Blank will be transmitted if the certificate was issued
-        prior to 21st July, 2008 or if the transmission was outside Australia.\r
-
-        \r
-
-        In Australia, Mulesing status is not applicable for
-        Combinations/OMLs, Guidance reports and Scoured wool.It is also not
-        transmitted for non\r
-
-        Yield certificates when transmitted independently e.g.Length and
-        Strength.\r
-
-        \            \r
-
-        From:\r
-
-        \r
-
-        The current value that the Mulesing Status is to be changed
-        from\r
-
-        \r
-
-        To:\r
-
-        \            \r
-
-        The new value that the Mulesing Status is to be changed to.\r
-
-        \r
-
-        To obtain the current code list please go to this URL:
-        https://www.awex.com.au/standards/national-wool-declaration-nwd"
+      description: "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased
+        Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M:
+        Mulesed<br />ND: Not Declared"
     TestDetail:
       required:
         - testDetailsType
@@ -3450,7 +3435,7 @@ components:
         calibrationFlag:
           $ref: "#/components/schemas/CalibrationFlag"
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     ColourTestDetailType:
       enum:
@@ -3643,8 +3628,6 @@ components:
         lsCertType:
           $ref: "#/components/schemas/LsCertType"
         isLsSampleSecured:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the LS-sample is secured.\r
 
@@ -3687,7 +3670,7 @@ components:
           nullable: true
           multipleOf: 0.1
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         stapleStrengthLowest25Percent:
           maximum: 99
           minimum: -99
@@ -3806,9 +3789,9 @@ components:
           nullable: true
           multipleOf: 0.1
         coreTestSamplingDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         factorLaserscanNumerator:
           maximum: 9999999999.999998
           minimum: -9999999999.999998
@@ -3855,7 +3838,7 @@ components:
           format: int32
         fibresMeasuredPercentage:
           maximum: 99.9999
-          minimum: -99.99999
+          minimum: -99.9999
           type: number
           description: Percentage of fibres measured for the measurement.
           format: double
@@ -3904,15 +3887,9 @@ components:
           nullable: true
       additionalProperties: false
     BaleDescription:
-      required:
-        - description
-      type: object
-      properties:
-        description:
-          maxLength: 15
-          minLength: 1
-          type: string
-      additionalProperties: false
+      maxLength: 15
+      minLength: 1
+      type: string
       description: This field is to be always transmitted in upper case.
     BaleIdentification:
       type: object
@@ -4166,27 +4143,52 @@ components:
           type: string
           nullable: true
         errorCode:
-          $ref: "#/components/schemas/ErrorCode"
+          type: string
+          description: "The error code is defined by business rules to indicate the
+            different types of errors.\r
+
+            \r
+
+            Examples of error code:\r
+
+            \ \r
+
+            DOXCT: Document originator does not match current
+            transmitter.\"\r
+
+            \            \r
+
+            INVTC: Invalid transfer config. All data rejected.\"\r
+
+            \r
+
+            INVFR: Invalid/missing FinalReceiverList record. All
+            data rejected.\"\r
+
+            \            \r
+
+            INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data
+            rejected.\"\r
+
+            \r
+
+            INVCR: Current receiver not awtm. All data rejected.\"\r
+
+            \r
+
+            INVDO: Invalid document originator code aaaaa. Data
+            accepted.\"\r
+
+            \r
+
+            INVSO: Warning! Invalid selling org AAAAA using doc orig
+            AAAAA.\"\r
+
+            \r
+
+            INVEX: Invalid excluded record.\""
+          nullable: true
       additionalProperties: false
-    ErrorCode:
-      enum:
-        - DOXCT
-        - INVTC
-        - INVFR
-        - INVAC
-        - INVCR
-        - INVDO
-        - INVSO
-        - INVEX
-      type: string
-      description: "A code to indicate the different types of errors.<br />DOXCT:
-        Document originator does not match current transmitter.<br />INVTC:
-        Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing
-        FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale
-        aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver
-        not awtm. All data rejected.<br />INVDO: Invalid document originator
-        code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org
-        AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
     WoolSaleRequestForData:
       required:
         - requestForDataType
@@ -4213,7 +4215,7 @@ components:
         organisationRequested:
           $ref: "#/components/schemas/Organisation"
         saleDateRequested:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         woolTypeGroup:
           $ref: "#/components/schemas/WoolTypeGroup"
         itemsToBeExcluded:
@@ -4237,7 +4239,7 @@ components:
         - 5
       type: integer
       description: " Used to define the types of Catalogue. Only required for
-        requesting Catalouge. Not Applicable for other documents.<br />2:
+        requesting Catalogue. Not Applicable for other documents.<br />2:
         Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue
         Updates"
       format: int32
@@ -4248,7 +4250,7 @@ components:
         - interlotComponentBales
         - baleIdentifications
         - fibreDiameterHistograms
-        - fibreDiameterHistogramDetails
+        - fibreDiameterHistogramDetailMeasurements
       type: string
     UseNetworkDateTimeRequestForDataType:
       required:
@@ -4256,8 +4258,6 @@ components:
       type: object
       properties:
         isUsingNetworkDateTime:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to use network datetime.\r
 

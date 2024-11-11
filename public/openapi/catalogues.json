@@ -13,7 +13,7 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "0.0"
+    "version": "0.0.0"
   },
   "paths": {
     "/v0/catalogues": {
@@ -163,7 +163,6 @@
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
-                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                                 "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                               },
                               "lotHeaderVendorDeclarations": [
@@ -264,9 +263,7 @@
                               ],
                               "catalogueLotDescription": {
                                 "brand": "SALTBUSH/DOWNS",
-                                "baleDescription": {
-                                  "description": "AAAM"
-                                },
+                                "baleDescription": "AAAM",
                                 "areaOfOrigin": "V11",
                                 "numberOfBales": 8
                               },
@@ -280,9 +277,7 @@
                                 {
                                   "interlotComponentBaleHeader": {
                                     "brand": "RC/FARMING",
-                                    "baleDescription": {
-                                      "description": "AAAMLMS"
-                                    },
+                                    "baleDescription": "AAAMLMS",
                                     "areaOfOrigin": "W14",
                                     "locationWithinStore": "Z1-33",
                                     "numberOfBales": 2,
@@ -429,7 +424,6 @@
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
-                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                                 "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                               },
                               "lotHeaderVendorDeclarations": [
@@ -527,9 +521,7 @@
                               ],
                               "catalogueLotDescription": {
                                 "brand": "SALTBUSH/DOWNS",
-                                "baleDescription": {
-                                  "description": "AAAM"
-                                },
+                                "baleDescription": "AAAM",
                                 "areaOfOrigin": "V11",
                                 "numberOfBales": 8
                               },
@@ -537,9 +529,7 @@
                                 {
                                   "interlotComponentBaleHeader": {
                                     "brand": "RC/FARMING",
-                                    "baleDescription": {
-                                      "description": "AAAMLMS"
-                                    },
+                                    "baleDescription": "AAAMLMS",
                                     "areaOfOrigin": "W14",
                                     "locationWithinStore": "Z1-33",
                                     "numberOfBales": 2,
@@ -801,7 +791,6 @@
                             "numberOfOverweightBales": 0
                           },
                           "encryptedLotHeaderAwexData": {
-                            "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                             "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                           },
                           "lotHeaderVendorDeclarations": [
@@ -1207,7 +1196,6 @@
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
-                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                                 "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                               },
                               "lotHeaderVendorDeclarations": [
@@ -1305,9 +1293,7 @@
                               ],
                               "catalogueLotDescription": {
                                 "brand": "SALTBUSH/DOWNS",
-                                "baleDescription": {
-                                  "description": "AAAM"
-                                },
+                                "baleDescription": "AAAM",
                                 "areaOfOrigin": "V11",
                                 "numberOfBales": 8
                               }
@@ -1459,10 +1445,10 @@
         "type": "object",
         "properties": {
           "dateFormatLastRevised": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "dateTransmissionFileCreated": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"
@@ -1494,9 +1480,9 @@
         },
         "additionalProperties": false
       },
-      "UtcDate": {
+      "LiteralDate": {
         "type": "string",
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\n\ndateOfCreditNote: Date the Credit note was issued\n\ndateOfOriginalInvoice: Date of the original invoice\\ndateIssue: The date the certificate was issued.\n\ndateLastUpdated: The day the item was last amended.\n\nstatementDate: The period ending date of the statement.\n\nstatementPaymentDate: The date the payment was made.\n\ndatePaymentMade: Required date field for the date payment was made.\n\nsaleDate: The date on which the wool was sold.\n\ncoreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\n\nitemDate: The date the cost of the item was incurred.",
         "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
         "example": "2024-03-21"
       },
@@ -1836,7 +1822,7 @@
           8
         ],
         "type": "integer",
-        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA",
+        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA",
         "format": "int32"
       },
       "CatalogueType": {
@@ -1845,7 +1831,7 @@
           "P"
         ],
         "type": "string",
-        "description": "Used to define the type of catalogue"
+        "description": "Used to define the type of catalogue\r\n\r\nA: Auction Catalogues\r\n\r\nP: Private Catalogues"
       },
       "TransferConfig": {
         "required": [
@@ -1917,7 +1903,7 @@
             "$ref": "#/components/schemas/Centre"
           },
           "saleDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "woolState": {
             "$ref": "#/components/schemas/WoolState"
@@ -1951,8 +1937,6 @@
             "$ref": "#/components/schemas/CatalogueSection"
           },
           "isFinalCatalogue": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.\r\n\r\ntrue: is a final catalogue.\r\n\r\nfalse: is not a final catalogue.",
             "nullable": true
@@ -1992,7 +1976,7 @@
             "nullable": true
           },
           "paymentDueDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "discountRate": {
             "maximum": 99.99,
@@ -2012,7 +1996,7 @@
             "nullable": true
           },
           "dateStorageChargeCommences": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "storageChargePerBalePerDay": {
             "$ref": "#/components/schemas/StorageChargeCurrency"
@@ -2027,7 +2011,7 @@
             "multipleOf": 0.01
           },
           "lotAvailableDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "postSaleChargeRebate": {
             "$ref": "#/components/schemas/Currency"
@@ -2051,8 +2035,6 @@
             "nullable": true
           },
           "isReservePriceDisplayed": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to display reserve price to buyers.\r\n\r\ntrue: display.\r\n\r\nfalse: not display.",
             "nullable": true
@@ -2352,8 +2334,6 @@
             "nullable": true
           },
           "isNoLot": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the lot is included for sale in the auction.\r\n\r\nIt is used in New Zealand only.\r\n\r\ntrue: normal Lot.\r\n\r\nfalse: not a normal Lot.",
             "nullable": true
@@ -2416,7 +2396,7 @@
             "$ref": "#/components/schemas/PackCondition"
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "woolDescriptionComment": {
             "maxLength": 14,
@@ -2432,8 +2412,6 @@
             "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\n\r\nAlternative valid appraisal descriptions include AWC type, Exporter type.\r\n\r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\n\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\n\r\nThis field is to be always transmitted in upper case."
           },
           "isGstApplicable": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST amount is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
             "nullable": true
@@ -2668,23 +2646,17 @@
             "$ref": "#/components/schemas/Currency"
           },
           "offerDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
       },
       "EncryptedLotHeaderAwexData": {
         "required": [
-          "encryptedLotHeaderAwexDataString",
-          "encryptionKeyIdentifier"
+          "encryptedLotHeaderAwexDataString"
         ],
         "type": "object",
         "properties": {
-          "encryptionKeyIdentifier": {
-            "maxLength": 80,
-            "minLength": 1,
-            "type": "string"
-          },
           "encryptedLotHeaderAwexDataString": {
             "minLength": 1,
             "type": "string",
@@ -2768,7 +2740,7 @@
           "ND"
         ],
         "type": "string",
-        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nIn Australia, Mulesing status is not applicable for Combinations/OMLs, Guidance reports and Scoured wool.It is also not transmitted for non\r\nYield certificates when transmitted independently e.g.Length and Strength.\r\n            \r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
+        "description": "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared"
       },
       "TestDetail": {
         "required": [
@@ -3292,7 +3264,7 @@
             "$ref": "#/components/schemas/CalibrationFlag"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           }
         },
         "additionalProperties": false
@@ -3433,8 +3405,6 @@
             "$ref": "#/components/schemas/LsCertType"
           },
           "isLsSampleSecured": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the LS-sample is secured.\r\n            \r\ntrue: secured\r\n            \r\nfalse: not secured"
           },
@@ -3465,7 +3435,7 @@
             "multipleOf": 0.1
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "stapleStrengthLowest25Percent": {
             "maximum": 99,
@@ -3604,10 +3574,10 @@
             "multipleOf": 0.1
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "factorLaserscanNumerator": {
             "maximum": 9999999999.999998,
@@ -3663,7 +3633,7 @@
           },
           "fibresMeasuredPercentage": {
             "maximum": 99.9999,
-            "minimum": -99.99999,
+            "minimum": -99.9999,
             "type": "number",
             "description": "Percentage of fibres measured for the measurement.",
             "format": "double",
@@ -3715,18 +3685,9 @@
         "additionalProperties": false
       },
       "BaleDescription": {
-        "required": [
-          "description"
-        ],
-        "type": "object",
-        "properties": {
-          "description": {
-            "maxLength": 15,
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false,
+        "maxLength": 15,
+        "minLength": 1,
+        "type": "string",
         "description": "This field is to be always transmitted in upper case."
       },
       "BaleIdentification": {
@@ -3924,24 +3885,12 @@
             "nullable": true
           },
           "errorCode": {
-            "$ref": "#/components/schemas/ErrorCode"
+            "type": "string",
+            "description": "The error code is defined by business rules to indicate the different types of errors.\r\n\r\nExamples of error code:\r\n \r\nDOXCT: Document originator does not match current transmitter.\"\r\n            \r\nINVTC: Invalid transfer config. All data rejected.\"\r\n\r\nINVFR: Invalid/missing FinalReceiverList record. All data rejected.\"\r\n            \r\nINVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.\"\r\n\r\nINVCR: Current receiver not awtm. All data rejected.\"\r\n\r\nINVDO: Invalid document originator code aaaaa. Data accepted.\"\r\n\r\nINVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.\"\r\n\r\nINVEX: Invalid excluded record.\"",
+            "nullable": true
           }
         },
         "additionalProperties": false
-      },
-      "ErrorCode": {
-        "enum": [
-          "DOXCT",
-          "INVTC",
-          "INVFR",
-          "INVAC",
-          "INVCR",
-          "INVDO",
-          "INVSO",
-          "INVEX"
-        ],
-        "type": "string",
-        "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
       },
       "WoolSaleRequestForData": {
         "required": [
@@ -3983,7 +3932,7 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "saleDateRequested": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "woolTypeGroup": {
             "$ref": "#/components/schemas/WoolTypeGroup"
@@ -4009,7 +3958,7 @@
           5
         ],
         "type": "integer",
-        "description": " Used to define the types of Catalogue. Only required for requesting Catalouge. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
+        "description": " Used to define the types of Catalogue. Only required for requesting Catalogue. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
         "format": "int32"
       },
       "ItemsToBeExcluded": {
@@ -4019,7 +3968,7 @@
           "interlotComponentBales",
           "baleIdentifications",
           "fibreDiameterHistograms",
-          "fibreDiameterHistogramDetails"
+          "fibreDiameterHistogramDetailMeasurements"
         ],
         "type": "string"
       },
@@ -4030,8 +3979,6 @@
         "type": "object",
         "properties": {
           "isUsingNetworkDateTime": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
           }

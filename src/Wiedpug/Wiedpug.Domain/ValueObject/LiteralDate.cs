@@ -29,12 +29,12 @@ namespace Wiedpug.Domain.ValueObject
     /// 
     /// saleDate: The date on which the wool was sold.
     /// 
-    /// coreTestSamplingDate: For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+    /// coreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
     /// 
     /// itemDate: The date the cost of the item was incurred.
     /// 
     /// </summary>  
-    public class UtcDate
+    public class LiteralDate
     {
         [DataType(DataType.Date)]
         [RegularExpression(RegexPattern.DATE_UTC_ISO8601)]

@@ -16,8 +16,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new Domain.Entities.TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2022-07-25"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2024-03-21"},
+                    DateFormatLastRevised = new LiteralDate{ Date="2022-07-25"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2024-03-21"},
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation { 
                                                 OrganisationCode = "AWX", },
@@ -39,7 +39,7 @@ namespace Wiedpug.API.ExampleResponses
                             SaleNumber = 18
                         },
                         OrganisationRequested = "AWNF",
-                        SaleDateRequested = new UtcDate{ Date="2023-10-31"},
+                        SaleDateRequested = new LiteralDate{ Date="2023-10-31"},
                         IsUsingNetworkDateTime = false,
                         WoolTypeGroup = Domain.Enums.WoolTypeGroup.MFLC,
                         Season = new Season{SeasonValue= 23}
@@ -61,8 +61,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new Domain.Entities.TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2022-07-25"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2024-03-21"},
+                        DateFormatLastRevised = new LiteralDate{ Date="2022-07-25"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2024-03-21"},
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         CurrentReceiver = new Organisation
                         {

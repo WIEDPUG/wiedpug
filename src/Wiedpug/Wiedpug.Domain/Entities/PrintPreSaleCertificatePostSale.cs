@@ -136,9 +136,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: not print.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
-        public bool? IsPrintingPrintTEAM3Hauteur { get; set; }
+        public bool? IsPrintingTeam3Hauteur { get; set; }
 
         /// <summary>
         /// Optional enum type for WOOLINK sale system.

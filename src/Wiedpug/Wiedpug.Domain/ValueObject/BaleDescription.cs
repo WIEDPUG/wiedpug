@@ -15,9 +15,8 @@ namespace Wiedpug.Domain.ValueObject
     /// </summary>
     public class BaleDescription
     {
-        [Required]
         [MinLength(1)]
         [MaxLength(15)]
-        public required string Description { get; set; }
+        public string? BaleDescriptionContent { get; set; }
     }
 }

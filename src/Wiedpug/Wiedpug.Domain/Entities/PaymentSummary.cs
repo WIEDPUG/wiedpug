@@ -35,7 +35,7 @@ namespace Wiedpug.Domain.Entities
         /// Required date field for the date payment was made.
         /// </summary>
         [Required]
-        public required UtcDate DatePaymentMade { get; set; }
+        public required LiteralDate DatePaymentMade { get; set; }
     }
 
 }

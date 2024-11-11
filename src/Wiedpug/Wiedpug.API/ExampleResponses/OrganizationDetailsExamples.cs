@@ -16,11 +16,11 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate
+                    DateFormatLastRevised = new LiteralDate
                     {
                         Date ="2020-07-15"
                     },
-                    DateTransmissionFileCreated = new UtcDate
+                    DateTransmissionFileCreated = new LiteralDate
                     {
                         Date ="2016-07-15"
                     },
@@ -44,7 +44,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWS",
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                        DateLastUpdated=new UtcDate{
+                        DateLastUpdated=new LiteralDate{
                                 Date="2020-010-15"
                             },
                         IndustryGroupId= IndustryGroupId.T,
@@ -98,7 +98,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "ABC",
                             },
                         NameOfOrganisation = "DEMO BUYER 1",
-                        DateLastUpdated= new UtcDate{ Date="2020-04-28" },
+                        DateLastUpdated= new LiteralDate{ Date="2020-04-28" },
                         IndustryGroupId= IndustryGroupId.E,
                         IsTransmitter= false
                     }
@@ -115,8 +115,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -138,7 +138,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "ABC",
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                        DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                        DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                         IndustryGroupId=IndustryGroupId.T,
                         IsTransmitter=true,
                         PhoneNumber= new PhoneNumber {
@@ -196,8 +196,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -218,7 +218,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "ABC",
                             },
                         NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                        DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                        DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                         IndustryGroupId= IndustryGroupId.E,
                         IsTransmitter=true,
                         PhoneNumber= new PhoneNumber {
@@ -276,8 +276,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -327,8 +327,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -357,7 +357,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWS",
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId= IndustryGroupId.E,
                             IsTransmitter=true,
                             PhoneNumber= new PhoneNumber {
@@ -410,7 +410,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "ABC",
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId= IndustryGroupId.E,
                             IsTransmitter= false
                         },
@@ -422,7 +422,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWS",
                             },
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId= IndustryGroupId.A,
                             IsTransmitter= true,
                             PhoneNumber= new PhoneNumber
@@ -488,8 +488,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -518,7 +518,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWT",
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId=IndustryGroupId.E,
                             IsTransmitter=true,
                             Abn = null,
@@ -573,7 +573,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "BY1",
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId= IndustryGroupId.E,
                             IsTransmitter= false
                         },
@@ -585,7 +585,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWS",
                             },
                             NameOfOrganisation = "AUSTRALIAN WOOL TESTING AUTH LTD",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId= IndustryGroupId.A,
                             IsTransmitter= true,
                             PhoneNumber= new PhoneNumber
@@ -651,8 +651,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -681,7 +681,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "AWT",
                             },
                             NameOfOrganisation = "AWTA - EDI TESTING BY EXTERNAL CLIENTS",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId=IndustryGroupId.T,
                             IsTransmitter=true,
                             PhoneNumber= new PhoneNumber {
@@ -734,7 +734,7 @@ namespace Wiedpug.API.ExampleResponses
                                                         OrganisationCode = "BY1",
                             },
                             NameOfOrganisation = "DEMO BUYER 1",
-                            DateLastUpdated=new UtcDate{Date="2020-04-28" },
+                            DateLastUpdated=new LiteralDate{Date="2020-04-28" },
                             IndustryGroupId= IndustryGroupId.E,
                             IsTransmitter= false
                         }

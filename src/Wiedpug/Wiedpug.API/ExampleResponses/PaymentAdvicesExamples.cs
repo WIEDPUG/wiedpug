@@ -20,8 +20,8 @@ namespace Wiedpug.API.ExampleResponses
                 {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -57,7 +57,7 @@ namespace Wiedpug.API.ExampleResponses
                     SaleNumber = 18
                 },
                                     CentreStorage = new Centre {CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A},
-                                    SaleDate = new UtcDate{ Date="2017-01-10"},
+                                    SaleDate = new LiteralDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     InvoicingOrganisation = new Organisation
@@ -75,7 +75,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                    DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency{ 
                                         Value = 0.245,
                                         CurrencyCode = CurrencyCode.AUD
@@ -99,7 +99,7 @@ namespace Wiedpug.API.ExampleResponses
                                 LastCostPaid =new Currency { Value = 67.00, CurrencyCode = CurrencyCode.AUD },
                                 DiscountAmount=new Currency { Value = 23.00, CurrencyCode = CurrencyCode.AUD },
                                 NetAmountPaid=new Currency { Value = 77.00, CurrencyCode = CurrencyCode.AUD },
-                                DatePaymentMade= new UtcDate{Date="2024-05-24" }
+                                DatePaymentMade= new LiteralDate{Date="2024-05-24" }
                             }
 
                     }
@@ -125,8 +125,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -168,8 +168,8 @@ namespace Wiedpug.API.ExampleResponses
                         {
                                                 TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -201,7 +201,7 @@ namespace Wiedpug.API.ExampleResponses
                     SaleNumber = 18
                 },
                                     CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.A },
-                                    SaleDate = new UtcDate{ Date="2017-01-10"},
+                                    SaleDate = new LiteralDate{ Date="2017-01-10"},
                                     WoolState = WoolState.A,
                                     PackType = PackType._2,
                                     InvoicingOrganisation = new Organisation
@@ -225,7 +225,7 @@ namespace Wiedpug.API.ExampleResponses
                                     StorageDescription = "45 MAIN ST",
                                     DiscountRate = 1.50,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                    DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value = 0.245,
@@ -253,7 +253,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 CurrencyCode =CurrencyCode.AUD
                                             },
                                 NetAmountPaid=new Currency { Value = 77.00, CurrencyCode = CurrencyCode.AUD },
-                                DatePaymentMade=new UtcDate{Date="2024-05-24" }
+                                DatePaymentMade=new LiteralDate{Date="2024-05-24" }
                             }
 
                     }

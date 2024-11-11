@@ -24,8 +24,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not use.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsUsingNetworkDateTime { get; set; }
     }    
 }

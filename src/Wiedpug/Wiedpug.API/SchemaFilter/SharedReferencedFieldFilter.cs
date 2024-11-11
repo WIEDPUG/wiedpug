@@ -15,7 +15,7 @@ public class SharedReferencedFieldSchemaFilter : ISchemaFilter
 {
     public void Apply(OpenApiSchema schema, SchemaFilterContext context)
     {
-        if (context.Type == typeof(UtcDate))
+        if (context.Type == typeof(LiteralDate))
         {
             // Clear any old schema properties, if necessary
             schema.Properties?.Clear();
@@ -25,9 +25,9 @@ public class SharedReferencedFieldSchemaFilter : ISchemaFilter
             schema.Required.Clear();
             schema.AdditionalPropertiesAllowed = false;
 
-            schema.Type = "string";  // Represent UtcDate as a string in OpenAPI
+            schema.Type = "string";  // Represent LiteralDate as a string in OpenAPI
             schema.Format = RegexPattern.DATE_UTC_ISO8601;  // Specify ISO 8601 UTC date format
-            schema.Description = "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).";
+            schema.Description = "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\n\ndateOfCreditNote: Date the Credit note was issued\n\ndateOfOriginalInvoice: Date of the original invoice\\ndateIssue: The date the certificate was issued.\n\ndateLastUpdated: The day the item was last amended.\n\nstatementDate: The period ending date of the statement.\n\nstatementPaymentDate: The date the payment was made.\n\ndatePaymentMade: Required date field for the date payment was made.\n\nsaleDate: The date on which the wool was sold.\n\ncoreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\n\nitemDate: The date the cost of the item was incurred.";
             schema.Example = new OpenApiString("2024-03-21");
         }
 
@@ -40,7 +40,7 @@ public class SharedReferencedFieldSchemaFilter : ISchemaFilter
             schema.AnyOf?.Clear();
             schema.AdditionalPropertiesAllowed = false;
 
-            schema.Type = "string";  // Represent UtcDate as a string in OpenAPI
+            schema.Type = "string";  // Represent LiteralDate as a string in OpenAPI
             schema.Format = RegexPattern.DATE_AND_TIME_UTC_ISO8601;  // Specify ISO 8601 UTC date format
             schema.Description = "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z";
             schema.Example = new OpenApiString("2024-03-21T19:25:04+00:00.000Z");
@@ -70,7 +70,7 @@ public class SharedReferencedFieldSchemaFilter : ISchemaFilter
             schema.AnyOf?.Clear();
             schema.AdditionalPropertiesAllowed = false;
 
-            schema.Type = "integer";  // Represent UtcDate as a string in OpenAPI
+            schema.Type = "integer";  // Represent LiteralDate as a string in OpenAPI
             schema.Format = "int32";  // Specify ISO 8601 UTC date format
             schema.Minimum = -9999;
             schema.Maximum = 9999;
@@ -85,10 +85,25 @@ public class SharedReferencedFieldSchemaFilter : ISchemaFilter
             schema.AnyOf?.Clear();
             schema.AdditionalPropertiesAllowed = false;
 
-            schema.Type = "integer";  // Represent UtcDate as a string in OpenAPI
+            schema.Type = "integer";  // Represent LiteralDate as a string in OpenAPI
             schema.Format = "int32";  // Specify ISO 8601 UTC date format
             schema.Minimum = -99;
             schema.Maximum = 99;
+        }
+
+        if (context.Type == typeof(BaleDescription))
+        {
+            // Clear any old schema properties, if necessary
+            schema.Properties?.Clear();
+            schema.AllOf?.Clear();
+            schema.OneOf?.Clear();
+            schema.AnyOf?.Clear();
+            schema.AdditionalPropertiesAllowed = false;
+
+            schema.Type = "string"; 
+            schema.MaxLength = 15;
+            schema.MinLength = 1;
+            schema.Description = "This field is to be always transmitted in upper case.";
         }
     }
 }

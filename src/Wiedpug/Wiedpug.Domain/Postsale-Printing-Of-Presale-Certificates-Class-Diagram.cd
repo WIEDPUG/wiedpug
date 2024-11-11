@@ -27,14 +27,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="7.25" Y="2.5" Width="1.75" />
+    <Position X="7.75" Y="4.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="7.25" Y="1.25" Width="1.5" />
+    <Position X="10.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>

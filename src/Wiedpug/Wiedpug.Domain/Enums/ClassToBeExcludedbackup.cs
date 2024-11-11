@@ -20,8 +20,6 @@ namespace Wiedpug.Domain.Enums
 
         BaleIdentification,
 
-        FibreDiameterHistogramHeader,
-
-        FibreDiameterHistogramDetails
+        FibreDiameterHistogramHeader
     }
 }

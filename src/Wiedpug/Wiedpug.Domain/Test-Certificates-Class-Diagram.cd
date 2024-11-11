@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="Wiedpug.Domain.Aggregates.TestCertificateAggregate.TestCertificates">
-    <Position X="25.5" Y="14.25" Width="2.75" />
+    <Position X="13.5" Y="6" Width="2.75" />
     <AssociationLine Name="TestCertificateDetails" Type="Wiedpug.Domain.Entities.TestCertificateDetail" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="26.875" Y="14.25" />
-        <Point X="26.875" Y="13.875" />
-        <Point X="25" Y="13.875" />
-        <Point X="25" Y="11.312" />
+        <Point X="15.5" Y="6.868" />
+        <Point X="15.5" Y="10.375" />
+        <Point X="23.125" Y="10.375" />
+        <Point X="23.125" Y="10.75" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-3.222" Y="2.17" />
@@ -26,7 +26,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="30.5" Y="14.25" Width="1.75" />
+    <Position X="13.5" Y="12" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
@@ -68,7 +68,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="26.5" Y="16.75" Width="1.5" />
+    <Position X="20.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>

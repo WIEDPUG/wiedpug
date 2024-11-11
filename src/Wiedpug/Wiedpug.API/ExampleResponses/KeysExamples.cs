@@ -49,6 +49,30 @@ namespace Wiedpug.API.ExampleResponses
             };
         }
     }
+
+    public class KeysResponse400ArrayRequestPayloadExample : IExamplesProvider<ApiErrorResult>
+    {
+        public ApiErrorResult GetExamples()
+        {
+            return new ApiErrorResult()
+            {
+                Type = "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                Title = "One or more validation errors occurred",
+                Status = StatusCodes.Status400BadRequest,
+                Detail = string.Empty,
+                Errors = new List<CustomError>
+                {   new CustomError
+                    {
+                        Errors = new Dictionary<string, string[]>
+                        {
+                            { "RequestBbody", ["The request body for public encrption key is required."] },
+                        }
+                    }
+                }
+            };
+        }
+    }
+
 }
 
 

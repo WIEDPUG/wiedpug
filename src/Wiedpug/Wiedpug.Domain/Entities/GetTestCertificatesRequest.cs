@@ -35,7 +35,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        public UtcDate? SaleDateRequested { get; set; }
+        public LiteralDate?  SaleDateRequested { get; set; }
 
         /// <summary>
         /// Date and Time value in ISO 8601 standard UTC format. e.g. 2024-03-21T19:25:04Z
@@ -54,8 +54,6 @@ namespace Wiedpug.Domain.Entities
         ///
         /// false: not use.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
         public bool? IsUsingNetworkDateTime { get; set; }
 
         [Required]

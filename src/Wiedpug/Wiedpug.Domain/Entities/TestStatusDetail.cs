@@ -46,28 +46,28 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        public UtcDate? CoreSampleReceived { get; set; }
+        public LiteralDate?  CoreSampleReceived { get; set; }
 
         /// <summary>
         /// Optional date field for when the L/S sample was received.
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        public UtcDate? LsSampleReceived { get; set; }
+        public LiteralDate?  LsSampleReceived { get; set; }
 
         /// <summary>
         /// Optional date field for when the TRV matched.
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        public UtcDate? TrvMatched { get; set; }
+        public LiteralDate?  TrvMatched { get; set; }
 
         /// <summary>
         /// Optional date field for core sample check test.
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        public UtcDate? CoreSampleCheckTest { get; set; }
+        public LiteralDate?  CoreSampleCheckTest { get; set; }
 
         /// <summary>
         /// Optional enum for L/S retuft required.
@@ -81,7 +81,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).  
         /// </summary>
-        public UtcDate? LsRetuftReceived { get; set; }
+        public LiteralDate?  LsRetuftReceived { get; set; }
 
         /// <summary>
         /// Optional enum for core test recore required.
@@ -93,7 +93,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Optional date field for when the core test recore was received.
         /// </summary>
-        public UtcDate? CoreTestRecoreReceived { get; set; }
+        public LiteralDate?  CoreTestRecoreReceived { get; set; }
     }
 
 

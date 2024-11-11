@@ -13,7 +13,7 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "0.0"
+    "version": "0.0.0"
   },
   "paths": {
     "/v0/postsale-printing-of-presale-certificates": {
@@ -454,10 +454,10 @@
         "type": "object",
         "properties": {
           "dateFormatLastRevised": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "dateTransmissionFileCreated": {
-            "$ref": "#/components/schemas/UtcDate"
+            "$ref": "#/components/schemas/LiteralDate"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"
@@ -489,9 +489,9 @@
         },
         "additionalProperties": false
       },
-      "UtcDate": {
+      "LiteralDate": {
         "type": "string",
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\n\ndateOfCreditNote: Date the Credit note was issued\n\ndateOfOriginalInvoice: Date of the original invoice\\ndateIssue: The date the certificate was issued.\n\ndateLastUpdated: The day the item was last amended.\n\nstatementDate: The period ending date of the statement.\n\nstatementPaymentDate: The date the payment was made.\n\ndatePaymentMade: Required date field for the date payment was made.\n\nsaleDate: The date on which the wool was sold.\n\ncoreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\n\nitemDate: The date the cost of the item was incurred.",
         "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
         "example": "2024-03-21"
       },
@@ -831,7 +831,7 @@
           8
         ],
         "type": "integer",
-        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA",
+        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA",
         "format": "int32"
       },
       "TransferConfig": {
@@ -919,9 +919,7 @@
           "printFlag": {
             "$ref": "#/components/schemas/PrintFlag"
           },
-          "isPrintingPrintTEAM3Hauteur": {
-            "maxLength": 5,
-            "minLength": 4,
+          "isPrintingTeam3Hauteur": {
             "type": "boolean",
             "description": "A boolean value to indicate whether to print Team3-Hauteur.\r\n\r\ntrue: print.\r\n\r\nfalse: not print.",
             "nullable": true
@@ -1259,24 +1257,12 @@
             "nullable": true
           },
           "errorCode": {
-            "$ref": "#/components/schemas/ErrorCode"
+            "type": "string",
+            "description": "The error code is defined by business rules to indicate the different types of errors.\r\n\r\nExamples of error code:\r\n \r\nDOXCT: Document originator does not match current transmitter.\"\r\n            \r\nINVTC: Invalid transfer config. All data rejected.\"\r\n\r\nINVFR: Invalid/missing FinalReceiverList record. All data rejected.\"\r\n            \r\nINVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.\"\r\n\r\nINVCR: Current receiver not awtm. All data rejected.\"\r\n\r\nINVDO: Invalid document originator code aaaaa. Data accepted.\"\r\n\r\nINVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.\"\r\n\r\nINVEX: Invalid excluded record.\"",
+            "nullable": true
           }
         },
         "additionalProperties": false
-      },
-      "ErrorCode": {
-        "enum": [
-          "DOXCT",
-          "INVTC",
-          "INVFR",
-          "INVAC",
-          "INVCR",
-          "INVDO",
-          "INVSO",
-          "INVEX"
-        ],
-        "type": "string",
-        "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
       },
       "RequestForData": {
         "required": [
@@ -1315,8 +1301,6 @@
         "type": "object",
         "properties": {
           "isUsingNetworkDateTime": {
-            "maxLength": 5,
-            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
           }

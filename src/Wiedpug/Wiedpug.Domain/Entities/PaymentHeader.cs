@@ -16,7 +16,7 @@ namespace Wiedpug.Domain.Entities
         /// The period ending date of the statement
         /// </summary>
         [Required]
-        public required UtcDate StatementDate { get; set; }
+        public required LiteralDate StatementDate { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -27,7 +27,7 @@ namespace Wiedpug.Domain.Entities
         /// The date the payment was made
         /// </summary>
         [Required]
-        public required UtcDate StatementPaymentDate { get; set; }
+        public required LiteralDate StatementPaymentDate { get; set; }
 
         [Required]
         [Range(-999999,999999)]

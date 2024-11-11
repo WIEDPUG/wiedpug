@@ -149,8 +149,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not secured
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsLsSampleSecured { get; set; }
 
         /// <summary>
@@ -178,7 +177,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
-        public required UtcDate DateIssued { get; set; }
+        public required LiteralDate DateIssued { get; set; }
 
         /// <summary>
         /// Average Staple Strength of the lowest 25% of staples measured for Strength.

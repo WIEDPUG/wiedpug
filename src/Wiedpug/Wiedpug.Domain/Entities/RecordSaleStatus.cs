@@ -31,8 +31,7 @@ namespace Wiedpug.Domain.Entities
         /// false: Transfers are not completed / Sale is not finalised.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool AreTransfersCompleted { get; set; }
     }
 

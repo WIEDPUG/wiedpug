@@ -138,8 +138,6 @@ namespace Wiedpug.Domain.Entities
         ///
         /// false: not print
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
         public bool? IsPrintingTeam3Hauteur { get; set; }
 
         /// <summary>
@@ -151,9 +149,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Note: For non-WOOLINK clients the request will be committed for processing regardless of this field.
         /// </summary>
-        [MinLength(1)]
-        [MaxLength(1)]
-        public bool? CommitCombinationOrOmlForProcessing { get; set; }
+        public bool? isCommitRequired { get; set; }
 
         public List<CertificateRequestDetail>? CertificateRequestDetails { get; set; }
     }

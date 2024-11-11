@@ -46,7 +46,7 @@ namespace Wiedpug.Domain.Entities
         /// The date on which the wool was sold.
         /// </summary>    
         [Required]
-        public required UtcDate SaleDate { get; set; }
+        public required LiteralDate SaleDate { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -121,8 +121,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: is not a final catalogue.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsFinalCatalogue { get; set; }
 
         /// <summary>
@@ -200,7 +199,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(15)]
         public string? StorageDescription { get; set; } // FIELD NUMBER 4 - Storage Description - Start: 8, Size: 15, Data Type: AN, Justification: L, Requirement Designator: O
 
-        public UtcDate? PaymentDueDate { get; set; }
+        public LiteralDate?  PaymentDueDate { get; set; }
 
         /// <summary>
         /// Total 4 digits with 2 digits after the decimal point. e.g. 23.76
@@ -214,7 +213,7 @@ namespace Wiedpug.Domain.Entities
         [Range(-99,99)]
         public int? MaximumDaysDiscount { get; set; } // FIELD NUMBER 7 - Maximum Days Discount - Start: 34, Size: 2, Data Type: N, Justification: R, Requirement Designator: M
 
-        public UtcDate? DateStorageChargeCommences { get; set; } // FIELD NUMBER 8 - Date Storage Charge Commences - Start: 36, Size: 6, Data Type: Date, Justification: F, Requirement Designator: M
+        public LiteralDate?  DateStorageChargeCommences { get; set; } // FIELD NUMBER 8 - Date Storage Charge Commences - Start: 36, Size: 6, Data Type: Date, Justification: F, Requirement Designator: M
 
         [MinLength(7)]
         [MaxLength(7)]
@@ -226,7 +225,7 @@ namespace Wiedpug.Domain.Entities
         [Range(-99.99,99.99)]
         public double? PenaltyInterestRate { get; set; } // FIELD NUMBER 10 - Penalty Interest Rate - Start: 46, Size: 4, Data Type: D2, Justification: R, Requirement Designator: M
 
-        public UtcDate? LotAvailableDate { get; set; } // FIELD NUMBER 11 - Lot Available Date - Start: 50, Size: 6, Data Type: Date, Justification: F, Requirement Designator: O
+        public LiteralDate?  LotAvailableDate { get; set; } // FIELD NUMBER 11 - Lot Available Date - Start: 50, Size: 6, Data Type: Date, Justification: F, Requirement Designator: O
 
         /// <summary>
         /// The total (extended) amount of Post Sale Charge Rebate for the Lot.
@@ -262,8 +261,7 @@ namespace Wiedpug.Domain.Entities
         /// 
         /// false: not display.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsReservePriceDisplayed { get; set; } // FIELD NUMBER 11 - Reserve Price Display Flag - Start: 37, Size: 1, Data Type: ID, Justification: F, Requirement Designator: O
 
         public UtcDateTime? TenderSaleReplyDateTime { get; set; }

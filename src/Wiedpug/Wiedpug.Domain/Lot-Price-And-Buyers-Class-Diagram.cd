@@ -15,7 +15,15 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.LotPriceAndBuyersAggregate.Lot" Collapsed="true">
-    <Position X="8.25" Y="3" Width="1.75" />
+    <Position X="8.25" Y="3.75" Width="1.75" />
+    <AssociationLine Name="WoolSaleHeaderLot" Type="Wiedpug.Domain.Entities.WoolSaleHeaderLot" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10" Y="4.218" />
+        <Point X="12.875" Y="4.218" />
+        <Point X="12.875" Y="5.75" />
+        <Point X="13.25" Y="5.75" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAABAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
       <FileName>Aggregates\LotPriceAndBuyersAggregate\Lot.cs</FileName>
@@ -29,35 +37,35 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransmissionHeader" Collapsed="true">
-    <Position X="11.75" Y="1.25" Width="2" />
+    <Position X="13" Y="1.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAQgAAAAAAAAAAAAAABAAgAQAAAAQA=</HashCode>
       <FileName>Entities\TransmissionHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.LotPriceAndBuyerDetail" Collapsed="true">
-    <Position X="8.25" Y="4.75" Width="2" />
+    <Position X="8.25" Y="5.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAgAAAAAAAAABAAAAACACAAAAAA=</HashCode>
       <FileName>Entities\LotPriceAndBuyerDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.RecordSaleStatus" Collapsed="true">
-    <Position X="12" Y="2.75" Width="1.5" />
+    <Position X="13.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAQABAAAAAA=</HashCode>
       <FileName>Entities\RecordSaleStatus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="5" Y="1.25" Width="1.5" />
+    <Position X="12.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.WoolSaleHeaderLot" Collapsed="true">
-    <Position X="4.75" Y="3" Width="1.75" />
+    <Position X="13.25" Y="5.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAgAAAQCSQEAAEBAxITEKCAAIACAQAAQAAExaUAggA=</HashCode>
       <FileName>Entities\WoolSaleHeaderLot.cs</FileName>

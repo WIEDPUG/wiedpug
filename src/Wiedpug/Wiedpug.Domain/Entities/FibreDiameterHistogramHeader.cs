@@ -67,20 +67,20 @@ namespace Wiedpug.Domain.Entities
         public double? MeanMaximum { get; set; } // FIELD NUMBER 15 - Mean Maximum - Start: 35, Size: 3, Data Type: D1, Justification: R, Requirement Designator: C
 
         /// <summary>
-        /// For records Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
+        /// For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested.
         /// 
         /// For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
         /// 
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        public UtcDate? CoreTestSamplingDate { get; set; } // FIELD NUMBER 16 - Core Test Sampling Date - Start: 38, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
+        public LiteralDate?  CoreTestSamplingDate { get; set; } // FIELD NUMBER 16 - Core Test Sampling Date - Start: 38, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: C
 
         /// The date the certificate was issued.
         /// 
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
-        public required UtcDate DateIssued { get; set; } // FIELD NUMBER 17 - Date Issued - Start: 44, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
+        public required LiteralDate DateIssued { get; set; } // FIELD NUMBER 17 - Date Issued - Start: 44, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
 
         /// <summary>
         /// Factor used in numerator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator

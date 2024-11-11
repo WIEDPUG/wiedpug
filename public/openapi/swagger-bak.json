@@ -179,6 +179,7 @@
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
+                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                                 "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                               },
                               "lotHeaderVendorDeclarations": [
@@ -286,7 +287,7 @@
                               "catalogueLotDescription": {
                                 "brand": "SALTBUSH/DOWNS",
                                 "baleDescription": {
-                                  "baleDescriptionContent": "AAAM"
+                                  "description": "AAAM"
                                 },
                                 "areaOfOrigin": "V11",
                                 "numberOfBales": {
@@ -304,7 +305,7 @@
                                   "interlotComponentBaleHeader": {
                                     "brand": "RC/FARMING",
                                     "baleDescription": {
-                                      "baleDescriptionContent": "AAAMLMS"
+                                      "description": "AAAMLMS"
                                     },
                                     "areaOfOrigin": "W14",
                                     "locationWithinStore": "Z1-33",
@@ -470,6 +471,7 @@
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
+                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                                 "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                               },
                               "lotHeaderVendorDeclarations": [
@@ -574,7 +576,7 @@
                               "catalogueLotDescription": {
                                 "brand": "SALTBUSH/DOWNS",
                                 "baleDescription": {
-                                  "baleDescriptionContent": "AAAM"
+                                  "description": "AAAM"
                                 },
                                 "areaOfOrigin": "V11",
                                 "numberOfBales": {
@@ -586,7 +588,7 @@
                                   "interlotComponentBaleHeader": {
                                     "brand": "RC/FARMING",
                                     "baleDescription": {
-                                      "baleDescriptionContent": "AAAMLMS"
+                                      "description": "AAAMLMS"
                                     },
                                     "areaOfOrigin": "W14",
                                     "locationWithinStore": "Z1-33",
@@ -867,6 +869,7 @@
                             "numberOfOverweightBales": 0
                           },
                           "encryptedLotHeaderAwexData": {
+                            "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                             "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                           },
                           "lotHeaderVendorDeclarations": [
@@ -1302,6 +1305,7 @@
                                 "numberOfOverweightBales": 0
                               },
                               "encryptedLotHeaderAwexData": {
+                                "encryptionKeyIdentifier": "123e4567-e89b-12d3-a456-426614174000",
                                 "encryptedLotHeaderAwexDataString": "IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ=="
                               },
                               "lotHeaderVendorDeclarations": [
@@ -1406,7 +1410,7 @@
                               "catalogueLotDescription": {
                                 "brand": "SALTBUSH/DOWNS",
                                 "baleDescription": {
-                                  "baleDescriptionContent": "AAAM"
+                                  "description": "AAAM"
                                 },
                                 "areaOfOrigin": "V11",
                                 "numberOfBales": {
@@ -1582,7 +1586,7 @@
                       "ageFrom": 12,
                       "ageTo": 23,
                       "darkAndMedullatedFibreRiskBroker": 1,
-                      "darkAndMedullatedFibreRisk": "D",
+                      "darkandMedullatedFibreRisk": "D",
                       "certificateIdentity": {
                         "certificateIdPrefix": 3,
                         "certificateIdNumber": 499,
@@ -1806,7 +1810,7 @@
                           "ageFrom": 12,
                           "ageTo": 23,
                           "darkAndMedullatedFibreRiskBroker": 1,
-                          "darkAndMedullatedFibreRisk": "D",
+                          "darkandMedullatedFibreRisk": "D",
                           "certificateIdentity": {
                             "certificateIdPrefix": 3,
                             "certificateIdNumber": 499,
@@ -2065,7 +2069,7 @@
                                   "baleHeader": {
                                     "brand": "ABCD",
                                     "baleDescription": {
-                                      "baleDescriptionContent": "bale description"
+                                      "description": "bale description"
                                     },
                                     "areaOfOrigin": "MELB"
                                   },
@@ -2359,7 +2363,7 @@
                                       "baleHeader": {
                                         "brand": "ABCD",
                                         "baleDescription": {
-                                          "baleDescriptionContent": "bale description"
+                                          "description": "bale description"
                                         },
                                         "areaOfOrigin": "MELB"
                                       },
@@ -2503,12 +2507,12 @@
         }
       }
     },
-    "/v0/keys/AwexData": {
+    "/v0/keys": {
       "post": {
         "tags": [
           "Keys"
         ],
-        "summary": "Upload the public encryption key for LotHeaderAwexData, return the encryption key id",
+        "summary": "Create or upload the public encryption key for LotHeaderAwexData, return the encryption key id",
         "operationId": "UploadKey",
         "requestBody": {
           "content": {
@@ -2551,8 +2555,12 @@
                   "errors": [
                     {
                       "errors": {
-                        "RequestBbody": [
-                          "The request body for public encrption key is required."
+                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                          "The field DateFormatLastRevised is required",
+                          "The field DateFormatLastRevised must match regulart expression pattern..."
+                        ],
+                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                          "The field CountryOfOrigin is required"
                         ]
                       }
                     }
@@ -2601,19 +2609,10 @@
                   "$ref": "#/components/schemas/ApiErrorResult"
                 },
                 "example": {
-                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
-                  "title": "One or more validation errors occurred",
-                  "status": 400,
-                  "detail": "",
-                  "errors": [
-                    {
-                      "errors": {
-                        "RequestBbody": [
-                          "The request body for public encrption key is required."
-                        ]
-                      }
-                    }
-                  ]
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
                 }
               }
             }
@@ -2635,13 +2634,25 @@
             }
           }
         }
-      },
+      }
+    },
+    "/v0/keys/{id}": {
       "get": {
         "tags": [
           "Keys"
         ],
-        "summary": "Retrieves the public encryption key for LotHeaderAwexData",
-        "operationId": "GetKeyForAwexData",
+        "summary": "Retrieves the public encryption key for LotHeaderAwexData by encryption key id",
+        "operationId": "GetKeyById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -2718,9 +2729,7 @@
             }
           }
         }
-      }
-    },
-    "/v0/keys/{id}": {
+      },
       "put": {
         "tags": [
           "Keys"
@@ -3105,7 +3114,7 @@
                               "baleHeader": {
                                 "brand": "FTT",
                                 "baleDescription": {
-                                  "baleDescriptionContent": "AAC"
+                                  "description": "AAC"
                                 },
                                 "areaOfOrigin": "Melbourne",
                                 "locationWithinStore": "AWTA LTD"
@@ -3481,7 +3490,7 @@
                                   "baleHeader": {
                                     "brand": "FTT",
                                     "baleDescription": {
-                                      "baleDescriptionContent": "AAC"
+                                      "description": "AAC"
                                     },
                                     "areaOfOrigin": "Melbourne",
                                     "locationWithinStore": "AWTA LTD"
@@ -7868,137 +7877,339 @@
                   "apiMessages": [],
                   "data": [
                     {
-                      "transmissionHeader": {
-                        "dateFormatLastRevised": "2020-07-15",
-                        "dateTransmissionFileCreated": "2016-01-17",
-                        "countryOfOrigin": "AU",
-                        "documentOriginator": {
-                          "organisationCode": "ATC"
+                        "transmissionHeader": {
+                            "abn": 43006014106,
+                            "countryOfOrigin": "AU",
+                            "currentReceiver": {
+                                "organisationCode": "AAA",
+                                "centre": {
+                                    "countryCode": "AU",
+                                    "centreCode": "S"
+                                }
+                            },
+                            "dateFormatLastRevised": "2024-08-05",
+                            "dateTransmissionFileCreated": "2024-09-16",
+                            "documentOriginator": {
+                                "organisationCode": "AWT",
+                                "centre": {
+                                    "countryCode": "AU",
+                                    "centreCode": "M"
+                                }
+                            },
+                            "softwareIdentifier": {
+                                "softwareCompany": 8
+                            },
+                            "versionNumber": 37
                         },
-                        "currentReceiver": {
-                          "organisationCode": "ATT"
+                        "statementHeader": {
+                            "client": {
+                                "organisationCode": "AAA",
+                                "centre": {
+                                    "countryCode": "AU",
+                                    "centreCode": "S"
+                                }
+                            },
+                            "clientCode": 59999,
+                            "openingBalances": [
+                                {
+                                    "balanceType": "Current",
+                                    "balanceValue": {
+                                        "value": 0,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "Thirty",
+                                    "balanceValue": {
+                                        "value": 9978.17,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "Sixty",
+                                    "balanceValue": {
+                                        "value": 0,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "Ninety",
+                                    "balanceValue": {
+                                        "value": 0,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "NinetyPlus",
+                                    "balanceValue": {
+                                        "value": 904.87,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "CR"
+                                }
+                            ],
+                            "statementDate": "2024-09-15"
                         },
-                        "versionNumber": 31,
-                        "softwareIdentifier": {
-                          "softwareCompany": 1,
-                          "softwareVersion": 1082,
-                          "programName": "NETR"
-                        },
-                        "abn": 72001967184
-                      },
-                      "statementHeader": {
-                        "client": {
-                          "organisationCode": "ATT"
-                        },
-                        "clientCode": 345678,
-                        "statementDate": "2024-03-21",
-                        "openingBalances": [
-                          {
-                            "balanceType": "Current",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 234.54,
-                              "currencyCode": "AUD"
+                        "statementDetails": [
+                            {
+                                "accountReference": "C99972",
+                                "amount": {
+                                    "value": 2750,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXX Dockets - XXXXX",
+                                "gstAmount": {
+                                    "value": 250,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-02"
+                            },
+                            {
+                                "accountReference": "399997226B1",
+                                "amount": {
+                                    "value": 67.16,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/AAAA",
+                                "gstAmount": {
+                                    "value": 6.11,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997803B7",
+                                "amount": {
+                                    "value": 67.16,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/EXSUPAA",
+                                "gstAmount": {
+                                    "value": 6.11,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997804L5",
+                                "amount": {
+                                    "value": 38.06,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/EXSUPAA",
+                                "gstAmount": {
+                                    "value": 3.46,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997805B2",
+                                "amount": {
+                                    "value": 66.22,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/SUPAAAA",
+                                "gstAmount": {
+                                    "value": 6.02,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997806L0",
+                                "amount": {
+                                    "value": 38.06,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/SUPAAAA",
+                                "gstAmount": {
+                                    "value": 3.46,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997807L8",
+                                "amount": {
+                                    "value": 38.06,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/AAAA",
+                                "gstAmount": {
+                                    "value": 3.46,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997808B6",
+                                "amount": {
+                                    "value": 61.82,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/AAAXB",
+                                "gstAmount": {
+                                    "value": 5.62,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997809L4",
+                                "amount": {
+                                    "value": 32.45,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/AAAXB",
+                                "gstAmount": {
+                                    "value": 2.95,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399997810B2",
+                                "amount": {
+                                    "value": 66.22,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/C/L",
+                                "gstAmount": {
+                                    "value": 6.02,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399998178B3",
+                                "amount": {
+                                    "value": 61.82,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/STN",
+                                "gstAmount": {
+                                    "value": 5.62,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-10"
+                            },
+                            {
+                                "accountReference": "399990294B4",
+                                "amount": {
+                                    "value": 69.03,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/SUP P/B",
+                                "gstAmount": {
+                                    "value": 6.28,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-11"
+                            },
+                            {
+                                "accountReference": "399990295L1",
+                                "amount": {
+                                    "value": 38.06,
+                                    "currencyCode": "AUD"
+                                },
+                                "amountType": 0,
+                                "clientsReference": "XXXXXXXXXXXXXX/SUP P/B",
+                                "gstAmount": {
+                                    "value": 3.46,
+                                    "currencyCode": "AUD"
+                                },
+                                "isCompanyAbnApplicable": true,
+                                "isGstApplicable": true,
+                                "itemDate": "2024-09-11"
                             }
-                          },
-                          {
-                            "balanceType": "Thirty",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 365.5,
-                              "currencyCode": "AUD"
-                            }
-                          },
-                          {
-                            "balanceType": "Sixty",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 566.78,
-                              "currencyCode": "AUD"
-                            }
-                          },
-                          {
-                            "balanceType": "Ninety",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 234.34,
-                              "currencyCode": "AUD"
-                            }
-                          },
-                          {
-                            "balanceType": "NinetyPlus",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 500.34,
-                              "currencyCode": "AUD"
-                            }
-                          }
-                        ]
-                      },
-                      "statementDetails": [
-                        {
-                          "clientsReference": "1234567890",
-                          "accountReference": "AWTA LED REFERENCE",
-                          "amount": {
-                            "value": 866.3,
-                            "currencyCode": "AUD"
-                          },
-                          "amountType": 0,
-                          "itemDate": "2024-04-23",
-                          "gstAmount": {
-                            "value": 134.3,
-                            "currencyCode": "AUD"
-                          },
-                          "isGstApplicable": true,
-                          "isCompanyAbnApplicable": true
+                        ],
+                        "statementTrailer": {
+                            "closingBalances": [
+                                {
+                                    "balanceType": "Current",
+                                    "balanceValue": {
+                                        "value": 3394.12,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "Thirty",
+                                    "balanceValue": {
+                                        "value": 9978.17,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "Sixty",
+                                    "balanceValue": {
+                                        "value": 0,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "Ninety",
+                                    "balanceValue": {
+                                        "value": 0,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "DR"
+                                },
+                                {
+                                    "balanceType": "NinetyPlus",
+                                    "balanceValue": {
+                                        "value": 904.87,
+                                        "currencyCode": "AUD"
+                                    },
+                                    "debitOrCreditType": "CR"
+                                }
+                            ]
                         }
-                      ],
-                      "statementTrailer": {
-                        "closingBalances": [
-                          {
-                            "balanceType": "Current",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 234.54,
-                              "currencyCode": "AUD"
-                            }
-                          },
-                          {
-                            "balanceType": "Thirty",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 365.5,
-                              "currencyCode": "AUD"
-                            }
-                          },
-                          {
-                            "balanceType": "Sixty",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 566.78,
-                              "currencyCode": "AUD"
-                            }
-                          },
-                          {
-                            "balanceType": "Ninety",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 234.34,
-                              "currencyCode": "AUD"
-                            }
-                          },
-                          {
-                            "balanceType": "NinetyPlus",
-                            "debitOrCreditType": "DR",
-                            "balanceValue": {
-                              "value": 500.34,
-                              "currencyCode": "AUD"
-                            }
-                          }
-                        ]
-                      }
                     }
-                  ]
+                ]
                 }
               }
             }
@@ -8722,7 +8933,7 @@
                         "balesCount": 2
                       },
                       "baleDescription": {
-                        "baleDescriptionContent": "AAA"
+                        "description": "AAA"
                       },
                       "woolBase": 60.43,
                       "mulesingStatusFrom": "ND",
@@ -8743,7 +8954,7 @@
                         "balesCount": 7
                       },
                       "baleDescription": {
-                        "baleDescriptionContent": "AAA"
+                        "description": "AAA"
                       },
                       "woolBase": 65.12,
                       "mulesingStatusFrom": "AA",
@@ -8764,7 +8975,7 @@
                         "balesCount": 8
                       },
                       "baleDescription": {
-                        "baleDescriptionContent": "PCA"
+                        "description": "PCA"
                       },
                       "woolBase": 50.31,
                       "mulesingStatusFrom": "NM",
@@ -8974,7 +9185,7 @@
                             "balesCount": 2
                           },
                           "baleDescription": {
-                            "baleDescriptionContent": "AAA"
+                            "description": "AAA"
                           },
                           "woolBase": 60.43,
                           "mulesingStatusFrom": "ND",
@@ -8995,7 +9206,7 @@
                             "balesCount": 7
                           },
                           "baleDescription": {
-                            "baleDescriptionContent": "AAA"
+                            "description": "AAA"
                           },
                           "woolBase": 65.12,
                           "mulesingStatusFrom": "AA",
@@ -9016,7 +9227,7 @@
                             "balesCount": 8
                           },
                           "baleDescription": {
-                            "baleDescriptionContent": "PCA"
+                            "description": "PCA"
                           },
                           "woolBase": 50.31,
                           "mulesingStatusFrom": "NM",
@@ -10024,7 +10235,7 @@
                         "isLengthAndStrengthTestRequired": false,
                         "isLengthOnlyTestRequired": true,
                         "isColourTestRequired": false,
-                        "laserscanTestRequired": "N",
+                        "isLaserscanTestRequired": true,
                         "isAirflowTestRequired": false,
                         "isOfdaTestRequired": true,
                         "isDarkAndMedullatedFibreTestRequired": false,
@@ -10120,7 +10331,7 @@
                         "isLengthAndStrengthTestRequired": false,
                         "isLengthOnlyTestRequired": false,
                         "isColourTestRequired": false,
-                        "laserscanTestRequired": "S",
+                        "isLaserscanTestRequired": false,
                         "isAirflowTestRequired": false,
                         "isOfdaTestRequired": false,
                         "isDarkAndMedullatedFibreTestRequired": true,
@@ -10405,7 +10616,7 @@
                             "isLengthAndStrengthTestRequired": false,
                             "isLengthOnlyTestRequired": true,
                             "isColourTestRequired": false,
-                            "laserscanTestRequired": "P",
+                            "isLaserscanTestRequired": true,
                             "isAirflowTestRequired": false,
                             "isOfdaTestRequired": true,
                             "isDarkAndMedullatedFibreTestRequired": false,
@@ -10501,7 +10712,7 @@
                             "isLengthAndStrengthTestRequired": false,
                             "isLengthOnlyTestRequired": false,
                             "isColourTestRequired": false,
-                            "laserscanTestRequired": "N",
+                            "isLaserscanTestRequired": false,
                             "isAirflowTestRequired": false,
                             "isOfdaTestRequired": false,
                             "isDarkAndMedullatedFibreTestRequired": true,
@@ -11571,12 +11782,14 @@
             "format": "int32"
           },
           "dateOfCreditNote": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "creditNoteAmount": {
             "$ref": "#/components/schemas/Currency"
           },
           "isGstApplicable": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST is aplicable.\r\n\r\ntrue: applicable.\r\n            \r\nfalse: not applicable."
           },
@@ -11594,7 +11807,7 @@
             "$ref": "#/components/schemas/CertificateIdentity"
           },
           "dateOfOriginalInvoice": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "certificateIdentityNew": {
             "$ref": "#/components/schemas/CertificateIdentity"
@@ -11750,9 +11963,17 @@
         "additionalProperties": false
       },
       "BaleDescription": {
-        "maxLength": 15,
-        "minLength": 1,
-        "type": "string",
+        "required": [
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
         "additionalProperties": false,
         "description": "This field is to be always transmitted in upper case."
       },
@@ -12018,7 +12239,7 @@
           5
         ],
         "type": "integer",
-        "description": " Used to define the types of Catalogue. Only required for requesting Catalogue. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
+        "description": " Used to define the types of Catalogue. Only required for requesting Catalouge. Not Applicable for other documents.<br />2: Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue Updates",
         "format": "int32"
       },
       "CatalogueType": {
@@ -12027,7 +12248,7 @@
           "P"
         ],
         "type": "string",
-        "description": "Used to define the type of catalogue\r\n\r\nA: Auction Catalogues\r\n\r\nP: Private Catalogues"
+        "description": "Used to define the type of catalogue"
       },
       "CatalogueWoolSaleHeaderLot": {
         "required": [
@@ -12500,11 +12721,15 @@
             "$ref": "#/components/schemas/AdditionalPrintRequirements"
           },
           "isPrintingTeam3Hauteur": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to print Team3-Hauteur\r\n            \r\ntrue: print\r\n            \r\nfalse: not print",
             "nullable": true
           },
-          "isCommitRequired": {
+          "commitCombinationOrOmlForProcessing": {
+            "maxLength": 1,
+            "minLength": 1,
             "type": "boolean",
             "description": "A boolean value to indicate whether to commit the combination/OML request for processing\r\n            \r\ntrue: Commit the combination/OML request for processing\r\n            \r\nfalse: Do not commit the combination/OML for processing (request will be available via WOOLINK for viewing/committing)\r\n            \r\nNote: For non-WOOLINK clients the request will be committed for processing regardless of this field.",
             "nullable": true
@@ -12741,7 +12966,7 @@
             "$ref": "#/components/schemas/CalibrationFlag"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           }
         },
         "additionalProperties": false
@@ -12873,7 +13098,7 @@
             "$ref": "#/components/schemas/InvoiceMassFlag"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           }
         },
         "additionalProperties": false
@@ -13363,9 +13588,7 @@
             "nullable": true
           },
           "errorCode": {
-            "type": "string",
-            "description": "The error code is defined by business rules to indicate the different types of errors.\r\n\r\nExamples of error code:\r\n \r\nDOXCT: Document originator does not match current transmitter.\"\r\n            \r\nINVTC: Invalid transfer config. All data rejected.\"\r\n\r\nINVFR: Invalid/missing FinalReceiverList record. All data rejected.\"\r\n            \r\nINVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.\"\r\n\r\nINVCR: Current receiver not awtm. All data rejected.\"\r\n\r\nINVDO: Invalid document originator code aaaaa. Data accepted.\"\r\n\r\nINVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.\"\r\n\r\nINVEX: Invalid excluded record.\"",
-            "nullable": true
+            "$ref": "#/components/schemas/ErrorCode"
           }
         },
         "additionalProperties": false
@@ -13430,14 +13653,20 @@
             "$ref": "#/components/schemas/DeclaredQualifierScale"
           },
           "isContactingWithExoticBreeds": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether it contact with exotic breeds.\r\n            \r\ntrue: contact with exotic breeds.\r\n            \r\nfalse: not contact with exotic breeds."
           },
           "isCrutched": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether it is crutched.\r\n\r\ntrue: crutched.\r\n            \r\nfalse: not crutched."
           },
           "isCrutchedWithin3MonthsOfShearing": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether crutching within 3 months of shearing.\r\n            \r\ntrue: yes.\r\n            \r\nfalse: no.",
             "nullable": true
@@ -13463,7 +13692,7 @@
           "darkAndMedullatedFibreRiskBroker": {
             "$ref": "#/components/schemas/DarkAndMedullatedFibreRiskBroker"
           },
-          "darkAndMedullatedFibreRisk": {
+          "darkandMedullatedFibreRisk": {
             "$ref": "#/components/schemas/DarkAndMedullatedFibreRisk"
           },
           "certificateIdentity": {
@@ -13710,14 +13939,20 @@
             "$ref": "#/components/schemas/CountermarkHeadmarkFlag"
           },
           "areRenumbersApplied": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to apply renumbers on bales. \r\n            \r\ntrue: apply renumbers.\r\n            \r\nfalse: not apply renumbers."
           },
           "areGrossWeightsApplied": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to apply Gross Weights on bales.\r\n            \r\ntrue: apply.\r\n            \r\nfalse: not apply."
           },
           "areNetWeightsApplied": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to apply Net Weights on bales.\r\n            \r\ntrue: apply\r\n            \r\nfalse: not apply"
           },
@@ -13898,10 +14133,10 @@
             "$ref": "#/components/schemas/PackMaterial"
           },
           "dateDeliveryRequired": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "datePickup": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           }
         },
         "additionalProperties": false
@@ -13997,17 +14232,23 @@
             "format": "double"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           }
         },
         "additionalProperties": false
       },
       "EncryptedLotHeaderAwexData": {
         "required": [
-          "encryptedLotHeaderAwexDataString"
+          "encryptedLotHeaderAwexDataString",
+          "encryptionKeyIdentifier"
         ],
         "type": "object",
         "properties": {
+          "encryptionKeyIdentifier": {
+            "maxLength": 80,
+            "minLength": 1,
+            "type": "string"
+          },
           "encryptedLotHeaderAwexDataString": {
             "minLength": 1,
             "type": "string",
@@ -14015,6 +14256,20 @@
           }
         },
         "additionalProperties": false
+      },
+      "ErrorCode": {
+        "enum": [
+          "DOXCT",
+          "INVTC",
+          "INVFR",
+          "INVAC",
+          "INVCR",
+          "INVDO",
+          "INVSO",
+          "INVEX"
+        ],
+        "type": "string",
+        "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
       },
       "FibreDiameterHistogram": {
         "type": "object",
@@ -14048,7 +14303,7 @@
           },
           "fibresMeasuredPercentage": {
             "maximum": 99.9999,
-            "minimum": -99.9999,
+            "minimum": -99.99999,
             "type": "number",
             "description": "Percentage of fibres measured for the measurement.",
             "format": "double"
@@ -14142,10 +14397,10 @@
             "nullable": true
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "factorLaserscanNumerator": {
             "maximum": 9999999999.999998,
@@ -14201,6 +14456,8 @@
             "$ref": "#/components/schemas/UtcDateTime"
           },
           "isUsingNetworkDateTime": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to use network datetime.\r\n            \r\ntrue: use network datetime.\r\n            \r\nfalse: not use.",
             "nullable": true
@@ -14315,7 +14572,7 @@
           "interlotComponentBales",
           "baleIdentifications",
           "fibreDiameterHistograms",
-          "fibreDiameterHistogramDetailMeasurements"
+          "fibreDiameterHistogramDetails"
         ],
         "type": "string"
       },
@@ -14329,15 +14586,6 @@
         "type": "integer",
         "description": "The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority",
         "format": "int32"
-      },
-      "LaserscanTestRequired": {
-        "enum": [
-          "N",
-          "S",
-          "P"
-        ],
-        "type": "string",
-        "description": "Note: A “Y” or space in this field will default to “S” when transmitting to AWTA Ltd.<br />N: Laserscan Test is not required<br />S: Standard Laserscan Test is required<br />P: Premium Laserscan Test is required"
       },
       "LengthAfterCardingTestDetail": {
         "required": [
@@ -14518,6 +14766,8 @@
             "$ref": "#/components/schemas/LsCertType"
           },
           "isLsSampleSecured": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the LS-sample is secured.\r\n            \r\ntrue: secured\r\n            \r\nfalse: not secured"
           },
@@ -14546,7 +14796,7 @@
             "nullable": true
           },
           "dateIssued": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "stapleStrengthLowest25Percent": {
             "maximum": 99,
@@ -14566,13 +14816,6 @@
         ],
         "type": "string",
         "description": "L: Length And Strength Test Detail<br />K: Length And Strength Combination Test Detail"
-      },
-      "LiteralDate": {
-        "type": "string",
-        "additionalProperties": false,
-        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\n\ndateOfCreditNote: Date the Credit note was issued\n\ndateOfOriginalInvoice: Date of the original invoice\\ndateIssue: The date the certificate was issued.\n\ndateLastUpdated: The day the item was last amended.\n\nstatementDate: The period ending date of the statement.\n\nstatementPaymentDate: The date the payment was made.\n\ndatePaymentMade: Required date field for the date payment was made.\n\nsaleDate: The date on which the wool was sold.\n\ncoreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\n\nitemDate: The date the cost of the item was incurred.",
-        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
-        "example": "2024-03-21"
       },
       "Lot": {
         "required": [
@@ -14635,6 +14878,8 @@
             "nullable": true
           },
           "isNoLot": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the lot is included for sale in the auction.\r\n\r\nIt is used in New Zealand only.\r\n\r\ntrue: normal Lot.\r\n\r\nfalse: not a normal Lot.",
             "nullable": true
@@ -14697,7 +14942,7 @@
             "$ref": "#/components/schemas/PackCondition"
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "woolDescriptionComment": {
             "maxLength": 14,
@@ -14713,6 +14958,8 @@
             "description": "This field contains a description that is either an AWEX-ID description or another appraisal description.\r\n\r\nAlternative valid appraisal descriptions include AWC type, Exporter type.\r\n\r\nThe AWEX-ID description must conform to the current AWEX-ID code standard.\r\n\r\nIf sending an AWC type, the first character of this field must be set to `W`, followed by the AWC Type, for all other non AWEX-ID typing descriptions the first character should be set to `P` followed by the type.If sending AWEX-ID the type starts from position one of the field (i.e.there are no leading characters). \r\n\r\nThis field is to be always transmitted in upper case."
           },
           "isGstApplicable": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST amount is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
             "nullable": true
@@ -14821,7 +15068,7 @@
             "$ref": "#/components/schemas/Currency"
           },
           "offerDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           }
         },
         "additionalProperties": false
@@ -15212,7 +15459,7 @@
           "ND"
         ],
         "type": "string",
-        "description": "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared"
+        "description": "Note: Blank will be transmitted if the certificate was issued prior to 21st July, 2008 or if the transmission was outside Australia.\r\n\r\nIn Australia, Mulesing status is not applicable for Combinations/OMLs, Guidance reports and Scoured wool.It is also not transmitted for non\r\nYield certificates when transmitted independently e.g.Length and Strength.\r\n            \r\nFrom:\r\n\r\nThe current value that the Mulesing Status is to be changed from\r\n\r\nTo:\r\n            \r\nThe new value that the Mulesing Status is to be changed to.\r\n\r\nTo obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd"
       },
       "Name": {
         "type": "object",
@@ -15343,12 +15590,14 @@
             "description": "he name of a person or organisation.\r\nContact – Name of a person in the organisation that can be contacted for further information.\r\nOrganisation – the name of the organisation."
           },
           "dateLastUpdated": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "industryGroupId": {
             "$ref": "#/components/schemas/IndustryGroupId"
           },
           "isTransmitter": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the organisation transmits or receives data electronically.\r\n\r\ntrue: The organisation transmits or receives data electronically. \r\n\r\nfalse: The organisation neither transmits nor receives data electronically."
           },
@@ -15581,7 +15830,7 @@
         "type": "object",
         "properties": {
           "statementDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "accountReference": {
             "maxLength": 11,
@@ -15623,13 +15872,13 @@
             "format": "int32"
           },
           "statementDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "amountRemitted": {
             "$ref": "#/components/schemas/Currency"
           },
           "statementPaymentDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "bankBsbNumber": {
             "maximum": 999999,
@@ -15671,7 +15920,7 @@
             "$ref": "#/components/schemas/Currency"
           },
           "datePaymentMade": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           }
         },
         "additionalProperties": false
@@ -15785,7 +16034,9 @@
           "printFlag": {
             "$ref": "#/components/schemas/PrintFlag"
           },
-          "isPrintingTeam3Hauteur": {
+          "isPrintingPrintTEAM3Hauteur": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to print Team3-Hauteur.\r\n\r\ntrue: print.\r\n\r\nfalse: not print.",
             "nullable": true
@@ -15886,6 +16137,8 @@
             "format": "int32"
           },
           "areTransfersCompleted": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the transfers are completed / Sale is finalised. \r\n\r\ntrue: Transfers are completed / Sale is finalised.\r\n\r\nfalse: Transfers are not completed / Sale is not finalised."
           }
@@ -16101,7 +16354,7 @@
           8
         ],
         "type": "integer",
-        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA",
+        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA",
         "format": "int32"
       },
       "SoftwareIdentifier": {
@@ -16185,16 +16438,20 @@
             "$ref": "#/components/schemas/AmountType"
           },
           "itemDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "gstAmount": {
             "$ref": "#/components/schemas/Currency"
           },
           "isGstApplicable": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST amount is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable."
           },
           "isCompanyAbnApplicable": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable."
           }
@@ -16220,7 +16477,7 @@
             "format": "int32"
           },
           "statementDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "openingBalances": {
             "type": "array",
@@ -16705,11 +16962,15 @@
             "$ref": "#/components/schemas/Currency"
           },
           "isGstApplicable": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the GST is aplicable.\r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
             "nullable": true
           },
           "isCompanyAbnApplicable": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
             "nullable": true
@@ -16921,7 +17182,7 @@
             "$ref": "#/components/schemas/Weight"
           },
           "coreTestSamplingDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "coresPerBale": {
             "maximum": 99,
@@ -16940,6 +17201,8 @@
             "nullable": true
           },
           "isPreviousDataToBeUpdated": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether data sent on a previous transmission is to be updated by data in the current transmission.\r\n\r\ntrue: Update previous data.\r\n\r\nfalse: Do not update previous data."
           },
@@ -16951,44 +17214,64 @@
             "format": "int32"
           },
           "isYieldAndMicronTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Yield And Laserscan Test is required.\r\n\r\ntrue: Yield And Laserscan Test is required.\r\n\r\nfalse: Yield And Laserscan Test is not required.",
             "nullable": true
           },
           "isLengthAndStrengthTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Length And Strength Test is required.\r\n\r\ntrue: Length And Strength Test is required.\r\n\r\nfalse: Length And Strength Test is not required.",
             "nullable": true
           },
           "isLengthOnlyTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Length Only Test is required.\r\n\r\ntrue: Length Only Test is required.\r\n\r\nfalse: Length Only Test is not required.",
             "nullable": true
           },
           "isColourTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Colour Test is required.\r\n\r\ntrue: Colour Test is required.\r\n\r\nfalse: Colour Test is not required.",
             "nullable": true
           },
-          "laserscanTestRequired": {
-            "$ref": "#/components/schemas/LaserscanTestRequired"
+          "isLaserscanTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Laserscan Test is required.\r\n\r\ntrue: Laserscan Test is required.\r\n\r\nfalse: Laserscan Test is not required.",
+            "nullable": true
           },
           "isAirflowTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Airflow Test is required.\r\n\r\ntrue: Airflow Test is required.\r\n\r\nfalse: Airflow Test is not required.",
             "nullable": true
           },
           "isOfdaTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether OFDA Test is required.\r\n\r\ntrue: OFDA Test is required.\r\n\r\nfalse: OFDA Test is not required.",
             "nullable": true
           },
           "isDarkAndMedullatedFibreTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Dark And Medullated Fibre Test is required.\r\n\r\ntrue: Dark And Medullated Fibre Test is required.\r\n\r\nfalse: Dark And Medullated Fibre Test is not required.",
             "nullable": true
           },
           "isPesticideResidueTestRequired": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether Pesticide Residue Test is required.\r\n\r\ntrue: Pesticide Residue Test is required.\r\n\r\nfalse: Pesticide Residue Test is not required.",
             "nullable": true
@@ -17154,28 +17437,28 @@
             "$ref": "#/components/schemas/LsSampleId"
           },
           "coreSampleReceived": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "lsSampleReceived": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "trvMatched": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "coreSampleCheckTest": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "lsRetuftRequired": {
             "$ref": "#/components/schemas/LsRetuftRequired"
           },
           "lsRetuftReceived": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "coreTestRecoreRequired": {
             "$ref": "#/components/schemas/CoreTestRecoreRequired"
           },
           "coreTestRecoreReceived": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           }
         },
         "additionalProperties": false
@@ -17289,10 +17572,10 @@
         "type": "object",
         "properties": {
           "dateFormatLastRevised": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "dateTransmissionFileCreated": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "countryOfOrigin": {
             "$ref": "#/components/schemas/CountryCode"
@@ -17340,11 +17623,20 @@
         "type": "object",
         "properties": {
           "isUsingNetworkDateTime": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
           }
         },
         "additionalProperties": false
+      },
+      "UtcDate": {
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
       },
       "UtcDateTime": {
         "type": "string",
@@ -17490,7 +17782,7 @@
             "$ref": "#/components/schemas/Centre"
           },
           "saleDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "woolState": {
             "$ref": "#/components/schemas/WoolState"
@@ -17524,6 +17816,8 @@
             "$ref": "#/components/schemas/CatalogueSection"
           },
           "isFinalCatalogue": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether the related section of the catalogue transmission is expected to have more amendments transmitted or is the final transmission for that section.\r\n\r\ntrue: is a final catalogue.\r\n\r\nfalse: is not a final catalogue.",
             "nullable": true
@@ -17563,7 +17857,7 @@
             "nullable": true
           },
           "paymentDueDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "discountRate": {
             "maximum": 99.99,
@@ -17582,7 +17876,7 @@
             "nullable": true
           },
           "dateStorageChargeCommences": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "storageChargePerBalePerDay": {
             "$ref": "#/components/schemas/StorageChargeCurrency"
@@ -17596,7 +17890,7 @@
             "nullable": true
           },
           "lotAvailableDate": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "postSaleChargeRebate": {
             "$ref": "#/components/schemas/Currency"
@@ -17620,6 +17914,8 @@
             "nullable": true
           },
           "isReservePriceDisplayed": {
+            "maxLength": 5,
+            "minLength": 4,
             "type": "boolean",
             "description": "A boolean value to indicate whether to display reserve price to buyers.\r\n\r\ntrue: display.\r\n\r\nfalse: not display.",
             "nullable": true
@@ -17670,7 +17966,7 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "saleDateRequested": {
-            "$ref": "#/components/schemas/LiteralDate"
+            "$ref": "#/components/schemas/UtcDate"
           },
           "woolTypeGroup": {
             "$ref": "#/components/schemas/WoolTypeGroup"

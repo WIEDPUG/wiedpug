@@ -17,8 +17,8 @@ namespace Wiedpug.API.ExampleResponses
                 new PaymentConfirmation() {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -42,8 +42,8 @@ namespace Wiedpug.API.ExampleResponses
                         PaymentHeader = new PaymentHeader
                         {
                             ClientCode= 55674,
-                            StatementDate= new UtcDate{Date="2024-05-11" },
-                            StatementPaymentDate=new UtcDate{Date="2024-06-01" },
+                            StatementDate= new LiteralDate{Date="2024-05-11" },
+                            StatementPaymentDate=new LiteralDate{Date="2024-06-01" },
                             BankAccountNumber= 456735,
                             BankBsbNumber=335567,
                             AmountRemitted = new Currency{
@@ -62,7 +62,7 @@ namespace Wiedpug.API.ExampleResponses
                         PaymentDetails = new List<PaymentDetail> {
                             new PaymentDetail
                             {
-                                StatementDate=new UtcDate{Date="2024-05-12" },
+                                StatementDate=new LiteralDate{Date="2024-05-12" },
                                 Amount=new Currency{
                                                 Value = 723.23,
                                                 CurrencyCode =CurrencyCode.AUD
@@ -87,8 +87,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -129,8 +129,8 @@ namespace Wiedpug.API.ExampleResponses
                     new PaymentConfirmation {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -154,8 +154,8 @@ namespace Wiedpug.API.ExampleResponses
                         PaymentHeader = new PaymentHeader
                         {
                             ClientCode= 223350,
-                            StatementDate= new UtcDate{Date="2024-05-11" },
-                            StatementPaymentDate=new UtcDate{Date="2024-06-01" },
+                            StatementDate= new LiteralDate{Date="2024-05-11" },
+                            StatementPaymentDate=new LiteralDate{Date="2024-06-01" },
                             BankAccountNumber= 456735,
                             BankBsbNumber=335567,
                             AmountRemitted = new Currency{
@@ -168,7 +168,7 @@ namespace Wiedpug.API.ExampleResponses
                         PaymentDetails = new List<PaymentDetail> {
                             new PaymentDetail
                             {
-                                StatementDate=new UtcDate{Date="2024-05-12" },
+                                StatementDate=new LiteralDate{Date="2024-05-12" },
                                 Amount=new Currency { Value = 693.00, CurrencyCode = CurrencyCode.AUD },
                                 AccountReference="12345678901",
                                 PaymentType=PaymentType.Paid

@@ -19,8 +19,8 @@ namespace Wiedpug.API.ExampleResponses
                 new TestStatus {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -55,9 +55,9 @@ namespace Wiedpug.API.ExampleResponses
                             Number = 88568,
                             CheckDigit = 8
                         },
-                        CoreSampleReceived = new UtcDate{Date="2024-04-23"},
-                        LsSampleReceived = new UtcDate{Date="2024-04-24"},
-                        TrvMatched = new UtcDate{Date="2024-04-24"},
+                        CoreSampleReceived = new LiteralDate{Date="2024-04-23"},
+                        LsSampleReceived = new LiteralDate{Date="2024-04-24"},
+                        TrvMatched = new LiteralDate{Date="2024-04-24"},
                         LsRetuftRequired = LsRetuftRequired.Required
                     },
                     new TestStatusDetail {
@@ -73,9 +73,9 @@ namespace Wiedpug.API.ExampleResponses
                             Number = 86573,
                             CheckDigit = 4
                         },
-                        CoreSampleReceived = new UtcDate{Date="2024-04-23"},
-                        LsSampleReceived = new UtcDate{Date="2024-04-24"},
-                        TrvMatched = new UtcDate{Date="2024-04-24"}
+                        CoreSampleReceived = new LiteralDate{Date="2024-04-23"},
+                        LsSampleReceived = new LiteralDate{Date="2024-04-24"},
+                        TrvMatched = new LiteralDate{Date="2024-04-24"}
                     }
                 }
                 }
@@ -94,8 +94,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -136,8 +136,8 @@ namespace Wiedpug.API.ExampleResponses
                     new TestStatus {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -172,9 +172,9 @@ namespace Wiedpug.API.ExampleResponses
                             Number = 88568,
                             CheckDigit = 8
                         },
-                        CoreSampleReceived = new UtcDate{Date="2024-04-23"},
-                        LsSampleReceived = new UtcDate{Date="2024-04-24"},
-                        TrvMatched = new UtcDate{Date="2024-04-24"},
+                        CoreSampleReceived = new LiteralDate{Date="2024-04-23"},
+                        LsSampleReceived = new LiteralDate{Date="2024-04-24"},
+                        TrvMatched = new LiteralDate{Date="2024-04-24"},
                         LsRetuftRequired = LsRetuftRequired.Required
                     },
                     new TestStatusDetail {
@@ -190,9 +190,9 @@ namespace Wiedpug.API.ExampleResponses
                             Number = 86573,
                             CheckDigit = 4
                         },
-                        CoreSampleReceived = new UtcDate{Date="2024-04-23"},
-                        LsSampleReceived = new UtcDate{Date="2024-04-24"},
-                        TrvMatched = new UtcDate{Date="2024-04-24"}
+                        CoreSampleReceived = new LiteralDate{Date="2024-04-23"},
+                        LsSampleReceived = new LiteralDate{Date="2024-04-24"},
+                        TrvMatched = new LiteralDate{Date="2024-04-24"}
                     }
                     }
                 }

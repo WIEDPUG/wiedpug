@@ -4,9 +4,9 @@
     <Position X="5.25" Y="3.5" Width="2" />
     <AssociationLine Name="Confirmations" Type="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.Confirmation" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.25" Y="3.982" />
-        <Point X="3.25" Y="3.982" />
-        <Point X="3.25" Y="5.5" />
+        <Point X="7.25" Y="3.688" />
+        <Point X="11.75" Y="3.688" />
+        <Point X="11.75" Y="6.25" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
         <Position X="-1.953" Y="1.831" Height="0.182" Width="1.264" />
@@ -25,7 +25,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wiedpug.Domain.Aggregates.PaymentConfirmationAggregate.Confirmation" Collapsed="true">
-    <Position X="1.5" Y="5.5" Width="2" />
+    <Position X="10" Y="6.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Aggregates\PaymentConfirmationAggregate\Confirmation.cs</FileName>
@@ -45,21 +45,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PaymentDetail" Collapsed="true">
-    <Position X="2.5" Y="7.25" Width="1.5" />
+    <Position X="11" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAIAAAAQAACACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PaymentDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.PaymentHeader" Collapsed="true">
-    <Position X="1" Y="3.75" Width="1.5" />
+    <Position X="6.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CABAAAAgAAAAAAAAAIAEAAAACAAABCAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PaymentHeader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wiedpug.Domain.Entities.TransferConfig" Collapsed="true">
-    <Position X="3.75" Y="1.5" Width="1.5" />
+    <Position X="9.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Entities\TransferConfig.cs</FileName>

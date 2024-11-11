@@ -20,7 +20,7 @@ namespace Wiedpug.Domain.Entities
         /// The period ending date of the statement
         /// </summary>
         [Required]
-        public required UtcDate StatementDate { get; set; }
+        public required LiteralDate StatementDate { get; set; }
 
         [Required]
         public required List<Balance> OpeningBalances { get; set; }

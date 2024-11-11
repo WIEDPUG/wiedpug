@@ -10,7 +10,7 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: "0.0"
+  version: 0.0.0
 paths:
   /v0/catalogues:
     post:
@@ -127,7 +127,6 @@ paths:
                               isGstApplicable: true
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
-                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                               encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: NM
@@ -203,8 +202,7 @@ paths:
                                   dateIssued: 2017-01-10
                             catalogueLotDescription:
                               brand: SALTBUSH/DOWNS
-                              baleDescription:
-                                description: AAAM
+                              baleDescription: AAAM
                               areaOfOrigin: V11
                               numberOfBales: 8
                             baleIdentifications:
@@ -213,8 +211,7 @@ paths:
                             interlotComponentBales:
                               - interlotComponentBaleHeader:
                                   brand: RC/FARMING
-                                  baleDescription:
-                                    description: AAAMLMS
+                                  baleDescription: AAAMLMS
                                   areaOfOrigin: W14
                                   locationWithinStore: Z1-33
                                   numberOfBales: 2
@@ -319,7 +316,6 @@ paths:
                               isGstApplicable: true
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
-                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                               encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: AA
@@ -394,15 +390,13 @@ paths:
                                   dateIssued: 2017-01-10
                             catalogueLotDescription:
                               brand: SALTBUSH/DOWNS
-                              baleDescription:
-                                description: AAAM
+                              baleDescription: AAAM
                               areaOfOrigin: V11
                               numberOfBales: 8
                             interlotComponentBales:
                               - interlotComponentBaleHeader:
                                   brand: RC/FARMING
-                                  baleDescription:
-                                    description: AAAMLMS
+                                  baleDescription: AAAMLMS
                                   areaOfOrigin: W14
                                   locationWithinStore: Z1-33
                                   numberOfBales: 2
@@ -584,7 +578,6 @@ paths:
                           isGstApplicable: true
                           numberOfOverweightBales: 0
                         encryptedLotHeaderAwexData:
-                          encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                           encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                         lotHeaderVendorDeclarations:
                           - mulesingStatus: AA
@@ -875,7 +868,6 @@ paths:
                               woolDescription: MF6S
                               numberOfOverweightBales: 0
                             encryptedLotHeaderAwexData:
-                              encryptionKeyIdentifier: 123e4567-e89b-12d3-a456-426614174000
                               encryptedLotHeaderAwexDataString: IHsiYXdleElkIjogIk1GNlMiLCJhcHByYWlzZXJJZCI6ICI5OTE5MiIsImNsYXNzZXJzUmVnaXN0ZXJlZE51bWJlciI6ICI5OTg5MjEifQ==
                             lotHeaderVendorDeclarations:
                               - mulesingStatus: M
@@ -950,8 +942,7 @@ paths:
                                   dateIssued: 2017-01-10
                             catalogueLotDescription:
                               brand: SALTBUSH/DOWNS
-                              baleDescription:
-                                description: AAAM
+                              baleDescription: AAAM
                               areaOfOrigin: V11
                               numberOfBales: 8
         "204":
@@ -1068,7 +1059,7 @@ paths:
                     ageFrom: 12
                     ageTo: 23
                     darkAndMedullatedFibreRiskBroker: 1
-                    darkandMedullatedFibreRisk: D
+                    darkAndMedullatedFibreRisk: D
                     certificateIdentity:
                       certificateIdPrefix: 3
                       certificateIdNumber: 499
@@ -1219,7 +1210,7 @@ paths:
                         ageFrom: 12
                         ageTo: 23
                         darkAndMedullatedFibreRiskBroker: 1
-                        darkandMedullatedFibreRisk: D
+                        darkAndMedullatedFibreRisk: D
                         certificateIdentity:
                           certificateIdPrefix: 3
                           certificateIdNumber: 499
@@ -1390,8 +1381,7 @@ paths:
                             bales:
                               - baleHeader:
                                   brand: ABCD
-                                  baleDescription:
-                                    description: bale description
+                                  baleDescription: bale description
                                   areaOfOrigin: MELB
                                 baleDetails:
                                   - baleNumber: "12345"
@@ -1575,8 +1565,7 @@ paths:
                                 bales:
                                   - baleHeader:
                                       brand: ABCD
-                                      baleDescription:
-                                        description: bale description
+                                      baleDescription: bale description
                                       areaOfOrigin: MELB
                                     baleDetails:
                                       - baleNumber: "12345"
@@ -1662,12 +1651,12 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-  /v0/keys:
+  /v0/keys/AwexData:
     post:
       tags:
         - Keys
-      summary: Create or upload the public encryption key for LotHeaderAwexData,
-        return the encryption key id
+      summary: Upload the public encryption key for LotHeaderAwexData, return the
+        encryption key id
       operationId: UploadKey
       requestBody:
         content:
@@ -1699,12 +1688,8 @@ paths:
                 detail: ""
                 errors:
                   - errors:
-                      Requests[0].TransmissionHeader.DateFormatLastRevised:
-                        - The field DateFormatLastRevised is required
-                        - The field DateFormatLastRevised must match regulart
-                          expression pattern...
-                      Requests[0].TransmissionHeader.CountryOfOrigin:
-                        - The field CountryOfOrigin is required
+                      RequestBbody:
+                        - The request body for public encrption key is required.
         "401":
           description: Unauthorized
           content:
@@ -1734,10 +1719,14 @@ paths:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
               example:
-                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
-                title: An error occurred while processing your required
-                status: 500
-                detail: Error details..
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      RequestBbody:
+                        - The request body for public encrption key is required.
         "500":
           description: Internal Server Error
           content:
@@ -1749,19 +1738,11 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-  /v0/keys/{id}:
     get:
       tags:
         - Keys
-      summary: Retrieves the public encryption key for LotHeaderAwexData by encryption
-        key id
-      operationId: GetKeyById
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
+      summary: Retrieves the public encryption key for LotHeaderAwexData
+      operationId: GetKeyForAwexData
       responses:
         "200":
           description: OK
@@ -1813,6 +1794,7 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
+  /v0/keys/{id}:
     put:
       tags:
         - Keys
@@ -2070,8 +2052,7 @@ paths:
                         bales:
                           - baleHeader:
                               brand: FTT
-                              baleDescription:
-                                description: AAC
+                              baleDescription: AAC
                               areaOfOrigin: Melbourne
                               locationWithinStore: AWTA LTD
                             baleDetails:
@@ -2312,8 +2293,7 @@ paths:
                             bales:
                               - baleHeader:
                                   brand: FTT
-                                  baleDescription:
-                                    description: AAC
+                                  baleDescription: AAC
                                   areaOfOrigin: Melbourne
                                   locationWithinStore: AWTA LTD
                                 baleDetails:
@@ -5193,241 +5173,90 @@ paths:
                 apiMessages: []
                 data:
                   - transmissionHeader:
-                      abn: 43006014106
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
                       countryOfOrigin: AU
-                      currentReceiver:
-                        organisationCode: AAA
-                        centre:
-                          countryCode: AU
-                          centreCode: S
-                      dateFormatLastRevised: 2024-08-05
-                      dateTransmissionFileCreated: 2024-09-16
                       documentOriginator:
-                        organisationCode: AWT
-                        centre:
-                          countryCode: AU
-                          centreCode: M
+                        organisationCode: ATC
+                      currentReceiver:
+                        organisationCode: ATT
+                      versionNumber: 31
                       softwareIdentifier:
-                        softwareCompany: 8
-                      versionNumber: 37
+                        softwareCompany: 1
+                        softwareVersion: 1082
+                        programName: NETR
+                      abn: 72001967184
                     statementHeader:
                       client:
-                        organisationCode: AAA
-                        centre:
-                          countryCode: AU
-                          centreCode: S
-                      clientCode: 59999
+                        organisationCode: ATT
+                      clientCode: 345678
+                      statementDate: 2024-03-21
                       openingBalances:
                         - balanceType: Current
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 234.54
+                            currencyCode: AUD
                         - balanceType: Thirty
-                          balanceValue:
-                            value: 9978.17
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 365.5
+                            currencyCode: AUD
                         - balanceType: Sixty
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 566.78
+                            currencyCode: AUD
                         - balanceType: Ninety
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
-                        - balanceType: NinetyPlus
                           balanceValue:
-                            value: 904.87
+                            value: 234.34
                             currencyCode: AUD
-                          debitOrCreditType: CR
-                      statementDate: 2024-09-15
+                        - balanceType: NinetyPlus
+                          debitOrCreditType: DR
+                          balanceValue:
+                            value: 500.34
+                            currencyCode: AUD
                     statementDetails:
-                      - accountReference: C99972
+                      - clientsReference: "1234567890"
+                        accountReference: AWTA LED REFERENCE
                         amount:
-                          value: 2750
+                          value: 866.3
                           currencyCode: AUD
                         amountType: 0
-                        clientsReference: XXXXXXXXXX Dockets - XXXXX
+                        itemDate: 2024-04-23
                         gstAmount:
-                          value: 250
+                          value: 134.3
                           currencyCode: AUD
-                        isCompanyAbnApplicable: true
                         isGstApplicable: true
-                        itemDate: 2024-09-02
-                      - accountReference: 399997226B1
-                        amount:
-                          value: 67.16
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAA
-                        gstAmount:
-                          value: 6.11
-                          currencyCode: AUD
                         isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997803B7
-                        amount:
-                          value: 67.16
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/EXSUPAA
-                        gstAmount:
-                          value: 6.11
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997804L5
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/EXSUPAA
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997805B2
-                        amount:
-                          value: 66.22
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUPAAAA
-                        gstAmount:
-                          value: 6.02
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997806L0
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUPAAAA
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997807L8
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAA
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997808B6
-                        amount:
-                          value: 61.82
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAXB
-                        gstAmount:
-                          value: 5.62
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997809L4
-                        amount:
-                          value: 32.45
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAXB
-                        gstAmount:
-                          value: 2.95
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997810B2
-                        amount:
-                          value: 66.22
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/C/L
-                        gstAmount:
-                          value: 6.02
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399998178B3
-                        amount:
-                          value: 61.82
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/STN
-                        gstAmount:
-                          value: 5.62
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399990294B4
-                        amount:
-                          value: 69.03
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUP P/B
-                        gstAmount:
-                          value: 6.28
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-11
-                      - accountReference: 399990295L1
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUP P/B
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-11
                     statementTrailer:
                       closingBalances:
                         - balanceType: Current
-                          balanceValue:
-                            value: 3394.12
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 234.54
+                            currencyCode: AUD
                         - balanceType: Thirty
-                          balanceValue:
-                            value: 9978.17
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 365.5
+                            currencyCode: AUD
                         - balanceType: Sixty
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 566.78
+                            currencyCode: AUD
                         - balanceType: Ninety
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
-                        - balanceType: NinetyPlus
                           balanceValue:
-                            value: 904.87
+                            value: 234.34
                             currencyCode: AUD
-                          debitOrCreditType: CR
+                        - balanceType: NinetyPlus
+                          debitOrCreditType: DR
+                          balanceValue:
+                            value: 500.34
+                            currencyCode: AUD
         "204":
           description: No Content
           content:
@@ -5903,8 +5732,7 @@ paths:
                     client:
                       organisationCode: ABC
                     numberOfBales: 2
-                    baleDescription:
-                      description: AAA
+                    baleDescription: AAA
                     woolBase: 60.43
                     mulesingStatusFrom: ND
                     mulesingStatusTo: M
@@ -5917,8 +5745,7 @@ paths:
                     client:
                       organisationCode: ABC
                     numberOfBales: 7
-                    baleDescription:
-                      description: AAA
+                    baleDescription: AAA
                     woolBase: 65.12
                     mulesingStatusFrom: AA
                     mulesingStatusTo: M
@@ -5931,8 +5758,7 @@ paths:
                     client:
                       organisationCode: ABC
                     numberOfBales: 8
-                    baleDescription:
-                      description: PCA
+                    baleDescription: PCA
                     woolBase: 50.31
                     mulesingStatusFrom: NM
                     mulesingStatusTo: M
@@ -6066,8 +5892,7 @@ paths:
                         client:
                           organisationCode: ABC
                         numberOfBales: 2
-                        baleDescription:
-                          description: AAA
+                        baleDescription: AAA
                         woolBase: 60.43
                         mulesingStatusFrom: ND
                         mulesingStatusTo: M
@@ -6080,8 +5905,7 @@ paths:
                         client:
                           organisationCode: ABC
                         numberOfBales: 7
-                        baleDescription:
-                          description: AAA
+                        baleDescription: AAA
                         woolBase: 65.12
                         mulesingStatusFrom: AA
                         mulesingStatusTo: M
@@ -6094,8 +5918,7 @@ paths:
                         client:
                           organisationCode: ABC
                         numberOfBales: 8
-                        baleDescription:
-                          description: PCA
+                        baleDescription: PCA
                         woolBase: 50.31
                         mulesingStatusFrom: NM
                         mulesingStatusTo: M
@@ -6762,7 +6585,7 @@ paths:
                       isLengthAndStrengthTestRequired: false
                       isLengthOnlyTestRequired: true
                       isColourTestRequired: false
-                      isLaserscanTestRequired: true
+                      laserscanTestRequired: N
                       isAirflowTestRequired: false
                       isOfdaTestRequired: true
                       isDarkAndMedullatedFibreTestRequired: false
@@ -6840,7 +6663,7 @@ paths:
                       isLengthAndStrengthTestRequired: false
                       isLengthOnlyTestRequired: false
                       isColourTestRequired: false
-                      isLaserscanTestRequired: false
+                      laserscanTestRequired: S
                       isAirflowTestRequired: false
                       isOfdaTestRequired: false
                       isDarkAndMedullatedFibreTestRequired: true
@@ -7039,7 +6862,7 @@ paths:
                           isLengthAndStrengthTestRequired: false
                           isLengthOnlyTestRequired: true
                           isColourTestRequired: false
-                          isLaserscanTestRequired: true
+                          laserscanTestRequired: P
                           isAirflowTestRequired: false
                           isOfdaTestRequired: true
                           isDarkAndMedullatedFibreTestRequired: false
@@ -7117,7 +6940,7 @@ paths:
                           isLengthAndStrengthTestRequired: false
                           isLengthOnlyTestRequired: false
                           isColourTestRequired: false
-                          isLaserscanTestRequired: false
+                          laserscanTestRequired: N
                           isAirflowTestRequired: false
                           isOfdaTestRequired: false
                           isDarkAndMedullatedFibreTestRequired: true
@@ -7832,12 +7655,10 @@ components:
           description: Invoice number of the credit
           format: int32
         dateOfCreditNote:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         creditNoteAmount:
           $ref: "#/components/schemas/Currency"
         isGstApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the GST is aplicable.\r
 
@@ -7859,7 +7680,7 @@ components:
         certificateIdentityOriginal:
           $ref: "#/components/schemas/CertificateIdentity"
         dateOfOriginalInvoice:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         certificateIdentityNew:
           $ref: "#/components/schemas/CertificateIdentity"
       additionalProperties: false
@@ -8008,15 +7829,9 @@ components:
           nullable: true
       additionalProperties: false
     BaleDescription:
-      required:
-        - description
-      type: object
-      properties:
-        description:
-          maxLength: 15
-          minLength: 1
-          type: string
-      additionalProperties: false
+      maxLength: 15
+      minLength: 1
+      type: string
       description: This field is to be always transmitted in upper case.
     BaleDetail:
       required:
@@ -8271,7 +8086,7 @@ components:
         - 5
       type: integer
       description: " Used to define the types of Catalogue. Only required for
-        requesting Catalouge. Not Applicable for other documents.<br />2:
+        requesting Catalogue. Not Applicable for other documents.<br />2:
         Auction Catalogues<br />3: Private Catalogues<br />5: Auction Catalogue
         Updates"
       format: int32
@@ -8280,7 +8095,15 @@ components:
         - A
         - P
       type: string
-      description: Used to define the type of catalogue
+      description: "Used to define the type of catalogue\r
+
+        \r
+
+        A: Auction Catalogues\r
+
+        \r
+
+        P: Private Catalogues"
     CatalogueWoolSaleHeaderLot:
       required:
         - lotHeaderVendorDeclarations
@@ -8881,8 +8704,6 @@ components:
         additionalPrintRequirements:
           $ref: "#/components/schemas/AdditionalPrintRequirements"
         isPrintingTeam3Hauteur:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to print Team3-Hauteur\r
 
@@ -8894,9 +8715,7 @@ components:
 
             false: not print"
           nullable: true
-        commitCombinationOrOmlForProcessing:
-          maxLength: 1
-          minLength: 1
+        isCommitRequired:
           type: boolean
           description: "A boolean value to indicate whether to commit the combination/OML
             request for processing\r
@@ -9149,7 +8968,7 @@ components:
         calibrationFlag:
           $ref: "#/components/schemas/CalibrationFlag"
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     ColourTestDetailType:
       enum:
@@ -9287,7 +9106,7 @@ components:
         invoiceMassFlag:
           $ref: "#/components/schemas/InvoiceMassFlag"
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     Confirmation:
       required:
@@ -9838,7 +9657,51 @@ components:
           type: string
           nullable: true
         errorCode:
-          $ref: "#/components/schemas/ErrorCode"
+          type: string
+          description: "The error code is defined by business rules to indicate the
+            different types of errors.\r
+
+            \r
+
+            Examples of error code:\r
+
+            \ \r
+
+            DOXCT: Document originator does not match current
+            transmitter.\"\r
+
+            \            \r
+
+            INVTC: Invalid transfer config. All data rejected.\"\r
+
+            \r
+
+            INVFR: Invalid/missing FinalReceiverList record. All
+            data rejected.\"\r
+
+            \            \r
+
+            INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data
+            rejected.\"\r
+
+            \r
+
+            INVCR: Current receiver not awtm. All data rejected.\"\r
+
+            \r
+
+            INVDO: Invalid document originator code aaaaa. Data
+            accepted.\"\r
+
+            \r
+
+            INVSO: Warning! Invalid selling org AAAAA using doc orig
+            AAAAA.\"\r
+
+            \r
+
+            INVEX: Invalid excluded record.\""
+          nullable: true
       additionalProperties: false
     DarkAndMedullatedFibreRisk:
       enum:
@@ -9895,8 +9758,6 @@ components:
         declaredQualifierScale:
           $ref: "#/components/schemas/DeclaredQualifierScale"
         isContactingWithExoticBreeds:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether it contact with exotic
             breeds.\r
@@ -9909,8 +9770,6 @@ components:
 
             false: not contact with exotic breeds."
         isCrutched:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether it is crutched.\r
 
@@ -9922,8 +9781,6 @@ components:
 
             false: not crutched."
         isCrutchedWithin3MonthsOfShearing:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether crutching within 3 months of
             shearing.\r
@@ -9955,7 +9812,7 @@ components:
           nullable: true
         darkAndMedullatedFibreRiskBroker:
           $ref: "#/components/schemas/DarkAndMedullatedFibreRiskBroker"
-        darkandMedullatedFibreRisk:
+        darkAndMedullatedFibreRisk:
           $ref: "#/components/schemas/DarkAndMedullatedFibreRisk"
         certificateIdentity:
           $ref: "#/components/schemas/CertificateIdentity"
@@ -10165,8 +10022,6 @@ components:
         countermarkHeadmarkFlag:
           $ref: "#/components/schemas/CountermarkHeadmarkFlag"
         areRenumbersApplied:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to apply renumbers on bales.
             \r
@@ -10179,8 +10034,6 @@ components:
 
             false: not apply renumbers."
         areGrossWeightsApplied:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to apply Gross Weights on
             bales.\r
@@ -10193,8 +10046,6 @@ components:
 
             false: not apply."
         areNetWeightsApplied:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to apply Net Weights on
             bales.\r
@@ -10423,9 +10274,9 @@ components:
         packMaterial:
           $ref: "#/components/schemas/PackMaterial"
         dateDeliveryRequired:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         datePickup:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     DeliveryOrderType:
       enum:
@@ -10507,18 +10358,13 @@ components:
           format: double
           multipleOf: 0.01
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     EncryptedLotHeaderAwexData:
       required:
         - encryptedLotHeaderAwexDataString
-        - encryptionKeyIdentifier
       type: object
       properties:
-        encryptionKeyIdentifier:
-          maxLength: 80
-          minLength: 1
-          type: string
         encryptedLotHeaderAwexDataString:
           minLength: 1
           type: string
@@ -10674,25 +10520,6 @@ components:
 
             \      nullable: true"
       additionalProperties: false
-    ErrorCode:
-      enum:
-        - DOXCT
-        - INVTC
-        - INVFR
-        - INVAC
-        - INVCR
-        - INVDO
-        - INVSO
-        - INVEX
-      type: string
-      description: "A code to indicate the different types of errors.<br />DOXCT:
-        Document originator does not match current transmitter.<br />INVTC:
-        Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing
-        FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale
-        aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver
-        not awtm. All data rejected.<br />INVDO: Invalid document originator
-        code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org
-        AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
     FibreDiameterHistogram:
       type: object
       properties:
@@ -10718,7 +10545,7 @@ components:
           format: int32
         fibresMeasuredPercentage:
           maximum: 99.9999
-          minimum: -99.99999
+          minimum: -99.9999
           type: number
           description: Percentage of fibres measured for the measurement.
           format: double
@@ -10806,9 +10633,9 @@ components:
           nullable: true
           multipleOf: 0.1
         coreTestSamplingDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         factorLaserscanNumerator:
           maximum: 9999999999.999998
           minimum: -9999999999.999998
@@ -10855,8 +10682,6 @@ components:
         endDateTimeStatusRequest:
           $ref: "#/components/schemas/UtcDateTime"
         isUsingNetworkDateTime:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to use network datetime.\r
 
@@ -11020,7 +10845,7 @@ components:
         - interlotComponentBales
         - baleIdentifications
         - fibreDiameterHistograms
-        - fibreDiameterHistogramDetails
+        - fibreDiameterHistogramDetailMeasurements
       type: string
     Laboratory:
       enum:
@@ -11033,6 +10858,16 @@ components:
         Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing
         Service<br />4: South African Wool Testing Authority"
       format: int32
+    LaserscanTestRequired:
+      enum:
+        - N
+        - S
+        - P
+      type: string
+      description: "Note: A “Y” or space in this field will default to “S” when
+        transmitting to AWTA Ltd.<br />N: Laserscan Test is not required<br />S:
+        Standard Laserscan Test is required<br />P: Premium Laserscan Test is
+        required"
     LengthAfterCardingTestDetail:
       required:
         - certificateIdentity
@@ -11276,8 +11111,6 @@ components:
         lsCertType:
           $ref: "#/components/schemas/LsCertType"
         isLsSampleSecured:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the LS-sample is secured.\r
 
@@ -11320,7 +11153,7 @@ components:
           nullable: true
           multipleOf: 0.1
         dateIssued:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         stapleStrengthLowest25Percent:
           maximum: 99
           minimum: -99
@@ -11337,6 +11170,40 @@ components:
       type: string
       description: "L: Length And Strength Test Detail<br />K: Length And Strength
         Combination Test Detail"
+    LiteralDate:
+      type: string
+      description: >-
+        Date value in ISO standard UTC date format. e.g. 2024-03-21
+        (YYYY-MM-DD).
+
+
+        dateOfCreditNote: Date the Credit note was issued
+
+
+        dateOfOriginalInvoice: Date of the original invoice\ndateIssue: The date the certificate was issued.
+
+
+        dateLastUpdated: The day the item was last amended.
+
+
+        statementDate: The period ending date of the statement.
+
+
+        statementPaymentDate: The date the payment was made.
+
+
+        datePaymentMade: Required date field for the date payment was made.
+
+
+        saleDate: The date on which the wool was sold.
+
+
+        coreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+
+
+        itemDate: The date the cost of the item was incurred.
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
+      example: 2024-03-21
     Lot:
       required:
         - woolSaleHeaderLot
@@ -11385,8 +11252,6 @@ components:
           format: int32
           nullable: true
         isNoLot:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the lot is included for sale
             in the auction.\r
@@ -11491,7 +11356,7 @@ components:
         packCondition:
           $ref: "#/components/schemas/PackCondition"
         coreTestSamplingDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         woolDescriptionComment:
           maxLength: 14
           minLength: 1
@@ -11528,8 +11393,6 @@ components:
 
             This field is to be always transmitted in upper case."
         isGstApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the GST amount is applicable
             to invoice. \r
@@ -11625,7 +11488,7 @@ components:
         offerPrice:
           $ref: "#/components/schemas/Currency"
         offerDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     LotHeaderVendorDeclaration:
       type: object
@@ -12008,39 +11871,9 @@ components:
         - M
         - ND
       type: string
-      description: "Note: Blank will be transmitted if the certificate was issued
-        prior to 21st July, 2008 or if the transmission was outside Australia.\r
-
-        \r
-
-        In Australia, Mulesing status is not applicable for
-        Combinations/OMLs, Guidance reports and Scoured wool.It is also not
-        transmitted for non\r
-
-        Yield certificates when transmitted independently e.g.Length and
-        Strength.\r
-
-        \            \r
-
-        From:\r
-
-        \r
-
-        The current value that the Mulesing Status is to be changed
-        from\r
-
-        \r
-
-        To:\r
-
-        \            \r
-
-        The new value that the Mulesing Status is to be changed to.\r
-
-        \r
-
-        To obtain the current code list please go to this URL:
-        https://www.awex.com.au/standards/national-wool-declaration-nwd"
+      description: "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased
+        Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M:
+        Mulesed<br />ND: Not Declared"
     Name:
       type: object
       properties:
@@ -12191,12 +12024,10 @@ components:
 
             Organisation – the name of the organisation."
         dateLastUpdated:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         industryGroupId:
           $ref: "#/components/schemas/IndustryGroupId"
         isTransmitter:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the organisation transmits or
             receives data electronically.\r
@@ -12408,7 +12239,7 @@ components:
       type: object
       properties:
         statementDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         accountReference:
           maxLength: 11
           minLength: 1
@@ -12462,11 +12293,11 @@ components:
           type: integer
           format: int32
         statementDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         amountRemitted:
           $ref: "#/components/schemas/Currency"
         statementPaymentDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         bankBsbNumber:
           maximum: 999999
           minimum: -999999
@@ -12497,7 +12328,7 @@ components:
         netAmountPaid:
           $ref: "#/components/schemas/Currency"
         datePaymentMade:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     PaymentType:
       enum:
@@ -12594,9 +12425,7 @@ components:
           nullable: true
         printFlag:
           $ref: "#/components/schemas/PrintFlag"
-        isPrintingPrintTEAM3Hauteur:
-          maxLength: 5
-          minLength: 4
+        isPrintingTeam3Hauteur:
           type: boolean
           description: "A boolean value to indicate whether to print Team3-Hauteur.\r
 
@@ -12711,8 +12540,6 @@ components:
             record grouping.
           format: int32
         areTransfersCompleted:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the transfers are completed /
             Sale is finalised. \r
@@ -12989,7 +12816,7 @@ components:
         - 8
       type: integer
       description: "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4:
-        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA"
+        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA"
       format: int32
     SoftwareIdentifier:
       type: object
@@ -13096,12 +12923,10 @@ components:
         amountType:
           $ref: "#/components/schemas/AmountType"
         itemDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         gstAmount:
           $ref: "#/components/schemas/Currency"
         isGstApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the GST amount is applicable
             to invoice. \r
@@ -13114,8 +12939,6 @@ components:
 
             false: not applicable."
         isCompanyAbnApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the Company ABN is applicable
             to invoice. \r
@@ -13144,7 +12967,7 @@ components:
           type: integer
           format: int32
         statementDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         openingBalances:
           type: array
           items:
@@ -13567,8 +13390,6 @@ components:
         gstAmount:
           $ref: "#/components/schemas/Currency"
         isGstApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the GST is aplicable.\r
 
@@ -13581,8 +13402,6 @@ components:
             false: not applicable."
           nullable: true
         isCompanyAbnApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the Company ABN is applicable
             to invoice. \r
@@ -13827,7 +13646,7 @@ components:
         coreSampleWeight:
           $ref: "#/components/schemas/Weight"
         coreTestSamplingDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         coresPerBale:
           maximum: 99
           minimum: -99
@@ -13843,8 +13662,6 @@ components:
           format: int32
           nullable: true
         isPreviousDataToBeUpdated:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether data sent on a previous
             transmission is to be updated by data in the current transmission.\r
@@ -13863,8 +13680,6 @@ components:
           description: Required numeric field for hash total.
           format: int32
         isYieldAndMicronTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether Yield And Laserscan Test is
             required.\r
@@ -13878,8 +13693,6 @@ components:
             false: Yield And Laserscan Test is not required."
           nullable: true
         isLengthAndStrengthTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether Length And Strength Test is
             required.\r
@@ -13893,8 +13706,6 @@ components:
             false: Length And Strength Test is not required."
           nullable: true
         isLengthOnlyTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether Length Only Test is
             required.\r
@@ -13908,8 +13719,6 @@ components:
             false: Length Only Test is not required."
           nullable: true
         isColourTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether Colour Test is required.\r
 
@@ -13921,23 +13730,9 @@ components:
 
             false: Colour Test is not required."
           nullable: true
-        isLaserscanTestRequired:
-          maxLength: 5
-          minLength: 4
-          type: boolean
-          description: "A boolean value to indicate whether Laserscan Test is required.\r
-
-            \r
-
-            true: Laserscan Test is required.\r
-
-            \r
-
-            false: Laserscan Test is not required."
-          nullable: true
+        laserscanTestRequired:
+          $ref: "#/components/schemas/LaserscanTestRequired"
         isAirflowTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether Airflow Test is required.\r
 
@@ -13950,8 +13745,6 @@ components:
             false: Airflow Test is not required."
           nullable: true
         isOfdaTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether OFDA Test is required.\r
 
@@ -13964,8 +13757,6 @@ components:
             false: OFDA Test is not required."
           nullable: true
         isDarkAndMedullatedFibreTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether Dark And Medullated Fibre Test
             is required.\r
@@ -13979,8 +13770,6 @@ components:
             false: Dark And Medullated Fibre Test is not required."
           nullable: true
         isPesticideResidueTestRequired:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether Pesticide Residue Test is
             required.\r
@@ -14118,21 +13907,21 @@ components:
         lsSampleId:
           $ref: "#/components/schemas/LsSampleId"
         coreSampleReceived:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         lsSampleReceived:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         trvMatched:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         coreSampleCheckTest:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         lsRetuftRequired:
           $ref: "#/components/schemas/LsRetuftRequired"
         lsRetuftReceived:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         coreTestRecoreRequired:
           $ref: "#/components/schemas/CoreTestRecoreRequired"
         coreTestRecoreReceived:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
       additionalProperties: false
     TestStatusListApiResult:
       type: object
@@ -14223,9 +14012,9 @@ components:
       type: object
       properties:
         dateFormatLastRevised:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         dateTransmissionFileCreated:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         countryOfOrigin:
           $ref: "#/components/schemas/CountryCode"
         documentOriginator:
@@ -14266,8 +14055,6 @@ components:
       type: object
       properties:
         isUsingNetworkDateTime:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to use network datetime.\r
 
@@ -14279,11 +14066,6 @@ components:
 
             false: not use."
       additionalProperties: false
-    UtcDate:
-      type: string
-      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
-      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
-      example: 2024-03-21
     UtcDateTime:
       type: string
       description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
@@ -14481,7 +14263,7 @@ components:
         centreStorage:
           $ref: "#/components/schemas/Centre"
         saleDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         woolState:
           $ref: "#/components/schemas/WoolState"
         packType:
@@ -14505,8 +14287,6 @@ components:
         catalogueSection:
           $ref: "#/components/schemas/CatalogueSection"
         isFinalCatalogue:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the related section of the
             catalogue transmission is expected to have more amendments
@@ -14547,7 +14327,7 @@ components:
             etc. – to assist delivery.
           nullable: true
         paymentDueDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         discountRate:
           maximum: 99.99
           minimum: -99.99
@@ -14564,7 +14344,7 @@ components:
           format: int32
           nullable: true
         dateStorageChargeCommences:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         storageChargePerBalePerDay:
           $ref: "#/components/schemas/StorageChargeCurrency"
         penaltyInterestRate:
@@ -14576,7 +14356,7 @@ components:
           nullable: true
           multipleOf: 0.01
         lotAvailableDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         postSaleChargeRebate:
           $ref: "#/components/schemas/Currency"
         catalogueAvailabilityDateTime:
@@ -14593,8 +14373,6 @@ components:
           type: string
           nullable: true
         isReservePriceDisplayed:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to display reserve price to
             buyers.\r
@@ -14636,7 +14414,7 @@ components:
         organisationRequested:
           $ref: "#/components/schemas/Organisation"
         saleDateRequested:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         woolTypeGroup:
           $ref: "#/components/schemas/WoolTypeGroup"
         itemsToBeExcluded:

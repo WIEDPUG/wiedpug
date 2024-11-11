@@ -13,15 +13,15 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "0.0"
+    "version": "0.0.0"
   },
   "paths": {
-    "/v0/keys": {
+    "/v0/keys/AwexData": {
       "post": {
         "tags": [
           "Keys"
         ],
-        "summary": "Create or upload the public encryption key for LotHeaderAwexData, return the encryption key id",
+        "summary": "Upload the public encryption key for LotHeaderAwexData, return the encryption key id",
         "operationId": "UploadKey",
         "requestBody": {
           "content": {
@@ -64,12 +64,8 @@
                   "errors": [
                     {
                       "errors": {
-                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                          "The field DateFormatLastRevised is required",
-                          "The field DateFormatLastRevised must match regulart expression pattern..."
-                        ],
-                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                          "The field CountryOfOrigin is required"
+                        "RequestBbody": [
+                          "The request body for public encrption key is required."
                         ]
                       }
                     }
@@ -118,10 +114,19 @@
                   "$ref": "#/components/schemas/ApiErrorResult"
                 },
                 "example": {
-                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
-                  "title": "An error occurred while processing your required",
-                  "status": 500,
-                  "detail": "Error details.."
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                  "title": "One or more validation errors occurred",
+                  "status": 400,
+                  "detail": "",
+                  "errors": [
+                    {
+                      "errors": {
+                        "RequestBbody": [
+                          "The request body for public encrption key is required."
+                        ]
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -143,25 +148,13 @@
             }
           }
         }
-      }
-    },
-    "/v0/keys/{id}": {
+      },
       "get": {
         "tags": [
           "Keys"
         ],
-        "summary": "Retrieves the public encryption key for LotHeaderAwexData by encryption key id",
-        "operationId": "GetKeyById",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "summary": "Retrieves the public encryption key for LotHeaderAwexData",
+        "operationId": "GetKeyForAwexData",
         "responses": {
           "200": {
             "description": "OK",
@@ -238,7 +231,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/v0/keys/{id}": {
       "put": {
         "tags": [
           "Keys"
@@ -586,24 +581,12 @@
             "nullable": true
           },
           "errorCode": {
-            "$ref": "#/components/schemas/ErrorCode"
+            "type": "string",
+            "description": "The error code is defined by business rules to indicate the different types of errors.\r\n\r\nExamples of error code:\r\n \r\nDOXCT: Document originator does not match current transmitter.\"\r\n            \r\nINVTC: Invalid transfer config. All data rejected.\"\r\n\r\nINVFR: Invalid/missing FinalReceiverList record. All data rejected.\"\r\n            \r\nINVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.\"\r\n\r\nINVCR: Current receiver not awtm. All data rejected.\"\r\n\r\nINVDO: Invalid document originator code aaaaa. Data accepted.\"\r\n\r\nINVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.\"\r\n\r\nINVEX: Invalid excluded record.\"",
+            "nullable": true
           }
         },
         "additionalProperties": false
-      },
-      "ErrorCode": {
-        "enum": [
-          "DOXCT",
-          "INVTC",
-          "INVFR",
-          "INVAC",
-          "INVCR",
-          "INVDO",
-          "INVSO",
-          "INVEX"
-        ],
-        "type": "string",
-        "description": "A code to indicate the different types of errors.<br />DOXCT: Document originator does not match current transmitter.<br />INVTC: Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver not awtm. All data rejected.<br />INVDO: Invalid document originator code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
       },
       "StringApiResult": {
         "type": "object",

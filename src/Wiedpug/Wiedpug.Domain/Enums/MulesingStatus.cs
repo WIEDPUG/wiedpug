@@ -23,6 +23,20 @@ namespace Wiedpug.Domain.Enums
     ///
     /// The new value that the Mulesing Status is to be changed to.
     /// 
+    /// MulesingStatus Code:
+    /// 
+    /// NM: Non Mulesed
+    /// 
+    /// LN: Liquid Nitrogen
+    /// 
+    /// CM: Ceased Mulesing
+    /// 
+    /// AA: Mulesed with Analgesic &/or Anaesthetic
+    /// 
+    /// M: Mulesed
+    /// 
+    /// ND: Not Declared
+    /// 
     /// To obtain the current code list please go to this URL: https://www.awex.com.au/standards/national-wool-declaration-nwd
     /// 
     /// </summary>

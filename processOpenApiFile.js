@@ -422,10 +422,10 @@ const AllOfReferenceToSchemaWitDescription = (openApiSpec) => {
 const HandleReferencedSchemas = (openApiSpec) => {
     // Check if the schemas section exists
     if (openApiSpec.components && openApiSpec.components.schemas) {
-        // Check if the UtcDate schema exists
-        if (openApiSpec.components.schemas.UtcDate) {
+        // Check if the LiteralDate schema exists
+        if (openApiSpec.components.schemas.LiteralDate) {
             // Remove the additionalProperties field
-            delete openApiSpec.components.schemas.UtcDate.additionalProperties;
+            delete openApiSpec.components.schemas.LiteralDate.additionalProperties;
         }
 
         if (openApiSpec.components.schemas.UtcDateTime) {
@@ -446,6 +446,11 @@ const HandleReferencedSchemas = (openApiSpec) => {
         if (openApiSpec.components.schemas.LotIdentity) {
             // Remove the additionalProperties field
             delete openApiSpec.components.schemas.LotIdentity.additionalProperties;
+        }
+
+        if (openApiSpec.components.schemas.BaleDescription) {
+            // Remove the additionalProperties field
+            delete openApiSpec.components.schemas.BaleDescription.additionalProperties;
         }
     }
 }
@@ -492,6 +497,15 @@ const ReplaceDataExample = (openApiSpec) => {
         console.log(`Replaced by ${p1}`);
         // Replace the object with just the date value
         return p1;
+    });
+
+    
+    // Use a regular expression to find patterns like {"baleDescriptionContent": "value"} and convert to "value"
+    jsonString = jsonString.replace(/{"baleDescriptionContent":"([^"]+)"}?/g, (match, p1, offset) => {
+        console.log(`Found match at position ${offset}: ${match}`);
+        console.log(`Replaced by "${p1}"`);
+        // Replace the object with just the date value
+        return `"${p1}"`;
     });
 
     // Convert the updated string back to a JavaScript object
@@ -592,7 +606,7 @@ const main = () => {
     
     processOpenApiFile()  // If you start from api.json file directly, comment out this line
 
-    updateApiVersion()
+    updateApiVersion() // Uncomment it if you want to overwrite the version number being defined by the dotnet project
     saveApiToYaml()
     generateOpenApiFilesByEndpoints()
     generateSchemaOnlyFile()

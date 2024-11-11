@@ -36,7 +36,7 @@ namespace Wiedpug.Domain.Entities
         [MaxLength(5)]
         public Organisation? OrganisationRequested { get; set; }
 
-        public UtcDate? SaleDateRequested { get; set; }
+        public LiteralDate?  SaleDateRequested { get; set; }
 
         public UtcDateTime? StartDateTimeStatusRequest { get; set; }
 
@@ -47,8 +47,7 @@ namespace Wiedpug.Domain.Entities
         /// true: use network datetime.
         /// false: not use.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public bool? IsUsingNetworkDateTime { get; set; }
 
         [Required]

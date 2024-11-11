@@ -203,12 +203,12 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        public UtcDate? DateDeliveryRequired { get; set; }
+        public LiteralDate?  DateDeliveryRequired { get; set; }
 
         /// <summary>
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        public UtcDate? DatePickup { get; set; }
+        public LiteralDate?  DatePickup { get; set; }
 
     }
 

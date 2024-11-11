@@ -18,8 +18,8 @@ namespace Wiedpug.API.ExampleResponses
                 new DarkAndMedullatedFibreRiskVerification() {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -62,7 +62,7 @@ namespace Wiedpug.API.ExampleResponses
                         AgeFrom = 12,
                         AgeTo = 23,
                         DarkAndMedullatedFibreRiskBroker = DarkAndMedullatedFibreRiskBroker.Risklevel1,
-                        DarkandMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
+                        DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
                         CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,
@@ -95,8 +95,8 @@ namespace Wiedpug.API.ExampleResponses
                     new RequestForData {
                     TransmissionHeader = new TransmissionHeader
                     {
-                        DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                        DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                        DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                        DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                         CountryOfOrigin = Domain.Enums.CountryCode.AU,
                         DocumentOriginator = new Organisation
                         {
@@ -135,8 +135,8 @@ namespace Wiedpug.API.ExampleResponses
                         new DarkAndMedullatedFibreRiskVerification{
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -179,7 +179,7 @@ namespace Wiedpug.API.ExampleResponses
                         AgeFrom = 12,
                         AgeTo = 23,
                         DarkAndMedullatedFibreRiskBroker = DarkAndMedullatedFibreRiskBroker.Risklevel1,
-                        DarkandMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
+                        DarkAndMedullatedFibreRisk = DarkAndMedullatedFibreRisk.D,
                         CertificateIdentity = new CertificateIdentity
                                             {
                                                 CertificateIdPrefix = CertificateIdPrefix.MelbourneLaboratory,

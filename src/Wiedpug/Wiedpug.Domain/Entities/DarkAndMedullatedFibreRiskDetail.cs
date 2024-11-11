@@ -55,8 +55,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not contact with exotic breeds.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsContactingWithExoticBreeds { get; set; }
 
         /// <summary>
@@ -67,8 +66,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not crutched.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsCrutched { get; set; }
 
         /// <summary>
@@ -78,8 +76,6 @@ namespace Wiedpug.Domain.Entities
         ///
         /// false: no.
         /// </summary>
-        [MinLength(4)]
-        [MaxLength(5)]
         public bool? IsCrutchedWithin3MonthsOfShearing { get; set; }
 
         /// <summary>
@@ -114,7 +110,7 @@ namespace Wiedpug.Domain.Entities
 
         [MinLength(1)]
         [MaxLength(1)]
-        public DarkAndMedullatedFibreRisk? DarkandMedullatedFibreRisk { get; set; }
+        public DarkAndMedullatedFibreRisk? DarkAndMedullatedFibreRisk { get; set; }
 
         [MinLength(1)]
         [MaxLength(11)]

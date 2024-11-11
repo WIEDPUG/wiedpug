@@ -10,7 +10,7 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: "0.0"
+  version: 0.0.0
 paths:
   /v0/statements:
     post:
@@ -1048,241 +1048,90 @@ paths:
                 apiMessages: []
                 data:
                   - transmissionHeader:
-                      abn: 43006014106
+                      dateFormatLastRevised: 2020-07-15
+                      dateTransmissionFileCreated: 2016-01-17
                       countryOfOrigin: AU
-                      currentReceiver:
-                        organisationCode: AAA
-                        centre:
-                          countryCode: AU
-                          centreCode: S
-                      dateFormatLastRevised: 2024-08-05
-                      dateTransmissionFileCreated: 2024-09-16
                       documentOriginator:
-                        organisationCode: AWT
-                        centre:
-                          countryCode: AU
-                          centreCode: M
+                        organisationCode: ATC
+                      currentReceiver:
+                        organisationCode: ATT
+                      versionNumber: 31
                       softwareIdentifier:
-                        softwareCompany: 8
-                      versionNumber: 37
+                        softwareCompany: 1
+                        softwareVersion: 1082
+                        programName: NETR
+                      abn: 72001967184
                     statementHeader:
                       client:
-                        organisationCode: AAA
-                        centre:
-                          countryCode: AU
-                          centreCode: S
-                      clientCode: 59999
+                        organisationCode: ATT
+                      clientCode: 345678
+                      statementDate: 2024-03-21
                       openingBalances:
                         - balanceType: Current
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 234.54
+                            currencyCode: AUD
                         - balanceType: Thirty
-                          balanceValue:
-                            value: 9978.17
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 365.5
+                            currencyCode: AUD
                         - balanceType: Sixty
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 566.78
+                            currencyCode: AUD
                         - balanceType: Ninety
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
-                        - balanceType: NinetyPlus
                           balanceValue:
-                            value: 904.87
+                            value: 234.34
                             currencyCode: AUD
-                          debitOrCreditType: CR
-                      statementDate: 2024-09-15
+                        - balanceType: NinetyPlus
+                          debitOrCreditType: DR
+                          balanceValue:
+                            value: 500.34
+                            currencyCode: AUD
                     statementDetails:
-                      - accountReference: C99972
+                      - clientsReference: "1234567890"
+                        accountReference: AWTA LED REFERENCE
                         amount:
-                          value: 2750
+                          value: 866.3
                           currencyCode: AUD
                         amountType: 0
-                        clientsReference: XXXXXXXXXX Dockets - XXXXX
+                        itemDate: 2024-04-23
                         gstAmount:
-                          value: 250
+                          value: 134.3
                           currencyCode: AUD
-                        isCompanyAbnApplicable: true
                         isGstApplicable: true
-                        itemDate: 2024-09-02
-                      - accountReference: 399997226B1
-                        amount:
-                          value: 67.16
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAA
-                        gstAmount:
-                          value: 6.11
-                          currencyCode: AUD
                         isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997803B7
-                        amount:
-                          value: 67.16
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/EXSUPAA
-                        gstAmount:
-                          value: 6.11
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997804L5
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/EXSUPAA
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997805B2
-                        amount:
-                          value: 66.22
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUPAAAA
-                        gstAmount:
-                          value: 6.02
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997806L0
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUPAAAA
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997807L8
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAA
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997808B6
-                        amount:
-                          value: 61.82
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAXB
-                        gstAmount:
-                          value: 5.62
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997809L4
-                        amount:
-                          value: 32.45
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/AAAXB
-                        gstAmount:
-                          value: 2.95
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399997810B2
-                        amount:
-                          value: 66.22
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/C/L
-                        gstAmount:
-                          value: 6.02
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399998178B3
-                        amount:
-                          value: 61.82
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/STN
-                        gstAmount:
-                          value: 5.62
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-10
-                      - accountReference: 399990294B4
-                        amount:
-                          value: 69.03
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUP P/B
-                        gstAmount:
-                          value: 6.28
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-11
-                      - accountReference: 399990295L1
-                        amount:
-                          value: 38.06
-                          currencyCode: AUD
-                        amountType: 0
-                        clientsReference: XXXXXXXXXXXXXX/SUP P/B
-                        gstAmount:
-                          value: 3.46
-                          currencyCode: AUD
-                        isCompanyAbnApplicable: true
-                        isGstApplicable: true
-                        itemDate: 2024-09-11
                     statementTrailer:
                       closingBalances:
                         - balanceType: Current
-                          balanceValue:
-                            value: 3394.12
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 234.54
+                            currencyCode: AUD
                         - balanceType: Thirty
-                          balanceValue:
-                            value: 9978.17
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 365.5
+                            currencyCode: AUD
                         - balanceType: Sixty
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
+                          balanceValue:
+                            value: 566.78
+                            currencyCode: AUD
                         - balanceType: Ninety
-                          balanceValue:
-                            value: 0
-                            currencyCode: AUD
                           debitOrCreditType: DR
-                        - balanceType: NinetyPlus
                           balanceValue:
-                            value: 904.87
+                            value: 234.34
                             currencyCode: AUD
-                          debitOrCreditType: CR
+                        - balanceType: NinetyPlus
+                          debitOrCreditType: DR
+                          balanceValue:
+                            value: 500.34
+                            currencyCode: AUD
         "204":
           description: No Content
           content:
@@ -1386,9 +1235,9 @@ components:
       type: object
       properties:
         dateFormatLastRevised:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         dateTransmissionFileCreated:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         countryOfOrigin:
           $ref: "#/components/schemas/CountryCode"
         documentOriginator:
@@ -1414,9 +1263,38 @@ components:
           description: Australian Business Number, 11 digits
           format: int64
       additionalProperties: false
-    UtcDate:
+    LiteralDate:
       type: string
-      description: Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).
+      description: >-
+        Date value in ISO standard UTC date format. e.g. 2024-03-21
+        (YYYY-MM-DD).
+
+
+        dateOfCreditNote: Date the Credit note was issued
+
+
+        dateOfOriginalInvoice: Date of the original invoice\ndateIssue: The date the certificate was issued.
+
+
+        dateLastUpdated: The day the item was last amended.
+
+
+        statementDate: The period ending date of the statement.
+
+
+        statementPaymentDate: The date the payment was made.
+
+
+        datePaymentMade: Required date field for the date payment was made.
+
+
+        saleDate: The date on which the wool was sold.
+
+
+        coreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+
+
+        itemDate: The date the cost of the item was incurred.
       format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
       example: 2024-03-21
     CountryCode:
@@ -1925,7 +1803,7 @@ components:
         - 8
       type: integer
       description: "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4:
-        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />6: AWTA"
+        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA"
       format: int32
     TransferConfig:
       required:
@@ -1972,7 +1850,7 @@ components:
           type: integer
           format: int32
         statementDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         openingBalances:
           type: array
           items:
@@ -2121,12 +1999,10 @@ components:
         amountType:
           $ref: "#/components/schemas/AmountType"
         itemDate:
-          $ref: "#/components/schemas/UtcDate"
+          $ref: "#/components/schemas/LiteralDate"
         gstAmount:
           $ref: "#/components/schemas/Currency"
         isGstApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the GST amount is applicable
             to invoice. \r
@@ -2139,8 +2015,6 @@ components:
 
             false: not applicable."
         isCompanyAbnApplicable:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether the Company ABN is applicable
             to invoice. \r
@@ -2360,27 +2234,52 @@ components:
           type: string
           nullable: true
         errorCode:
-          $ref: "#/components/schemas/ErrorCode"
+          type: string
+          description: "The error code is defined by business rules to indicate the
+            different types of errors.\r
+
+            \r
+
+            Examples of error code:\r
+
+            \ \r
+
+            DOXCT: Document originator does not match current
+            transmitter.\"\r
+
+            \            \r
+
+            INVTC: Invalid transfer config. All data rejected.\"\r
+
+            \r
+
+            INVFR: Invalid/missing FinalReceiverList record. All
+            data rejected.\"\r
+
+            \            \r
+
+            INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data
+            rejected.\"\r
+
+            \r
+
+            INVCR: Current receiver not awtm. All data rejected.\"\r
+
+            \r
+
+            INVDO: Invalid document originator code aaaaa. Data
+            accepted.\"\r
+
+            \r
+
+            INVSO: Warning! Invalid selling org AAAAA using doc orig
+            AAAAA.\"\r
+
+            \r
+
+            INVEX: Invalid excluded record.\""
+          nullable: true
       additionalProperties: false
-    ErrorCode:
-      enum:
-        - DOXCT
-        - INVTC
-        - INVFR
-        - INVAC
-        - INVCR
-        - INVDO
-        - INVSO
-        - INVEX
-      type: string
-      description: "A code to indicate the different types of errors.<br />DOXCT:
-        Document originator does not match current transmitter.<br />INVTC:
-        Invalid transfer config. All data rejected.<br />INVFR: Invalid/missing
-        FinalReceiverList record. All data rejected.<br />INVAC: Invalid sale
-        aann/nn dd/mm/yy ooooo. All data rejected.<br />INVCR: Current receiver
-        not awtm. All data rejected.<br />INVDO: Invalid document originator
-        code aaaaa. Data accepted.<br />INVSO: Warning! Invalid selling org
-        AAAAA using doc orig AAAAA.<br />INVEX: Invalid excluded record."
     RequestForData:
       required:
         - requestForDataType
@@ -2405,8 +2304,6 @@ components:
       type: object
       properties:
         isUsingNetworkDateTime:
-          maxLength: 5
-          minLength: 4
           type: boolean
           description: "A boolean value to indicate whether to use network datetime.\r
 

@@ -8,10 +8,10 @@ namespace Wiedpug.Domain.Entities
     public class TransmissionHeader
     {         
         [Required]
-        public required UtcDate DateFormatLastRevised { get; set; }
+        public required LiteralDate DateFormatLastRevised { get; set; }
 
         [Required]
-        public required UtcDate DateTransmissionFileCreated { get; set; }
+        public required LiteralDate DateTransmissionFileCreated { get; set; }
 
         [Required]
         [MinLength(1)]

@@ -156,6 +156,6 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO 8601 standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD)
         /// </summary>
         [Required]
-        public required UtcDate DateIssued { get; set; } // FIELD NUMBER 19 - Date Issued - Start: 62, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
+        public required LiteralDate DateIssued { get; set; } // FIELD NUMBER 19 - Date Issued - Start: 62, Size: 6, Data Type: DATE, Justification: F, Requirement Designator: M
     }
 }

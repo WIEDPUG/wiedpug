@@ -24,7 +24,7 @@ namespace Wiedpug.Domain.Entities
         ///
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
-        public required UtcDate DateOfCreditNote { get; set; }
+        public required LiteralDate DateOfCreditNote { get; set; }
 
         /// <summary>
         /// Amount to be credited
@@ -42,8 +42,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not applicable.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool IsGstApplicable { get; set; }
 
         /// <summary>
@@ -72,7 +71,7 @@ namespace Wiedpug.Domain.Entities
         /// Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD). 
         /// </summary>
         [Required]
-        public required UtcDate DateOfOriginalInvoice { get; set; }
+        public required LiteralDate DateOfOriginalInvoice { get; set; }
 
         [Required]
         [MinLength(1)]

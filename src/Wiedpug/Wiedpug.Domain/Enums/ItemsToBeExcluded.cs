@@ -18,6 +18,6 @@ namespace Wiedpug.Domain.Enums
 
         fibreDiameterHistograms,
 
-        fibreDiameterHistogramDetails
+        fibreDiameterHistogramDetailMeasurements
     }
 }

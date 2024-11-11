@@ -17,8 +17,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -50,7 +50,7 @@ namespace Wiedpug.API.ExampleResponses
                                         CountryCode = CountryCode.AU,
                                         CentreCode = CentreCodeAustralia.AR
                                     },
-                                    SaleDate = new UtcDate{Date="2017-01-19" },
+                                    SaleDate = new LiteralDate{Date="2017-01-19" },
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
                                     PostSaleCharge = new Currency{
@@ -97,10 +97,10 @@ namespace Wiedpug.API.ExampleResponses
                                                                 OrganisationCode = "ABC",
                                     },
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = new UtcDate{ Date="2017-01-24"},
+                                    PaymentDueDate = new LiteralDate{ Date="2017-01-24"},
                                     DiscountRate = 1.51,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                    DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value = 0.245,
@@ -156,7 +156,7 @@ namespace Wiedpug.API.ExampleResponses
                                                   BaleHeader = new BaleHeader
                                                   {
                                                       Brand = "FTT",
-                                                      BaleDescription = new BaleDescription{Description="AAC"},
+                                                      BaleDescription = new BaleDescription{BaleDescriptionContent="AAC"},
                                                       AreaOfOrigin = "Melbourne",
                                                       LocationWithinStore = "AWTA LTD"
                                                   },
@@ -260,8 +260,8 @@ namespace Wiedpug.API.ExampleResponses
                 new RequestForData {
                 TransmissionHeader = new TransmissionHeader
                 {
-                    DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                    DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                    DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                    DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                     CountryOfOrigin = Domain.Enums.CountryCode.AU,
                     DocumentOriginator = new Organisation
                     {
@@ -303,8 +303,8 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         TransmissionHeader = new TransmissionHeader
                         {
-                            DateFormatLastRevised = new UtcDate{ Date="2020-07-15"},
-                            DateTransmissionFileCreated = new UtcDate{ Date="2016-01-17" },
+                            DateFormatLastRevised = new LiteralDate{ Date="2020-07-15"},
+                            DateTransmissionFileCreated = new LiteralDate{ Date="2016-01-17" },
                             CountryOfOrigin = Domain.Enums.CountryCode.AU,
                             DocumentOriginator = new Organisation
                             {
@@ -337,7 +337,7 @@ namespace Wiedpug.API.ExampleResponses
                                         SaleNumber = 18
                                     },
                                     CentreStorage = new Centre { CountryCode = CountryCode.AU, CentreCode = CentreCodeAustralia.AR },
-                                    SaleDate = new UtcDate{Date="2017-01-19" },
+                                    SaleDate = new LiteralDate{Date="2017-01-19" },
                                     WoolState = WoolState.C,
                                     PackType = PackType.F,
                                     PostSaleCharge = new Currency { Value = 25.96, CurrencyCode = CurrencyCode.AUD },
@@ -371,10 +371,10 @@ namespace Wiedpug.API.ExampleResponses
                                          OrganisationCode = "ABC",
                                     },
                                     StorageDescription = "45 MAIN ST",
-                                    PaymentDueDate = new UtcDate{ Date="2017-01-24"},
+                                    PaymentDueDate = new LiteralDate{ Date="2017-01-24"},
                                     DiscountRate = 1.51,
                                     MaximumDaysDiscount = 0,
-                                    DateStorageChargeCommences = new UtcDate{ Date="2017-01-24"},
+                                    DateStorageChargeCommences = new LiteralDate{ Date="2017-01-24"},
                                     StorageChargePerBalePerDay = new StorageChargeCurrency
                                     {
                                         Value =0.245,
@@ -421,7 +421,7 @@ namespace Wiedpug.API.ExampleResponses
                                                   BaleHeader = new BaleHeader
                                                   {
                                                       Brand = "FTT",
-                                                      BaleDescription = new BaleDescription{Description="AAC"},
+                                                      BaleDescription = new BaleDescription{BaleDescriptionContent="AAC"},
                                                       AreaOfOrigin = "Melbourne",
                                                       LocationWithinStore = "AWTA LTD"
                                                   },

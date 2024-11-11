@@ -69,8 +69,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not apply renumbers.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool AreRenumbersApplied { get; set; }
 
         /// <summary>
@@ -81,8 +80,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not apply.
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool AreGrossWeightsApplied { get; set; }
 
         /// <summary>
@@ -93,8 +91,7 @@ namespace Wiedpug.Domain.Entities
         /// false: not apply
         /// </summary>
         [Required]
-        [MinLength(4)]
-        [MaxLength(5)]
+
         public required bool AreNetWeightsApplied { get; set; }
 
         [MinLength(1)]
