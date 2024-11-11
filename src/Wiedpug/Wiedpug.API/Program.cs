@@ -4,7 +4,7 @@ using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using Wiedpug.API.Controllers.V0;
 //using Wiedpug.API.Controllers.V1;
-using Wiedpug.API.Controllers.V2;
+//using Wiedpug.API.Controllers.V2;
 using Wiedpug.API.SchemaFilter.SwaggerOptions;
 using Microsoft.Extensions.DependencyInjection;
 using Wiedpug.Domain.Entities;
@@ -101,23 +101,22 @@ var app = builder.Build();
 
 var apiVersionSet = app.NewApiVersionSet()
                 //.HasApiVersion(new ApiVersion(1, "Deprecated")) //Adding a Status of "Deprecated" to mark the version as Deprecated
-            .HasApiVersion(new ApiVersion(0, 0))
+            .HasApiVersion(new ApiVersion(0,0))
             .HasApiVersion(new ApiVersion(1,0))
-            .HasApiVersion(new ApiVersion(2,0))            
+            .HasApiVersion(new ApiVersion(2,0))          
             .ReportApiVersions()            
             .Build();
 var versionedGroup = app.MapGroup("v{version:apiVersion}").WithApiVersionSet(apiVersionSet);
 
+versionedGroup.MapCatalogueEndpoints();
+
+versionedGroup.MapOrganisationDetailsEndpoints();
 
 versionedGroup.MapTestCertificatesEndpoints();
 
 versionedGroup.MapTestCertificateUpdateEndpoints();
 
 versionedGroup.MapTestCertificateRequestsEndpoints();
-
-versionedGroup.MapCatalogueEndpoints();
-
-versionedGroup.MapOrganisationDetailsEndpoints();
 
 versionedGroup.MapTestStatusEndpoints();
 

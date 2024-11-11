@@ -4,40 +4,43 @@ using Wiedpug.API.ExampleResponses;
 using Wiedpug.API.Model;
 using Wiedpug.Domain.Aggregates.OrganisationDetailsAggregate;
 using Wiedpug.Domain.Entities;
-namespace Wiedpug.API.Controllers.V1;
+namespace Wiedpug.API.Controllers.V2;
 
 public static class OrganisationDetailsEndpoints
 {
     public static void MapOrganisationDetailsEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = routes.MapGroup("/organisation-details").WithTags("Organisation Details");
+        var group = routes.MapGroup("/organisation-details")
+            .MapToApiVersion(2, 0).
+            WithTags("Organisation Details");
 
-        group.MapPost("/",
-        [SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailsRequestExample))]
-        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(CreateOrganisationDetails200Example))]
-        [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
-        [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
-        [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
-        [SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
-        ([FromBody] OrganisationDetails model) =>
-        {
-            //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
-        })
-        .WithName("CreateOrganisationDetails")
-        .WithOpenApi(o => new(o)
-        {
-            Summary = "Create or upload the organisation details"
-        })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
-        .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
-        .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
-        .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
-        .Produces<ApiErrorResult>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
-        .Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
+        //group.MapPost("/",
+        //[SwaggerRequestExample(typeof(OrganisationDetails), typeof(OrganisationDetailsRequestExample))]
+        //[SwaggerResponseExample(StatusCodes.Status200OK, typeof(CreateOrganisationDetails200Example))]
+        //[SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
+        //[SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
+        //[SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
+        //[SwaggerResponseExample(StatusCodes.Status500InternalServerError, typeof(CommonResponse500Example))]
+        //([FromBody] OrganisationDetails model) =>
+        //{
+        //    //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
+        //})
+        //.WithName("CreateOrganisationDetails")
+        //.WithOpenApi(o => new(o)
+        //{
+        //    Summary = "Create or upload the organisation details"
+        //})
+        //.Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        //.Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
+        //.Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
+        //.Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
+        //.Produces<ApiErrorResult>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
+        //.Produces<ApiErrorResult>(StatusCodes.Status500InternalServerError, contentType: "application/problem+json");
 
         group.MapPost("/data",
         [SwaggerRequestExample(typeof(GetOrganisationDetailsRequest), typeof(GetOrganisationDetailsRequestExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(GetOrganisationDetails200Example))]
+        [SwaggerResponseExample(StatusCodes.Status204NoContent, typeof(CommonResponse204Example))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(CommonResponse400ArrayRequestPayloadExample))]
         [SwaggerResponseExample(StatusCodes.Status401Unauthorized, typeof(CommonResponse401Example))]
         [SwaggerResponseExample(StatusCodes.Status403Forbidden, typeof(CommonResponse403NoReadPermissionExample))]
@@ -47,12 +50,13 @@ public static class OrganisationDetailsEndpoints
         {
             //return TypedResults.Created($"/api/ApiResults/{model.ID}", model);
         })
-        .WithName("GetOrganisationDetails")
+        .WithName("RequestForOrganisationDetails")
         .WithOpenApi(o => new(o)
         {
             Summary = "Retrieves the organisationdetails"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<OrganisationDetails>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
@@ -74,7 +78,7 @@ public static class OrganisationDetailsEndpoints
         {
             Summary = "Retrieves the organisationdetail by id"
         })
-        .Produces<ApiResult>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<ApiResult<OrganisationInformationDetail>>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status403Forbidden, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status404NotFound, contentType: "application/problem+json")
