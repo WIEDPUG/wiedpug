@@ -13,11 +13,2411 @@
       "name": "Applicable License",
       "url": "https://wiedpug.github.io/wiedpug"
     },
-    "version": "5.0.0"
+    "version": "0.0.0"
   },
-  "paths": {},
+  "paths": {
+    "/v0/test-requests-verifications": {
+      "post": {
+        "tags": [
+          "Test Requests Verifications"
+        ],
+        "summary": "Test Request Verifications",
+        "description": "Sent by an organisation that has already requested a test by paper to the Test House, as a verification of the paper request",
+        "operationId": "CreateTestRequestsVerifications",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TestRequestsVerification"
+                }
+              },
+              "example": [
+                {
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2020-07-15",
+                    "dateTransmissionFileCreated": "2016-01-17",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "AWT"
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "BCA"
+                    },
+                    "versionNumber": 31,
+                    "softwareIdentifier": {
+                      "softwareCompany": 8,
+                      "softwareVersion": 1082,
+                      "programName": "NETR"
+                    },
+                    "abn": 72001967184
+                  },
+                  "testRequestsVerificationDetails": [
+                    {
+                      "testDataHeader": {
+                        "client": {
+                          "organisationCode": "AWT"
+                        },
+                        "lotIdentityOrGroupNumber": "567545",
+                        "weightNote": {
+                          "prefix": "L",
+                          "suffix": 1234567
+                        },
+                        "numberOfBales": 1,
+                        "gross": {
+                          "value": 1,
+                          "weightCode": "KG"
+                        },
+                        "tare": {
+                          "value": 1,
+                          "weightCode": "KG"
+                        },
+                        "lotType": 3,
+                        "centreAuction": {
+                          "countryCode": "AU",
+                          "centreCode": "A"
+                        },
+                        "sourceCode": 1,
+                        "isCompanyAbnApplicable": false
+                      },
+                      "testRequestVerification": {
+                        "laboratory": 1,
+                        "growerCode": "G123",
+                        "growerName": "John Doe",
+                        "coreSampleWeight": {
+                          "value": 100,
+                          "weightCode": "KG"
+                        },
+                        "coreTestSamplingDate": "2024-04-15",
+                        "coresPerBale": 5,
+                        "grabsPerBale": 10,
+                        "isPreviousDataToBeUpdated": true,
+                        "hashTotal": 123456,
+                        "isYieldAndMicronTestRequired": true,
+                        "isLengthAndStrengthTestRequired": false,
+                        "isLengthOnlyTestRequired": true,
+                        "isColourTestRequired": false,
+                        "laserscanTestRequired": "N",
+                        "isAirflowTestRequired": false,
+                        "isOfdaTestRequired": true,
+                        "isDarkAndMedullatedFibreTestRequired": false,
+                        "isPesticideResidueTestRequired": false
+                      },
+                      "contractLimitRequirement": {
+                        "micronMin": 15.5,
+                        "micronMax": 25,
+                        "colourYZMin": 1.2,
+                        "colourYZMax": 2.1,
+                        "vmbMin": 0.85,
+                        "vmbMax": 1.25,
+                        "woolBaseMin": 50,
+                        "woolBaseMax": 65,
+                        "dichloromethaneDryBasisMin": 0.05,
+                        "dichloromethaneDryBasisMax": 0.15,
+                        "conditioningMassMin": {
+                          "value": 500,
+                          "weightCode": "KG"
+                        },
+                        "conditioningMassMax": {
+                          "value": 1500,
+                          "weightCode": "KG"
+                        },
+                        "lacBarbeMin": 10,
+                        "lacBarbeMax": 30,
+                        "lacHauteurMin": 15,
+                        "lacHauteurMax": 45,
+                        "lacHauteurUnder20Min": 5,
+                        "lacHauteurUnder20Max": 15,
+                        "lacHauteurUnder40Min": 8,
+                        "lacHauteurUnder40Max": 25,
+                        "lacHauteurCvPercentMin": 10,
+                        "lacHauteurCvPercentMax": 20
+                      },
+                      "darkAndMedullatedFibreRiskDetails": {
+                        "declaredBreed": "A",
+                        "declaredWoolSubCategory": "N",
+                        "declaredWoolCategory": "P",
+                        "isContactingWithExoticBreeds": true,
+                        "isCrutched": false,
+                        "isCrutchedWithin3MonthsOfShearing": true,
+                        "sex": "R",
+                        "ageFrom": 2,
+                        "ageTo": 5
+                      }
+                    },
+                    {
+                      "testDataHeader": {
+                        "client": {
+                          "organisationCode": "AWT"
+                        },
+                        "lotIdentityOrGroupNumber": "567545",
+                        "weightNote": {
+                          "prefix": "L",
+                          "suffix": 1234567
+                        },
+                        "numberOfBales": 1,
+                        "gross": {
+                          "value": 1,
+                          "weightCode": "KG"
+                        },
+                        "tare": {
+                          "value": 1,
+                          "weightCode": "KG"
+                        },
+                        "lotType": 3,
+                        "centreAuction": {
+                          "countryCode": "AU",
+                          "centreCode": "BA"
+                        },
+                        "sourceCode": 2,
+                        "isCompanyAbnApplicable": false
+                      },
+                      "testRequestVerification": {
+                        "laboratory": 1,
+                        "growerCode": "G4643",
+                        "growerName": "Alice Stonewood",
+                        "coreSampleWeight": {
+                          "value": 100,
+                          "weightCode": "KG"
+                        },
+                        "coreTestSamplingDate": "2024-04-25",
+                        "coresPerBale": 4,
+                        "grabsPerBale": 20,
+                        "isPreviousDataToBeUpdated": true,
+                        "hashTotal": 125534,
+                        "isYieldAndMicronTestRequired": true,
+                        "isLengthAndStrengthTestRequired": false,
+                        "isLengthOnlyTestRequired": false,
+                        "isColourTestRequired": false,
+                        "laserscanTestRequired": "S",
+                        "isAirflowTestRequired": false,
+                        "isOfdaTestRequired": false,
+                        "isDarkAndMedullatedFibreTestRequired": true,
+                        "isPesticideResidueTestRequired": true
+                      },
+                      "contractLimitRequirement": {
+                        "micronMin": 12.3,
+                        "micronMax": 18.6,
+                        "colourYZMin": 1.6,
+                        "colourYZMax": 2.5,
+                        "vmbMin": 0.66,
+                        "vmbMax": 1.8,
+                        "woolBaseMin": 40,
+                        "woolBaseMax": 55,
+                        "dichloromethaneDryBasisMin": 0.06,
+                        "dichloromethaneDryBasisMax": 0.12,
+                        "conditioningMassMin": {
+                          "value": 260,
+                          "weightCode": "KG"
+                        },
+                        "conditioningMassMax": {
+                          "value": 1200,
+                          "weightCode": "KG"
+                        },
+                        "lacBarbeMin": 17,
+                        "lacBarbeMax": 56,
+                        "lacHauteurMin": 12,
+                        "lacHauteurMax": 36,
+                        "lacHauteurUnder20Min": 3,
+                        "lacHauteurUnder20Max": 12,
+                        "lacHauteurUnder40Min": 9,
+                        "lacHauteurUnder40Max": 15,
+                        "lacHauteurCvPercentMin": 13,
+                        "lacHauteurCvPercentMax": 27
+                      },
+                      "darkAndMedullatedFibreRiskDetails": {
+                        "declaredBreed": "A",
+                        "declaredWoolSubCategory": "N",
+                        "declaredWoolCategory": "B",
+                        "isContactingWithExoticBreeds": false,
+                        "isCrutched": false,
+                        "isCrutchedWithin3MonthsOfShearing": true,
+                        "sex": "E",
+                        "ageFrom": 1,
+                        "ageTo": 4
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApiResult"
+                  }
+                },
+                "example": {
+                  "apiMessages": []
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                  "title": "One or more validation errors occurred",
+                  "status": 400,
+                  "detail": "",
+                  "errors": [
+                    {
+                      "errors": {
+                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                          "The field DateFormatLastRevised is required",
+                          "The field DateFormatLastRevised must match regulart expression pattern..."
+                        ],
+                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                          "The field CountryOfOrigin is required"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v0/test-requests-verifications/data": {
+      "post": {
+        "tags": [
+          "Test Requests Verifications"
+        ],
+        "summary": "Retrieves the test requests verification",
+        "operationId": "RequestForTestRequestsVerification",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "header",
+            "description": "Specify the version of the API",
+            "schema": {
+              "type": "string",
+              "example": "1.0.0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RequestForData"
+                }
+              },
+              "example": [
+                {
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2020-07-15",
+                    "dateTransmissionFileCreated": "2016-01-17",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "ABC"
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "ATW"
+                    },
+                    "versionNumber": 31,
+                    "softwareIdentifier": {
+                      "softwareCompany": 8,
+                      "softwareVersion": 1082,
+                      "programName": "NETR"
+                    },
+                    "abn": 72001967184
+                  },
+                  "requestForDataType": {}
+                }
+              ]
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TestRequestsVerificationListApiResult"
+                  }
+                },
+                "example": {
+                  "apiMessages": [],
+                  "data": [
+                    {
+                      "transmissionHeader": {
+                        "dateFormatLastRevised": "2020-07-15",
+                        "dateTransmissionFileCreated": "2016-01-17",
+                        "countryOfOrigin": "AU",
+                        "documentOriginator": {
+                          "organisationCode": "AWT"
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "BCA"
+                        },
+                        "versionNumber": 31,
+                        "softwareIdentifier": {
+                          "softwareCompany": 8,
+                          "softwareVersion": 1082,
+                          "programName": "NETR"
+                        },
+                        "abn": 72001967184
+                      },
+                      "testRequestsVerificationDetails": [
+                        {
+                          "testDataHeader": {
+                            "client": {
+                              "organisationCode": "AWT"
+                            },
+                            "lotIdentityOrGroupNumber": "567545",
+                            "weightNote": {
+                              "prefix": "L",
+                              "suffix": 1234567
+                            },
+                            "numberOfBales": 1,
+                            "gross": {
+                              "value": 1,
+                              "weightCode": "KG"
+                            },
+                            "tare": {
+                              "value": 1,
+                              "weightCode": "KG"
+                            },
+                            "lotType": 3,
+                            "centreAuction": {
+                              "countryCode": "AU",
+                              "centreCode": "A"
+                            },
+                            "sourceCode": 1,
+                            "isCompanyAbnApplicable": false
+                          },
+                          "testRequestVerification": {
+                            "laboratory": 1,
+                            "growerCode": "G123",
+                            "growerName": "John Doe",
+                            "coreSampleWeight": {
+                              "value": 20,
+                              "weightCode": "KG"
+                            },
+                            "coreTestSamplingDate": "2024-04-15",
+                            "coresPerBale": 5,
+                            "grabsPerBale": 10,
+                            "isPreviousDataToBeUpdated": true,
+                            "hashTotal": 123456,
+                            "isYieldAndMicronTestRequired": true,
+                            "isLengthAndStrengthTestRequired": false,
+                            "isLengthOnlyTestRequired": true,
+                            "isColourTestRequired": false,
+                            "laserscanTestRequired": "P",
+                            "isAirflowTestRequired": false,
+                            "isOfdaTestRequired": true,
+                            "isDarkAndMedullatedFibreTestRequired": false,
+                            "isPesticideResidueTestRequired": false
+                          },
+                          "contractLimitRequirement": {
+                            "micronMin": 15.5,
+                            "micronMax": 25,
+                            "colourYZMin": 1.2,
+                            "colourYZMax": 2.1,
+                            "vmbMin": 0.85,
+                            "vmbMax": 1.25,
+                            "woolBaseMin": 50,
+                            "woolBaseMax": 65,
+                            "dichloromethaneDryBasisMin": 0.05,
+                            "dichloromethaneDryBasisMax": 0.15,
+                            "conditioningMassMin": {
+                              "value": 500,
+                              "weightCode": "KG"
+                            },
+                            "conditioningMassMax": {
+                              "value": 1500,
+                              "weightCode": "KG"
+                            },
+                            "lacBarbeMin": 10,
+                            "lacBarbeMax": 30,
+                            "lacHauteurMin": 15,
+                            "lacHauteurMax": 45,
+                            "lacHauteurUnder20Min": 5,
+                            "lacHauteurUnder20Max": 15,
+                            "lacHauteurUnder40Min": 8,
+                            "lacHauteurUnder40Max": 25,
+                            "lacHauteurCvPercentMin": 10,
+                            "lacHauteurCvPercentMax": 20
+                          },
+                          "darkAndMedullatedFibreRiskDetails": {
+                            "declaredBreed": "A",
+                            "declaredWoolSubCategory": "N",
+                            "declaredWoolCategory": "P",
+                            "isContactingWithExoticBreeds": true,
+                            "isCrutched": false,
+                            "isCrutchedWithin3MonthsOfShearing": true,
+                            "sex": "R",
+                            "ageFrom": 2,
+                            "ageTo": 5
+                          }
+                        },
+                        {
+                          "testDataHeader": {
+                            "client": {
+                              "organisationCode": "AWT"
+                            },
+                            "lotIdentityOrGroupNumber": "567545",
+                            "weightNote": {
+                              "prefix": "L",
+                              "suffix": 1234567
+                            },
+                            "numberOfBales": 1,
+                            "gross": {
+                              "value": 1,
+                              "weightCode": "KG"
+                            },
+                            "tare": {
+                              "value": 1,
+                              "weightCode": "KG"
+                            },
+                            "lotType": 3,
+                            "centreAuction": {
+                              "countryCode": "AU",
+                              "centreCode": "A"
+                            },
+                            "sourceCode": 2,
+                            "isCompanyAbnApplicable": false
+                          },
+                          "testRequestVerification": {
+                            "laboratory": 1,
+                            "growerCode": "G4643",
+                            "growerName": "Alice Stonewood",
+                            "coreSampleWeight": {
+                              "value": 164,
+                              "weightCode": "KG"
+                            },
+                            "coreTestSamplingDate": "2024-04-25",
+                            "coresPerBale": 4,
+                            "grabsPerBale": 20,
+                            "isPreviousDataToBeUpdated": true,
+                            "hashTotal": 125534,
+                            "isYieldAndMicronTestRequired": true,
+                            "isLengthAndStrengthTestRequired": false,
+                            "isLengthOnlyTestRequired": false,
+                            "isColourTestRequired": false,
+                            "laserscanTestRequired": "N",
+                            "isAirflowTestRequired": false,
+                            "isOfdaTestRequired": false,
+                            "isDarkAndMedullatedFibreTestRequired": true,
+                            "isPesticideResidueTestRequired": true
+                          },
+                          "contractLimitRequirement": {
+                            "micronMin": 12.3,
+                            "micronMax": 18.6,
+                            "colourYZMin": 1.6,
+                            "colourYZMax": 2.5,
+                            "vmbMin": 0.66,
+                            "vmbMax": 1.8,
+                            "woolBaseMin": 40,
+                            "woolBaseMax": 55,
+                            "dichloromethaneDryBasisMin": 0.06,
+                            "dichloromethaneDryBasisMax": 0.12,
+                            "conditioningMassMin": {
+                              "value": 126,
+                              "weightCode": "KG"
+                            },
+                            "conditioningMassMax": {
+                              "value": 1200,
+                              "weightCode": "KG"
+                            },
+                            "lacBarbeMin": 17,
+                            "lacBarbeMax": 56,
+                            "lacHauteurMin": 12,
+                            "lacHauteurMax": 36,
+                            "lacHauteurUnder20Min": 3,
+                            "lacHauteurUnder20Max": 12,
+                            "lacHauteurUnder40Min": 9,
+                            "lacHauteurUnder40Max": 15,
+                            "lacHauteurCvPercentMin": 13,
+                            "lacHauteurCvPercentMax": 27
+                          },
+                          "darkAndMedullatedFibreRiskDetails": {
+                            "declaredBreed": "A",
+                            "declaredWoolSubCategory": "N",
+                            "declaredWoolCategory": "B",
+                            "isContactingWithExoticBreeds": false,
+                            "isCrutched": false,
+                            "isCrutchedWithin3MonthsOfShearing": true,
+                            "sex": "E",
+                            "ageFrom": 1,
+                            "ageTo": 4
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                },
+                "example": {
+                  "apiMessages": [
+                    {
+                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+                  "title": "One or more validation errors occurred",
+                  "status": 400,
+                  "detail": "",
+                  "errors": [
+                    {
+                      "errors": {
+                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
+                          "The field DateFormatLastRevised is required",
+                          "The field DateFormatLastRevised must match regulart expression pattern..."
+                        ],
+                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
+                          "The field CountryOfOrigin is required"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+                  "title": "Unauthorized",
+                  "status": 401,
+                  "detail": "Missing authentication credentials"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "You don't have permission to access this resource",
+                  "status": 403,
+                  "detail": "You don't have a 'read' access to access this resource"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+                  "title": "Resource not found",
+                  "status": 404
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorResult"
+                },
+                "example": {
+                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
+                  "title": "An error occurred while processing your required",
+                  "status": 500,
+                  "detail": "Error details.."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components": {
-    "schemas": {},
+    "schemas": {
+      "TestRequestsVerification": {
+        "required": [
+          "transmissionHeader"
+        ],
+        "type": "object",
+        "properties": {
+          "transmissionHeader": {
+            "$ref": "#/components/schemas/TransmissionHeader"
+          },
+          "transferConfig": {
+            "$ref": "#/components/schemas/TransferConfig"
+          },
+          "testRequestsVerificationDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestRequestsVerificationDetail"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransmissionHeader": {
+        "required": [
+          "abn",
+          "countryOfOrigin",
+          "currentReceiver",
+          "dateFormatLastRevised",
+          "dateTransmissionFileCreated",
+          "documentOriginator"
+        ],
+        "type": "object",
+        "properties": {
+          "dateFormatLastRevised": {
+            "$ref": "#/components/schemas/LiteralDate"
+          },
+          "dateTransmissionFileCreated": {
+            "$ref": "#/components/schemas/LiteralDate"
+          },
+          "countryOfOrigin": {
+            "$ref": "#/components/schemas/CountryCode"
+          },
+          "documentOriginator": {
+            "$ref": "#/components/schemas/Organisation"
+          },
+          "currentReceiver": {
+            "$ref": "#/components/schemas/Organisation"
+          },
+          "versionNumber": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "description": "The version number of the WIEDPUG Handbook that the transmission relates to\r\nTwo digits. e.g. 99",
+            "format": "int32",
+            "nullable": true
+          },
+          "softwareIdentifier": {
+            "$ref": "#/components/schemas/SoftwareIdentifier"
+          },
+          "abn": {
+            "maximum": 99999999999,
+            "minimum": 10000000000,
+            "type": "integer",
+            "description": "Australian Business Number, 11 digits",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LiteralDate": {
+        "type": "string",
+        "description": "Date value in ISO standard UTC date format. e.g. 2024-03-21 (YYYY-MM-DD).\n\ndateOfCreditNote: Date the Credit note was issued\n\ndateOfOriginalInvoice: Date of the original invoice\\ndateIssue: The date the certificate was issued.\n\ndateLastUpdated: The day the item was last amended.\n\nstatementDate: The period ending date of the statement.\n\nstatementPaymentDate: The date the payment was made.\n\ndatePaymentMade: Required date field for the date payment was made.\n\nsaleDate: The date on which the wool was sold.\n\ncoreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.\n\nitemDate: The date the cost of the item was incurred.",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])",
+        "example": "2024-03-21"
+      },
+      "CountryCode": {
+        "enum": [
+          "AU",
+          "NZ",
+          "DE",
+          "IT",
+          "CN",
+          "TW"
+        ],
+        "type": "string",
+        "description": "A code for the country in which the transmission was created. Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New Zealand<br />DE: Germany<br />IT: Italy<br />CN: China<br />TW: Taiwan"
+      },
+      "Organisation": {
+        "required": [
+          "organisationCode"
+        ],
+        "type": "object",
+        "properties": {
+          "organisationCode": {
+            "maxLength": 3,
+            "minLength": 1,
+            "type": "string"
+          },
+          "centre": {
+            "$ref": "#/components/schemas/Centre"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A code used to identify organisations involved in the wool trade.\r\n\r\nThese codes are issued and maintained by the Network and are available online.\r\n\r\ncurrentReceiver: The code for the organisation that will receive the document at the end of the current transmission.Where a document is transferred from one\r\norganisation to another through an intermediary, the code for the current receiver will vary from leg to leg of the journey.\r\n\r\nreleasingOrganisation: The broker that is responsible for releasing the wool out of the store.\r\n\r\nmarkingOrganisation: The code for the organisation which is to apply marks to the bales.\r\n\r\ninvoicingOrganisation: The code for the broker who will raise the invoice for the wool.\r\n\r\nstorageOrganisation: This is the organisation store that is storing the wool. Note: If there is more than one organisation in a centre, then separate AWEX codes are \r\nrequired for each store. It is not necessarily the same as the Releasing Organisation.\r\n\r\nclient: The code for the organisation that is the transmitter’s client. Where one organisation submits a TRV document to a Test House requesting tests \r\nfor one of its own clients, the code for that client will be used in this field."
+      },
+      "Centre": {
+        "required": [
+          "centreCode",
+          "countryCode"
+        ],
+        "type": "object",
+        "properties": {
+          "countryCode": {
+            "$ref": "#/components/schemas/CountryCode"
+          },
+          "centreCode": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CentreCodeAustralia"
+              },
+              {
+                "$ref": "#/components/schemas/CentreCodeChina"
+              },
+              {
+                "$ref": "#/components/schemas/CentreCodeGermany"
+              },
+              {
+                "$ref": "#/components/schemas/CentreCodeItaly"
+              },
+              {
+                "$ref": "#/components/schemas/CentreCodeNewZealand"
+              },
+              {
+                "$ref": "#/components/schemas/CentreCodeTaiwan"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Centre has country and centreCode.\r\n\r\nThe centreCode is one of these below based on the value of country.\r\n\r\nThe mapping of country:centreCode is the following:\r\n            \r\nAU:CentreCodeAustralia\r\n\r\nNZ: CentreNewZealand\r\n\r\nDE: CentreGermany\r\n\r\nIT: CentreItaly\r\n\r\nCN: CentreChina\r\n\r\nTW: CentreTaiwan\r\n\r\nThe legacy codes for Overseas Centre are under CentreCodeAustralia\r\n\r\ncentreStorage: The centre (code) representing the location at which the wool is stored (relevant to the intended use of the document). For example, the\r\nCentre- Storage against a lot in the Catalogue is the location of the wool where the buyer would expect to take delivery.\r\n\r\ncentreCatalogue: The centre (code) used to group lots of wool based on a location. This location is typically the core test/weighing centre and is often aligned with the seller’s Post Sale Charge schedule.\r\n\r\ncentreDelivery: Inclusion of the Delivery Area Centre Code is Mandatory when the Post Sale Service Charge includes delivery to a nominated area and a “D” is included in the Delivery Basis Field.\r\n\r\ncentreAlternateDelivery: This field is to be used when the PSC includes optional delivery to a second area.",
+        "discriminator": {
+          "propertyName": "countryCode",
+          "mapping": {
+            "AU": "#/components/schemas/CentreCodeAustralia",
+            "CN": "#/components/schemas/CentreCodeChina",
+            "DE": "#/components/schemas/CentreCodeGermany",
+            "IT": "#/components/schemas/CentreCodeItaly",
+            "NZ": "#/components/schemas/CentreCodeNewZealand",
+            "TW": "#/components/schemas/CentreCodeTaiwan"
+          }
+        }
+      },
+      "CentreCodeAustralia": {
+        "enum": [
+          "A",
+          "AD",
+          "AR",
+          "AU",
+          "B",
+          "BA",
+          "BK",
+          "BL",
+          "BM",
+          "BO",
+          "BR",
+          "BT",
+          "C",
+          "CA",
+          "CB",
+          "CC",
+          "CL",
+          "CN",
+          "CO",
+          "CR",
+          "CU",
+          "CW",
+          "D",
+          "DE",
+          "DO",
+          "DR",
+          "E",
+          "ER",
+          "ES",
+          "F",
+          "G",
+          "GF",
+          "GI",
+          "GN",
+          "GR",
+          "GU",
+          "H",
+          "HA",
+          "HB",
+          "HM",
+          "HO",
+          "HY",
+          "I",
+          "J",
+          "JA",
+          "K",
+          "KE",
+          "KH",
+          "KI",
+          "KN",
+          "KT",
+          "KW",
+          "KY",
+          "L",
+          "LC",
+          "M",
+          "MA",
+          "MB",
+          "MC",
+          "ME",
+          "MG",
+          "MI",
+          "MO",
+          "MR",
+          "MU",
+          "N",
+          "NA",
+          "ND",
+          "NO",
+          "NR",
+          "OB",
+          "OR",
+          "P",
+          "PA",
+          "PL",
+          "Q",
+          "QU",
+          "R",
+          "S",
+          "SG",
+          "SH",
+          "SK",
+          "SW",
+          "SY",
+          "T",
+          "TE",
+          "U",
+          "UR",
+          "V",
+          "W",
+          "WA",
+          "WG",
+          "WL",
+          "WN",
+          "WR",
+          "WW",
+          "X",
+          "Y",
+          "YA",
+          "YM",
+          "YO",
+          "Z",
+          "ZC",
+          "ZD",
+          "ZH",
+          "ZJ",
+          "ZK",
+          "ZL",
+          "ZM",
+          "ZO",
+          "ZP",
+          "ZQ",
+          "ZR",
+          "ZT",
+          "ZV",
+          "ZW",
+          "ZX",
+          "ZY"
+        ],
+        "type": "string",
+        "description": "This is Centres for Australia. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia - Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia - AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA: Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia - Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C: Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia - Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia - Coleraine<br />CN: Australia - Condoblin<br />CO: Australia - Cootamundra<br />CR: Australia - Corowa<br />CU: Australia - Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR: Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia - Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI: Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM: Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia - Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA: Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE: Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia - Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia - Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia - Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia - Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia - Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR: Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia - NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia - Goondiwindi<br />NO: Australia - Northam<br />NR: Australia - Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia - Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK: Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia - Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U: Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia - Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG: Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia - Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA: Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia - Young<br />Z: Australia - Albany<br />ZC:Christchurch - New Zealand<br />ZD: Dunedin - New Zealand<br />ZH: Blumenthal - Germany<br />ZJ: Biella - Italy<br />ZK: Grisignano - Italy<br />ZL: Mosgiel - New Zealand<br />ZM: Nanjing - China<br />ZO: Keelung - Taiwan<br />ZP: Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang - China<br />ZT: Timaru - New Zealand<br />ZV: Invercargill - New Zealand<br />ZW:Wellington - New Zealand<br />ZX: Napier – New Zealand<br />ZY: Ashburton – New Zealand"
+      },
+      "CentreCodeChina": {
+        "enum": [
+          "NA",
+          "SH",
+          "QI",
+          "ZH"
+        ],
+        "type": "string",
+        "description": "This is Centres for China. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />NA: Nanjing - China<br />SH: Shanghai - China<br />QI: Qingdao - China<br />ZH: Zhangjiagang - China"
+      },
+      "CentreCodeGermany": {
+        "enum": [
+          "BL"
+        ],
+        "type": "string",
+        "description": "This is Centres for Germany. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BL: Blumenthal - Germany"
+      },
+      "CentreCodeItaly": {
+        "enum": [
+          "BI",
+          "GR"
+        ],
+        "type": "string",
+        "description": "This is Centres for Italy. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />BI: Biella - Italy<br />GR: Grisignano - Italy"
+      },
+      "CentreCodeNewZealand": {
+        "enum": [
+          "A",
+          "AW",
+          "B",
+          "BL",
+          "BT",
+          "C",
+          "CV",
+          "D",
+          "F",
+          "FA",
+          "G",
+          "GD",
+          "GO",
+          "HA",
+          "HS",
+          "I",
+          "J",
+          "K",
+          "KA",
+          "KP",
+          "L",
+          "LO",
+          "LU",
+          "M",
+          "MA",
+          "MK",
+          "MT",
+          "MU",
+          "N",
+          "NE",
+          "O",
+          "OH",
+          "OI",
+          "OM",
+          "OT",
+          "P",
+          "PT",
+          "PU",
+          "R",
+          "RG",
+          "RI",
+          "S",
+          "SA",
+          "SH",
+          "SY",
+          "T",
+          "TA",
+          "TE",
+          "TH",
+          "TP",
+          "U",
+          "V",
+          "W",
+          "WH",
+          "WI",
+          "WR",
+          "WT",
+          "WU",
+          "X",
+          "Y",
+          "YP",
+          "Z"
+        ],
+        "type": "string",
+        "description": "This is Centres for New Zealand. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand - Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand - Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand - Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand - Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO: New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand - Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand - Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand - Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand - Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand - Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand - Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand - Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand - TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W: New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT: New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand - Waipukurau<br />Z: New Zealand - Taupo"
+      },
+      "CentreCodeTaiwan": {
+        "enum": [
+          "KE"
+        ],
+        "type": "string",
+        "description": "This is Centres for Taiwan. A centre is a town where any activity connected with the wool industry takes place. The codes used in transmissions are those defined in the Australian Wool Selling Regulation.<br />KE: Keelung - Taiwan"
+      },
+      "SoftwareIdentifier": {
+        "type": "object",
+        "properties": {
+          "softwareCompany": {
+            "$ref": "#/components/schemas/SoftwareCompany"
+          },
+          "softwareVersion": {
+            "maximum": 9999,
+            "minimum": -9999,
+            "type": "integer",
+            "description": "Version no. e.g. 2400",
+            "format": "int32",
+            "nullable": true
+          },
+          "programName": {
+            "maxLength": 4,
+            "minLength": 1,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SoftwareCompany": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "type": "integer",
+        "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA",
+        "format": "int32"
+      },
+      "TransferConfig": {
+        "required": [
+          "transferType"
+        ],
+        "type": "object",
+        "properties": {
+          "transferType": {
+            "$ref": "#/components/schemas/TransferType"
+          },
+          "finalReceiverList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Organisation"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Used to identify document transfer type: Restrict, Unrestrict, and Exclude.\r\n\r\nOnly used for data retrieval. Do not include it in the response."
+      },
+      "TransferType": {
+        "enum": [
+          "Unrestrict",
+          "Restrict",
+          "Exclude"
+        ],
+        "type": "string",
+        "description": "Unrestrict: Send document to all members<br />Restrict: Send document to appointed members<br />Exclude: Send to all members excluding the appointed members"
+      },
+      "TestRequestsVerificationDetail": {
+        "required": [
+          "testDataHeader",
+          "testRequestVerification"
+        ],
+        "type": "object",
+        "properties": {
+          "testDataHeader": {
+            "$ref": "#/components/schemas/TestDataHeader"
+          },
+          "testRequestVerification": {
+            "$ref": "#/components/schemas/TestRequestVerification"
+          },
+          "contractLimitRequirement": {
+            "$ref": "#/components/schemas/ContractLimitRequirement"
+          },
+          "darkAndMedullatedFibreRiskDetails": {
+            "$ref": "#/components/schemas/DarkAndMedullatedFibreRiskDetail"
+          },
+          "testRequestsVerificationBales": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestRequestsVerificationBale"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TestDataHeader": {
+        "required": [
+          "client",
+          "gross",
+          "lotIdentityOrGroupNumber",
+          "numberOfBales",
+          "tare"
+        ],
+        "type": "object",
+        "properties": {
+          "client": {
+            "$ref": "#/components/schemas/Organisation"
+          },
+          "season": {
+            "$ref": "#/components/schemas/Season"
+          },
+          "saleIdentity": {
+            "$ref": "#/components/schemas/SaleIdentity"
+          },
+          "centreStorage": {
+            "$ref": "#/components/schemas/Centre"
+          },
+          "lotIdentityOrGroupNumber": {
+            "maxLength": 6,
+            "minLength": 1,
+            "type": "string",
+            "description": "It can be a Lot Identity or a Group Number.\r\n            \r\nLot Identity:\r\n            \r\nThis is a compound name for lot number and lot suffix, where the lot \r\nnumber is 5 numeric characters and the lot suffix is 1 alphanumeric\r\ncharacter.The suffix is used when a lot is broken up by the original lot\r\nnumber is retained; for example.If 2 bales of a 10-bale lot got wet and\r\nthe 8 bales and the 2 bales are offered separately, one could have a\r\nsuffix A and the other a suffix B.Where a suffix is not used, the lot\r\nnumber occupies the whole of the Lot Identity field and is right justified.\r\n            \r\nFrom:\r\n            \r\nThe current value that the Lot Identity is to be changed from.\r\n\r\nTo:\r\n\r\nThe new value that the Lot Identity is to be changed to.\r\n            \r\nGroup Number:\r\n            \r\nA code used to identify a group of lots."
+          },
+          "weightNote": {
+            "$ref": "#/components/schemas/WeightNote"
+          },
+          "clientCrossReference": {
+            "maxLength": 8,
+            "minLength": 1,
+            "type": "string",
+            "description": "The identity given to the lot in the computer system by the owner of the wool.\r\n\r\nClient’s Cross Reference is transmitted by the owner of the wool to a Test House when the owner either verifies a test request(in a type of\r\nTRV document) or requests the printing of a certificate(in a type TCR document). If it is included in the transmission to the Test House, the\r\nTest House will also include it in its transmission of the certificate.The owner of the wool will then be able to connect the transmitted certificate\r\nwith the wool in its computer system.In a Test Request Verification document, the field must contain the weight note number of the lot.\r\nThe value in this field is NOT printed on the certificate.It is the value in the Certificate Reference field that is printed on the certificate.",
+            "nullable": true
+          },
+          "numberOfBales": {
+            "$ref": "#/components/schemas/NumberOfBales"
+          },
+          "gross": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "tare": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "regrabSampleWeight": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "mulesingStatus": {
+            "$ref": "#/components/schemas/MulesingStatus"
+          },
+          "declaredGross": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "declaredTare": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "lotType": {
+            "$ref": "#/components/schemas/LotType"
+          },
+          "centreAuction": {
+            "$ref": "#/components/schemas/Centre"
+          },
+          "sourceCode": {
+            "$ref": "#/components/schemas/SourceCode"
+          },
+          "reportingFlag": {
+            "$ref": "#/components/schemas/ReportingFlag"
+          },
+          "scouredType": {
+            "$ref": "#/components/schemas/ScouredType"
+          },
+          "gstAmount": {
+            "$ref": "#/components/schemas/Currency"
+          },
+          "isGstApplicable": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether the GST is aplicable.\r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
+            "nullable": true
+          },
+          "isCompanyAbnApplicable": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether the Company ABN is applicable to invoice. \r\n\r\ntrue: applicable.\r\n\r\nfalse: not applicable.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Season": {
+        "maximum": 99,
+        "minimum": -99,
+        "type": "integer",
+        "format": "int32"
+      },
+      "SaleIdentity": {
+        "required": [
+          "saleNumber",
+          "sellingCentreType"
+        ],
+        "type": "object",
+        "properties": {
+          "sellingCentreType": {
+            "maxLength": 2,
+            "minLength": 1,
+            "type": "string",
+            "description": "The following codes are reserved for current and historical open cry auction selling centres:\r\n            \r\nSellingCentre/Type (New Zealand):\r\n            \r\nC: Christchurch; \r\n\r\nN: Napier.\r\n\r\n            \r\nSellingCentre/Type (Australia):\r\n            \r\nA: Adelaide; \r\n\r\nAU: Australia; \r\n\r\nB: Brisbane; \r\n\r\nF: Fremantle; \r\n\r\nG: Geelong; \r\n\r\nL: Launceston; \r\n\r\nM: Melbourne; \r\n\r\nN: Newcastle; \r\n\r\nR: Goulburn; \r\n\r\nS: Sydney.\r\n\r\n\r\nThe following codes are allocated for alternative sale types:\r\n            \r\nPS: Private Sales; \r\n\r\nT: Auctions Plus Sales.\r\n            \r\n\r\nPlease contact the WIEDPUG Secretary for the latest list of reserved and allocated codes."
+          },
+          "saleNumber": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A group field of SellingCentre/Type and Sale Number\r\n            \r\nFrom: The current value that the Sale Identity is to be changed from.\r\n            \r\nTo: The new value that the Sale Identity is to be changed to."
+      },
+      "WeightNote": {
+        "required": [
+          "prefix",
+          "suffix"
+        ],
+        "type": "object",
+        "properties": {
+          "prefix": {
+            "maxLength": 1,
+            "minLength": 1,
+            "type": "string"
+          },
+          "suffix": {
+            "maximum": 9999999,
+            "minimum": -9999999,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The first character contains the Weight Note prefix, and the next seven characters contain the weight Note Suffix."
+      },
+      "NumberOfBales": {
+        "maximum": 9999,
+        "minimum": -9999,
+        "type": "integer",
+        "description": "Number of bales",
+        "format": "int32"
+      },
+      "Weight": {
+        "required": [
+          "value",
+          "weightCode"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "maximum": 999999.99,
+            "minimum": -999999.99,
+            "type": "number",
+            "format": "double",
+            "multipleOf": 0.01
+          },
+          "weightCode": {
+            "$ref": "#/components/schemas/WeightCode"
+          }
+        },
+        "additionalProperties": false,
+        "description": "coreSampleWeight: The weight of the initial core sample.\r\n\r\nsampleWeightRemoved: The weight of wool removed after testing, to adjust the issued test results, in compliance with the relevant standard (e.g. removal of wet \r\nwool, contract weight adjustment, retained buyer sample, etc.).\r\n\r\ndeclaredGross: The gross weight of the lot as declared by the owner.\r\n\r\ndeclaredTare: The tare weight of the lot as declared by the owner.\r\n\r\nregrabSampleWeight: The weight of a regrab sample, a grab sample taken after the wool has been initially sampled and tested, is shown on the new certificate.\r\n\r\nmassOfGlobalSample: Unit in Grams.\r\n\r\nsumOfOdMasses: Unit in Grams.\r\n\r\ngainLossOfInvoiceMass: Refer to Invoice Mass Flag to determine Gain or Loss.\r\n\r\nnetWeightOdOfConsignment: Unit in KG.\r\n\r\nofficialRegain: Unit in KG.\r\n\r\nconditioningMass: Mass of the sample after conditioning to a specified regain. Min: The lowest value in a range of Conditioning Mass values. Max: The highest value in a range of Conditioning Mass values.\r\n\r\ngross: Total weight of the wool. In transmissions from Test Houses, Gross includes Regrab Sample Weight. In all other transmissions, Regrab \r\nSample Weight will have been subtracted from the Gross of a lot or a group before the transmission. See the chapter ‘Business Rules’ for a fuller explanation.\r\n\r\ntare: The weight of the bale packaging.\r\n\r\nlightestIndividualBaleWeight: This is the Reweigh Gross Kg of the lightest bale in the lot.\r\n\r\ncleanWeight: Clean weight = Net Weight X Yield"
+      },
+      "WeightCode": {
+        "enum": [
+          "KG",
+          "LB",
+          "G"
+        ],
+        "type": "string",
+        "description": "KG: Kilograms<br />LB: Pounds<br />G: Grams"
+      },
+      "MulesingStatus": {
+        "enum": [
+          "NM",
+          "LN",
+          "CM",
+          "AA",
+          "M",
+          "ND"
+        ],
+        "type": "string",
+        "description": "NM: Non Mulesed<br />LN: Liquid Nitrogen<br />CM: Ceased Mulesing<br />AA: Mulesed with Analgesic &/or Anaesthetic<br />M: Mulesed<br />ND: Not Declared"
+      },
+      "LotType": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "type": "integer",
+        "description": "A code used to describe wool lot preparation. It is not wool type. `*` wool meets clip preparation guidelines.`#` wool does not necessarily meet clip preparation guidelines<br />1: (Suffix - P) Classed Grower Lot *<br />2: (Suffix - M) Objectively Matched Lot<br />3: (Suffix - J) Combined Certificate<br />4: (Suffix - I) Subjectively Matched Interlot<br />5: (Suffix - B) Other Bulk Class Lot #<br />6: Not Used<br />7: (Suffix - N) Objectively Matched Interlot<br />8: (Suffix - Q) Classed Bulk Class Lot – Quality Managed *<br />9: (Suffix - D) Other Grower Lot #",
+        "format": "int32"
+      },
+      "SourceCode": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "description": "Source of the lot presented for sale.<br />1: Grower<br />2: Dealer<br />3: BulkClass",
+        "format": "int32"
+      },
+      "ReportingFlag": {
+        "enum": [
+          "R",
+          "C",
+          "U"
+        ],
+        "type": "string",
+        "description": "R: Report, results for this test are supplied for information only<br />C: Certificate results for this test are certified<br />U: This lot is untested and there are no certificate results"
+      },
+      "ScouredType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "description": "0: Not Scoured<br />1: Scoured Aqueous<br />2: Scoured Dual Solvent<br />3: Carbonised<br />4: Mohair<br />5: Noils<br />6: Slipe",
+        "format": "int32"
+      },
+      "Currency": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "maximum": 9999999999.99,
+            "minimum": -9999999999.99,
+            "type": "number",
+            "description": "Total up to 12 digits with 2 digits after the decimal point.",
+            "format": "double",
+            "multipleOf": 0.01
+          },
+          "currencyCode": {
+            "$ref": "#/components/schemas/CurrencyCode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CurrencyCode": {
+        "enum": [
+          "AUD",
+          "BEF",
+          "NZD",
+          "BGP",
+          "FRF",
+          "DEM",
+          "ITL",
+          "CNY",
+          "ANG",
+          "TWD",
+          "ZAR",
+          "USD",
+          "EUR"
+        ],
+        "type": "string",
+        "description": "AUD: Australian Dollars<br />BEF: Belgian Francs<br />NZD: New Zealand Dollars<br />BGP: British Pounds<br />FRF: French Francs<br />DEM: German Deutsche Marks<br />ITL: Italy Lire<br />CNY: Chinese Yuan<br />ANG: Netherlands Antilles Guilders<br />BEF: Taiwan New Dollars<br />ZAR: South Africa Rand<br />USD: USA Dollars<br />EUR: Euro"
+      },
+      "TestRequestVerification": {
+        "required": [
+          "hashTotal",
+          "isPreviousDataToBeUpdated",
+          "laboratory"
+        ],
+        "type": "object",
+        "properties": {
+          "laboratory": {
+            "$ref": "#/components/schemas/Laboratory"
+          },
+          "growerCode": {
+            "maxLength": 8,
+            "minLength": 1,
+            "type": "string",
+            "description": "Optional alphanumeric field for grower code.",
+            "nullable": true
+          },
+          "growerName": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the grower of the wool",
+            "nullable": true
+          },
+          "coreSampleWeight": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "coreTestSamplingDate": {
+            "$ref": "#/components/schemas/LiteralDate"
+          },
+          "coresPerBale": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "description": "Number of core samples taken from the bale.",
+            "format": "int32",
+            "nullable": true
+          },
+          "grabsPerBale": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "description": "Number of grab samples taken from each bale",
+            "format": "int32",
+            "nullable": true
+          },
+          "isPreviousDataToBeUpdated": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether data sent on a previous transmission is to be updated by data in the current transmission.\r\n\r\ntrue: Update previous data.\r\n\r\nfalse: Do not update previous data."
+          },
+          "hashTotal": {
+            "maximum": 99999999,
+            "minimum": -99999999,
+            "type": "integer",
+            "description": "Required numeric field for hash total.",
+            "format": "int32"
+          },
+          "isYieldAndMicronTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Yield And Laserscan Test is required.\r\n\r\ntrue: Yield And Laserscan Test is required.\r\n\r\nfalse: Yield And Laserscan Test is not required.",
+            "nullable": true
+          },
+          "isLengthAndStrengthTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Length And Strength Test is required.\r\n\r\ntrue: Length And Strength Test is required.\r\n\r\nfalse: Length And Strength Test is not required.",
+            "nullable": true
+          },
+          "isLengthOnlyTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Length Only Test is required.\r\n\r\ntrue: Length Only Test is required.\r\n\r\nfalse: Length Only Test is not required.",
+            "nullable": true
+          },
+          "isColourTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Colour Test is required.\r\n\r\ntrue: Colour Test is required.\r\n\r\nfalse: Colour Test is not required.",
+            "nullable": true
+          },
+          "laserscanTestRequired": {
+            "$ref": "#/components/schemas/LaserscanTestRequired"
+          },
+          "isAirflowTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Airflow Test is required.\r\n\r\ntrue: Airflow Test is required.\r\n\r\nfalse: Airflow Test is not required.",
+            "nullable": true
+          },
+          "isOfdaTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether OFDA Test is required.\r\n\r\ntrue: OFDA Test is required.\r\n\r\nfalse: OFDA Test is not required.",
+            "nullable": true
+          },
+          "isDarkAndMedullatedFibreTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Dark And Medullated Fibre Test is required.\r\n\r\ntrue: Dark And Medullated Fibre Test is required.\r\n\r\nfalse: Dark And Medullated Fibre Test is not required.",
+            "nullable": true
+          },
+          "isPesticideResidueTestRequired": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether Pesticide Residue Test is required.\r\n\r\ntrue: Pesticide Residue Test is required.\r\n\r\nfalse: Pesticide Residue Test is not required.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Laboratory": {
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "description": "The code for a Test House.<br />1: Australian Wool Testing Authority<br />2: N.Z. Wool Testing Authority<br />3: N.Z. Wool Testing Service<br />4: South African Wool Testing Authority",
+        "format": "int32"
+      },
+      "LaserscanTestRequired": {
+        "enum": [
+          "N",
+          "S",
+          "P"
+        ],
+        "type": "string",
+        "description": "Note: A “Y” or space in this field will default to “S” when transmitting to AWTA Ltd.<br />N: Laserscan Test is not required<br />S: Standard Laserscan Test is required<br />P: Premium Laserscan Test is required"
+      },
+      "ContractLimitRequirement": {
+        "type": "object",
+        "properties": {
+          "micronMin": {
+            "maximum": 999.9,
+            "minimum": -999.9,
+            "type": "number",
+            "description": "The mean fibre diameter of a sample of wool measured in micrometers. This value can refer to Laserscan, Airflow or OFDA.\r\n            \r\nMin: The lowest value in a range of Micron values\r\n            \r\nMax: The highest value in a range of Micron values",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.1
+          },
+          "micronMax": {
+            "maximum": 999.9,
+            "minimum": -999.9,
+            "type": "number",
+            "description": "The mean fibre diameter of a sample of wool measured in micrometers. This value can refer to Laserscan, Airflow or OFDA.\r\n            \r\nMin: The lowest value in a range of Micron values\r\n            \r\nMax: The highest value in a range of Micron values",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.1
+          },
+          "colourYZMin": {
+            "maximum": 999.9,
+            "minimum": -999.9,
+            "type": "number",
+            "description": "Average yellowness, Colour Y – Colour Z. The field has an optional leading sign.\r\n\r\nMin – The lowest value in a range of Colour-Y-Z values.\r\n\r\nMax – The highest value in a range of Colour-Y-Z values.",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.1
+          },
+          "colourYZMax": {
+            "maximum": 999.9,
+            "minimum": -999.9,
+            "type": "number",
+            "description": "Average yellowness, Colour Y – Colour Z. The field has an optional leading sign.\r\n\r\nMin – The lowest value in a range of Colour-Y-Z values.\r\n\r\nMax – The highest value in a range of Colour-Y-Z values.",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.1
+          },
+          "vmbMin": {
+            "maximum": 9.99,
+            "minimum": -9.99,
+            "type": "number",
+            "description": "Minimum VMB, optional decimal with two digits precision.",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.01
+          },
+          "vmbMax": {
+            "maximum": 9.99,
+            "minimum": -9.99,
+            "type": "number",
+            "description": "Maximum VMB, optional decimal with two digits precision.",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.01
+          },
+          "woolBaseMin": {
+            "maximum": 99.99,
+            "minimum": -99.99,
+            "type": "number",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.01
+          },
+          "woolBaseMax": {
+            "maximum": 99.99,
+            "minimum": -99.99,
+            "type": "number",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.01
+          },
+          "dichloromethaneDryBasisMin": {
+            "maximum": 99.99,
+            "minimum": -99.99,
+            "type": "number",
+            "description": "Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.\r\n            \r\nMin: The lowest value in a range of Dichloromethane, dry basis values\r\n            \r\nMax: The highest value in a range of Dichloromethane, dry basis values",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.01
+          },
+          "dichloromethaneDryBasisMax": {
+            "maximum": 99.99,
+            "minimum": -99.99,
+            "type": "number",
+            "description": "Dichloromethane Extractable Matter (Residual Grease) remaining in a sample of wool after scouring and drying.\r\n            \r\nMin: The lowest value in a range of Dichloromethane, dry basis values\r\n            \r\nMax: The highest value in a range of Dichloromethane, dry basis values",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.01
+          },
+          "conditioningMassMin": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "conditioningMassMax": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "lacBarbeMin": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "description": "Length after Carding Barbe in mm (mean length biased by fibre weight)\r\n\r\nMin: The lowest value in a range of LAC Barbe values\r\n\r\nMax: The highest value in a range of LAC Barbe values",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacBarbeMax": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "description": "Length after Carding Barbe in mm (mean length biased by fibre weight)\r\n\r\nMin: The lowest value in a range of LAC Barbe values\r\n\r\nMax: The highest value in a range of LAC Barbe values",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurMin": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurMax": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurUnder20Min": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurUnder20Max": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurUnder40Min": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurUnder40Max": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurCvPercentMin": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "description": "Length after Carding - Coefficient of Variation of Hauteur.\r\n\r\nMin: The lowest value in a range of LAC Hauteur CV(%) values\r\n\r\nMax: The highest value in a range of LAC Hauteur CV(%) values",
+            "format": "int32",
+            "nullable": true
+          },
+          "lacHauteurCvPercentMax": {
+            "maximum": 999,
+            "minimum": -999,
+            "type": "integer",
+            "description": "Length after Carding - Coefficient of Variation of Hauteur.\r\n\r\nMin: The lowest value in a range of LAC Hauteur CV(%) values\r\n\r\nMax: The highest value in a range of LAC Hauteur CV(%) values",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DarkAndMedullatedFibreRiskDetail": {
+        "required": [
+          "ageFrom",
+          "declaredBreed",
+          "declaredWoolCategory",
+          "declaredWoolSubCategory",
+          "isContactingWithExoticBreeds",
+          "isCrutched",
+          "sex"
+        ],
+        "type": "object",
+        "properties": {
+          "declaredBreed": {
+            "$ref": "#/components/schemas/DeclaredBreed"
+          },
+          "declaredWoolSubCategory": {
+            "$ref": "#/components/schemas/DeclaredWoolSubCategory"
+          },
+          "declaredWoolCategory": {
+            "$ref": "#/components/schemas/DeclaredWoolCategory"
+          },
+          "declaredQualifierCodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeclaredQualifierCode"
+            },
+            "nullable": true
+          },
+          "declaredQualifierScale": {
+            "$ref": "#/components/schemas/DeclaredQualifierScale"
+          },
+          "isContactingWithExoticBreeds": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether it contact with exotic breeds.\r\n            \r\ntrue: contact with exotic breeds.\r\n            \r\nfalse: not contact with exotic breeds."
+          },
+          "isCrutched": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether it is crutched.\r\n\r\ntrue: crutched.\r\n            \r\nfalse: not crutched."
+          },
+          "isCrutchedWithin3MonthsOfShearing": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether crutching within 3 months of shearing.\r\n            \r\ntrue: yes.\r\n            \r\nfalse: no.",
+            "nullable": true
+          },
+          "sex": {
+            "$ref": "#/components/schemas/Sex"
+          },
+          "ageFrom": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "description": "Youngest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.",
+            "format": "int32"
+          },
+          "ageTo": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "description": "Oldest Age Code in the mob/sale lot (weight note) as per the National Wool Declaration (NWD) Age Shearing Codes.",
+            "format": "int32",
+            "nullable": true
+          },
+          "darkAndMedullatedFibreRiskBroker": {
+            "$ref": "#/components/schemas/DarkAndMedullatedFibreRiskBroker"
+          },
+          "darkAndMedullatedFibreRisk": {
+            "$ref": "#/components/schemas/DarkAndMedullatedFibreRisk"
+          },
+          "certificateIdentity": {
+            "$ref": "#/components/schemas/CertificateIdentity"
+          },
+          "woolBase": {
+            "maximum": 99.99,
+            "minimum": -99.99,
+            "type": "number",
+            "description": "The oven-dry mass of wool fibre free from all impurities, expressed as a percentage of the mass of the sample.\r\n\r\nMin The lowest value in a range of Wool Base values\r\n            \r\nMax The highest value in a range of Wool Base values",
+            "format": "double",
+            "nullable": true,
+            "multipleOf": 0.01
+          },
+          "dmfrErrorFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of attributes in error.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeclaredBreed": {
+        "enum": [
+          "A",
+          "M",
+          "X",
+          "D",
+          "T",
+          "R"
+        ],
+        "type": "string",
+        "description": "A: Australian Superfine<br />M: Merino<br />X: Crossbred<br />D: Downs<br />T: Carpet<br />R: Sheds Fibres"
+      },
+      "DeclaredWoolSubCategory": {
+        "enum": [
+          "W",
+          "L",
+          "U",
+          "K",
+          "G",
+          "O",
+          "N",
+          "T"
+        ],
+        "type": "string",
+        "description": "W: Combing Weaners & Lambs<br />L: Carding Lambs<br />U: Plucked & Dead<br />K: Shorn from Skins<br />G: Fellmongered<br />O: Overgrown<br />N: Non-conforming lot<br />T: Not required"
+      },
+      "DeclaredWoolCategory": {
+        "enum": [
+          "F",
+          "P",
+          "B",
+          "C",
+          "Z"
+        ],
+        "type": "string",
+        "description": "F: Fleece<br />P: Pieces<br />B: Bellies<br />C: Crutchings<br />Z: Locks"
+      },
+      "DeclaredQualifierCode": {
+        "enum": [
+          "T",
+          "H",
+          "M",
+          "S",
+          "C",
+          "J",
+          "A",
+          "K",
+          "Q",
+          "E",
+          "N",
+          "R",
+          "G",
+          "D",
+          "V",
+          "P",
+          "Y",
+          "F",
+          "U"
+        ],
+        "type": "string",
+        "description": "Optional enum type for qualifier code.<br />T: Qualifier not required<br />H: Unscourable colour<br />M: Scourable colour/creamy<br />S: Dark Stain<br />C: Cotts<br />J: Jowls<br />A: Dermatitis<br />K: Kemp / Medullated<br />Q: Dags<br />E: Necks (Not Scaled)<br />N: Water Stain<br />R: Brands<br />G: Doggy (Not Scaled)<br />D: Mud<br />V: Skin pieces<br />P: Shanks<br />Y: Black & Grey<br />F: Soft Cotts<br />U: Sweat/Frib"
+      },
+      "DeclaredQualifierScale": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "description": "0: No scale/qualifier code is T<br />1: Light/Odd<br />2: Medium<br />3: Heavy/Line of…",
+        "format": "int32"
+      },
+      "Sex": {
+        "enum": [
+          "E",
+          "W",
+          "R",
+          "M"
+        ],
+        "type": "string",
+        "description": "E: Ewes<br />W: Wethers<br />R: Rams<br />M: Mixed"
+      },
+      "DarkAndMedullatedFibreRiskBroker": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "description": "1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6",
+        "format": "int32"
+      },
+      "DarkAndMedullatedFibreRisk": {
+        "enum": [
+          "E",
+          "N",
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "type": "string",
+        "description": "The following codes are applicable to lots sampled on or after 1st July, 2004. Spaces will be returned for lots sampled before this date where data is not provided.<br />E: Error in Processing<br />N: Not Applicable<br />D: Not Declared<br />1: Risk Level 1 (lowest)<br />2: Risk Level 2<br />3: Risk Level 3<br />4: Risk Level 4<br />5: Risk Level 5<br />6: Risk Level 6"
+      },
+      "CertificateIdentity": {
+        "required": [
+          "certificateIdCd",
+          "certificateIdNumber",
+          "certificateIdPrefix",
+          "certificateIdSuffix"
+        ],
+        "type": "object",
+        "properties": {
+          "certificateIdPrefix": {
+            "$ref": "#/components/schemas/CertificateIdPrefix"
+          },
+          "certificateIdNumber": {
+            "maxLength": 8,
+            "minLength": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "certificateIdSuffix": {
+            "$ref": "#/components/schemas/CertificateIdSuffix"
+          },
+          "certificateIdCd": {
+            "maxLength": 1,
+            "minLength": 1,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The certificate identity consists of a 1 digit prefix, followed by an 8 digit certificate number, followed by a 1 character suffix, followed by a 1 digit\r\ncheck number.It is printed at the top of the certificate."
+      },
+      "CertificateIdPrefix": {
+        "enum": [
+          2,
+          3,
+          6
+        ],
+        "type": "integer",
+        "description": "2: Sydney Laboratory<br />3: Melbourne Laboratory<br />6: Fremantle Laboratory",
+        "format": "int32"
+      },
+      "CertificateIdSuffix": {
+        "enum": [
+          "B",
+          "C",
+          "D",
+          "F",
+          "I",
+          "J",
+          "L",
+          "M",
+          "N",
+          "Q",
+          "P",
+          "R",
+          "W",
+          "Y"
+        ],
+        "type": "string",
+        "description": "B: Bulk Class<br />C: Colour<br />D: PTC (Pre-Sale Test Certificate – Other Grower Lot)<br />F: Premium Test<br />I: Subjectively Appraised Interlot<br />J: Combination - Yield & Micron, Length & Strength, Colour<br />L: Length & Strength<br />M: Objectively Matched Lot<br />N: Objectively matched Interlot<br />Q: Bulk Class – Quality Managed<br />P: PTC (Pre-sale Test Certificate - Classed Grower Lot)<br />R: Guidance Report<br />W: Scoured Wool<br />Y: Post sale Core Test"
+      },
+      "TestRequestsVerificationBale": {
+        "required": [
+          "baleHeader"
+        ],
+        "type": "object",
+        "properties": {
+          "baleHeader": {
+            "$ref": "#/components/schemas/BaleHeader"
+          },
+          "baleDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaleDetail"
+            },
+            "nullable": true
+          },
+          "propertyIdentificationCodes": {
+            "maxItems": 8,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Property Identification Code - the property code to identify the source of the wool.\r\n\r\nThis field is not used in New Zealand transmission.\r\n\r\nFor TRV only.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaleHeader": {
+        "required": [
+          "areaOfOrigin",
+          "baleDescription",
+          "brand"
+        ],
+        "type": "object",
+        "properties": {
+          "brand": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string",
+            "description": "This field is to be always transmitted in upper case."
+          },
+          "baleDescription": {
+            "$ref": "#/components/schemas/BaleDescription"
+          },
+          "areaOfOrigin": {
+            "maxLength": 4,
+            "minLength": 1,
+            "type": "string",
+            "description": "The code for the area in which the wool was grown.\r\n\r\nFor further information please go to this URL:\r\n\r\nhttp://www.awex.com.au/market-information/wool-statistical-areas-wsa/"
+          },
+          "numberOfBales": {
+            "$ref": "#/components/schemas/NumberOfBales"
+          },
+          "locationWithinStore": {
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaleDescription": {
+        "maxLength": 15,
+        "minLength": 1,
+        "type": "string",
+        "description": "This field is to be always transmitted in upper case."
+      },
+      "BaleDetail": {
+        "required": [
+          "baleDetailType",
+          "baleNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "baleNumber": {
+            "maxLength": 5,
+            "minLength": 1,
+            "type": "string",
+            "description": "The number used to identify a bale in a lot"
+          },
+          "baleDetailType": {
+            "$ref": "#/components/schemas/BaleDetailType"
+          },
+          "showBaleIndicator": {
+            "maxLength": 1,
+            "minLength": 1,
+            "type": "string",
+            "description": "Property for Greasy/Processed bale detail, not necessary for other types of bale details.",
+            "nullable": true
+          },
+          "baleRenumber": {
+            "maxLength": 5,
+            "minLength": 1,
+            "type": "string",
+            "description": "Property for Renumber BaleDetail, not necessary for other types of bale details.",
+            "nullable": true
+          },
+          "unitNumber": {
+            "maximum": 99999,
+            "minimum": -99999,
+            "type": "integer",
+            "description": "Property for Tripacks BaleDetail, not necessary for other types of bale details.",
+            "format": "int32",
+            "nullable": true
+          },
+          "gross": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "tare": {
+            "$ref": "#/components/schemas/Weight"
+          },
+          "eBaleId": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string",
+            "nullable": true
+          },
+          "threeBaleCount": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "description": "The number of tripacks (3 bales) in the lot.\r\n            \r\nProperty for Tripacks BaleDetail, not necessary for other types of bale details.",
+            "format": "int32",
+            "nullable": true
+          },
+          "twoBaleCount": {
+            "maximum": 99,
+            "minimum": -99,
+            "type": "integer",
+            "description": "The number of two bale tri-packs.\r\n            \r\nProperty for Tripacks BaleDetail, not necessary for other types of bale details.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaleDetailType": {
+        "enum": [
+          "Renumbers",
+          "GreasyOrProcessed",
+          "Tripacks"
+        ],
+        "type": "string",
+        "description": "Renumbers: Bale Details - Renumbers<br />GreasyOrProcessed: Bale Details - GreasyOrProcessed<br />Tripacks: Bale Details - Tripacks"
+      },
+      "ApiResult": {
+        "type": "object",
+        "properties": {
+          "apiMessages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiMessage"
+            },
+            "description": "Contains information about the response if applicable.",
+            "nullable": true
+          },
+          "data": {
+            "description": "Contains response data.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A standard API response object used for all successful API responses"
+      },
+      "ApiMessage": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "warningCode": {
+            "$ref": "#/components/schemas/WarningCode"
+          },
+          "informationCode": {
+            "$ref": "#/components/schemas/InformationCode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WarningCode": {
+        "enum": [
+          "11",
+          "12",
+          "13",
+          "18",
+          "19",
+          "20",
+          "24",
+          "DRVnn"
+        ],
+        "type": "string",
+        "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
+      },
+      "InformationCode": {
+        "enum": [
+          "OK"
+        ],
+        "type": "string",
+        "description": "A code to indicate the information.\r\n\r\nFor AC, PC LI and GI transmissions, one record will be sent for each Wool Sale Header Lots received.\r\n\r\nOK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS nnnn\r\n\r\nWhere aann/nn = sale number/season\r\n    \r\ndd/mm/yy = sale date\r\n    \r\nooooo = selling organisation\r\n    \r\nnnnnn = number of lots\r\n    \r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None.\r\n\r\nOR\r\n\r\nFor all other types of transmissions, one record will be sent for each transmission file received.\r\n\r\nOK - ALL aaaaa DATA RECEIVED OK\r\n\r\nReason - You have sent data to the network and it has been received with no communication or transmission errors.\r\n\r\nAction - None."
+      },
+      "ApiErrorResult": {
+        "required": [
+          "status",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference [RFC3986] that identifies the problem type.\r\n\r\nThis specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028]). \r\n            \r\nWhen this member is not present, its value is assumed to be \"about:blank\".\r\n\r\ne.g. For 400 Bad Request, the \"type\" value can be \"https://tools.ietf.org/html/rfc9110#section-15.5.1\"",
+            "nullable": true
+          },
+          "title": {
+            "minLength": 1,
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type.\r\n\r\nIt SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization(e.g., using proactive content negotiation; see[RFC7231], Section 3.4).\r\n\r\ne.g. \"One or more validation errors occurred.\""
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code ([RFC7231], Section 6) generated by the origin server for this occurrence of the problem.",
+            "format": "int32"
+          },
+          "detail": {
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem. e.g. 400, 403, or business relared problem etc.",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomError"
+            },
+            "description": "A collection of the erros",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A machine-readable format for specifying errors in HTTP API responses based on https://tools.ietf.org/html/rfc7807."
+      },
+      "CustomError": {
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            },
+            "description": "Dictionary of errors in <PropertyName, ErrorDetails[]> format. e.g. errors: { \"name\": [\"Product name is required\"], \"category\": [\"Category name cannot be longer than 20 characters.\"]  }",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorCode": {
+            "type": "string",
+            "description": "The error code is defined by business rules to indicate the different types of errors.\r\n\r\nExamples of error code:\r\n \r\nDOXCT: Document originator does not match current transmitter.\"\r\n            \r\nINVTC: Invalid transfer config. All data rejected.\"\r\n\r\nINVFR: Invalid/missing FinalReceiverList record. All data rejected.\"\r\n            \r\nINVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data rejected.\"\r\n\r\nINVCR: Current receiver not awtm. All data rejected.\"\r\n\r\nINVDO: Invalid document originator code aaaaa. Data accepted.\"\r\n\r\nINVSO: Warning! Invalid selling org AAAAA using doc orig AAAAA.\"\r\n\r\nINVEX: Invalid excluded record.\"",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestForData": {
+        "required": [
+          "requestForDataType",
+          "transmissionHeader"
+        ],
+        "type": "object",
+        "properties": {
+          "transmissionHeader": {
+            "$ref": "#/components/schemas/TransmissionHeader"
+          },
+          "requestForDataType": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UseNetworkDateTimeRequestForDataType"
+              },
+              {
+                "$ref": "#/components/schemas/DateTimeRangeRequestForDataType"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "requestForDataType",
+          "mapping": {
+            "UseNetworkDateTimeRequestForDataType": "#/components/schemas/UseNetworkDateTimeRequestForDataType",
+            "DateTimeRangeRequestForDataType": "#/components/schemas/DateTimeRangeRequestForDataType"
+          }
+        }
+      },
+      "UseNetworkDateTimeRequestForDataType": {
+        "required": [
+          "isUsingNetworkDateTime"
+        ],
+        "type": "object",
+        "properties": {
+          "isUsingNetworkDateTime": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeRangeRequestForDataType": {
+        "required": [
+          "startDateTimeStatusRequest"
+        ],
+        "type": "object",
+        "properties": {
+          "startDateTimeStatusRequest": {
+            "$ref": "#/components/schemas/UtcDateTime"
+          },
+          "endDateTimeStatusRequest": {
+            "$ref": "#/components/schemas/UtcDateTime"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UtcDateTime": {
+        "type": "string",
+        "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
+        "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
+        "example": "2024-03-21T19:25:04+00:00.000Z"
+      },
+      "TestRequestsVerificationListApiResult": {
+        "type": "object",
+        "properties": {
+          "apiMessages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiMessage"
+            },
+            "description": "Contains information about the response if applicable.",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestRequestsVerification"
+            },
+            "description": "Contains response data.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A standard API response object used for all successful API responses"
+      }
+    },
     "securitySchemes": {
       "Bearer": {
         "type": "apiKey",

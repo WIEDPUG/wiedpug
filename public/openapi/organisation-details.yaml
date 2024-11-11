@@ -10,10 +10,1676 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: 5.0.0
-paths: {}
+  version: 0.0.0
+paths:
+  /v0/organisation-details/data:
+    post:
+      tags:
+        - Organisation Details
+      summary: Retrieves the organisationdetails
+      operationId: RequestForOrganisationDetails
+      parameters:
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GetOrganisationDetailsRequest"
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: 2020-07-15
+                dateTransmissionFileCreated: 2016-01-17
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ABC
+                currentReceiver:
+                  organisationCode: ATW
+                versionNumber: 31
+                softwareIdentifier:
+                  softwareCompany: 8
+                  softwareVersion: 1082
+                  programName: NETR
+                abn: 72001967184
+              countryOfOrigin: AU
+              documentOriginator:
+                organisationCode: ABC
+              softwareIdentifier:
+                softwareCompany: 1
+                softwareVersion: 1082
+                programName: NETR
+              abn: 72001967184
+              startDateTimeStatusRequest: 2024-02-01T19:25:04Z
+              endDateTimeStatusRequest: 2024-03-21T19:25:04Z
+              isUsingNetworkDateTime: true
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrganisationDetailsApiResult"
+              example:
+                apiMessages: []
+                data:
+                  transmissionHeader:
+                    dateFormatLastRevised: 2020-07-15
+                    dateTransmissionFileCreated: 2016-01-17
+                    countryOfOrigin: AU
+                    documentOriginator:
+                      organisationCode: ABC
+                    currentReceiver:
+                      organisationCode: ATW
+                    versionNumber: 31
+                    softwareIdentifier:
+                      softwareCompany: 6
+                      softwareVersion: 1082
+                      programName: NETR
+                    abn: 72001925678
+                  organisationInformationDetails:
+                    - id: "1"
+                      organisation:
+                        organisationCode: AWS
+                      nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
+                      dateLastUpdated: 2020-04-28
+                      industryGroupId: E
+                      isTransmitter: true
+                      phoneNumber:
+                        standardPhoneNumber:
+                          countryCode: AU
+                          number: "0317229370"
+                      faxNumber:
+                        standardPhoneNumber:
+                          countryCode: AU
+                          number: "03763262290"
+                      addresses:
+                        - name:
+                            organisationName: AWTS
+                          premise: Suite 130
+                          streetAddressLine1: 88 Harbor ROAD
+                          streetAddressLine2: KENSINGTON
+                          locality: Sydney
+                          administrativeArea: NSW
+                          postcode: "3031"
+                          country: AU
+                      contacts:
+                        - firstName: HEAD OFFICE
+                          phoneNumber:
+                            standardPhoneNumber:
+                              countryCode: AU
+                              number: "0309332782"
+                    - id: "2"
+                      organisation:
+                        organisationCode: ABC
+                      nameOfOrganisation: DEMO BUYER 1
+                      dateLastUpdated: 2020-04-28
+                      industryGroupId: E
+                      isTransmitter: false
+                    - id: "3"
+                      organisation:
+                        organisationCode: AWS
+                      nameOfOrganisation: AUSTRALIAN WOOL TESTING AUTH LTD
+                      dateLastUpdated: 2020-04-28
+                      industryGroupId: A
+                      isTransmitter: true
+                      phoneNumber:
+                        standardPhoneNumber:
+                          countryCode: AU
+                          number: "0254009986"
+                      addresses:
+                        - name:
+                            organisationName: AWTS
+                          premise: Box 201
+                          streetAddressLine1: 367 NEW HAMMER STREET
+                          streetAddressLine2: NEWCASTLE
+                          locality: Sydney
+                          administrativeArea: NSW
+                          postcode: "2031"
+                          country: AU
+                      contacts:
+                        - firstName: MIKE
+                          lastName: PWOELL
+                          phoneNumber:
+                            standardPhoneNumber:
+                              countryCode: AU
+                              number: "0387569072"
+                          mobileNumber:
+                            standardPhoneNumber:
+                              countryCode: AU
+                              number: "0353298764"
+                          email: mpowell@awtn.co.au
+        "204":
+          description: No Content
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages:
+                  - message: >-
+                      Resason:  You have requested data but there is nothing
+                      available.
+
+                      Action: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later.
+        "400":
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
+        "404":
+          description: Not Found
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
+        "500":
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
+  /v0/organisation-details/{id}:
+    get:
+      tags:
+        - Organisation Details
+      summary: Retrieves the organisationdetail by id
+      operationId: GetOrganisationDetailsById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrganisationInformationDetailApiResult"
+              example:
+                transmissionHeader:
+                  dateFormatLastRevised: 2020-07-15
+                  dateTransmissionFileCreated: 2016-01-17
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                  currentReceiver:
+                    organisationCode: ATW
+                  abn: 43006014106
+                organisationInformationDetails:
+                  - id: "1"
+                    organisation:
+                      organisationCode: ABC
+                    nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
+                    dateLastUpdated: 2020-04-28
+                    industryGroupId: T
+                    isTransmitter: true
+                    phoneNumber:
+                      standardPhoneNumber:
+                        countryCode: AU
+                        number: "0389004637"
+                    faxNumber:
+                      standardPhoneNumber:
+                        countryCode: AU
+                        number: "0320874405"
+                    addresses:
+                      - name:
+                          organisationName: AWTM
+                        premise: 3402A
+                        streetAddressLine1: 28 GREAT SOUTH ROAD
+                        streetAddressLine2: KENSINGTON
+                        locality: Sydney
+                        administrativeArea: NSW
+                        postcode: "3031"
+                        country: AU
+                    contacts:
+                      - firstName: HEAD OFFICE
+                        phoneNumber:
+                          standardPhoneNumber:
+                            countryCode: AU
+                            number: "0310108809"
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
+        "404":
+          description: Not Found
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
+        "500":
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
+    put:
+      tags:
+        - Organisation Details
+      summary: Update the organisation detail by id
+      operationId: UpdateOrganisationDetailsById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrganisationInformationDetail"
+            example:
+              transmissionHeader:
+                dateFormatLastRevised: 2020-07-15
+                dateTransmissionFileCreated: 2016-01-17
+                countryOfOrigin: AU
+                documentOriginator:
+                  organisationCode: ABC
+                currentReceiver:
+                  organisationCode: ATW
+                abn: 43006014106
+              organisationInformationDetails:
+                - organisation:
+                    organisationCode: ABC
+                  nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
+                  dateLastUpdated: 2020-04-28
+                  industryGroupId: E
+                  isTransmitter: true
+                  phoneNumber:
+                    standardPhoneNumber:
+                      countryCode: AU
+                      number: "0389004637"
+                  faxNumber:
+                    standardPhoneNumber:
+                      countryCode: AU
+                      number: "0320874405"
+                  addresses:
+                    - name:
+                        organisationName: AWTS
+                      premise: Room L104
+                      streetAddressLine1: 28 GREAT SOUTH ROAD
+                      streetAddressLine2: KENSINGTON
+                      locality: Sydney
+                      administrativeArea: NSW
+                      postcode: "3031"
+                      country: AU
+                  contacts:
+                    - firstName: HEAD OFFICE
+                      phoneNumber:
+                        standardPhoneNumber:
+                          countryCode: AU
+                          number: "0310108809"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                transmissionHeader:
+                  dateFormatLastRevised: 2020-07-15
+                  dateTransmissionFileCreated: 2016-01-17
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                  currentReceiver:
+                    organisationCode: ATW
+                  abn: 43006014106
+                organisationInformationDetails:
+                  - id: "1"
+                    organisation:
+                      organisationCode: ABC
+                    nameOfOrganisation: AWTA - EDI TESTING BY EXTERNAL CLIENTS
+                    dateLastUpdated: 2020-04-28
+                    industryGroupId: T
+                    isTransmitter: true
+                    phoneNumber:
+                      standardPhoneNumber:
+                        countryCode: AU
+                        number: "0389004637"
+                    faxNumber:
+                      standardPhoneNumber:
+                        countryCode: AU
+                        number: "0320874405"
+                    addresses:
+                      - name:
+                          organisationName: AWTM
+                        premise: 3402A
+                        streetAddressLine1: 28 GREAT SOUTH ROAD
+                        streetAddressLine2: KENSINGTON
+                        locality: Sydney
+                        administrativeArea: NSW
+                        postcode: "3031"
+                        country: AU
+                    contacts:
+                      - firstName: HEAD OFFICE
+                        phoneNumber:
+                          standardPhoneNumber:
+                            countryCode: AU
+                            number: "0310108809"
+        "400":
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      Requests[0].TransmissionHeader.DateFormatLastRevised:
+                        - The field DateFormatLastRevised is required
+                        - The field DateFormatLastRevised must match regulart
+                          expression pattern...
+                      Requests[0].TransmissionHeader.CountryOfOrigin:
+                        - The field CountryOfOrigin is required
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
+        "404":
+          description: Not Found
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
+        "500":
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
+    delete:
+      tags:
+        - Organisation Details
+      summary: Delete or Deactivate organisation detail by id
+      operationId: DeleteOrganisationDetailsById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: api-version
+          in: header
+          description: Specify the version of the API
+          schema:
+            type: string
+            example: 1.0.0
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages: []
+        "401":
+          description: Unauthorized
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
+                title: Unauthorized
+                status: 401
+                detail: Missing authentication credentials
+        "403":
+          description: Forbidden
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: You don't have permission to access this resource
+                status: 403
+                detail: You don't have a 'read' access to access this resource
+        "404":
+          description: Not Found
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
+                title: Resource not found
+                status: 404
+        "500":
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
+                title: An error occurred while processing your required
+                status: 500
+                detail: Error details..
 components:
-  schemas: {}
+  schemas:
+    GetOrganisationDetailsRequest:
+      required:
+        - abn
+        - countryOfOrigin
+        - documentOriginator
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: "#/components/schemas/TransmissionHeader"
+        countryOfOrigin:
+          $ref: "#/components/schemas/CountryCode"
+        documentOriginator:
+          $ref: "#/components/schemas/Organisation"
+        softwareIdentifier:
+          $ref: "#/components/schemas/SoftwareIdentifier"
+        abn:
+          maximum: 99999999999
+          minimum: 10000000000
+          type: integer
+          description: Australian Business Number, 11 digits
+          format: int64
+        startDateTimeStatusRequest:
+          $ref: "#/components/schemas/UtcDateTime"
+        endDateTimeStatusRequest:
+          $ref: "#/components/schemas/UtcDateTime"
+        isUsingNetworkDateTime:
+          type: boolean
+          description: "A boolean value to indicate whether to use network datetime.\r
+
+            \            \r
+
+            true: use network datetime.\r
+
+            \            \r
+
+            false: not use."
+          nullable: true
+      additionalProperties: false
+    TransmissionHeader:
+      required:
+        - abn
+        - countryOfOrigin
+        - currentReceiver
+        - dateFormatLastRevised
+        - dateTransmissionFileCreated
+        - documentOriginator
+      type: object
+      properties:
+        dateFormatLastRevised:
+          $ref: "#/components/schemas/LiteralDate"
+        dateTransmissionFileCreated:
+          $ref: "#/components/schemas/LiteralDate"
+        countryOfOrigin:
+          $ref: "#/components/schemas/CountryCode"
+        documentOriginator:
+          $ref: "#/components/schemas/Organisation"
+        currentReceiver:
+          $ref: "#/components/schemas/Organisation"
+        versionNumber:
+          maximum: 99
+          minimum: -99
+          type: integer
+          description: "The version number of the WIEDPUG Handbook that the transmission
+            relates to\r
+
+            Two digits. e.g. 99"
+          format: int32
+          nullable: true
+        softwareIdentifier:
+          $ref: "#/components/schemas/SoftwareIdentifier"
+        abn:
+          maximum: 99999999999
+          minimum: 10000000000
+          type: integer
+          description: Australian Business Number, 11 digits
+          format: int64
+      additionalProperties: false
+    LiteralDate:
+      type: string
+      description: >-
+        Date value in ISO standard UTC date format. e.g. 2024-03-21
+        (YYYY-MM-DD).
+
+
+        dateOfCreditNote: Date the Credit note was issued
+
+
+        dateOfOriginalInvoice: Date of the original invoice\ndateIssue: The date the certificate was issued.
+
+
+        dateLastUpdated: The day the item was last amended.
+
+
+        statementDate: The period ending date of the statement.
+
+
+        statementPaymentDate: The date the payment was made.
+
+
+        datePaymentMade: Required date field for the date payment was made.
+
+
+        saleDate: The date on which the wool was sold.
+
+
+        coreTestSamplingDate: For Fibre Diameter Histogram Header and Test Request Verification this is the date core test was sampled or date combination/OML was requested. For the Lot Header this is the date the core test was sampled, the last date of weighing for untested wool or the date the Combination/OML was requested.
+
+
+        itemDate: The date the cost of the item was incurred.
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])
+      example: 2024-03-21
+    CountryCode:
+      enum:
+        - AU
+        - NZ
+        - DE
+        - IT
+        - CN
+        - TW
+      type: string
+      description: "A code for the country in which the transmission was created.
+        Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New
+        Zealand<br />DE: Germany<br />IT: Italy<br />CN: China<br />TW: Taiwan"
+    Organisation:
+      required:
+        - organisationCode
+      type: object
+      properties:
+        organisationCode:
+          maxLength: 3
+          minLength: 1
+          type: string
+        centre:
+          $ref: "#/components/schemas/Centre"
+      additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online.\r
+
+        \r
+
+        currentReceiver: The code for the organisation that will receive
+        the document at the end of the current transmission.Where a document is
+        transferred from one\r
+
+        organisation to another through an intermediary, the code for
+        the current receiver will vary from leg to leg of the journey.\r
+
+        \r
+
+        releasingOrganisation: The broker that is responsible for
+        releasing the wool out of the store.\r
+
+        \r
+
+        markingOrganisation: The code for the organisation which is to
+        apply marks to the bales.\r
+
+        \r
+
+        invoicingOrganisation: The code for the broker who will raise
+        the invoice for the wool.\r
+
+        \r
+
+        storageOrganisation: This is the organisation store that is
+        storing the wool. Note: If there is more than one organisation in a
+        centre, then separate AWEX codes are \r
+
+        required for each store. It is not necessarily the same as the
+        Releasing Organisation.\r
+
+        \r
+
+        client: The code for the organisation that is the transmitter’s
+        client. Where one organisation submits a TRV document to a Test House
+        requesting tests \r
+
+        for one of its own clients, the code for that client will be
+        used in this field."
+    Centre:
+      required:
+        - centreCode
+        - countryCode
+      type: object
+      properties:
+        countryCode:
+          $ref: "#/components/schemas/CountryCode"
+        centreCode:
+          anyOf:
+            - $ref: "#/components/schemas/CentreCodeAustralia"
+            - $ref: "#/components/schemas/CentreCodeChina"
+            - $ref: "#/components/schemas/CentreCodeGermany"
+            - $ref: "#/components/schemas/CentreCodeItaly"
+            - $ref: "#/components/schemas/CentreCodeNewZealand"
+            - $ref: "#/components/schemas/CentreCodeTaiwan"
+      additionalProperties: false
+      description: "Centre has country and centreCode.\r
+
+        \r
+
+        The centreCode is one of these below based on the value of
+        country.\r
+
+        \r
+
+        The mapping of country:centreCode is the following:\r
+
+        \            \r
+
+        AU:CentreCodeAustralia\r
+
+        \r
+
+        NZ: CentreNewZealand\r
+
+        \r
+
+        DE: CentreGermany\r
+
+        \r
+
+        IT: CentreItaly\r
+
+        \r
+
+        CN: CentreChina\r
+
+        \r
+
+        TW: CentreTaiwan\r
+
+        \r
+
+        The legacy codes for Overseas Centre are under
+        CentreCodeAustralia\r
+
+        \r
+
+        centreStorage: The centre (code) representing the location at
+        which the wool is stored (relevant to the intended use of the document).
+        For example, the\r
+
+        Centre- Storage against a lot in the Catalogue is the location
+        of the wool where the buyer would expect to take delivery.\r
+
+        \r
+
+        centreCatalogue: The centre (code) used to group lots of wool
+        based on a location. This location is typically the core test/weighing
+        centre and is often aligned with the seller’s Post Sale Charge
+        schedule.\r
+
+        \r
+
+        centreDelivery: Inclusion of the Delivery Area Centre Code is
+        Mandatory when the Post Sale Service Charge includes delivery to a
+        nominated area and a “D” is included in the Delivery Basis Field.\r
+
+        \r
+
+        centreAlternateDelivery: This field is to be used when the PSC
+        includes optional delivery to a second area."
+      discriminator:
+        propertyName: countryCode
+        mapping:
+          AU: "#/components/schemas/CentreCodeAustralia"
+          CN: "#/components/schemas/CentreCodeChina"
+          DE: "#/components/schemas/CentreCodeGermany"
+          IT: "#/components/schemas/CentreCodeItaly"
+          NZ: "#/components/schemas/CentreCodeNewZealand"
+          TW: "#/components/schemas/CentreCodeTaiwan"
+    CentreCodeAustralia:
+      enum:
+        - A
+        - AD
+        - AR
+        - AU
+        - B
+        - BA
+        - BK
+        - BL
+        - BM
+        - BO
+        - BR
+        - BT
+        - C
+        - CA
+        - CB
+        - CC
+        - CL
+        - CN
+        - CO
+        - CR
+        - CU
+        - CW
+        - D
+        - DE
+        - DO
+        - DR
+        - E
+        - ER
+        - ES
+        - F
+        - G
+        - GF
+        - GI
+        - GN
+        - GR
+        - GU
+        - H
+        - HA
+        - HB
+        - HM
+        - HO
+        - HY
+        - I
+        - J
+        - JA
+        - K
+        - KE
+        - KH
+        - KI
+        - KN
+        - KT
+        - KW
+        - KY
+        - L
+        - LC
+        - M
+        - MA
+        - MB
+        - MC
+        - ME
+        - MG
+        - MI
+        - MO
+        - MR
+        - MU
+        - N
+        - NA
+        - ND
+        - NO
+        - NR
+        - OB
+        - OR
+        - P
+        - PA
+        - PL
+        - Q
+        - QU
+        - R
+        - S
+        - SG
+        - SH
+        - SK
+        - SW
+        - SY
+        - T
+        - TE
+        - U
+        - UR
+        - V
+        - W
+        - WA
+        - WG
+        - WL
+        - WN
+        - WR
+        - WW
+        - X
+        - Y
+        - YA
+        - YM
+        - YO
+        - Z
+        - ZC
+        - ZD
+        - ZH
+        - ZJ
+        - ZK
+        - ZL
+        - ZM
+        - ZO
+        - ZP
+        - ZQ
+        - ZR
+        - ZT
+        - ZV
+        - ZW
+        - ZX
+        - ZY
+      type: string
+      description: "This is Centres for Australia. A centre is a town where any
+        activity connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia -
+        Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia -
+        AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA:
+        Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia -
+        Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br
+        />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C:
+        Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia -
+        Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia -
+        Coleraine<br />CN: Australia - Condoblin<br />CO: Australia -
+        Cootamundra<br />CR: Australia - Corowa<br />CU: Australia -
+        Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br
+        />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR:
+        Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia -
+        Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br
+        />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI:
+        Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia
+        - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br
+        />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM:
+        Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia -
+        Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA:
+        Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE:
+        Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia -
+        Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia -
+        Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia -
+        Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove
+        (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia -
+        Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia -
+        Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount
+        Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR:
+        Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia -
+        NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia -
+        Goondiwindi<br />NO: Australia - Northam<br />NR: Australia -
+        Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br
+        />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia
+        - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia -
+        Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br
+        />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK:
+        Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia -
+        Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U:
+        Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia -
+        Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG:
+        Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia -
+        Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West
+        Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA:
+        Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia -
+        Young<br />Z: Australia - Albany<br />ZC:Christchurch - New Zealand<br
+        />ZD: Dunedin - New Zealand<br />ZH: Blumenthal - Germany<br />ZJ:
+        Biella - Italy<br />ZK: Grisignano - Italy<br />ZL: Mosgiel - New
+        Zealand<br />ZM: Nanjing - China<br />ZO: Keelung - Taiwan<br />ZP:
+        Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang -
+        China<br />ZT: Timaru - New Zealand<br />ZV: Invercargill - New
+        Zealand<br />ZW:Wellington - New Zealand<br />ZX: Napier – New
+        Zealand<br />ZY: Ashburton – New Zealand"
+    CentreCodeChina:
+      enum:
+        - NA
+        - SH
+        - QI
+        - ZH
+      type: string
+      description: "This is Centres for China. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />NA: Nanjing - China<br />SH: Shanghai - China<br />QI:
+        Qingdao - China<br />ZH: Zhangjiagang - China"
+    CentreCodeGermany:
+      enum:
+        - BL
+      type: string
+      description: "This is Centres for Germany. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />BL: Blumenthal - Germany"
+    CentreCodeItaly:
+      enum:
+        - BI
+        - GR
+      type: string
+      description: "This is Centres for Italy. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />BI: Biella - Italy<br />GR: Grisignano - Italy"
+    CentreCodeNewZealand:
+      enum:
+        - A
+        - AW
+        - B
+        - BL
+        - BT
+        - C
+        - CV
+        - D
+        - F
+        - FA
+        - G
+        - GD
+        - GO
+        - HA
+        - HS
+        - I
+        - J
+        - K
+        - KA
+        - KP
+        - L
+        - LO
+        - LU
+        - M
+        - MA
+        - MK
+        - MT
+        - MU
+        - N
+        - NE
+        - O
+        - OH
+        - OI
+        - OM
+        - OT
+        - P
+        - PT
+        - PU
+        - R
+        - RG
+        - RI
+        - S
+        - SA
+        - SH
+        - SY
+        - T
+        - TA
+        - TE
+        - TH
+        - TP
+        - U
+        - V
+        - W
+        - WH
+        - WI
+        - WR
+        - WT
+        - WU
+        - X
+        - Y
+        - YP
+        - Z
+      type: string
+      description: "This is Centres for New Zealand. A centre is a town where any
+        activity connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand -
+        Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand -
+        Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand -
+        Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand -
+        Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br
+        />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO:
+        New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand -
+        Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand -
+        Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand -
+        Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br
+        />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New
+        Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New
+        Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand -
+        Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br
+        />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New
+        Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand -
+        Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand -
+        Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand -
+        Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br
+        />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br
+        />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New
+        Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand -
+        TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br
+        />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W:
+        New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New
+        Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT:
+        New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand
+        - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand -
+        Waipukurau<br />Z: New Zealand - Taupo"
+    CentreCodeTaiwan:
+      enum:
+        - KE
+      type: string
+      description: "This is Centres for Taiwan. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />KE: Keelung - Taiwan"
+    SoftwareIdentifier:
+      type: object
+      properties:
+        softwareCompany:
+          $ref: "#/components/schemas/SoftwareCompany"
+        softwareVersion:
+          maximum: 9999
+          minimum: -9999
+          type: integer
+          description: Version no. e.g. 2400
+          format: int32
+          nullable: true
+        programName:
+          maxLength: 4
+          minLength: 1
+          type: string
+          nullable: true
+      additionalProperties: false
+    SoftwareCompany:
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+      type: integer
+      description: "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4:
+        Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA"
+      format: int32
+    UtcDateTime:
+      type: string
+      description: Date and Time value in ISO 8601 standard UTC datetime format. e.g.
+        2024-03-21T19:25:04+00:00.000Z
+      format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
+      example: 2024-03-21T19:25:04+00:00.000Z
+    OrganisationDetailsApiResult:
+      type: object
+      properties:
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
+        data:
+          $ref: "#/components/schemas/OrganisationDetails"
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
+    ApiMessage:
+      type: object
+      properties:
+        message:
+          type: string
+          nullable: true
+        warningCode:
+          $ref: "#/components/schemas/WarningCode"
+        informationCode:
+          $ref: "#/components/schemas/InformationCode"
+      additionalProperties: false
+    WarningCode:
+      enum:
+        - "11"
+        - "12"
+        - "13"
+        - "18"
+        - "19"
+        - "20"
+        - "24"
+        - DRVnn
+      type: string
+      description: "A code to indicate the different types of errors.<br />11: Weight
+        Note suffix is not numeric or has been omitted.<br />12: Number of bales
+        is invalid or has been omitted.<br />13: Sale identification has been
+        omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br
+        />20: Invalid Centre/Client code on pre-sale test request.<br />24:
+        Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk
+        error where nn is the field number in error."
+    InformationCode:
+      enum:
+        - OK
+      type: string
+      description: "A code to indicate the information.\r
+
+        \r
+
+        For AC, PC LI and GI transmissions, one record will be sent for
+        each Wool Sale Header Lots received.\r
+
+        \r
+
+        OK - aaaaaDATA RECEIVED OK FOR aann/nn dd/mm/yy ooooo LOTS
+        nnnn\r
+
+        \r
+
+        Where aann/nn = sale number/season\r
+
+        \    \r
+
+        dd/mm/yy = sale date\r
+
+        \    \r
+
+        ooooo = selling organisation\r
+
+        \    \r
+
+        nnnnn = number of lots\r
+
+        \    \r
+
+        Reason - You have sent data to the network and it has been
+        received with no communication or transmission errors.\r
+
+        \r
+
+        Action - None.\r
+
+        \r
+
+        OR\r
+
+        \r
+
+        For all other types of transmissions, one record will be sent
+        for each transmission file received.\r
+
+        \r
+
+        OK - ALL aaaaa DATA RECEIVED OK\r
+
+        \r
+
+        Reason - You have sent data to the network and it has been
+        received with no communication or transmission errors.\r
+
+        \r
+
+        Action - None."
+    OrganisationDetails:
+      required:
+        - organisationInformationDetails
+        - transmissionHeader
+      type: object
+      properties:
+        transmissionHeader:
+          $ref: "#/components/schemas/TransmissionHeader"
+        organisationInformationDetails:
+          type: array
+          items:
+            $ref: "#/components/schemas/OrganisationInformationDetail"
+      additionalProperties: false
+    OrganisationInformationDetail:
+      required:
+        - dateLastUpdated
+        - industryGroupId
+        - isTransmitter
+        - nameOfOrganisation
+        - organisation
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        organisation:
+          $ref: "#/components/schemas/Organisation"
+        nameOfOrganisation:
+          maxLength: 50
+          minLength: 1
+          type: string
+          description: "he name of a person or organisation.\r
+
+            Contact – Name of a person in the organisation that can
+            be contacted for further information.\r
+
+            Organisation – the name of the organisation."
+        dateLastUpdated:
+          $ref: "#/components/schemas/LiteralDate"
+        industryGroupId:
+          $ref: "#/components/schemas/IndustryGroupId"
+        isTransmitter:
+          type: boolean
+          description: "A boolean value to indicate whether the organisation transmits or
+            receives data electronically.\r
+
+            \r
+
+            true: The organisation transmits or receives data
+            electronically. \r
+
+            \r
+
+            false: The organisation neither transmits nor receives
+            data electronically."
+        phoneNumber:
+          $ref: "#/components/schemas/PhoneNumber"
+        abn:
+          maximum: 99999999999
+          minimum: 10000000000
+          type: integer
+          description: Australian Business Number, 11 digits
+          format: int64
+          nullable: true
+        faxNumber:
+          $ref: "#/components/schemas/PhoneNumber"
+        addresses:
+          type: array
+          items:
+            $ref: "#/components/schemas/Address"
+          nullable: true
+        contacts:
+          type: array
+          items:
+            $ref: "#/components/schemas/Contact"
+          nullable: true
+      additionalProperties: false
+    IndustryGroupId:
+      enum:
+        - A
+        - C
+        - E
+        - D
+        - M
+        - P
+        - S
+        - T
+        - V
+      type: string
+      description: A code to describe the type of industry in which an organisation
+        operates.
+    PhoneNumber:
+      required:
+        - standardPhoneNumber
+      type: object
+      properties:
+        standardPhoneNumber:
+          $ref: "#/components/schemas/StandardPhoneNumber"
+        extension:
+          maxLength: 15
+          minLength: 1
+          type: string
+          description: Used for landline or fax extentions
+          nullable: true
+      additionalProperties: false
+      description: "faxNumber: The number to be used for sending facsimile messages to
+        the organisation"
+    StandardPhoneNumber:
+      required:
+        - countryCode
+        - number
+      type: object
+      properties:
+        countryCode:
+          $ref: "#/components/schemas/CountryCode"
+        number:
+          maxLength: 15
+          minLength: 1
+          pattern: ^[0-9]+$
+          type: string
+      additionalProperties: false
+    Address:
+      required:
+        - country
+        - locality
+        - name
+        - premise
+        - streetAddressLine1
+        - streetAddressLine2
+      type: object
+      properties:
+        name:
+          $ref: "#/components/schemas/Name"
+        premise:
+          maxLength: 80
+          minLength: 1
+          type: string
+          description: Apartment, stuie, box number, P.O. Box number, etc
+        streetAddressLine1:
+          maxLength: 80
+          minLength: 1
+          type: string
+          description: Street number, street name, etc
+        streetAddressLine2:
+          maxLength: 80
+          minLength: 1
+          type: string
+          description: Landmark, suburb, etc
+        locality:
+          maxLength: 80
+          minLength: 1
+          type: string
+          description: Town or City
+        administrativeArea:
+          maxLength: 80
+          minLength: 1
+          type: string
+          description: "State, province, region. Use ISO region codes:
+            https://en.wikipedia.org/wiki/ISO_3166-2"
+          nullable: true
+        postcode:
+          maxLength: 4
+          minLength: 1
+          type: string
+          nullable: true
+        country:
+          $ref: "#/components/schemas/CountryCode"
+      additionalProperties: false
+    Name:
+      type: object
+      properties:
+        firstName:
+          maxLength: 80
+          minLength: 1
+          type: string
+          nullable: true
+        lastName:
+          maxLength: 80
+          minLength: 1
+          type: string
+          nullable: true
+        organisationName:
+          maxLength: 80
+          minLength: 1
+          type: string
+          nullable: true
+      additionalProperties: false
+    Contact:
+      type: object
+      properties:
+        description:
+          maxLength: 80
+          minLength: 1
+          type: string
+          nullable: true
+        firstName:
+          maxLength: 80
+          minLength: 1
+          type: string
+          nullable: true
+        lastName:
+          maxLength: 80
+          minLength: 1
+          type: string
+          nullable: true
+        phoneNumber:
+          $ref: "#/components/schemas/PhoneNumber"
+        mobileNumber:
+          $ref: "#/components/schemas/PhoneNumber"
+        email:
+          maxLength: 80
+          minLength: 1
+          type: string
+          format: email
+          nullable: true
+      additionalProperties: false
+    ApiResult:
+      type: object
+      properties:
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
+        data:
+          description: Contains response data.
+          nullable: true
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
+    ApiErrorResult:
+      required:
+        - status
+        - title
+      type: object
+      properties:
+        type:
+          type: string
+          description: "A URI reference [RFC3986] that identifies the problem type.\r
+
+            \r
+
+            This specification encourages that, when dereferenced,
+            it provide human-readable documentation for the problem type (e.g.,
+            using HTML [W3C.REC-html5-20141028]). \r
+
+            \            \r
+
+            When this member is not present, its value is assumed to
+            be \"about:blank\".\r
+
+            \r
+
+            e.g. For 400 Bad Request, the \"type\" value can be
+            \"https://tools.ietf.org/html/rfc9110#section-15.5.1\""
+          nullable: true
+        title:
+          minLength: 1
+          type: string
+          description: "A short, human-readable summary of the problem type.\r
+
+            \r
+
+            It SHOULD NOT change from occurrence to occurrence of
+            the problem, except for purposes of localization(e.g., using
+            proactive content negotiation; see[RFC7231], Section 3.4).\r
+
+            \r
+
+            e.g. \"One or more validation errors occurred.\""
+        status:
+          type: integer
+          description: The HTTP status code ([RFC7231], Section 6) generated by the origin
+            server for this occurrence of the problem.
+          format: int32
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the
+            problem. e.g. 400, 403, or business relared problem etc.
+          nullable: true
+        errors:
+          type: array
+          items:
+            $ref: "#/components/schemas/CustomError"
+          description: A collection of the erros
+          nullable: true
+      additionalProperties: false
+      description: A machine-readable format for specifying errors in HTTP API
+        responses based on https://tools.ietf.org/html/rfc7807.
+    CustomError:
+      type: object
+      properties:
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+            nullable: true
+          description: 'Dictionary of errors in <PropertyName, ErrorDetails[]> format.
+            e.g. errors: { "name": ["Product name is required"], "category":
+            ["Category name cannot be longer than 20 characters."]  }'
+          nullable: true
+        errorMessage:
+          type: string
+          nullable: true
+        errorCode:
+          type: string
+          description: "The error code is defined by business rules to indicate the
+            different types of errors.\r
+
+            \r
+
+            Examples of error code:\r
+
+            \ \r
+
+            DOXCT: Document originator does not match current
+            transmitter.\"\r
+
+            \            \r
+
+            INVTC: Invalid transfer config. All data rejected.\"\r
+
+            \r
+
+            INVFR: Invalid/missing FinalReceiverList record. All
+            data rejected.\"\r
+
+            \            \r
+
+            INVAC: Invalid sale aann/nn dd/mm/yy ooooo. All data
+            rejected.\"\r
+
+            \r
+
+            INVCR: Current receiver not awtm. All data rejected.\"\r
+
+            \r
+
+            INVDO: Invalid document originator code aaaaa. Data
+            accepted.\"\r
+
+            \r
+
+            INVSO: Warning! Invalid selling org AAAAA using doc orig
+            AAAAA.\"\r
+
+            \r
+
+            INVEX: Invalid excluded record.\""
+          nullable: true
+      additionalProperties: false
+    OrganisationInformationDetailApiResult:
+      type: object
+      properties:
+        apiMessages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ApiMessage"
+          description: Contains information about the response if applicable.
+          nullable: true
+        data:
+          $ref: "#/components/schemas/OrganisationInformationDetail"
+      additionalProperties: false
+      description: A standard API response object used for all successful API responses
   securitySchemes:
     Bearer:
       type: apiKey

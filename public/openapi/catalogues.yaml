@@ -10,16 +10,16 @@ info:
   license:
     name: Applicable License
     url: https://wiedpug.github.io/wiedpug
-  version: 5.0.0
+  version: 0.0.0
 paths:
-  /v5/catalogues:
+  /v0/catalogues:
     post:
       tags:
         - Catalogues
-      summary: Transmit new Auction Catalogues and Private Catalogues for V5
-      description: Transmit Original broadcast and private auction catalogue data to
-        the Network for auctions regulated by the Australian Wool Exchange
-        Limited.
+      summary: Transmit new Auction Catalogues and Private Catalogues
+      description: Used by brokers to transmit Original broadcast and private auction
+        catalogue data to the Network for auctions regulated by the Australian
+        Wool Exchange Limited.
       operationId: CreateCatalogues
       parameters:
         - name: api-version
@@ -472,7 +472,7 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-  /v5/catalogues/updates:
+  /v0/catalogues/updates:
     post:
       tags:
         - Catalogues
@@ -737,7 +737,7 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-  /v5/catalogues/data:
+  /v0/catalogues/data:
     post:
       tags:
         - Catalogues
@@ -4273,6 +4273,33 @@ components:
         - fibreDiameterHistograms
         - fibreDiameterHistogramDetailMeasurements
       type: string
+    UseNetworkDateTimeRequestForDataType:
+      required:
+        - isUsingNetworkDateTime
+      type: object
+      properties:
+        isUsingNetworkDateTime:
+          type: boolean
+          description: "A boolean value to indicate whether to use network datetime.\r
+
+            \r
+
+            true: use network datetime.\r
+
+            \r
+
+            false: not use."
+      additionalProperties: false
+    DateTimeRangeRequestForDataType:
+      required:
+        - startDateTimeStatusRequest
+      type: object
+      properties:
+        startDateTimeStatusRequest:
+          $ref: "#/components/schemas/UtcDateTime"
+        endDateTimeStatusRequest:
+          $ref: "#/components/schemas/UtcDateTime"
+      additionalProperties: false
     CatalogueListApiResult:
       type: object
       properties:
