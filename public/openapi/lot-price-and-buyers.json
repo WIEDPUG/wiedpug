@@ -24,17 +24,6 @@
         "summary": "LotPriceAndBuyer",
         "description": "Used to provide lot price And buyer",
         "operationId": "CreateLotPriceAndBuyers",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -234,17 +223,6 @@
         ],
         "summary": "Retrieves the lot price and buyers",
         "operationId": "RequestForLotPriceAndBuyers",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {

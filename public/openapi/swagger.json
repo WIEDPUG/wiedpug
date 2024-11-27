@@ -22,19 +22,8 @@
           "Catalogues"
         ],
         "summary": "Transmit new Auction Catalogues and Private Catalogues",
-        "description": "Used by brokers to transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
+        "description": "Transmit Original broadcast and private auction catalogue data to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "operationId": "CreateCatalogues",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -725,17 +714,6 @@
         "summary": "Transmit Catalogue Updates",
         "description": "Used by brokers to transmit broadcast and private auction catalogue data updates to the Network for auctions regulated by the Australian Wool Exchange Limited.",
         "operationId": "UpdateCatalogues",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1123,17 +1101,6 @@
         "summary": "Request for Data relating to Auction Catalogue, Private Catalogue and Auction Catalogue Updates",
         "description": "Used by brokers to request Private and Broadcast data, as well as Re-requesting data for Auction Catalogues, Private Catalogues, and Auction Catalogue Updates",
         "operationId": "RequestForCatalogues",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1561,17 +1528,6 @@
         "summary": "Dark And Medullated Fibre Risk Verifications",
         "description": "Sent by a broker organisation to AWTA to include the Dark and Medullated Fibre Risk (DMFR) on a Certificate that has been issued.",
         "operationId": "CreateDarkAndMedullatedFibreRiskVerifications",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1752,17 +1708,6 @@
         ],
         "summary": "Retrieves the dark and medullated fibre risk verifications",
         "operationId": "RequestForDarkAndMedullatedFibreRiskVerifications",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2003,17 +1948,6 @@
         "summary": "Delivery Order/Shipping Instructions",
         "description": "Used to provide delivery order/shipping instructions",
         "operationId": "CreateDeliveryOrderAndShippingInstructions",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2267,17 +2201,6 @@
         ],
         "summary": "Retrieves the delivery order/shipping instructions",
         "operationId": "RequestForDeliveryOrderAndShippingInstructions",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2587,24 +2510,13 @@
         ],
         "summary": "Upload the public encryption key for LotHeaderAwexData, return the encryption key id",
         "operationId": "UploadKey",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "string"
               },
-              "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+              "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
             }
           },
           "required": true
@@ -2730,17 +2642,6 @@
         ],
         "summary": "Retrieves the public encryption key for LotHeaderAwexData",
         "operationId": "GetKeyForAwexData",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -2749,7 +2650,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/StringApiResult"
                 },
-                "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+                "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
               }
             }
           },
@@ -2834,15 +2735,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
           }
         ],
         "requestBody": {
@@ -2851,7 +2743,7 @@
               "schema": {
                 "type": "string"
               },
-              "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+              "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
             }
           },
           "required": true
@@ -2864,7 +2756,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/ApiResult"
                 },
-                "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+                "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
               }
             }
           },
@@ -2976,15 +2868,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
           }
         ],
         "responses": {
@@ -3074,17 +2957,6 @@
         ],
         "summary": "Create or upload the lot invoices",
         "operationId": "CreateLotInvoices",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -3417,17 +3289,6 @@
         ],
         "summary": "Retrieves the lot invoices",
         "operationId": "RequestForLotInvoices",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -3820,17 +3681,6 @@
         "summary": "LotPriceAndBuyer",
         "description": "Used to provide lot price And buyer",
         "operationId": "CreateLotPriceAndBuyers",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -4048,17 +3898,6 @@
         ],
         "summary": "Retrieves the lot price and buyers",
         "operationId": "RequestForLotPriceAndBuyers",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -4351,22 +4190,11 @@
         ],
         "summary": "Retrieves the organisationdetails",
         "operationId": "RequestForOrganisationDetails",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GetOrganisationDetailsRequest"
+                "$ref": "#/components/schemas/RequestForData"
               },
               "example": {
                 "transmissionHeader": {
@@ -4692,15 +4520,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
           }
         ],
         "responses": {
@@ -4861,15 +4680,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
             }
           }
         ],
@@ -5139,15 +4949,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
           }
         ],
         "responses": {
@@ -5238,17 +5039,6 @@
         "summary": "Payment Advices",
         "description": "Used to provide payment advices",
         "operationId": "CreatePaymentAdvices",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -5474,17 +5264,6 @@
         ],
         "summary": "Retrieves the payment advices",
         "operationId": "RequestForPaymentAdvices",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -5767,17 +5546,6 @@
         "summary": "Payment Confirmations",
         "description": "Used to provide payment confirmations",
         "operationId": "CreatePaymentConfirmations",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -5961,17 +5729,6 @@
         ],
         "summary": "Retrieves the payment confirmation",
         "operationId": "RequestForPaymentConfirmation",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -6215,17 +5972,6 @@
         "summary": "Request Postsale Printing Of Presale Certificates",
         "description": "Used to provide request postsale printing of presale certificates",
         "operationId": "CreateRequestPostsalePrintingOfPresaleCertificates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -6409,17 +6155,6 @@
         ],
         "summary": "Retrieves the request postsale printing of presale certificates",
         "operationId": "RequestForRequestPostsalePrintingOfPresaleCertificates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -6660,17 +6395,6 @@
         "summary": "Statements",
         "description": "Used to provide statements",
         "operationId": "CreateStatements",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8088,17 +7812,6 @@
         ],
         "summary": "Retrieves the statements",
         "operationId": "RequestForStatements",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8402,17 +8115,6 @@
         "summary": "Test Certificate Requests",
         "description": "Sent to a Test House to initiate the printing of a certificate.",
         "operationId": "CreateTestCertificateRequests",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8662,17 +8364,6 @@
         ],
         "summary": "Retrieves the test certificates request",
         "operationId": "GetTestCertificatesRequests",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8982,17 +8673,6 @@
         "summary": "Test Certificate Updates",
         "description": "Sent to a test house to advise changes to an existing Certificate. A new Certificate will be reissued with the updated data.",
         "operationId": "CreateTestCertificateUpdates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9201,17 +8881,6 @@
         ],
         "summary": "Retrieves the test certificate updates",
         "operationId": "RequestForTestCertificateUpdates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9479,17 +9148,6 @@
         ],
         "summary": "Create or upload the test certificates",
         "operationId": "CreateTestCertificates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9857,17 +9515,6 @@
         ],
         "summary": "Retrieves the test certificates",
         "operationId": "RequestForTestCertificates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -10295,17 +9942,6 @@
         "summary": "Test Request Verifications",
         "description": "Sent by an organisation that has already requested a test by paper to the Test House, as a verification of the paper request",
         "operationId": "CreateTestRequestsVerifications",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -10643,17 +10279,6 @@
         ],
         "summary": "Retrieves the test requests verification",
         "operationId": "RequestForTestRequestsVerification",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -11051,17 +10676,6 @@
         "summary": "Test Status",
         "description": "Used by test houses to update test status",
         "operationId": "CreateTestStatus",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -11254,17 +10868,6 @@
         ],
         "summary": "Retrieves the test status",
         "operationId": "RequestForTestStatus",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -11517,17 +11120,6 @@
         "summary": "Texts",
         "description": "Used to provide texts",
         "operationId": "CreateTexts",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -11679,17 +11271,6 @@
         ],
         "summary": "Retrieves the texts",
         "operationId": "RequestForTexts",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -14567,8 +14148,8 @@
             "$ref": "#/components/schemas/LiteralDate"
           },
           "factorLaserscanNumerator": {
-            "maximum": 9999999999.999998,
-            "minimum": -9999999999.999998,
+            "maximum": 9999999999.999999,
+            "minimum": -9999999999.999999,
             "type": "number",
             "description": "Factor used in numerator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator",
             "format": "double",
@@ -14580,48 +14161,6 @@
             "type": "number",
             "description": "Factor used in denominator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator",
             "format": "double",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GetOrganisationDetailsRequest": {
-        "required": [
-          "abn",
-          "countryOfOrigin",
-          "documentOriginator",
-          "transmissionHeader"
-        ],
-        "type": "object",
-        "properties": {
-          "transmissionHeader": {
-            "$ref": "#/components/schemas/TransmissionHeader"
-          },
-          "countryOfOrigin": {
-            "$ref": "#/components/schemas/CountryCode"
-          },
-          "documentOriginator": {
-            "$ref": "#/components/schemas/Organisation"
-          },
-          "softwareIdentifier": {
-            "$ref": "#/components/schemas/SoftwareIdentifier"
-          },
-          "abn": {
-            "maximum": 99999999999,
-            "minimum": 10000000000,
-            "type": "integer",
-            "description": "Australian Business Number, 11 digits",
-            "format": "int64"
-          },
-          "startDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          },
-          "endDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          },
-          "isUsingNetworkDateTime": {
-            "type": "boolean",
-            "description": "A boolean value to indicate whether to use network datetime.\r\n            \r\ntrue: use network datetime.\r\n            \r\nfalse: not use.",
             "nullable": true
           }
         },

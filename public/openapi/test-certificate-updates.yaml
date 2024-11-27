@@ -20,13 +20,6 @@ paths:
       description: Sent to a test house to advise changes to an existing Certificate.
         A new Certificate will be reissued with the updated data.
       operationId: CreateTestCertificateUpdates
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -159,13 +152,6 @@ paths:
         - Test Certificate Updates
       summary: Retrieves the test certificate updates
       operationId: RequestForTestCertificateUpdates
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:

@@ -19,13 +19,6 @@ paths:
       summary: Request Postsale Printing Of Presale Certificates
       description: Used to provide request postsale printing of presale certificates
       operationId: CreateRequestPostsalePrintingOfPresaleCertificates
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -141,13 +134,6 @@ paths:
         - Request Postsale Printing Of Presale Certificates
       summary: Retrieves the request postsale printing of presale certificates
       operationId: RequestForRequestPostsalePrintingOfPresaleCertificates
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:

@@ -2749,48 +2749,6 @@
         },
         "additionalProperties": false
       },
-      "GetOrganisationDetailsRequest": {
-        "required": [
-          "abn",
-          "countryOfOrigin",
-          "documentOriginator",
-          "transmissionHeader"
-        ],
-        "type": "object",
-        "properties": {
-          "transmissionHeader": {
-            "$ref": "#/components/schemas/TransmissionHeader"
-          },
-          "countryOfOrigin": {
-            "$ref": "#/components/schemas/CountryCode"
-          },
-          "documentOriginator": {
-            "$ref": "#/components/schemas/Organisation"
-          },
-          "softwareIdentifier": {
-            "$ref": "#/components/schemas/SoftwareIdentifier"
-          },
-          "abn": {
-            "maximum": 99999999999,
-            "minimum": 10000000000,
-            "type": "integer",
-            "description": "Australian Business Number, 11 digits",
-            "format": "int64"
-          },
-          "startDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          },
-          "endDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          },
-          "isUsingNetworkDateTime": {
-            "type": "boolean",
-            "description": "A boolean value to indicate whether to use network datetime.\r\n            \r\ntrue: use network datetime.\r\n            \r\nfalse: not use.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "IndustryGroupId": {
         "enum": [
           "A",

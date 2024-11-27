@@ -24,17 +24,6 @@
         "summary": "Payment Confirmations",
         "description": "Used to provide payment confirmations",
         "operationId": "CreatePaymentConfirmations",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -208,17 +197,6 @@
         ],
         "summary": "Retrieves the payment confirmation",
         "operationId": "RequestForPaymentConfirmation",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {

@@ -19,13 +19,6 @@ paths:
       summary: Test Status
       description: Used by test houses to update test status
       operationId: CreateTestStatus
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -146,13 +139,6 @@ paths:
         - Test Status
       summary: Retrieves the test status
       operationId: RequestForTestStatus
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:

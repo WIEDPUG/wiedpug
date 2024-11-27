@@ -12,7 +12,7 @@ namespace Wiedpug.API.ExampleResponses
     {
         public String GetExamples()
         {
-            return "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU";
+            return "\'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}\'";
         }
     }
 
@@ -20,7 +20,7 @@ namespace Wiedpug.API.ExampleResponses
     {
         public String GetExamples()
         {
-            return "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU";
+            return "\'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}\'";
         }
     }
 
@@ -32,8 +32,8 @@ namespace Wiedpug.API.ExampleResponses
             {
                 
                 ApiMessages = [],
-                Data = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
-            };
+                Data = "\'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}\'"
+        };
         }
     }
 

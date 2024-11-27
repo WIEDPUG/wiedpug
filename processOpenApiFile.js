@@ -570,6 +570,7 @@ const updateApiVersion = ()=>{
     // Paths to your config and API files
     const configFilePath = path.join(__dirname, 'openapi-config.json');
     const apiFilePath = path.join(__dirname, '/public/openapi/api.json');
+ 
     
     // Step 1: Read the version from openapi-config.json
     const configData = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'));
@@ -580,6 +581,29 @@ const updateApiVersion = ()=>{
     
     // Step 2: Read and parse the OpenAPI JSON file
     let apiData = JSON.parse(fs.readFileSync(apiFilePath, 'utf-8'));
+
+    //     // Function to replace the version in path string
+    // const replaceVersionInPath = (path, oldVersion) => {
+    //     if (path.startsWith(`/${oldVersion}`)) {
+    //         return path.replace(`/${oldVersion}`, `/v${newVersion}`);
+    //     }
+    //     return path;
+    //     };
+
+    // // Update the version in the paths
+    // if (apiData.paths) {
+    //     Object.keys(apiData.paths).forEach((path) => {
+    //     const pathSegments = path.split('/'); // Split path into segments
+    //     const oldVersion = pathSegments[1]; // Assuming version is the second segment (e.g., 'v0')
+    //     // Replace the old version with the new version
+    //     if (oldVersion && oldVersion.startsWith('v')) {
+    //         const newPath = replaceVersionInPath(path, oldVersion);
+    //         apiData.paths[newPath] = apiData.paths[path];
+    //         delete apiData.paths[path];
+    //     }
+    //     });
+    // }
+
     
     // Step 3: Update the version in the info section
     apiData.info.version = newVersion; // Keep the full version in info

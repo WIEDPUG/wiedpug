@@ -19,13 +19,6 @@ paths:
       summary: Payment Advices
       description: Used to provide payment advices
       operationId: CreatePaymentAdvices
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -167,13 +160,6 @@ paths:
         - Payment Advices
       summary: Retrieves the payment advices
       operationId: RequestForPaymentAdvices
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:

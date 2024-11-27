@@ -23,22 +23,11 @@
         ],
         "summary": "Retrieves the organisationdetails",
         "operationId": "RequestForOrganisationDetails",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GetOrganisationDetailsRequest"
+                "$ref": "#/components/schemas/RequestForData"
               },
               "example": {
                 "transmissionHeader": {
@@ -346,15 +335,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
           }
         ],
         "responses": {
@@ -509,15 +489,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
             }
           }
         ],
@@ -775,15 +746,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
           }
         ],
         "responses": {
@@ -869,11 +831,9 @@
   },
   "components": {
     "schemas": {
-      "GetOrganisationDetailsRequest": {
+      "RequestForData": {
         "required": [
-          "abn",
-          "countryOfOrigin",
-          "documentOriginator",
+          "requestForDataType",
           "transmissionHeader"
         ],
         "type": "object",
@@ -881,35 +841,25 @@
           "transmissionHeader": {
             "$ref": "#/components/schemas/TransmissionHeader"
           },
-          "countryOfOrigin": {
-            "$ref": "#/components/schemas/CountryCode"
-          },
-          "documentOriginator": {
-            "$ref": "#/components/schemas/Organisation"
-          },
-          "softwareIdentifier": {
-            "$ref": "#/components/schemas/SoftwareIdentifier"
-          },
-          "abn": {
-            "maximum": 99999999999,
-            "minimum": 10000000000,
-            "type": "integer",
-            "description": "Australian Business Number, 11 digits",
-            "format": "int64"
-          },
-          "startDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          },
-          "endDateTimeStatusRequest": {
-            "$ref": "#/components/schemas/UtcDateTime"
-          },
-          "isUsingNetworkDateTime": {
-            "type": "boolean",
-            "description": "A boolean value to indicate whether to use network datetime.\r\n            \r\ntrue: use network datetime.\r\n            \r\nfalse: not use.",
-            "nullable": true
+          "requestForDataType": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/UseNetworkDateTimeRequestForDataType"
+              },
+              {
+                "$ref": "#/components/schemas/DateTimeRangeRequestForDataType"
+              }
+            ]
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "requestForDataType",
+          "mapping": {
+            "UseNetworkDateTimeRequestForDataType": "#/components/schemas/UseNetworkDateTimeRequestForDataType",
+            "DateTimeRangeRequestForDataType": "#/components/schemas/DateTimeRangeRequestForDataType"
+          }
+        }
       },
       "TransmissionHeader": {
         "required": [
@@ -1302,6 +1252,34 @@
         "type": "integer",
         "description": "1: Talman<br />2: Symbotic<br />3: Jumbuck/Datacon<br />4: Jemalong<br />5: NA - no value<br />6: Modiano<br />7: AWH<br />8: AWTA",
         "format": "int32"
+      },
+      "UseNetworkDateTimeRequestForDataType": {
+        "required": [
+          "isUsingNetworkDateTime"
+        ],
+        "type": "object",
+        "properties": {
+          "isUsingNetworkDateTime": {
+            "type": "boolean",
+            "description": "A boolean value to indicate whether to use network datetime.\r\n\r\ntrue: use network datetime.\r\n\r\nfalse: not use."
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeRangeRequestForDataType": {
+        "required": [
+          "startDateTimeStatusRequest"
+        ],
+        "type": "object",
+        "properties": {
+          "startDateTimeStatusRequest": {
+            "$ref": "#/components/schemas/UtcDateTime"
+          },
+          "endDateTimeStatusRequest": {
+            "$ref": "#/components/schemas/UtcDateTime"
+          }
+        },
+        "additionalProperties": false
       },
       "UtcDateTime": {
         "type": "string",

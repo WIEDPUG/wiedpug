@@ -19,13 +19,6 @@ paths:
       summary: Texts
       description: Used to provide texts
       operationId: CreateTexts
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -122,13 +115,6 @@ paths:
         - Texts
       summary: Retrieves the texts
       operationId: RequestForTexts
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:

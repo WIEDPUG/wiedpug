@@ -23,17 +23,6 @@
         ],
         "summary": "Create or upload the test certificates",
         "operationId": "CreateTestCertificates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -383,17 +372,6 @@
         ],
         "summary": "Retrieves the test certificates",
         "operationId": "RequestForTestCertificates",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {

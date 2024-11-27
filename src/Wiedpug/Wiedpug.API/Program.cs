@@ -88,7 +88,7 @@ builder.Services.AddSwaggerGen(c => {
         }
     });
 
-    c.OperationFilter<AddHeaderOperationFilter>();
+    //c.OperationFilter<AddHeaderOperationFilter>();
 
     c.ExampleFilters();
 });

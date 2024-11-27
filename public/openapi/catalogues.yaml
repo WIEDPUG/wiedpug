@@ -17,17 +17,10 @@ paths:
       tags:
         - Catalogues
       summary: Transmit new Auction Catalogues and Private Catalogues
-      description: Used by brokers to transmit Original broadcast and private auction
-        catalogue data to the Network for auctions regulated by the Australian
-        Wool Exchange Limited.
+      description: Transmit Original broadcast and private auction catalogue data to
+        the Network for auctions regulated by the Australian Wool Exchange
+        Limited.
       operationId: CreateCatalogues
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -481,13 +474,6 @@ paths:
         data updates to the Network for auctions regulated by the Australian
         Wool Exchange Limited.
       operationId: UpdateCatalogues
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:
@@ -747,13 +733,6 @@ paths:
         Re-requesting data for Auction Catalogues, Private Catalogues, and
         Auction Catalogue Updates
       operationId: RequestForCatalogues
-      parameters:
-        - name: api-version
-          in: header
-          description: Specify the version of the API
-          schema:
-            type: string
-            example: 1.0.0
       requestBody:
         content:
           application/json:

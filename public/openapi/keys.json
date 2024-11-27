@@ -23,24 +23,13 @@
         ],
         "summary": "Upload the public encryption key for LotHeaderAwexData, return the encryption key id",
         "operationId": "UploadKey",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "string"
               },
-              "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+              "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
             }
           },
           "required": true
@@ -166,17 +155,6 @@
         ],
         "summary": "Retrieves the public encryption key for LotHeaderAwexData",
         "operationId": "GetKeyForAwexData",
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -185,7 +163,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/StringApiResult"
                 },
-                "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+                "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
               }
             }
           },
@@ -270,15 +248,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
-            }
           }
         ],
         "requestBody": {
@@ -287,7 +256,7 @@
               "schema": {
                 "type": "string"
               },
-              "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+              "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
             }
           },
           "required": true
@@ -300,7 +269,7 @@
                 "schema": {
                   "$ref": "#/components/schemas/ApiResult"
                 },
-                "example": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2yIU"
+                "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
               }
             }
           },
@@ -411,15 +380,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "api-version",
-            "in": "header",
-            "description": "Specify the version of the API",
-            "schema": {
-              "type": "string",
-              "example": "1.0.0"
             }
           }
         ],
