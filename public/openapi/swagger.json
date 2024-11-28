@@ -2503,20 +2503,25 @@
         }
       }
     },
-    "/v0/keys/AwexData": {
+    "/v0/keys": {
       "post": {
         "tags": [
           "Keys"
         ],
-        "summary": "Upload the public encryption key for LotHeaderAwexData, return the encryption key id",
+        "summary": "Upload the public encryption key for an organisation, return the encryption key id",
         "operationId": "UploadKey",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/KeyDataRequest"
               },
-              "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+              "example": {
+                "encryptionKey": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'",
+                "organisation": {
+                  "organisationCode": "AWE"
+                }
+              }
             }
           },
           "required": true
@@ -2635,115 +2640,24 @@
             }
           }
         }
-      },
-      "get": {
-        "tags": [
-          "Keys"
-        ],
-        "summary": "Retrieves the public encryption key for LotHeaderAwexData",
-        "operationId": "GetKeyForAwexData",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StringApiResult"
-                },
-                "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiErrorResult"
-                },
-                "example": {
-                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
-                  "title": "Unauthorized",
-                  "status": 401,
-                  "detail": "Missing authentication credentials"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiErrorResult"
-                },
-                "example": {
-                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
-                  "title": "You don't have permission to access this resource",
-                  "status": 403,
-                  "detail": "You don't have a 'read' access to access this resource"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiErrorResult"
-                },
-                "example": {
-                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
-                  "title": "Resource not found",
-                  "status": 404
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiErrorResult"
-                },
-                "example": {
-                  "type": "https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error",
-                  "title": "An error occurred while processing your required",
-                  "status": 500,
-                  "detail": "Error details.."
-                }
-              }
-            }
-          }
-        }
       }
     },
-    "/v0/keys/{id}": {
-      "put": {
+    "/v0/keys/data": {
+      "post": {
         "tags": [
           "Keys"
         ],
-        "summary": "Update the public encryption key for LotHeaderAwexData by encryption key id",
-        "operationId": "UpdateKeyById",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "summary": "Retrieve the public encryption key",
+        "operationId": "RequestForKey",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/Organisation"
               },
-              "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+              "example": {
+                "organisationCode": "AWE"
+              }
             }
           },
           "required": true
@@ -2754,9 +2668,29 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/StringApiResult"
+                },
+                "example": {
+                  "apiMessages": [],
+                  "data": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/problem+json": {
+                "schema": {
                   "$ref": "#/components/schemas/ApiResult"
                 },
-                "example": "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\": [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\": \"AQAB\",\"kid\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+                "example": {
+                  "apiMessages": [
+                    {
+                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                    }
+                  ]
+                }
               }
             }
           },
@@ -2775,12 +2709,8 @@
                   "errors": [
                     {
                       "errors": {
-                        "Requests[0].TransmissionHeader.DateFormatLastRevised": [
-                          "The field DateFormatLastRevised is required",
-                          "The field DateFormatLastRevised must match regulart expression pattern..."
-                        ],
-                        "Requests[0].TransmissionHeader.CountryOfOrigin": [
-                          "The field CountryOfOrigin is required"
+                        "RequestBbody": [
+                          "The request body for organisation is required."
                         ]
                       }
                     }
@@ -2853,12 +2783,14 @@
             }
           }
         }
-      },
+      }
+    },
+    "/v0/keys/{id}": {
       "delete": {
         "tags": [
           "Keys"
         ],
-        "summary": "Delete or Deactivate the public encryption key for LotHeaderAwexData by encryption key id",
+        "summary": "Delete or Deactivate the public encryption key by encryption key id",
         "operationId": "DeleteKeyById",
         "parameters": [
           {
@@ -14276,6 +14208,23 @@
           "fibreDiameterHistogramDetailMeasurements"
         ],
         "type": "string"
+      },
+      "KeyDataRequest": {
+        "required": [
+          "encryptionKey",
+          "organisation"
+        ],
+        "type": "object",
+        "properties": {
+          "encryptionKey": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "organisation": {
+            "$ref": "#/components/schemas/Organisation"
+          }
+        },
+        "additionalProperties": false
       },
       "Laboratory": {
         "enum": [

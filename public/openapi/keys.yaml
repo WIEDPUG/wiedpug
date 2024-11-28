@@ -12,24 +12,28 @@ info:
     url: https://wiedpug.github.io/wiedpug
   version: 0.0.0
 paths:
-  /v0/keys/AwexData:
+  /v0/keys:
     post:
       tags:
         - Keys
-      summary: Upload the public encryption key for LotHeaderAwexData, return the
+      summary: Upload the public encryption key for an organisation, return the
         encryption key id
       operationId: UploadKey
       requestBody:
         content:
           application/json:
             schema:
-              type: string
-            example: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
-              [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\
-              \": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
-              \"AQAB\",\"kid\":
-              \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\
-              \": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+              $ref: "#/components/schemas/KeyDataRequest"
+            example:
+              encryptionKey: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
+                [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\
+                \"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
+                \"AQAB\",\"kid\":
+                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\
+                \":
+                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+              organisation:
+                organisationCode: AWE
         required: true
       responses:
         "200":
@@ -104,11 +108,20 @@ paths:
                 title: An error occurred while processing your required
                 status: 500
                 detail: Error details..
-    get:
+  /v0/keys/data:
+    post:
       tags:
         - Keys
-      summary: Retrieves the public encryption key for LotHeaderAwexData
-      operationId: GetKeyForAwexData
+      summary: Retrieve the public encryption key
+      operationId: RequestForKey
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Organisation"
+            example:
+              organisationCode: AWE
+        required: true
       responses:
         "200":
           description: OK
@@ -116,13 +129,43 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/StringApiResult"
-              example: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
-                [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\
-                \"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
-                \"AQAB\",\"kid\":
-                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\
-                \":
-                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+              example:
+                apiMessages: []
+                data: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
+                  [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"\
+                  ],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
+                  \"AQAB\",\"kid\":
+                  \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"\
+                  x5t\":
+                  \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+        "204":
+          description: No Content
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiResult"
+              example:
+                apiMessages:
+                  - message: >-
+                      Resason:  You have requested data but there is nothing
+                      available.
+
+                      Action: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later.
+        "400":
+          description: Bad Request
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorResult"
+              example:
+                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
+                title: One or more validation errors occurred
+                status: 400
+                detail: ""
+                errors:
+                  - errors:
+                      RequestBbody:
+                        - The request body for organisation is required.
         "401":
           description: Unauthorized
           content:
@@ -167,111 +210,10 @@ paths:
                 status: 500
                 detail: Error details..
   /v0/keys/{id}:
-    put:
-      tags:
-        - Keys
-      summary: Update the public encryption key for LotHeaderAwexData by encryption
-        key id
-      operationId: UpdateKeyById
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: string
-            example: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
-              [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\"n\
-              \": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
-              \"AQAB\",\"kid\":
-              \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\
-              \": \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
-        required: true
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ApiResult"
-              example: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
-                [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\
-                \"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
-                \"AQAB\",\"kid\":
-                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\
-                \":
-                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
-        "400":
-          description: Bad Request
-          content:
-            application/problem+json:
-              schema:
-                $ref: "#/components/schemas/ApiErrorResult"
-              example:
-                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
-                title: One or more validation errors occurred
-                status: 400
-                detail: ""
-                errors:
-                  - errors:
-                      Requests[0].TransmissionHeader.DateFormatLastRevised:
-                        - The field DateFormatLastRevised is required
-                        - The field DateFormatLastRevised must match regulart
-                          expression pattern...
-                      Requests[0].TransmissionHeader.CountryOfOrigin:
-                        - The field CountryOfOrigin is required
-        "401":
-          description: Unauthorized
-          content:
-            application/problem+json:
-              schema:
-                $ref: "#/components/schemas/ApiErrorResult"
-              example:
-                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2
-                title: Unauthorized
-                status: 401
-                detail: Missing authentication credentials
-        "403":
-          description: Forbidden
-          content:
-            application/problem+json:
-              schema:
-                $ref: "#/components/schemas/ApiErrorResult"
-              example:
-                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
-                title: You don't have permission to access this resource
-                status: 403
-                detail: You don't have a 'read' access to access this resource
-        "404":
-          description: Not Found
-          content:
-            application/problem+json:
-              schema:
-                $ref: "#/components/schemas/ApiErrorResult"
-              example:
-                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4
-                title: Resource not found
-                status: 404
-        "500":
-          description: Internal Server Error
-          content:
-            application/problem+json:
-              schema:
-                $ref: "#/components/schemas/ApiErrorResult"
-              example:
-                type: https://datatracker.ietf.org/doc/html/rfc9110#name-500-internal-server-error
-                title: An error occurred while processing your required
-                status: 500
-                detail: Error details..
     delete:
       tags:
         - Keys
-      summary: Delete or Deactivate the public encryption key for LotHeaderAwexData by
-        encryption key id
+      summary: Delete or Deactivate the public encryption key by encryption key id
       operationId: DeleteKeyById
       parameters:
         - name: id
@@ -333,6 +275,494 @@ paths:
                 detail: Error details..
 components:
   schemas:
+    KeyDataRequest:
+      required:
+        - encryptionKey
+        - organisation
+      type: object
+      properties:
+        encryptionKey:
+          minLength: 1
+          type: string
+        organisation:
+          $ref: "#/components/schemas/Organisation"
+      additionalProperties: false
+    Organisation:
+      required:
+        - organisationCode
+      type: object
+      properties:
+        organisationCode:
+          maxLength: 3
+          minLength: 1
+          type: string
+        centre:
+          $ref: "#/components/schemas/Centre"
+      additionalProperties: false
+      description: "A code used to identify organisations involved in the wool
+        trade.\r
+
+        \r
+
+        These codes are issued and maintained by the Network and are
+        available online.\r
+
+        \r
+
+        currentReceiver: The code for the organisation that will receive
+        the document at the end of the current transmission.Where a document is
+        transferred from one\r
+
+        organisation to another through an intermediary, the code for
+        the current receiver will vary from leg to leg of the journey.\r
+
+        \r
+
+        releasingOrganisation: The broker that is responsible for
+        releasing the wool out of the store.\r
+
+        \r
+
+        markingOrganisation: The code for the organisation which is to
+        apply marks to the bales.\r
+
+        \r
+
+        invoicingOrganisation: The code for the broker who will raise
+        the invoice for the wool.\r
+
+        \r
+
+        storageOrganisation: This is the organisation store that is
+        storing the wool. Note: If there is more than one organisation in a
+        centre, then separate AWEX codes are \r
+
+        required for each store. It is not necessarily the same as the
+        Releasing Organisation.\r
+
+        \r
+
+        client: The code for the organisation that is the transmitter’s
+        client. Where one organisation submits a TRV document to a Test House
+        requesting tests \r
+
+        for one of its own clients, the code for that client will be
+        used in this field."
+    Centre:
+      required:
+        - centreCode
+        - countryCode
+      type: object
+      properties:
+        countryCode:
+          $ref: "#/components/schemas/CountryCode"
+        centreCode:
+          anyOf:
+            - $ref: "#/components/schemas/CentreCodeAustralia"
+            - $ref: "#/components/schemas/CentreCodeChina"
+            - $ref: "#/components/schemas/CentreCodeGermany"
+            - $ref: "#/components/schemas/CentreCodeItaly"
+            - $ref: "#/components/schemas/CentreCodeNewZealand"
+            - $ref: "#/components/schemas/CentreCodeTaiwan"
+      additionalProperties: false
+      description: "Centre has country and centreCode.\r
+
+        \r
+
+        The centreCode is one of these below based on the value of
+        country.\r
+
+        \r
+
+        The mapping of country:centreCode is the following:\r
+
+        \            \r
+
+        AU:CentreCodeAustralia\r
+
+        \r
+
+        NZ: CentreNewZealand\r
+
+        \r
+
+        DE: CentreGermany\r
+
+        \r
+
+        IT: CentreItaly\r
+
+        \r
+
+        CN: CentreChina\r
+
+        \r
+
+        TW: CentreTaiwan\r
+
+        \r
+
+        The legacy codes for Overseas Centre are under
+        CentreCodeAustralia\r
+
+        \r
+
+        centreStorage: The centre (code) representing the location at
+        which the wool is stored (relevant to the intended use of the document).
+        For example, the\r
+
+        Centre- Storage against a lot in the Catalogue is the location
+        of the wool where the buyer would expect to take delivery.\r
+
+        \r
+
+        centreCatalogue: The centre (code) used to group lots of wool
+        based on a location. This location is typically the core test/weighing
+        centre and is often aligned with the seller’s Post Sale Charge
+        schedule.\r
+
+        \r
+
+        centreDelivery: Inclusion of the Delivery Area Centre Code is
+        Mandatory when the Post Sale Service Charge includes delivery to a
+        nominated area and a “D” is included in the Delivery Basis Field.\r
+
+        \r
+
+        centreAlternateDelivery: This field is to be used when the PSC
+        includes optional delivery to a second area."
+      discriminator:
+        propertyName: countryCode
+        mapping:
+          AU: "#/components/schemas/CentreCodeAustralia"
+          CN: "#/components/schemas/CentreCodeChina"
+          DE: "#/components/schemas/CentreCodeGermany"
+          IT: "#/components/schemas/CentreCodeItaly"
+          NZ: "#/components/schemas/CentreCodeNewZealand"
+          TW: "#/components/schemas/CentreCodeTaiwan"
+    CountryCode:
+      enum:
+        - AU
+        - NZ
+        - DE
+        - IT
+        - CN
+        - TW
+      type: string
+      description: "A code for the country in which the transmission was created.
+        Country Code using ISO 3166-1 standard<br />AU: Australia<br />NZ: New
+        Zealand<br />DE: Germany<br />IT: Italy<br />CN: China<br />TW: Taiwan"
+    CentreCodeAustralia:
+      enum:
+        - A
+        - AD
+        - AR
+        - AU
+        - B
+        - BA
+        - BK
+        - BL
+        - BM
+        - BO
+        - BR
+        - BT
+        - C
+        - CA
+        - CB
+        - CC
+        - CL
+        - CN
+        - CO
+        - CR
+        - CU
+        - CW
+        - D
+        - DE
+        - DO
+        - DR
+        - E
+        - ER
+        - ES
+        - F
+        - G
+        - GF
+        - GI
+        - GN
+        - GR
+        - GU
+        - H
+        - HA
+        - HB
+        - HM
+        - HO
+        - HY
+        - I
+        - J
+        - JA
+        - K
+        - KE
+        - KH
+        - KI
+        - KN
+        - KT
+        - KW
+        - KY
+        - L
+        - LC
+        - M
+        - MA
+        - MB
+        - MC
+        - ME
+        - MG
+        - MI
+        - MO
+        - MR
+        - MU
+        - N
+        - NA
+        - ND
+        - NO
+        - NR
+        - OB
+        - OR
+        - P
+        - PA
+        - PL
+        - Q
+        - QU
+        - R
+        - S
+        - SG
+        - SH
+        - SK
+        - SW
+        - SY
+        - T
+        - TE
+        - U
+        - UR
+        - V
+        - W
+        - WA
+        - WG
+        - WL
+        - WN
+        - WR
+        - WW
+        - X
+        - Y
+        - YA
+        - YM
+        - YO
+        - Z
+        - ZC
+        - ZD
+        - ZH
+        - ZJ
+        - ZK
+        - ZL
+        - ZM
+        - ZO
+        - ZP
+        - ZQ
+        - ZR
+        - ZT
+        - ZV
+        - ZW
+        - ZX
+        - ZY
+      type: string
+      description: "This is Centres for Australia. A centre is a town where any
+        activity connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />A: Australia - ADELAIDE<br />AD: Australia -
+        Ardlethan<br />AR: Australia - Armidale (NSW)<br />AU: Australia -
+        AUSTRALIA (AWEX internal only)<br />B: Australia - BRISBANE<br />BA:
+        Australia - Benalla<br />BK: Australia - Bourke<br />BL: Australia -
+        Ballarat<br />BM: Australia - Barham<br />BO: Australia - Boorowa<br
+        />BR: Australia - Bordertown<br />BT: Australia - Bathurst<br />C:
+        Australia - Cooma<br />CA: Australia - Casterton<br />CB: Australia -
+        Coonabarabran<br />CC: Australia - Culcairn<br />CL: Australia -
+        Coleraine<br />CN: Australia - Condoblin<br />CO: Australia -
+        Cootamundra<br />CR: Australia - Corowa<br />CU: Australia -
+        Cunnamulla<br />CW: Australia - Crookwell<br />D: Australia - Bendigo<br
+        />DE: Australia - Deniliquin<br />DO: Australia - Dubbo<br />DR:
+        Australia - Canowindra<br />E: Australia - Echuca<br />ER: Australia -
+        Euroa<br />ES: Australia - Esperance<br />F: Australia - FREMANTLE<br
+        />G: Australia - GEELONG<br />GF: Australia - Grenfell<br />GI:
+        Australia - Glenn Innes<br />GN: Australia - Gunning<br />GR: Australia
+        - Griffith<br />GU: Australia - Guyra<br />H: Australia - Hobart<br
+        />HA: Australia - Harden<br />HB: Australia - Holbrook<br />HM:
+        Australia - Hamilton<br />HO: Australia - Horsham<br />HY: Australia -
+        Hay<br />I: Australia - Narrabri<br />J: Australia - Parkes<br />JA:
+        Australia - Jamestown<br />K: Australia - Warracknabeal<br />KE:
+        Australia - Kerang<br />KH: Australia - Keith<br />KI: Australia -
+        Kangaroo Island<br />KN: Australia - Kingston<br />KT: Australia -
+        Katanning<br />KW: Australia - Wagga Wagga<br />KY: Australia -
+        Kyneton<br />L: Australia - LAUNCESTON<br />LC: Australia - Lane Cove
+        (AWEX internal only)<br />M: Australia - MELBOURNE<br />MA: Australia -
+        Mansfield<br />MB: Australia - Murray Bridge<br />MC: Australia -
+        Macarthur<br />ME: Australia - Melton<br />MG: Australia - Mount
+        Gambier<br />MI: Australia - Mildura<br />MO: Australia - Moree<br />MR:
+        Australia - Maryborough<br />MU: Australia - Mudgee<br />N: Australia -
+        NEWCASTLE<br />NA: Australia - Narrandera<br />ND: Australia -
+        Goondiwindi<br />NO: Australia - Northam<br />NR: Australia -
+        Naracoorte<br />OB: Australia - Oberon<br />OR: Australia - Orange<br
+        />P: Australia - Portland<br />PA: Australia - Cowra<br />PL: Australia
+        - Port Lincoln<br />Q: Australia - Yarrawonga<br />QU: Australia -
+        Queanbeyan<br />R: Australia - GOULBURN<br />S: Australia - SYDNEY<br
+        />SG: Australia - St George<br />SH: Australia - Shepparton<br />SK:
+        Australia - Skipton<br />SW: Australia - Swan Hill<br />SY: Australia -
+        Seymour<br />T: Australia - Inverell<br />TE: Australia - Temora<br />U:
+        Australia - Auburn<br />UR: Australia - Uralla<br />V: Australia -
+        Forbes<br />W: Australia - Tamworth<br />WA: Australia - Warren<br />WG:
+        Australia - Walgett<br />WL: Australia - Walcha<br />WN: Australia -
+        Wellington<br />WR: Australia - Wangaratta<br />WW: Australia - West
+        Wyalong<br />X: Australia - Ararat<br />Y: Australia - Albury<br />YA:
+        Australia - Yass<br />YM: Australia - Yarram<br />YO: Australia -
+        Young<br />Z: Australia - Albany<br />ZC:Christchurch - New Zealand<br
+        />ZD: Dunedin - New Zealand<br />ZH: Blumenthal - Germany<br />ZJ:
+        Biella - Italy<br />ZK: Grisignano - Italy<br />ZL: Mosgiel - New
+        Zealand<br />ZM: Nanjing - China<br />ZO: Keelung - Taiwan<br />ZP:
+        Shanghai - China<br />ZQ: Qingdao - China<br />ZR: Zhangjiagang -
+        China<br />ZT: Timaru - New Zealand<br />ZV: Invercargill - New
+        Zealand<br />ZW:Wellington - New Zealand<br />ZX: Napier – New
+        Zealand<br />ZY: Ashburton – New Zealand"
+    CentreCodeChina:
+      enum:
+        - NA
+        - SH
+        - QI
+        - ZH
+      type: string
+      description: "This is Centres for China. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />NA: Nanjing - China<br />SH: Shanghai - China<br />QI:
+        Qingdao - China<br />ZH: Zhangjiagang - China"
+    CentreCodeGermany:
+      enum:
+        - BL
+      type: string
+      description: "This is Centres for Germany. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />BL: Blumenthal - Germany"
+    CentreCodeItaly:
+      enum:
+        - BI
+        - GR
+      type: string
+      description: "This is Centres for Italy. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />BI: Biella - Italy<br />GR: Grisignano - Italy"
+    CentreCodeNewZealand:
+      enum:
+        - A
+        - AW
+        - B
+        - BL
+        - BT
+        - C
+        - CV
+        - D
+        - F
+        - FA
+        - G
+        - GD
+        - GO
+        - HA
+        - HS
+        - I
+        - J
+        - K
+        - KA
+        - KP
+        - L
+        - LO
+        - LU
+        - M
+        - MA
+        - MK
+        - MT
+        - MU
+        - N
+        - NE
+        - O
+        - OH
+        - OI
+        - OM
+        - OT
+        - P
+        - PT
+        - PU
+        - R
+        - RG
+        - RI
+        - S
+        - SA
+        - SH
+        - SY
+        - T
+        - TA
+        - TE
+        - TH
+        - TP
+        - U
+        - V
+        - W
+        - WH
+        - WI
+        - WR
+        - WT
+        - WU
+        - X
+        - Y
+        - YP
+        - Z
+      type: string
+      description: "This is Centres for New Zealand. A centre is a town where any
+        activity connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />A: New Zealand - Auckland<br />AW: New Zealand -
+        Awatoto<br />B: New Zealand - Cambridge<br />BL: New Zealand -
+        Blenheim<br />BT: New Zealand - Bunnythorpe<br />C: New Zealand -
+        Christchurch<br />CV: New Zealand - Clive<br />D: New Zealand -
+        Dunedin<br />F: New Zealand - Feilding<br />FA: New Zealand - Fairlie<br
+        />G: New Zealand - Gisborne<br />GD: New Zealand - Geraldine<br />GO:
+        New Zealand - Gore<br />HA: New Zealand - Hawera<br />HS: New Zealand -
+        Hastings<br />I: New Zealand - Invercargill<br />J: New Zealand -
+        Tapanui<br />K: New Zealand - Te Kuiti<br />KA: New Zealand -
+        Kakariki<br />KP: New Zealand - Kaiapoi<br />L: New Zealand - Mosgiel<br
+        />LO: New Zealand - Longburn<br />LU: New Zealand - Lumsden<br />M: New
+        Zealand - Masterton<br />MA: New Zealand - Mangatinoka<br />MK: New
+        Zealand - Motueka<br />MT: New Zealand - Milton<br />MU: New Zealand -
+        Mataura<br />N: New Zealand - Napier<br />NE: New Zealand - Nelson<br
+        />O: New Zealand - Oamaru<br />OH: New Zealand - Ohinewai<br />OI: New
+        Zealand - Ohai<br />OM: New Zealand - Omakau<br />OT: New Zealand -
+        Otorohonga<br />P: New Zealand - Palmerston North<br />PT: New Zealand -
+        Pahiatua<br />PU: New Zealand - Putaruru<br />R: New Zealand -
+        Rotorua<br />RG: New Zealand - Rangiora<br />RI: New Zealand - Riwaka<br
+        />S: New Zealand - Ashburton<br />SA: New Zealand - Saltwater Creek<br
+        />SH: New Zealand - Shannon<br />SY: New Zealand - Sydney<br />T: New
+        Zealand - Timaru<br />TA: New Zealand - Tapanui<br />TE: New Zealand -
+        TeAnau<br />TH: New Zealand - Taihape<br />TP: New Zealand - Te Puke<br
+        />U: New Zealand - Taumaruniu<br />V: New Zealand - Dannevirke<br />W:
+        New Zealand - Wellington<br />WH: New Zealand - Whakatu<br />WI: New
+        Zealand - Whakatu Industrial Park<br />WR: New Zealand - Wairoa<br />WT:
+        New Zealand - Winton<br />WU: New Zealand - Waikuku<br />X: New Zealand
+        - Wanganui<br />Y: New Zealand - Whangarei<br />YP: New Zealand -
+        Waipukurau<br />Z: New Zealand - Taupo"
+    CentreCodeTaiwan:
+      enum:
+        - KE
+      type: string
+      description: "This is Centres for Taiwan. A centre is a town where any activity
+        connected with the wool industry takes place. The codes used in
+        transmissions are those defined in the Australian Wool Selling
+        Regulation.<br />KE: Keelung - Taiwan"
     ApiResult:
       type: object
       properties:

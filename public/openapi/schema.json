@@ -2860,6 +2860,23 @@
         ],
         "type": "string"
       },
+      "KeyDataRequest": {
+        "required": [
+          "encryptionKey",
+          "organisation"
+        ],
+        "type": "object",
+        "properties": {
+          "encryptionKey": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "organisation": {
+            "$ref": "#/components/schemas/Organisation"
+          }
+        },
+        "additionalProperties": false
+      },
       "Laboratory": {
         "enum": [
           1,
