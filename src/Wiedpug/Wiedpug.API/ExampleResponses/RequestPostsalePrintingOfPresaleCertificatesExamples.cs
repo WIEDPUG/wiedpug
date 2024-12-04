@@ -32,7 +32,7 @@ namespace Wiedpug.API.ExampleResponses
                                                 OrganisationCode = "ABC",
 
                     },
-                    VersionNumber = 31,
+                    VersionNumber = "1.10.1",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
@@ -105,7 +105,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                         OrganisationCode = "ATW",
                     },
-                    VersionNumber = 31,
+                    VersionNumber = "1.10.1",
                     SoftwareIdentifier = new SoftwareIdentifier
                     {
                         ProgramName = "NETR",
@@ -149,7 +149,7 @@ namespace Wiedpug.API.ExampleResponses
                             OrganisationCode = "AWT",
 
                         },
-                        VersionNumber = 31,
+                        VersionNumber = "1.10.1",
                         SoftwareIdentifier = new SoftwareIdentifier
                         {
                             ProgramName = "NETR",

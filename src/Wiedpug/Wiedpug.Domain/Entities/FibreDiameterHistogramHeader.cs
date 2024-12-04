@@ -85,7 +85,7 @@ namespace Wiedpug.Domain.Entities
         /// <summary>
         /// Factor used in numerator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator
         /// </summary>
-        [Range(-9999999999.999999,9999999999.999999)]
+        [Range(-999999999.999999,999999999.999999)]
         public double? FactorLaserscanNumerator { get; set; } // FIELD NUMBER 18 - Factor – Laserscan Numerator - Start: 50, Size: 16, Data Type: D6, Justification: R, Requirement Designator: C
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace Wiedpug.API.ExampleResponses
                     {
                                                 OrganisationCode = "ATW",
                     },
-                    VersionNumber = 36,
+                    VersionNumber = "1.10.1",
                     Abn = 72001967184
                 },
                 RequestForStatusFilters = new List<RequestForStatusFilter>
@@ -72,7 +72,7 @@ namespace Wiedpug.API.ExampleResponses
                         {
                                                     OrganisationCode = "AWX",
                         },
-                        VersionNumber = 36,
+                        VersionNumber = "1.10.1",
                         Abn = 72001967184
                     },
                     TransmissionResponses = new List<TransmissionResponse>

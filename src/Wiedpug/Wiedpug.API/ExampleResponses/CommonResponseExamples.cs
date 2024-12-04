@@ -38,7 +38,7 @@ namespace Wiedpug.API.ExampleResponses
                 ApiMessages = [
                     new ApiMessage
                     {
-                        Message = "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                        WarningMessage = "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }    
                 ],
                 Data = null

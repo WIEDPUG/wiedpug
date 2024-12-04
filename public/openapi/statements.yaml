@@ -44,7 +44,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: AAA
@@ -287,7 +287,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: BBB
@@ -373,7 +373,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: CCC
@@ -760,7 +760,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: DDD
@@ -1030,7 +1030,7 @@ paths:
                     centre:
                       countryCode: AU
                       centreCode: M
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                   abn: 0
                 requestForDataType:
                   isUsingNetworkDateTime: true
@@ -1140,7 +1140,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -1245,14 +1245,16 @@ components:
         currentReceiver:
           $ref: "#/components/schemas/Organisation"
         versionNumber:
-          maximum: 99
-          minimum: -99
-          type: integer
-          description: "The version number of the WIEDPUG Handbook that the transmission
-            relates to\r
+          type: string
+          description: "The full version number of API that the transmission relates to.\r
 
-            Two digits. e.g. 99"
-          format: int32
+            \r
+
+            It uses Semantic Versioning. https://semver.org/\r
+
+            \r
+
+            The format is MAJOR.MINOR.PATCH. e.g. 1.10.2"
           nullable: true
         softwareIdentifier:
           $ref: "#/components/schemas/SoftwareIdentifier"
@@ -2069,32 +2071,50 @@ components:
     ApiMessage:
       type: object
       properties:
-        message:
+        warningMessage:
           type: string
+          description: "A code to indicate the different types of errors.\r
+
+            \r
+
+            11: Weight Note suffix is not numeric or has been
+            omitted.\r
+
+            \r
+
+            12: Number of bales is invalid or has been omitted.\r
+
+            \r
+
+            13: Sale identification has been omitted.\r
+
+            \r
+
+            18: Invalid Gross weight.\r
+
+            \r
+
+            19: Invalid Tare weight.\r
+
+            \r
+
+            20: Invalid Centre/Client code on pre-sale test
+            request.\r
+
+            \r
+
+            24: Incorrect PCTR Hash total.\r
+
+            \r
+
+            DRV: Dark and Medullated Fibre Risk error."
           nullable: true
         warningCode:
-          $ref: "#/components/schemas/WarningCode"
+          type: string
+          nullable: true
         informationCode:
           $ref: "#/components/schemas/InformationCode"
       additionalProperties: false
-    WarningCode:
-      enum:
-        - "11"
-        - "12"
-        - "13"
-        - "18"
-        - "19"
-        - "20"
-        - "24"
-        - DRVnn
-      type: string
-      description: "A code to indicate the different types of errors.<br />11: Weight
-        Note suffix is not numeric or has been omitted.<br />12: Number of bales
-        is invalid or has been omitted.<br />13: Sale identification has been
-        omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br
-        />20: Invalid Centre/Client code on pre-sale test request.<br />24:
-        Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk
-        error where nn is the field number in error."
     InformationCode:
       enum:
         - OK

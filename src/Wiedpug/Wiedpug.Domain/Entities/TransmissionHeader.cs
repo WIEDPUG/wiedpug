@@ -35,11 +35,13 @@ namespace Wiedpug.Domain.Entities
         public required Organisation CurrentReceiver { get; set; }
 
         /// <summary>
-        /// The version number of the WIEDPUG Handbook that the transmission relates to
-        /// Two digits. e.g. 99
+        /// The full version number of API that the transmission relates to.
+        /// 
+        /// It uses Semantic Versioning. https://semver.org/
+        /// 
+        /// The format is MAJOR.MINOR.PATCH. e.g. 1.10.2
         /// </summary>
-        [Range(-99,99)]
-        public int? VersionNumber { get; set; }
+        public string? VersionNumber { get; set; }
 
         [MinLength(1)]
         [MaxLength(9)]

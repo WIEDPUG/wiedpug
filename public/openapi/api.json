@@ -47,7 +47,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -311,7 +311,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -675,7 +675,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -1040,7 +1040,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -1092,7 +1092,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 8,
                           "softwareVersion": 1082,
@@ -1317,7 +1317,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -1433,7 +1433,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -1609,7 +1609,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -1649,7 +1649,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 8,
                           "softwareVersion": 1082,
@@ -1710,7 +1710,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -1841,7 +1841,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -2084,7 +2084,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -2124,7 +2124,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -2249,7 +2249,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -2535,7 +2535,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -2758,7 +2758,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -3072,7 +3072,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -3112,7 +3112,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -3311,7 +3311,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -3442,7 +3442,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -3641,7 +3641,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -3693,7 +3693,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -3777,7 +3777,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -3903,7 +3903,7 @@
                   "currentReceiver": {
                     "organisationCode": "ATW"
                   },
-                  "versionNumber": 31,
+                  "versionNumber": "1.10.1",
                   "softwareIdentifier": {
                     "softwareCompany": 8,
                     "softwareVersion": 1082,
@@ -3950,7 +3950,7 @@
                       "currentReceiver": {
                         "organisationCode": "ATW"
                       },
-                      "versionNumber": 31,
+                      "versionNumber": "1.10.1",
                       "softwareIdentifier": {
                         "softwareCompany": 6,
                         "softwareVersion": 1082,
@@ -4081,7 +4081,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -4720,7 +4720,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -4931,7 +4931,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -4971,7 +4971,7 @@
                         "currentReceiver": {
                           "organisationCode": "MNC"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -5064,7 +5064,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -5195,7 +5195,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -5368,7 +5368,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -5408,7 +5408,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATC"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -5466,7 +5466,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -5597,7 +5597,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -5770,7 +5770,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -5810,7 +5810,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -5867,7 +5867,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -6010,7 +6010,7 @@
                     "softwareIdentifier": {
                       "softwareCompany": "8"
                     },
-                    "versionNumber": 37
+                    "versionNumber": "1.10.17"
                   },
                   "transferConfig": {
                     "finalReceiverList": [
@@ -6355,7 +6355,7 @@
                     "softwareIdentifier": {
                       "softwareCompany": "8"
                     },
-                    "versionNumber": 37
+                    "versionNumber": "1.10.17"
                   },
                   "transferConfig": {
                     "finalReceiverList": [
@@ -6490,7 +6490,7 @@
                     "softwareIdentifier": {
                       "softwareCompany": "8"
                     },
-                    "versionNumber": 37
+                    "versionNumber": "1.10.17"
                   },
                   "transferConfig": {
                     "finalReceiverList": [
@@ -7027,7 +7027,7 @@
                     "softwareIdentifier": {
                       "softwareCompany": "8"
                     },
-                    "versionNumber": 37
+                    "versionNumber": "1.10.17"
                   },
                   "transferConfig": {
                     "finalReceiverList": [
@@ -7423,7 +7423,7 @@
                         "centreCode": "M"
                       }
                     },
-                    "versionNumber": 37,
+                    "versionNumber": "1.10.17",
                     "abn": 0
                   },
                   "requestForDataType": {
@@ -7595,7 +7595,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -7718,7 +7718,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATT"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -7955,7 +7955,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -7995,7 +7995,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATT"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -8117,7 +8117,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -8248,7 +8248,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -8440,7 +8440,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -8480,7 +8480,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -8557,7 +8557,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -8687,7 +8687,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -9036,7 +9036,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -9076,7 +9076,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -9310,7 +9310,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -9441,7 +9441,7 @@
                     "currentReceiver": {
                       "organisationCode": "BCA"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -9766,7 +9766,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -9806,7 +9806,7 @@
                         "currentReceiver": {
                           "organisationCode": "BCA"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 8,
                           "softwareVersion": 1082,
@@ -10016,7 +10016,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -10147,7 +10147,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -10323,7 +10323,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -10363,7 +10363,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 8,
                           "softwareVersion": 1082,
@@ -10424,7 +10424,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -10555,7 +10555,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 1,
                       "softwareVersion": 1082,
@@ -10702,7 +10702,7 @@
                     "currentReceiver": {
                       "organisationCode": "ATW"
                     },
-                    "versionNumber": 31,
+                    "versionNumber": "1.10.1",
                     "softwareIdentifier": {
                       "softwareCompany": 8,
                       "softwareVersion": 1082,
@@ -10742,7 +10742,7 @@
                         "currentReceiver": {
                           "organisationCode": "ATW"
                         },
-                        "versionNumber": 31,
+                        "versionNumber": "1.10.1",
                         "softwareIdentifier": {
                           "softwareCompany": 1,
                           "softwareVersion": 1082,
@@ -10771,7 +10771,7 @@
                 "example": {
                   "apiMessages": [
                     {
-                      "message": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
+                      "warningMessage": "Resason:  You have requested data but there is nothing available.\nAction: If you have requested private data, wait until more data is received by the network and try again.  If your data should be there, check with the Network Administrator. If you have requested broadcast data, either this is not yet available, or you have incorrectly specified the sale number, broker etc. in the RequestForData. Check this and try again later."
                     }
                   ]
                 }
@@ -11059,12 +11059,14 @@
       "ApiMessage": {
         "type": "object",
         "properties": {
-          "message": {
+          "warningMessage": {
             "type": "string",
+            "description": "A code to indicate the different types of errors.\r\n\r\n11: Weight Note suffix is not numeric or has been omitted.\r\n\r\n12: Number of bales is invalid or has been omitted.\r\n\r\n13: Sale identification has been omitted.\r\n\r\n18: Invalid Gross weight.\r\n\r\n19: Invalid Tare weight.\r\n\r\n20: Invalid Centre/Client code on pre-sale test request.\r\n\r\n24: Incorrect PCTR Hash total.\r\n\r\nDRV: Dark and Medullated Fibre Risk error.",
             "nullable": true
           },
           "warningCode": {
-            "$ref": "#/components/schemas/WarningCode"
+            "type": "string",
+            "nullable": true
           },
           "informationCode": {
             "$ref": "#/components/schemas/InformationCode"
@@ -13588,8 +13590,8 @@
             "$ref": "#/components/schemas/LiteralDate"
           },
           "factorLaserscanNumerator": {
-            "maximum": 9999999999.999998,
-            "minimum": -9999999999.999998,
+            "maximum": 999999999.999999,
+            "minimum": -999999999.999999,
             "type": "number",
             "description": "Factor used in numerator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator",
             "format": "double",
@@ -16738,11 +16740,8 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "versionNumber": {
-            "maximum": 99,
-            "minimum": -99,
-            "type": "integer",
-            "description": "The version number of the WIEDPUG Handbook that the transmission relates to\r\nTwo digits. e.g. 99",
-            "format": "int32",
+            "type": "string",
+            "description": "The full version number of API that the transmission relates to.\r\n\r\nIt uses Semantic Versioning. https://semver.org/\r\n\r\nThe format is MAJOR.MINOR.PATCH. e.g. 1.10.2",
             "nullable": true
           },
           "softwareIdentifier": {
@@ -16785,20 +16784,6 @@
         "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
         "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
         "example": "2024-03-21T19:25:04+00:00.000Z"
-      },
-      "WarningCode": {
-        "enum": [
-          "11",
-          "12",
-          "13",
-          "18",
-          "19",
-          "20",
-          "24",
-          "DRVnn"
-        ],
-        "type": "string",
-        "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
       },
       "Weight": {
         "required": [

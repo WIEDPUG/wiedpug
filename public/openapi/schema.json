@@ -200,12 +200,14 @@
       "ApiMessage": {
         "type": "object",
         "properties": {
-          "message": {
+          "warningMessage": {
             "type": "string",
+            "description": "A code to indicate the different types of errors.\r\n\r\n11: Weight Note suffix is not numeric or has been omitted.\r\n\r\n12: Number of bales is invalid or has been omitted.\r\n\r\n13: Sale identification has been omitted.\r\n\r\n18: Invalid Gross weight.\r\n\r\n19: Invalid Tare weight.\r\n\r\n20: Invalid Centre/Client code on pre-sale test request.\r\n\r\n24: Incorrect PCTR Hash total.\r\n\r\nDRV: Dark and Medullated Fibre Risk error.",
             "nullable": true
           },
           "warningCode": {
-            "$ref": "#/components/schemas/WarningCode"
+            "type": "string",
+            "nullable": true
           },
           "informationCode": {
             "$ref": "#/components/schemas/InformationCode"
@@ -2729,8 +2731,8 @@
             "$ref": "#/components/schemas/LiteralDate"
           },
           "factorLaserscanNumerator": {
-            "maximum": 9999999999.999998,
-            "minimum": -9999999999.999998,
+            "maximum": 999999999.999999,
+            "minimum": -999999999.999999,
             "type": "number",
             "description": "Factor used in numerator to calculate Laserscan Mean Laserscan Mean = Factor Laserscan Numerator/Factor Laserscan Denominator",
             "format": "double",
@@ -5879,11 +5881,8 @@
             "$ref": "#/components/schemas/Organisation"
           },
           "versionNumber": {
-            "maximum": 99,
-            "minimum": -99,
-            "type": "integer",
-            "description": "The version number of the WIEDPUG Handbook that the transmission relates to\r\nTwo digits. e.g. 99",
-            "format": "int32",
+            "type": "string",
+            "description": "The full version number of API that the transmission relates to.\r\n\r\nIt uses Semantic Versioning. https://semver.org/\r\n\r\nThe format is MAJOR.MINOR.PATCH. e.g. 1.10.2",
             "nullable": true
           },
           "softwareIdentifier": {
@@ -5926,20 +5925,6 @@
         "description": "Date and Time value in ISO 8601 standard UTC datetime format. e.g. 2024-03-21T19:25:04+00:00.000Z",
         "format": "((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)Z$",
         "example": "2024-03-21T19:25:04+00:00.000Z"
-      },
-      "WarningCode": {
-        "enum": [
-          "11",
-          "12",
-          "13",
-          "18",
-          "19",
-          "20",
-          "24",
-          "DRVnn"
-        ],
-        "type": "string",
-        "description": "A code to indicate the different types of errors.<br />11: Weight Note suffix is not numeric or has been omitted.<br />12: Number of bales is invalid or has been omitted.<br />13: Sale identification has been omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br />20: Invalid Centre/Client code on pre-sale test request.<br />24: Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk error where nn is the field number in error."
       },
       "Weight": {
         "required": [

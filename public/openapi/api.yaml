@@ -39,7 +39,7 @@ paths:
                         organisationCode: AAT
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -229,7 +229,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -490,7 +490,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -749,7 +749,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -786,7 +786,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 8
                         softwareVersion: 1082
@@ -953,7 +953,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -1034,7 +1034,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -1157,7 +1157,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -1185,7 +1185,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 8
                         softwareVersion: 1082
@@ -1230,7 +1230,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -1320,7 +1320,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -1478,7 +1478,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -1506,7 +1506,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -1584,7 +1584,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -1785,7 +1785,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -1934,7 +1934,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -2147,7 +2147,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -2175,7 +2175,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -2310,7 +2310,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -2400,7 +2400,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -2534,7 +2534,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -2571,7 +2571,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -2627,7 +2627,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -2714,7 +2714,7 @@ paths:
                   organisationCode: ABC
                 currentReceiver:
                   organisationCode: ATW
-                versionNumber: 31
+                versionNumber: 1.10.1
                 softwareIdentifier:
                   softwareCompany: 8
                   softwareVersion: 1082
@@ -2750,7 +2750,7 @@ paths:
                       organisationCode: ABC
                     currentReceiver:
                       organisationCode: ATW
-                    versionNumber: 31
+                    versionNumber: 1.10.1
                     softwareIdentifier:
                       softwareCompany: 6
                       softwareVersion: 1082
@@ -2836,7 +2836,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -3262,7 +3262,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -3403,7 +3403,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -3431,7 +3431,7 @@ paths:
                         organisationCode: AWT
                       currentReceiver:
                         organisationCode: MNC
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -3492,7 +3492,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -3582,7 +3582,7 @@ paths:
                     organisationCode: ATW
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -3697,7 +3697,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -3725,7 +3725,7 @@ paths:
                         organisationCode: ATW
                       currentReceiver:
                         organisationCode: ATC
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -3762,7 +3762,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -3852,7 +3852,7 @@ paths:
                     organisationCode: ATW
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -3967,7 +3967,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -3996,7 +3996,7 @@ paths:
                         organisationCode: AWT
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -4034,7 +4034,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -4133,7 +4133,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: AAA
@@ -4376,7 +4376,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: BBB
@@ -4462,7 +4462,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: CCC
@@ -4849,7 +4849,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: DDD
@@ -5119,7 +5119,7 @@ paths:
                     centre:
                       countryCode: AU
                       centreCode: M
-                  versionNumber: 37
+                  versionNumber: 1.10.17
                   abn: 0
                 requestForDataType:
                   isUsingNetworkDateTime: true
@@ -5229,7 +5229,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -5313,7 +5313,7 @@ paths:
                     organisationCode: ATC
                   currentReceiver:
                     organisationCode: ATT
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -5476,7 +5476,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -5504,7 +5504,7 @@ paths:
                         organisationCode: ATC
                       currentReceiver:
                         organisationCode: ATT
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -5589,7 +5589,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -5680,7 +5680,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -5812,7 +5812,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -5840,7 +5840,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -5894,7 +5894,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -5983,7 +5983,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -6224,7 +6224,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -6252,7 +6252,7 @@ paths:
                         organisationCode: ATW
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -6415,7 +6415,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -6506,7 +6506,7 @@ paths:
                     organisationCode: AWT
                   currentReceiver:
                     organisationCode: BCA
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -6755,7 +6755,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -6783,7 +6783,7 @@ paths:
                         organisationCode: AWT
                       currentReceiver:
                         organisationCode: BCA
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 8
                         softwareVersion: 1082
@@ -6954,7 +6954,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -7044,7 +7044,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -7164,7 +7164,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -7192,7 +7192,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 8
                         softwareVersion: 1082
@@ -7234,7 +7234,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -7324,7 +7324,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 1
                     softwareVersion: 1082
@@ -7420,7 +7420,7 @@ paths:
                     organisationCode: ABC
                   currentReceiver:
                     organisationCode: ATW
-                  versionNumber: 31
+                  versionNumber: 1.10.1
                   softwareIdentifier:
                     softwareCompany: 8
                     softwareVersion: 1082
@@ -7448,7 +7448,7 @@ paths:
                         organisationCode: ABC
                       currentReceiver:
                         organisationCode: ATW
-                      versionNumber: 31
+                      versionNumber: 1.10.1
                       softwareIdentifier:
                         softwareCompany: 1
                         softwareVersion: 1082
@@ -7464,7 +7464,7 @@ paths:
                 $ref: "#/components/schemas/ApiResult"
               example:
                 apiMessages:
-                  - message: >-
+                  - warningMessage: >-
                       Resason:  You have requested data but there is nothing
                       available.
 
@@ -7722,11 +7722,47 @@ components:
     ApiMessage:
       type: object
       properties:
-        message:
+        warningMessage:
           type: string
+          description: "A code to indicate the different types of errors.\r
+
+            \r
+
+            11: Weight Note suffix is not numeric or has been
+            omitted.\r
+
+            \r
+
+            12: Number of bales is invalid or has been omitted.\r
+
+            \r
+
+            13: Sale identification has been omitted.\r
+
+            \r
+
+            18: Invalid Gross weight.\r
+
+            \r
+
+            19: Invalid Tare weight.\r
+
+            \r
+
+            20: Invalid Centre/Client code on pre-sale test
+            request.\r
+
+            \r
+
+            24: Incorrect PCTR Hash total.\r
+
+            \r
+
+            DRV: Dark and Medullated Fibre Risk error."
           nullable: true
         warningCode:
-          $ref: "#/components/schemas/WarningCode"
+          type: string
+          nullable: true
         informationCode:
           $ref: "#/components/schemas/InformationCode"
       additionalProperties: false
@@ -10601,8 +10637,8 @@ components:
         dateIssued:
           $ref: "#/components/schemas/LiteralDate"
         factorLaserscanNumerator:
-          maximum: 9999999999.999998
-          minimum: -9999999999.999998
+          maximum: 999999999.999999
+          minimum: -999999999.999999
           type: number
           description: Factor used in numerator to calculate Laserscan Mean Laserscan Mean
             = Factor Laserscan Numerator/Factor Laserscan Denominator
@@ -13959,14 +13995,16 @@ components:
         currentReceiver:
           $ref: "#/components/schemas/Organisation"
         versionNumber:
-          maximum: 99
-          minimum: -99
-          type: integer
-          description: "The version number of the WIEDPUG Handbook that the transmission
-            relates to\r
+          type: string
+          description: "The full version number of API that the transmission relates to.\r
 
-            Two digits. e.g. 99"
-          format: int32
+            \r
+
+            It uses Semantic Versioning. https://semver.org/\r
+
+            \r
+
+            The format is MAJOR.MINOR.PATCH. e.g. 1.10.2"
           nullable: true
         softwareIdentifier:
           $ref: "#/components/schemas/SoftwareIdentifier"
@@ -14009,24 +14047,6 @@ components:
         2024-03-21T19:25:04+00:00.000Z
       format: ((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])T([01]\d|2[0-3]):([0-5]\d):([0-5]\d)Z$
       example: 2024-03-21T19:25:04+00:00.000Z
-    WarningCode:
-      enum:
-        - "11"
-        - "12"
-        - "13"
-        - "18"
-        - "19"
-        - "20"
-        - "24"
-        - DRVnn
-      type: string
-      description: "A code to indicate the different types of errors.<br />11: Weight
-        Note suffix is not numeric or has been omitted.<br />12: Number of bales
-        is invalid or has been omitted.<br />13: Sale identification has been
-        omitted.<br />18: Invalid Gross weight.<br />19: Invalid Tare weight.<br
-        />20: Invalid Centre/Client code on pre-sale test request.<br />24:
-        Incorrect PCTR Hash total.<br />DRVnn: Dark and Medullated Fibre Risk
-        error where nn is the field number in error."
     Weight:
       required:
         - value

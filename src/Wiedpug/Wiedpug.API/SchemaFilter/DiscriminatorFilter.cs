@@ -104,19 +104,7 @@ public class DiscriminatorFilter : ISchemaFilter
                     schema.Properties.Remove(property);
                 }
             }
-        }
-
-        if (context.MemberInfo != null && context.MemberInfo.Name == "FactorLaserscanNumerator")
-
-        {
-            // Add minimum and maximum constraints for the property "factorLaserscanNumerator"
-
-            schema.Minimum = (decimal?)-9999999999.999999M;
-
-            schema.Maximum = (decimal?)9999999999.999999M;
-
-        }
- 
+        } 
 
     }
 }
