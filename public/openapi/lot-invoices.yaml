@@ -3070,6 +3070,9 @@ components:
       properties:
         warningMessage:
           type: string
+          nullable: true
+        warningCode:
+          type: string
           description: "A code to indicate the different types of errors.\r
 
             \r
@@ -3105,9 +3108,6 @@ components:
             \r
 
             DRV: Dark and Medullated Fibre Risk error."
-          nullable: true
-        warningCode:
-          type: string
           nullable: true
         informationCode:
           $ref: "#/components/schemas/InformationCode"

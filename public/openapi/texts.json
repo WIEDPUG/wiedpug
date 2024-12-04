@@ -845,11 +845,11 @@
         "properties": {
           "warningMessage": {
             "type": "string",
-            "description": "A code to indicate the different types of errors.\r\n\r\n11: Weight Note suffix is not numeric or has been omitted.\r\n\r\n12: Number of bales is invalid or has been omitted.\r\n\r\n13: Sale identification has been omitted.\r\n\r\n18: Invalid Gross weight.\r\n\r\n19: Invalid Tare weight.\r\n\r\n20: Invalid Centre/Client code on pre-sale test request.\r\n\r\n24: Incorrect PCTR Hash total.\r\n\r\nDRV: Dark and Medullated Fibre Risk error.",
             "nullable": true
           },
           "warningCode": {
             "type": "string",
+            "description": "A code to indicate the different types of errors.\r\n\r\n11: Weight Note suffix is not numeric or has been omitted.\r\n\r\n12: Number of bales is invalid or has been omitted.\r\n\r\n13: Sale identification has been omitted.\r\n\r\n18: Invalid Gross weight.\r\n\r\n19: Invalid Tare weight.\r\n\r\n20: Invalid Centre/Client code on pre-sale test request.\r\n\r\n24: Incorrect PCTR Hash total.\r\n\r\nDRV: Dark and Medullated Fibre Risk error.",
             "nullable": true
           },
           "informationCode": {

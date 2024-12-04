@@ -8,6 +8,8 @@ namespace Wiedpug.API.Model
 
     public class ApiMessage
     {
+        public string? WarningMessage { get; set; }
+
         /// <summary>
         /// A code to indicate the different types of errors.
         /// 
@@ -27,8 +29,6 @@ namespace Wiedpug.API.Model
         /// 
         /// DRV: Dark and Medullated Fibre Risk error.
         /// </summary>
-        public string? WarningMessage { get; set; }
-
         public string? WarningCode { get; set; }
 
         public InformationCode? InformationCode { get; set; }
