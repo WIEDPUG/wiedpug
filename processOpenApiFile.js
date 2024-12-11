@@ -22,6 +22,9 @@ const processOpenApiFile = () => {
     // Load the OpenAPI specification
     const openApiSpec = loadOpenApiSpec(inputFile);
 
+    // replace data example
+    updateExamplesInSpec(openApiSpec)
+
     // Update enum values
     updateEnumValues(openApiSpec);
     console.log(`Enum values like "_23" are converted to "23".`);
@@ -64,6 +67,99 @@ const saveApiToYaml= () => {
     const yamlData = YAML.stringify(openApiSpec, { indent: 2 });
     fs.writeFileSync(`${filePath}.yaml`, yamlData, 'utf8');  
 }
+
+/**
+ * 
+ * Parse example file names and update OpenAPI spec.
+ * It replace the value of "example" under the matched request/response in the openapi file.
+ * The example is under the /public/openpai/data-example folder. 
+ * The file name should match this pattern:  {base_endpoint}.{sub_endpoint}-{httpMethod}-{request-or-response}-{status-code}.json
+ * The file name should be all in lower case.
+ * 
+ * Examples:
+ * 
+ * keys.{id}_delete_response_200.json               --> DELETE /keys/{id} response 200 example
+ * organisation-details.{id}_get_request.json       --> GET /organisation-details/{id} request example
+ * organisation-details.{id}_get_response_200.json  --> GET /organisation-details/{id} response 200 example
+ * organisation-details.data_post_request.json      --> POST /organisation-details/data request example
+ * organisation-details.data_post_response_200.json --> POST /organisation-details/data response 200 example
+ * organisation-details.data_post_response_400.json --> POST /organisation-details/data response 400 example
+ * organisation-details.{id}_put_request.json       --> PUT /organisation-details/{id} request example
+ * organisation-details.{id}_put_response_200.json  --> PUT /organisation-details/{id} response 200 example
+ * statements_post_request.json                     --> POST /statments request example
+ * statements_post_response_200.json                --> POST /statments response 200 example
+ * statements.data_post_request.json                --> POST /statments/data request example
+ * statements.data_post_response_400.json           --> POST /statments/data response 400 example
+ */
+const updateExamplesInSpec = (openApiSpec) => {
+    const examplesFolder = "./public/openapi/data-example"
+    console.log("Starting replace example data. Fetching files from data-exapmle folder...")
+    // Extract the version prefix from the paths in the OpenAPI spec
+    const versionPrefix = Object.keys(openApiSpec.paths)[0].match(/^\/(v[0-9]+)/)?.[1];
+    if (!versionPrefix) {
+        console.error('Error: Could not extract version number from OpenAPI file.');
+        return;
+    }
+ 
+    console.log(`Using version prefix: ${versionPrefix}`);
+ 
+    // Read all example files in the data-example folder
+    const files = fs.readdirSync(examplesFolder);
+ 
+    files.forEach((file) => {
+        if (!file.endsWith('.json')) return; // Skip non-JSON files
+ 
+        const filePath = path.join(examplesFolder, file);
+        const exampleData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+ 
+        // Parse file name: {base_endpoint}.{sub_endpoint}-{httpMethod}-{section-type}-{status-code}.json
+        const parts = file.toLowerCase().replace('.json', '').split('_');
+        if (parts.length < 3) {
+            console.warn(`Invalid file name format: ${file}`);
+            return;
+        }
+ 
+        const endpointName = parts[0]; // Extract the endpoint
+        const httpMethod = parts[1]; // Extract the HTTP method (post/get)
+        const sectionType = parts[2]; // request, response, etc.
+ 
+        const endpointPath = `/${versionPrefix}/${endpointName.replace(/\./g, '/')}`;
+ 
+        // Ensure the HTTP method exists in the OpenAPI spec for the endpoint
+        const methodSpec = openApiSpec.paths[endpointPath]?.[httpMethod];
+        if (!methodSpec) {
+            console.warn(`Warn: No method ${httpMethod.toUpperCase()} found for endpoint: ${endpointPath}`);
+            return;
+        }
+ 
+        if (sectionType === 'request') {
+            // Update the requestBody example
+            if (
+                methodSpec.requestBody &&
+                methodSpec.requestBody.content['application/json']
+            ) {
+                methodSpec.requestBody.content['application/json'].example = exampleData;
+                console.log(`Updated request example for endpoint: ${endpointPath}, method: ${httpMethod.toUpperCase()}`);
+            }
+        } else if (sectionType === 'response') {
+            const statusCode = parts[3]; // HTTP status code for response files
+            // Update the response examples
+            if (methodSpec.responses[statusCode]) {
+                const response = statusCode === '200'? methodSpec.responses[statusCode].content?.['application/json']: methodSpec.responses[statusCode].content?.['application/problem+json'];
+                if (response) {
+                    response.example = exampleData;
+                    console.log(`Updated ${statusCode} response example for endpoint: ${endpointPath}, method: ${httpMethod.toUpperCase()}`);
+                } else {
+                    console.warn(`Warn: No JSON response content found for ${statusCode} on ${endpointPath}`);
+                }
+            } else {
+                console.warn(`Warn: No response defined for status code ${statusCode} on ${endpointPath}`);
+            }
+        } else {
+            console.warn(`Warn: Unknown section type in file name: ${file}`);
+        }
+    });
+};
 
 
 /**

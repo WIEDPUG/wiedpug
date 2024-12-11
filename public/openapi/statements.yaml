@@ -44,7 +44,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 1.10.17
+                  versionNumber: 37
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: AAA
@@ -287,7 +287,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 1.10.17
+                  versionNumber: 37
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: BBB
@@ -373,7 +373,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 1.10.17
+                  versionNumber: 37
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: CCC
@@ -760,7 +760,7 @@ paths:
                       centreCode: M
                   softwareIdentifier:
                     softwareCompany: "8"
-                  versionNumber: 1.10.17
+                  versionNumber: 37
                 transferConfig:
                   finalReceiverList:
                     - organisationCode: DDD
@@ -1030,7 +1030,7 @@ paths:
                     centre:
                       countryCode: AU
                       centreCode: M
-                  versionNumber: 1.10.17
+                  versionNumber: 37
                   abn: 0
                 requestForDataType:
                   isUsingNetworkDateTime: true
@@ -1045,93 +1045,243 @@ paths:
                 items:
                   $ref: "#/components/schemas/StatementsListApiResult"
               example:
-                apiMessages: []
-                data:
-                  - transmissionHeader:
-                      dateFormatLastRevised: 2020-07-15
-                      dateTransmissionFileCreated: 2016-01-17
-                      countryOfOrigin: AU
-                      documentOriginator:
-                        organisationCode: ATC
-                      currentReceiver:
-                        organisationCode: ATT
-                      versionNumber: 31
-                      softwareIdentifier:
-                        softwareCompany: 1
-                        softwareVersion: 1082
-                        programName: NETR
-                      abn: 72001967184
-                    statementHeader:
-                      client:
-                        organisationCode: ATT
-                      clientCode: 345678
-                      statementDate: 2024-03-21
-                      openingBalances:
-                        - balanceType: Current
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 234.54
+                - data:
+                    - transmissionHeader:
+                        abn: 43006014106
+                        countryOfOrigin: AU
+                        currentReceiver:
+                          organisationCode: AAA
+                          centre:
+                            countryCode: AU
+                            centreCode: S
+                        dateFormatLastRevised: 2024-08-05
+                        dateTransmissionFileCreated: 2024-09-16
+                        documentOriginator:
+                          organisationCode: AWT
+                          centre:
+                            countryCode: AU
+                            centreCode: M
+                        softwareIdentifier:
+                          softwareCompany: 8
+                        versionNumber: 37
+                      statementHeader:
+                        client:
+                          organisationCode: AAA
+                          centre:
+                            countryCode: AU
+                            centreCode: S
+                        clientCode: 59999
+                        openingBalances:
+                          - balanceType: Current
+                            balanceValue:
+                              value: 0
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: Thirty
+                            balanceValue:
+                              value: 9978.17
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: Sixty
+                            balanceValue:
+                              value: 0
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: Ninety
+                            balanceValue:
+                              value: 0
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: NinetyPlus
+                            balanceValue:
+                              value: 904.87
+                              currencyCode: AUD
+                            debitOrCreditType: CR
+                        statementDate: 2024-09-15
+                      statementDetails:
+                        - accountReference: C99972
+                          amount:
+                            value: 2750
                             currencyCode: AUD
-                        - balanceType: Thirty
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 365.5
+                          amountType: 0
+                          clientsReference: XXXXXXXXXX Dockets - XXXXX
+                          gstAmount:
+                            value: 250
                             currencyCode: AUD
-                        - balanceType: Sixty
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 566.78
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-02
+                        - accountReference: 399997226B1
+                          amount:
+                            value: 67.16
                             currencyCode: AUD
-                        - balanceType: Ninety
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 234.34
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/AAAA
+                          gstAmount:
+                            value: 6.11
                             currencyCode: AUD
-                        - balanceType: NinetyPlus
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 500.34
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997803B7
+                          amount:
+                            value: 67.16
                             currencyCode: AUD
-                    statementDetails:
-                      - clientsReference: "1234567890"
-                        accountReference: AWTA LED REFERENCE
-                        amount:
-                          value: 866.3
-                          currencyCode: AUD
-                        amountType: 0
-                        itemDate: 2024-04-23
-                        gstAmount:
-                          value: 134.3
-                          currencyCode: AUD
-                        isGstApplicable: true
-                        isCompanyAbnApplicable: true
-                    statementTrailer:
-                      closingBalances:
-                        - balanceType: Current
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 234.54
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/EXSUPAA
+                          gstAmount:
+                            value: 6.11
                             currencyCode: AUD
-                        - balanceType: Thirty
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 365.5
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997804L5
+                          amount:
+                            value: 38.06
                             currencyCode: AUD
-                        - balanceType: Sixty
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 566.78
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/EXSUPAA
+                          gstAmount:
+                            value: 3.46
                             currencyCode: AUD
-                        - balanceType: Ninety
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 234.34
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997805B2
+                          amount:
+                            value: 66.22
                             currencyCode: AUD
-                        - balanceType: NinetyPlus
-                          debitOrCreditType: DR
-                          balanceValue:
-                            value: 500.34
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/SUPAAAA
+                          gstAmount:
+                            value: 6.02
                             currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997806L0
+                          amount:
+                            value: 38.06
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/SUPAAAA
+                          gstAmount:
+                            value: 3.46
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997807L8
+                          amount:
+                            value: 38.06
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/AAAA
+                          gstAmount:
+                            value: 3.46
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997808B6
+                          amount:
+                            value: 61.82
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/AAAXB
+                          gstAmount:
+                            value: 5.62
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997809L4
+                          amount:
+                            value: 32.45
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/AAAXB
+                          gstAmount:
+                            value: 2.95
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399997810B2
+                          amount:
+                            value: 66.22
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/C/L
+                          gstAmount:
+                            value: 6.02
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399998178B3
+                          amount:
+                            value: 61.82
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/STN
+                          gstAmount:
+                            value: 5.62
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-10
+                        - accountReference: 399990294B4
+                          amount:
+                            value: 69.03
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/SUP P/B
+                          gstAmount:
+                            value: 6.28
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-11
+                        - accountReference: 399990295L1
+                          amount:
+                            value: 38.06
+                            currencyCode: AUD
+                          amountType: 0
+                          clientsReference: XXXXXXXXXXXXXX/SUP P/B
+                          gstAmount:
+                            value: 3.46
+                            currencyCode: AUD
+                          isCompanyAbnApplicable: true
+                          isGstApplicable: true
+                          itemDate: 2024-09-11
+                      statementTrailer:
+                        closingBalances:
+                          - balanceType: Current
+                            balanceValue:
+                              value: 3394.12
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: Thirty
+                            balanceValue:
+                              value: 9978.17
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: Sixty
+                            balanceValue:
+                              value: 0
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: Ninety
+                            balanceValue:
+                              value: 0
+                              currencyCode: AUD
+                            debitOrCreditType: DR
+                          - balanceType: NinetyPlus
+                            balanceValue:
+                              value: 904.87
+                              currencyCode: AUD
+                            debitOrCreditType: CR
         "204":
           description: No Content
           content:
@@ -1152,7 +1302,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/ApiErrorResult"
               example:
-                type: https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1
                 title: Error
                 status: 400
                 detail: Validation error
