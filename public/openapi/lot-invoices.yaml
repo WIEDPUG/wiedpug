@@ -1095,8 +1095,7 @@ components:
 
         \r
 
-        Only used for data retrieval. Do not include it in the
-        response."
+        Only used in the request. Do not include it in the response."
     TransferType:
       enum:
         - Unrestrict

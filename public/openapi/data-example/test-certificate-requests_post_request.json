@@ -1,0 +1,764 @@
+[
+    {
+        "transmissionHeader": {
+            "dateFormatLastRevised": "2024-08-05",
+            "dateTransmissionFileCreated": "2024-12-09",
+            "countryOfOrigin": "AU",
+            "documentOriginator": {
+                "organisationCode": "ABC",
+                "centre": {
+                    "countryCode": "AU",
+                    "centreCode": "M"
+                }
+            },
+            "currentReceiver": {
+                "organisationCode": "AWT",
+                "centre": {
+                    "countryCode": "AU",
+                    "centreCode": "M"
+                }
+            },
+            "versionNumber": "1.0.0",
+            "softwareIdentifier": {
+                "programName": "XXXX",
+                "softwareCompany": 1,
+                "softwareVersion": 913
+            },
+            "abn": 67155215053
+        },
+        "testCertificateRequestDetails": [
+            {
+                "certificateRequest": {
+                    "additionalPrintRequirements": 0,
+                    "autoAdditionalMeasurementRequired": "N",
+                    "certificateReference": "XXX1234                       ",
+                    "certificateType": "J",
+                    "clientCrossReference": "XXX1234 ",
+                    "combinationRequest": "N",
+                    "isCommitRequired": false,
+                    "isPrintingTeam3Hauteur": false,
+                    "numberOfBales": 97,
+                    "printFlag": "Normal",
+                    "printRequirements": 0,
+                    "season": 23,
+                    "yieldType1": 4,
+                    "yieldType2": 8,
+                    "certificateRequestDetails": [
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15969534,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 63.16
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15998357,
+                                "certificateIdCd": 0,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 61.52
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16022762,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 61.43
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15847634,
+                                "certificateIdCd": 5,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 68.75
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15969461,
+                                "certificateIdCd": 5,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 63.66
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15923844,
+                                "certificateIdCd": 7,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 58.78
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15977116,
+                                "certificateIdCd": 5,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 64.24
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15992569,
+                                "certificateIdCd": 6,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 62.85
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15992410,
+                                "certificateIdCd": 3,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 61.87
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15990809,
+                                "certificateIdCd": 8,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 63.77
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15990390,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 57.9
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15998263,
+                                "certificateIdCd": 0,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 65.7
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16040099,
+                                "certificateIdCd": 4,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 67.36
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16068937,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 62.33
+                        }
+                    ]
+                }
+            },
+            {
+                "certificateRequest": {
+                    "additionalPrintRequirements": 0,
+                    "autoAdditionalMeasurementRequired": "N",
+                    "certificateReference": "XXX1235                       ",
+                    "certificateType": "J",
+                    "clientCrossReference": "XXX1235 ",
+                    "combinationRequest": "N",
+                    "isCommitRequired": false,
+                    "isPrintingTeam3Hauteur": false,
+                    "numberOfBales": 31,
+                    "printFlag": "Normal",
+                    "printRequirements": 0,
+                    "season": 23,
+                    "yieldType1": 4,
+                    "yieldType2": 8,
+                    "certificateRequestDetails": [
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "D",
+                                "certificateIdNumber": 16113186,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 53.76
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16117073,
+                                "certificateIdCd": 7,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 55.45
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16115141,
+                                "certificateIdCd": 4,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 45.94
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16121341,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 62.47
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16115389,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 61.58
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8231001,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 47.75
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8230978,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 49.59
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8231080,
+                                "certificateIdCd": 3,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 47.53
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8083006,
+                                "certificateIdCd": 7,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 59.36
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8165383,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 54.17
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16117785,
+                                "certificateIdCd": 6,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 62.34
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16113570,
+                                "certificateIdCd": 6,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 49.43
+                        }
+                    ]
+                }
+            },
+            {
+                "certificateRequest": {
+                    "additionalPrintRequirements": 0,
+                    "autoAdditionalMeasurementRequired": "N",
+                    "certificateReference": "XXX1236                       ",
+                    "certificateType": "J",
+                    "clientCrossReference": "XXX1236 ",
+                    "combinationRequest": "N",
+                    "isCommitRequired": false,
+                    "isPrintingTeam3Hauteur": false,
+                    "numberOfBales": 62,
+                    "printFlag": "Normal",
+                    "printRequirements": 0,
+                    "season": 23,
+                    "yieldType1": 4,
+                    "yieldType2": 8,
+                    "certificateRequestDetails": [
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16122037,
+                                "certificateIdCd": 5,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 64.46
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "D",
+                                "certificateIdNumber": 16112550,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 49.23
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "D",
+                                "certificateIdNumber": 16112312,
+                                "certificateIdCd": 4,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 50.78
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8232992,
+                                "certificateIdCd": 8,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 55.11
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8230859,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 58.61
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8163610,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 56.59
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16110651,
+                                "certificateIdCd": 7,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 63.91
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16117784,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 63.12
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16115438,
+                                "certificateIdCd": 4,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 50.93
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16120039,
+                                "certificateIdCd": 3,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 60.26
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16119273,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 61.12
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16104317,
+                                "certificateIdCd": 3,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 55.93
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16115037,
+                                "certificateIdCd": 4,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 52.07
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16115585,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 56.66
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8229588,
+                                "certificateIdCd": 9,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 53.83
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8227381,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 53.7
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15949587,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 57.82
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16113072,
+                                "certificateIdCd": 3,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 62.2
+                        }
+                    ]
+                }
+            },
+            {
+                "certificateRequest": {
+                    "additionalPrintRequirements": 0,
+                    "autoAdditionalMeasurementRequired": "N",
+                    "certificateReference": "XXX1237                       ",
+                    "certificateType": "J",
+                    "clientCrossReference": "XXX1237 ",
+                    "combinationRequest": "N",
+                    "isCommitRequired": false,
+                    "isPrintingTeam3Hauteur": false,
+                    "numberOfBales": 102,
+                    "printFlag": "Normal",
+                    "printRequirements": 0,
+                    "season": 23,
+                    "yieldType1": 4,
+                    "yieldType2": 8,
+                    "certificateRequestDetails": [
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16113688,
+                                "certificateIdCd": 6,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 60.4
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16108608,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 49.33
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "D",
+                                "certificateIdNumber": 16074089,
+                                "certificateIdCd": 4,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 66.49
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8224845,
+                                "certificateIdCd": 8,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 52.9
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8225119,
+                                "certificateIdCd": 7,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 53.94
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8230437,
+                                "certificateIdCd": 6,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 57.53
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8163584,
+                                "certificateIdCd": 6,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 55.48
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8152276,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 55.61
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "B",
+                                "certificateIdNumber": 8232189,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 59.88
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16110644,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 63.13
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16115614,
+                                "certificateIdCd": 0,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 64.6
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16122510,
+                                "certificateIdCd": 1,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 62.13
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16113562,
+                                "certificateIdCd": 3,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 51.35
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8232172,
+                                "certificateIdCd": 7,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 57.84
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 8208811,
+                                "certificateIdCd": 0,
+                                "certificateIdPrefix": 6
+                            },
+                            "laboratory": 1,
+                            "woolbase": 60.49
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 15993221,
+                                "certificateIdCd": 3,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 62.6
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16114711,
+                                "certificateIdCd": 5,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 66.73
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16114543,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 66.5
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16114557,
+                                "certificateIdCd": 2,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 66.44
+                        },
+                        {
+                            "certificateIdentity": {
+                                "certificateIdSuffix": "P",
+                                "certificateIdNumber": 16116932,
+                                "certificateIdCd": 5,
+                                "certificateIdPrefix": 3
+                            },
+                            "laboratory": 1,
+                            "woolbase": 61.93
+                        }
+                    ]
+                }
+            }
+        ],
+        "transferConfig": {
+            "finalReceiverList": [
+                {
+                    "organisationCode": "AWT",
+                    "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                    }
+                }
+            ],
+            "transferType": "Restrict"
+        }
+    }
+]

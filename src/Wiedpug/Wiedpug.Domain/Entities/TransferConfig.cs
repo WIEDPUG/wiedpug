@@ -13,7 +13,7 @@ namespace Wiedpug.Domain.Entities
     /// <summary>
     /// Used to identify document transfer type: Restrict, Unrestrict, and Exclude.
     /// 
-    /// Only used for data retrieval. Do not include it in the response.
+    /// Only used in the request. Do not include it in the response.
     /// </summary>
     public class TransferConfig
     {

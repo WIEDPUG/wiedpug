@@ -1,14 +1,14 @@
 [
     {
         "transmissionHeader": {
-            "dateFormatLastRevised": "2022-07-25",
-            "dateTransmissionFileCreated": "2024-05-06",
+            "dateFormatLastRevised": "2024-08-05",
+            "dateTransmissionFileCreated": "2024-12-09",
             "countryOfOrigin": "AU",
             "documentOriginator": {
-                "organisationCode": "AAA",
+                "organisationCode": "AWT",
                 "centre": {
                     "countryCode": "AU",
-                    "centreCode": "S"
+                    "centreCode": "M"
                 }
             },
             "currentReceiver": {
@@ -19,7 +19,7 @@
                 }
             },
             "versionNumber": "1.0.0",
-            "abn": 0
+            "abn": 10000000000
         },
         "requestForDataType": {
             "isUsingNetworkDateTime": true
