@@ -19,7 +19,11 @@ namespace Wiedpug.Domain.Aggregates.AuctionCatalogueAggregate
         [MaxLength(1)]
         public required CatalogueType CatalogueType { get; set; }
 
-        public TransferConfig? TransferConfig { get; set; }
+        /// <summary>
+        /// Used to define document transfer type: unrestricted, restricted or exclusion.
+        /// </summary>
+        [Required]
+        public required TransferConfig TransferConfig { get; set; }
 
 
         [Required]

@@ -39,6 +39,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = 72001967184
                 },
+                                TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                         StatementHeader = new StatementHeader
                         {
                             Client = new Organisation
@@ -209,6 +213,10 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = 72001967184
                     },
+                                    TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                         StatementHeader = new StatementHeader
                         {
                             Client = new Organisation

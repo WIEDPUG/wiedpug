@@ -38,6 +38,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = 72001967184
                 },
+                                TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                 TestRequestsVerificationDetails = new List<TestRequestsVerificationDetail> {
                     new TestRequestsVerificationDetail
                     {
@@ -311,6 +315,10 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = 72001967184
                     },
+                                    TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                     TestRequestsVerificationDetails = new List<TestRequestsVerificationDetail> {
                         new TestRequestsVerificationDetail
                         {

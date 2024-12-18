@@ -35,116 +35,95 @@
               "example": [
                 {
                   "transmissionHeader": {
-                    "dateFormatLastRevised": "2020-07-15",
-                    "dateTransmissionFileCreated": "2016-01-17",
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
                     "countryOfOrigin": "AU",
                     "documentOriginator": {
-                      "organisationCode": "ABC"
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
                     "currentReceiver": {
-                      "organisationCode": "ATW"
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
-                    "versionNumber": "1.10.1",
+                    "versionNumber": "1.0.0",
                     "softwareIdentifier": {
-                      "softwareCompany": 1,
-                      "softwareVersion": 1082,
-                      "programName": "NETR"
+                      "softwareCompany": 8
                     },
-                    "abn": 72001967184
+                    "abn": 43006014106
                   },
                   "woolSales": [
                     {
                       "woolSaleHeaderLot": {
-                        "season": 16,
-                        "saleIdentity": {
-                          "sellingCentreType": "M",
-                          "saleNumber": 18
+                        "calculationBasis": "B",
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
                         },
                         "centreStorage": {
                           "countryCode": "AU",
-                          "centreCode": "AR"
+                          "centreCode": "F"
                         },
-                        "saleDate": "2017-01-19",
-                        "woolState": "C",
-                        "packType": "F",
-                        "postSaleCharge": {
-                          "value": 25.96,
-                          "currencyCode": "AUD"
-                        },
-                        "calculationBasis": "B",
-                        "freightCharge": {
-                          "value": 0,
-                          "currencyCode": "AUD"
-                        },
-                        "freightRebate": {
-                          "value": 3.25,
-                          "currencyCode": "AUD"
-                        },
-                        "chargePerLot": {
-                          "value": 0,
-                          "currencyCode": "AUD"
-                        },
+                        "dateStorageChargeCommences": "2024-05-06",
+                        "invoiceNumber": "60011173",
                         "invoicingOrganisation": {
-                          "organisationCode": "ABC"
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "lotAvailableDate": "2024-04-15",
+                        "packType": "0",
+                        "paymentDueDate": "2024-04-29",
+                        "postSaleCharge": {
+                          "value": 14,
+                          "currencyCode": "AUD"
                         },
                         "releasingOrganisation": {
-                          "organisationCode": "ABC"
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
                         },
+                        "saleDate": "2024-04-15",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
                         "sellingOrganisation": {
-                          "organisationCode": "ABC"
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
                         },
-                        "woolTypeGroup": "MFLC",
-                        "centreCatalogue": {
-                          "countryCode": "AU",
-                          "centreCode": "G"
-                        },
-                        "deliveryBasis": "D",
-                        "storageOrganisation": {
-                          "organisationCode": "ABC"
-                        },
-                        "storageDescription": "45 MAIN ST",
-                        "paymentDueDate": "2017-01-24",
-                        "discountRate": 1.51,
-                        "maximumDaysDiscount": 0,
-                        "dateStorageChargeCommences": "2017-01-24",
                         "storageChargePerBalePerDay": {
-                          "value": 0.245,
+                          "value": 0.1,
                           "currencyCode": "AUD"
                         },
-                        "penaltyInterestRate": 11.35
+                        "storageDescription": "BBBB LTD",
+                        "storageOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "ODDS"
                       },
                       "lotInvoiceDetails": [
                         {
-                          "lotInvoiceHeader": {
-                            "lotIdentity": "39123",
-                            "numberOfBales": 34,
-                            "gross": {
-                              "value": 23,
-                              "weightCode": "KG"
-                            },
-                            "tare": {
-                              "value": 12,
-                              "weightCode": "KG"
-                            },
-                            "costPerWeightUnit": 25,
-                            "firstCost": {
-                              "value": 12.24,
-                              "currencyCode": "AUD"
-                            },
-                            "packMaterial": "K",
-                            "gstFirstCost": {
-                              "value": 14.11,
-                              "currencyCode": "AUD"
-                            },
-                            "gstTotalPostSaleCharge": {
-                              "value": 51.8,
-                              "currencyCode": "AUD"
-                            },
-                            "totalPostSaleCharge": {
-                              "value": 0,
-                              "currencyCode": "AUD"
-                            }
-                          },
                           "lotHeaderVendorDeclarations": [
                             {
                               "mulesingStatus": "ND"
@@ -153,18 +132,17 @@
                           "bales": [
                             {
                               "baleHeader": {
-                                "brand": "FTT",
+                                "areaOfOrigin": "    ",
                                 "baleDescription": "AAC",
-                                "areaOfOrigin": "Melbourne",
-                                "locationWithinStore": "AWTA LTD"
+                                "brand": "FTT",
+                                "locationWithinStore": "BBBB LTD"
                               },
                               "baleDetails": [
                                 {
-                                  "baleNumber": "116",
                                   "baleDetailType": "GreasyOrProcessed",
-                                  "baleRenumber": "181",
+                                  "baleNumber": "  116",
                                   "gross": {
-                                    "value": 18,
+                                    "value": 181,
                                     "weightCode": "KG"
                                   },
                                   "tare": {
@@ -173,8 +151,8 @@
                                   }
                                 },
                                 {
-                                  "baleNumber": "117",
                                   "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  117",
                                   "gross": {
                                     "value": 201,
                                     "weightCode": "KG"
@@ -185,10 +163,10 @@
                                   }
                                 },
                                 {
-                                  "baleNumber": "117",
                                   "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  119",
                                   "gross": {
-                                    "value": 0.0201,
+                                    "value": 194,
                                     "weightCode": "KG"
                                   },
                                   "tare": {
@@ -197,8 +175,296 @@
                                   }
                                 },
                                 {
-                                  "baleNumber": "126",
                                   "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  120",
+                                  "gross": {
+                                    "value": 179,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  123",
+                                  "gross": {
+                                    "value": 194,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  124",
+                                  "gross": {
+                                    "value": 187,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  126",
+                                  "gross": {
+                                    "value": 179,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  129",
+                                  "gross": {
+                                    "value": 167,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  130",
+                                  "gross": {
+                                    "value": 173,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  131",
+                                  "gross": {
+                                    "value": 200,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  133",
+                                  "gross": {
+                                    "value": 180,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  135",
+                                  "gross": {
+                                    "value": 169,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  138",
+                                  "gross": {
+                                    "value": 170,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  139",
+                                  "gross": {
+                                    "value": 173,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  140",
+                                  "gross": {
+                                    "value": 199,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  141",
+                                  "gross": {
+                                    "value": 175,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  144",
+                                  "gross": {
+                                    "value": 192,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  145",
+                                  "gross": {
+                                    "value": 174,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  146",
+                                  "gross": {
+                                    "value": 192,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  148",
+                                  "gross": {
+                                    "value": 192,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  149",
+                                  "gross": {
+                                    "value": 186,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  150",
+                                  "gross": {
+                                    "value": 188,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  152",
+                                  "gross": {
+                                    "value": 191,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  154",
+                                  "gross": {
+                                    "value": 195,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  155",
+                                  "gross": {
+                                    "value": 180,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  156",
+                                  "gross": {
+                                    "value": 179,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  159",
+                                  "gross": {
+                                    "value": 187,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  160",
                                   "gross": {
                                     "value": 178,
                                     "weightCode": "KG"
@@ -209,10 +475,106 @@
                                   }
                                 },
                                 {
-                                  "baleNumber": "129",
                                   "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  161",
                                   "gross": {
-                                    "value": 168,
+                                    "value": 197,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  164",
+                                  "gross": {
+                                    "value": 190,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  165",
+                                  "gross": {
+                                    "value": 195,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  166",
+                                  "gross": {
+                                    "value": 203,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  169",
+                                  "gross": {
+                                    "value": 181,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  170",
+                                  "gross": {
+                                    "value": 200,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  173",
+                                  "gross": {
+                                    "value": 180,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  174",
+                                  "gross": {
+                                    "value": 156,
+                                    "weightCode": "KG"
+                                  },
+                                  "tare": {
+                                    "value": 2,
+                                    "weightCode": "KG"
+                                  }
+                                },
+                                {
+                                  "baleDetailType": "GreasyOrProcessed",
+                                  "baleNumber": "  175",
+                                  "gross": {
+                                    "value": 182,
                                     "weightCode": "KG"
                                   },
                                   "tare": {
@@ -222,11 +584,54 @@
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "lotInvoiceHeader": {
+                            "costPerWeightUnit": 990,
+                            "firstCost": {
+                              "value": 14111,
+                              "currencyCode": "AUD"
+                            },
+                            "gross": {
+                              "value": 6839,
+                              "weightCode": "KG"
+                            },
+                            "lotIdentity": "F 99",
+                            "numberOfBales": 37,
+                            "packMaterial": "J",
+                            "tare": {
+                              "value": 74,
+                              "weightCode": "KG"
+                            },
+                            "woolDescription": "AAAC",
+                            "gstFirstCost": {
+                              "value": 1411.1,
+                              "currencyCode": "AUD"
+                            },
+                            "gstTotalPostSaleCharge": {
+                              "value": 51.8,
+                              "currencyCode": "AUD"
+                            },
+                            "totalPostSaleCharge": {
+                              "value": 518,
+                              "currencyCode": "AUD"
+                            }
+                          }
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "transferConfig": {
+                    "finalReceiverList": [
+                      {
+                        "organisationCode": "ABC",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      }
+                    ],
+                    "transferType": "Restrict"
+                  }
                 }
               ]
             }
@@ -349,24 +754,29 @@
               "example": [
                 {
                   "transmissionHeader": {
-                    "dateFormatLastRevised": "2020-07-15",
-                    "dateTransmissionFileCreated": "2016-01-17",
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
                     "countryOfOrigin": "AU",
                     "documentOriginator": {
-                      "organisationCode": "ABC"
+                      "organisationCode": "ABC",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
                     "currentReceiver": {
-                      "organisationCode": "ATW"
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
-                    "versionNumber": "1.10.1",
-                    "softwareIdentifier": {
-                      "softwareCompany": 8,
-                      "softwareVersion": 1082,
-                      "programName": "NETR"
-                    },
-                    "abn": 72001967184
+                    "versionNumber": "1.0.0",
+                    "abn": 10000000000
                   },
-                  "requestForDataType": {}
+                  "requestForDataType": {
+                    "isUsingNetworkDateTime": "true"
+                  }
                 }
               ]
             }
@@ -385,120 +795,74 @@
                   }
                 },
                 "example": {
-                  "apiMessages": [],
                   "data": [
                     {
-                      "transmissionHeader": {
-                        "dateFormatLastRevised": "2020-07-15",
-                        "dateTransmissionFileCreated": "2016-01-17",
-                        "countryOfOrigin": "AU",
-                        "documentOriginator": {
-                          "organisationCode": "ABC"
-                        },
-                        "currentReceiver": {
-                          "organisationCode": "ATW"
-                        },
-                        "versionNumber": "1.10.1",
-                        "softwareIdentifier": {
-                          "softwareCompany": 1,
-                          "softwareVersion": 1082,
-                          "programName": "NETR"
-                        },
-                        "abn": 72001967184
-                      },
                       "woolSales": [
                         {
                           "woolSaleHeaderLot": {
-                            "season": 16,
-                            "saleIdentity": {
-                              "sellingCentreType": "M",
-                              "saleNumber": 18
-                            },
-                            "centreStorage": {
-                              "countryCode": "AU",
-                              "centreCode": "AR"
-                            },
-                            "saleDate": "2017-01-19",
-                            "woolState": "C",
-                            "packType": "F",
-                            "postSaleCharge": {
-                              "value": 25.96,
-                              "currencyCode": "AUD"
-                            },
-                            "calculationBasis": "B",
-                            "freightCharge": {
-                              "value": 0,
-                              "currencyCode": "AUD"
-                            },
-                            "freightRebate": {
-                              "value": 3.25,
-                              "currencyCode": "AUD"
-                            },
-                            "chargePerLot": {
-                              "value": 0,
+                            "storageChargePerBalePerDay": {
+                              "value": 0.1,
                               "currencyCode": "AUD"
                             },
                             "invoicingOrganisation": {
-                              "organisationCode": "ABC"
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "M"
+                              }
                             },
-                            "releasingOrganisation": {
-                              "organisationCode": "ABC"
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
                             },
                             "sellingOrganisation": {
-                              "organisationCode": "ABC"
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "M"
+                              }
                             },
-                            "woolTypeGroup": "MFLC",
-                            "centreCatalogue": {
-                              "countryCode": "AU",
-                              "centreCode": "G"
-                            },
-                            "deliveryBasis": "D",
-                            "storageOrganisation": {
-                              "organisationCode": "ABC"
-                            },
-                            "storageDescription": "45 MAIN ST",
-                            "paymentDueDate": "2017-01-24",
-                            "discountRate": 1.51,
-                            "maximumDaysDiscount": 0,
-                            "dateStorageChargeCommences": "2017-01-24",
-                            "storageChargePerBalePerDay": {
-                              "value": 0.245,
+                            "packType": "0",
+                            "calculationBasis": "B",
+                            "saleDate": "2024-04-15",
+                            "storageDescription": "BBBB LTD",
+                            "lotAvailableDate": "2024-04-15",
+                            "dateStorageChargeCommences": "2024-05-06",
+                            "postSaleCharge": {
+                              "value": 14,
                               "currencyCode": "AUD"
                             },
-                            "penaltyInterestRate": 11.35
+                            "paymentDueDate": "2024-04-29",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "M"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "60011173",
+                            "woolTypeGroup": "ODDS",
+                            "season": 23,
+                            "storageOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
                           },
                           "lotInvoiceDetails": [
                             {
-                              "lotInvoiceHeader": {
-                                "lotIdentity": "39123",
-                                "numberOfBales": 34,
-                                "gross": {
-                                  "value": 23,
-                                  "weightCode": "KG"
-                                },
-                                "tare": {
-                                  "value": 12,
-                                  "weightCode": "KG"
-                                },
-                                "costPerWeightUnit": 25,
-                                "firstCost": {
-                                  "value": 12.24,
-                                  "currencyCode": "AUD"
-                                },
-                                "packMaterial": "K",
-                                "gstFirstCost": {
-                                  "value": 141.11,
-                                  "currencyCode": "AUD"
-                                },
-                                "gstTotalPostSaleCharge": {
-                                  "value": 51.8,
-                                  "currencyCode": "AUD"
-                                },
-                                "totalPostSaleCharge": {
-                                  "value": 0,
-                                  "currencyCode": "AUD"
-                                }
-                              },
                               "lotHeaderVendorDeclarations": [
                                 {
                                   "mulesingStatus": "ND"
@@ -507,80 +871,530 @@
                               "bales": [
                                 {
                                   "baleHeader": {
-                                    "brand": "FTT",
                                     "baleDescription": "AAC",
-                                    "areaOfOrigin": "Melbourne",
-                                    "locationWithinStore": "AWTA LTD"
+                                    "locationWithinStore": "BBBB LTD",
+                                    "areaOfOrigin": "    ",
+                                    "brand": "FTT"
                                   },
                                   "baleDetails": [
                                     {
-                                      "baleNumber": "116",
-                                      "baleDetailType": "GreasyOrProcessed",
-                                      "baleRenumber": "181",
                                       "gross": {
                                         "value": 181,
                                         "weightCode": "KG"
                                       },
+                                      "baleDetailType": "GreasyOrProcessed",
                                       "tare": {
-                                        "value": 12,
+                                        "value": 2,
                                         "weightCode": "KG"
-                                      }
+                                      },
+                                      "baleNumber": "  116"
                                     },
                                     {
-                                      "baleNumber": "117",
-                                      "baleDetailType": "GreasyOrProcessed",
                                       "gross": {
                                         "value": 201,
                                         "weightCode": "KG"
                                       },
+                                      "baleDetailType": "GreasyOrProcessed",
                                       "tare": {
                                         "value": 2,
-                                        "weightCode": "KG"
-                                      }
-                                    },
-                                    {
-                                      "baleNumber": "117",
-                                      "baleDetailType": "GreasyOrProcessed",
-                                      "gross": {
-                                        "value": 18,
                                         "weightCode": "KG"
                                       },
+                                      "baleNumber": "  117"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 194,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
                                       "tare": {
                                         "value": 2,
                                         "weightCode": "KG"
-                                      }
+                                      },
+                                      "baleNumber": "  119"
                                     },
                                     {
-                                      "baleNumber": "126",
+                                      "gross": {
+                                        "value": 179,
+                                        "weightCode": "KG"
+                                      },
                                       "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  120"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 194,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  123"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 187,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  124"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 179,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  126"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 167,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  129"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 173,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  130"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 200,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  131"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 180,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  133"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 169,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  135"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 170,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  138"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 173,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  139"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 199,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  140"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 175,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  141"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 192,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  144"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 174,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  145"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 192,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  146"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 192,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  148"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 186,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  149"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 188,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  150"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 191,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  152"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 195,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  154"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 180,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  155"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 179,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  156"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 187,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  159"
+                                    },
+                                    {
                                       "gross": {
                                         "value": 178,
                                         "weightCode": "KG"
                                       },
+                                      "baleDetailType": "GreasyOrProcessed",
                                       "tare": {
                                         "value": 2,
-                                        "weightCode": "KG"
-                                      }
-                                    },
-                                    {
-                                      "baleNumber": "129",
-                                      "baleDetailType": "GreasyOrProcessed",
-                                      "gross": {
-                                        "value": 168,
                                         "weightCode": "KG"
                                       },
+                                      "baleNumber": "  160"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 197,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
                                       "tare": {
                                         "value": 2,
                                         "weightCode": "KG"
-                                      }
+                                      },
+                                      "baleNumber": "  161"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 190,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  164"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 195,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  165"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 203,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  166"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 181,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  169"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 200,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  170"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 180,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  173"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 156,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  174"
+                                    },
+                                    {
+                                      "gross": {
+                                        "value": 182,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleDetailType": "GreasyOrProcessed",
+                                      "tare": {
+                                        "value": 2,
+                                        "weightCode": "KG"
+                                      },
+                                      "baleNumber": "  175"
                                     }
                                   ]
                                 }
-                              ]
+                              ],
+                              "lotInvoiceHeader": {
+                                "gstFirstCost": {
+                                  "value": 1411.1,
+                                  "currencyCode": "AUD"
+                                },
+                                "totalPostSaleCharge": {
+                                  "value": 518,
+                                  "currencyCode": "AUD"
+                                },
+                                "numberOfBales": 37,
+                                "gross": {
+                                  "value": 6839,
+                                  "weightCode": "KG"
+                                },
+                                "tare": {
+                                  "value": 74,
+                                  "weightCode": "KG"
+                                },
+                                "lotIdentity": "F 99",
+                                "costPerWeightUnit": 990,
+                                "firstCost": {
+                                  "value": 14111,
+                                  "currencyCode": "AUD"
+                                },
+                                "gstTotalPostSaleCharge": {
+                                  "value": 51.8,
+                                  "currencyCode": "AUD"
+                                },
+                                "woolDescription": "AAAC",
+                                "packMaterial": "J"
+                              }
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "transmissionHeader": {
+                        "documentOriginator": {
+                          "organisationCode": "AWT",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "ABC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "dateFormatLastRevised": "2024-08-05",
+                        "softwareIdentifier": {
+                          "softwareCompany": 8
+                        },
+                        "dateTransmissionFileCreated": "2024-12-09",
+                        "countryOfOrigin": "AU",
+                        "abn": 43006014106,
+                        "versionNumber": "1.0.0"
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "ABC",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
+                      }
                     }
                   ]
                 }
@@ -704,6 +1518,7 @@
     "schemas": {
       "LotInvoice": {
         "required": [
+          "transferConfig",
           "transmissionHeader",
           "woolSales"
         ],

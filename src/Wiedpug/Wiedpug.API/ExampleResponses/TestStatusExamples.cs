@@ -39,6 +39,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = 72001967184
                 },
+                                TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                 TestStatusDetails = new List<TestStatusDetail>
                 {
                     new TestStatusDetail
@@ -156,6 +160,10 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = 72001967184
                     },
+                                    TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                     TestStatusDetails = new List<TestStatusDetail>
                 {
                     new TestStatusDetail

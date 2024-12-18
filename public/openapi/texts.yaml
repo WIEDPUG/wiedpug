@@ -28,23 +28,41 @@ paths:
                 $ref: "#/components/schemas/Text"
             example:
               - transmissionHeader:
-                  dateFormatLastRevised: 2020-07-15
-                  dateTransmissionFileCreated: 2016-01-17
+                  dateFormatLastRevised: 2024-08-05
+                  dateTransmissionFileCreated: 2024-12-09
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABC
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: X
                   currentReceiver:
-                    organisationCode: ATW
-                  versionNumber: 1.10.1
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
                   softwareIdentifier:
-                    softwareCompany: 1
-                    softwareVersion: 1082
-                    programName: NETR
-                  abn: 72001967184
-                transferConfig:
-                  transferType: Unrestrict
+                    softwareCompany: 8
+                  abn: 10000000000
                 comments:
-                  - text: Order is paid.
+                  - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                      111111111111111111111111111111
+                  - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                      222222222222222222222222222222
+                  - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                      333333333333333333333333333333
+                  - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                      444444444444444444444444444444
+                  - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                      555555555555555555555555555555
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: AWT
+                      centre:
+                        countryCode: AU
+                        centreCode: H
+                  transferType: Restrict
         required: true
       responses:
         "200":
@@ -124,20 +142,25 @@ paths:
                 $ref: "#/components/schemas/RequestForData"
             example:
               - transmissionHeader:
-                  dateFormatLastRevised: 2020-07-15
-                  dateTransmissionFileCreated: 2016-01-17
+                  dateFormatLastRevised: 2024-08-05
+                  dateTransmissionFileCreated: 2024-12-09
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABC
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: H
                   currentReceiver:
-                    organisationCode: ATW
-                  versionNumber: 1.10.1
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
                   softwareIdentifier:
                     softwareCompany: 8
-                    softwareVersion: 1082
-                    programName: NETR
-                  abn: 72001967184
-                requestForDataType: {}
+                  abn: 10000000000
+                requestForDataType:
+                  isUsingNetworkDateTime: "true"
         required: true
       responses:
         "200":
@@ -149,24 +172,43 @@ paths:
                 items:
                   $ref: "#/components/schemas/TextListApiResult"
               example:
-                apiMessages: []
                 data:
-                  - transmissionHeader:
-                      dateFormatLastRevised: 2020-07-15
-                      dateTransmissionFileCreated: 2016-01-17
-                      countryOfOrigin: AU
+                  - comments:
+                      - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                          111111111111111111111111111111
+                      - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                          222222222222222222222222222222
+                      - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                          333333333333333333333333333333
+                      - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                          444444444444444444444444444444
+                      - text: THIS IS A TXT FILE FOR TESTING - abcd abcd abcd
+                          555555555555555555555555555555
+                    transmissionHeader:
                       documentOriginator:
-                        organisationCode: ABC
+                        organisationCode: AWT
+                        centre:
+                          countryCode: AU
+                          centreCode: X
                       currentReceiver:
-                        organisationCode: ATW
-                      versionNumber: 1.10.1
+                        organisationCode: AWT
+                        centre:
+                          countryCode: AU
+                          centreCode: H
+                      dateFormatLastRevised: 2024-08-05
                       softwareIdentifier:
-                        softwareCompany: 1
-                        softwareVersion: 1082
-                        programName: NETR
-                      abn: 72001967184
-                    comments:
-                      - text: Order is paid.
+                        softwareCompany: 8
+                      dateTransmissionFileCreated: 2024-12-09
+                      countryOfOrigin: AU
+                      abn: 10000000000
+                      versionNumber: 1.0.0
+                    transferConfig:
+                      finalReceiverList:
+                        - organisationCode: AWT
+                          centre:
+                            countryCode: AU
+                            centreCode: H
+                      transferType: Restrict
         "204":
           description: No Content
           content:
@@ -247,6 +289,7 @@ components:
     Text:
       required:
         - comments
+        - transferConfig
         - transmissionHeader
       type: object
       properties:

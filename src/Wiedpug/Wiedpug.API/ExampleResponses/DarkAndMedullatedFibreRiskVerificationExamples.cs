@@ -38,6 +38,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = 72001967184
                 },
+                TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                 DarkAndMedullatedFibreRiskDetails = new List<DarkAndMedullatedFibreRiskDetail>
                 {
                     new DarkAndMedullatedFibreRiskDetail
@@ -155,6 +159,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = 72001967184
                         },
+                                        TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                         DarkAndMedullatedFibreRiskDetails = new List<DarkAndMedullatedFibreRiskDetail>
                 {
                     new DarkAndMedullatedFibreRiskDetail

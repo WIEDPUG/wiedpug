@@ -51,7 +51,7 @@ paths:
                   - certificateRequest:
                       additionalPrintRequirements: 0
                       autoAdditionalMeasurementRequired: N
-                      certificateReference: "XXX1234                       "
+                      certificateReference: XXX1234
                       certificateType: J
                       clientCrossReference: "XXX1234 "
                       combinationRequest: N
@@ -165,7 +165,7 @@ paths:
                   - certificateRequest:
                       additionalPrintRequirements: 0
                       autoAdditionalMeasurementRequired: N
-                      certificateReference: "XXX1235                       "
+                      certificateReference: XXX1235
                       certificateType: J
                       clientCrossReference: "XXX1235 "
                       combinationRequest: N
@@ -265,7 +265,7 @@ paths:
                   - certificateRequest:
                       additionalPrintRequirements: 0
                       autoAdditionalMeasurementRequired: N
-                      certificateReference: "XXX1236                       "
+                      certificateReference: XXX1236
                       certificateType: J
                       clientCrossReference: "XXX1236 "
                       combinationRequest: N
@@ -407,7 +407,7 @@ paths:
                   - certificateRequest:
                       additionalPrintRequirements: 0
                       autoAdditionalMeasurementRequired: N
-                      certificateReference: "XXX1237                       "
+                      certificateReference: XXX1237
                       certificateType: J
                       clientCrossReference: "XXX1237 "
                       combinationRequest: N
@@ -780,7 +780,7 @@ paths:
                                 certificateIdPrefix: 3
                               woolbase: 62.33
                           clientCrossReference: "XXX1234 "
-                          certificateReference: "XXX1234                       "
+                          certificateReference: XXX1234
                           additionalPrintRequirements: 0
                           isCommitRequired: false
                           numberOfBales: 97
@@ -880,7 +880,7 @@ paths:
                                 certificateIdPrefix: 3
                               woolbase: 49.43
                           clientCrossReference: "XXX1235 "
-                          certificateReference: "XXX1235                       "
+                          certificateReference: XXX1235
                           additionalPrintRequirements: 0
                           isCommitRequired: false
                           numberOfBales: 31
@@ -1022,7 +1022,7 @@ paths:
                                 certificateIdPrefix: 3
                               woolbase: 62.2
                           clientCrossReference: "XXX1236 "
-                          certificateReference: "XXX1236                       "
+                          certificateReference: XXX1236
                           additionalPrintRequirements: 0
                           isCommitRequired: false
                           numberOfBales: 62
@@ -1178,7 +1178,7 @@ paths:
                                 certificateIdPrefix: 3
                               woolbase: 61.93
                           clientCrossReference: "XXX1237 "
-                          certificateReference: "XXX1237                       "
+                          certificateReference: XXX1237
                           additionalPrintRequirements: 0
                           isCommitRequired: false
                           numberOfBales: 102
@@ -1204,6 +1204,13 @@ paths:
                       countryOfOrigin: AU
                       abn: 10000000000
                       versionNumber: 1.0.0
+                    transferConfig:
+                      finalReceiverList:
+                        - organisationCode: AWT
+                          centre:
+                            countryCode: AU
+                            centreCode: M
+                      transferType: Restrict
         "204":
           description: No Content
           content:
@@ -1283,6 +1290,7 @@ components:
   schemas:
     TestCertificateRequests:
       required:
+        - transferConfig
         - transmissionHeader
       type: object
       properties:

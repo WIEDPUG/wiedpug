@@ -2,7 +2,7 @@
   "index":"Home",
     "sequence-diagram": "Sequence Diagram",
     "http-response-codes": "HTTP Response Codes",    
-    "api-current": "API V0.0 (Current)",
+    "api-current": "API V0.0.0 (Current)",
     "release-versions": "Release Versions",
     "versions":"Archive"
   }

@@ -1052,6 +1052,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = 72001967184
                         },
+                                        TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                         CatalogueType=CatalogueType.A,
                         WoolSaleHeaders = new List<WoolSaleHeader>
                             {

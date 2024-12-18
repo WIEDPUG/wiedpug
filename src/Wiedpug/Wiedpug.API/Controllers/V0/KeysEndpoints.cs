@@ -55,7 +55,7 @@ public static class KeysEndpoints
         {
             Summary = "Retrieve the public encryption key"
         })
-        .Produces<ApiResult<String>>(StatusCodes.Status200OK, contentType: "application/json")
+        .Produces<StringApiResult>(StatusCodes.Status200OK, contentType: "application/json")
         .Produces<ApiResult>(StatusCodes.Status204NoContent, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status400BadRequest, contentType: "application/problem+json")
         .Produces<ApiErrorResult>(StatusCodes.Status401Unauthorized, contentType: "application/problem+json")

@@ -41,6 +41,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = 72001967184
                 },
+                                TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                 PrintPreSaleCertificatePostSales = new List<PrintPreSaleCertificatePostSale>
                 {
                     new PrintPreSaleCertificatePostSale
@@ -158,6 +162,10 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = 72001967184
                     },
+                                    TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                     PrintPreSaleCertificatePostSales = new List<PrintPreSaleCertificatePostSale>
                 {
                     new PrintPreSaleCertificatePostSale

@@ -28,85 +28,295 @@ paths:
                 $ref: "#/components/schemas/DeliveryOrdersAndShippingInstruction"
             example:
               - transmissionHeader:
-                  dateFormatLastRevised: 2020-07-15
-                  dateTransmissionFileCreated: 2016-01-17
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-07-01
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABC
+                    organisationCode: BBB
+                    centre:
+                      countryCode: AU
+                      centreCode: M
                   currentReceiver:
-                    organisationCode: ATW
-                  versionNumber: 1.10.1
-                  softwareIdentifier:
-                    softwareCompany: 1
-                    softwareVersion: 1082
-                    programName: NETR
-                  abn: 72001967184
-                transferConfig:
-                  transferType: Unrestrict
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  abn: 10000000000
                 consignments:
-                  - consignmentHeader:
-                      consignmentReference: "1256745909"
-                      shipper:
-                        organisationCode: BTA
-                    countermarkHeadmarks:
-                      - countermarkHeadmarkLine1: "1234567789"
-                        countermarkHeadmarkLine2: "1234098765"
-                    deliveryOrders:
+                  - deliveryOrders:
                       - deliveryOrderDetail:
-                          deliveryOrderType: O
-                          deliveryOrderNumber: "4567891209"
-                          releasingOrganisation:
-                            organisationCode: AWS
-                          carrier:
-                            organisationCode: BTW
-                          areRenumbersApplied: false
                           areGrossWeightsApplied: false
                           areNetWeightsApplied: false
+                          areRenumbersApplied: false
+                          carrier:
+                            organisationCode: BOC
+                          countermarkHeadmarkFlag: 1
+                          deliveryOrderNumber: XXXX050769
+                          deliveryOrderType: L
+                          markingOrganisation:
+                            organisationCode: EEE
+                            centre:
+                              countryCode: AU
+                              centreCode: HM
+                          releasingOrganisation:
+                            organisationCode: CCC
+                            centre:
+                              countryCode: AU
+                              centreCode: G
+                          interimHandlingDestinationCode:
+                            organisationCode: BBB
+                            centre:
+                              countryCode: AU
+                              centreCode: M
+                          interimHandlerDescriptionLine1: "XXXXXXXX PTY LTD              "
                         deliveryOrderLots:
                           - deliveryOrderLotHeader:
-                              invoicingOrganisation:
-                                organisationCode: AWT
-                              sellingOrganisation:
-                                organisationCode: TTM
-                              season: 23
-                              saleIdentity:
-                                sellingCentreType: M
-                                saleNumber: 18
                               centreStorage:
                                 countryCode: AU
-                                centreCode: A
-                              storageOrganisation:
-                                organisationCode: ABT
-                              lotIdentityOrGroupNumber: "552467"
-                              numberOfBales: 30
+                                centreCode: HM
                               gross:
-                                value: 1530
+                                value: 703
                                 weightCode: KG
+                              invoicingOrganisation:
+                                organisationCode: DDD
+                                centre:
+                                  countryCode: AU
+                                  centreCode: S
+                              lotIdentityOrGroupNumber: "  9999"
+                              numberOfBales: 4
+                              packTypeOriginal: "0"
+                              packTypePreferred: "0"
+                              saleIdentity:
+                                sellingCentreType: M
+                                saleNumber: 99
+                              season: 23
+                              sellingOrganisation:
+                                organisationCode: DDD
+                                centre:
+                                  countryCode: AU
+                                  centreCode: S
+                              storageDescription: "99 XXXXX DRIVE "
+                              storageOrganisation:
+                                organisationCode: EEE
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
                               tare:
-                                value: 30
+                                value: 8
                                 weightCode: KG
-                              totalBalesInLot: 30
-                              packTypeOriginal: "1"
-                              packTypePreferred: "2"
-                              woolState: "3"
-                              packMaterial: K
-                            countermarkHeadmarks:
-                              - countermarkHeadmarkLine1: "1234567789"
-                                countermarkHeadmarkLine2: "1234098765"
-                            bales:
-                              - baleHeader:
-                                  brand: ABCD
-                                  baleDescription: bale description
-                                  areaOfOrigin: MELB
-                                baleDetails:
-                                  - baleNumber: "12345"
-                                    baleDetailType: Renumbers
-                                    gross:
-                                      value: 1233
-                                      weightCode: KG
-                                    tare:
-                                      value: 23
-                                      weightCode: KG
+                              totalBalesInLot: 4
+                              woolState: "1"
+                              certificateIdentity:
+                                certificateIdSuffix: B
+                                certificateIdNumber: 99999833
+                                certificateIdCd: 2
+                                certificateIdPrefix: 3
+                              clientCrossReference: "99915   "
+                              packMaterial: N
+                              dateDeliveryRequired: 2024-07-04
+                          - deliveryOrderLotHeader:
+                              centreStorage:
+                                countryCode: AU
+                                centreCode: HM
+                              gross:
+                                value: 374
+                                weightCode: KG
+                              invoicingOrganisation:
+                                organisationCode: DDD
+                                centre:
+                                  countryCode: AU
+                                  centreCode: S
+                              lotIdentityOrGroupNumber: "  9913"
+                              numberOfBales: 2
+                              packTypeOriginal: "0"
+                              packTypePreferred: "0"
+                              saleIdentity:
+                                sellingCentreType: M
+                                saleNumber: 99
+                              season: 23
+                              sellingOrganisation:
+                                organisationCode: DDD
+                                centre:
+                                  countryCode: AU
+                                  centreCode: S
+                              storageDescription: "99 XXXXX DRIVE "
+                              storageOrganisation:
+                                organisationCode: EEE
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
+                              tare:
+                                value: 4
+                                weightCode: KG
+                              totalBalesInLot: 2
+                              woolState: "1"
+                              certificateIdentity:
+                                certificateIdSuffix: D
+                                certificateIdNumber: 99999377
+                                certificateIdCd: 4
+                                certificateIdPrefix: 3
+                              clientCrossReference: "99917   "
+                              packMaterial: N
+                              dateDeliveryRequired: 2024-07-04
+                          - deliveryOrderLotHeader:
+                              centreStorage:
+                                countryCode: AU
+                                centreCode: G
+                              gross:
+                                value: 1088
+                                weightCode: KG
+                              invoicingOrganisation:
+                                organisationCode: FFF
+                                centre:
+                                  countryCode: AU
+                                  centreCode: G
+                              lotIdentityOrGroupNumber: "  9906"
+                              numberOfBales: 6
+                              packTypeOriginal: "0"
+                              packTypePreferred: "0"
+                              saleIdentity:
+                                sellingCentreType: M
+                                saleNumber: 99
+                              season: 23
+                              sellingOrganisation:
+                                organisationCode: FFF
+                                centre:
+                                  countryCode: AU
+                                  centreCode: G
+                              storageDescription: "XXXXXX ROAD    "
+                              storageOrganisation:
+                                organisationCode: CCC
+                                centre:
+                                  countryCode: AU
+                                  centreCode: G
+                              tare:
+                                value: 12
+                                weightCode: KG
+                              totalBalesInLot: 6
+                              woolState: "1"
+                              certificateIdentity:
+                                certificateIdSuffix: P
+                                certificateIdNumber: 99999884
+                                certificateIdCd: 3
+                                certificateIdPrefix: 3
+                              clientCrossReference: "99930   "
+                              packMaterial: N
+                              dateDeliveryRequired: 2024-07-04
+                          - deliveryOrderLotHeader:
+                              centreStorage:
+                                countryCode: AU
+                                centreCode: HM
+                              gross:
+                                value: 948
+                                weightCode: KG
+                              invoicingOrganisation:
+                                organisationCode: GGG
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
+                              lotIdentityOrGroupNumber: "  9911"
+                              numberOfBales: 5
+                              packTypeOriginal: "0"
+                              packTypePreferred: "0"
+                              saleIdentity:
+                                sellingCentreType: M
+                                saleNumber: 99
+                              season: 23
+                              sellingOrganisation:
+                                organisationCode: GGG
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
+                              storageDescription: "99 XXXXX DRIVE "
+                              storageOrganisation:
+                                organisationCode: EEE
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
+                              tare:
+                                value: 10
+                                weightCode: KG
+                              totalBalesInLot: 5
+                              woolState: "1"
+                              certificateIdentity:
+                                certificateIdSuffix: P
+                                certificateIdNumber: 99999862
+                                certificateIdCd: 9
+                                certificateIdPrefix: 3
+                              clientCrossReference: "99936   "
+                              packMaterial: N
+                              dateDeliveryRequired: 2024-07-04
+                          - deliveryOrderLotHeader:
+                              centreStorage:
+                                countryCode: AU
+                                centreCode: HM
+                              gross:
+                                value: 136
+                                weightCode: KG
+                              invoicingOrganisation:
+                                organisationCode: GGG
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
+                              lotIdentityOrGroupNumber: "  9951"
+                              numberOfBales: 1
+                              packTypeOriginal: "0"
+                              packTypePreferred: "0"
+                              saleIdentity:
+                                sellingCentreType: M
+                                saleNumber: 99
+                              season: 23
+                              sellingOrganisation:
+                                organisationCode: GGG
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
+                              storageDescription: "111 XXXXX ROAD "
+                              storageOrganisation:
+                                organisationCode: JJJ
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
+                              tare:
+                                value: 2
+                                weightCode: KG
+                              totalBalesInLot: 1
+                              woolState: "1"
+                              certificateIdentity:
+                                certificateIdSuffix: P
+                                certificateIdNumber: 16154597
+                                certificateIdCd: 9
+                                certificateIdPrefix: 3
+                              clientCrossReference: "99938   "
+                              packMaterial: N
+                              dateDeliveryRequired: 2024-07-04
+                    consignmentHeader:
+                      consignmentReference: "XXXX05    "
+                      dumpingOrganisation:
+                        organisationCode: BBB
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      shipper:
+                        organisationCode: BBB
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                    countermarkHeadmarks:
+                      - countermarkHeadmarkLine1: "XXXX05                        "
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: BOC
+                    - organisationCode: DDD
+                      centre:
+                        countryCode: AU
+                        centreCode: M
+                    - organisationCode: CCC
+                      centre:
+                        countryCode: AU
+                        centreCode: G
+                  transferType: Restrict
         required: true
       responses:
         "200":
@@ -186,20 +396,23 @@ paths:
                 $ref: "#/components/schemas/RequestForData"
             example:
               - transmissionHeader:
-                  dateFormatLastRevised: 2020-07-15
-                  dateTransmissionFileCreated: 2016-01-17
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-07-01
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABC
+                    organisationCode: DDD
+                    centre:
+                      countryCode: AU
+                      centreCode: M
                   currentReceiver:
-                    organisationCode: ATW
-                  versionNumber: 1.10.1
-                  softwareIdentifier:
-                    softwareCompany: 8
-                    softwareVersion: 1082
-                    programName: NETR
-                  abn: 72001967184
-                requestForDataType: {}
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  abn: 10000000000
+                requestForDataType:
+                  isUsingNetworkDateTime: true
         required: true
       responses:
         "200":
@@ -211,86 +424,292 @@ paths:
                 items:
                   $ref: "#/components/schemas/DeliveryOrdersAndShippingInstructionListApiResult"
               example:
-                apiMessages: []
                 data:
                   - transmissionHeader:
-                      dateFormatLastRevised: 2020-07-15
-                      dateTransmissionFileCreated: 2016-01-17
-                      countryOfOrigin: AU
                       documentOriginator:
-                        organisationCode: ABC
+                        organisationCode: BBB
+                        centre:
+                          countryCode: AU
+                          centreCode: M
                       currentReceiver:
-                        organisationCode: ATW
-                      versionNumber: 1.10.1
-                      softwareIdentifier:
-                        softwareCompany: 1
-                        softwareVersion: 1082
-                        programName: NETR
-                      abn: 72001967184
+                        organisationCode: DDD
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      dateFormatLastRevised: 2022-07-25
+                      dateTransmissionFileCreated: 2024-07-01
+                      countryOfOrigin: AU
+                      abn: 10000000000
+                      versionNumber: 1.0.0
                     consignments:
-                      - consignmentHeader:
-                          consignmentReference: "1256745909"
-                          shipper:
-                            organisationCode: BTA
-                        countermarkHeadmarks:
-                          - countermarkHeadmarkLine1: "1234567789"
-                            countermarkHeadmarkLine2: "1234098765"
-                        deliveryOrders:
+                      - deliveryOrders:
                           - deliveryOrderDetail:
-                              deliveryOrderType: O
-                              deliveryOrderNumber: "4567891209"
-                              releasingOrganisation:
-                                organisationCode: AWS
+                              deliveryOrderType: L
                               carrier:
-                                organisationCode: BTW
-                              areRenumbersApplied: false
-                              areGrossWeightsApplied: false
+                                organisationCode: BOC
+                              releasingOrganisation:
+                                organisationCode: CCC
+                                centre:
+                                  countryCode: AU
+                                  centreCode: G
+                              countermarkHeadmarkFlag: 1
                               areNetWeightsApplied: false
+                              areRenumbersApplied: false
+                              interimHandlerDescriptionLine1: "XXXXXXXX PTY LTD              "
+                              deliveryOrderNumber: XXXX050769
+                              areGrossWeightsApplied: false
+                              interimHandlingDestinationCode:
+                                organisationCode: BBB
+                                centre:
+                                  countryCode: AU
+                                  centreCode: M
+                              markingOrganisation:
+                                organisationCode: EEE
+                                centre:
+                                  countryCode: AU
+                                  centreCode: HM
                             deliveryOrderLots:
                               - deliveryOrderLotHeader:
                                   invoicingOrganisation:
-                                    organisationCode: ATX
-                                  sellingOrganisation:
-                                    organisationCode: TTM
-                                  season: 23
-                                  saleIdentity:
-                                    sellingCentreType: M
-                                    saleNumber: 18
+                                    organisationCode: DDD
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: S
+                                  gross:
+                                    value: 703
+                                    weightCode: KG
+                                  woolState: "1"
                                   centreStorage:
                                     countryCode: AU
-                                    centreCode: A
-                                  storageOrganisation:
-                                    organisationCode: MBC
-                                  lotIdentityOrGroupNumber: "552467"
-                                  numberOfBales: 30
-                                  gross:
-                                    value: 1520
-                                    weightCode: KG
+                                    centreCode: HM
+                                  sellingOrganisation:
+                                    organisationCode: DDD
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: S
+                                  packTypeOriginal: "0"
+                                  clientCrossReference: "99915   "
+                                  storageDescription: "99 XXXXX DRIVE "
+                                  packMaterial: N
+                                  lotIdentityOrGroupNumber: "  9999"
+                                  numberOfBales: 4
+                                  totalBalesInLot: 4
+                                  saleIdentity:
+                                    sellingCentreType: M
+                                    saleNumber: 99
                                   tare:
-                                    value: 30
+                                    value: 8
                                     weightCode: KG
-                                  totalBalesInLot: 30
-                                  packTypeOriginal: "1"
-                                  packTypePreferred: "2"
-                                  woolState: "3"
-                                  packMaterial: K
-                                countermarkHeadmarks:
-                                  - countermarkHeadmarkLine1: "1234567789"
-                                    countermarkHeadmarkLine2: "1234098765"
-                                bales:
-                                  - baleHeader:
-                                      brand: ABCD
-                                      baleDescription: bale description
-                                      areaOfOrigin: MELB
-                                    baleDetails:
-                                      - baleNumber: "12345"
-                                        baleDetailType: Renumbers
-                                        gross:
-                                          value: 1233
-                                          weightCode: KG
-                                        tare:
-                                          value: 23
-                                          weightCode: KG
+                                  dateDeliveryRequired: 2024-07-04
+                                  season: 23
+                                  storageOrganisation:
+                                    organisationCode: EEE
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  certificateIdentity:
+                                    certificateIdSuffix: B
+                                    certificateIdNumber: 99999833
+                                    certificateIdCd: 2
+                                    certificateIdPrefix: 3
+                                  packTypePreferred: "0"
+                              - deliveryOrderLotHeader:
+                                  invoicingOrganisation:
+                                    organisationCode: DDD
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: S
+                                  gross:
+                                    value: 374
+                                    weightCode: KG
+                                  woolState: "1"
+                                  centreStorage:
+                                    countryCode: AU
+                                    centreCode: HM
+                                  sellingOrganisation:
+                                    organisationCode: DDD
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: S
+                                  packTypeOriginal: "0"
+                                  clientCrossReference: "99917   "
+                                  storageDescription: "99 XXXXX DRIVE "
+                                  packMaterial: N
+                                  lotIdentityOrGroupNumber: "  9913"
+                                  numberOfBales: 2
+                                  totalBalesInLot: 2
+                                  saleIdentity:
+                                    sellingCentreType: M
+                                    saleNumber: 99
+                                  tare:
+                                    value: 4
+                                    weightCode: KG
+                                  dateDeliveryRequired: 2024-07-04
+                                  season: 23
+                                  storageOrganisation:
+                                    organisationCode: EEE
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  certificateIdentity:
+                                    certificateIdSuffix: D
+                                    certificateIdNumber: 99999377
+                                    certificateIdCd: 4
+                                    certificateIdPrefix: 3
+                                  packTypePreferred: "0"
+                              - deliveryOrderLotHeader:
+                                  invoicingOrganisation:
+                                    organisationCode: FFF
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: G
+                                  gross:
+                                    value: 1088
+                                    weightCode: KG
+                                  woolState: "1"
+                                  centreStorage:
+                                    countryCode: AU
+                                    centreCode: G
+                                  sellingOrganisation:
+                                    organisationCode: FFF
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: G
+                                  packTypeOriginal: "0"
+                                  clientCrossReference: "99930   "
+                                  storageDescription: "XXXXXX ROAD    "
+                                  packMaterial: N
+                                  lotIdentityOrGroupNumber: "  9906"
+                                  numberOfBales: 6
+                                  totalBalesInLot: 6
+                                  saleIdentity:
+                                    sellingCentreType: M
+                                    saleNumber: 99
+                                  tare:
+                                    value: 12
+                                    weightCode: KG
+                                  dateDeliveryRequired: 2024-07-04
+                                  season: 23
+                                  storageOrganisation:
+                                    organisationCode: CCC
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: G
+                                  certificateIdentity:
+                                    certificateIdSuffix: P
+                                    certificateIdNumber: 99999884
+                                    certificateIdCd: 3
+                                    certificateIdPrefix: 3
+                                  packTypePreferred: "0"
+                              - deliveryOrderLotHeader:
+                                  invoicingOrganisation:
+                                    organisationCode: GGG
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  gross:
+                                    value: 948
+                                    weightCode: KG
+                                  woolState: "1"
+                                  centreStorage:
+                                    countryCode: AU
+                                    centreCode: HM
+                                  sellingOrganisation:
+                                    organisationCode: GGG
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  packTypeOriginal: "0"
+                                  clientCrossReference: "99936   "
+                                  storageDescription: "99 XXXXX DRIVE "
+                                  packMaterial: N
+                                  lotIdentityOrGroupNumber: "  9911"
+                                  numberOfBales: 5
+                                  totalBalesInLot: 5
+                                  saleIdentity:
+                                    sellingCentreType: M
+                                    saleNumber: 99
+                                  tare:
+                                    value: 10
+                                    weightCode: KG
+                                  dateDeliveryRequired: 2024-07-04
+                                  season: 23
+                                  storageOrganisation:
+                                    organisationCode: EEE
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  certificateIdentity:
+                                    certificateIdSuffix: P
+                                    certificateIdNumber: 99999862
+                                    certificateIdCd: 9
+                                    certificateIdPrefix: 3
+                                  packTypePreferred: "0"
+                              - deliveryOrderLotHeader:
+                                  invoicingOrganisation:
+                                    organisationCode: GGG
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  gross:
+                                    value: 136
+                                    weightCode: KG
+                                  woolState: "1"
+                                  centreStorage:
+                                    countryCode: AU
+                                    centreCode: HM
+                                  sellingOrganisation:
+                                    organisationCode: GGG
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  packTypeOriginal: "0"
+                                  clientCrossReference: "99938   "
+                                  storageDescription: "111 XXXXX ROAD "
+                                  packMaterial: N
+                                  lotIdentityOrGroupNumber: "  9951"
+                                  numberOfBales: 1
+                                  totalBalesInLot: 1
+                                  saleIdentity:
+                                    sellingCentreType: M
+                                    saleNumber: 99
+                                  tare:
+                                    value: 2
+                                    weightCode: KG
+                                  dateDeliveryRequired: 2024-07-04
+                                  season: 23
+                                  storageOrganisation:
+                                    organisationCode: JJJ
+                                    centre:
+                                      countryCode: AU
+                                      centreCode: HM
+                                  certificateIdentity:
+                                    certificateIdSuffix: P
+                                    certificateIdNumber: 16154597
+                                    certificateIdCd: 9
+                                    certificateIdPrefix: 3
+                                  packTypePreferred: "0"
+                        consignmentHeader:
+                          shipper:
+                            organisationCode: BBB
+                            centre:
+                              countryCode: AU
+                              centreCode: M
+                          consignmentReference: "XXXX05    "
+                          dumpingOrganisation:
+                            organisationCode: BBB
+                            centre:
+                              countryCode: AU
+                              centreCode: M
+                        countermarkHeadmarks:
+                          - countermarkHeadmarkLine1: "XXXX05                        "
+                    transferConfig:
+                      finalReceiverList:
+                        - organisationCode: DDD
+                          centre:
+                            countryCode: AU
+                            centreCode: M
+                      transferType: Restrict
         "204":
           description: No Content
           content:
@@ -371,6 +790,7 @@ components:
     DeliveryOrdersAndShippingInstruction:
       required:
         - consignments
+        - transferConfig
         - transmissionHeader
       type: object
       properties:

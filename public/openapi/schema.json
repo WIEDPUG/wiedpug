@@ -452,6 +452,7 @@
       "Catalogue": {
         "required": [
           "catalogueType",
+          "transferConfig",
           "transmissionHeader",
           "woolSaleHeaders"
         ],
@@ -2065,6 +2066,7 @@
       },
       "DarkAndMedullatedFibreRiskVerification": {
         "required": [
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -2492,6 +2494,7 @@
       "DeliveryOrdersAndShippingInstruction": {
         "required": [
           "consignments",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -3414,6 +3417,7 @@
       },
       "LotInvoice": {
         "required": [
+          "transferConfig",
           "transmissionHeader",
           "woolSales"
         ],
@@ -3597,6 +3601,7 @@
       "LotPriceAndBuyer": {
         "required": [
           "lots",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -4009,6 +4014,7 @@
       "PaymentAdvice": {
         "required": [
           "paymentAdviceDetails",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -4091,6 +4097,7 @@
       "PaymentConfirmation": {
         "required": [
           "confirmations",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -4520,6 +4527,7 @@
       "RequestPostsalePrintingOfPresaleCertificates": {
         "required": [
           "printPreSaleCertificatePostSales",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -4831,6 +4839,7 @@
         "required": [
           "statementHeader",
           "statementTrailer",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -4912,7 +4921,7 @@
           },
           "data": {
             "type": "string",
-            "description": "Contains response data.",
+            "description": "Contains response data.The response data is a JSON Web Encryption Set (JWKS), ref: https://datatracker.ietf.org/doc/html/rfc7517, formatted as a string.",
             "nullable": true
           }
         },
@@ -4996,6 +5005,7 @@
       },
       "TestCertificateRequests": {
         "required": [
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -5041,6 +5051,7 @@
       },
       "TestCertificateUpdate": {
         "required": [
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -5148,6 +5159,7 @@
       "TestCertificates": {
         "required": [
           "testCertificateDetails",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -5576,6 +5588,7 @@
       },
       "TestRequestsVerification": {
         "required": [
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -5679,6 +5692,7 @@
       },
       "TestStatus": {
         "required": [
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",
@@ -5784,6 +5798,7 @@
       "Text": {
         "required": [
           "comments",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",

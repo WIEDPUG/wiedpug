@@ -45,6 +45,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = 72001967184
                         },
+                                        TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                         Lots = new List<Lot>
                         {
                             new Lot
@@ -208,6 +212,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = 72001967184
                         },
+                                        TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                                                 Lots = new List<Lot>
                         {
                             new Lot

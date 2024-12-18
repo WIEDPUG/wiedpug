@@ -38,6 +38,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = 72001967184
                         },
+                                        TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                          WoolSales = new List<WoolSale>()
                         {
                              new WoolSale
@@ -324,6 +328,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = 72001967184
                         },
+                                        TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                          WoolSales = new List<WoolSale>()
                         {
                              new WoolSale

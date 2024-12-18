@@ -131,6 +131,10 @@ namespace Wiedpug.API.ExampleResponses
                             },
                             Abn = 72001967184
                         },
+                                        TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                         Comments = new List<Comment>
                         {
                             new Comment

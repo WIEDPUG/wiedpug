@@ -36,83 +36,1268 @@
               "example": [
                 {
                   "transmissionHeader": {
-                    "dateFormatLastRevised": "2020-07-15",
-                    "dateTransmissionFileCreated": "2016-01-17",
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
                     "countryOfOrigin": "AU",
                     "documentOriginator": {
-                      "organisationCode": "ABC"
+                      "organisationCode": "AAA",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "F"
+                      }
                     },
                     "currentReceiver": {
-                      "organisationCode": "ATW"
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
-                    "versionNumber": "1.10.1",
-                    "softwareIdentifier": {
-                      "softwareCompany": 1,
-                      "softwareVersion": 1082,
-                      "programName": "NETR"
-                    },
-                    "abn": 72001967184
+                    "versionNumber": "1.0.0",
+                    "abn": 10000000000
                   },
                   "lots": [
                     {
                       "woolSaleHeaderLot": {
-                        "season": 16,
-                        "saleIdentity": {
-                          "sellingCentreType": "M",
-                          "saleNumber": 18
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
                         },
                         "centreStorage": {
                           "countryCode": "AU",
-                          "centreCode": "A"
+                          "centreCode": "F"
                         },
-                        "saleDate": "2017-01-10",
-                        "woolState": "1",
-                        "packType": "9",
-                        "catalogueSection": "FLC",
-                        "isFinalCatalogue": true,
+                        "invoiceNumber": "        ",
                         "invoicingOrganisation": {
-                          "organisationCode": "ABC"
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
                         },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
                         "releasingOrganisation": {
-                          "organisationCode": "AWC"
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
                         },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
                         "sellingOrganisation": {
-                          "organisationCode": "ABC"
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
                         },
-                        "woolTypeGroup": "MSKT",
-                        "centreCatalogue": {
-                          "countryCode": "AU",
-                          "centreCode": "A"
-                        }
+                        "woolState": "1",
+                        "woolTypeGroup": "MSKT"
                       },
                       "lotPriceAndBuyerDetails": [
                         {
-                          "lotIdentity": "123456",
-                          "costPerWeightUnit": 110,
-                          "buyingOrganisation": {
-                            "organisationCode": "WWT"
-                          },
                           "saleOutcome": 0,
-                          "auctionSaleTime": "2024-03-21T19:25:04Z"
-                        },
-                        {
-                          "lotIdentity": "123468",
-                          "costPerWeightUnit": 150,
+                          "lotIdentity": "516",
                           "buyingOrganisation": {
-                            "organisationCode": "AAT"
+                            "organisationCode": "ZZZ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
                           },
-                          "saleOutcome": 0,
-                          "auctionSaleTime": "2024-05-22T19:30:00Z"
+                          "costPerWeightUnit": 740,
+                          "auctionSaleTime": "2024-01-01T10:40:00Z"
                         }
                       ],
                       "recordSaleStatus": {
-                        "fileCreationDateTime": "2024-05-22T20:30:00Z",
-                        "totalLotsOffered": 2,
-                        "percentageSold": 100,
-                        "areTransfersCompleted": true
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 43,
+                        "totalLotsOffered": 99
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MFLC"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "802",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 650,
+                          "auctionSaleTime": "2024-01-01T10:42:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "803",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 570,
+                          "auctionSaleTime": "2024-01-01T10:42:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 43,
+                        "totalLotsOffered": 99
                       }
                     }
-                  ]
+                  ],
+                  "transferConfig": {
+                    "transferType": "Unrestrict"
+                  }
+                },
+                {
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "CCC",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "F"
+                      }
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "versionNumber": "1.0.0",
+                    "abn": 10000000000
+                  },
+                  "lots": [
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MSKT"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2001",
+                          "buyingOrganisation": {
+                            "organisationCode": "XXX",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "costPerWeightUnit": 669,
+                          "auctionSaleTime": "2024-01-01T10:42:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2002",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 500,
+                          "auctionSaleTime": "2024-01-01T10:42:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2003",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 879,
+                          "auctionSaleTime": "2024-01-01T10:42:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2004",
+                          "buyingOrganisation": {
+                            "organisationCode": "ZZZ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 570,
+                          "auctionSaleTime": "2024-01-01T10:42:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2005",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 630,
+                          "auctionSaleTime": "2024-01-01T10:43:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2006",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 613,
+                          "auctionSaleTime": "2024-01-01T10:43:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2007",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 570,
+                          "auctionSaleTime": "2024-01-01T10:43:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MFLC"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2008",
+                          "buyingOrganisation": {
+                            "organisationCode": "BBB",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 560,
+                          "auctionSaleTime": "2024-01-01T10:43:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MSKT"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2009",
+                          "buyingOrganisation": {
+                            "organisationCode": "ZZZ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 500,
+                          "auctionSaleTime": "2024-01-01T10:43:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2010",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 810,
+                          "auctionSaleTime": "2024-01-01T10:43:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2012",
+                          "buyingOrganisation": {
+                            "organisationCode": "UUU",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 790,
+                          "auctionSaleTime": "2024-01-01T10:44:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2013",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 458,
+                          "auctionSaleTime": "2024-01-01T10:44:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2014",
+                          "buyingOrganisation": {
+                            "organisationCode": "ZZZ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 780,
+                          "auctionSaleTime": "2024-01-01T10:44:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2015",
+                          "buyingOrganisation": {
+                            "organisationCode": "BBB",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 628,
+                          "auctionSaleTime": "2024-01-01T10:44:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2016",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 654,
+                          "auctionSaleTime": "2024-01-01T10:45:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MFLC"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2017",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 860,
+                          "auctionSaleTime": "2024-01-01T10:45:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MSKT"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2018",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 937,
+                          "auctionSaleTime": "2024-01-01T10:45:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2019",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 677,
+                          "auctionSaleTime": "2024-01-01T10:45:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MFLC"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "2021",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 790,
+                          "auctionSaleTime": "2024-01-01T10:59:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MSKT"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 1,
+                          "lotIdentity": "2035",
+                          "buyingOrganisation": {
+                            "organisationCode": "UUU",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 540,
+                          "auctionSaleTime": "2024-01-01T10:59:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "ODDS"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3001",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 700,
+                          "auctionSaleTime": "2024-01-01T10:47:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3002",
+                          "buyingOrganisation": {
+                            "organisationCode": "SSS",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 360,
+                          "auctionSaleTime": "2024-01-01T10:47:00Z"
+                        },
+                        {
+                          "saleOutcome": 1,
+                          "lotIdentity": "3003",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 439,
+                          "auctionSaleTime": "2024-01-01T10:47:00Z"
+                        },
+                        {
+                          "saleOutcome": 1,
+                          "lotIdentity": "3004",
+                          "buyingOrganisation": {
+                            "organisationCode": "BBB",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 150,
+                          "auctionSaleTime": "2024-01-01T10:47:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3005",
+                          "buyingOrganisation": {
+                            "organisationCode": "BBB",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 250,
+                          "auctionSaleTime": "2024-01-01T10:47:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3007",
+                          "buyingOrganisation": {
+                            "organisationCode": "SSS",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 610,
+                          "auctionSaleTime": "2024-01-01T10:47:00Z"
+                        },
+                        {
+                          "saleOutcome": 1,
+                          "lotIdentity": "3008",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 900,
+                          "auctionSaleTime": "2024-01-01T10:48:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3009",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 380,
+                          "auctionSaleTime": "2024-01-01T10:48:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3010",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 390,
+                          "auctionSaleTime": "2024-01-01T10:48:00Z"
+                        },
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3011",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 1040,
+                          "auctionSaleTime": "2024-01-01T10:48:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MSKT"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3014",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 990,
+                          "auctionSaleTime": "2024-01-01T10:48:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "ODDS"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3015",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 590,
+                          "auctionSaleTime": "2024-01-01T10:48:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MFLC"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3016",
+                          "buyingOrganisation": {
+                            "organisationCode": "YYY",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "costPerWeightUnit": 848,
+                          "auctionSaleTime": "2024-01-01T10:48:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    },
+                    {
+                      "woolSaleHeaderLot": {
+                        "centreCatalogue": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "centreStorage": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        },
+                        "invoiceNumber": "        ",
+                        "invoicingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "isFinalCatalogue": false,
+                        "packType": "0",
+                        "releasingOrganisation": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "saleDate": "2024-01-01",
+                        "saleIdentity": {
+                          "sellingCentreType": "F",
+                          "saleNumber": 99
+                        },
+                        "season": 23,
+                        "sellingOrganisation": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "woolState": "1",
+                        "woolTypeGroup": "MSKT"
+                      },
+                      "lotPriceAndBuyerDetails": [
+                        {
+                          "saleOutcome": 0,
+                          "lotIdentity": "3017",
+                          "buyingOrganisation": {
+                            "organisationCode": "VVV",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "costPerWeightUnit": 703,
+                          "auctionSaleTime": "2024-01-01T10:49:00Z"
+                        }
+                      ],
+                      "recordSaleStatus": {
+                        "areTransfersCompleted": false,
+                        "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                        "percentageSold": 60,
+                        "totalLotsOffered": 80
+                      }
+                    }
+                  ],
+                  "transferConfig": {
+                    "transferType": "Unrestrict"
+                  }
                 }
               ]
             }
@@ -235,36 +1420,37 @@
               "example": [
                 {
                   "transmissionHeader": {
-                    "dateFormatLastRevised": "2020-07-15",
-                    "dateTransmissionFileCreated": "2016-01-17",
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
                     "countryOfOrigin": "AU",
                     "documentOriginator": {
-                      "organisationCode": "ABC"
+                      "organisationCode": "ABC",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
                     "currentReceiver": {
-                      "organisationCode": "ATW"
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
-                    "versionNumber": "1.10.1",
-                    "softwareIdentifier": {
-                      "softwareCompany": 8,
-                      "softwareVersion": 1082,
-                      "programName": "NETR"
-                    },
-                    "abn": 72001967184
+                    "versionNumber": "1.0.0",
+                    "abn": 10000000000
+                  },
+                  "requestForDataType": {
+                    "isUsingNetworkDateTime": "true"
                   },
                   "woolSaleRequestForDataType": {
                     "saleIdentity": {
-                      "sellingCentreType": "M",
-                      "saleNumber": 18
+                      "sellingCentreType": "F",
+                      "saleNumber": 99
                     },
-                    "organisationRequested": {
-                      "organisationCode": "ANF"
-                    },
-                    "saleDateRequested": "2023-10-31",
-                    "woolTypeGroup": "MFLC",
+                    "woolTypeGroup": "",
                     "season": 23
-                  },
-                  "requestForDataType": {}
+                  }
                 }
               ]
             }
@@ -283,87 +1469,1295 @@
                   }
                 },
                 "example": {
-                  "apiMessages": [],
                   "data": [
                     {
-                      "transmissionHeader": {
-                        "dateFormatLastRevised": "2020-07-15",
-                        "dateTransmissionFileCreated": "2016-01-17",
-                        "countryOfOrigin": "AU",
-                        "documentOriginator": {
-                          "organisationCode": "ABC"
-                        },
-                        "currentReceiver": {
-                          "organisationCode": "ATW"
-                        },
-                        "versionNumber": "1.10.1",
-                        "softwareIdentifier": {
-                          "softwareCompany": 1,
-                          "softwareVersion": 1082,
-                          "programName": "NETR"
-                        },
-                        "abn": 72001967184
-                      },
                       "lots": [
                         {
-                          "woolSaleHeaderLot": {
-                            "season": 16,
-                            "saleIdentity": {
-                              "sellingCentreType": "M",
-                              "saleNumber": 18
-                            },
-                            "centreStorage": {
-                              "countryCode": "AU",
-                              "centreCode": "A"
-                            },
-                            "saleDate": "2017-01-10",
-                            "woolState": "1",
-                            "packType": "9",
-                            "catalogueSection": "FLC",
-                            "isFinalCatalogue": true,
-                            "invoicingOrganisation": {
-                              "organisationCode": "ABC"
-                            },
-                            "releasingOrganisation": {
-                              "organisationCode": "ATS"
-                            },
-                            "sellingOrganisation": {
-                              "organisationCode": "ABC"
-                            },
-                            "woolTypeGroup": "MSKT",
-                            "centreCatalogue": {
-                              "countryCode": "AU",
-                              "centreCode": "A"
-                            }
-                          },
                           "lotPriceAndBuyerDetails": [
                             {
-                              "lotIdentity": "123456",
-                              "costPerWeightUnit": 110,
-                              "buyingOrganisation": {
-                                "organisationCode": "WWT"
-                              },
                               "saleOutcome": 0,
-                              "auctionSaleTime": "2024-05-22T19:25:04Z"
-                            },
-                            {
-                              "lotIdentity": "123468",
-                              "costPerWeightUnit": 150,
+                              "lotIdentity": "516",
                               "buyingOrganisation": {
-                                "organisationCode": "AAT"
+                                "organisationCode": "ZZZ",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
                               },
-                              "saleOutcome": 0,
-                              "auctionSaleTime": "2024-05-22T19:30:00Z"
+                              "costPerWeightUnit": 740,
+                              "auctionSaleTime": "2024-01-01T10:40:00Z"
                             }
                           ],
                           "recordSaleStatus": {
-                            "fileCreationDateTime": "2024-05-22T20:30:00Z",
-                            "totalLotsOffered": 2,
-                            "percentageSold": 100,
-                            "areTransfersCompleted": true
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 99,
+                            "percentageSold": 43
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "AAA",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "AAA",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "AAA",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MSKT",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "802",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 650,
+                              "auctionSaleTime": "2024-01-01T10:42:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "803",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 570,
+                              "auctionSaleTime": "2024-01-01T10:42:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 99,
+                            "percentageSold": 43
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "AAA",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "AAA",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "AAA",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MFLC",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
                           }
                         }
-                      ]
+                      ],
+                      "transmissionHeader": {
+                        "documentOriginator": {
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "ABC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "dateFormatLastRevised": "2024-08-05",
+                        "softwareIdentifier": {
+                          "softwareCompany": 8
+                        },
+                        "dateTransmissionFileCreated": "2024-12-09",
+                        "countryOfOrigin": "AU",
+                        "abn": 43006014106,
+                        "versionNumber": "1.0.0"
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "ABC",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
+                      }
+                    },
+                    {
+                      "lots": [
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2001",
+                              "buyingOrganisation": {
+                                "organisationCode": "XXX",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "S"
+                                }
+                              },
+                              "costPerWeightUnit": 669,
+                              "auctionSaleTime": "2024-01-01T10:42:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2002",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 500,
+                              "auctionSaleTime": "2024-01-01T10:42:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2003",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 879,
+                              "auctionSaleTime": "2024-01-01T10:42:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2004",
+                              "buyingOrganisation": {
+                                "organisationCode": "ZZZ",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 570,
+                              "auctionSaleTime": "2024-01-01T10:42:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2005",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 630,
+                              "auctionSaleTime": "2024-01-01T10:43:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2006",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 613,
+                              "auctionSaleTime": "2024-01-01T10:43:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2007",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 570,
+                              "auctionSaleTime": "2024-01-01T10:43:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MSKT",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2008",
+                              "buyingOrganisation": {
+                                "organisationCode": "BBB",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 560,
+                              "auctionSaleTime": "2024-01-01T10:43:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MFLC",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2009",
+                              "buyingOrganisation": {
+                                "organisationCode": "ZZZ",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 500,
+                              "auctionSaleTime": "2024-01-01T10:43:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2010",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 810,
+                              "auctionSaleTime": "2024-01-01T10:43:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2012",
+                              "buyingOrganisation": {
+                                "organisationCode": "UUU",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 790,
+                              "auctionSaleTime": "2024-01-01T10:44:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2013",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 458,
+                              "auctionSaleTime": "2024-01-01T10:44:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2014",
+                              "buyingOrganisation": {
+                                "organisationCode": "ZZZ",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 780,
+                              "auctionSaleTime": "2024-01-01T10:44:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2015",
+                              "buyingOrganisation": {
+                                "organisationCode": "BBB",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 628,
+                              "auctionSaleTime": "2024-01-01T10:44:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2016",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 654,
+                              "auctionSaleTime": "2024-01-01T10:45:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MSKT",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2017",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 860,
+                              "auctionSaleTime": "2024-01-01T10:45:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MFLC",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2018",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 937,
+                              "auctionSaleTime": "2024-01-01T10:45:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2019",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 677,
+                              "auctionSaleTime": "2024-01-01T10:45:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MSKT",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "2021",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 790,
+                              "auctionSaleTime": "2024-01-01T10:59:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MFLC",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 1,
+                              "lotIdentity": "2035",
+                              "buyingOrganisation": {
+                                "organisationCode": "UUU",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 540,
+                              "auctionSaleTime": "2024-01-01T10:59:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MSKT",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3001",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 700,
+                              "auctionSaleTime": "2024-01-01T10:47:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3002",
+                              "buyingOrganisation": {
+                                "organisationCode": "SSS",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 360,
+                              "auctionSaleTime": "2024-01-01T10:47:00Z"
+                            },
+                            {
+                              "saleOutcome": 1,
+                              "lotIdentity": "3003",
+                              "buyingOrganisation": {
+                                "organisationCode": "TTT",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 439,
+                              "auctionSaleTime": "2024-01-01T10:47:00Z"
+                            },
+                            {
+                              "saleOutcome": 1,
+                              "lotIdentity": "3004",
+                              "buyingOrganisation": {
+                                "organisationCode": "BBB",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 150,
+                              "auctionSaleTime": "2024-01-01T10:47:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3005",
+                              "buyingOrganisation": {
+                                "organisationCode": "BBB",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 250,
+                              "auctionSaleTime": "2024-01-01T10:47:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3007",
+                              "buyingOrganisation": {
+                                "organisationCode": "SSS",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 610,
+                              "auctionSaleTime": "2024-01-01T10:47:00Z"
+                            },
+                            {
+                              "saleOutcome": 1,
+                              "lotIdentity": "3008",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 900,
+                              "auctionSaleTime": "2024-01-01T10:48:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3009",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 380,
+                              "auctionSaleTime": "2024-01-01T10:48:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3010",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 390,
+                              "auctionSaleTime": "2024-01-01T10:48:00Z"
+                            },
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3011",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 1040,
+                              "auctionSaleTime": "2024-01-01T10:48:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "ODDS",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3014",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 990,
+                              "auctionSaleTime": "2024-01-01T10:48:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MSKT",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3015",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 590,
+                              "auctionSaleTime": "2024-01-01T10:48:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "ODDS",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3016",
+                              "buyingOrganisation": {
+                                "organisationCode": "YYY",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "M"
+                                }
+                              },
+                              "costPerWeightUnit": 848,
+                              "auctionSaleTime": "2024-01-01T10:48:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MFLC",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        },
+                        {
+                          "lotPriceAndBuyerDetails": [
+                            {
+                              "saleOutcome": 0,
+                              "lotIdentity": "3017",
+                              "buyingOrganisation": {
+                                "organisationCode": "VVV",
+                                "centre": {
+                                  "countryCode": "AU",
+                                  "centreCode": "F"
+                                }
+                              },
+                              "costPerWeightUnit": 703,
+                              "auctionSaleTime": "2024-01-01T10:49:00Z"
+                            }
+                          ],
+                          "recordSaleStatus": {
+                            "fileCreationDateTime": "2024-01-01T10:51:00Z",
+                            "areTransfersCompleted": false,
+                            "totalLotsOffered": 80,
+                            "percentageSold": 60
+                          },
+                          "woolSaleHeaderLot": {
+                            "invoicingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "isFinalCatalogue": false,
+                            "woolState": "1",
+                            "centreStorage": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            },
+                            "sellingOrganisation": {
+                              "organisationCode": "CCC",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "packType": "0",
+                            "saleDate": "2024-01-01",
+                            "releasingOrganisation": {
+                              "organisationCode": "BBB",
+                              "centre": {
+                                "countryCode": "AU",
+                                "centreCode": "F"
+                              }
+                            },
+                            "saleIdentity": {
+                              "sellingCentreType": "F",
+                              "saleNumber": 99
+                            },
+                            "invoiceNumber": "        ",
+                            "woolTypeGroup": "MSKT",
+                            "season": 23,
+                            "centreCatalogue": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          }
+                        }
+                      ],
+                      "transmissionHeader": {
+                        "documentOriginator": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "F"
+                          }
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "ABC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "dateFormatLastRevised": "2024-08-05",
+                        "softwareIdentifier": {
+                          "softwareCompany": 8
+                        },
+                        "dateTransmissionFileCreated": "2024-12-09",
+                        "countryOfOrigin": "AU",
+                        "abn": 43006014106,
+                        "versionNumber": "1.0.0"
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "ABC",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
+                      }
                     }
                   ]
                 }
@@ -488,6 +2882,7 @@
       "LotPriceAndBuyer": {
         "required": [
           "lots",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",

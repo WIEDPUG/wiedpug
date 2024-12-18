@@ -25,13 +25,11 @@ paths:
             schema:
               $ref: "#/components/schemas/KeyDataRequest"
             example:
-              encryptionKey: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
-                [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"],\
-                \"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
-                \"AQAB\",\"kid\":
-                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"x5t\
-                \":
-                \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+              encryptionKey: '{"alg": "RS256","kty": "RSA","use": "enc","x5c":
+                ["MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo="],"n":
+                "yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ","e": "AQAB","kid":
+                "NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg","x5t":
+                "NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg"}'
               organisation:
                 organisationCode: AWE
         required: true
@@ -131,13 +129,11 @@ paths:
                 $ref: "#/components/schemas/StringApiResult"
               example:
                 apiMessages: []
-                data: "'{\"alg\": \"RS256\",\"kty\": \"RSA\",\"use\": \"enc\",\"x5c\":
-                  [\"MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo=\"\
-                  ],\"n\": \"yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ\",\"e\":
-                  \"AQAB\",\"kid\":
-                  \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\",\"\
-                  x5t\":
-                  \"NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg\"}'"
+                data: '{"alg": "RS256","kty": "RSA","use": "enc","x5c":
+                  ["MIIC+DCCAeCgAwIBAgIJBIGjYW6hFpn2MA…2sc2mlq1i3IashGkkgmo="],"n":
+                  "yeNlzlub94YgerT030codqEztjfU…W3HoBdjQ","e": "AQAB","kid":
+                  "NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg","x5t":
+                  "NjVBRjY5MDlCMUIwNzU4RTA2QzZFMDQ4QzQ2MDAyQjVDNjk1RTM2Qg"}'
         "204":
           description: No Content
           content:
@@ -1033,7 +1029,9 @@ components:
           nullable: true
         data:
           type: string
-          description: Contains response data.
+          description: "Contains response data.The response data is a JSON Web Encryption
+            Set (JWKS), ref: https://datatracker.ietf.org/doc/html/rfc7517,
+            formatted as a string."
           nullable: true
       additionalProperties: false
       description: A standard API response object used for all successful API responses

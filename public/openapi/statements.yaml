@@ -1273,7 +1273,7 @@ paths:
                   versionNumber: 1.0.0
                   abn: 0
                 requestForDataType:
-                  isUsingNetworkDateTime: true
+                  isUsingNetworkDateTime: "true"
         required: true
       responses:
         "200":
@@ -1304,6 +1304,13 @@ paths:
                       softwareIdentifier:
                         softwareCompany: 8
                       abn: 43006014106
+                    transferConfig:
+                      finalReceiverList:
+                        - organisationCode: AAA
+                          centre:
+                            countryCode: AU
+                            centreCode: S
+                      transferType: Restrict
                     statementHeader:
                       clientCode: 59999
                       client:
@@ -1596,6 +1603,7 @@ components:
       required:
         - statementHeader
         - statementTrailer
+        - transferConfig
         - transmissionHeader
       type: object
       properties:

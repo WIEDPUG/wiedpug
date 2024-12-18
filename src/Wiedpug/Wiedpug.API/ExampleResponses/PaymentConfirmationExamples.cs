@@ -37,6 +37,10 @@ namespace Wiedpug.API.ExampleResponses
                     },
                     Abn = 72001967184
                 },
+                                TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                 Confirmations = new List<Confirmation>{
                     new Confirmation {
                         PaymentHeader = new PaymentHeader
@@ -149,6 +153,10 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = 72001967184
                     },
+                                    TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                     Confirmations = new List<Confirmation>{
                     new Confirmation {
                         PaymentHeader = new PaymentHeader

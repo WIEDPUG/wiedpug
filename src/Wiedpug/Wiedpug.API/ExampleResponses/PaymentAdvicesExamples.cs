@@ -188,6 +188,10 @@ namespace Wiedpug.API.ExampleResponses
                         },
                         Abn = 72001967184
                     },
+                                                                TransferConfig = new TransferConfig
+                {
+                   TransferType = TransferType.Unrestrict
+                },
                     PaymentAdviceDetails = new List<PaymentAdviceDetail>
                 {
                     new PaymentAdviceDetail

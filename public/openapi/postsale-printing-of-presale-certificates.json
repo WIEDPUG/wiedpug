@@ -35,58 +35,1706 @@
               },
               "example": [
                 {
-                  "transmissionHeader": {
-                    "dateFormatLastRevised": "2020-07-15",
-                    "dateTransmissionFileCreated": "2016-01-17",
-                    "countryOfOrigin": "AU",
-                    "documentOriginator": {
-                      "organisationCode": "ATW"
-                    },
-                    "currentReceiver": {
-                      "organisationCode": "ATW"
-                    },
-                    "versionNumber": "1.10.1",
-                    "softwareIdentifier": {
-                      "softwareCompany": 1,
-                      "softwareVersion": 1082,
-                      "programName": "NETR"
-                    },
-                    "abn": 72001967184
-                  },
-                  "confirmations": [
+                  "printPreSaleCertificatePostSales": [
                     {
-                      "paymentHeader": {
-                        "clientCode": 55674,
-                        "statementDate": "2024-05-11",
-                        "amountRemitted": {
-                          "value": 262,
-                          "currencyCode": "AUD"
-                        },
-                        "statementPaymentDate": "2024-06-01",
-                        "bankBsbNumber": 335567,
-                        "bankAccountNumber": 456735,
-                        "amountWithheldThisStatement": {
-                          "value": 690.45,
-                          "currencyCode": "AUD"
-                        },
-                        "amountWithheldPreviousStatements": {
-                          "value": 672.23,
-                          "currencyCode": "AUD"
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
                         }
                       },
-                      "paymentDetails": [
-                        {
-                          "statementDate": "2024-05-12",
-                          "accountReference": "12345678901",
-                          "amount": {
-                            "value": 723.23,
-                            "currencyCode": "AUD"
-                          },
-                          "paymentType": 0
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 15811511,
+                        "certificateIdCd": 7,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 865,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "000901",
+                      "numberOfBales": 4,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9993475
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
                         }
-                      ]
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 15812213,
+                        "certificateIdCd": 9,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 865,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "000901",
+                      "numberOfBales": 4,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9993475
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 15901640,
+                        "certificateIdCd": 5,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 656,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "000902",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 815462
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 15904496,
+                        "certificateIdCd": 9,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 656,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "000902",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9995462
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "KKK",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 15902190,
+                        "certificateIdCd": 0,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 753,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "002903",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9995465
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "KKK",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 15904492,
+                        "certificateIdCd": 8,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 753,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "002903",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9995465
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 15973428,
+                        "certificateIdCd": 8,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1568,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "000904",
+                      "numberOfBales": 8,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9990921
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 15973429,
+                        "certificateIdCd": 6,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1568,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "000904",
+                      "numberOfBales": 8,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9990921
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "NNN",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 15902203,
+                        "certificateIdCd": 1,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 543,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "002905",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9995467
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "NNN",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 15904498,
+                        "certificateIdCd": 5,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 543,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "002905",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9995467
+                      }
                     }
-                  ]
+                  ],
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "AAA",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "versionNumber": "1.0.0",
+                    "abn": 72009999921
+                  },
+                  "transferConfig": {
+                    "finalReceiverList": [
+                      {
+                        "organisationCode": "AWT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      }
+                    ],
+                    "transferType": "Restrict"
+                  }
+                },
+                {
+                  "printPreSaleCertificatePostSales": [
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16149472,
+                        "certificateIdCd": 3,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 2739,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001906",
+                      "numberOfBales": 14,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999479
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16149473,
+                        "certificateIdCd": 1,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 2739,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001906",
+                      "numberOfBales": 14,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999479
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "D",
+                        "certificateIdNumber": 16141313,
+                        "certificateIdCd": 7,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 560,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001907",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998039
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16141314,
+                        "certificateIdCd": 5,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 560,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001907",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998039
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "D",
+                        "certificateIdNumber": 16143886,
+                        "certificateIdCd": 0,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 3322,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001908",
+                      "numberOfBales": 17,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998041
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16143887,
+                        "certificateIdCd": 8,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 3322,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001908",
+                      "numberOfBales": 17,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998041
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "NNN",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16149548,
+                        "certificateIdCd": 0,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 2689,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001909",
+                      "numberOfBales": 14,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999480
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "NNN",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16149549,
+                        "certificateIdCd": 8,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 2689,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001909",
+                      "numberOfBales": 14,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999480
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "OOO",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16149550,
+                        "certificateIdCd": 6,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 578,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001910",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999481
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "OOO",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16149551,
+                        "certificateIdCd": 4,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 578,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001910",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999481
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "OOO",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16147944,
+                        "certificateIdCd": 3,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 395,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001911",
+                      "numberOfBales": 2,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999486
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "OOO",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16147945,
+                        "certificateIdCd": 0,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 395,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001911",
+                      "numberOfBales": 2,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999486
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "PPP",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16149474,
+                        "certificateIdCd": 9,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 924,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001912",
+                      "numberOfBales": 5,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999476
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "PPP",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "F"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16149475,
+                        "certificateIdCd": 6,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 924,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001912",
+                      "numberOfBales": 5,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999476
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "QQQ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16147953,
+                        "certificateIdCd": 4,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 361,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001913",
+                      "numberOfBales": 2,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999477
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "QQQ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "B"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16149554,
+                        "certificateIdCd": 8,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1062,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "005913",
+                      "numberOfBales": 6,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999491
+                      }
+                    }
+                  ],
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "BBB",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "versionNumber": "1.0.0",
+                    "abn": 72009999921
+                  },
+                  "transferConfig": {
+                    "finalReceiverList": [
+                      {
+                        "organisationCode": "AWT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      }
+                    ],
+                    "transferType": "Restrict"
+                  }
+                },
+                {
+                  "printPreSaleCertificatePostSales": [
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16135285,
+                        "certificateIdCd": 5,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1738,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001914",
+                      "numberOfBales": 9,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999650
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "JJJ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16135286,
+                        "certificateIdCd": 3,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1738,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001914",
+                      "numberOfBales": 9,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999650
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "KKK",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16152645,
+                        "certificateIdCd": 8,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 569,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "003915",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998442
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "KKK",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16152646,
+                        "certificateIdCd": 6,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 569,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "003915",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998442
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "KKK",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "S"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16152624,
+                        "certificateIdCd": 3,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 537,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "003916",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998819
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16020028,
+                        "certificateIdCd": 7,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 996,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001917",
+                      "numberOfBales": 5,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999932
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "LLL",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16020313,
+                        "certificateIdCd": 3,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 996,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "001917",
+                      "numberOfBales": 5,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999932
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "TTT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16155333,
+                        "certificateIdCd": 8,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1057,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "003918",
+                      "numberOfBales": 6,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9990625
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "TTT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "D",
+                        "certificateIdNumber": 16161318,
+                        "certificateIdCd": 1,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 595,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "005919",
+                      "numberOfBales": 3,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9999589
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "TTT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 15994827,
+                        "certificateIdCd": 6,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 335,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "005920",
+                      "numberOfBales": 2,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9991324
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "TTT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "D",
+                        "certificateIdNumber": 16153383,
+                        "certificateIdCd": 5,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1724,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "005921",
+                      "numberOfBales": 9,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9991132
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "TTT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16153921,
+                        "certificateIdCd": 2,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1160,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "005922",
+                      "numberOfBales": 6,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9991133
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "TTT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16153423,
+                        "certificateIdCd": 9,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 699,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "005923",
+                      "numberOfBales": 4,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9990269
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "TTT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 15921704,
+                        "certificateIdCd": 5,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 248,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "005924",
+                      "numberOfBales": 2,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9991504
+                      }
+                    }
+                  ],
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "BBB",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "A"
+                      }
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "versionNumber": "1.0.0",
+                    "abn": 72009999921
+                  },
+                  "transferConfig": {
+                    "finalReceiverList": [
+                      {
+                        "organisationCode": "AWT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      }
+                    ],
+                    "transferType": "Restrict"
+                  }
+                },
+                {
+                  "printPreSaleCertificatePostSales": [
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "QQQ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "P",
+                        "certificateIdNumber": 16146704,
+                        "certificateIdCd": 2,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1539,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "004925",
+                      "numberOfBales": 8,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998233
+                      }
+                    },
+                    {
+                      "buyingOrganisation": {
+                        "organisationCode": "QQQ",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      },
+                      "centreStorage": {
+                        "countryCode": "AU",
+                        "centreCode": "G"
+                      },
+                      "certificateDeliveryIndicator": 0,
+                      "certificateIdentity": {
+                        "certificateIdSuffix": "L",
+                        "certificateIdNumber": 16148764,
+                        "certificateIdCd": 4,
+                        "certificateIdPrefix": 3
+                      },
+                      "gross": {
+                        "value": 1539,
+                        "weightCode": "KG"
+                      },
+                      "isPrintingTeam3Hauteur": false,
+                      "lotIdentity": "004925",
+                      "numberOfBales": 8,
+                      "printFlag": "Normal",
+                      "saleIdentity": {
+                        "sellingCentreType": "M",
+                        "saleNumber": 22
+                      },
+                      "saleOutcome": 0,
+                      "weightNote": {
+                        "prefix": "0",
+                        "suffix": 9998233
+                      }
+                    }
+                  ],
+                  "transmissionHeader": {
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
+                    "countryOfOrigin": "AU",
+                    "documentOriginator": {
+                      "organisationCode": "CCC",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "currentReceiver": {
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
+                    },
+                    "versionNumber": "1.0.0",
+                    "abn": 72009999921
+                  },
+                  "transferConfig": {
+                    "finalReceiverList": [
+                      {
+                        "organisationCode": "AWT",
+                        "centre": {
+                          "countryCode": "AU",
+                          "centreCode": "M"
+                        }
+                      }
+                    ],
+                    "transferType": "Restrict"
+                  }
                 }
               ]
             }
@@ -209,24 +1857,29 @@
               "example": [
                 {
                   "transmissionHeader": {
-                    "dateFormatLastRevised": "2020-07-15",
-                    "dateTransmissionFileCreated": "2016-01-17",
+                    "dateFormatLastRevised": "2024-08-05",
+                    "dateTransmissionFileCreated": "2024-12-09",
                     "countryOfOrigin": "AU",
                     "documentOriginator": {
-                      "organisationCode": "ABC"
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
                     "currentReceiver": {
-                      "organisationCode": "ATW"
+                      "organisationCode": "AWT",
+                      "centre": {
+                        "countryCode": "AU",
+                        "centreCode": "M"
+                      }
                     },
-                    "versionNumber": "1.10.1",
-                    "softwareIdentifier": {
-                      "softwareCompany": 8,
-                      "softwareVersion": 1082,
-                      "programName": "NETR"
-                    },
-                    "abn": 72001967184
+                    "versionNumber": "1.0.0",
+                    "abn": 10000000000
                   },
-                  "requestForDataType": {}
+                  "requestForDataType": {
+                    "isUsingNetworkDateTime": true
+                  }
                 }
               ]
             }
@@ -245,60 +1898,1708 @@
                   }
                 },
                 "example": {
-                  "apiMessages": [],
                   "data": [
                     {
-                      "transmissionHeader": {
-                        "dateFormatLastRevised": "2020-07-15",
-                        "dateTransmissionFileCreated": "2016-01-17",
-                        "countryOfOrigin": "AU",
-                        "documentOriginator": {
-                          "organisationCode": "AWT"
-                        },
-                        "currentReceiver": {
-                          "organisationCode": "ATW"
-                        },
-                        "versionNumber": "1.10.1",
-                        "softwareIdentifier": {
-                          "softwareCompany": 1,
-                          "softwareVersion": 1082,
-                          "programName": "NETR"
-                        },
-                        "abn": 72001967184
-                      },
                       "printPreSaleCertificatePostSales": [
                         {
-                          "certificateIdentity": {
-                            "certificateIdPrefix": 2,
-                            "certificateIdNumber": 234567,
-                            "certificateIdSuffix": "F",
-                            "certificateIdCd": 6
-                          },
-                          "weightNote": {
-                            "prefix": "L",
-                            "suffix": 1234567
-                          },
-                          "lotIdentity": "45567L",
-                          "buyingOrganisation": {
-                            "organisationCode": "AWT"
-                          },
-                          "saleOutcome": 6,
-                          "numberOfBales": 23,
+                          "numberOfBales": 4,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
                           "gross": {
-                            "value": 2340,
+                            "value": 865,
                             "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
                           },
                           "saleIdentity": {
                             "sellingCentreType": "M",
-                            "saleNumber": 18
+                            "saleNumber": 22
                           },
+                          "lotIdentity": "000901",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9993475
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 15811511,
+                            "certificateIdCd": 7,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 4,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 865,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
                           "centreStorage": {
                             "countryCode": "AU",
-                            "centreCode": "AR"
+                            "centreCode": "G"
                           },
-                          "certificateDeliveryIndicator": 0
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "000901",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9993475
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 15812213,
+                            "certificateIdCd": 9,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 656,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "000902",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 815462
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 15901640,
+                            "certificateIdCd": 5,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 656,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "000902",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9995462
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 15904496,
+                            "certificateIdCd": 9,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 753,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "002903",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "KKK",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9995465
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 15902190,
+                            "certificateIdCd": 0,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 753,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "002903",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "KKK",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9995465
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 15904492,
+                            "certificateIdCd": 8,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 8,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1568,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "000904",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9990921
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 15973428,
+                            "certificateIdCd": 8,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 8,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1568,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "000904",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9990921
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 15973429,
+                            "certificateIdCd": 6,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 543,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "002905",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "NNN",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9995467
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 15902203,
+                            "certificateIdCd": 1,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 543,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "002905",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "NNN",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9995467
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 15904498,
+                            "certificateIdCd": 5,
+                            "certificateIdPrefix": 3
+                          }
                         }
-                      ]
+                      ],
+                      "transmissionHeader": {
+                        "documentOriginator": {
+                          "organisationCode": "AAA",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "AWT",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "dateFormatLastRevised": "2024-08-05",
+                        "dateTransmissionFileCreated": "2024-12-09",
+                        "countryOfOrigin": "AU",
+                        "abn": 10000000000,
+                        "versionNumber": "1.0.0"
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "AWT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
+                      }
+                    },
+                    {
+                      "printPreSaleCertificatePostSales": [
+                        {
+                          "numberOfBales": 14,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 2739,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001906",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999479
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16149472,
+                            "certificateIdCd": 3,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 14,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 2739,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001906",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999479
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16149473,
+                            "certificateIdCd": 1,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 560,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001907",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998039
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "D",
+                            "certificateIdNumber": 16141313,
+                            "certificateIdCd": 7,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 560,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001907",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998039
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16141314,
+                            "certificateIdCd": 5,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 17,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 3322,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001908",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998041
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "D",
+                            "certificateIdNumber": 16143886,
+                            "certificateIdCd": 0,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 17,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 3322,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001908",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998041
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16143887,
+                            "certificateIdCd": 8,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 14,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 2689,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001909",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "NNN",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999480
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16149548,
+                            "certificateIdCd": 0,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 14,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 2689,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001909",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "NNN",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999480
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16149549,
+                            "certificateIdCd": 8,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 578,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001910",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "OOO",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999481
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16149550,
+                            "certificateIdCd": 6,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 578,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001910",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "OOO",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999481
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16149551,
+                            "certificateIdCd": 4,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 2,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 395,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001911",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "OOO",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999486
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16147944,
+                            "certificateIdCd": 3,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 2,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 395,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001911",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "OOO",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999486
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16147945,
+                            "certificateIdCd": 0,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 5,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 924,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001912",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "PPP",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999476
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16149474,
+                            "certificateIdCd": 9,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 5,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 924,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001912",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "PPP",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "F"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999476
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16149475,
+                            "certificateIdCd": 6,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 2,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 361,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001913",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "QQQ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999477
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16147953,
+                            "certificateIdCd": 4,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 6,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1062,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "B"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "005913",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "QQQ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999491
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16149554,
+                            "certificateIdCd": 8,
+                            "certificateIdPrefix": 3
+                          }
+                        }
+                      ],
+                      "transmissionHeader": {
+                        "documentOriginator": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "AWT",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "dateFormatLastRevised": "2024-08-05",
+                        "dateTransmissionFileCreated": "2024-12-09",
+                        "countryOfOrigin": "AU",
+                        "abn": 10000000000,
+                        "versionNumber": "1.0.0"
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "AWT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
+                      }
+                    },
+                    {
+                      "printPreSaleCertificatePostSales": [
+                        {
+                          "numberOfBales": 9,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1738,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001914",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999650
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16135285,
+                            "certificateIdCd": 5,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 9,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1738,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001914",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "JJJ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999650
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16135286,
+                            "certificateIdCd": 3,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 569,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "003915",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "KKK",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998442
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16152645,
+                            "certificateIdCd": 8,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 569,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "003915",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "KKK",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998442
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16152646,
+                            "certificateIdCd": 6,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 537,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "003916",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "KKK",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998819
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16152624,
+                            "certificateIdCd": 3,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 5,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 996,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001917",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999932
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16020028,
+                            "certificateIdCd": 7,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 5,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 996,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "001917",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "LLL",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999932
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16020313,
+                            "certificateIdCd": 3,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 6,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1057,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "003918",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9990625
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16155333,
+                            "certificateIdCd": 8,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 3,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 595,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "005919",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9999589
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "D",
+                            "certificateIdNumber": 16161318,
+                            "certificateIdCd": 1,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 2,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 335,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "005920",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9991324
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 15994827,
+                            "certificateIdCd": 6,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 9,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1724,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "005921",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9991132
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "D",
+                            "certificateIdNumber": 16153383,
+                            "certificateIdCd": 5,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 6,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1160,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "005922",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9991133
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16153921,
+                            "certificateIdCd": 2,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 4,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 699,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "005923",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9990269
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16153423,
+                            "certificateIdCd": 9,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 2,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 248,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "005924",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "TTT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9991504
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 15921704,
+                            "certificateIdCd": 5,
+                            "certificateIdPrefix": 3
+                          }
+                        }
+                      ],
+                      "transmissionHeader": {
+                        "documentOriginator": {
+                          "organisationCode": "BBB",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "A"
+                          }
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "AWT",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "dateFormatLastRevised": "2024-08-05",
+                        "dateTransmissionFileCreated": "2024-12-09",
+                        "countryOfOrigin": "AU",
+                        "abn": 10000000000,
+                        "versionNumber": "1.0.0"
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "AWT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
+                      }
+                    },
+                    {
+                      "printPreSaleCertificatePostSales": [
+                        {
+                          "numberOfBales": 8,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1539,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "004925",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "QQQ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998233
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "P",
+                            "certificateIdNumber": 16146704,
+                            "certificateIdCd": 2,
+                            "certificateIdPrefix": 3
+                          }
+                        },
+                        {
+                          "numberOfBales": 8,
+                          "saleOutcome": 0,
+                          "certificateDeliveryIndicator": 0,
+                          "gross": {
+                            "value": 1539,
+                            "weightCode": "KG"
+                          },
+                          "isPrintingTeam3Hauteur": false,
+                          "centreStorage": {
+                            "countryCode": "AU",
+                            "centreCode": "G"
+                          },
+                          "saleIdentity": {
+                            "sellingCentreType": "M",
+                            "saleNumber": 22
+                          },
+                          "lotIdentity": "004925",
+                          "printFlag": "Normal",
+                          "buyingOrganisation": {
+                            "organisationCode": "QQQ",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          },
+                          "weightNote": {
+                            "prefix": "0",
+                            "suffix": 9998233
+                          },
+                          "certificateIdentity": {
+                            "certificateIdSuffix": "L",
+                            "certificateIdNumber": 16148764,
+                            "certificateIdCd": 4,
+                            "certificateIdPrefix": 3
+                          }
+                        }
+                      ],
+                      "transmissionHeader": {
+                        "documentOriginator": {
+                          "organisationCode": "CCC",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "currentReceiver": {
+                          "organisationCode": "AWT",
+                          "centre": {
+                            "countryCode": "AU",
+                            "centreCode": "M"
+                          }
+                        },
+                        "dateFormatLastRevised": "2024-08-05",
+                        "dateTransmissionFileCreated": "2024-12-09",
+                        "countryOfOrigin": "AU",
+                        "abn": 10000000000,
+                        "versionNumber": "1.0.0"
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "AWT",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "M"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
+                      }
                     }
                   ]
                 }
@@ -423,6 +3724,7 @@
       "RequestPostsalePrintingOfPresaleCertificates": {
         "required": [
           "printPreSaleCertificatePostSales",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",

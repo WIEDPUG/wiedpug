@@ -1794,7 +1794,7 @@
                     "abn": 0
                   },
                   "requestForDataType": {
-                    "isUsingNetworkDateTime": true
+                    "isUsingNetworkDateTime": "true"
                   }
                 }
               ]
@@ -1839,6 +1839,18 @@
                           "softwareCompany": 8
                         },
                         "abn": 43006014106
+                      },
+                      "transferConfig": {
+                        "finalReceiverList": [
+                          {
+                            "organisationCode": "AAA",
+                            "centre": {
+                              "countryCode": "AU",
+                              "centreCode": "S"
+                            }
+                          }
+                        ],
+                        "transferType": "Restrict"
                       },
                       "statementHeader": {
                         "clientCode": 59999,
@@ -2263,6 +2275,7 @@
         "required": [
           "statementHeader",
           "statementTrailer",
+          "transferConfig",
           "transmissionHeader"
         ],
         "type": "object",

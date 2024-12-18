@@ -28,68 +28,1838 @@ paths:
                 $ref: "#/components/schemas/PaymentAdvice"
             example:
               - transmissionHeader:
-                  dateFormatLastRevised: 2020-07-15
-                  dateTransmissionFileCreated: 2016-01-17
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
                   countryOfOrigin: AU
                   documentOriginator:
                     organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
                   currentReceiver:
-                    organisationCode: ATW
-                  versionNumber: 1.10.1
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
                   softwareIdentifier:
-                    softwareCompany: 1
-                    softwareVersion: 1082
-                    programName: NETR
-                  abn: 72001967184
-                transferConfig:
-                  transferType: Unrestrict
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
                 paymentAdviceDetails:
                   - woolSaleHeaderLot:
-                      season: 16
-                      saleIdentity:
-                        sellingCentreType: M
-                        saleNumber: 18
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: F
                       centreStorage:
                         countryCode: AU
-                        centreCode: A
-                      saleDate: 2017-01-10
-                      woolState: A
-                      packType: "2"
+                        centreCode: F
+                      invoiceNumber: "        "
                       invoicingOrganisation:
-                        organisationCode: ABC
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: F
+                        saleNumber: 22
+                      season: 23
                       sellingOrganisation:
-                        organisationCode: ABC
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "17 XXXXX DRIVE "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "997"
+                        lotLastCost:
+                          value: 2236.41
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 2236.41
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 2236.41
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: AAA
+                      centre:
+                        countryCode: AU
+                        centreCode: F
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
                       centreCatalogue:
                         countryCode: AU
                         centreCode: A
-                      storageOrganisation:
-                        organisationCode: ABC
-                      storageDescription: 45 MAIN ST
-                      discountRate: 1.5
-                      maximumDaysDiscount: 0
-                      dateStorageChargeCommences: 2017-01-24
-                      storageChargePerBalePerDay:
-                        value: 0.245
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: A
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: S
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
                         currencyCode: AUD
-                      penaltyInterestRate: 11.35
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: S
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "XXXXXKER ROAD  "
+                      woolState: "1"
                     lotPaymentDetails:
-                      - lotIdentity: "123456"
+                      - lotIdentity: "2995"
                         lotLastCost:
-                          value: 23.45
+                          value: 1231.34
+                          currencyCode: AUD
+                      - lotIdentity: "2887"
+                        lotLastCost:
+                          value: 2306.92
                           currencyCode: AUD
                     paymentSummary:
-                      lastCostPaid:
-                        value: 67
-                        currencyCode: AUD
+                      datePaymentMade: 2023-12-31
                       discountAmount:
-                        value: 23
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 3538.26
                         currencyCode: AUD
                       netAmountPaid:
-                        value: 77
+                        value: 3538.26
                         currencyCode: AUD
-                      datePaymentMade: 2024-05-24
-                comments:
-                  - text: dfsfbsdfafsafs fdsa
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: F
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: Q
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: S
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: S
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: XXX XXXXXXXXXXX
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2992"
+                        lotLastCost:
+                          value: 1134.91
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 1134.91
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 1134.91
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: AAA
+                      centre:
+                        countryCode: AU
+                        centreCode: S
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: GR
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: BBB
+                        centre:
+                          countryCode: AU
+                          centreCode: GR
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: BBB
+                        centre:
+                          countryCode: AU
+                          centreCode: GR
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "3997"
+                        lotLastCost:
+                          value: 14284.05
+                          currencyCode: AUD
+                      - lotIdentity: "1881"
+                        lotLastCost:
+                          value: 1272.81
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 15556.86
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 15556.86
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: BBB
+                      centre:
+                        countryCode: AU
+                        centreCode: GR
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: DO
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: DO
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: PPP
+                        centre:
+                          countryCode: AU
+                          centreCode: DO
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: S
+                        saleNumber: 44
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: PPP
+                        centre:
+                          countryCode: AU
+                          centreCode: DO
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "XXXBO          "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "3992"
+                        lotLastCost:
+                          value: 4086
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 4086
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 4086
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: PPP
+                      centre:
+                        countryCode: AU
+                        centreCode: DO
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: F
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: F
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: CCC
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: F
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: CCC
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "48 XXXXXN WAY  "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "996"
+                        lotLastCost:
+                          value: 2000.79
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 2000.79
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 2000.79
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: CCC
+                      centre:
+                        countryCode: AU
+                        centreCode: F
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: M
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: DDD
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: DDD
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "XXXXXHALL      "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "6996"
+                        lotLastCost:
+                          value: 6888.2
+                          currencyCode: AUD
+                      - lotIdentity: "7883"
+                        lotLastCost:
+                          value: 13006.84
+                          currencyCode: AUD
+                      - lotIdentity: "2668"
+                        lotLastCost:
+                          value: 10866.72
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 30761.76
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 30761.76
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: DDD
+                      centre:
+                        countryCode: AU
+                        centreCode: M
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: A
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: A
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: EEE
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: EEE
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "XXXXXER ROAD   "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "1999"
+                        lotLastCost:
+                          value: 4646.07
+                          currencyCode: AUD
+                      - lotIdentity: "3884"
+                        lotLastCost:
+                          value: 5611.85
+                          currencyCode: AUD
+                      - lotIdentity: "3669"
+                        lotLastCost:
+                          value: 3809.85
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 14067.77
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 14067.77
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: EEE
+                      centre:
+                        countryCode: AU
+                        centreCode: A
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: A
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "FFFA           "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2992"
+                        lotLastCost:
+                          value: 3952.74
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 3952.74
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 3952.74
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: GN
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "FFFGN          "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "3997"
+                        lotLastCost:
+                          value: 14880.8
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 14880.8
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 14880.8
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: KW
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "FFFKW          "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "4995"
+                        lotLastCost:
+                          value: 905.43
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 905.43
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 905.43
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: ME
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "FFFME          "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "990"
+                        lotLastCost:
+                          value: 1099.56
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 1099.56
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 1099.56
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: WN
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: FFF
+                        centre:
+                          countryCode: AU
+                          centreCode: ME
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "FFFWN          "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "4995"
+                        lotLastCost:
+                          value: 1056.26
+                          currencyCode: AUD
+                      - lotIdentity: "2885"
+                        lotLastCost:
+                          value: 7710.01
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 8766.27
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 8766.27
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: FFF
+                      centre:
+                        countryCode: AU
+                        centreCode: ME
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: A
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: A
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: GGG
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: GGG
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "XXXXXXXTE      "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2993"
+                        lotLastCost:
+                          value: 2173.05
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 2173.05
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 2173.05
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: A
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: GGG
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: GGG
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2997"
+                        lotLastCost:
+                          value: 6315.16
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 6315.16
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 6315.16
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: M
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: GGG
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: GGG
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "LLLM           "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2992"
+                        lotLastCost:
+                          value: 1315.07
+                          currencyCode: AUD
+                      - lotIdentity: "2883"
+                        lotLastCost:
+                          value: 2769.8
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 4084.87
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 4084.87
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: GGG
+                      centre:
+                        countryCode: AU
+                        centreCode: A
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: A
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: A
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "XXXXXXR ROAD   "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "5997"
+                        lotLastCost:
+                          value: 8376.03
+                          currencyCode: AUD
+                      - lotIdentity: "8883"
+                        lotLastCost:
+                          value: 1660.25
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 10036.28
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 10036.28
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: HHH
+                      centre:
+                        countryCode: AU
+                        centreCode: A
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: F
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: F
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: F
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: XXXXXXXXXXXXXXX
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2991"
+                        lotLastCost:
+                          value: 1553.86
+                          currencyCode: AUD
+                      - lotIdentity: "1888"
+                        lotLastCost:
+                          value: 7704.84
+                          currencyCode: AUD
+                      - lotIdentity: "1775"
+                        lotLastCost:
+                          value: 3872.13
+                          currencyCode: AUD
+                      - lotIdentity: "1666"
+                        lotLastCost:
+                          value: 2673.88
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 15804.71
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 15804.71
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: HHH
+                      centre:
+                        countryCode: AU
+                        centreCode: F
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: G
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: G
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: G
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: G
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "XXXXXXXROAD    "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "4990"
+                        lotLastCost:
+                          value: 2161.12
+                          currencyCode: AUD
+                      - lotIdentity: "4881"
+                        lotLastCost:
+                          value: 1815.55
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 3976.67
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 3976.67
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: HHH
+                      centre:
+                        countryCode: AU
+                        centreCode: G
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: HM
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: HM
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: HM
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: HHH
+                        centre:
+                          countryCode: AU
+                          centreCode: HM
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: " 16 XXXXXXX DRI"
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "8991"
+                        lotLastCost:
+                          value: 605.55
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 605.55
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 605.55
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: HHH
+                      centre:
+                        countryCode: AU
+                        centreCode: HM
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: G
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: G
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: III
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: III
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "IIIG           "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "1995"
+                        lotLastCost:
+                          value: 1655.28
+                          currencyCode: AUD
+                    miscellaneousCharges:
+                      - chargeAmount:
+                          value: 0.33
+                          currencyCode: AUD
+                        chargeType: OTHER
+                        debitOrCreditType: CR
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0.33
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 1655.28
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 1654.95
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: G
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: III
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: III
+                        centre:
+                          countryCode: AU
+                          centreCode: A
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "IIIG           "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2991"
+                        lotLastCost:
+                          value: 3314.85
+                          currencyCode: AUD
+                      - lotIdentity: "885"
+                        lotLastCost:
+                          value: 4428.86
+                          currencyCode: AUD
+                      - lotIdentity: "2771"
+                        lotLastCost:
+                          value: 1060.29
+                          currencyCode: AUD
+                      - lotIdentity: "1663"
+                        lotLastCost:
+                          value: 10906.5
+                          currencyCode: AUD
+                    miscellaneousCharges:
+                      - chargeAmount:
+                          value: 3.92
+                          currencyCode: AUD
+                        chargeType: OTHER
+                        debitOrCreditType: CR
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 3.92
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 19710.5
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 19706.58
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: III
+                      centre:
+                        countryCode: AU
+                        centreCode: A
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: KW
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: KW
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: JJJ
+                        centre:
+                          countryCode: AU
+                          centreCode: KW
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-01
+                      saleIdentity:
+                        sellingCentreType: S
+                        saleNumber: 44
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: JJJ
+                        centre:
+                          countryCode: AU
+                          centreCode: KW
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: " XXXXXX ROAD XX"
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "5994"
+                        lotLastCost:
+                          value: 7589.67
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 7589.67
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 7589.67
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: JJJ
+                      centre:
+                        countryCode: AU
+                        centreCode: KW
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: KY
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: KKK
+                        centre:
+                          countryCode: AU
+                          centreCode: KY
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: KKK
+                        centre:
+                          countryCode: AU
+                          centreCode: KY
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "2995"
+                        lotLastCost:
+                          value: 1202.21
+                          currencyCode: AUD
+                    miscellaneousCharges:
+                      - chargeAmount:
+                          value: 0.6
+                          currencyCode: AUD
+                        chargeType: OTHER
+                        debitOrCreditType: CR
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0.6
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 1202.21
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 1201.61
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: KKK
+                      centre:
+                        countryCode: AU
+                        centreCode: KY
+                  transferType: Restrict
+              - transmissionHeader:
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
+                  countryOfOrigin: AU
+                  documentOriginator:
+                    organisationCode: ABC
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  currentReceiver:
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  softwareIdentifier:
+                    programName: XXXX
+                    softwareCompany: 5
+                    softwareVersion: 1
+                  abn: 99999999999
+                paymentAdviceDetails:
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: M
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: M
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: LLL
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: LLL
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: "LLLM           "
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "1997"
+                        lotLastCost:
+                          value: 1286.13
+                          currencyCode: AUD
+                      - lotIdentity: "880"
+                        lotLastCost:
+                          value: 6308.5
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 7594.63
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 7594.63
+                        currencyCode: AUD
+                  - woolSaleHeaderLot:
+                      centreCatalogue:
+                        countryCode: AU
+                        centreCode: PA
+                      centreStorage:
+                        countryCode: AU
+                        centreCode: M
+                      invoiceNumber: "        "
+                      invoicingOrganisation:
+                        organisationCode: LLL
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      isFinalCatalogue: false
+                      packType: "0"
+                      postSaleChargeRebate:
+                        value: 0
+                        currencyCode: AUD
+                      saleDate: 2024-01-02
+                      saleIdentity:
+                        sellingCentreType: M
+                        saleNumber: 22
+                      season: 23
+                      sellingOrganisation:
+                        organisationCode: LLL
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      storageChargePerBalePerDay:
+                        value: 0
+                        currencyCode: AUD
+                      storageDescription: XXXXXXXXXXXXDIN
+                      woolState: "1"
+                    lotPaymentDetails:
+                      - lotIdentity: "991"
+                        lotLastCost:
+                          value: 2850.32
+                          currencyCode: AUD
+                    paymentSummary:
+                      datePaymentMade: 2023-12-31
+                      discountAmount:
+                        value: 0
+                        currencyCode: AUD
+                      lastCostPaid:
+                        value: 2850.32
+                        currencyCode: AUD
+                      netAmountPaid:
+                        value: 2850.32
+                        currencyCode: AUD
+                transferConfig:
+                  finalReceiverList:
+                    - organisationCode: LLL
+                      centre:
+                        countryCode: AU
+                        centreCode: M
+                  transferType: Restrict
         required: true
       responses:
         "200":
@@ -169,20 +1939,23 @@ paths:
                 $ref: "#/components/schemas/RequestForData"
             example:
               - transmissionHeader:
-                  dateFormatLastRevised: 2020-07-15
-                  dateTransmissionFileCreated: 2016-01-17
+                  dateFormatLastRevised: 2022-07-25
+                  dateTransmissionFileCreated: 2024-05-06
                   countryOfOrigin: AU
                   documentOriginator:
-                    organisationCode: ABC
+                    organisationCode: AAA
+                    centre:
+                      countryCode: AU
+                      centreCode: F
                   currentReceiver:
-                    organisationCode: ATW
-                  versionNumber: 1.10.1
-                  softwareIdentifier:
-                    softwareCompany: 8
-                    softwareVersion: 1082
-                    programName: NETR
-                  abn: 72001967184
-                requestForDataType: {}
+                    organisationCode: AWT
+                    centre:
+                      countryCode: AU
+                      centreCode: M
+                  versionNumber: 1.0.0
+                  abn: 0
+                requestForDataType:
+                  isUsingNetworkDateTime: "true"
         required: true
       responses:
         "200":
@@ -194,69 +1967,210 @@ paths:
                 items:
                   $ref: "#/components/schemas/PaymentAdviceListApiResult"
               example:
-                apiMessages: []
                 data:
                   - transmissionHeader:
-                      dateFormatLastRevised: 2020-07-15
-                      dateTransmissionFileCreated: 2016-01-17
-                      countryOfOrigin: AU
                       documentOriginator:
-                        organisationCode: AWT
+                        organisationCode: ABC
+                        centre:
+                          countryCode: AU
+                          centreCode: M
                       currentReceiver:
-                        organisationCode: MNC
-                      versionNumber: 1.10.1
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      dateFormatLastRevised: 2022-07-25
                       softwareIdentifier:
-                        softwareCompany: 1
-                        softwareVersion: 1082
-                        programName: NETR
-                      abn: 72001967184
+                        softwareCompany: 8
+                      dateTransmissionFileCreated: 2024-05-06
+                      countryOfOrigin: AU
+                      abn: 43006014106
+                      versionNumber: 1.0.0
                     paymentAdviceDetails:
-                      - woolSaleHeaderLot:
-                          season: 16
+                      - lotPaymentDetails:
+                          - lotIdentity: "997"
+                            lotLastCost:
+                              value: 2236.41
+                              currencyCode: AUD
+                        woolSaleHeaderLot:
+                          storageChargePerBalePerDay:
+                            value: 0
+                            currencyCode: AUD
+                          invoicingOrganisation:
+                            organisationCode: AAA
+                            centre:
+                              countryCode: AU
+                              centreCode: F
+                          isFinalCatalogue: false
+                          woolState: "1"
+                          centreStorage:
+                            countryCode: AU
+                            centreCode: F
+                          sellingOrganisation:
+                            organisationCode: AAA
+                            centre:
+                              countryCode: AU
+                              centreCode: F
+                          packType: "0"
+                          saleDate: 2024-01-01
+                          storageDescription: "17 XXXXX DRIVE "
+                          postSaleChargeRebate:
+                            value: 0
+                            currencyCode: AUD
                           saleIdentity:
-                            sellingCentreType: M
-                            saleNumber: 18
+                            sellingCentreType: F
+                            saleNumber: 22
+                          invoiceNumber: "        "
+                          season: 23
+                          centreCatalogue:
+                            countryCode: AU
+                            centreCode: F
+                        paymentSummary:
+                          datePaymentMade: 2023-12-31
+                          netAmountPaid:
+                            value: 2236.41
+                            currencyCode: AUD
+                          discountAmount:
+                            value: 0
+                            currencyCode: AUD
+                          lastCostPaid:
+                            value: 2236.41
+                            currencyCode: AUD
+                    transferConfig:
+                      finalReceiverList:
+                        - organisationCode: AAA
+                          centre:
+                            countryCode: AU
+                            centreCode: F
+                      transferType: Restrict
+                  - transmissionHeader:
+                      documentOriginator:
+                        organisationCode: ABC
+                        centre:
+                          countryCode: AU
+                          centreCode: M
+                      currentReceiver:
+                        organisationCode: AAA
+                        centre:
+                          countryCode: AU
+                          centreCode: F
+                      dateFormatLastRevised: 2022-07-25
+                      softwareIdentifier:
+                        softwareCompany: 8
+                      dateTransmissionFileCreated: 2024-05-06
+                      countryOfOrigin: AU
+                      abn: 43006014106
+                      versionNumber: 1.0.0
+                    paymentAdviceDetails:
+                      - lotPaymentDetails:
+                          - lotIdentity: "2995"
+                            lotLastCost:
+                              value: 1231.34
+                              currencyCode: AUD
+                          - lotIdentity: "2887"
+                            lotLastCost:
+                              value: 2306.92
+                              currencyCode: AUD
+                        woolSaleHeaderLot:
+                          storageChargePerBalePerDay:
+                            value: 0
+                            currencyCode: AUD
+                          invoicingOrganisation:
+                            organisationCode: AAA
+                            centre:
+                              countryCode: AU
+                              centreCode: S
+                          isFinalCatalogue: false
+                          woolState: "1"
                           centreStorage:
                             countryCode: AU
                             centreCode: A
-                          saleDate: 2017-01-10
-                          woolState: A
-                          packType: "2"
-                          invoicingOrganisation:
-                            organisationCode: ABC
                           sellingOrganisation:
-                            organisationCode: ABC
+                            organisationCode: AAA
+                            centre:
+                              countryCode: AU
+                              centreCode: S
+                          packType: "0"
+                          saleDate: 2024-01-02
+                          storageDescription: "XXXXXKER ROAD  "
+                          postSaleChargeRebate:
+                            value: 0
+                            currencyCode: AUD
+                          saleIdentity:
+                            sellingCentreType: M
+                            saleNumber: 22
+                          invoiceNumber: "        "
+                          season: 23
                           centreCatalogue:
                             countryCode: AU
                             centreCode: A
-                          storageOrganisation:
-                            organisationCode: ABC
-                          storageDescription: 45 MAIN ST
-                          discountRate: 1.5
-                          maximumDaysDiscount: 0
-                          dateStorageChargeCommences: 2017-01-24
-                          storageChargePerBalePerDay:
-                            value: 0.245
-                            currencyCode: USD
-                          penaltyInterestRate: 11.35
-                        lotPaymentDetails:
-                          - lotIdentity: "123456"
-                            lotLastCost:
-                              value: 23.45
-                              currencyCode: AUD
                         paymentSummary:
-                          lastCostPaid:
-                            value: 67
+                          datePaymentMade: 2023-12-31
+                          netAmountPaid:
+                            value: 3538.26
                             currencyCode: AUD
                           discountAmount:
-                            value: 23
+                            value: 0
                             currencyCode: AUD
+                          lastCostPaid:
+                            value: 3538.26
+                            currencyCode: AUD
+                      - lotPaymentDetails:
+                          - lotIdentity: "2992"
+                            lotLastCost:
+                              value: 1134.91
+                              currencyCode: AUD
+                        woolSaleHeaderLot:
+                          storageChargePerBalePerDay:
+                            value: 0
+                            currencyCode: AUD
+                          invoicingOrganisation:
+                            organisationCode: AAA
+                            centre:
+                              countryCode: AU
+                              centreCode: S
+                          isFinalCatalogue: false
+                          woolState: "1"
+                          centreStorage:
+                            countryCode: AU
+                            centreCode: Q
+                          sellingOrganisation:
+                            organisationCode: AAA
+                            centre:
+                              countryCode: AU
+                              centreCode: S
+                          packType: "0"
+                          saleDate: 2024-01-02
+                          storageDescription: XXX XXXXXXXXXXX
+                          postSaleChargeRebate:
+                            value: 0
+                            currencyCode: AUD
+                          saleIdentity:
+                            sellingCentreType: M
+                            saleNumber: 22
+                          invoiceNumber: "        "
+                          season: 23
+                          centreCatalogue:
+                            countryCode: AU
+                            centreCode: Q
+                        paymentSummary:
+                          datePaymentMade: 2023-12-31
                           netAmountPaid:
-                            value: 77
+                            value: 1134.91
                             currencyCode: AUD
-                          datePaymentMade: 2024-05-24
-                    comments:
-                      - text: dfsfbsdfafsafs fdsa
+                          discountAmount:
+                            value: 0
+                            currencyCode: AUD
+                          lastCostPaid:
+                            value: 1134.91
+                            currencyCode: AUD
+                    transferConfig:
+                      finalReceiverList:
+                        - organisationCode: AAA
+                          centre:
+                            countryCode: AU
+                            centreCode: S
+                      transferType: Restrict
         "204":
           description: No Content
           content:
@@ -337,6 +2251,7 @@ components:
     PaymentAdvice:
       required:
         - paymentAdviceDetails
+        - transferConfig
         - transmissionHeader
       type: object
       properties:
